@@ -10,7 +10,7 @@ A subset $A \subset \Omega$ is called a event. We will assign a real number $\ma
 1. $\mathbb{P}(A) \geq 0$ for every $A \subset \Omega$
 2. $\mathbb{P}(\Omega) = 1$
 3. If $A_1, A_2, \ldots,$ are disjiont then
-\begin{algin*}
+\begin{align*}
 \mathbb{P}(\cup_{i=1}^\infty A_i) = \sum\limits_{i=1}^\infty \mathbb{P}(A_i)
 \end{align*}
 
