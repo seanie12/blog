@@ -11,14 +11,14 @@ A subset $A \subset \Omega$ is called a event. We will assign a real number $\ma
 2. $\mathbb{P}(\Omega) = 1$
 3. If $A_1, A_2, \ldots,$ are disjiont then
 \begin{align}
-\mathbb{P}(\cup\limits_{i=1}^\infty A_i) = \sum\limits_{i=1}^\infty \mathbb{P}(A_i)
+\mathbb{P}(\cup_{i=1}^\infty A_i) = \sum\limits_{i=1}^\infty \mathbb{P}(A_i)
 \end{align}
 
 However, we cannot assign probabilites to all subsets of sample space $\Omega$. We need to define what is *measurable*.
 
 Let $\Omega$ be a sample space. We call $\mathcal{A}$ a $\sigma$-field, if the followings are satisfied.
 1. $\emptyset \in \mathcal{A}$,
-2. $\mathcal{A}$ is closed under the countable union. i.e., if $A_1, \ldots, A_n \in \mathcal{A}$ then $\cup\limits_{i=1}^\infty A_i \in \mathcal{A}$ and
+2. $\mathcal{A}$ is closed under the countable union. i.e., if $A_1, \ldots, A_n \in \mathcal{A}$ then $\cup_{i=1}^\infty A_i \in \mathcal{A}$ and
 3. $A \in \mathcal{A}$ implies that $\Omega \setminus A \in \mathcal{A}$.
 The sets in $\mathcal{A}$ are said to be measurable and we call $(\Omega, \mathcal{A})$ a *measurable space*. If $\mathbb{P}$ is a probability measure defined on the $\sigma$-field $\mathcal{A}$, then $(\Omega, \mathcal{A}, \mathbb{P})$ is called a probability space.
 
