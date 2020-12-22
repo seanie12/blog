@@ -6,13 +6,14 @@ use_math: true
 
 
 The sample space $\Omega$ is the set of all possible outcomes of an experiment. Points in $\omega \in \Omega$ are *outcomes* or *realizations*.
-A subset $A \subset \Omega$ is called a event. We will assign a real number $\mathbb{P}(A)$ to every subset $A \in \Omega$. We call $\mathbb{P}$ a *probability measure* if it satisfies the following three axioms.
+A subset $A \subset \Omega$ is called a event. We will assign a real number $\mathbb{P}(A)$ to every subset $A \in \Omega$. We call $\mathbb{P}$ a *probability measure* if the set-function $\mathbb{P}$ satisfies the following three axioms.
 1. $\mathbb{P}(A) \geq 0$ for every $A \subset \Omega$
 2. $\mathbb{P}(\Omega) = 1$
 3. If $A_1, A_2, \ldots,$ are disjiont then
 \begin{equation*}
 \mathbb{P}(\cup_{i=1}^\infty A_i) = \sum\limits_{i=1}^\infty \mathbb{P}(A_i)
 \end{equation*}
+
 However, we cannot assign probabilites to all subsets of sample space $\Omega$. We need to define what is *measurable*.
 
 Let $\Omega$ be a sample space. We call $\mathcal{A}$ a $\sigma$-field, if the followings are satisfied.
