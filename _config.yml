@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Seanie Lee"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I love mathematics ans statistics."
+  bio              : "I love mathematics and statistics."
   email            :
   links:
     - label: "Email"
