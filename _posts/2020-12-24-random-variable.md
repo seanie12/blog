@@ -18,7 +18,7 @@ Let $(\Omega, \mathcal{A}, \mathbb{P})$  and $(E, \mathcal{E})$ be a probability
 
 $$ X^{-1}(B) = \{ \omega \in \Omega: X(\omega) \in B \} \in \mathcal{A}  \text{, for evey } B \in \mathcal{E}.$$
 
-If we set $E  = \mathbb{R}$, we take $\mathcal{E}$ to be the smallest $\sigma$-field, that contains   all the open subsets, which is called the *Borel $\sigma$-field*. 
+If we set $E  \coloneqq \mathbb{R}$, we take $\mathcal{E}$ to be the smallest $\sigma$-field, that contains   all the open subsets, which is called the *Borel $\sigma$-field*. 
 
 ## Distribution
 Let $X$ be a random variable on measurable space $(E, \mathcal{E})$. The distribution of $X$ is defined as 
