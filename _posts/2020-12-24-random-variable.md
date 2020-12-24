@@ -1,3 +1,10 @@
+---
+title: "Random Variable"
+
+use_math: true
+---
+
+
 
 ## Measurable function
 Let $(E, \mathcal{E})$ and $(F, \mathcal{F})$ be measurable spaces where  $E,F,$ are sets and $\mathcal{E}$ and $\mathcal{F}$ are $\sigma$-field on $E$ and $F$, respectively. Then a function $f$ is measurable function if every pre-image of $B \in \mathcal{F}$ is measurable.
