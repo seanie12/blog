@@ -7,9 +7,6 @@ categories:
 use_math : true
 ---
 
-$$
-P(Y=1|X=\overrightarrow { x } )=&{ \beta  }_{ 0 }+{ \beta  }_{ 1 }{ x }_{ 1 }+{ \beta  }_{ 2 }{ x }_{ 2 }+...+{ \beta  }_{ p }{ x }_{ p }\\=&{ \overrightarrow { \beta  }  }^{ T }\overrightarrow { x }
-$$
 
 ## Measurable function
 Let $(E, \mathcal{E})$ and $(F, \mathcal{F})$ be measurable spaces where  $E,F,$ are sets and $\mathcal{E}$ and $\mathcal{F}$ are $\sigma$-field on $E$ and $F$, respectively. Then a function $f$ is measurable function if every pre-image of $B \in \mathcal{F}$ is measurable.
