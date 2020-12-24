@@ -23,6 +23,6 @@ If we set $E  = \mathbb{R}$, we take $\mathcal{E}$ to be the smallest $\sigma$-f
 ## Distribution
 Let $X$ be a random variable on measurable space $(E, \mathcal{E})$. The distribution of $X$ is defined as 
 
-$$\mu(A) =  \mathbb{P}(X \in A) = \mathbb{P}(X^{-1}(A))  = \mathbb{P}(\{ \omega \in \Omega: X(\omega)\in A\}).$$
+$$\mu(A) \coloneqq  \mathbb{P}(X \in A) \coloneqq \mathbb{P}(X^{-1}(A))  = \mathbb{P}(\{ \omega \in \Omega: X(\omega)\in A\}).$$
 
 The probability space $(\Omega, \mathcal{A}, \mathbb{P})$ is often called background probability space and the measure space $(E, \mathcal{E}, \mu)$ is called the *induced probability space*.
