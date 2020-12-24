@@ -1,7 +1,7 @@
 ---
 title: "Random Variable"
 
-use_math: true
+use_math : true
 ---
 
 $$
