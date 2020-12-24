@@ -18,11 +18,11 @@ Let $(\Omega, \mathcal{A}, \mathbb{P})$  and $(E, \mathcal{E})$ be a probability
 
 $$ X^{-1}(B) = \{ \omega \in \Omega: X(\omega) \in B \} \in \mathcal{A}  \text{, for evey } B \in \mathcal{E}.$$
 
-If we set $E  \coloneqq \mathbb{R}$, we take $\mathcal{E}$ to be the smallest $\sigma$-field, that contains   all the open subsets, which is called the *Borel $\sigma$-field*. 
+If we set $E = \mathbb{R}$, we take $\mathcal{E}$ to be the smallest $\sigma$-field, that contains   all the open subsets, which is called the *Borel $\sigma$-field*. 
 
 ## Distribution
 Let $X$ be a random variable on measurable space $(E, \mathcal{E})$. The distribution of $X$ is defined as 
 
-$$\mu(A) \coloneqq  \mathbb{P}(X \in A) \coloneqq \mathbb{P}(X^{-1}(A))  = \mathbb{P}(\{ \omega \in \Omega: X(\omega)\in A\}).$$
+$$\mu(A) =  \mathbb{P}(X \in A) = \mathbb{P}(X^{-1}(A))  = \mathbb{P}(\{ \omega \in \Omega: X(\omega)\in A\}).$$
 
 The probability space $(\Omega, \mathcal{A}, \mathbb{P})$ is often called background probability space and the measure space $(E, \mathcal{E}, \mu)$ is called the *induced probability space*.
