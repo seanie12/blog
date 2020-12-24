@@ -5,9 +5,7 @@ use_math : true
 ---
 
 $$
-
 P(Y=1|X=\overrightarrow { x } )=&{ \beta  }_{ 0 }+{ \beta  }_{ 1 }{ x }_{ 1 }+{ \beta  }_{ 2 }{ x }_{ 2 }+...+{ \beta  }_{ p }{ x }_{ p }\\=&{ \overrightarrow { \beta  }  }^{ T }\overrightarrow { x }
-
 $$
 
 ## Measurable function
