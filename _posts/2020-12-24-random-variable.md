@@ -9,7 +9,7 @@ use_math: true
 ## Measurable function
 Let $(E, \mathcal{E})$ and $(F, \mathcal{F})$ be measurable spaces where  $E,F,$ are sets and $\mathcal{E}$ and $\mathcal{F}$ are $\sigma$-field on $E$ and $F$, respectively. Then a function $f$ is measurable function if every pre-image of $B \in \mathcal{F}$ is measurable.
 
-\begin{equation}  f^{-1}(B) = \{ x \in E: f(x) \in B\}  \in \mathcal{E}\end{equation}
+\begin{equation}  f^{-1}(B) = \{ x \in E: f(x) \in B \}  \in \mathcal{E} \end{equation}
 
 ## Random variable
 Let $(\Omega, \mathcal{A}, \mathbb{P})$  and $(E, \mathcal{E})$ be a probability space and measurable space, respectively.  A $\mathcal{A}/\mathcal{E}$ measurable function $X$ is a  *random variable*, satisfying the following:
