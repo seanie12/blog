@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Blog for Math and stat."
+title                    : "Blog for math and statistics."
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Seanie Lee"
@@ -95,16 +95,16 @@ analytics:
 author:
   name             : "Seanie Lee"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : # "Data Analyst"
+  bio              :  "I love mathematics and statistics"
   location         : # "South Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "mailto:lsnfamily02@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://seanie12.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
