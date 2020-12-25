@@ -34,7 +34,7 @@ The sets in $\mathcal{A}$ are said to be measurable and we call $(\Omega, \mathc
 3. $\mathbb{P}(A_1 \cup A_2) = \mathbb{P}(A_1) + \mathbb{P}(A_2) - \mathbb{P}(A_1 \cap A_2)$
 
 <*proof*>
-1. $\Omega := \cup_{i=1}^\infty A_i$ where $A_i := \Omega$ and $A_j := \emptyset$ for $j \geq 2$. 
+1. Let $\Omega$ be a sample space. $\Omega = \cup_{i=1}^\infty A_i$ where $A_1 := \Omega$ and $A_j := \emptyset$ for $j \geq 2$. 
 $$\begin{align}
 \begin{split}
 \mathbb{P}(\Omega) &=\mathbb{P}( \cup_{i=1}^\infty A_i) \\
