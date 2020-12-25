@@ -37,12 +37,14 @@ The sets in $\mathcal{A}$ are said to be measurable and we call $(\Omega, \mathc
 1. $\Omega := \cup_{i=1}^\infty A_i$ where $A_i := \Omega$ and $A_j := \emptyset$ for $j \geq 2$. By the countable additivity, $\mathbb{P}(\Omega) =\mathbb{P}( \cup_{i=1}^n A_i) = \sum_{i=1}^\infty \mathbb{P}(A_i) = \mathbb{P}(A_1) + \sum_{i=2}^\infty \mathbb{P}(A_i) = \mathbb{P}(\Omega)$
 
 $$\begin{align}
+\begin{split}
 \mathbb{P}(\Omega) &=\mathbb{P}( \cup_{i=1}^n A_i) \\
 &= \sum_{i=1}^\infty \mathbb{P}(A_i) \\
 &= \mathbb{P}(A_1) + \sum_{i=2}^\infty \mathbb{P}(A_i) \\
 &= \mathbb{P}(\Omega) + \sum_{i=2}^\infty \mathbb{P}(A_i)  \\
+\end{split}
 \end{align}$$
-By the cancellation law, $\sum_{i=2}^\infty \mathbb{P}(A_i) =0$. Since $\mathbb{P}(A) \geq 0$ for all $A \in \mathcal{A}$, $\mathbb{P}(A_j) = \mathbb{P}(\emptyset) = 0$ for $j \geq 2$. 
+  By the cancellation law, $\sum_{i=2}^\infty \mathbb{P}(A_i) =0$. Since $\mathbb{P}(A) \geq 0$ for all $A \in \mathcal{A}$, $\mathbb{P}(A_j) = \mathbb{P}(\emptyset) = 0$ for $j \geq 2$. 
 $1= \mathbb{P}(\Omega) = \mathbb{P}(A) + \mathbb{P}(A^c)$. Thus, $\mathbb{P}(A^c) = 1 -\mathbb{P}(A) \geq 0$. 
 $\therefore 0 \leq \mathbb{P}(A) \leq 1$
 $$\tag*{$\square$}$$
@@ -50,10 +52,14 @@ $$\tag*{$\square$}$$
 
 2.  Suppose that $A\subset B$, where $A, B \in \mathcal{A}$. Since $B = A \cup (B\setminus A)$,  $\mathbb{P}(B) = \mathbb{P}(A) + \mathbb{P}(B\setminus A) \geq \mathbb{P}(A)$.
 $$\tag*{$\square$}$$
+
 3. $A_1 \cup A_2  = (A_1 \setminus A_2) \cup (A_1 \cap A_2) \cup (A_2\setminus A_1)$. 
-$$\begin{align}\mathbb{P}(A_1 \cup A_2) &= \mathbb{P}(A_1 \setminus A_2) + \mathbb{P}(A_1 \cap A_2) + \mathbb{P}(A_2\setminus A_1) \\
+$$\begin{align}
+\begin{split}
+\mathbb{P}(A_1 \cup A_2) &= \mathbb{P}(A_1 \setminus A_2) + \mathbb{P}(A_1 \cap A_2) + \mathbb{P}(A_2\setminus A_1) \\
 &= \mathbb{P}(A_1 \setminus A_2) + \mathbb{P}(A_1\cap A_2) + \mathbb{P}(A_2 \setminus A_1) + \mathbb{P}(A_1 \cap A_2) - \mathbb{P}(A_1 \cap A_2) \\
 &= \mathbb{P}(A_1) + \mathbb{P}(A_2) - \mathbb{P}(A_1 \cap A_2)
+\end{split}
 \end{align}$$
 
 $$\tag*{$\square$}$$
