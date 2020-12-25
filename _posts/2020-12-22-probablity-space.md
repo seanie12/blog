@@ -53,7 +53,7 @@ $$\tag*{$\square$}$$
 2.  Suppose that $A\subset B$, where $A, B \in \mathcal{A}$. Since $B = A \cup (B\setminus A)$,  $\mathbb{P}(B) = \mathbb{P}(A) + \mathbb{P}(B\setminus A) \geq \mathbb{P}(A)$.
 $$\tag*{$\square$}$$
 
-3. $A_1 \cup A_2  = (A_1 \setminus A_2) \cup (A_1 \cap A_2) \cup (A_2\setminus A_1)$. 
+3. Since $A_1 \cup A_2  = (A_1 \setminus A_2) \cup (A_1 \cap A_2) \cup (A_2\setminus A_1)$,
 $$\begin{align}
 \begin{split}
 \mathbb{P}(A_1 \cup A_2) &= \mathbb{P}(A_1 \setminus A_2) + \mathbb{P}(A_1 \cap A_2) + \mathbb{P}(A_2\setminus A_1) \\
