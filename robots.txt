@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dongsukang.github.io/sitemap.xml
+Sitemap: https://seanie12.github.io/blog/sitemap.xml
