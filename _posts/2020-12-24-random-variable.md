@@ -4,6 +4,9 @@ title: "Random Variable"
 categories:
   - Statistics
 
+tags:
+  - random variable
+
 use_math : true
 ---
 
