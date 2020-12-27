@@ -1,0 +1,7 @@
+main:
+  - title: "블로그 방문하기"	   
+    url: https://seanie12.github.io/blog/	    
+  - title: "Categories"
+    url: /categories/
+  - title: "About"	  
+    url: /about/	    
