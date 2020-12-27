@@ -8,7 +8,13 @@ categories:
 tags:
   - probability space
 
-use_math: true
+
+toc: true
+toc_sticky: true
+
+use_math : true
+comments : true
+
 ---
 
 
