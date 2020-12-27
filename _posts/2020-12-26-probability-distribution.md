@@ -1,5 +1,5 @@
 ---
-title: "Random Variable"
+title: "Distribution Function"
 
 categories:
   - Statistics
