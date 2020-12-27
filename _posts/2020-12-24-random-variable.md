@@ -7,7 +7,13 @@ categories:
 tags:
   - random variable
 
+
+toc: true
+toc_sticky: true
+
 use_math : true
+comments : true
+
 ---
 
 
