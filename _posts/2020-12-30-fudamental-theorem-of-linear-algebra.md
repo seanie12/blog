@@ -69,14 +69,13 @@ Let $$A, B \in \mathfrak{M}_{m\times n }(F), c \in F$$ be given. We want to show
 $$\begin{align}
 \begin{split}
 [\{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\} \mathbf{v} ]_{\mathfrak{C}} &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v} + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}} \\
-&= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v}]_{\mathfrak{C}} + c\cdot[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}} \:(\because [\cdot]_{\mathfrak{C}} \text{ is a linear map}) \\
+&= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v}]_{\mathfrak{C}} + c\cdot[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}}  \\
 &= A[\mathbf{v}]_{\mathfrak{B}} + cB[\mathbf{v}]_{\mathfrak{B}} \\
 &= (A + cB)[\mathbf{v}]_{\mathfrak{B}} \\
 &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}}
 \end{split}
 \end{align}$$
-
-Since $$[\cdot]_{\mathfrak{C}}$$ is one-to-one correspondence, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v} = (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) )  \mathbf{v} \text{ for all } \mathbf{v} \in V$$. Therefore, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear map.
+The second equality holds due to the linearity of $$[\cdot]_{\mathfrak{C}$$. Since $$[\cdot]_{\mathfrak{C}}$$ is one-to-one correspondence, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v} = (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) )  \mathbf{v} \text{ for all } \mathbf{v} \in V$$. Therefore, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear map.
 
 On the other hand, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear transformation. In other words, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M + cL) = \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) + c \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L)$$ where $$M, L \in \mathcal{L}(V,W)$$ and $$c \in F$$. However, it suffices to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M + cL) \mathbf{e}_j= (\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) + c \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L))\mathbf{e}_j$$ for $$j=1, \ldots,n$$ where $$\mathbf{v}_j \in \mathbb{R}^n$$ is a standard basis for $$\mathbb{R}^n$$ and only the $$\text{j}^{\text{th}}$$ component is 1 and zero for the others.
  
