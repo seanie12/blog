@@ -18,8 +18,9 @@ comments : true
 ---
 
 ## Notation
-- Let  $[\cdot]_{\mathfrak{B}}:V \rightarrow \mathbb{R}^n$ be a function with a basis $\mathfrak{B}$  as follows:
-$$[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n) \text{ where } \mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i, \mathfrak{B}=\{\mathbf{v}_1, \ldots, \mathbf{v}_n \}$$
+- Let  $[\cdot]_{\mathfrak{B}}:V \rightarrow \mathbb{R}^n$ be a function with a basis $\mathfrak{B}$ as follows:
+
+  $$[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n) \text{ where } \mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i, \mathfrak{B}=\{\mathbf{v}_1, \ldots, \mathbf{v}_n \}$$
   It is easy to show that $[\cdot]_{\mathfrak{B}}$ is an isomorphism (bijective and linear map).
 
 - Let $T: V \rightarrow W$ be a linear transformation where $V, W$ are vector spaces over $F$. $\mathfrak{B,C}$ are bases for vector space $V, W$, respectively. Then matrix representation of the linear transformation with respect to the bases $\mathfrak{B} = \{ \mathbf{v}_1, \ldots, \mathbf{v}_n \}, \mathfrak{C}=\{ \mathbf{w}_1, \ldots, \mathbf{w}_m \}$ is defined as:
