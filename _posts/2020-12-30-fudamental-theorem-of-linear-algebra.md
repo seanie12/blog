@@ -31,3 +31,21 @@ $$ [L]^\mathfrak{B}_{\mathfrak{C}} := [ [L\mathbf{v}_1]_{\mathfrak{C}} \cdots[L\
 - $\mathfrak{M}_{m\times n}(F)$ is a vector space of $m\times n$ over the field $F$.
 
  
+## Lemma
+Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $$\mathfrak{B}= \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}, \mathfrak{C}= \{ \mathbf{w}_1, \ldots, \mathbf{w}_m\}$$ be  bases for $V,W$. 
+Then $[L]^{\mathfrak{B}}_{\mathfrak{C}} [\mathbf{v}]_{\mathfrak{B}} = [L\mathbf{v}]_{\mathfrak{C}}$ for all $\mathbf{v} \in V$.
+
+<*proof*>
+Put $\mathbf{v} = \sum_{i=1}^n a_i \mathbf{v}_i$. Since $\mathfrak{B}$ is a basis for $V$, all $a_i$ are unique. 
+$$
+\begin{align}
+    \begin{split}
+        [L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}]_{\mathfrak{B}} &= [L]^{\mathfrak{B}}_{\mathfrak{C}} (a_1, \ldots, a_n)^\top\\
+        &= \sum_{i=1}^n a_i [L\mathbf{v}_i]_{\mathfrak{C}} \\
+        &= [\sum_{i=1}^n a_i L\mathbf{v}_i]_{\mathfrak{C}} \\
+        &= [L(\sum_{i=1}^n a_i \mathbf{v}_i)]_{\mathfrak{C}} \\
+        &= [L\mathbf{v}]_{\mathfrak{C}}
+    \end{split}
+\end{align}
+$$
+$$\tag*{$\square$}$$
