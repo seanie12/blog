@@ -52,6 +52,7 @@ Let $U,V,W$ be vector spaces over $F$ and $\mathfrak{A,B,C}$ be bases for $U,V,W
 
 <*proof*>
 Let $A, B \in \mathfrak{M}_{m\times n }(F)$, $c \in F$ be given. We want to show that $\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)$.  i.e. $\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v} = \{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) \}  \mathbf{v}$ for all $\mathbf{v} \in V$.
+
 $$\begin{align}
 \begin{split}
 [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B) \mathbf{v} ]_{\mathfrak{C}} &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v} + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}} \\
