@@ -60,10 +60,11 @@ $$\begin{align}\begin{split}\Psi^{\mathfrak{B}}_{\mathfrak{C}}: \mathcal{L}(V,W)
 \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L) &:= [L]^{\mathfrak{B}}_{\mathfrak{C}} \text{ for all } L \in \mathcal{L}(V,W)\end{split}\end{align}\\$$ 
 
 1. $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}, \Psi^{\mathfrak{B}}_{\mathfrak{C}}$$ are isomorphism and inverse each other. 
+
 2. $\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M \circ L)$ where $M \in \mathcal{L}(V,W)$ and $L \in \mathcal{L}(U,V)$.
 
 <*proof*>
-Let $A, B \in \mathfrak{M}_{m\times n }(F)$, $c \in F$ be given. We want to show that $\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)$.  i.e. $\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v} = \{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) \}  \mathbf{v}$ for all $\mathbf{v} \in V$.
+Let $$A, B \in \mathfrak{M}_{m\times n }(F), c \in F$$ be given. We want to show that $\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)$.  i.e. $\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v} = \{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) \}  \mathbf{v}$ for all $\mathbf{v} \in V$.
 
 $$\begin{align}
 \begin{split}
