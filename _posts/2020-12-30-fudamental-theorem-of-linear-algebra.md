@@ -1,3 +1,22 @@
+---
+title: "Fundamental Theorem of Linear Algebra"
+
+categories:
+  - Linear Algrbra
+
+tags:
+  - fundamental theorem
+  - isomorphism
+  - linear transformation
+
+
+toc: true
+toc_sticky: true
+
+use_math : true
+comments : true
+
+---
 
 ## Notation
 - Define a function $[\cdot]_{\mathfrak{B}}:V \rightarrow \mathbb{R}^n$ such that $[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n)$ where $\mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i$ and $\mathfrak{B} = \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}$ is a basis for a vector space $V$.  It is easy to show that $[\cdot]_{\mathfrak{B}}$ is an isomorphism (bijective and linear map).
