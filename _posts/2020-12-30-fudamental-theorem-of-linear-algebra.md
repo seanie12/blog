@@ -45,6 +45,7 @@ $$
         &= [L(\sum_{i=1}^n a_i \mathbf{v}_i)]_{\mathfrak{C}} \\
         &= [L\mathbf{v}]_{\mathfrak{C}}
     \end{split}
+    \label{lemma}
 \end{align}
 $$
 $$\tag*{$\square$}$$
@@ -112,6 +113,7 @@ $$
     \end{split}
 \end{align}
 $$
+By Equation \ref{lemma} in Lemma, the last equality holds.
 
 Lastly, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M \circ L)$$ and $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)$$ where $$M \in \mathcal{L}(V,W), L\in \mathcal{L}(U,V), A\in \mathfrak{M}_{m\times n}(F), B \in \mathfrak{M}_{n\times k}(F)$$.
 
