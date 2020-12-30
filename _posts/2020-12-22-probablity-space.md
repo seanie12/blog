@@ -89,8 +89,7 @@ $$\begin{align}
   $\therefore 0 \leq \mathbb{P}(A) \leq 1$
 
 
-  
-  
+    
 2.  Suppose that $A\subset B$, where $A, B \in \mathcal{A}$. Since $B = A \cup (B\setminus A)$,  $\mathbb{P}(B) = \mathbb{P}(A) + \mathbb{P}(B\setminus A) \geq \mathbb{P}(A)$.
 
 
