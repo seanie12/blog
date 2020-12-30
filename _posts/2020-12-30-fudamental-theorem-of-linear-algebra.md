@@ -27,7 +27,7 @@ comments : true
 $$ [L]^\mathfrak{B}_{\mathfrak{C}} := [ [L\mathbf{v}_1]_{\mathfrak{C}} \cdots[L\mathbf{v}_n]_{\mathfrak{C}}]$$
 - $\mathcal{L}(V,W)$ is a vector space of linear functions which map $V$ to $W$. In other words, for every $L\in \mathcal{L}(V,W)$, $L:V\rightarrow W$ is a linear transformation where $V,W$ are vector spaces over $F$.
 
-- $\mathfrak{M}_{m\times n}(F)$ is a vector space of $m\times n$ over the field $F$.
+- $\mathfrak{M}_{m\times n}(F)$ is a vector space of $$m \text{ by} n$$ matrices over the field $$F$$.
 
  
 ## Lemma
