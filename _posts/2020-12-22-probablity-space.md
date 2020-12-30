@@ -74,19 +74,12 @@ The sets in $\mathcal{A}$ are said to be measurable and we call $(\Omega, \mathc
 1. Let $\Omega$ be a sample space. $\Omega = \cup_{i=1}^\infty A_i$ where $A_1 := \Omega$ and $A_j := \emptyset$ for $j \geq 2$.
 
 $$\begin{align}
-
 \begin{split}
-
 \mathbb{P}(\Omega) &=\mathbb{P}( \cup_{i=1}^\infty A_i) \\
-
 &= \sum_{i=1}^\infty \mathbb{P}(A_i) \\
-
 &= \mathbb{P}(A_1) + \sum_{i=2}^\infty \mathbb{P}(A_i) \\
-
 &= \mathbb{P}(\Omega) + \sum_{i=2}^\infty \mathbb{P}(A_i)  \\
-
 \end{split}
-
 \end{align}$$
 
 By the cancellation law, $\sum_{i=2}^\infty \mathbb{P}(A_i) =0$. Since $\mathbb{P}(A) \geq 0$ for all $A \in \mathcal{A}$, $\mathbb{P}(A_j) = \mathbb{P}(\emptyset) = 0$ for $j \geq 2$.
@@ -110,17 +103,11 @@ $$\tag*{$\square$}$$
 3. Since $A_1 \cup A_2  = (A_1 \setminus A_2) \cup (A_1 \cap A_2) \cup (A_2\setminus A_1)$,
 
 $$\begin{align}
-
 \begin{split}
-
 \mathbb{P}(A_1 \cup A_2) &= \mathbb{P}(A_1 \setminus A_2) + \mathbb{P}(A_1 \cap A_2) + \mathbb{P}(A_2\setminus A_1) \\
-
 &= \mathbb{P}(A_1 \setminus A_2) + \mathbb{P}(A_1\cap A_2) + \mathbb{P}(A_2 \setminus A_1) + \mathbb{P}(A_1 \cap A_2) - \mathbb{P}(A_1 \cap A_2) \\
-
 &= \mathbb{P}(A_1) + \mathbb{P}(A_2) - \mathbb{P}(A_1 \cap A_2)
-
 \end{split}
-
 \end{align}$$
 
   
