@@ -1,26 +1,35 @@
----
-title: "Proabability Space"
 
+---
+
+title: "Probability Space"
+
+  
+
+  
 
 categories:
-  - Statistics
+
+- Statistics
+
+  
 
 tags:
-  - probability
 
+- probability space
 
-toc: true
-toc_sticky: true
+  
 
-use_math : true
-comments : true
+use_math: true
 
 ---
 
+  
 
-The sample space $\Omega$ is the set of all possible outcomes of an experiment. Points in $\omega \in \Omega$ are *outcomes* or *realizations*. A subset $A \subset \Omega$ is called a event. We will assign a real number $\mathbb{P}(A)$ to every subset $A \subset \Omega$. We call $\mathbb{P}$ a *probability measure* if the set-function $\mathbb{P}$ satisfies the following three axioms.
+  
 
-- Define a function $[\cdot]_{\mathfrak{B}}:V \rightarrow \mathbb{R}^n$ such that $[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n)$ where $\mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i$ and $\mathfrak{B} = \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}$ is a basis for a vector space $V$. It is easy to show that $[\cdot]_{\mathfrak{B}}$ is an isomorphism (bijective and linear map).
+The sample space $\Omega$ is the set of all possible outcomes of an experiment. Points in $\omega \in \Omega$ are *outcomes* or *realizations*.
+
+A subset $A \subset \Omega$ is called a event. We will assign a real number $\mathbb{P}(A)$ to every subset $A \subset \Omega$. We call $\mathbb{P}$ a *probability measure* if the set-function $\mathbb{P}$ satisfies the following three axioms.
 
 1. $\mathbb{P}(A) \geq 0$ for every $A \subset \Omega$
 
@@ -30,14 +39,15 @@ The sample space $\Omega$ is the set of all possible outcomes of an experiment. 
 
   
 
-  
-
 $$ \mathbb{P}( \mathop{\cup}\limits_{i=1}^\infty A_i) = \sum\limits_{i=1}^\infty \mathbb{P}(A_i) $$
 
+  
+
+  
 
 However, we cannot assign probabilites to all subsets of sample space $\Omega$. We need to define what is *measurable*.
 
-
+  
 
 Let $\Omega$ be a sample space. We call $\mathcal{A}$ a $\sigma$-field, if the followings are satisfied.
 
@@ -54,16 +64,12 @@ The sets in $\mathcal{A}$ are said to be measurable and we call $(\Omega, \mathc
   
 
   
-  
 
-##  Properties of probability
-
+## Properties of probability
 
 1. $\mathbb{P}(\emptyset) = 0$ and $0 \leq \mathbb{P}(A) \leq 1$ for all $A \in \mathcal{A}$
 
 2. If $A \subset B$, then $\mathbb{P}(A) \leq \mathbb{P}(B)$
-
-
 
 3. $\mathbb{P}(A_1 \cup A_2) = \mathbb{P}(A_1) + \mathbb{P}(A_2) - \mathbb{P}(A_1 \cap A_2)$
 
@@ -71,50 +77,62 @@ The sets in $\mathcal{A}$ are said to be measurable and we call $(\Omega, \mathc
 
 <*proof*>
 
-
-1.  Let $\Omega$ be a sample space. $\Omega = \cup_{i=1}^\infty A_i$ where $A_1 := \Omega$ and $A_j := \emptyset$ for $j \geq 2$.
+1. Let $\Omega$ be a sample space. $\Omega = \cup_{i=1}^\infty A_i$ where $A_1 := \Omega$ and $A_j := \emptyset$ for $j \geq 2$.
 
 $$\begin{align}
+
 \begin{split}
+
 \mathbb{P}(\Omega) &=\mathbb{P}( \cup_{i=1}^\infty A_i) \\
+
 &= \sum_{i=1}^\infty \mathbb{P}(A_i) \\
+
 &= \mathbb{P}(A_1) + \sum_{i=2}^\infty \mathbb{P}(A_i) \\
-&= \mathbb{P}(\Omega) + \sum_{i=2}^\infty \mathbb{P}(A_i) \\
+
+&= \mathbb{P}(\Omega) + \sum_{i=2}^\infty \mathbb{P}(A_i)  \\
+
 \end{split}
+
 \end{align}$$
 
+By the cancellation law, $\sum_{i=2}^\infty \mathbb{P}(A_i) =0$. Since $\mathbb{P}(A) \geq 0$ for all $A \in \mathcal{A}$, $\mathbb{P}(A_j) = \mathbb{P}(\emptyset) = 0$ for $j \geq 2$.
 
+$1= \mathbb{P}(\Omega) = \mathbb{P}(A) + \mathbb{P}(A^c)$. Thus, $\mathbb{P}(A^c) = 1 -\mathbb{P}(A) \geq 0$.\\
 
-  By the cancellation law, $\sum_{i=2}^\infty \mathbb{P}(A_i) =0$. Since $\mathbb{P}(A) \geq 0$ for all $A \in \mathcal{A}$, $\mathbb{P}(A_j) = \mathbb{P}(\emptyset) = 0$ for $j \geq 2$.
-
- $1= \mathbb{P}(\Omega) = \mathbb{P}(A) + \mathbb{P}(A^c)$. Thus, $\mathbb{P}(A^c) = 1 -\mathbb{P}(A) \geq 0$. 
-    
- $\therefore 0 \leq \mathbb{P}(A) \leq 1$
-    
- $$\tag*{$\square$}$$
-
-  
- 
-  
-
-2. Suppose that $A\subset B$, where $A, B \in \mathcal{A}$. Since $B = A \cup (B\setminus A)$, $\mathbb{P}(B) = \mathbb{P}(A) + \mathbb{P}(B\setminus A) \geq \mathbb{P}(A)$.
-
+$\therefore 0 \leq \mathbb{P}(A) \leq 1$
 
 $$\tag*{$\square$}$$
 
-3. Since $A_1 \cup A_2 = (A_1 \setminus A_2) \cup (A_1 \cap A_2) \cup (A_2\setminus A_1)$,
+  
 
-$$
-\begin{align}
+  
+
+2.  Suppose that $A\subset B$, where $A, B \in \mathcal{A}$. Since $B = A \cup (B\setminus A)$,  $\mathbb{P}(B) = \mathbb{P}(A) + \mathbb{P}(B\setminus A) \geq \mathbb{P}(A)$.
+
+$$\tag*{$\square$}$$
+
+  
+
+3. Since $A_1 \cup A_2  = (A_1 \setminus A_2) \cup (A_1 \cap A_2) \cup (A_2\setminus A_1)$,
+
+$$\begin{align}
+
 \begin{split}
+
 \mathbb{P}(A_1 \cup A_2) &= \mathbb{P}(A_1 \setminus A_2) + \mathbb{P}(A_1 \cap A_2) + \mathbb{P}(A_2\setminus A_1) \\
+
 &= \mathbb{P}(A_1 \setminus A_2) + \mathbb{P}(A_1\cap A_2) + \mathbb{P}(A_2 \setminus A_1) + \mathbb{P}(A_1 \cap A_2) - \mathbb{P}(A_1 \cap A_2) \\
+
 &= \mathbb{P}(A_1) + \mathbb{P}(A_2) - \mathbb{P}(A_1 \cap A_2)
+
 \end{split}
-\end{align}
-$$
+
+\end{align}$$
+
+  
 
 $$\tag*{$\square$}$$
 
-##  Reference
+## Reference
+
 - All of Statistics: A Concise Course in Statistical Inference
