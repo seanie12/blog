@@ -3,23 +3,18 @@
 
 title: "Probability Space"
 
-  
-
-  
-
 categories:
 
-- Statistics
-
-  
+  - Statistics
 
 tags:
 
-- probability space
+  - probability space
 
   
 
 use_math: true
+toc: true
 
 ---
 
