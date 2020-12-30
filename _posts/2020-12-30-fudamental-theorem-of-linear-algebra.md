@@ -152,6 +152,6 @@ $$\tag*{$\square$}$$
 - Composition of two linear functions corresponds to matrix multiplication of the two matrices determined by the isomorphism between linear functions and matrices, and vice versa.
 
 ## Reference
-- 이인석, **『**선형대수와 군**』**,서울대학교출판문화원(2020)
+- 이인석, **『**선형대수와 군**』**,서울대학교출판문화원
 
  
