@@ -147,4 +147,11 @@ Since $$[\cdot]_{\mathfrak{C}}$$ is bijective,  $$(\Phi^{\mathfrak{B}}_{\mathfra
 
 $$\tag*{$\square$}$$
 
+## Summary
+- Given two vector spaces $V,W$ and corresponding bases, we can construct isomorphism between matrices and linear functions. i.e., There is a unique matrix for a given linear transformation and vice versa.
+- Composition of two linear functions corresponds to matrix multiplication of the two matrices determined by the isomorphism between linear functions and matrices, and vice versa.
+
+## Reference
+- 이인석, **『**선형대수와 군**』**,서울대학교출판문화원(2020)
+
  
