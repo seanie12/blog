@@ -85,7 +85,7 @@ $$\begin{align}
     \begin{split}
         \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M+L) \mathbf{e}_j & = \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M+L)[\mathbf{v}_j]_{\mathfrak{B}} \\
         &= [M+L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
-        &= [(M+L)\mathbf{v}_j]_{\mathfrak{C}} \\
+        &= [(M+L)\mathbf{v}_j]_{\mathfrak{C}} (\because \text{ by Equation \ref{lemma} from Lemma 1 }) \\
         &= [M\mathbf{v}_j + L\mathbf{v}_j]_{\mathfrak{C}} \\
         &= [M\mathbf{v}_j]_{\mathfrak{C}} + [L\mathbf{v}_j]_{\mathfrak{C}} \\
         &= [M]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} + [L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
@@ -113,7 +113,6 @@ $$
     \end{split}
 \end{align}
 $$
-By Equation \ref{lemma} in Lemma, the last equality holds.
 
 Lastly, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M \circ L)$$ and $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)$$ where $$M \in \mathcal{L}(V,W), L\in \mathcal{L}(U,V), A\in \mathfrak{M}_{m\times n}(F), B \in \mathfrak{M}_{n\times k}(F)$$.
 
