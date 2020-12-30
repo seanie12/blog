@@ -52,11 +52,11 @@ $$\tag*{$\square$}$$
 
 
 ## Fundamental theorem of linear algebra
-Let $U,V,W$ be vector spaces over $F$ and $\mathfrak{A,B,C}$ be bases for $U,V,W$, respectively. 
+Let $U,V,W$ be vector spaces over $F$ and $$\mathfrak{A} = \{\mathbf{u}_1, \ldots, \mathbf{u}_k \},\mathfrak{B} =\{\mathbf{v}_1, \ldots, \mathbf{v}_n \}, \mathfrak{C} = \{\mathbf{w}_1, \mathbf{w}_m \}$$ be bases for $U,V,W$, respectively. 
 Define  a function $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}: \mathfrak{M}_{m\times n} \rightarrow \mathcal{L}(V,W)$$ by $$[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)]_{\mathfrak{C}} := A[\mathbf{v}]_{\mathfrak{B}}$$, where $A \in \mathfrak{M}_{m\times n}(F), \mathbf{v} \in V$. 
 Similarly, define a function 
 $$\begin{align}\begin{split}\Psi^{\mathfrak{B}}_{\mathfrak{C}}: \mathcal{L}(V,W) &\rightarrow \mathfrak{M}_{m\times n}(F)\\
-\Psi^{\mathfrak{B}}_{\mathfrak{C}}(L) := [L]^{\mathfrak{B}}_{\mathfrak{C}} \text{ for all } L \in \mathcal{L}(V,W)\end{split}\end{align}\\$$ 
+\Psi^{\mathfrak{B}}_{\mathfrak{C}}(L) &:= [L]^{\mathfrak{B}}_{\mathfrak{C}} \text{ for all } L \in \mathcal{L}(V,W)\end{split}\end{align}\\$$ 
 
 1. $\Phi^{\mathfrak{B}}_{\mathfrak{C}}, \Psi^{\mathfrak{B}}_{\mathfrak{C}}$ are isomorphism and inverse each other. i.e. $\Phi^{\mathfrak{B}}_{\mathfrak{C}} \circ \Psi^{\mathfrak{B}}_{\mathfrak{C}} = \text{Id}$ and $\Psi^{\mathfrak{B}}_{\mathfrak{C}} \circ \Phi^{\mathfrak{B}}_{\mathfrak{C}} = \text{Id}$.
 2. $\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M \circ L)$ where $M \in \mathcal{L}(V,W)$ and $L \in \mathcal{L}(U,V)$.
