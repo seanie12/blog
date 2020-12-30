@@ -9,7 +9,6 @@ tags:
   - isomorphism
   - linear transformation
 
-
 toc: true
 toc_sticky: true
 
