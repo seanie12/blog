@@ -1,25 +1,3 @@
----
-title: "Fundamental theorem of linear algebra"
-
-
-categories:
-  - Linear Algebra
-
-tags:
-  - linear transformation
-  - fundamental theorem 
-  - matrix multiplication
-
-
-toc: true
-toc_sticky: true
-
-use_math : true
-comments : true
-
----
-
-
 
 ## Notation
 - Define a function $[\cdot]_{\mathfrak{B}}:V \rightarrow \mathbb{R}^n$ such that $[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n)$ where $\mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i$ and $\mathfrak{B} = \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}$ is a basis for a vector space $V$.  It is easy to show that $[\cdot]_{\mathfrak{B}}$ is an isomorphism (bijective and linear map).
@@ -30,13 +8,13 @@ $$ [L]^\mathfrak{B}_{\mathfrak{C}} := [ [L\mathbf{v}_1]_{\mathfrak{C}} \cdots[L\
 - $\mathcal{L}(V,W)$ is a vector space of linear functions which map $V$ to $W$. In other words, for every $L\in \mathcal{L}(V,W)$, $L:V\rightarrow W$ is a linear transformation where $V,W$ are vector spaces over $F$.
 
 -   $\mathfrak{M}_{m\times n}(F)$ is a vector space of $m\times n$ over the field $F$.
-
 ## Lemma
 Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $\mathfrak{B}= \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}, \mathfrak{C}= \{ \mathbf{w}_1, \ldots, \mathbf{w}_m\}$ be  bases for $V,W$. 
 Then $[L]^{\mathfrak{B}}_{\mathfrak{C}} [\mathbf{v}]_{\mathfrak{B}} = [L\mathbf{v}]_{\mathfrak{C}}$ for all $\mathbf{v} \in V$.
 
 <*proof*>
 Put $\mathbf{v} = \sum_{i=1}^n a_i \mathbf{v}_i$. Since $\mathfrak{B}$ is a basis for $V$, all $a_i$ are unique. 
+$$
 \begin{align}
     \begin{split}
         [L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}]_{\mathfrak{B}} &= [L]^{\mathfrak{B}}_{\mathfrak{C}} (a_1, \ldots, a_n)^\top\\
@@ -46,6 +24,7 @@ Put $\mathbf{v} = \sum_{i=1}^n a_i \mathbf{v}_i$. Since $\mathfrak{B}$ is a basi
         &= [L\mathbf{v}]_{\mathfrak{C}}
     \end{split}
 \end{align}
+$$
 $$\tag*{$\square$}$$
 
 ## Fundamental theorem of linear algebra
