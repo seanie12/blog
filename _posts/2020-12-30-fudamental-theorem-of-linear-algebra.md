@@ -19,6 +19,7 @@ comments : true
 
 ## Notation
 - Let  $[\cdot]_{\mathfrak{B}}:V \rightarrow \mathbb{R}^n$ be a function as follows.
+
   $$[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n) \text{ where } \mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i, \mathfrak{B}=\{\mathbf{v}_1, \ldots, \mathbf{v}_n \} \text{ is a basis for } V.$$
   It is easy to show that $[\cdot]_{\mathfrak{B}}$ is an isomorphism (bijective and linear map).
 
