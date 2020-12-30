@@ -85,7 +85,7 @@ $$\begin{align}
     \begin{split}
         \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M+L) \mathbf{e}_j & = \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M+L)[\mathbf{v}_j]_{\mathfrak{B}} \\
         &= [M+L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
-        &= [(M+L)\mathbf{v}_j]_{\mathfrak{C}} (\because \text{ by Equation \ref{lemma} from Lemma 1 }) \\
+        &= [(M+L)\mathbf{v}_j]_{\mathfrak{C}} \:(\because \text{by Equation \ref{lemma} from Lemma}) \\
         &= [M\mathbf{v}_j + L\mathbf{v}_j]_{\mathfrak{C}} \\
         &= [M\mathbf{v}_j]_{\mathfrak{C}} + [L\mathbf{v}_j]_{\mathfrak{C}} \\
         &= [M]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} + [L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
