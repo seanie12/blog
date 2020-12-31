@@ -29,7 +29,7 @@ $$ [L]^\mathfrak{B}_{\mathfrak{C}} := [ [L\mathbf{v}_1]_{\mathfrak{C}} \cdots[L\
 - $\mathfrak{M}_{m\times n}(F)$ is a vector space of $$m \text{ by } n$$ matrices over the field $$F$$.
 
  
-## Lemma
+## Lemma1
 Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $$\mathfrak{B}= \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}, \mathfrak{C}= \{ \mathbf{w}_1, \ldots, \mathbf{w}_m\}$$ be  bases for $V,W$. 
 $$[L]^{\mathfrak{B}}_{\mathfrak{C}} [\mathbf{v}]_{\mathfrak{B}} = [L\mathbf{v}]_{\mathfrak{C}}$$ for all $\mathbf{v} \in V$.
 
@@ -44,7 +44,7 @@ $$
         &= [L(\sum_{i=1}^n a_i \mathbf{v}_i)]_{\mathfrak{C}} \\
         &= [L\mathbf{v}]_{\mathfrak{C}}
     \end{split}
-    \label{lemma}
+    \label{lemma1}
 \end{align}
 $$
 $$\tag*{$\square$}$$
@@ -83,7 +83,7 @@ $$\begin{align}
     \begin{split}
         \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M+L) \mathbf{e}_j & = \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M+L)[\mathbf{v}_j]_{\mathfrak{B}} \\
         &= [M+L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
-        &= [(M+L)\mathbf{v}_j]_{\mathfrak{C}} \:(\because \text{by Equation \ref{lemma} from Lemma}) \\
+        &= [(M+L)\mathbf{v}_j]_{\mathfrak{C}} \:(\because \text{by Equation \ref{lemma1} from Lemma1}) \\
         &= [M\mathbf{v}_j + L\mathbf{v}_j]_{\mathfrak{C}} \\
         &= [M\mathbf{v}_j]_{\mathfrak{C}} + [L\mathbf{v}_j]_{\mathfrak{C}} \\
         &= [M]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} + [L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
