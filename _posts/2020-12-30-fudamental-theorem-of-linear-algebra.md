@@ -28,8 +28,29 @@ $$ [L]^\mathfrak{B}_{\mathfrak{C}} := [ [L\mathbf{v}_1]_{\mathfrak{C}} \cdots[L\
 
 - $\mathfrak{M}_{m\times n}(F)$ is a vector space of $$m \text{ by } n$$ matrices over the field $$F$$.
 
- 
+
 ## Lemma1
+Let $V$ be a vector space over $F$ and $$\mathfrak{B}=\{ \mathbf{v}_1, \ldots, \mathbf{v}_n\} $$ be a basis for $V$. Define a function $$[\cdot]_{\mathfrak{B}}: V\rightarrow \mathbb{R}^n $$ by $$[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n) \text{ where } \mathbf{v} = \sum_{i=1}^n a_i \mathbf{v}_i.$$Then $$[\cdot]_{\mathfrak{B}}$$ is isomorphism.
+
+<*proof*>
+Let $\mathbf{v,w} \in V, c \in F$ be given. We want to show that $$[\mathbf{v}+c\mathbf{w}]_{\mathfrak{B}} = [\mathbf{v}]_{\mathfrak{B}} + c[\mathbf{w}]_{\mathfrak{B}}.$$ Put $$\mathbf{v} = \sum_{i=1}^n a_i \mathbf{v}_i \text{ and } \mathbf{w} = \sum_{i=1}^n b_i \mathbf{v}_i.$$
+$$
+\begin{align}
+\begin{split}
+[\mathbf{v} + c\mathbf{w}]_{\mathfrak{B}} &= [\sum_{i=1}^n a_i \mathbf{v}_i + \sum_{i=1}^n c b_i \mathbf{v}_i]_{\mathfrak{B}}\\
+&= [\sum_{i=1}^n (a_i + c b_i)\mathbf{v}_i]_{\mathfrak{B}} \\
+&= (a_1 +cb_1, \ldots, a_n + cb_n) \\
+&= (a_1, \ldots, a_n) + c(b_1, \ldots, b_n) \\
+&= [\mathbf{v}]_{\mathfrak{B}} + c[\mathbf{w}]_{\mathfrak{B}}
+\end{split}
+\end{align}
+$$
+Now, we want to show that the function is one-to-one. Let $$\mathbf{v}_1, \mathbf{v}_2 \in V$$ be given. Suppose $$[\mathbf{v}_1]_{\mathfrak{B}} = [\mathbf{v}_2]_{\mathfrak{B}}.$$ Put $$\mathbf{v}_1 = \sum_{i=1}^n a_i \mathbf{v}_i \text{ and } \mathbf{v}_2 = \sum_{i=1}^n b_i \mathbf{v}_i$$. Then $$(a_1, \ldots, a_n) = (b_1, \ldots, b_n)$$. Therefore, $$\mathbf{v}_1 = \mathbf{v}_2$$, i.e. the function is one-to-one.
+Lastly, we want to show that the function is onto. Let $$(a_1, \ldots, a_n)$$ be given.  Define $$\mathbf{v} := \sum_{i=1}^n a_i \mathbf{v}_i$$. Clearly, $$\mathbf{v} \in V$$. Therefore, the function is onto.
+
+$$\tag*{$\square$}$$
+ 
+## Lemma2
 Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $$\mathfrak{B}= \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}, \mathfrak{C}= \{ \mathbf{w}_1, \ldots, \mathbf{w}_m\}$$ be  bases for $V,W$. 
 $$[L]^{\mathfrak{B}}_{\mathfrak{C}} [\mathbf{v}]_{\mathfrak{B}} = [L\mathbf{v}]_{\mathfrak{C}}$$ for all $\mathbf{v} \in V$.
 
@@ -44,7 +65,7 @@ $$
         &= [L(\sum_{i=1}^n a_i \mathbf{v}_i)]_{\mathfrak{C}} \\
         &= [L\mathbf{v}]_{\mathfrak{C}}
     \end{split}
-    \label{lemma1}
+    \label{lemma2}
 \end{align}
 $$
 $$\tag*{$\square$}$$
@@ -83,7 +104,7 @@ $$\begin{align}
     \begin{split}
         \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M+L) \mathbf{e}_j & = \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M+L)[\mathbf{v}_j]_{\mathfrak{B}} \\
         &= [M+L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
-        &= [(M+L)\mathbf{v}_j]_{\mathfrak{C}} \:(\because \text{by Equation \ref{lemma1} from Lemma1}) \\
+        &= [(M+L)\mathbf{v}_j]_{\mathfrak{C}} \:(\because \text{by Equation \ref{lemma2} from Lemma2}) \\
         &= [M\mathbf{v}_j + L\mathbf{v}_j]_{\mathfrak{C}} \\
         &= [M\mathbf{v}_j]_{\mathfrak{C}} + [L\mathbf{v}_j]_{\mathfrak{C}} \\
         &= [M]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} + [L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
