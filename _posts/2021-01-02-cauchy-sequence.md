@@ -1,4 +1,3 @@
-
 ---
 title: "Cauchy Sequence"
 
