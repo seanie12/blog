@@ -49,7 +49,12 @@ $$
 \begin{align}
 n\geq N \Rightarrow |p_n - p_m| < 1.
 \end{align}$$ 
-That is $|p_n|-|p_m| \leq |p_n -p_m| < 1.$ Thus, $|p_n| < 1 + |p_m| \text{ for } n \neq N.$Take $$M :=\max\{|p_1|, \ldots, |p_{N-1}|, |p_N|+1\}$$. Then, $$|p_n| <= M \text{ for all } n\in\mathbb{N}.$$ 
+That is $|p_n|-|p_m| \leq |p_n -p_m| < 1.$ Thus, $|p_n| < 1 + |p_m| \text{ for } n \geq N.$Take 
+$$
+\begin{align}
+M :=\max\{|p_1|, \ldots, |p_{N-1}|, |p_N|+1\}
+\end{align}$$.
+$$\therefore |p_n| <= M \text{ for all } n\in\mathbb{N}.$$ 
 
 $$\tag*{$\square$}$$
 
