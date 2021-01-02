@@ -46,6 +46,7 @@ $$
 \end{split}
 \end{align}
 $$
+
 $$\therefore \lim_{n\to \infty} = p$$
 $$\tag*{$\square$}$$
 
