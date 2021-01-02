@@ -53,7 +53,7 @@ That is $|p_n|-|p_m| \leq |p_n -p_m| < 1.$ Thus, $|p_n| < 1 + |p_m| \text{ for }
 $$
 \begin{align}
 M :=\max\{|p_1|, \ldots, |p_{N-1}|, |p_N|+1\}
-\end{align}$$.
+\end{align}$$
 
 $$\therefore |p_n| <= M \text{ for all } n\in\mathbb{N}.$$ 
 
@@ -75,6 +75,7 @@ $$
 $$
 
 $$\therefore \lim_{n\to \infty} = p$$
+
 $$\tag*{$\square$}$$
 
 ## Theorem3
