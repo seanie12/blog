@@ -17,7 +17,7 @@ comments : true
 ---
 
 ## Definition
-Let $$\{p_n\}_{n=1}^\infty$$ be a sequence in $\mathbb{R}$. The sequence is a **Cauchy sequence** if $$\forall \epsilon >0, \exists N\in \mathbb{N} \text{ such that } |p_n - p_m| < \epsilon.$$
+Let $$\{p_n\}_{n=1}^\infty$$ be a sequence in $\mathbb{R}$. The sequence is a **Cauchy sequence** if $$\forall \epsilon >0, \exists N\in \mathbb{N}$$ such that $$|p_n - p_m| < \epsilon.$$
 
 ## Theorem1
 (a) Every convergent sequence is a Cauchy sequence.
