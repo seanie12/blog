@@ -26,9 +26,7 @@ Let $$\{p_n\}_{n=1}^\infty$$ be a sequence in $\mathbb{R}$. The sequence is a **
 
 <*proof*>
 
-(a) Let $$\{ p_n\}$$ be a convergent sequence such that $$p_n \rightarrow p \text{ as } n\rightarrow \infty$$. Let $$\epsilon >0$$ be given. There exists $$N\in \mathbb{N}$$ such that $$n\geq N \Rightarrow |p_n -p| <\frac{\epsilon}{2}$$. By triangular inequality, $$|p_n - p_m| \leq |p_n - p| + |p_m -p| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$$ for $$n,m \geq N.$$
-
-$$\therefore \{p_n\}$$ is a Cauchy sequence.
+(a) Let $$\{ p_n\}$$ be a convergent sequence such that $$p_n \rightarrow p \text{ as } n\rightarrow \infty$$. Let $$\epsilon >0$$ be given. There exists $$N\in \mathbb{N}$$ such that $$n\geq N \Rightarrow |p_n -p| <\frac{\epsilon}{2}$$. By triangular inequality, $$|p_n - p_m| \leq |p_n - p| + |p_m -p| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$$ for $$n,m \geq N.$$ Therefore,$$\{p_n\}$$ is a Cauchy sequence.
 
 (b) Let $$\{p_n\}$$ be a Cauchy sequence. There exists $$N \in \mathbb{N} \text{ s.t. } n\geq N \Rightarrow |p_n - p_m| < 1.$$ That is $$|p_n|-|p_m| \leq |p_n -p_m| < 1.$$ Thus, $$|p_n| < 1 + |p_m| \text{ for } n\geq N.$$ Take $$M :=\max\{|p_1|, \ldots, |p_{N-1}|, |p_N|+1\}$$. Then, $$|p_n| <= M \text{ for all } n\in\mathbb{N}.$$
 
