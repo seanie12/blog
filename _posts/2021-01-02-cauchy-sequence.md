@@ -70,7 +70,7 @@ $$\therefore b=\lim_{n\to\infty}b_n = \lim_{n\to\infty}(b_n-a_n) + \lim_{n\to\in
 
 Now, we want to show that $$\lim_{n\to\infty}b_n =b$$ is the supremum of $A$. Since $b_n$ is an upper bound of $A$, $\forall x \in A, x\leq b_n \text{ for all }n\in\mathbb{N}.$ We claim that $$\lim_{n\to\infty}b_n \geq x \text{ for all } x\in A.$$Suppose $$\lim_{n\to\infty}b_n < x.$$ Take $$\epsilon_0 := x- b >0$$. Since $$b_n \rightarrow b \text{ as } n \rightarrow \infty$$, there is $$n_0 \in \mathbb{N} \text{ such that } n\geq n_0 \Rightarrow b-\epsilon_0 < b_n < b+\epsilon_0 = x$$, which implies that $$b_n <x \text{ for } n\geq N.$$ It contradicts to the assumption. Therefore, $$\lim_{n\to\infty}b_n \geq x.$$ i.e. $b$ is an upper bound of $A$. 
 
-Lastly, we want to show that $b$ is the least upper bound of $A$. Suppose that there is another upper bound $M$ of $A$ such that $M<b=a.$ Since $a_n \leq M \text{ for all }n\in \mathbb{N}$, $$\lim_{n\to\infty}a_n = a \leq M.$$ Moreover, $a_n \leq a \forall n \in \mathbb{N}$. Therefore $$a_n\leq a \leq M < b$$, but it contradicts to the assumption that $a=b.$
+Lastly, we want to show that $b$ is the least upper bound of $A$. Suppose that there is another upper bound $M$ of $A$ such that $M<b=a.$ Since $a_n \leq M \text{ for all }n\in \mathbb{N}$, $$\lim_{n\to\infty}a_n = a \leq M.$$ Moreover, $a_n \leq a \text{ for all } n \in \mathbb{N}$. Therefore $$a_n\leq a \leq M < b$$, but it contradicts to the assumption that $a=b.$
 
 $$\therefore b=\sup A.$$
 
