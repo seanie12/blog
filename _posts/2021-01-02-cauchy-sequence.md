@@ -17,7 +17,7 @@ comments : true
 ---
 
 ## Definition
--Let $$\{p_n\}_{n=1}^\infty$$ be a sequence in $\mathbb{R}$. The sequence is a **Cauchy sequence** if $\forall \epsilon >0, \exists N\in \mathbb{N}$ such that
+Let $$\{p_n\}_{n=1}^\infty$$ be a sequence in $\mathbb{R}$. The sequence is a **Cauchy sequence** if $\forall \epsilon >0, \exists N\in \mathbb{N}$ such that
 $$
 \begin{align}
 |p_n - p_m| < \epsilon.
@@ -28,8 +28,12 @@ $$
 - Every Cauchy sequence is bounded.
 
 <*proof*>
-- Let $$\{ p_n\}$$ be a convergent sequence such that $$p_n \rightarrow p \text{ as } n\rightarrow \infty$$. Let $$\epsilon >0$$ be given. There exists $$N\in \mathbb{N}$$ such that $$n\geq N \Rightarrow |p_n -p| <\frac{\epsilon}{2}$$. By triangular inequality, for $n,m \geq N$
-
+Let $$\{ p_n\}$$ be a convergent sequence such that $p_n \rightarrow p \text{ as } n\rightarrow \infty$. Let $$\epsilon >0$$ be given. There exists $N\in \mathbb{N}$ such that 
+$$
+\begin{align}n\geq N \Rightarrow |p_n -p| <\frac{\epsilon}{2}
+\end{align}
+$$. 
+By triangular inequality, for $n,m \geq N$
 $$\begin{align}
 \begin{split}
 |p_n - p_m| &\leq |p_n - p| + |p_m -p|\\
@@ -40,7 +44,12 @@ $$\begin{align}
 
 $$\therefore \{p_n\}$$ is a Cauchy sequence.
 
-- Let $$\{p_n\}$$ be a Cauchy sequence. There exists $$N \in \mathbb{N}$$ such that $$n\geq N \Rightarrow |p_n - p_m| < 1.$$ That is $$|p_n|-|p_m| \leq |p_n -p_m| < 1.$$ Thus, $$|p_n| < 1 + |p_m| $$ for $$n\geq N.$$ Take $$M :=\max\{|p_1|, \ldots, |p_{N-1}|, |p_N|+1\}$$. Then, $$|p_n| <= M \text{ for all } n\in\mathbb{N}.$$ 
+- Let $$\{p_n\}$$ be a Cauchy sequence. There exists $N \in \mathbb{N}$ such that 
+$$
+\begin{align}
+n\geq N \Rightarrow |p_n - p_m| < 1.
+\end{align}$$ 
+That is $|p_n|-|p_m| \leq |p_n -p_m| < 1.$ Thus, $|p_n| < 1 + |p_m| \text{ for } n \neq N.$Take $$M :=\max\{|p_1|, \ldots, |p_{N-1}|, |p_N|+1\}$$. Then, $$|p_n| <= M \text{ for all } n\in\mathbb{N}.$$ 
 
 $$\tag*{$\square$}$$
 
