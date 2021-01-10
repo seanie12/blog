@@ -39,14 +39,14 @@ We want to show that $N_\epsilon (p)$ is open for every $p \in \mathbb{R}$.  Let
 $$\delta := \min\{ |p-q|, \epsilon - |p-q|\}$$
 For every $x \in N_\delta (q)$,
 $$
-\begin{align*}
+\begin{align}
 \begin{split}
 |x-p| &\leq |x-q| + |p-q| \\
 &< \delta + |p-q| \\
 &\leq \epsilon-|p-q| + |p-q|\\
 &=\epsilon
 \end{split}
-\end{align*}
+\end{align}
 $$
 $\therefore N_\delta (q) \subset N_\epsilon (p)$. i.e. $N_\epsilon (p)$ is open.
 $$\tag*{$\square$}$$
@@ -56,3 +56,4 @@ $$\tag*{$\square$}$$
 (b) $$\{O_1, \ldots, O_n \}: \text{ a finite collection of open sets} \Rightarrow \cap_{i=1}^n O_i \text{ is open}.$$
 
 <*proof*>
+Let $p\in \cup_{\alpha \in \Lambda}$ be given. Then $p \in O_\alpha$ for some $\alpha \in \Lambda.$ Since $O_\alpha$ is open, there exists $\epsilon>0$ such that $N_\epsilon (p) \subset O_\alpha$
