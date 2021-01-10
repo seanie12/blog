@@ -140,3 +140,8 @@ $$\tag*{$\square$}$$
 ## Definition 3.1.12
 $D$ is a subset of $\mathbb{R}$. $D$ is dense in $\mathbb{R}$ if $\overline{D} = \mathbb{R}$. For an instance, $\mathbb{Q}$ is dense in $\mathbb{R}$.
 
+
+
+
+## Reference
+- Manfred Stoll, **『**Introduction to Real Analysis**』**, Pearson
