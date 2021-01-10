@@ -76,10 +76,12 @@ $$\tag*{$\square$}$$
 
 <*proof*>
 (a) Since $F^c$ is open for all $\alpha \in \Lambda$, $\cup_{\alpha \in \Lambda}$ is open, by de Morgan's law and Theorem 3.1.6.
+
 $\therefore \cap_{\alpha \in \Lambda}F$ is closed.
 $$\tag*{$\square$}$$
 
 (b) Since $F^c$ is open for all $i=1, \ldots, n, \cap_{i=1}^n F^c_i =(\cup_{i=1}^nF_i)^c$ is open. 
+
 $\therefore \cup_{i=1}^nF_i$ is open.
 
 ## Examples
@@ -102,8 +104,10 @@ $F$ is a subset of $\mathbb{R}$. $F$ is closed set if and only if $F$ contains a
 <*proof*>
 $\Rightarrow$ Suppose that $F$ is closed set, i.e. $F^c$ is open set. Let $p \in F^c$ be given. Then there exists $\epsilon >0$ such that $N_\epsilon (p) \subset F^c$, i.e. $N_\epsilon (p) \cap F = \emptyset$, which implies $N^\prime_\epsilon (p) \cap F = \emptyset$ because $p \in F^c.$ 
 $\therefore p \text{ is not a limit point of } F, \text{i.e. }F \text{ contains all its the limit points.}$
+
 $\Leftarrow$ Suppose that $F$ contains all limit points of $F.$ Let $p \in F^c$ be given. Since $p$ is not a limit point of $F$, there is $\epsilon>0$ such that $N^\prime_\epsilon (p) \cap F = \emptyset.$ Since $p \in F^c, N_\epsilon (p) \cap F=\emptyset.$ It implies that $N_\epsilon (p) \subset F^c$.
 $\therefore p\in \text{Int}(F^c), \text{i.e. } F^c \text{ is open.}$
+
 $\therefore F$ is closed.
 
 $$\tag*{$\square$}$$
@@ -126,14 +130,17 @@ $E \subset \mathbb{R}$
 (a) Let $p \in \overline{E}^c$ be given. Then $p \notin E$ and $p$ is not a limit point of $E$. There is $\epsilon >0$ such that $N^\prime_\epsilon (p) \cap E = \emptyset.$ Since $p \notin E, N_\epsilon (p) \cap E = \emptyset.$ 
 
 Now, we want to show that $N_\epsilon (p) \cap E^\prime = \emptyset.$ Suppose that $N_\epsilon (p) \cap E^\prime\neq \emptyset.$ Let $q \in N_\epsilon \cap E^\prime$ be given. Since $q$ is a limit point of $E$, we can take $\delta >0$ such that $N^\prime_\delta (q) \cap E \neq \emptyset$ and $N_\delta \subset N_\epsilon (p).$ Such $\delta$ exists because $N_\epsilon (p)$ is an open set. Since $N_\delta (q) \subset N_\epsilon (p), N_\epsilon (p) \cap E \neq \emptyset.$
+
 $\therefore N_\epsilon (p) \cap E^\prime = \emptyset$
 $\overline{E}^c$ is open, i.e. $\overline{E}$ is closed.
 
 (b) $\Rightarrow$ Suppose that $\overline{E} = E$. Then $E^\prime\subset E$. Since $E$ contains all its limits points, $E$ is closed by Theorem 3.1.9.
 $\Leftarrow$ Suppose that $E$ is closed. By Theorem 3.1.9, $E^\prime\subset E$.
+
 $\therefore \overline{E} = E \cup E^\prime = E.$
 
 (c) Let $F$ be a closed set and $E$ is a subset of $F$. Since $E \subset F$ and $F$ is closed, $E^\prime\subset F^\prime \subset F.$
+
 $\therefore \overline{E} \subset F.$
 
 $$\tag*{$\square$}$$
