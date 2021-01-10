@@ -83,31 +83,60 @@ $$\tag*{$\square$}$$
 $\therefore \cup_{i=1}^nF_i$ is open.
 
 ## Examples
-(a) Intersection of infinite collection of open sets.
+- Intersection of infinite collection of open sets.
+  Define a sequence of interval $I_n := (1-\frac{1}{n}, 1+\frac{1}{n}).$ Then $$\cap_{n=1}^\infty I_n=\{1\}$$, which is closed but not open set.
 
-Define a sequence of interval $I_n := (1-\frac{1}{n}, 1+\frac{1}{n}).$ Then $$\cap_{n=1}^\infty I_n=\{1\}$$, which is closed but not open set.
+- Intersection of infinite collection of open sets.
+  Define a sequence of interval $I_n :=(0, 1-\frac{1}{n}).$ Then $\cup_{i=n}^\infty I_n = (0, 1]$, which is not open nor closed set.
 
-(b) Intersection of infinite collection of open sets.
+- Union of infinite collection of closed sets.
+  Define a sequence of intervals $I_n :=[\frac{1}{n}, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=(0,2)$, which is open but not closed set.
 
-Define a sequence of interval $I_n :=(0, 1-\frac{1}{n}).$ Then $\cup_{i=n}^\infty I_n = (0, 1]$, which is not open nor closed set.
-
-(c) Union of infinite collection of closed sets.
-
-Define a sequence of intervals $I_n :=[\frac{1}{n}, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=(0,2)$, which is open but not closed set.
-
-(d) Union of infinite collection of closed sets.
-
-Define a sequence of intervals $I_n :=[0, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=(0,2]$, which is not open nor not closed set.
+- Union of infinite collection of closed sets.
+  Define a sequence of intervals $I_n :=[0, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=(0,2]$, which is not open nor not closed set.
 
 
 ## Theorem 3.1.9
 $F$ is a subset of $\mathbb{R}$. $F$ is closed set if and only if $F$ contains all the limit points of $F$.
 
 <*proof*>
-$\Rightarrow$ Suppose that $F$ is closed set, i.e. $F^c$ is open set. Let $p \in F^c$ be given. Then there exists $\epsilon >0$ such that $N_\epsilon (p) \subset F^c$, i.e. $N_\epsilon (p) \cap F = \emptyset$, which implies $N^{\'}_\epsilon (p) \cap F = \emptyset$ because $p \in F^c.$ 
+$\Rightarrow$ Suppose that $F$ is closed set, i.e. $F^c$ is open set. Let $p \in F^c$ be given. Then there exists $\epsilon >0$ such that $N_\epsilon (p) \subset F^c$, i.e. $N_\epsilon (p) \cap F = \emptyset$, which implies $N'_\epsilon (p) \cap F = \emptyset$ because $p \in F^c.$ 
 $\therefore p \text{ is not a limit point of } F, \text{i.e. }F \text{ contains all its the limit points.}$
-$\Leftarrow$ Suppose that $F$ contains all limit points of $F.$ Let $p \in F^c$ be given. Since $p$ is not a limit point of $F$, there is $\epsilon>0$ such that $N'_\epsilon (p) \cap F = \emptyset.$ Since $p \in F^c, N_\epsilon (p) \cap F=\emptyset.$ It implies that $N_\epsilon (p) \subset F^c$.
+$\Leftarrow$ Suppose that $F$ contains all limit points of $F.$ Let $p \in F^c$ be given. Since $p$ is not a limit point of $F$, there is $\epsilon>0$ such that $N^\prime_\epsilon (p) \cap F = \emptyset.$ Since $p \in F^c, N_\epsilon (p) \cap F=\emptyset.$ It implies that $N_\epsilon (p) \subset F^c$.
 $\therefore p\in \text{Int}(F^c), \text{i.e. } F^c \text{ is open.}$
 $\therefore F$ is closed.
 
 $$\tag*{$\square$}$$
+
+## Definition 3.1.10
+$E$ is a subset of $\mathbb{R}.$
+$$E^\prime :=\{\text{all limit points of }E \}$$ is called the *derived set* of $E$. $$\overline{E} := E \cup E^\prime$$ is the *closure* of $E$.
+
+## Theorem 3.1.11
+$E \subset \mathbb{R}$
+
+(a) $\overline{E}$ is closed
+
+(b) $\overline{E} = E \iff E$ is closed
+
+(c) $\overline{E}$ is the smallest closed set containing $E$, i.e. $F$ is closed and $E\subset F \Rightarrow \overline{E} \subset F.$
+
+<*proof*>
+(a) Let $p \in \overline{E}^c$ be given. Then $p \notin E$ and $p$ is not a limit point of $E$. There is $\epsilon >0$ such that $N^\prime_\epsilon (p) \cap E = \emptyset.$ Since $p \notin E, N_\epsilon (p) \cap E = \emptyset.$ 
+
+Now, we want to show that $N_\epsilon (p) \cap E^\prime = \emptyset.$ Suppose that $N_\epsilon (p) \cap E^\prime\neq \emptyset.$ Let $q \in N_\epsilon \cap E^\prime$ be given. Since $q$ is a limit point of $E$, we can take $\delta >0$ such that $N^\prime_\delta (q) \cap E \neq \emptyset$ and $N_\delta \subset N_\epsilon (p).$ Such $\delta$ exists because $N_\epsilon (p)$ is an open set. Since $N_\delta (q) \subset N_\epsilon (p), N_\epsilon (p) \cap E \neq \emptyset.$
+$\therefore N_\epsilon (p) \cap E^\prime = \emptyset$
+$\overline{E}^c$ is open, i.e. $\overline{E}$ is closed.
+
+(b) $\Rightarrow$ Suppose that $\overline{E} = E$. Then $E^\prime\subset E$. Since $E$ contains all its limits points, $E$ is closed by Theorem 3.1.9.
+$\Leftarrow$ Suppose that $E$ is closed. By Theorem 3.1.9, $E^\prime\subset E$.
+$\therefore \overline{E} = E \cup E^\prime = E.$
+
+(c) Let $F$ be a closed set and $E$ is a subset of $F$. Since $E \subset F$ and $F$ is closed, $E^\prime\subset F^\prime \subset F.$
+$\therefore \overline{E} \subset F.$
+
+$$\tag*{$\square$}$$
+
+## Definition 3.1.12
+$D$ is a subset of $\mathbb{R}$. $D$ is dense in $\mathbb{R}$ if $\overline{D} = \mathbb{R}$. For an instance, $\mathbb{Q}$ is dense in $\mathbb{R}$.
+
