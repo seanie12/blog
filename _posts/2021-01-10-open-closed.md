@@ -110,7 +110,8 @@ $$\tag*{$\square$}$$
 
 ## Definition 3.1.10
 $E$ is a subset of $\mathbb{R}.$
-$$E^\prime :=\{\text{all limit points of }E \}$$ is called the *derived set* of $E$. $$\overline{E} := E \cup E^\prime$$ is the *closure* of $E$.
+$$E^\prime :=\{\text{all limit points of }E \}$$ is called the *derived set* of $E$. 
+$$\overline{E} := E \cup E^\prime$$ is the *closure* of $E$.
 
 ## Theorem 3.1.11
 $E \subset \mathbb{R}$
