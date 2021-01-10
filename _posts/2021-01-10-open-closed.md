@@ -35,6 +35,7 @@ $$\text{Int}(E) := \{\text{all interior points of } E\} \subset E$$
 (a) $\mathbb{R}$ is open and closed set. It is one of axioms in topology.
 
 (b) Every $\epsilon$-neighborhood is open. (basis in topology)
+
 <*proof*>
 We want to show that $N_\epsilon (p)$ is open for every $p \in \mathbb{R}$.  Let $q \in N_\epsilon (p)$ be given. Define $\delta >0$ such that
 $$\delta := \min\{ |p-q|, \epsilon - |p-q|\}.$$
@@ -67,3 +68,36 @@ $$\tag*{$\square$}$$
 
 $\therefore p\in \text{Int}(\cap_{i=1}^n O_i)$, i.e. $\cup_{i=1}^n O_i$ is open.
 $$\tag*{$\square$}$$
+
+## Theorem 3.1.7
+(a) $$\{F_\alpha \}_{\alpha \in \Lambda} \text{ is a family of closed sets} \Rightarrow \cap_{\alpha \in \Lambda}F_\alpha \text{ is closed}.$$
+
+(b)$$\{F_1, \ldots, F_n\} \text{ is a collection of closed sets} \Rightarrow \cup_{i=1}^n F_i \text{ is closed}.$$
+
+<*proof*>
+(a) Since $F^c$ is open for all $\alpha \in \Lambda$, $\cup_{\alpha \in \Lambda}$ is open, by de Morgan's law and Theorem 3.1.6.
+$\therefore \cap_{\alpha \in \Lambda}F$ is closed.
+$$\tag*{$\square$}$$
+
+(b) Since $F^c$ is open for all $i=1, \ldots, n, \cap_{i=1}^n F^c_i =(\cup_{i=1}^nF_i)^c$ is open. 
+$\therefore \cup_{i=1}^nF_i$ is open.
+
+## Examples
+(a) Intersection of infinite collection of open sets.
+
+Define a sequence of interval $I_n := (1-\frac{1}{n}, 1+\frac{1}{n}).$ Then $$\cap_{n=1}^\infty I_n=\{1\}$$, which is closed but not open set.
+
+(b) Intersection of infinite collection of open sets.
+
+Define a sequence of interval $I_n :=(0, 1-\frac{1}{n}).$ Then $\cup_{i=n}^\infty I_n = (0, 1]$, which is not open nor closed set.
+
+(c) Union of infinite collection of closed sets.
+
+Define a sequence of intervals $I_n :=[\frac{1}{n}, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=(0,2)$, which is open but not closed set.
+
+(d) Union of infinite collection of closed sets.
+
+Define a sequence of intervals $I_n :=[0, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=(0,2]$, which is not open nor not closed set.
+
+
+
