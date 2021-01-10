@@ -23,7 +23,7 @@ $E$ is a subset of $\mathbb{R}$. $p\in E$ is an *interior point* of $E$ if  ther
 $$\text{Int}(E) := \{\text{all interior points of } E\} \subset E$$
 
 ## Example 3.1.2
-1. $E=[1,2)$, $\text{int}(E) = (1,2]$.
+1. $E=[1,2)$, $\text{int}(E) = (1,2)$.
 2. $E =\mathbb{R} \setminus \mathbb{Q}$, $\text{Int}(E) = \emptyset$.
 
 
