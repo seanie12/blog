@@ -35,8 +35,8 @@ $$\text{Int}(E) := \{\text{all interior points of } E\} \subset E$$
 (a) $\mathbb{R}$ is open and closed set. It is one of axioms in topology.
 (b) Every $\epsilon$-neighborhood is open. (basis in topology)
 <*proof*>
-We want to show that $N_\epsilon (p)$ is open for every $p \in \mathbb{R}$.  Let $q \in N_\epsilon (p)$ be given. Define $\delta >0$ as follows:
-$$\delta := \min\{ |p-q|, \epsilon - |p-q|\}$$
+We want to show that $N_\epsilon (p)$ is open for every $p \in \mathbb{R}$.  Let $q \in N_\epsilon (p)$ be given. Define $\delta >0$ such that
+$$\delta := \min\{ |p-q|, \epsilon - |p-q|\}.$$
 For every $x \in N_\delta (q)$,
 $$
 \begin{align}
@@ -56,4 +56,6 @@ $$\tag*{$\square$}$$
 (b) $$\{O_1, \ldots, O_n \}: \text{ a finite collection of open sets} \Rightarrow \cap_{i=1}^n O_i \text{ is open}.$$
 
 <*proof*>
-Let $p\in \cup_{\alpha \in \Lambda}$ be given. Then $p \in O_\alpha$ for some $\alpha \in \Lambda.$ Since $O_\alpha$ is open, there exists $\epsilon>0$ such that $N_\epsilon (p) \subset O_\alpha$
+Let $p\in \cup_{\alpha \in \Lambda}$ be given. Then $p \in O_\alpha$ for some $\alpha \in \Lambda.$ Since $O_\alpha$ is open, there exists $\epsilon>0$ such that $N_\epsilon (p) \subset O_\alpha.$ Since $O_\alpha \in \cup_{\alpha \in \Lambda}, N_\epsilon (p) \subset O_\alpha \subset \cup_{\alpha \in \Lambda}O_\alpha.$
+
+$\therefore p\in \text{Int}(\cup_{\alpha \in \Lambda}O_\alpha)$, i.e. $\cup_{\alpha \in \Lambda}$ is open.
