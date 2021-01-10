@@ -100,7 +100,7 @@ $\therefore \cup_{i=1}^nF_i$ is open.
 $F$ is a subset of $\mathbb{R}$. $F$ is closed set if and only if $F$ contains all the limit points of $F$.
 
 <*proof*>
-$\Rightarrow$ Suppose that $F$ is closed set, i.e. $F^c$ is open set. Let $p \in F^c$ be given. Then there exists $\epsilon >0$ such that $N_\epsilon (p) \subset F^c$, i.e. $N_\epsilon (p) \cap F = \emptyset$, which implies $N'_\epsilon (p) \cap F = \emptyset$ because $p \in F^c.$ 
+$\Rightarrow$ Suppose that $F$ is closed set, i.e. $F^c$ is open set. Let $p \in F^c$ be given. Then there exists $\epsilon >0$ such that $N_\epsilon (p) \subset F^c$, i.e. $N_\epsilon (p) \cap F = \emptyset$, which implies $N^\prime_\epsilon (p) \cap F = \emptyset$ because $p \in F^c.$ 
 $\therefore p \text{ is not a limit point of } F, \text{i.e. }F \text{ contains all its the limit points.}$
 $\Leftarrow$ Suppose that $F$ contains all limit points of $F.$ Let $p \in F^c$ be given. Since $p$ is not a limit point of $F$, there is $\epsilon>0$ such that $N^\prime_\epsilon (p) \cap F = \emptyset.$ Since $p \in F^c, N_\epsilon (p) \cap F=\emptyset.$ It implies that $N_\epsilon (p) \subset F^c$.
 $\therefore p\in \text{Int}(F^c), \text{i.e. } F^c \text{ is open.}$
