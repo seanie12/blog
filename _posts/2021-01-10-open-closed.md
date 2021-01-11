@@ -28,8 +28,8 @@ $$\text{Int}(E) := \{\text{all interior points of } E\} \subset E$$
 
 
 ## Definition 3.1.3
-(a) $O \subset \mathbb{R}$ is *open* if $\text{Int}(O) = O.$
-(b) $F \subset \mathbb{R}$ is *closed* if $F^c = \mathbb{R}\setminus F$ is open.
+- $O \subset \mathbb{R}$ is *open* if $\text{Int}(O) = O.$
+- $F \subset \mathbb{R}$ is *closed* if $F^c = \mathbb{R}\setminus F$ is open.
 
 ## Examples 3.1.4
 (a) $\mathbb{R}$ is open and closed set. It is one of axioms in topology.
