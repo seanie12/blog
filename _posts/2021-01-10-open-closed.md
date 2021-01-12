@@ -127,12 +127,12 @@ $E \subset \mathbb{R}$
 (c) $\overline{E}$ is the smallest closed set containing $E$, i.e. $F$ is closed and $E\subset F \Rightarrow \overline{E} \subset F.$
 
 <*proof*>
-(a) Let $p \in \overline{E}^c$ be given. Then $p \notin E$ and $p$ is not a limit point of $E$. There is $\epsilon >0$ such that $N^\prime_\epsilon (p) \cap E = \emptyset.$ Since $p \notin E, N_\epsilon (p) \cap E = \emptyset.$ 
+(a) Let $p \in \overline{E^c}$ be given. Then $p \notin E$ and $p$ is not a limit point of $E$. There is $\epsilon >0$ such that $N^\prime_\epsilon (p) \cap E = \emptyset.$ Since $p \notin E, N_\epsilon (p) \cap E = \emptyset.$ 
 
 Now, we want to show that $N_\epsilon (p) \cap E^\prime = \emptyset.$ Suppose that $N_\epsilon (p) \cap E^\prime\neq \emptyset.$ Let $q \in N_\epsilon \cap E^\prime$ be given. Since $q$ is a limit point of $E$, we can take $\delta >0$ such that $N^\prime_\delta (q) \cap E \neq \emptyset$ and $N_\delta \subset N_\epsilon (p).$ Such $\delta$ exists because $N_\epsilon (p)$ is an open set. Since $N_\delta (q) \subset N_\epsilon (p), N_\epsilon (p) \cap E \neq \emptyset.$
 
 $\therefore N_\epsilon (p) \cap E^\prime = \emptyset$
-$\overline{E}^c$ is open, i.e. $\overline{E}$ is closed.
+$\overline{E^c}$ is open, i.e. $\overline{E}$ is closed.
 
 (b) $\Rightarrow$ Suppose that $\overline{E} = E$. Then $E^\prime\subset E$. Since $E$ contains all its limits points, $E$ is closed by Theorem 3.1.9.
 $\Leftarrow$ Suppose that $E$ is closed. By Theorem 3.1.9, $E^\prime\subset E$.
