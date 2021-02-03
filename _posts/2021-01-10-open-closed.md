@@ -95,7 +95,7 @@ $\therefore \cup_{i=1}^nF_i$ is open.
   Define a sequence of intervals $I_n :=[\frac{1}{n}, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=(0,2)$, which is open but not closed set.
 
 - Union of infinite collection of closed sets.
-  Define a sequence of intervals $I_n :=[0, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=(0,2]$, which is not open nor not closed set.
+  Define a sequence of intervals $I_n :=[0, 2-\frac{1}{n}].$ Then $\cup_{n=1}^\infty I_n=[0,2)$, which is not open nor not closed set.
 
 
 ## Theorem 3.1.9
