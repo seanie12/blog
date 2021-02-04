@@ -47,11 +47,13 @@ $\therefore p$ is a limit point of $P$.
 <*proof*>
 \begin{align}
 \begin{split}
-$$\frac{1}{3} + 2\times \frac{1}{3^2} + 2^2 \times \frac{1}{3^3} + \cdots &= \sum_{n=1}^\infty \frac{2^{n-1}}{3^n} \\
+$$
+\frac{1}{3} + 2\times \frac{1}{3^2} + 2^2 \times \frac{1}{3^3} + \cdots &= \sum_{n=1}^\infty \frac{2^{n-1}}{3^n} \\
 &= \frac{1}{3} \sum_{n=1}^\infty \frac{2^{n-1}}{3^n}\\
 &=\frac{1}{3} \cdot \frac{1}{1-\frac{2}{3}} \\
 &=1
 \end{split}
 \end{align}
 $$
- $$\tag*{$\square$}$$
+
+$$\tag*{$\square$}$$
