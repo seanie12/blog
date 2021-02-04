@@ -45,6 +45,7 @@ $\therefore p$ is a limit point of $P$.
 (4) The sum of the lengths of the intervals removed is 1.
 
 <*proof*>
+
 \begin{align}
 \begin{split}
 $$
