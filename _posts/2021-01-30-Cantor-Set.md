@@ -27,7 +27,9 @@ $$
 By the theorem 3.2.7, $P$ is nonempty compact set. We say that $P$ is the **Cantor Set**.
 ## Properties of Cantor Set
 (1) $P \neq \emptyset$ and $P$ is compact
+
 (2)$P$ contains all the end points of $J_{n,k} for all $n=0,1,2,\ldots, k=1,2,\ldots, 2^n$.
+
 (3) Every point of $P$ is a limit point of $P$.
 
 <*proof*>
@@ -43,9 +45,10 @@ $\therefore p$ is a limit point of $P$.
 (4) The sum of the lengths of the intervals removed is 1.
 
 <*proof*>
+$$
 \begin{align}
 \begin{split}
-$$\frac{1}{3} + 2\times \frac{1}{3^2} + 2^2 \times \frac{1}{3^3} + \cdots &= \sum_{n=1}^\infty \frac{2^{n-1}}{3^n} \\
+\frac{1}{3} + 2\times \frac{1}{3^2} + 2^2 \times \frac{1}{3^3} + \cdots &= \sum_{n=1}^\infty \frac{2^{n-1}}{3^n} \\
 &= \frac{1}{3} \sum_{n=1}^\infty \frac{2^{n-1}}{3^n}\\
 &=\frac{1}{3} \cdot \frac{1}{1-\frac{2}{3}} \\
 &=1
