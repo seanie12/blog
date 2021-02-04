@@ -42,13 +42,13 @@ for some $0 < x_k <3^m$. So, we have $J_{m,k} \subset N_\epsilon (p)$ since the 
 
 $\therefore p$ is a limit point of $P$.
  $$\tag*{$\square$}$$
+ 
 (4) The sum of the lengths of the intervals removed is 1.
 
 <*proof*>
-
+$$
 \begin{align}
 \begin{split}
-$$
 \frac{1}{3} + 2\times \frac{1}{3^2} + 2^2 \times \frac{1}{3^3} + \cdots &= \sum_{n=1}^\infty \frac{2^{n-1}}{3^n} \\
 &= \frac{1}{3} \sum_{n=1}^\infty \frac{2^{n-1}}{3^n}\\
 &=\frac{1}{3} \cdot \frac{1}{1-\frac{2}{3}} \\
@@ -56,5 +56,6 @@ $$
 \end{split}
 \end{align}
 $$
-
 $$\tag*{$\square$}$$
+
+
