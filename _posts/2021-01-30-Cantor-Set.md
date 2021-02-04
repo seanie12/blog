@@ -27,7 +27,9 @@ $$
 By the theorem 3.2.7, $P$ is nonempty compact set. We say that $P$ is the **Cantor Set**.
 ## Properties of Cantor Set
 (1) $P \neq \emptyset$ and $P$ is compact
+
 (2) $P$ contains all the end points of $J_{n,k}$ for all $n=0,1,2,\ldots, k=1,2,\ldots, 2^n$.
+
 (3) Every point of $P$ is a limit point of $P$.
 
 <*proof*>
