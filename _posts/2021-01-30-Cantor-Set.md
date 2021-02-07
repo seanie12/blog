@@ -42,7 +42,7 @@ for some $0 < x_k <3^m$. So, we have $J_{m,k} \subset N_\epsilon (p)$ since the 
 
 $\therefore p$ is a limit point of $P$.
  $$\tag*{$\square$}$$
-(4) The sum of the lengths of the intervals removed is 1.
+(4) The sum of the lengths of the intervals removed is 1. In other words the Cantor set $P$ is measure zero set with respect to Lebesque measure.
 
 <*proof*>
 $$
