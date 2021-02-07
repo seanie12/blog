@@ -162,14 +162,14 @@ Alternatively, it has infinite expansion as follows:
 
 $$
 \begin{align}
-x = \frac{n_1}{3} + \cdots + \frac{0}{3^k} + \sum_{m=k+1}^\infty \frac{2}{3^k} \quad \text{ when } n_k = 1,
+x = \frac{n_1}{3} + \cdots + \frac{0}{3^k} + \sum_{m=k+1}^\infty \frac{2}{3^m} \quad \text{ when } n_k = 1,
 \end{align}
 $$
 or
 
 $$
 \begin{align}
-x = \frac{n_1}{3} + \cdots + \frac{1}{3^k} + \sum_{m=k+1}^\infty \frac{2}{3^k} \quad \text{ when } n_k = 2.
+x = \frac{n_1}{3} + \cdots + \frac{1}{3^k} + \sum_{m=k+1}^\infty \frac{2}{3^m} \quad \text{ when } n_k = 2.
 \end{align}
 $$
 
