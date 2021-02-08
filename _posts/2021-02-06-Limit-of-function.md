@@ -200,7 +200,9 @@ $$
 $$
 Take $\epsilon := \frac{|B|}{2}$. Then,
 $$
+\begin{align}
 |B| - |g(x)| \leq |g(x) - B| < \frac{|B|}{2}
+\end{align}
 $$
 $\therefore |g(x)| > \frac{|B|}{2}$ for  $0<|x-p|<\delta_1$.
 
