@@ -76,8 +76,11 @@ $$
 $$
 
 Now, we take $\delta := \min (\frac{\epsilon}{2|p|+1}, 1)$. Then 
+
 $$
+\begin{align}
 |x+p||x-p| < (2|p|+1)\frac{\epsilon}{2|p|+1} = \epsilon
+\end{align}
 $$ 
 $\therefore \displaystyle{\lim_{x\to p}}x^2 = p^2.$
  $$\tag*{$\square$}$$
@@ -95,4 +98,8 @@ Similarly, $\forall \delta >0$, we can take $x\in \mathbb{R}\setminus \mathbb{Q}
 Thus, $|f(x) - L| = |L| \leq \epsilon$.
  $$\tag*{$\square$}$$
 
-(f) 
+(f) $f(x) = 0 \text{ if } x \in \mathbb{Q}$ or $f(x) = x \text{ if } x \in \mathbb{R}\setminus \mathbb{Q}$.
+$\displaystyle{\lim_{x\to 0} f(x)=0}$ and $\displaystyle{\lim_{x\to p} f(x)}$ does not exist for $\forall p\neq0.$
+
+Let $\epsilon >0$ be given. Since $|f(x)| \leq |x| <\delta$, take $\delta := \epsilon$. Then $|f(x) < \epsilon$.
+$\therefore \displaystyle{\lim_{x\to 0} f(x) = 0}$. 
