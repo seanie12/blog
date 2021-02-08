@@ -147,6 +147,7 @@ Since the limit of sequence is unique, $L_1 = L_2$.
 ## Examples 4.1.5
 (a) $E = (0, \infty), f(x) = \sin \frac{1}{x}$
 If we take a sequence $p_n = \frac{(2n+1)\pi}{2}$, then $\sin \frac{1}{p_n} = (-1)^n$.
+
 $\therefore \displaystyle{\lim_{x\to p}f(x)}$ does not exist for every $p \in \mathbb{R}$.
 
 (b) $f(x) = 0 \text{ if } x \in \mathbb{Q}$ or $f(x) = x \text{ if } x \not\in \mathbb{Q}$.
