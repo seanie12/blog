@@ -62,9 +62,7 @@ $$
 \end{split}
 \end{align}
 $$
-
 Similarly, we can bound $|x+p|$ with triangular inequality,
-
 $$
 \begin{align}
 \begin{split}
@@ -74,9 +72,7 @@ $$
 \end{split}
 \end{align}
 $$
-
-Now, we take $\delta := \min (\frac{\epsilon}{2|p|+1}, 1)$. Then 
-
+Now, we take $\delta := \min (\frac{\epsilon}{2|p|+1}, 1)$. Then, 
 $$
 \begin{align}
 |x+p||x-p| < (2|p|+1)\frac{\epsilon}{2|p|+1} = \epsilon
@@ -103,3 +99,15 @@ $\displaystyle{\lim_{x\to 0} f(x)=0}$ and $\displaystyle{\lim_{x\to p} f(x)}$ do
 
 Let $\epsilon >0$ be given. Since $|f(x)| \leq |x| <\delta$, take $\delta := \epsilon$. Then $|f(x) < \epsilon$.
 $\therefore \displaystyle{\lim_{x\to 0} f(x) = 0}$. 
+
+## Theorem 4.1.3
+$E \subset \mathbb{R}, f: E\rightarrow \mathbb{R}, p \in E^\prime$.
+$$
+\begin{align}
+\begin{split}
+\lim_{x\to p}f(x) = L \iff &\lim_{n\to\infty} f(p_n) = L \\
+&\text{for all seq } (p_n) \text{ with } p_n \rightarrow p \text{ as } n\rightarrow \infty \\
+&\text{and } p_n \neq p
+\end{split}
+\end{align}
+$$
