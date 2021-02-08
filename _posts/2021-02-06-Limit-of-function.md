@@ -208,7 +208,7 @@ Let $(p_n)$ be a sequence with $p_n \to p$ as $n\to \infty$ and $p_n \neq p$.
 
 Then there is $N \in \mathbb{N} \text{ s.t. } n\geq N \Rightarrow 0<|p_n -p| <\delta_1.$
 
-So $g(p_n)\to B$ as $n\to \infty$. i.e. $\frac{1}{g(p_n)} \to \frac{1}{B}$ as $n\to \infty$.
+So, $g(p_n)\to B$ as $n\to \infty$. i.e. $\frac{1}{g(p_n)} \to \frac{1}{B}$ as $n\to \infty$.
 
 $\therefore \displaystyle{\lim_{n\to\infty}\frac{1}{g(p_n)}=\frac{1}{B}}.$
 
