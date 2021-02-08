@@ -141,3 +141,70 @@ By the previous theorem, for any seq. $(p_n)$ with $p_n \rightarrow p$ as $n\rig
 $\Rightarrow \displaystyle{\lim_{n\to\infty}f(p_n)} = L_1 \text{ and } \displaystyle{\lim_{n\to\infty}f(p_n) = L_2}.$
 Since the limit of sequence is unique, $L_1 = L_2$.
  $$\tag*{$\square$}$$
+
+## Examples 4.1.5
+(a) $E = (0, \infty), f(x) = \sin \frac{1}{x}$
+If we take a sequence $p_n = \frac{(2n+1)\pi}{2}$, then $\sin \frac{1}{p_n} = (-1)^n$.
+$\therefore \displaystyle{\lim_{x\to p}f(x)}$ does not exist for every $p \in \mathbb{R}$.
+
+(b) $f(x) = 0 \text{ if } x \in \mathbb{Q}$ or $f(x) = x \text{ if } x \not\in \mathbb{Q}$.
+
+Let $p \in \mathbb{R}$ and $p\neq 0$.
+$\exists (p_n) \subset \mathbb{Q}$ s.t. $p_n \to p$ as $n\to\infty$ and $p_n \neq p$.
+$\exists (q_n) \subset \mathbb{R}\setminus\mathbb{Q}$ s.t. $q_n \to p$ as $n\to\infty$ and $q_n \neq p$.
+$(\because$ For every $n\in \mathbb{N}$, take $p_n \in \mathbb{Q}$ or $q_n \in \mathbb{R}\setminus \mathbb{Q}$  $p_n, q_n \in (p, p+\frac{1}{n})$.
+By the density of rational/irrational numbers, we can construct such sequences.)
+$$
+\begin{align}
+\begin{split}
+0<|p_n -p| <\delta \Rightarrow f(p_n) = 0 \to 0 \\
+0< |q_n -p| <\delta \Rightarrow f(q_n) =q_n \to 0
+\end{split}
+\end{align}
+$$
+Since $q_n \to p$ and $q_n \to 0$, $p=0$. But it is contradiction.
+ $$\tag*{$\square$}$$
+
+## Theorem 4.1.6
+$E\subset \mathbb{R}, f,g: E \rightarrow \mathbb{R}, p\in E^\prime$
+$\displaystyle{\lim_{x\to p}f(x)=A, \lim_{x\to p}g(x) = B}$.
+
+(a) $\displaystyle{\lim_{x\to p}(f(x) + g(x))} = A+B$
+
+(b) $\displaystyle{\lim_{x\to p}(f(x) \cdot g(x))} = A\cdot B$
+
+(c) $\displaystyle{\lim_{x\to p}\frac{f(x)}{ g(x)}} = \frac{A}{B}$
+
+<*proof*>
+(a) Since $f(x) \to A$ as $x\to p$ and $g(x)\to B$ as $x\to p$.
+Let $(p_n)$ be a sequence with $p_n \to p$ as $n\to \infty$ and $p_n \neq p$.
+Thus,
+$$
+\begin{align}
+\lim_{n\to\infty}f(p_n)=A, \lim_{n\to\infty}g(p_n)=B
+\end{align}$$
+$\therefore \displaystyle{\lim_{n\to\infty}(f(p_n) + g(p_n)) = A+B}$
+$\therefore \displaystyle{\lim_{x\to p}(f(x) + g(x))= A + B}$
+ $$\tag*{$\square$}$$
+
+(b) Similarly, we can prove it.
+
+(c) It is enough to show that $\displaystyle{\lim_{x\to p}\frac{1}{g(x)}} = \frac{1}{B}$
+
+<*proof*>
+Since $\displaystyle{\lim_{x\to p}g(x) = B}$,
+$$
+\begin{align}
+\exists \delta_1 >0 \text{ s.t. } 0<|x-p|<\delta_1 \Rightarrow |g(x) - B| <\epsilon
+\end{align}
+$$
+Take $\epsilon := \frac{|B|}{2}$. Then,
+$$
+|B| - |g(x)| \leq |g(x) - B| < \frac{|B|}{2}
+$$
+$\therefore |g(x)| > \frac{|B|}{2}$ for  $0<|x-p|<\delta_1$ for some $\delta_1 >0$.
+Let $(p_n)$ be a sequence with $p_n \to p$ as $n\to \infty$ and $p_n \neq p$.
+Then there is $N \in \mathbb{N}$ s.t. $n\geq N \Rightarrow 0<|p_n -p| <\delta_1.$
+So $g(p_n)\to B$ as $n\to \infty$. i.e. $\frac{1}{g(p_n)} \to \frac{1}{B}$ as $n\to \infty$.
+$\therefore \displaystyle{\lim_{n\to\infty}\frac{1}{g(p_n)}=\frac{1}{B}}.$
+$\therefore \displaystyle{\lim_{x\to p}\frac{1}{g(x)}=\frac{1}{B}}.$
