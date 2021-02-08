@@ -43,8 +43,8 @@ $0<|x-p|<\delta \Rightarrow |c-c| <\epsilon$
 (b) $\displaystyle{\lim_{x\to p}x = p}$
 
 $\because \forall \epsilon >0, \exists \delta >0$ such that 
-$0<|x-p|<\delta \Rightarrow |x-p|<\epsilon$. 
-Take $\delta :=\epsilon$. Then, $0<|x-p|<\delta \Rightarrow |x-p|<\delta=\epsilon$.
+$0<|x-p|<\delta \Rightarrow |x-p|<\epsilon$.  Take $\delta :=\epsilon$. 
+Then, $0<|x-p|<\delta \Rightarrow |x-p|<\delta=\epsilon$.
 
 (c) $\displaystyle{\lim_{x\to p}x^2 = p^2}$
 
