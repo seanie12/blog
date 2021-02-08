@@ -159,8 +159,8 @@ By the density of rational/irrational numbers, we can construct such sequences.)
 $$
 \begin{align}
 \begin{split}
-0<|p_n -p| <\delta \Rightarrow f(p_n) = 0 \to 0 \\
-0< |q_n -p| <\delta \Rightarrow f(q_n) =q_n \to 0
+0<|p_n -p| <\delta &\Rightarrow f(p_n) = 0 \to 0 \\
+0< |q_n -p| <\delta &\Rightarrow f(q_n) =q_n \to 0
 \end{split}
 \end{align}
 $$
