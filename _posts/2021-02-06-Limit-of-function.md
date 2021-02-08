@@ -132,4 +132,12 @@ $$
 $$
 which contradicts to the assumption that $\displaystyle{\lim_{n\to\infty}f(p_n)=L}.$
 $\therefore \displaystyle{\lim_{x\to p}f(x)=L}.$
+ $$\tag*{$\square$}$$
+## Corollary 4.1.4
+$[f(x) \rightarrow L_1$ and $f(x) \rightarrow L_2$ as $x\rightarrow p] \Rightarrow [L_1 = L_2]$.
 
+<*proof*>
+By the previous theorem, for any seq. $(p_n)$ with $p_n \rightarrow p$ as $n\rightarrow \infty$ and $p_n \neq p$
+$\Rightarrow \displaystyle{\lim_{n\to\infty}f(p_n)} = L_1 \text{ and } \displaystyle{\lim_{n\to\infty}f(p_n) = L_2}.$
+Since the limit of sequence is unique, $L_1 = L_2$.
+ $$\tag*{$\square$}$$
