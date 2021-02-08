@@ -203,8 +203,13 @@ $$
 |B| - |g(x)| \leq |g(x) - B| < \frac{|B|}{2}
 $$
 $\therefore |g(x)| > \frac{|B|}{2}$ for  $0<|x-p|<\delta_1$ for some $\delta_1 >0$.
+
 Let $(p_n)$ be a sequence with $p_n \to p$ as $n\to \infty$ and $p_n \neq p$.
+
 Then there is $N \in \mathbb{N}$ s.t. $n\geq N \Rightarrow 0<|p_n -p| <\delta_1.$
+
 So $g(p_n)\to B$ as $n\to \infty$. i.e. $\frac{1}{g(p_n)} \to \frac{1}{B}$ as $n\to \infty$.
+
 $\therefore \displaystyle{\lim_{n\to\infty}\frac{1}{g(p_n)}=\frac{1}{B}}.$
+
 $\therefore \displaystyle{\lim_{x\to p}\frac{1}{g(x)}=\frac{1}{B}}.$
