@@ -22,8 +22,10 @@ comments : true
 ## 4.1.1 Definition
 $E \subset \mathbb{R}, f: E \rightarrow \mathbb{R}$: a function, $p \in E^\prime$.
 $f$ has a **limit at p** if there exists $L\in \mathbb{R}$ such that $\forall \epsilon >0, \exists \delta >0$ s.t.
-$0 <|x-p|<\delta (\forall x \in E) \Rightarrow |f(x)-L| < \epsilon.$
-
+$$
+\begin{align}
+0 <|x-p|<\delta \:(\forall x \in E) \Rightarrow |f(x)-L| < \epsilon.
+\end{align}$$
 We write $\displaystyle{\lim_{x\to p}f(x) = L}$.
 
 
@@ -208,7 +210,9 @@ $\therefore |g(x)| > \frac{|B|}{2}$ for  $0<|x-p|<\delta_1$.
 
 Let $(p_n)$ be a sequence with $p_n \to p$ as $n\to \infty$ and $p_n \neq p$.
 Then there is $N \in \mathbb{N}$ such that
-$n\geq N \Rightarrow 0<|p_n -p| <\delta_1.$
+$$
+\begin{align}n\geq N \Rightarrow 0<|p_n -p| <\delta_1.
+\end{align}$$
 
 So, $g(p_n)\to B$ as $n\to \infty$. i.e. $\frac{1}{g(p_n)} \to \frac{1}{B}$ as $n\to \infty$.
 
