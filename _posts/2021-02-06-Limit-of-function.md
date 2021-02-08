@@ -42,14 +42,16 @@ $0<|x-p|<\delta \Rightarrow |c-c| <\epsilon$
 
 (b) $\displaystyle{\lim_{x\to p}x = p}$
 
-$\because \forall \epsilon >0, \exists \delta >0$ such that $0<|x-p|<\delta \Rightarrow |x-p|<\epsilon$. 
+$\because \forall \epsilon >0, \exists \delta >0$ such that 
+$0<|x-p|<\delta \Rightarrow |x-p|<\epsilon$. 
 Take $\delta :=\epsilon$. Then, $0<|x-p|<\delta \Rightarrow |x-p|<\delta=\epsilon$.
 
 (c) $\displaystyle{\lim_{x\to p}x^2 = p^2}$
 
 <*proof*>
 Let $\epsilon >0$ be given. We want to show that the existence of $\delta >0$ such that $0<|x-p|<\delta \Rightarrow |x^2-p^2| <\epsilon.$
-Now we factorize $|x^2-p^2| = |x+p|\cdot |x-p|$. If $0<\delta \leq 1$,
+Now we factorize $|x^2-p^2| = |x+p|\cdot |x-p|$. 
+If $0<\delta \leq 1$,
 
 $$
 \begin{align}
