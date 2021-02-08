@@ -111,3 +111,25 @@ $$
 \end{split}
 \end{align}
 $$
+
+<*proof*>
+$\Rightarrow$ Suppose that $\displaystyle{\lim_{x\to p}f(x)=L}$. Let $\epsilon >0 $ be given.
+Since $\displaystyle{\lim_{x\to p}f(x)=L}$, there is $\delta >0$, such that 
+$0<|x-p| <\delta \Rightarrow |f(x)-L| <\epsilon.$
+Since $p$ is a limit point, there exists a sequence $(p_n)$ with $p_n \rightarrow p$ as $n\rightarrow \infty$ 
+and $p_n \neq p$. Let $(p_n)$ be any sequence satisfying such condition.
+Since $p_n \rightarrow p$ as $n\rightarrow \infty$, there exists $N\in \mathbb{N}$ such that 
+$n\geq N \Rightarrow 0<|p_n -p| <\delta (\because p_n \neq p)$.
+$\therefore |f(p_n) - L | <\epsilon$, i.e. $\displaystyle{\lim_{n\to\infty}f(p_n) = L}.$
+
+$\Leftarrow$ Suppose that $\displaystyle{\lim_{x\to p} f(x) \neq L}.$
+$\exists \epsilon >0$ such that $\delta >0, \exists x \in E$, $0<|x-p|<\delta \Rightarrow |f(x)-L| \geq \epsilon$.
+Take $\delta := \frac{1}{n}$. Then there exists $p_n \in E$ such that 
+$$
+\begin{align}
+0< |p_n-p|<\frac{1}{n} \text{ but } |f(p_n) - L | \geq \epsilon
+\end{align}
+$$
+which contradicts to the assumption that $\displaystyle{\lim_{n\to\infty}f(p_n)=L}.$
+$\therefore \displaystyle{\lim_{x\to p}f(x)=L}.$
+
