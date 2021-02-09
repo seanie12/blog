@@ -122,10 +122,11 @@ Since $p$ is a limit point, there exists a sequence $(p_n)$ with $p_n \rightarro
 and $p_n \neq p$. Let $(p_n)$ be any sequence satisfying such condition.
 Since $p_n \rightarrow p$ as $n\rightarrow \infty$, there exists $N\in \mathbb{N}$ such that 
 $n\geq N \Rightarrow 0<|p_n -p| <\delta (\because p_n \neq p)$.
+
 $\therefore |f(p_n) - L | <\epsilon$, i.e. $\displaystyle{\lim_{n\to\infty}f(p_n) = L}.$
 
 $\Leftarrow$ Suppose that $\displaystyle{\lim_{x\to p} f(x) \neq L}.$
-$\exists \epsilon >0$ such that $\delta >0, \exists x \in E$, $0<|x-p|<\delta \Rightarrow |f(x)-L| \geq \epsilon$.
+$\exists \epsilon >0$ such that $\delta >0, \exists x \in E$, $0<|x-p|<\delta \text{ and } |f(x)-L| \geq \epsilon$.
 Take $\delta := \frac{1}{n}$. Then there exists $p_n \in E$ such that 
 $$
 \begin{align}
@@ -133,6 +134,7 @@ $$
 \end{align}
 $$
 which contradicts to the assumption that $\displaystyle{\lim_{n\to\infty}f(p_n)=L}.$
+
 $\therefore \displaystyle{\lim_{x\to p}f(x)=L}.$
  $$\tag*{$\square$}$$
 ## Corollary 4.1.4
@@ -187,8 +189,9 @@ $$
 \lim_{n\to\infty}f(p_n)=A, \lim_{n\to\infty}g(p_n)=B
 \end{align}$$
 $\therefore \displaystyle{\lim_{n\to\infty}(f(p_n) + g(p_n)) = A+B}$
+
 $\therefore \displaystyle{\lim_{x\to p}(f(x) + g(x))= A + B}$
- $$\tag*{$\square$}$$
+$$\tag*{$\square$}$$
 
 (b) Similarly, we can prove it.
 
