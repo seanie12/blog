@@ -34,7 +34,7 @@ We write $\displaystyle{\lim_{x\to p}f(x) = L}$.
 - Why should $p$ be a limit point? 
   We want to guarantee the existence of  $x\in N^\prime_\delta (x) \cap E$.      Since every deleted neighborhood of $p$ contains infinitely many points of $E$,     there is such $x$ for every $\delta >0.$
  - $\displaystyle{\lim_{x\to p}f(x) \neq L} \iff \forall L \in \mathbb{R}, \exists \epsilon >0$ such that $\forall \delta >0, \exists x\in E$ 
-   such that $0<|x-p|<\delta \Rightarrow |f(x) - L| \geq \epsilon .$
+   such that $0<|x-p|<\delta \text{ and } |f(x) - L| \geq \epsilon .$
 
 ## Examples 4.1.2
 (a) $\displaystyle{\lim_{x\to p}c = c}$
