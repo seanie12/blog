@@ -100,7 +100,6 @@ Thus, $|f(x) - L| = |L| \leq \epsilon$.
 $\displaystyle{\lim_{x\to 0} f(x)=0}$ and $\displaystyle{\lim_{x\to p} f(x)}$ does not exist for $\forall p\neq0.$
 
 Let $\epsilon >0$ be given. Since $|f(x)| \leq |x| <\delta$, take $\delta := \epsilon$. Then $|f(x) < \epsilon$.
-
 $\therefore \displaystyle{\lim_{x\to 0} f(x) = 0}$. 
 
 ## Theorem 4.1.3
