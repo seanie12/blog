@@ -123,7 +123,6 @@ Since $p$ is a limit point, there exists a sequence $(p_n)$ with $p_n \rightarro
 and $p_n \neq p$. Let $(p_n)$ be any sequence satisfying such condition.
 Since $p_n \rightarrow p$ as $n\rightarrow \infty$, there exists $N\in \mathbb{N}$ such that 
 $n\geq N \Rightarrow 0<|p_n -p| <\delta (\because p_n \neq p)$.
-
 $\therefore |f(p_n) - L | <\epsilon$, i.e. $\displaystyle{\lim_{n\to\infty}f(p_n) = L}.$
 
 $\Leftarrow$ Suppose that $\displaystyle{\lim_{x\to p} f(x) \neq L}.$
