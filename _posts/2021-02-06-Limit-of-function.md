@@ -101,7 +101,7 @@ $\displaystyle{\lim_{x\to 0} f(x)=0}$ and $\displaystyle{\lim_{x\to p} f(x)}$ do
 
 Let $\epsilon >0$ be given. Since $|f(x)| \leq |x| <\delta$, take $\delta := \epsilon$. Then $|f(x) < \epsilon$.
 $\therefore \displaystyle{\lim_{x\to 0} f(x) = 0}$. 
-
+$$\tag*{$\square$}$$
 ## Theorem 4.1.3
 $E \subset \mathbb{R}, f: E\rightarrow \mathbb{R}, p \in E^\prime$.
 $$
