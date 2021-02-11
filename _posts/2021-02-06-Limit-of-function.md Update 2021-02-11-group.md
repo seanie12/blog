@@ -38,4 +38,14 @@ Let  $(G,\cdot)$ is a group and $(H,\cdot) \leq G$. $H$ is normal subgroup if $g
 
 
 
+## Definition 4
+Let $G$ is a group and $H$ is a subgroup of $G$. For $x \in G$, we define a **coset** as follows:
+$$
+\begin{align}
+xH := \{xh| h\in H\}
+\end{align}
+$$
+We call it left coset ($\because xh \neq hx$ if the group is not abelian).
 
+## Theorem 5
+ 
