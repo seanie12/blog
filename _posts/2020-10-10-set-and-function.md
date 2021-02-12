@@ -233,7 +233,7 @@ $$\tag*{$\square$}$$
 Every nonempty subset of $\mathbb{N}$ has a smallest element.
 
 ## Theorem 1.3.1 
-For each $n\in \mathbb{N}$, let $p(n)$ be a statement about n.
+For each $n\in \mathbb{N}$, let $p(n)$ be a statement about $n$.
 If
 
 (a) $p(1)$ is true, and
