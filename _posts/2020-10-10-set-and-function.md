@@ -293,6 +293,7 @@ $$
 \end{align}
 $$
 Thus, $p(k+1)$ holds.
+
 $\therefore$ By the mathematical induction, $p(n)$ is always true.
 
 ## Reference
