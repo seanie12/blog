@@ -84,6 +84,33 @@ Otherwise, $x\in (B\setminus A)\cap (C\setminus A)$ because $x \in (A\cup B) \ca
 $\therefore x\in A\cup (B\cap C)$.
 
 $\therefore A\cup (B\cap C) = (A\cup B) \cap (A\cup C).$
+
+(c) 
+$$
+\begin{align}
+\begin{split}
+C\setminus (A\cup B) &= C\cap (A\cup B)^c \\
+&=C\cap (A^c\cap B^c) \\
+&=(C\cap A^c)\cap (C\cap B^c) \\
+&=(C\setminus A)\cap (C\setminus B)
+\end{split}
+\end{align}
+$$
+The second equality holds by de Morgan's law and the third equality holds by (b).
+
+(d)
+$$
+\begin{align}
+\begin{split}
+C\setminus (A\cap B) &= C\cap (A\cap B)^c \\
+&=C \cap (A^c \cup B^c) \\
+&=(C\cap A^c)\cup (C\cap B^c) \\
+&=(C\setminus A)\cup (C\setminus B)
+\end{split}
+\end{align}
+$$
+The second equality holds by de Morgan's law and the third equality holds by (a).
 $$\tag*{$\square$}$$
 
 ## Reference
+- -   Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
