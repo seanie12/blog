@@ -24,7 +24,8 @@ comments : true
 (2) $(\cap_{i\in I}A_i)^c = \cup_{i\in I}A^c_i$
 
 <*proof*>
-(a)
+
+**(a)**
 $$
 \begin{align}
 \begin{split}
@@ -36,7 +37,7 @@ w\in (\cup_{i\in I} A_i)^c &\iff w \not\in \cup_{i\in I} A_i \\
 \end{align}
 $$
 
-(b)
+**(b)**
 $$
 \begin{align}
 \begin{split}
@@ -55,7 +56,8 @@ $$\tag*{$\square$}$$
 (c) $C\setminus (A\cap B) = (C\setminus A) \cup (C\setminus B)$
 
 <*proof*>
-(a) Let $x \in A\cap(B\cup C)$ be given. That is $x\in A$ and $x\in B\cup C$.
+
+**(a)** Let $x \in A\cap(B\cup C)$ be given. That is $x\in A$ and $x\in B\cup C$.
 
 If $x\in A$ and $x\in B$, $x\in A\cap B$. So, $x\in (A\cap B)\cup(A\cap C).$
 
@@ -70,7 +72,7 @@ If $x\in A\cap C,$ then $x\in A$ and $x\in C.$ Since $C\subset (B\cup C), x\in (
 
 $\therefore A\cap (B\cup C) = (A\cap B)\cup (A\cap C)$ by the double inclusion.
 
-(b)  Let $x\in A\cup (B\cap C)$ be given. That is $x\in A$ or $x\in B\cap C.$
+**(b)**  Let $x\in A\cup (B\cap C)$ be given. That is $x\in A$ or $x\in B\cap C.$
 Suppose $x \in A$. Since $A \subset (A\cup B)$ and $A\subset (A\cup C)$, $x\in (A\cup B)$ and $x\in (A\cup C)$.
 
 Otherwise, $x\in B\cap C$. Since $(B\cap C) \subset B \subset (A\cup B), x\in A\cup B.$ Similarly, $x\in A\cup C$ because $(B\cap C) \subset C \subset (A\cup C)$.
@@ -85,7 +87,7 @@ $\therefore x\in A\cup (B\cap C)$.
 
 $\therefore A\cup (B\cap C) = (A\cup B) \cap (A\cup C).$
 
-(c) 
+**(c)**
 $$
 \begin{align}
 \begin{split}
@@ -98,7 +100,7 @@ C\setminus (A\cup B) &= C\cap (A\cup B)^c \\
 $$
 The second equality holds by de Morgan's law and the third equality holds by (b).
 
-(d)
+**(d)**
 $$
 \begin{align}
 \begin{split}
@@ -113,4 +115,4 @@ The second equality holds by de Morgan's law and the third equality holds by (a)
 $$\tag*{$\square$}$$
 
 ## Reference
-- -   Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
+- Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
