@@ -39,6 +39,7 @@ E:=\{r\in \mathbb{Q}: r>0, r^2 <2\}
 $$
 
   $E$ is bounded but $E$ has no maximum.
+  
   $\because \forall p\in E,$ define $q:= p+ \frac{2-p^2}{p+2} = \frac{2p+2}{p+2}.$
   $$
   \begin{align}
@@ -52,185 +53,108 @@ $$
   $\therefore q\in \mathbb{Q}, q>p, q^2 <2$
   $\therefore q\in E$ but $q>p$
   $\therefore E$ has no maximum  
-
-
-## Definition 1.2.1 
-Let $A,B$ be subsets of $\mathbb{R}$. $f:A\to B$ is a function if 
-$$
-\begin{align}\forall x\in A, \exists ! y\in B \text{ such that } y=f(x).
-\end{align}$$
-
-## Definition 1.2.2
-$f: A\to B$ is a function.
-$$
-\begin{align}
-\begin{split}
-f \text{ is injective } &\iff [f(x_1)=f(x_2) \Rightarrow x_1 = x_2 ]\\
-&\iff \forall y \in f(A), \exists ! x\in A \text{ s.t. } y= f(x) 
-\end{split}
-\end{align}
-$$
-
-## Definition 1.2.3
-$f: A\to B$ is a function.
-$$
-\begin{align}
-\begin{split}
-f \text{ is surjective } &\iff f(A) = B\\
-&\iff \forall y \in B, \exists  x\in A \text{ s.t. } y= f(x) 
-\end{split}
-\end{align}
-$$
-
-## Definition 1.2.4
-$f: A\to B$ is a function. If $f$ is bijective if and only if the function is injective and surjective. 
-
-## Theorem 1.2.5
-$f:A\to B$ is a function and $A_1, A_2 \subset A$.
-
-(a) $f(A_1\cup A_2) = f(A_1) \cup f(A_2)$
-
-(b) $f(A_1 \cap A_2) \subset f(A_1)\cap f(A_2)$ 
-
-(c) $f$ is injective $\Rightarrow f(A_1) \cap f(A_2) \subset f(A_1 \cap A_2)$ 
-
-<*proof*>
-
-**(a)**
-Let $y \in f(A_1 \cup A_2)$ be given. Then $y= f(x)$ for some $x\in A_1 \cup A_2.$ So $y=f(x)$ for some $x\in A_1$, which is equivalent to $y\in f(A_1)$, or $y=f(x)$ for some $x\in A_2$, which is equivalent to $y\in f(A_2)$.
-
-$\therefore y\in f(A_1) \cup f(A_2)$
-
-Conversely, let $y\in f(A_1) \cup f(A_2)$ be given. If $y\in f(A_1)$, then $y=f(x)$ for some $x\in A_1$. Since $A_1\subset (A_1\cup A_2), x\in A_1\cup A_2$. 
-
-$\therefore f(x) \in f(A_1\cup A_2)$.
-
-If $y\in f(A_2)$, then $y=f(x)$ for some $x\in A_2$. Since $A_2\subset (A_1\cup A_2), x\in A_1\cup A_2$. 
-
-$\therefore f(x) \in f(A_1\cup A_2)$.
-
-$\therefore f(A_1\cup A_2) = f(A_1) \cup f(A_2)$
-
-**(b)**
-Let $y\in f(A_1\cap A_2)$ be given. Then $y=f(x)$ for some $x\in A_1$ and $x\in A_2$. Thus, $y=f(x) \in f(A_1)$ and $y=f(x) \in f(A_2)$.
-
-$\therefore f(A_1 \cap A_2) \subset f(A_1) \cap f(A_2).$
-
-**(c)**
-Let $y\in f(A_1)\cap f(A_2)$ be given. Then for the same $y, y=f(x_1)$ for some $x_1 \in A_1$ or $y=f(x_2)$ for some $x_2 \in A_2$. 
-
-Since $f$is bijective, $x_1=x_2=x\in A_1\cap A_2$, i.e. $y=f(x)$ for some $x\in A_1\cap A_2$.
-
-$\therefore y\in f(A_1 \cap A_2)$
-
 $$\tag*{$\square$}$$
 
-## Theorem 1.2.6
-$f:A\to B$ is a function, $B_1,B_2 \subset B$.
+## Definition 1.4.3
+$\emptyset \neq E\subset \mathbb{R}$ is bounded above. $\alpha \mathbb{R}$ is called the **least upper bound** or **supremum** of $E$ if
+1. $\alpha$ is an upper bound of $E$
+2. $\beta$ is another upper bound of $E \Rightarrow \alpha \leq \beta$
 
-(a) $f^{-1}(B_1\cup B_2) = f^{-1}(B_1)\cup f^{-1}(B_2)$
-(b) $f^{-1}(B_1\cap B_2) = f^{-1}(B_1)\cap f^{-1}(B_2)$
+We write $\alpha =\sup E$. 
 
-where $f^{-1}(B_1)$  is preimage defined as follows:
-$$
-\begin{align}
-f^{-1}(B_1) := \{ x\in A| f(x)\in B_2 \}
-\end{align}
-$$
+
+## Definition 1.4.3-1
+$\emptyset \neq E\subset \mathbb{R}$ is bounded below. $\alpha \mathbb{R}$ is called the **greatest lower bound** or **infimum** of $E$ if
+1. $\alpha$ is an lower bound of $E$
+2. $\beta$ is another lower bound of $E \Rightarrow \alpha \geq \beta$
+
+We write $\alpha =\inf E$. 
+
+## Theorem 1.4.4
+$\emptyset \neq E \subset \mathbb{R}$ is bounded above. An upper bound $\alpha \in \mathbb{R}$ of $E$ is the supremum of $E$ if and only if $\forall \beta <\alpha, \exists x\in E$ s.t. $\beta < x \leq \alpha$.
 
 <*proof*>
 
-(a) 
-$$
-\begin{align}
-\begin{split}
-f^{-1}(B_1\cup B_2) &= \{x\in A: f(x) \in B_1\cup B_2 \} \\
-&=\{x\in A: f(x)\in B_1 \text{ or } f(x)\in B_2 \} \\
-&=\{x\in A: x\in f^{-1}(B_1) \text{ or } x\in f^{-1}(B_2)\} \\
-&=\{x\in A: x\in f^{-1}(B_1) \cup f^{-1}(B_2) \}
-\end{split}
-\end{align}
-$$
+$\Rightarrow$
+Suppose that $\alpha = \sup E$. Let $\beta <\alpha$ be given. Then $\beta$ is not an upper bound of $E$. So, there is $x\in E$ such that $\beta < x$. Since $\alpha$ is an upper bound of $E, x\leq \alpha.$ 
 
-(b)
+$\Leftarrow$
+Suppose that $\forall \beta < \alpha, \exists x\in E$ such that $\beta <x \leq \alpha$. We want to show that 
 $$
 \begin{align}
-\begin{split}
-f^{-1}(B_1\cap B_2) &= \{x\in A: f(x)\in B_1\cap B_2\}\\
-&=\{x\in A: f(x)\in B_1 \text{ and } f(x)\in B_2 \} \\
-&= \{x\in A: x\in f^{-1}(B_1) \text{ and } x\in f^{-1}(B_2) \} \\
-&=\{x\in A: x\in f^{-1}(B_1)\cap f^{-1}(B_2) \}
-\end{split}
+\alpha = \sup E \iff \alpha \leq y \text{ for any }y: \text{ upper bound of }E
 \end{align}
 $$
+Let $y$ be another upper bound of $E$. Suppose that $y <\alpha$. By our assumption, there is $x\in E$ such that $y <x\leq \alpha$. However, it implies that $y$ is not upper bound anymore, which is a contradiction.
+
+$\therefore \alpha \leq y$
+
+$\therefore \alpha = \sup E$
 $$\tag*{$\square$}$$
+### Axiom 1.4.6 (Least upper upper bound property - completeness)
+Every non-empty bounded above subset of $\mathbb{R}$ has a supremum in $\mathbb{R}$.
 
-## Remark (Well-ordering principle)
-Every nonempty subset of $\mathbb{N}$ has a smallest element.
+## Definition 1.4.9
+If $E$ is not bounded above, define $\sup E:= \infty$.
 
-## Theorem 1.3.1 
-For each $n\in \mathbb{N}$, let $p(n)$ be a statement about $n$.
-If
+If $E$ is not bounded below, define $\inf E:= -\infty$.
 
-(a) $p(1)$ is true, and
+$\sup \emptyset := -\infty, \inf \emptyset := \infty$.
 
-(b) $p(k)$ is true $\Rightarrow p(k+1)$ is true
-
-then $p(n)$ is true for all $n\in \mathbb{N}$.
-
-<*proof*>
-Suppose that $p(n)$ is false for some $n\in\mathbb{N}$. If we set
+## Definition 1.4.11
+$J\subset \mathbb{R}$ is an interval if 
 $$
 \begin{align}
-A:=\{k\in \mathbb{N}: p(k) \text{ is false} \}
+\forall x,y \in J \text{ with }x<y, \exists t\in J \text{ s.t. } x<t<y.
 \end{align}
 $$ 
-then $A$ is a nonempty subset of $\mathbb{N}.$ By the well-ordering principle, there is the smallest element $k_0 \in A, k_0 \geq 2$. Since $k_0$ is the smallest element of $A$, $p(k_0 -1)$ is true. By our assumption, however, $p(k_0)$ is also true, which is a contradiction.
+Note that $\emptyset$ and singleton set are also intervals.
 
-$\therefore p(n)$ is true for all $n\in\mathbb{N}$.
-$$\tag*{$\square$}$$
-
-## Examples 1.3.3
-(a) $p(n) = r+r^2+\cdots + r^{n-1} +r^n=\frac{r(1-r^n)}{1-r}$, where $r\neq 1$.
-
-(b) (Bernoulli's inequality): $p(n): h >-1, (1+h)^n \geq 1+ nh$.
+## Theorem 1.5.1 (Archimedean Property)
+$x,y\in \mathbb{R}, x>0 \Rightarrow \exists n\in \mathbb{N}$ such that $nx >y$.
 
 <*proof*>
+If $y\leq 0$, take $n=1$.
 
-(a) For $n=1$, $p(1) = r = \frac{r(1-r)}{1-r}$. Assume that the statement holds true for $n=k-1$.  
+Assume that $y>0$. Define a set $A$ as follows:
 $$
 \begin{align}
-\begin{split}
-p(k) &= 1+ r^2 + \cdots + r^{k-1} + r^{k} \\
-&=p(k-1) + r^k \\
-&=\frac{r(1-r^{k-1})}{1-r} + r^k \\
-&=\frac{r(1-r^{k-1})+ r^k(1-r)}{1-r} \\
-&=\frac{r-r^k+r^k-r^{k+1}}{1-r}  \\
-&=\frac{r-r^{k+1}}{1-r}  \\
-&=\frac{r(1-r^{k})}{1-r}
-\end{split}
+A:=\{nx: n\in \mathbb{N}\} \neq \emptyset
 \end{align}
 $$
-Thus, $p(k)$ holds. 
+If the result is false, then $y$ is an upper bound of $A$. By the least upper bound property, we can get $\alpha = \sup A$. Now, since $x>0, \alpha-x < \alpha.$ It implies that $\alpha-x$ is not an upper bound of $A$ anymore. 
 
-$\therefore$ By the mathematical induction $p(n)$ is always true. 
+So, there is $m\in\mathbb{N}$ such that $\alpha -x < mx \in A$, i.e. $\alpha <(m+1)x \in A$. Thus, $\alpha$ is not an upper bound of $A$, which contradicts to our assumption.
 
-(b) For $n=1$, the left hand side is $(1+h)^1 = 1+h$ and the right hand side is $1+1\cdot h=1+h$.
+$\therefore \exists n\in \mathbb{N}$ such that $nx > y$.
 
-Assume that $p(k) = (1+h)^k \geq 1+k\cdot h$ is true.
+$$\tag*{$\square$}$$
+
+## Remark
+By Archimedean property, for any $\epsilon > 0$, there is $n_0 \in \mathbb{N}$ such that $\frac{1}{n_0}<\epsilon$. 
+
+Then for any $n\geq n_0, \frac{1}{n}\leq \frac{1}{n_0}< \epsilon$.
+
+## Theorem 1.5.2 (Density of $\mathbb{Q}$ in $\mathbb{R}$)
+$\forall x,y \in \mathbb{R}, x<y \Rightarrow \exists r\in \mathbb{Q}$ such that $x<r<y$.
+
+<*proof*>
+Assume that $x\geq0$. Since $y-x>0$, there is $n\in\mathbb{N}$ s.t. $n(y-x) >1$ by Archimedean property. Define a set $A$ as follows:
 $$
 \begin{align}
-\begin{split}
-(1+h)^{k+1} &= (1+h)(1+h)^k \\
-&\geq (1+kh)(1+h) \\
-&=1+h+kh+kh^2 \\
-&\geq 1+(k+1)h
-\end{split}
+A :=\{k\in \mathbb{N}: k >nx\}
 \end{align}
 $$
-Thus, $p(k+1)$ holds.
+By Archimedean property, $A\neq \emptyset.$ By the well-ordering principle, we can take the smallest element $m \in \mathbb{N}$ such that $m-1 \leq nx <m$. 
 
-$\therefore$ By the mathematical induction, $p(n)$ is always true.
+$\Rightarrow nx < m \leq 1+nx < ny$, i.e. $nx < m < ny$.
 
+$\therefore x<\frac{m}{n} < y$.
+
+If $x < 0$ and $y>0$, then the result is obvious. 
+
+Finally if $x<y<0$, then by the preceding calculations there exists $r\in\mathbb{Q}$ such that $-y< r < -x$, i.e. $x<-r<y$.
+
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
