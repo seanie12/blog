@@ -71,7 +71,9 @@ $\emptyset \neq E\subset \mathbb{R}$ is bounded below. $\alpha \mathbb{R}$ is ca
 We write $\alpha =\inf E$. 
 
 ## Theorem 1.4.4
-$\emptyset \neq E \subset \mathbb{R}$ is bounded above. An upper bound $\alpha \in \mathbb{R}$ of $E$ is the supremum of $E$ if and only if $\forall \beta <\alpha, \exists x\in E$ s.t. $\beta < x \leq \alpha$.
+$\emptyset \neq E \subset \mathbb{R}$ is bounded above. An upper bound $\alpha \in \mathbb{R}$ of $E$ is the supremum of $E$
+
+if and only if $\forall \beta <\alpha, \exists x\in E$ s.t. $\beta < x \leq \alpha$.
 
 <*proof*>
 
