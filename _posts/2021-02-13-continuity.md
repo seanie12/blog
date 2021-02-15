@@ -104,7 +104,7 @@ x\in N_\delta (p) \cap A \Rightarrow f(x) \in N_\eta (f(p))
 \label{eq:2}
 \end{align}
 $$
-Since $f(x)\in B$ for all $x\in A$ and by Equation $\ref{eq:1}$ and $\ref{eq:2}$,
+Since $f(x)\in B$ for all $x\in A$ and by $\ref{eq:1}$ and $\ref{eq:2}$,
 $$
 \begin{align}
 \begin{split}
