@@ -53,7 +53,7 @@ $$
 &=2|\cos \frac{1}{2}(y+x)\sin \frac{1}{2}(y-x)| \\
 &\leq 2|\sin\frac{1}{2}(y-x)| \\
 &\leq 2\cdot \frac{1}{2}|y-x| \\
-=|y-x|
+&=|y-x|
 \end{split}
 \end{align}
 $$
