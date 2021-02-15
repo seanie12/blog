@@ -268,6 +268,20 @@ $$
 $$
 
 ## Definition 4.1.11
-$f$is real-valued function such that $\text{Dom}f \cap (a,\infty)\neq \emptyset$ for all $a\in \mathbb{R}$. 
+$f$is real-valued function such that $\text{Dom}f \cap (a,\infty)\neq \emptyset$ for all $a\in \mathbb{R}$. <br />
+The function $f$ has a **limit at $\infty$** if $\exists L\in \mathbb{R}$ such that $$\forall \epsilon >0, \exists M\in \mathbb{R} \text{ s.t. } x\in \text{Dom}f \cap (M,\infty)\neq \emptyset \Rightarrow |f(x)-L|<\epsilon.$$ We write $\displaystyle{\lim_{x\to\infty}f(x)=L}.$
 
-The function $f$ has a **limit at $\infty$** if $\exists L\in \mathbb{R}$ such that $\forall \epsilon >0, \exists M\in \mathbb{R}$ such that $x\in \text{Dom}f \cap (M,\infty)\neq \emptyset \Rightarrow |f(x)-L|<\epsilon.$ We write $\displaystyle{\lim_{x\to\infty}f(x)=L}.$
+
+## Examples 4.1.12
+(a) $f(x)= \frac{\sin x}{x}$ for all $x\in (0,\infty)$.
+
+Since, $|\sin x|\leq 1$, $|f(x)|\leq \frac{1}{x}$ for all $x\in (0,\infty)$. Let $\epsilon >0$ be given. Take $M :=\frac{1}{\epsilon}$. If $x>\frac{1}{\epsilon}$, then $\frac{1}{x} <\epsilon$.
+$$
+|f(x)| \leq \frac{1}{x} < \epsilon, \text{ for all }x > \frac{1}{\epsilon}=M
+$$
+$\therefore \displaystyle{\lim_{x\to\infty}\frac{\sin x}{x}=0}$
+
+(b) $f(x) = x\sin \pi x$
+
+Put $p_n :=(n+\frac{1}{2})$. Then $\sin \pi (p_n) = \sin(\frac{2n+1}{2})\pi = (-1)^n,$ i.e. $f(p_n) = (n+\frac{1}{2})\cdot (-1)^n$. Since $\displaystyle{\lim_{x\to\infty}f(p_n)}$ does not exist, $\displaystyle{\lim_{x\to\infty}f(x)}$ does not exist.
+
