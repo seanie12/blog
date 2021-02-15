@@ -39,7 +39,7 @@ $f$ is continuous at $x=0$ but discontinuous at $x\neq 0$ ($\because \not\exists
 $f$ is discontinuous on $\mathbb{R}$.
 
 (e) $f(x) = 0 (x=0)$ or $f(x) = x\sin\frac{1}{x} (x\neq 0)$
-
+<br />
 $\displaystyle{\lim_{x\to 0}x\sin\frac{1}{x} = 0=f(0)}$ because $|\sin \frac{1}{x}| \leq 1$ and $\displaystyle{\lim_{x\to 0}x =0}$.
 
 (f) $f(x) = \sin x$
@@ -47,11 +47,15 @@ $\displaystyle{\lim_{x\to 0}x\sin\frac{1}{x} = 0=f(0)}$ because $|\sin \frac{1}{
 Let $x,y \in \mathbb{R}$ be given.
 
 $$
-|f(y) - f(x)| = |\sin y - \sin x| \\
-=2|\cos \frac{1}{2}(y+x)\sin \frac{1}{2}(y-x)| \\
-\leq 2|\sin\frac{1}{2}(y-x)| \\
-\leq 2\cdot \frac{1}{2}|y-x| \\
+\begin{align}
+\begin{split}
+|f(y) - f(x)| &= |\sin y - \sin x| \\
+&=2|\cos \frac{1}{2}(y+x)\sin \frac{1}{2}(y-x)| \\
+&\leq 2|\sin\frac{1}{2}(y-x)| \\
+&\leq 2\cdot \frac{1}{2}|y-x| \\
 =|y-x|
+\end{split}
+\end{align}
 $$
 Put $y:=p, \text{ and }\delta :=\epsilon$.  <br />Then $\forall \epsilon >0, \exists \delta >0$ s.t. $|x-p|<\delta \Rightarrow |\sin x -\sin p| \leq |x-p| <\delta =\epsilon$.
 
@@ -60,9 +64,11 @@ Put $y:=p, \text{ and }\delta :=\epsilon$.  <br />Then $\forall \epsilon >0, \ex
 <*proof*>
 We want to show that $\displaystyle{\lim_{x\to p}f(x)=0}$ for all $p\in (0,1)$.
 
-If $x\in (0,1)\setminus \mathbb{Q}, f(x)=0$. Now, suppose that $x=\frac{m}{n}$ (in lowest term). Take $n_0 \in \mathbb{N}$ such that $\frac{1}{n_0} < \epsilon$ by Archimedean property. <br /> Then there are finite numbers of rational numbers $\frac{m}{n}$ (in lowest term) with $n<n_0$. Denote these $r_1,\ldots, r_k\in \mathbb{Q}$ and 
+If $x\in (0,1)\setminus \mathbb{Q}, f(x)=0$. Now, suppose that $x=\frac{m}{n}$ (in lowest term). Take $n_0 \in \mathbb{N}$ such that $\frac{1}{n_0} < \epsilon$. <br /> Then there are finite numbers of rational numbers $\frac{m}{n}$ (in lowest term) with $n<n_0$. Denote these $r_1,\ldots, r_k\in \mathbb{Q}$ and 
 $$
+\begin{align}
 \delta:=\min\{ |r_i-p|: r_i\neq p \text{ for }i=1,\ldots,k\}
+\end{align}
 $$
 Then $\delta >0$. If $r\in \mathbb{Q}\cap(0,1)\cap N^\prime_\delta (p)$, then $r=\frac{m}{n}$ ( in lowest term) with $n\leq n_0$. <br /> $\therefore |f(x)|= \frac{1}{n} \leq \frac{1}{n_0} <\epsilon$ for $x\in \in \mathbb{Q}\cap(0,1)\cap N^\prime_\delta (p)$. <br /> $\therefore \displaystyle{\lim_{x\to p}f(x)=0}$ <br /> $\therefore f(x)$ is continuous at $p\not\in \mathbb{Q}$ but discontinuous at $p\in \mathbb{Q}$.
 $$\tag*{$\square$}$$
@@ -120,7 +126,7 @@ $$
 $$
 Since $N_\epsilon (f(p)) \subset V, f(x)\in V$ for all $x\in N_\delta (p)\cap E$. <br /> $\therefore N_\delta (p) \cap E \subset f^{-1}(V)$.
 
-$\Leftarrow$ Conversely, suppose that $f^{-1}(V)$ is open in $E$ for every open $V$ in $\mathbb{R}$. Let $\epsilon>0$ and $p\in E$ be given. Then $N_\epsilon (f(p))$ is open. <br /> By our assumption, $f^{-1}(N_\epsilon (f(p)))$ is open in $E$. So, there is a $\delta >0$ s.t. $N_\delta (p) \cap E \subset f^{-1}(N_\epsilon (f(p)))$. That is 
+$\Leftarrow$ Conversely, suppose that $f^{-1}(V)$ is open in $E$ for every open $V$ in $\mathbb{R}$. Let $\epsilon>0$ and $p\in E$ be given. Since every $\epsilon$ neighborhood is open,  $N_\epsilon (f(p))$ is open. <br /> By our assumption, $f^{-1}(N_\epsilon (f(p)))$ is open in $E$. So, there is a $\delta >0$ s.t. $N_\delta (p) \cap E \subset f^{-1}(N_\epsilon (f(p)))$. That is 
 $$
 \forall x\in N_\delta (p) \cap E \Rightarrow f(x) \in N_\epsilon (f(p)).
 $$
