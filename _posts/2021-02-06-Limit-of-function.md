@@ -236,8 +236,38 @@ $\Rightarrow \displaystyle{\lim_{x\to p}f(x)g(x)} = 0$
 <*proof*>
 Let $\epsilon >0$ be given. Since $f(x)\to 0$ as $x\to p$, there exist $\delta >0$ such that $|f(x)|<\epsilon$, whenever $0<|x-p|<\delta, x\in E$. Since $g$ is bounded, there is a constant $M$ such that $|g(x)|\leq M$ for all $x\in E$.
 
-If $0<|x-p|<\delta, x\in E$, then $|f(x)g(x)| = |f(x)|\cdot |g(x)| < \epsilon$.
+If $0<|x-p|<\delta, x\in E$, then $|f(x)g(x)| = |f(x)| |g(x)| < \epsilon$.
 
 $\therefore \displaystyle{\lim_{x\to p}f(x)g(x)}$
+$$\tag*{$\square$}$$
 
+## Theorem 4.1.9
+$f,g,h: E\to \mathbb{R}, p\in E^\prime$
 
+Suppose that $g(x)\leq f(x)\leq h(x)$ for all $x\in E$. 
+
+If $\displaystyle{\lim_{x\to p}g(x)=L=\lim_{x\to p}h(x)}$, then $\displaystyle{\lim_{x\to p}f(x)=L}$.
+
+<*proof*>
+Let $\epsilon >0$ be given. Since $\displaystyle{\lim_{x\to p}g(x) = L = \lim_{x\to p}h(x)}$, there exists $\delta >0$ such that $0<|x-p|<\delta, x\in E \Rightarrow L-\epsilon < g(x), h(x)<L +\epsilon$.
+
+Since $g(x)\leq f(x) \leq h(x)$ for all $x\in E$, we have 
+$$
+\begin{align}
+L-\epsilon < g(x) \leq <f(x) \leq h(x) <L+\epsilon
+\end{align}
+$$
+if $0<|x-p|<\delta, x\in E$, i.e. $\displaystyle{\lim_{x\to p}f(x) =L}.$
+$$\tag*{$\square$}$$
+
+## Examples 4.1.10
+$p(x):= a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0$, where $a_n \neq 0$. We call it polynomial function of degree $n$.
+
+$$
+\lim_{x\to c} p(x) = a_n c^n + \cdots + a_0 = p(c)
+$$
+
+## Definition 4.1.11
+$f$is real-valued function such that $\text{Dom}f \cap (a,\infty)\neq \emptyset$ for all $a\in \mathbb{R}$. 
+
+The function $f$ has a **limit at $\infty$** if $\exists L\in \mathbb{R}$ such that $\forall \epsilon >0, \exists M\in \mathbb{R}$ such that $x\in \text{Dom}f \cap (M,\infty)\neq \emptyset \Rightarrow |f(x)-L|<\epsilon.$ We write $\displaystyle{\lim_{x\to\infty}f(x)=L}.$
