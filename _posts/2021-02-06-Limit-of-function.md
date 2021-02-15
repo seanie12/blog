@@ -7,6 +7,7 @@ categories:
 tags:
   - limit of function
   - epsilon-delta
+  - bounded
   
   
 
@@ -222,3 +223,21 @@ So, $g(p_n)\to B$ as $n\to \infty$. i.e. $\frac{1}{g(p_n)} \to \frac{1}{B}$ as $
 $\therefore \displaystyle{\lim_{n\to\infty}\frac{1}{g(p_n)}=\frac{1}{B}}.$
 
 $\therefore \displaystyle{\lim_{x\to p}\frac{1}{g(x)}=\frac{1}{B}}.$
+
+
+## Definition 4.1.7
+$f:E\to \mathbb{R}$ is **bounded** if $\exists M\in \mathbb{R}$ such that $|f(x)| \leq M$ for all $x\in E$.
+
+## Theorem 4.1.8
+$f:E\to\mathbb{R}, p\in E^\prime, g:E\to\mathbb{R}$ is bounded and $\displaystyle{\lim_{x\to p}f(x)} = 0$.
+
+$\Rightarrow \displaystyle{\lim_{x\to p}f(x)g(x)} = 0$
+
+<*proof*>
+Let $\epsilon >0$ be given. Since $f(x)\to 0$ as $x\to p$, there exist $\delta >0$ such that $|f(x)|<\epsilon$, whenever $0<|x-p|<\delta, x\in E$. Since $g$ is bounded, there is a constant $M$ such that $|g(x)|\leq M$ for all $x\in E$.
+
+If $0<|x-p|<\delta, x\in E$, then $|f(x)g(x)| = |f(x)|\cdot |g(x)| < \epsilon$.
+
+$\therefore \displaystyle{\lim_{x\to p}f(x)g(x)}$
+
+
