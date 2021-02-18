@@ -54,8 +54,29 @@ $$
 x_{n_k}\in E\setminus \{x_{n_1},\ldots, x_{n_{k-1}} \}
 \end{align}
 $$
-Set $f(k) = x_{n_k}$. Since $E$ is infinite, $f$ is defined on $\mathbb{N}$. <br /> If $m >k$, then $n_m > n_k$ and thus $x_{n_m} \neq x_{n_k}$. Therefore $f$ is one-to-one. The function $f$ is onto $E$ since if $x\in E$, then $x=x_j$ for some $j$. By construction, $n_k = j$ for some $k$ and thus $f(k) = x.
+Set $f(k) = x_{n_k}$. Since $E$ is infinite, $f$ is defined on $\mathbb{N}$. <br /> If $m >k$, then $n_m > n_k$ and thus $x_{n_m} \neq x_{n_k}$. Therefore $f$ is one-to-one. The function $f$ is onto $E$ since if $x\in E$, then $x=x_j$ for some $j$. By construction, $n_k = j$ for some $k$ and thus $f(k) = x.$
 
+$$\tag*{$\square$}$$
+
+## Theorem 1.7.7
+If $f$ maps $\mathbb{N}$ onto $A$, then $A$ is at most countable.
+
+<*proof*>
+If $A$ is finite, the result is certainly true. Suppose that $A$ is infinite. Since $f$ maps $\mathbb{N}$ onto $A$, each $a\in A$ is of the form $f(n)$ for some $n\in\mathbb{N}$. For each $a\in A$, by the well ordering principle
+$$
+\begin{align}
+f^{-1}(a):= \{ n\in\mathbb{N}:f(n)=a\}
+\end{align}
+$$
+has a smallest integer, which we denote by $n_a$.  Consider the mapping $a\mapsto n_a$. Since $f$ is a function, $f(a)\neq f(b) \Rightarrow a\neq b$. Thus, $n_a \neq n_b$, which implies that such mapping is one-to-one and clearly it is onto. Also, since $A$ is infinite, 
+$$
+\{n_a:a\in A\}
+$$
+is an infinite subset of $\mathbb{N}$, so it is countable by Theorem 1.7.6. 
+
+$\therefore a\mapsto n_a$ is a one-to-one mapping of $A$ onto countable set.
+
+$\therefore A$ is at most countable.
 $$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
