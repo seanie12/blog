@@ -78,5 +78,34 @@ $\therefore a\mapsto n_a$ is a one-to-one mapping of $A$ onto countable set.
 
 $\therefore A$ is at most countable.
 $$\tag*{$\square$}$$
+
+## Theorem 1.7.15
+If $$\{E_n\}_{n=1}^\infty$$ is a sequence of countable sets and 
+$$
+\begin{align}
+S = \cup_{n=1}^\infty E_n
+\end{align}
+$$
+then $S$ is countable.
+
+<*proof*>
+Since $E_n$ is countable for each $n\in \mathbb{N}$, we can write 
+$$
+\begin{align}
+E_n =\{x_{n,k}: k=1,2,\ldots\}
+\end{align}
+$$
+Since $E_n$ is an infinite subset of $S$, the set $S$ is itself is infinite.  Consider the function $h:\mathbb{N}\times\mathbb{N}\to S$ by
+$$
+\begin{align}
+h(n,k) = x_{n,k}
+\end{align}
+$$
+The function $h$ is onto. Also, since $\mathbb{N}\times\mathbb{N}\sim \mathbb{N}$, there exists a mapping of $\mathbb{N}$ onto S. Hence by Theorem 1.7.7, the set $S$ is countable.
+$$\tag*{$\square$}$$
+
+
+
+
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
