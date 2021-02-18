@@ -104,8 +104,39 @@ $$
 The function $h$ is onto. Also, since $\mathbb{N}\times\mathbb{N}\sim \mathbb{N}$, there exists a mapping of $\mathbb{N}$ onto S. Hence by Theorem 1.7.7, the set $S$ is countable.
 $$\tag*{$\square$}$$
 
+## Corollary 1.7.16
+$\mathbb{Q}$ is countable.
 
+<*proof*>
+For each $m\in\mathbb{N}$, let 
+$$
+\begin{align}
+E_m = \{\frac{n}{m}:n\in\mathbb{Z}\}
+\end{align}
+$$
+The $E_m$ is countable, and since $\mathbb{Q} = \cup_{n=1}^\infty E_m$, by Theorem 1.7.15 the set $\mathbb{Q}$ is countable.
 
+$$\tag*{$\square$}$$ 
 
+## Theorem 1.7.17
+The closed interval $[0,1]$ is uncountable.
+
+<*proof*>
+We want to show that every countable subset of $[0,1]$ is a proper subset of $[0,1]$. Thus, $[0,1]$ cannot be countable.
+
+Let $$E=\{x_n, n=1,2,\ldots \}$$ be a countable subset of $[0,1]$. Then for each $x_n$ has a decimal expansion:
+$$
+\begin{align}
+x_n = 0.x_{n,1}x_{n,2}x_{n,3}\cdots
+\end{align}
+$$
+where for each $$k\in \mathbb{N}, x_{n,k}\in \{0,1,\ldots, 9\}$$. We now define a new number 
+$$
+y:= 0.y_1y_2y_3\cdots
+$$
+as follows: If $x_{n,n} \leq 5$, define $y_n :=6$; if $x_{n,n} \geq 6$, define $y_n=3$. Then $y\in [0,1]$, and since $y_n \neq 0$ or 9, $y \neq x_{n,n}$, we have $y\neq x_n$ for any $n$.
+
+$\therefore y\not\in E$ <br /> $\therefore E$ is a proper subset of $[0,1]$. 
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
