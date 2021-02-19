@@ -50,7 +50,11 @@ Assume that $p>1$. Take $\epsilon_0 := |p-1|$. Then $N^\prime_{\epsilon_0} (p)\c
 <br />
 Assume that $p=\frac{1}{n}$. Take $\epsilon_0 :=\left|\frac{1}{n}-\frac{1}{n+1}\right|$. Then, $N^\prime_{\epsilon_0} (p)\cap E=\emptyset$
 <br />
-Assume that $p\neq \frac{1}{n}, \text{ and } p\in (0,1)$. For this $p$, we can find $n\in\mathbb{N}$ such that $\frac{1}{n+1} < p < \frac{1}{n}$. If we take $$\epsilon_0 = \min\{\left|p-\frac{1}{n+1}\right|,\left|p-\frac{1}{n}\right| \}$$, then $N^\prime_{\epsilon_0} (p)\cap E=\emptyset$.
+Assume that $p\neq \frac{1}{n}, \text{ and } p\in (0,1)$. For this $p$, we can find $n\in\mathbb{N}$ such that $\frac{1}{n+1} < p < \frac{1}{n}$. If we take $$
+\begin{align}
+\epsilon_0 = \min\{\left|p-\frac{1}{n+1}\right|,\left|p-\frac{1}{n}\right| \}
+\end{align}
+$$, then $N^\prime_{\epsilon_0} (p)\cap E=\emptyset$.
 <br />
 Finally assume $p=0$. Let $\epsilon >0$ be given. Then, take $N\in\mathbb{N}$ such that $\frac{1}{N} < \epsilon$ by Archimedean property. In other words,
 $$
