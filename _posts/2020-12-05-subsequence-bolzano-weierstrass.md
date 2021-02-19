@@ -111,7 +111,7 @@ Then, $N^\prime_\epsilon (p) \cap E = \emptyset$, which contradicts to the assum
 $\therefore$ there are finitely many deleted neighborhoods of $p$.
 $$\tag*{$\square$}$$
 
-(b) For $n\in\mathbb{N$, we can pick a sequence $$\{p_n\}\subset E$$ such that $|p_n-p|<\frac{1}{n}$ with $p_n\neq p$ because $p$ is a limit point of $E$. Let $\epsilon>0$ be given. Then there is a $N\in\mathbb{N}$ such that $\frac{1}{N}>\epsilon$ by Archimedean property. Thus, for $n\geq N$,
+(b) For $n\in\mathbb{N}$, we can pick a sequence $$\{p_n\}\subset E$$ such that $|p_n-p|<\frac{1}{n}$ with $p_n\neq p$ because $p$ is a limit point of $E$. Let $\epsilon>0$ be given. Then there is a $N\in\mathbb{N}$ such that $\frac{1}{N}>\epsilon$ by Archimedean property. Thus, for $n\geq N$,
 $$
 \begin{align}
 |p_n-p| <\frac{1}{n}\leq\frac{1}{N}<\epsilon
