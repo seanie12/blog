@@ -19,7 +19,7 @@ comments : true
 
 ---
 ## Definition 2.3.1
-A sequence $$\{a_n\}$$ is said to be <br /> (a) **monotone increasing** if $a_n \leq a_{n+1}$ for all $n\in\mathbb{N}$ <br /> (b) **monotone decreasing** if $a_n \geq a_{n+1}$ for all $n\in\mathbb{N}$ <br /> **monotone** if it is either monotone increasing or monotone decreasing
+A sequence $$\{a_n\}$$ is said to be <br /> (a) **monotone increasing** if $a_n \leq a_{n+1}$ for all $n\in\mathbb{N}$ <br /> (b) **monotone decreasing** if $a_n \geq a_{n+1}$ for all $n\in\mathbb{N}$ <br /> (c) **monotone** if it is either monotone increasing or monotone decreasing
 
 ## Theorem 2.3.2 (Monotone Convergence Theorem)
 If a sequence $$\{a_n\}$$ is monotone and bounded, then it converges.
@@ -127,11 +127,7 @@ Let $\epsilon >0$ be given and let $$\{p_{n_k}\}$$ be a subsequence of $$\{p_n\}
 n\geq N \Rightarrow |p_n-p| <\epsilon
 \end{align}
 $$
-Now, $n_k \geq k$. So, if $k\geq N$, then $n_k\geq k \geq N$.
-
-$\therefore |p_{n_k}-p|<\epsilon$
-
-$\therefore \displaystyle{\lim_{k\to\infty}}p_{n_k}=p$
+Now, $n_k \geq k$. So, if $k\geq N$, then $n_k\geq k \geq N$.  <br />$\therefore |p_{n_k}-p|<\epsilon$ <br />$\therefore \displaystyle{\lim_{k\to\infty}}p_{n_k}=p$
 $$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
