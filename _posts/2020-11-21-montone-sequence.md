@@ -101,14 +101,18 @@ $$
 &\leq 1 = 1 +\frac{1}{2} +\frac{1}{2^2} + \cdots + \frac{1}{2^{n-1}} \\
 &=1+\frac{1-(\frac{1}{2})^n}{1-\frac{1}{2}} \\
 &\leq 3
+\end{split}
+\end{align}
 $$
 By the monotone convergence theorem, $$\{t_n\}$$ converges.
 $$\tag*{$\square$}$$
 
 ## Definition 2.3.6
 $$
+\begin{align}
 \lim_{n\to\infty}a_n =\infty &\iff \forall M>0, \exists N\in\mathbb{N} \text{ s.t. } n\geq N \Rightarrow a_n > M \\
 \lim_{n\to\infty}a_n =-\infty &\iff \forall M<0, \exists N\in\mathbb{N} \text{ s.t. } n\geq N \Rightarrow a_n < M \\
+\end{align}
 $$
 
 ## Definition 2.4.1 
