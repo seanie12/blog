@@ -46,7 +46,7 @@ $$
 $\therefore \displaystyle{\lim_{n\to\infty}a_n=\alpha}$
 $$\tag*{$\square$}$$
 
-## Corollary 2.3.3
+## Corollary 2.3.3 (Nested interval property)
 Let $$\{I_n\}$$ be a sequence of closed and bounded intervals with $I_n\supset I_{n+1}$ for all $n\in\mathbb{N}$. <br /> $\Rightarrow \cap_{n=1}^\infty I_n\neq\emptyset$
 
 <*proof*>
