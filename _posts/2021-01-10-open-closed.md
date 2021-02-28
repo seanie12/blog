@@ -19,7 +19,7 @@ comments : true
 ---
 
 ## Definition 3.1.1
-$E$ is a subset of $\mathbb{R}$. $p\in E$ is an *interior point* of $E$ if  there is $epsilon >0$ such that $N_{\epsilon} (p) \subset E$.
+$E$ is a subset of $\mathbb{R}$. $p\in E$ is an *interior point* of $E$ if  there is $\epsilon >0$ such that $N_{\epsilon} (p) \subset E$.
 $$\text{Int}(E) := \{\text{all interior points of } E\} \subset E$$
 
 ## Example 3.1.2
