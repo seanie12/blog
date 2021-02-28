@@ -1,3 +1,4 @@
+---
 title: "Continuous function-2"
 
 categories:
@@ -15,8 +16,9 @@ toc_sticky: true
 
 use_math : true
 comments : true
+---
 
-## Lemma
+## Lemma 1
 
 Let $f:X\to Y$ be a function and let $A\subset X, B\subset Y$. Then,
 $$
