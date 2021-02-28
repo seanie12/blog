@@ -66,7 +66,7 @@ K&\subset (\cup_{i=1}^n U_{\alpha_i}) \cap K \\
 \end{split}
 \end{align}
 $$
-Thus, $f(K)\subset f(\cup_{i=1}^n f^{-1}(V_{\alpha_i}))=\cup_{i=1}^n f(f^{-1}(V_{\alpha_i}))$. Since $f(f^{-1}(V_{\alpha_i})) \subset V_{\alpha_i}$ by Eq.\label{set}, $\cup_{i=1}^n f(f^{-1}(V_{\alpha_i})) \subset \cup_{i=1}^n V_{\alpha_i}$. 
+Thus, $f(K)\subset f(\cup_{i=1}^n f^{-1}(V_{\alpha_i}))=\cup_{i=1}^n f(f^{-1}(V_{\alpha_i}))$. Since $f(f^{-1}(V_{\alpha_i})) \subset V_{\alpha_i}$ by Eq.\ref{set}, $\cup_{i=1}^n f(f^{-1}(V_{\alpha_i})) \subset \cup_{i=1}^n V_{\alpha_i}$. 
 
 $\therefore f(K)$ is compact.
 
