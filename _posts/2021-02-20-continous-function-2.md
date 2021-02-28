@@ -1,5 +1,5 @@
 ---
-title: "Continuous function-2"
+title: "Continuous functions"
 
 categories:
   - Analysis
@@ -7,17 +7,16 @@ categories:
 
 tags:
   - compact
-  - min-max theorem
+  - min-max value theorem
   - intermediate value theorem
- 
 
 toc: true
 toc_sticky: true
 
 use_math : true
 comments : true
----
 
+---
 ## Lemma 1
 
 Let $f:X\to Y$ be a function and let $A\subset X, B\subset Y$. Then,
@@ -70,6 +69,34 @@ $$
 Thus, $f(K)\subset f(\cup_{i=1}^n f^{-1}(V_{\alpha_i}))=\cup_{i=1}^n f(f^{-1}(V_{\alpha_i}))$. Since $f(f^{-1}(V_{\alpha_i})) \subset V_{\alpha_i}$ by Eq.\label{set}, $\cup_{i=1}^n f(f^{-1}(V_{\alpha_i})) \subset \cup_{i=1}^n V_{\alpha_i}$. 
 
 $\therefore f(K)$ is compact.
+
+$$\tag*{$\square$}$$
+
+## Lemma 2
+Let $A$ be a closed set. Then $\sup A \in A$.
+
+<*proof*>
+For any $n\in \mathbb{N}$, there is $x_n \in A$ such that $\sup A -1/n \leq x_n \leq \sup A$. If there is $n_0\in\mathbb{N}$ such that $x_{n_0} = \sup A$, then $\sup A \in A$. <br />
+ Suppose that $x_n \neq \sup A$ for all $n\in\mathbb{N}$.  Then $\sup A \in A^\prime$. Since $A$ is closed, $A^\prime \subset A$. 
+
+$\therefore \sup A \in A$.
+$$\tag*{$\square$}$$
+## Corollary 4.2.9
+Let $K$ be a compact subset of $\mathbb{R}$ and let $f:K\to\mathbb{R}$ be a continuous function. Then there exists $p,q \in K$ such that 
+$$
+\begin{align}
+f(q) \leq f(x) \leq f(p) \text{ for all }x\in K
+\end{align}
+$$
+
+<*proof*>
+By the above theorem, $f(K)$ is compact. By the Heine-Borel-Bolzano-Weierstrass theorem, $f(K)$ is closed and bounded. Let
+$$
+\begin{align}
+M:= \sup \{f(x): x\in K\}
+\end{align}
+$$
+Since $f(K)$ is bounded, $M < +\infty$. Since $f(K)$ is closed, $M\in f(K)$. So, there is $p\in K$ such that $f(p) = M$, i.e. $f(x) \leq f(p)$ for all $x\in K$. Similarly for $$m=\inf\{f(x):x\in K\}$$.
 
 $$\tag*{$\square$}$$
 ## Reference
