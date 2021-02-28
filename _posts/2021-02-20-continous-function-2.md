@@ -32,7 +32,7 @@ $$
 
 <*proof*>
 
-Let $x \in A$ be given. Then $f(x)\in f(A)$. Since f^{-1}(f(A)) = \{x\in X: f(x)\in A \}, $x\inf^{-1}(f(A))$.
+Let $x \in A$ be given. Then $f(x)\in f(A)$. Since $$f^{-1}(f(A)) = \{x\in X: f(x)\in A \}$$, $x\inf^{-1}(f(A))$.
 
 $\therefore f^{-1}(f(A)) \supset A$.
 
@@ -97,6 +97,57 @@ M:= \sup \{f(x): x\in K\}
 \end{align}
 $$
 Since $f(K)$ is bounded, $M < +\infty$. Since $f(K)$ is closed, $M\in f(K)$. So, there is $p\in K$ such that $f(p) = M$, i.e. $f(x) \leq f(p)$ for all $x\in K$. Similarly for $$m=\inf\{f(x):x\in K\}$$.
+
+$$\tag*{$\square$}$$
+
+
+## Theorem 4.2.11 (Intermediate Value Theorem)
+Let $f: [a,b]\to\mathbb{R}$ be a continuous function with $f(a) < f(b)$. <br /> If $\gamma \in\mathbb{R}$ s.t. $f(a)<\gamma <f(b)$, then there is $c\in (a,b)$ s.t. $f(c) =\gamma$. 
+
+<*proof*>
+Let 
+$$
+\begin{align}
+A :=\{x\in [a,b]: f(x)\leq \gamma \}
+\end{align}
+$$
+Then $A \neq \emptyset$ and is bounded above by $b$. By the least upper bound property, there is a supremum $c=\sup A$. Then $c\leq b$. 
+
+Now, we want to show that $f(c) = \gamma$. Since $c=\sup A$, $c\in A$ or $c\in A^\prime$. If $c\in A$, then $f(c)\leq \gamma$.
+
+Suppose that $c\in A^\prime$. Then there exists $$\{x_n\}\subset A$$ such that $x_n\to c$ as $n\to\infty$ with $x_n\neq c$. Since $x_n \in A, f(x_n)\leq \gamma$ for all $n\in \mathbb{N}$. Since $f$ is continuous and $c$ is a limit point of $[a,b],$
+$$
+\begin{align}
+f(c) = \lim_{n\to\infty}f(x_n) \leq \gamma
+\end{align}
+$$
+Thus, $f(c) \leq \gamma$.
+
+Suppose that $f(c) \lneq \gamma$. Take 
+$$
+\begin{align}
+\epsilon_0 := \frac{1}{2}(\gamma -f(c)) > 0
+\end{align}
+$$
+Since $f$ is continuous at $c$, there is $\delta >0$ such that 
+$$
+\begin{align}
+x_n \in N_\delta (c) \cap [a,b] \Rightarrow f(x) -\epsilon_0 < f(x) < f(c) + \epsilon_0
+\end{align}
+$$
+Since $f(c) \lneq \gamma, c\neq b$. Then $(c,b]\cap N_\delta (c) \neq \emptyset$. If $x\in (c,b]$ with $c<x<c+\delta$, then 
+$$
+\begin{align}
+\begin{split}
+f(x) < f(c) + \epsilon_0 &= f(c) + \frac{1}{2}(\gamma - f(c)) \\
+&=\frac{1}{2}(\gamma + f(c)) \\
+&<\gamma
+\end{split}
+\end{align}
+$$
+Since $x >c =\sup A, x \not\in  A$ That is $f(x) > \gamma$. But it is a contradiction because $c$ is supremum of $A$.
+
+$\therefore f(c) = \gamma$
 
 $$\tag*{$\square$}$$
 ## Reference
