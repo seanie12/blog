@@ -162,7 +162,7 @@ f(p-) = \lim_{x\to p}f(x) = \lim_{x\to p, x<p} f(x).
 $$
 
 ## Definition 4.4.2
-$E\subset \mathbb{R}, f:E\to\mathbb{R}, p\in E$. The function $f$ is **right continuous  (left continuous) at $p$** if $\forall \epsilon >0, \exists \delta>0$ such that 
+$E\subset \mathbb{R}, f:E\to\mathbb{R}, p\in E$. The function $f$ is **right continuous  (left continuous) at $p$** <br />if $\forall \epsilon >0, \exists \delta>0$ such that 
 $$
 \begin{align}
 p\leq x <p+\delta (p-\delta < x \leq p) \Rightarrow |f(x)-f(p) |< \epsilon.
