@@ -150,5 +150,37 @@ Since $x >c =\sup A, x \not\in  A$ That is $f(x) > \gamma$. But it is a contradi
 $\therefore f(c) = \gamma$
 
 $$\tag*{$\square$}$$
+
+## Corollary 4.2.12
+Let $I \subset \mathbb{R}$ be an interval and let $f:I\to \mathbb{R}$ be a continuous function. Then $f(I)$ is an interval.
+
+<*proof*>
+Let $s,t \in f(I)$ with $s<t$ such that $f(a) = s, f(b) = t$. <br /> Let $s <\gamma <t$ be given. If $a<b$, then since $f$ is continuous on $I$, by the intermediate value theorem there exists $c\in (a,b)$ such that $f(c) = \gamma$. <br /> $\therefore \gamma \in f(I)$ <br /> A similar argument also holds if $a>b$.
+
+$$\tag*{$\square$}$$
+
+## Corollary 4.2.13
+For every $\gamma >0$ and for every $n\in\mathbb{N}$, there exists a unique $y>0$ such that $y^n = \gamma$.
+
+<*proof*>
+Let $f(x) := x^n$. Since $f$ is continuous on $\mathbb{R}$, it is also continuous on $[0,\gamma+1]$. Since $(\gamma +1)^n > \gamma, 0<\gamma <(\gamma+1)^n$. By the mean value theorem, there exists $y\in\mathbb{R}$ such that $f(y) = y^n=\gamma$. 
+
+Now we want to show the uniqueness of $y$. Suppose that $y^n_1 = y^n_2=\gamma$. Then,
+ $$
+ (y^n_1 -y^n_2 )= (y_1 - y_2)(y^{n-1}_1 + y^{n-2}_1y_2 + \cdots + y_1y^{n-1}_2)=0 
+ $$
+ Since $y_1, y_2 >0, y_1 = y_2$.
+
+## Corollary 4.2.14
+If $f:[0,1]\to[0,1]$ is continuous, then there is $y\in [0,1]$ such that $f(y) = y$.
+
+<*proof*>
+Let $g(x) := f(x) = x$. Then $g(0) = f(0) \geq 0$, $g(1) = f(1)-1 \leq 0$.  <br /> If $g(0) =0$ or $g(1) =0$, then $f(0) =0$ or $f(1)=1$.
+
+Suppose that $g(0) \neq 0$ and $g(1) \neq 0$. Since $f$ is continuous, by the mean value theorem, there is $y \in \mathbb{R}$ such that $g(y)=0 (\because g(1) < 0 < g(0) )$. 
+
+$\therefore \exists y\in\mathbb{R}$ such that $f(y) = y$.
+
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
