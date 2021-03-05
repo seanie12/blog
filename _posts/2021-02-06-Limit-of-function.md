@@ -267,7 +267,7 @@ $$
 $$
 
 ## Definition 4.1.11
-$f$is real-valued function such that $\text{Dom}f \cap (a,\infty)\neq \emptyset$ for all $a\in \mathbb{R}$. <br />
+$f$ is real-valued function such that $\text{Dom}f \cap (a,\infty)\neq \emptyset$ for all $a\in \mathbb{R}$. <br />
 The function $f$ has a **limit at $\infty$** if $\exists L\in \mathbb{R}$ such that $$\forall \epsilon >0, \exists M\in \mathbb{R} \text{ s.t. } x\in \text{Dom}f \cap (M,\infty)\neq \emptyset \Rightarrow |f(x)-L|<\epsilon.$$ <br />
 We write $\displaystyle{\lim_{x\to\infty}f(x)=L}.$
 
