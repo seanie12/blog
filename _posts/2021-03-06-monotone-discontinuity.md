@@ -110,6 +110,7 @@ f(p+) = \inf_{x<p} f(x) \leq \inf_{p<x<q} f(x) \leq \sup_{p<x<q} f(x) \leq \sup_
 \end{align}
 $$
 $\therefore f(p+) \leq f(q-)$
+
 $$\tag*{$\square$}$$
 
 ## Definition 4.4.9
@@ -277,6 +278,7 @@ $$c_n = \epsilon < f(x_n) - f(y) < c_n +\epsilon \iff -c_n-\epsilon < f(y) - f(x
 \iff -\epsilon < f(y) - f(x_n) + c_n <\epsilon \\
 \iff |f(y) = (f(x_n)-c_n)| < \epsilon$$
 $\therefore f(x_n-) = f(x_n) = c_n$ <br /> $\therefore f(x_n) = f(x_n-) = c_n$
+
 $$\tag*{$\square$}$$
 
 ## Theorem 4.4.12
@@ -315,6 +317,7 @@ Let $x_o \in I$ such that $y_0 = f(x_0)$. Since $f^{-1}$ is strictly increasing 
   $$
   $\therefore \left|f^{-1}(y)  -x_0 \right| <\epsilon$ for all $y\in (y_0-\delta, y_0]$. <br /> $\therefore f$ is left continuous at $y_0$. 
 Similar argument proves that $f$ is right continuous at $y_0\in J$ such that $(y_0, +\infty) \cap J\neq\emptyset$. <br /> $\therefore f$ is continuous at $y_0 \in J$. 
+
 $$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
