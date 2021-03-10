@@ -167,13 +167,53 @@ Thus, $f(x) is monotone increasing function.
 (a) Since $x_k > a$ for all $k\in\mathbb{N}$, $I(a-x_k)=0$. <br />$\therefore f(a) = \sum_{k=1}^\infty c_k f(a-x_k)=0$. <br /> Since $x_k <b$ for all $k\in\mathbb{N}$, $I(b-a_k)=1$. <br /> $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
 
 (b) $$E:=\{x_n:n\in\mathbb{N}\}$$. Let $p\in [a,b]\setminus E$.
-1. $p\in E^\prime$.
+1. $p\not\in E^\prime$.
   There is a $\delta>0$ such that $N_\delta (p) \cap E =\emptyset$. For $x\in N_\delta (p), I(x-x_k)=I(p-x_k)$ for all $k\in\mathbb{N}$. So,
   $$
   \begin{align}
-  f(x) = \sum_{k=1}^\infty c_k I(x-x_k)\\
-  =\sum_{k=1}^\infty c_k I(p-x_k) 
+  \begin{split}
+  f(x) &= \sum_{k=1}^\infty c_k I(x-x_k)\\
+  &=\sum_{k=1}^\infty c_k I(p-x_k) 
+  \end{split}
   \end{align}
   $$
+2. $p\in E^\prime$
+  Let $\epsilon >0$ be given. Since $\sum_{k=1}^\infty c_k$ converges, there exists a $N\in\mathbb{N}$ such that 
+  $$
+  \begin{align}
+  \sum_{k=N+1}^\infty c_k \epsilon
+  \end{align}
+  $$
+  by Cauchy criterion. Choose a $\delta \in\mathbb{R}$ such that 
+  $$
+  \begin{align}
+  0<\delta < \min\{|p-x_k|: k=1,2,\ldots, N\} 
+  \end{align}
+  $$
+  Then $x_k\not\in (p-\delta, p+\delta)$ for $k=1,\ldots, N$. If $x_k\in N_\delta (p) \cap E$, then $k>N$. <br /> Suppose that $p<x<p+\delta$. Then $I(x-x_k) = I(p-x_k)$ for $k=1,\ldots, N$. <br /> Furthermore, for any $p<x, 0\leq I(x-x_k) - I(p-x_k)\leq 1$ for all $k\in\mathbb{N}$.
+  Therefore, if $p<x<p+\delta$
+  $$
+  \begin{align}
+  \begin{split}
+  f(x) - f(p) &= \sum_{k=N+1}^\infty c_k(I(x-x_k)-I(p-x_k))\\
+  &\leq \sum_{k=N+1}^\infty c_k \\
+  &< \epsilon
+  \end{split}
+  \end{align}
+  $$
+  $\therefore \left|f(x)-f(p)\right|<\epsilon$ for all $p<x<p+\delta$. < br/> $\therefore f$ is right continuous at $p$.
+  Similarly, suppose that $p-\delta < x < p$. <br />Then $I(x-x_k) = I(p-x_k)$ for $k=1,\ldots, N$. Furthermore, for any $x<p, 0\leq I(p-x_k)-I(x-x_k) \leq 1$
+  $$
+  \begin{align}
+  \begin{split}
+    f(p) - f(x) &= \sum_{k=N+1}^\infty c_k(I(p-x_k)-I(x-x_k))\\
+   &\leq \sum_{k=N+1}^\infty c_k \\
+   &< \epsilon
+   \end{split}
+  \end{align}
+  $$
+  $\therefore f$ is left continuous at $p$. <br /> $\therefore f$ is continuous at $p$.
+
+(c)
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
