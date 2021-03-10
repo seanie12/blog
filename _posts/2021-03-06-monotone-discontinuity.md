@@ -181,7 +181,7 @@ Thus, $f(x) is monotone increasing function.
   Let $\epsilon >0$ be given. Since $\sum_{k=1}^\infty c_k$ converges, there exists a $N\in\mathbb{N}$ such that 
   $$
   \begin{align}
-  \sum_{k=N+1}^\infty c_k \epsilon
+  \sum_{k=N+1}^\infty c_k <\epsilon
   \end{align}
   $$
   by Cauchy criterion. Choose a $\delta \in\mathbb{R}$ such that 
@@ -214,6 +214,10 @@ Thus, $f(x) is monotone increasing function.
   $$
   $\therefore f$ is left continuous at $p$. <br /> $\therefore f$ is continuous at $p$.
 
-(c)
+(c) We want to show that $f(x_n+)=f(x_n)$ <br /> Fix an $x_n\in E$. 
+1. $x_n\not\in E^\prime$.
+  There is a $\delta >0$ such that $N^\prime_\delta (x_n) \cap E = \emptyset$, i.e. $(x_n, x_n+\delta) \cap E = \emptyset$. <br /> For $y\in (x_n, x_n+\delta), I(y-x_k) = I(x_n-x_k)$ for all $k\in\mathbb{N}$. <br /> $\therefore f(y) = f(x_n)$ for all $y\in (x_n, x_n+\delta)$ <br /> $\therefore f$ is right continuous at $x_n$.
+2. $x_n \in E^\prime$.   
+  
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
