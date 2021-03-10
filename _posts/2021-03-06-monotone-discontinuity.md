@@ -33,7 +33,7 @@ $$
 \begin{align}
 f(p+) = \displaystyle{\lim_{x\to p+}f(x) = \lim_{x\to p, x> p}f(x)}.
 \end{align}$$ 
-Similarly, if $p$ is a  limit point of $E\cap (-\infty, p)$, the **left limit** of $f$ at $p$, if it exists, is denoted by $f(p-), and we write 
+Similarly, if $p$ is a  limit point of $E\cap (-\infty, p)$, the **left limit** of $f$ at $p$, if it exists, is denoted by $f(p-)$, and we write 
 $$
 \begin{align}
 f(p-) = \lim_{x\to p}f(x) = \lim_{x\to p, x<p} f(x).
@@ -75,7 +75,7 @@ $\Rightarrow \forall p\in I, f(p+), f(p-)$ exist and
 $$
 \sup_{x<p}f(x) = f(p-) \leq f(p) \leq f(p+) = \inf_{x>p} f(x)
 $$
-
+Furthermore, if $p,q\in I$ with $p<q$, then $f(p+) \leq f(q-)$.
 <*proof*>
 Let $p\in I$ be given. Define 
 $$
