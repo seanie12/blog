@@ -124,8 +124,56 @@ Then $$I_a (x) := I(x-a) = \begin{cases}
 1\quad (x\geq a)
 \end{cases}
 $$
+## Cauchy Criterion
+Suppose that $\sum_{k=1}^\infty a_k$ converges, where $a_k\in\mathbb{R}$ for all $k=1,2,\ldots$. Since $s_n= \sum_{k=1}^n a_k$ is convergent sequence in $\mathbb{R}$, it  is Cauchy sequence. So for all $\epsilon >0 \exists N\in\mathbb{N}$ such that,
+$$
+\begin{align}
+m>n\leq N \Rightarrow \left|\sum_{k=1}^m a_k -\sum_{k=1}^n a_k\right|=\left|\sum_{k=n+1}^m a_k \right| < \epsilon.
+\end{align}
+$$
+So, for all $\epsilon >0 \exists N\in\mathbb{N}$ such that,
+$$
+\begin{align}
+m\leq N \Rightarrow \left|\sum_{k=N+1}^m a_k \right| < \epsilon.
+\end{align}
+$$
+Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ converges. So, for all $\epsilon >0 \exists N\in\mathbb{N}$ such that,
+$$
+\begin{align}
+\left|\sum_{k=N+1}^\infty a_k \right| < \epsilon.
+\end{align}
+$$
 
 ## Theorem 4.4.10
+Let $a,b\in \mathbb{R}$ and let $$\{x_n\}$$ be a countable subset of $(a,b)$ and let $$\{c_n\}_{n=1}^\infty$$ be s sequence such that $\sum_{n=1}^\infty c_n < +\infty$. <br /> Then there is a monotone increasing function on $[a,b]$ such that 
 
+(a) $f(a)=0, f(b) = \sum_{n=1}^\infty c_n$
+
+(b) $f$ is continuous on $[a,b] \setminus \{x_n:n\in\mathbb{N}\}$
+
+(c) $f(x_n+) = f(x_n)$, i.e. $f$ is right continuous at each $x_n$.
+
+(d) $f$ is discontinuous at $x_n$ for all $n\in\mathbb{N}$ and $f(x_n+) -f(x_n-)=c_n$
+
+<*proof*>
+Define $f(x):=\sum_{k=1}^\infty c_k I(x-x_k)$. <br /> Since $0\leq c_k I(x-x_k)\leq c_k$, $s_n (x) :=\sum_{k=1}^n c_k I (x-x_k) \leq \sum_{k=1}^n c_k$. <br /> Since $\sum_{k=1}^\infty c_k < +\infty$, $$\{s_n (x)\}$$ is bounded above. Since $s_n (x)$ is monotone increasing sequence, $s_n (x)$ converges.
+
+For $x<y, I(x-x_k) \leq I(y-x_k)$ for all $k=1,2,\ldots$. So, 
+$$
+f(x) = \sum_{k=1}^\infty c_k I (x-x_k) \leq \sum_{k=1}^\infty I(y-x_k) = f(y)
+$$
+Thus, $f(x) is monotone increasing function.
+
+(a) Since $x_k > a$ for all $k\in\mathbb{N}$, $I(a-x_k)=0$. <br />$\therefore f(a) = \sum_{k=1}^\infty c_k f(a-x_k)=0$. <br /> Since $x_k <b$ for all $k\in\mathbb{N}$, $I(b-a_k)=1$. <br /> $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
+
+(b) $$E:=\{x_n:n\in\mathbb{N}\}$$. Let $p\in [a,b]\setminus E$.
+1. $p\in E^\prime$.
+  There is a $\delta>0$ such that $N_\delta (p) \cap E =\emptyset$. For $x\in N_\delta (p), I(x-x_k)=I(p-x_k)$ for all $k\in\mathbb{N}$. So,
+  $$
+  \begin{align}
+  f(x) = \sum_{k=1}^\infty c_k I(x-x_k)\\
+  =\sum_{k=1}^\infty c_k I(p-x_k) 
+  \end{align}
+  $$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
