@@ -103,6 +103,29 @@ $\therefore |f(x) - B| < \epsilon$ for all $x\in I$ with $p<x<x_0$. <br /> $\the
 
 $\therefore \displaystyle{\sup_{x<p} f(x) = f(p+) \leq f(p) \leq f(p-) = \inf_{x>p} f(x)}$
 
+Furthermore, for $p,q\in I$ with $p<q$,
+$$
+\begin{align}
+f(p+) = \inf_{x<p} f(x) \leq \inf_{p<x<q} f(x) \leq \sup_{p<x<q} f(x) \leq \sup_{x<q} f(x) = f(q-)
+\end{align}
+$$
+$\therefore f(p+) \leq f(q-)$
 $$\tag*{$\square$}$$
+
+## Definition 4.4.9
+The **unit jump function** $I:\mathbb{R}\to\mathbb{R}$ defined by 
+$$
+I(x) = \begin{cases}0 \quad (x<0)\\
+1\quad (x\geq 0)
+\end{cases}
+$$
+Then $$I_a (x) := I(x-a) = \begin{cases}
+0 \quad (x<a)\\
+1\quad (x\geq a)
+\end{cases}
+$$
+
+## Theorem 4.4.10
+
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
