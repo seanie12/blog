@@ -20,7 +20,7 @@ comments : true
 Let $$\{p_n\}_{n=1}^\infty$$ be a sequence in $\mathbb{R}$. The sequence is a **Cauchy sequence** if $\forall \epsilon >0, \exists N\in \mathbb{N}$ such that
 $$
 \begin{align}
-|p_n - p_m| < \epsilon.
+n,m > N \Rightarrow |p_n - p_m| < \epsilon.
 \end{align}$$
 
 ## Theorem1
