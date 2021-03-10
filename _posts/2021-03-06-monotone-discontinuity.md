@@ -218,6 +218,103 @@ Thus, $f(x) is monotone increasing function.
 1. $x_n\not\in E^\prime$.
   There is a $\delta >0$ such that $N^\prime_\delta (x_n) \cap E = \emptyset$, i.e. $(x_n, x_n+\delta) \cap E = \emptyset$. <br /> For $y\in (x_n, x_n+\delta), I(y-x_k) = I(x_n-x_k)$ for all $k\in\mathbb{N}$. <br /> $\therefore f(y) = f(x_n)$ for all $y\in (x_n, x_n+\delta)$ <br /> $\therefore f$ is right continuous at $x_n$.
 2. $x_n \in E^\prime$.   
-  
+  Let $\epsilon >0$ be given. Choose a $N\in\mathbb{N}$ such that 
+  $$
+  \begin{align}
+  \sum_{k=N+1}^\infty c_k <\epsilon
+  \end{align}
+  $$
+  by Cauchy criterion. Choose a $\delta >0$ such that 
+  $$
+  \begin{align}
+   0<\delta <\min\{|x_n-x_k|:k=1,\ldots,N, k\neq n\}
+     \end{align}
+  $$
+  Then, $x_k \not\in (x_n, x_n+\delta)$ for $k=1,\ldots,N$. Thus, for $y\in (x_n, x_n+\delta), I(y-x_k)=I(x_n-x_k)$ for all $k=1,\ldots,N$. <br/> For $y>x_n$, 
+  $$
+  0\leq I(y-x_k) - I(x_n-x_k)\leq 1 \text{ for all } k\in\mathbb{N}
+  $$
+  Thus,  For all $y\in(x_n, x_n+\delta)$
+  $$
+  \begin{align}
+  \begin{split}
+  f(y) - f(x_n) &= \sum_{k=1}^\infty c_k(I(y-x_k) - I(x_n-x_k))\\
+  &= \sum_{k=N+1}^\infty c_k(I(y-x_k) - I(x_n-x_k)) \\
+  &\leq\sum_{k=N+1}^\infty c_k \\
+  <\epsilon
+  \end{split}
+  \end{align}
+  $$
+  $\therefore f$ is right continuous at $x_n$ for all $n\in \mathbb{N}$.
+   
+ (d) Fix a $x_n\in E$, Suppose $y<x_n$. <br /> If $x_n \not\in E^\prime,$ there is a $\delta >0$ such that $(x_n-\delta, x_n) \cap E = \emptyset$. Thus, $I(y-x_k) = I(x_n-x_k)$ for all $k\in \mathbb{N}$ with $k\neq n$. For $k=n$,
+ $$
+ \begin{align}
+ 0=I(y-x_n) \leq I(x_n-x_n) = I(0) = 1
+ \end{align}
+ $$
+ $\therefore f(x_n)-f(y) = c_n$ for all $y\in(x_n-\delta, x_n)$
+
+Now, suppose that $x_n \in E^\prime$. <br /> Let $\epsilon >0$ be given. Choose a $N \in \mathbb{N}$ such that $\sum_{k=N+1}^\infty c_k <\epsilon$. Choose a $\delta >0$ such that 
+$$
+\begin{align}
+0<\delta <\min\{|x_k-x_n|:k=1,\ldots,N, k\neq n\}
+\end{align}
+$$
+So, $x_k \not\in (x_n-\delta, x_n)$ for $k=1,\ldots, N$. Then $I(y-x_k) = I(x_n-x_k)$ for all $k=1,\ldots, N$ with $k\neq n$. For all $y\in (x_n-\delta, x_n)$,
+$$
+\begin{align}
+\begin{split}
+c_n \leq f(x_n) - f(y) = \sum_{k=1}^\infty c_k (I(x_n-x_k) - I(y-x_k)) \\
+=c_n + \sum_{k=N+1}^\infty c_k (I(x_n-x_k) - I(y-x_k)) \\
+\leq c_n + \sum_{k=N+1}^\infty c_k \\
+< c_n + \epsilon 
+\end{split}
+\end{align}
+$$
+So, 
+$$c_n = \epsilon < f(x_n) - f(y) < c_n +\epsilon \iff -c_n-\epsilon < f(y) - f(x_n) < -c_n + \epsilon \\
+\iff -\epsilon < f(y) - f(x_n) + c_n <\epsilon \\
+\iff |f(y) = (f(x_n)-c_n)| < \epsilon$$
+$\therefore f(x_n-) = f(x_n) = c_n$ <br /> $\therefore f(x_n) = f(x_n-) = c_n$
+$$\tag*{$\square$}$$
+
+## Theorem 4.4.12
+Let $I\subset \mathbb{R}$ be an interval and let $f:I\to\mathbb{R}$ be a strictly monotone continuous function on $I$. 
+$\Rightarrow f^{-1}$ is strictly monotone continuous on $J=f(I)$.
+
+<*proof*>
+Without loss of generality, assume that $f$ is strictly increasing function. Let $x,y\in I$ with $x<y$ be given. Since $f$ is continuous, by corollary 4.2.12, $f(I) = J$ is an interval.  <br /> Furthermore, since $f$ is strictly increasing, $f(x) < f(y)$. Thus, $f$ is one-to-one function from $I$ onto $J:=f(I)$. <br />Thus, $f^{-1}$ is also one-to-one function from $J$ onto $I$.
+
+Let $y_1,y_2 \in J$ with $y_1 < y_2$ be given. Then there are unique $x_1, x_2 \in I$ such that $y_1= f(x_1), y_2 = f(x_2)$. Since $f$ is strictly increasing, 
+$$
+f^{-1}(y_1) = x_1 < x_2 = f^{-1}(y_2)
+$$
+$\therefore f^{-1}$ is strictly increasing function.
+
+Now, we want to show that $f^{-1}$ is continuous on $J$. First, we prove that $f^{-1}$ is left continuous. <br /> Let $y_0\in J$ such that $(-\infty, y_0)\cap J \neq \emptyset$ be given, i.e. $y_0$ is not the left end point of $J$.
+
+Let $x_o \in I$ such that $y_0 = f(x_0)$. Since $f^{-1}$ is strictly increasing and $(-\infty, y_0) \cap J \neq\emptyset$, $(-\infty, x_0) \cap I \neq \emptyset.$ <br />Let $\epsilon  >0$ be given.
+1. $x_0-\epsilon \not\in I$
+  For all $y\in (-\infty, y_0] \cap J$,$x_0-\epsilon < f^{-1}(y) \leq f^{-1}(y_0)$. So,
+  $$
+  \left|f^{-1}(y) -f^{-1}(y_0)\right| < \left|f^{-1}(y_0)-x_0+\epsilon \right| = \epsilon
+  $$
+2. $x_0-\epsilon \in I$
+  Choose a $\delta = y_0 - f(x_0-\epsilon)=f(x_0) = f(x_0-\epsilon)>0$. For all $y\in(y_0-\delta, y_0]$,
+  $$
+  \begin{align}
+  \begin{split}
+  x_0-\epsilon &= f^{-1}(y_0-\delta)
+  &<f^{-1}(y)
+  &\leq f^{-1}(y) \\
+  &\leq f^{-1}(y_0) =x_0\\
+  &<x_0 +\epsilon
+  \end{split}
+  \end{align}
+  $$
+  $\therefore \left|f^{-1}(y)  -x_0 \right| <\epsilon$ for all $y\in (y_0-\delta, y_0]$. <br /> $\therefore f$ is left continuous at $y_0$. 
+Similar argument proves that $f$ is right continuous at $y_0\in J$ such that $(y_0, +\infty) \cap J\neq\emptyset$. <br /> $\therefore f$ is continuous at $y_0 \in J$. 
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
