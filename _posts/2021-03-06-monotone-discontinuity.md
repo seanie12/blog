@@ -316,7 +316,10 @@ Let $x_o \in I$ such that $y_0 = f(x_0)$. Since $f^{-1}$ is strictly increasing 
   \end{align}
   $$
   $\therefore \left|f^{-1}(y)  -x_0 \right| <\epsilon$ for all $y\in (y_0-\delta, y_0]$. <br /> $\therefore f$ is left continuous at $y_0$. 
+
 Similar argument proves that $f$ is right continuous at $y_0\in J$ such that $(y_0, +\infty) \cap J\neq\emptyset$. <br /> $\therefore f$ is continuous at $y_0 \in J$. 
+
+$\therefore f$ is continuous at $y_0\in J$.
 
 $$\tag*{$\square$}$$
 ## Reference
