@@ -129,13 +129,13 @@ $$
 Suppose that $\sum_{k=1}^\infty a_k$ converges, where $a_k\in\mathbb{R}$ for all $k=1,2,\ldots$. Since $s_n= \sum_{k=1}^n a_k$ is convergent sequence in $\mathbb{R}$, it  is Cauchy sequence. So for all $\epsilon >0 \exists N\in\mathbb{N}$ such that,
 $$
 \begin{align}
-m>n\leq N \Rightarrow \left|\sum_{k=1}^m a_k -\sum_{k=1}^n a_k\right|=\left|\sum_{k=n+1}^m a_k \right| < \epsilon.
+m>n\geq N \Rightarrow \left|\sum_{k=1}^m a_k -\sum_{k=1}^n a_k\right|=\left|\sum_{k=n+1}^m a_k \right| < \epsilon.
 \end{align}
 $$
-So, for all $\epsilon >0 \exists N\in\mathbb{N}$ such that,
+So, for all $\epsilon >0, \exists N\in\mathbb{N}$ such that,
 $$
 \begin{align}
-m\leq N \Rightarrow \left|\sum_{k=N+1}^m a_k \right| < \epsilon.
+m\geq N \Rightarrow \left|\sum_{k=N+1}^m a_k \right| < \epsilon.
 \end{align}
 $$
 Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ converges. So, for all $\epsilon >0 \exists N\in\mathbb{N}$ such that,
@@ -163,7 +163,7 @@ For $x<y, I(x-x_k) \leq I(y-x_k)$ for all $k=1,2,\ldots$. So,
 $$
 f(x) = \sum_{k=1}^\infty c_k I (x-x_k) \leq \sum_{k=1}^\infty I(y-x_k) = f(y)
 $$
-Thus, $f(x) is monotone increasing function.
+Thus, $f(x)$ is a monotone increasing function.
 
 (a) Since $x_k > a$ for all $k\in\mathbb{N}$, $I(a-x_k)=0$. <br />$\therefore f(a) = \sum_{k=1}^\infty c_k f(a-x_k)=0$. <br /> Since $x_k <b$ for all $k\in\mathbb{N}$, $I(b-a_k)=1$. <br /> $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
 
