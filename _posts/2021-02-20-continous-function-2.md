@@ -1,5 +1,5 @@
 ---
-title: "Continuous functions"
+title: "Continuous functions-(2)"
 
 categories:
   - Analysis
