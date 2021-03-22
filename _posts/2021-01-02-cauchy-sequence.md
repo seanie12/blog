@@ -63,7 +63,7 @@ $$\tag*{$\square$}$$
 $$\{p_n\}_{n=1}^\infty$$ be a Cauchy sequence having convergent subsequence. Then the sequence $$\{p_n\}$$ converges.
 
 <*proof*>
-Let $$\{p_{n_k}\}$$ be a convergent subsequence of $$\{p_n\} \text{ such that } p_{n_k} \rightarrow p \text{ as } k\rightarrow \infty.$$ Let $$\epsilon >0$$ be given. <br /> Since $$\{p_n\}$$ is a Cauchy sequence, there exists $$n_0 \in \mathbb{N}  \text{ such that } n,m \geq n_0 \Rightarrow |p_n -p_m| <\frac{\epsilon}{2}.$$ <br /> Since $$\{p_{n_k}\}$$ is a convergent subsequence, there is $$k_0 \in \mathbb{N} \text{ such that } k\geq k_0 \Rightarrow |p_{n_k} - p| < \frac{\epsilon}{2}.$$ Put $$N :=\{n_0, k_0\}$$. If $$n\geq N$$,
+Let $$\{p_{n_k}\}$$ be a convergent subsequence of $$\{p_n\} \text{ such that } p_{n_k} \rightarrow p \text{ as } k\rightarrow \infty.$$ Let $$\epsilon >0$$ be given. <br /> Since $$\{p_n\}$$ is a Cauchy sequence, there exists $$n_0 \in \mathbb{N}  \text{ such that } n,m \geq n_0 \Rightarrow |p_n -p_m| <\frac{\epsilon}{2}.$$ <br /> Since $$\{p_{n_k}\}$$ is a convergent subsequence, there is $$k_0 \in \mathbb{N} \text{ such that } k\geq k_0 \Rightarrow |p_{n_k} - p| < \frac{\epsilon}{2}.$$ <br />Put $$N :=\{n_0, k_0\}$$. If $$n\geq N$$,
 $$
 \begin{align}
 \begin{split}
@@ -78,7 +78,7 @@ $$\therefore \lim_{n\to \infty} p_n = p$$
 
 $$\tag*{$\square$}$$
 
-## Theorem3
+## Theorem 3
 Every Cauchy sequence converges in $\mathbb{R}$.
 
 <*proof*>
@@ -88,7 +88,7 @@ $$\tag*{$\square$}$$
 ## Remark
 We say that $\mathbb{R}$ is complete because theorem2 holds. In general, if $(X,d)$ is metric space, then we say that $$(X,d)$$ is complete if every Cauchy sequence in $X$ converges in $X$.
 
-## Theorem4
+## Theorem 4
 If every Cauchy sequence in $\mathbb{R}$ converges, then every nonempty subsuet of $\mathbb{R}$ is bounded above has a supremum.
 
 <*proof*>
