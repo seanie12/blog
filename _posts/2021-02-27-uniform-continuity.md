@@ -51,7 +51,7 @@ $$\tag*{$\square$}$$
 $$
 \begin{align}
 \begin{split}
-|f(x) - f(y) | &= | 2\cos(\frac{x+y}{2})\sin(\frac{x-y}{2}) \\
+|f(x) - f(y) | &= \left| 2\cos(\frac{x+y}{2})\sin(\frac{x-y}{2}) \right| \\
 &\leq 2|\sin(\frac{x-y}{2}) | \\
 &\leq |x-y|
 \end{split}
@@ -139,6 +139,7 @@ $$
 |f(x) - f(y)| \leq |f(x) - f(p_i)| + |f(y)-f(p_i)| < \frac{\epsilon}{2} +\frac{\epsilon}{2} =\epsilon
 \end{align}
 $$
+
 $\therefore f$ is uniformly continuous on $K$.
 $$\tag*{$\square$}$$
 
