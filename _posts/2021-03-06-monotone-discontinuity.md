@@ -72,11 +72,11 @@ $f:I\to\mathbb{R}$, where $I$ is an interval.
 ## Theorem 4.4.7 
 $I$ is an open interval and $f:I\to\mathbb{R}$ is monotone increasing on $I$. <br />
 $\Rightarrow \forall p\in I, f(p+), f(p-)$ exist and 
-$$
-\sup_{x<p}f(x) = f(p-) \leq f(p) \leq f(p+) = \inf_{x>p} f(x)
-$$
+$\sup_{x<p}f(x) = f(p-) \leq f(p) \leq f(p+) = \inf_{x>p} f(x).$ <br />
 Furthermore, if $p,q\in I$ with $p<q$, then $f(p+) \leq f(q-)$.
+
 <*proof*>
+
 Let $p\in I$ be given. Define 
 $$
 E:=\{f(x): x<p\}.
@@ -159,9 +159,9 @@ Let $a,b\in \mathbb{R}$ and let $$\{x_n\}$$ be a countable subset of $(a,b)$ and
 <*proof*>
 Define $f(x):=\sum_{k=1}^\infty c_k I(x-x_k)$. <br /> Since $0\leq c_k I(x-x_k)\leq c_k$, $s_n (x) :=\sum_{k=1}^n c_k I (x-x_k) \leq \sum_{k=1}^n c_k$. <br /> Since $\sum_{k=1}^\infty c_k < +\infty$, $$\{s_n (x)\}$$ is bounded above. Since $s_n (x)$ is monotone increasing sequence, $s_n (x)$ converges.
 
-For $x<y, I(x-x_k) \leq I(y-x_k)$ for all $k=1,2,\ldots$. So, 
+For $x<y, I(x-x_k) \leq I(y-x_k)$ for all $k=1,2,\ldots$. <br />So, 
 $$
-f(x) = \sum_{k=1}^\infty c_k I (x-x_k) \leq \sum_{k=1}^\infty I(y-x_k) = f(y)
+f(x) = \sum_{k=1}^\infty c_k I (x-x_k) \leq \sum_{k=1}^\infty I(y-x_k) = f(y).
 $$
 Thus, $f(x)$ is a monotone increasing function.
 
