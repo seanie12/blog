@@ -127,7 +127,7 @@ $n\geq N \Rightarrow 0<|p_n -p| <\delta (\because p_n \neq p)$.
 $\therefore |f(p_n) - L | <\epsilon$, i.e. $\displaystyle{\lim_{n\to\infty}f(p_n) = L}.$
 
 $\Leftarrow$ Suppose that $\displaystyle{\lim_{x\to p} f(x) \neq L}.$
-$\exists \epsilon >0$ such that $\delta >0, \exists x \in E$, $0<|x-p|<\delta \text{ and } |f(x)-L| \geq \epsilon$.
+$\exists \epsilon >0$ such that $\forall \delta >0, \exists x \in E$, $0<|x-p|<\delta \text{ and } |f(x)-L| \geq \epsilon$.
 Take $\delta := \frac{1}{n}$. Then there exists $p_n \in E$ such that 
 $$
 \begin{align}
