@@ -135,7 +135,7 @@ $$
 N^\prime_\delta (q) \cap E \neq \emptyset \text{ and } N_\delta \subset N_\epsilon (p).
 \end{align}
 $$ 
-Such $\delta$ exists because $N_\epsilon (p)$ is an open set. Since $N_\delta (q) \subset N_\epsilon (p), N_\epsilon (p) \cap E \neq \emptyset.$ But it is a contradiction because $N_\epsilon (p) \cap E = \emptyset$.
+Such $\delta$ exists because $N_\epsilon (p)$ is an open set. Since $N_\delta (q) \subset N_\epsilon (p), N_\epsilon (p) \cap E \neq \emptyset.$ <br /> But it is a contradiction because $N_\epsilon (p) \cap E = \emptyset$.
 
 $\therefore N_\epsilon (p) \cap E^\prime = \emptyset$
 
