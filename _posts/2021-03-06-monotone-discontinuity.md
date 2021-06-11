@@ -202,7 +202,7 @@ Thus, $f(x)$ is a monotone increasing function.
   \end{split}
   \end{align}
   $$
-  $\therefore \left|f(x)-f(p)\right|<\epsilon$ for all $p<x<p+\delta$. < br/> $\therefore f$ is right continuous at $p$.
+  $\therefore \left|f(x)-f(p)\right|<\epsilon$ for all $p<x<p+\delta$. <br /> $\therefore f$ is right continuous at $p$.
   Similarly, suppose that $p-\delta < x < p$. <br />Then $I(x-x_k) = I(p-x_k)$ for $k=1,\ldots, N$. Furthermore, for any $x<p, 0\leq I(p-x_k)-I(x-x_k) \leq 1$
   $$
   \begin{align}
@@ -242,7 +242,7 @@ Thus, $f(x)$ is a monotone increasing function.
   f(y) - f(x_n) &= \sum_{k=1}^\infty c_k(I(y-x_k) - I(x_n-x_k))\\
   &= \sum_{k=N+1}^\infty c_k(I(y-x_k) - I(x_n-x_k)) \\
   &\leq\sum_{k=N+1}^\infty c_k \\
-  <\epsilon
+  &<\epsilon
   \end{split}
   \end{align}
   $$
@@ -266,10 +266,10 @@ So, $x_k \not\in (x_n-\delta, x_n)$ for $k=1,\ldots, N$. Then $I(y-x_k) = I(x_n-
 $$
 \begin{align}
 \begin{split}
-c_n \leq f(x_n) - f(y) = \sum_{k=1}^\infty c_k (I(x_n-x_k) - I(y-x_k)) \\
-=c_n + \sum_{k=N+1}^\infty c_k (I(x_n-x_k) - I(y-x_k)) \\
-\leq c_n + \sum_{k=N+1}^\infty c_k \\
-< c_n + \epsilon 
+c_n \leq f(x_n) - f(y) &= \sum_{k=1}^\infty c_k (I(x_n-x_k) - I(y-x_k)) \\
+&=c_n + \sum_{k=N+1}^\infty c_k (I(x_n-x_k) - I(y-x_k)) \\
+&\leq c_n + \sum_{k=N+1}^\infty c_k \\
+&< c_n + \epsilon 
 \end{split}
 \end{align}
 $$
@@ -303,7 +303,7 @@ Let $x_o \in I$ such that $y_0 = f(x_0)$. Since $f^{-1}$ is strictly increasing 
   \left|f^{-1}(y) -f^{-1}(y_0)\right| < \left|f^{-1}(y_0)-x_0+\epsilon \right| = \epsilon
   $$
 2. $x_0-\epsilon \in I$
-  Choose a $\delta = y_0 - f(x_0-\epsilon)=f(x_0) = f(x_0-\epsilon)>0$. For all $y\in(y_0-\delta, y_0]$,
+  Choose a $\delta = y_0 - f(x_0-\epsilon)=f(x_0) = f(x_0-\epsilon)>0$. <br /> For all $y\in(y_0-\delta, y_0]$,
   $$
   \begin{align}
   \begin{split}
