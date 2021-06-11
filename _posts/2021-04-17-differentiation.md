@@ -223,5 +223,38 @@ $$
 $$
 Then $(f\cdot \frac{1}{g})^\prime =  \frac{f^\prime(x)g(x) - f(x)g^\prime(x)}{\{g(x)\}^2}$
 $$\tag*{$\square$}$$
+
+## Theorem 5.1.6 (Chain Rule)
+$f$ is differentiable at $x$ and $g$ is differentiable at $f(x)$. Then $(g\circ f)^\prime (x) = g^\prime(f(x))\cdot f^\prime(x)$
+
+$Q(t) = \frac{f(t)-f(x)}{t-x} \Rightarrow Q(t) \rightarrow f^\prime(x)$ as $t\rightarrow x$.  
+
+Let $u(t) = Q(t)- f^\prime(x)$. Then $u(t) \rightarrow 0$ as $t\rightarrow x$. So, $f(t)-f(x)=(t-x)(u(t)+f^\prime(x))$.
+
+<*proof*>
+$y=f(x)$
+$$
+\begin{align}
+\begin{split}
+f(t)-f(x) &= (t-x)(f^\prime(x) + u(t)) \\
+g(s)-g(y) &=(s-y)(g^\prime(y) + v(s)) \\
+\end{split}
+\end{align}
+$$
+where $u(t) \rightarrow 0$ as $t\rightarrow x$, $v(s)\rightarrow 0$ as $s\rightarrow y$. <br /> Let $s=f(t)$ and $h=g\circ f$.
+$$
+\begin{align}
+\begin{split}
+h(t)-h(x) &= g(f(t)) - g(f(x))\\
+&=g(s) - g(y)\\
+&=(s-y)(g^\prime(y) + v(s)\\
+&=(f(t)-f(x))(g^\prime(y) + v(s)) \\
+&=(t-x)(f^\prime(x) + u(t))(g^\prime(y) + v(s)) \\
+\frac{h(t)-h(x)}{t-x} &=(f^\prime(x) + u(t))(g^\prime(y)+v(s)) \\
+\lim_{t\to x}\frac{h(t)-h(x)}{t-x} &= g^\prime(f(x))f^\prime(x)
+\end{split}
+\end{align}
+$$
+$\therefore h^\prime(x) = g^\prime(f(x))f^\prime(x)$.
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
