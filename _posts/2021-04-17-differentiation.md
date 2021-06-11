@@ -89,7 +89,7 @@ $$
 $$
 $$\tag*{$\square$}$$
 
-(d) $f(x) =|x|$ 
+(d) $$f(x) =|x|$$ 
 
 $$f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
@@ -190,7 +190,10 @@ $$\begin{align}
 \end{split}
 \end{align}
 $$
-By Theorem 5.1.4, since $f$ is differentiable at $x$, $\lim_{h\to0}f(x+h)=f(x)$.
+By Theorem 5.1.4, since $f$ is differentiable at $x$, 
+
+$$\lim_{h\to0}f(x+h)=f(x)$$.
+
 $$
 \begin{align}
 \begin{split}
