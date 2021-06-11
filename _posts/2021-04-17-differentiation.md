@@ -91,16 +91,16 @@ $$\tag*{$\square$}$$
 
 (d) $f(x) =|x|$
 
-$$\begin{equation}f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
+$$\begin{align}f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
 \end{cases}
-\end{equation}$$
+\end{align}$$
 <br />
 
-(f) $$\begin{equation}f(x) = \begin{cases} x\sin \frac{1}{x} \quad &(x\neq 0) \\
+(f) $$\begin{align}f(x) = \begin{cases} x\sin \frac{1}{x} \quad &(x\neq 0) \\
 -1 \quad &(x=0)
 \end{cases}
-\end{equation}$$
+\end{align}$$
 
 For $x\neq 0$, 
 $$
