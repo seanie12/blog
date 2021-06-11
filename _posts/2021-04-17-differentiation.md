@@ -61,7 +61,7 @@ f^{\prime} (p) = \lim_{x\to p} \frac{x^{n}- p^n}{x-p} &= \lim_{x\to p} \frac{(x-
 $$
 $\therefore f^\prime(x) = nx^{n-1}$
 
-$$\tag*{$\square$}$$
+
 
 (b) $f(x)=\sqrt{x}$
 
@@ -87,7 +87,7 @@ $$
 \end{split}
 \end{align}
 $$
-$$\tag*{$\square$}$$
+
 
 (d) $f(x) =|x|$
 
@@ -95,7 +95,7 @@ $$\begin{align}f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
 \end{cases}
 \end{align}$$
-<br />
+
 
 (f) $$\begin{align}f(x) = \begin{cases} x\sin \frac{1}{x} \quad &(x\neq 0) \\
 -1 \quad &(x=0)
