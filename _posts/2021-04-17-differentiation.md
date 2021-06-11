@@ -89,12 +89,13 @@ $$
 $$
 $$\tag*{$\square$}$$
 
-(d) $f(x) =|x |$
+(d) $f(x) =\left|x \right|$
 
 $$f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
 \end{cases}
 $$
+
 (f) $$f(x) = \begin{cases} x\sin \frac{1}{x} \quad &(x\neq 0) \\
 -1 \quad &(x=0)
 \end{cases}$$
@@ -157,5 +158,12 @@ $$
 $$
 Therefore, $\lim_{t\to p}f(t) = f(p)$ and thus $f$ is continuous at $p$. In the above, if $p$ is an endpoint of the interval $I$, then the limits are either the right or left limit at $p$, whichever is appropriate.
 $$\tag*{$\square$}$$
+
+## Remark
+Let $p_1, \ldots p_n$ be points. Construct $f$ that is continuous but not differentiable at $p_1,\ldots, p_n$.
+
+$$
+f(x) = \sum_{k=1}^n\left|x-p_k\right|
+$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
