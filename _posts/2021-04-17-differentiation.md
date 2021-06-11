@@ -91,14 +91,15 @@ $$\tag*{$\square$}$$
 
 (d) $f(x) =\left|x \right|$
 
-$$f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
+$f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
 \end{cases}
-$$
+$
 
-(f) $$f(x) = \begin{cases} x\sin \frac{1}{x} \quad &(x\neq 0) \\
+(f) $f(x) = \begin{cases} x\sin \frac{1}{x} \quad &(x\neq 0) \\
 -1 \quad &(x=0)
-\end{cases}$$
+\end{cases}$
+
 For $x\neq 0$, 
 $$
 \begin{align}
@@ -108,6 +109,7 @@ f^\prime (x) &= \sin\frac{1}{x} + x\cos \frac{1}{x} \cdot (-\frac{1}{x^2}) \\
 \end{split}
 \end{align}
 $$
+
 For $x=0$,
 $$
 \begin{align}
@@ -164,6 +166,19 @@ Let $p_1, \ldots p_n$ be points. Construct $f$ that is continuous but not differ
 
 $$
 f(x) = \sum_{k=1}^n\left|x-p_k\right|
+$$
+
+## Theorem 5.1.5
+$f,g$ are differentiable at $x\in I$. Then $f+g, fg, f/g$ are all differentiable at $x\in I$ and
+
+$$
+\begin{align}
+\begin{split}
+(f+g)^\prime (x) &= f^\prime (x) + g^\prime (x)\\
+(fg)^\prime (x) &= f^\prime (x)g(x) + f(x)g^\prime(x) \\
+(f/g)^\prime (x) &= \frac{f^\prime(x)g(x) - f(x)g^\prime(x)}{\{g(x)\}^2}
+\end{split}
+\end{align}
 $$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
