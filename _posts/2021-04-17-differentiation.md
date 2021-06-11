@@ -7,6 +7,7 @@ categories:
 tags:
   - differentiation
   - derivative
+  - chain rule
 
 
 toc: true
@@ -72,7 +73,7 @@ $$
 \end{align}
 $$
 
-$\therefore f^\prime(x) = \frac{1}{2}\sqrt{x}$
+$\therefore f^\prime(x) = \frac{1}{2\sqrt{x}}$
 $$\tag*{$\square$}$$
 
 (c) $f(x)=\sin x$
@@ -88,7 +89,7 @@ $$
 $$
 $$\tag*{$\square$}$$
 
-(d) $f(x) =\left|x \right|$
+(d) $f(x) =|x |$
 
 $$f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
@@ -116,5 +117,45 @@ $$
 $$
 The limit does not exist. <br />
 $\therefore f$ is not differentiable at $x=0$.
+
+(g) $$f(x) = \begin{cases} x^2 \sin \frac{1}{x} \quad &(x\neq 0) \\
+0 \quad &(x=0)
+\end{cases}
+$$
+For $x\neq 0, f^\prime (x) = 2x \sin \frac{1}{x} - \cos \frac{1}{x}$. 
+
+For $x=0$,
+$$
+\lim_{h\to 0} \frac{h^2 \sin \frac{1}{h}}{h} = \lim_{h\to 0} h\sin \frac{1}{h} = 0
+$$
+$\therefore f^\prime(0) = 0$, but $f^\prime$ is not continuous.
+
+## Theorem 5.1.4
+If $f:I\rightarrow \mathbb{R}$ is differentiable at $p$, then $f$ is continuous at $p$.
+
+<*proof*>
+For $t\neq p$,
+
+$$
+f(t) - f(p) = \frac{f(t)-f(p)}{t-p}(t-p)
+$$
+Since 
+
+$$
+\lim_{t\to p}\frac{f(t)-f(p)}{t-p}
+$$
+exists and equal to $f^\prime (p)$,
+
+$$
+\begin{align}
+\begin{split}
+\lim_{t\to p}(f(t)-f(p)) & = \lim_{t\to p}\frac{f(t)-f(p)}{t-p} \lim_{t\to p}(t-p) \\
+&= f^\prime(p)\cdot 0 \\
+&=0
+\end{split}
+\end{align}
+$$
+Therefore, $\lim_{t\to p}f(t) = f(p)$ and thus $f$ is continuous at $p$. In the above, if $p$ is an endpoint of the interval $I$, then the limits are either the right or left limit at $p$, whichever is appropriate.
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
