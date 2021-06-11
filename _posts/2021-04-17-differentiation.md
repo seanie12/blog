@@ -89,7 +89,7 @@ $$
 $$
 $$\tag*{$\square$}$$
 
-(d) $$f(x) =|x|$$ 
+(d) $f(x) =|x|$
 
 $$\begin{equation}f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
