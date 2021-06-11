@@ -91,7 +91,10 @@ $$
 
 (d) $f(x) =|x|$
 
-$$\begin{align}f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
+$$
+\begin{align}
+f(x) &=\left| x \right| \\
+f^\prime (x) &= \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
 \end{cases}
 \end{align}$$
