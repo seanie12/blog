@@ -125,12 +125,15 @@ $\therefore f$ is not differentiable at $x=0$.
 0 \quad &(x=0)
 \end{cases}
 $$
+
 For $x\neq 0, f^\prime (x) = 2x \sin \frac{1}{x} - \cos \frac{1}{x}$. 
 
 For $x=0$,
+
 $$
 \lim_{h\to 0} \frac{h^2 \sin \frac{1}{h}}{h} = \lim_{h\to 0} h\sin \frac{1}{h} = 0
 $$
+
 $\therefore f^\prime(0) = 0$, but $f^\prime$ is not continuous.
 
 ## Theorem 5.1.4
