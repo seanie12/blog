@@ -47,13 +47,13 @@ provided that the limit exists.
 ## Examples 5.1.3
 (a) $f(x) = x^n$
 $$
-\begin{align}
+\begin{align*}
 \begin{split}
 f^{\prime} (p) = \lim_{x\to p} \frac{x^{n}- p^n}{x-p} &= \lim_{x\to p} \frac{(x-p)(x^{n-1}+px^{n-2}+\cdots + p^{n-1})}{x-p} \\
 &=\lim_{x\to p} (x^{n-1} + px^{n-2} + \cdots + p^{n-1}) \\
 &=np^{n-1}
 \end{split}
-\end{align}
+\end{align*}
 $$
 $\therefore f^\prime(x) = nx^{n-1}$
 
@@ -61,10 +61,11 @@ $\therefore f^\prime(x) = nx^{n-1}$
 $$
 \begin{align*}
 \begin{split}
-\lim_{h\to0}\frac{\sqrt{p+h}-\sqrt{p}}{h} = \lim
+\lim_{h\to0}\frac{\sqrt{p+h}-\sqrt{p}}{h} &= \lim_{h\to0} \frac{1}{h} \times \frac{h}{\sqrt{p+h}+\sqrt{p}} = \frac{1}{2\sqrt{p}}
 \end{split}
 \end{align*}
 $$
+
 $$\tag*{$\square$}$$
 
 
