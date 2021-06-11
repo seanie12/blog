@@ -89,7 +89,7 @@ $$
 $$
 $$\tag*{$\square$}$$
 
-(d) $f(x) =\left|x \right|$ <br />
+(d) $f(x) =|x|$ 
 
 $$f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
@@ -181,6 +181,38 @@ $$
 \end{align}
 $$
 
+<*proof*>
+$$\begin{align}
+\begin{split}
+\lim_{h\to0} \frac{(f+g)(x+h)-(f+g)(x)}{h} &= \frac{f(x+h)-f(x)+g(x+h)-g(x)}{h}\\
+&= \frac{f(x+h)-f(x)}{h} + \frac{g(x+h)-g(x)}{h} \\
+&= f^\prime(x) + g^\prime(x)
+\end{split}
+\end{align}
+$$
+By Theorem 5.1.4, since $f$ is differentiable at $x$, $\lim_{h\to0}f(x+h)=f(x)$.
+$$
+\begin{align}
+\begin{split}
+(fg)^\prime(x) &= \lim_{h\to 0} \frac{(fg)(x+h)-(fg)(x)}{h} \\
+&= \lim_{h\to0}f(x+h)\lim_{h\to 0}\left(\frac{g(x+h)-g(x)}{h} \right)\\
+&\quad +g(x)\lim_{h\to0}\left(\frac{f(x+h)-f(x)}{h} \right) \\
+&=f(x)g^\prime(x) + g(x)f^\prime(x)
+\end{split}
+\end{align}
+$$
+Since $g(x) \neq 0$ and $g$ is continuous at $x$, Take $\epsilon = |g(x)|/2$. Then there exists a $\delta >0$ such that for all $k$ with $\left| k-x \right| <\delta \Rightarrow \left| g(k)-g(x) \right| < \epsilon=|g(x)|/2$.  Put $h=k-x$.  <br />Then for all $h$ with $\left| h \right| <\delta, \left|g(x+h) -g(x) \right| < \left| g(x)\right| / 2$.  Either $g(x) >0$ or $g(x)<0$, $g(x+h)\neq 0$ with $|h|<\delta$.
 
+$$
+\begin{align}
+\begin{split}
+\left(\frac{1}{g} \right)^\prime &= \lim_{h\to0} \frac{\frac{1}{g(x+h)}-\frac{1}{g(x)}}{h} \\
+&=-\lim_{h\to0}\left(\frac{g(x+h)-g(x)}{h} \right) \lim_{h\to0}\frac{1}{g(x)g(x+h)} \\
+&=\frac{-g^\prime(x)}{g^2(x)}
+\end{split}
+\end{align}
+$$
+Then $(f\cdot \frac{1}{g})^\prime =  \frac{f^\prime(x)g(x) - f(x)g^\prime(x)}{\{g(x)\}^2}$
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
