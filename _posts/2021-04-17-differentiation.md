@@ -145,6 +145,7 @@ For $t\neq p$,
 $$
 f(t) - f(p) = \frac{f(t)-f(p)}{t-p}(t-p)
 $$
+
 Since 
 
 $$
