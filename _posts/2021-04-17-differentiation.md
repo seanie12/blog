@@ -89,16 +89,16 @@ $$
 $$
 $$\tag*{$\square$}$$
 
-(d) $f(x) =\left|x \right|$
+(d) $f(x) =\left|x \right|$ <br />
 
-$f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
+$$f^\prime (x) = \begin{cases} 1 \quad &(x>0) \\
 -1 \quad &(x<0)
-\end{cases}
-$
+\end{cases}$$
+<br />
 
-(f) $f(x) = \begin{cases} x\sin \frac{1}{x} \quad &(x\neq 0) \\
+(f) $$f(x) = \begin{cases} x\sin \frac{1}{x} \quad &(x\neq 0) \\
 -1 \quad &(x=0)
-\end{cases}$
+\end{cases}$$
 
 For $x\neq 0$, 
 $$
@@ -180,5 +180,7 @@ $$
 \end{split}
 \end{align}
 $$
+
+
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
