@@ -58,6 +58,7 @@ f^{\prime} (p) = \lim_{x\to p} \frac{x^{n}- p^n}{x-p} &= \lim_{x\to p} \frac{(x-
 \end{split}
 \end{align*}
 $$
+
 $\therefore f^\prime(x) = nx^{n-1}$
 
 (b) $f(x)=\sqrt{x}$
