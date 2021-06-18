@@ -88,7 +88,11 @@ $$
 $$
 
 <*proof*>
-Suppose $$\mathscr{P}=\{x_0, x_1, \ldots, x_n\}$$ and $$\mathscr{P}^* = \mathscr{P}\cup \{x^*\}$$, where $x^*\neq x_j$ for any $j=0,1,\ldots,n$. Then there exists an index $k$ such that $x_{k-1} < x^* <x_{k}$. Let 
+Suppose 
+
+$$\mathscr{P}=\{x_0, x_1, \ldots, x_n\}, \mathscr{P}^* = \mathscr{P}\cup \{x^*\}$$ 
+
+, where $x^*\neq x_j$ for any $j=0,1,\ldots,n$. Then there exists an index $k$ such that $x_{k-1} < x^* <x_{k}$. Let 
 
 $$
 M^1_k = \sup\{f(t):t\in [x_{k-1}, x_k]\}\\
