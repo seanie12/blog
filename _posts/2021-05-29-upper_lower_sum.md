@@ -91,7 +91,7 @@ $$
 
 
 ## Definition 6.1.2
-A partition of $\mathscr{P}^{*}$ of $[a,b]$ is a **refinement** of $\mathscr{P}$ if $\mathscr{P}\subset \mathscr{P}^*$.
+A partition of $$\mathscr{P}^{*}$$ of $[a,b]$ is a **refinement** of $$\mathscr{P}$$ if $$\mathscr{P}\subset \mathscr{P}^*$$.
 
 
 ## Remark
@@ -129,9 +129,4 @@ $$\tag*{$\square$}$$
 
 
 ## Reference
-
-[1] Oslen, Lars, A New Proof of darboux’s Theorem, The American Mathematical Society, Vol. 111, No. 8(Oct., 2004), pp. 713-715.
-
-[2] Bhandari, Mukta Bahadur. “Another Proof of Darboux's Theorem.” _arXiv: History and Overview_ (2016): n. pag.
-
-[3] Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
+- Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
