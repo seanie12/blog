@@ -41,8 +41,12 @@ $$\mathscr{P}=\{x_0, x_1, \ldots x_n\}$$
 of $[a,b]$, for each $i=1,\ldots,n$, let 
 
 $$
+\begin{align}
+\begin{split}
 m_i = \inf\{f(t): t\in [x_{i-1},x_i]\} \\
 M_i = \sup\{f(t):t\in [x_{i-1},x_i]\}
+\end{split}
+\end{align}
 $$
 
 Since $f$ is bounded, by the least upper bound property, $m_i, M_i$ are real value. If $f$ is continuous function on $[a,b]$, then by Corollary 4.2.9 for each $i$  there exist point s $t_i, s_i \in [x_{i-1},x_i]$ such that $M_i = f(t_i), m_i = f(s_i)$.
@@ -70,8 +74,12 @@ $$
 Let $f$ be a bounded real-valued function on the closed and bounded interval $[a,b]$. The **upper** and **lower** integrals of $f$, denoted $\overline{\int_a^b}f$ and $\underline{\int_a^b}f$ respectively, are defined by
 
 $$
+\begin{align}
+\begin{split}
 \overline{\int_a^b}f =\inf\{\mathscr{U}(\mathscr{P},f): \mathscr{P}\text{ is a partition of } [a,b]\} \\
 \underline{\int_a^b}f =\sup\{\mathscr{L}(\mathscr{P},f):\mathscr{P}\text{ is a partition of } [a,b]\}
+\end{split}
+\end{align}
 $$
 
 ## Definition 6.1.2
@@ -97,8 +105,12 @@ $$
 where $x^*\neq x_j$ for any $j=0,1,\ldots,n$. Then there exists an index $k$ such that $x_{k-1} < x^* <x_{k}$. Let 
 
 $$
+\begin{align}
+\begin{split}
 M^1_k = \sup\{f(t):t\in [x_{k-1}, x_k]\}\\
 M^2_k = \sup\{f(t): t\in [x_{k-1},x_k]\}
+\end{split}
+\end{align}
 $$
 
 $$\tag*{$\square$}$$
