@@ -22,8 +22,11 @@ comments : true
 ## Definition (upper sum, lower sum)
 Let $[a,b]$ with $a<b$ be a closed and bounded interval in $\mathbb{R}$. By a partition of $\mathscr{P}$ of $[a,b]$ we mean a finite set of points 
 
-$$\mathscr{P}=\{x_0, x_1,\ldots, x_n\} \text{ such that }
+$$
+\begin{align}
+\mathscr{P}=\{x_0, x_1,\ldots, x_n\} \text{ such that }
 a = x_0 < x_1 < \cdots < x_n =b.
+\end{align}
 $$
 
 There is no requirement that the points $x_i$ be equally spaced. For each $i=1,2,\ldots,n$, set
@@ -36,7 +39,11 @@ which is equal to the length of the interval $[x_{i-1}, x_i]$.
 
 Suppose that $f$ is bounded real valued function on $[a,b]$. Given a partition 
 
-$$\mathscr{P}=\{x_0, x_1, \ldots x_n\}$$ 
+$$
+\begin{align}
+\mathscr{P}=\{x_0, x_1, \ldots x_n\}
+\end{align}
+$$ 
 
 of $[a,b]$, for each $i=1,\ldots,n$, let 
 
@@ -82,8 +89,10 @@ $$
 \end{align}
 $$
 
+
 ## Definition 6.1.2
 A partition of $\mathscr{P}^{*}$ of $[a,b]$ is a **refinement** of $\mathscr{P}$ if $\mathscr{P}\subset \mathscr{P}^*$.
+
 
 ## Remark
 A refinement of a given partition $\mathscr{P}$ is obtained by adding additional points to $\mathscr{P}$. If $\mathscr{P}_1$ and $\mathscr{P}_2$ are two partitions of $[a,b]$, then $\mathscr{P}_1\cup\mathscr{P}_2$ is a refinement of both $\mathscr{P}_1$ and $\mathscr{P}_2$.
@@ -119,8 +128,4 @@ $$\tag*{$\square$}$$
 
 ## Reference
 
-[1] Oslen, Lars, A New Proof of darboux’s Theorem, The American Mathematical Society, Vol. 111, No. 8(Oct., 2004), pp. 713-715.
-
-[2] Bhandari, Mukta Bahadur. “Another Proof of Darboux's Theorem.” _arXiv: History and Overview_ (2016): n. pag.
-
-[3] Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
+- Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
