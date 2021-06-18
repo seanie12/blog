@@ -50,8 +50,8 @@ of $[a,b]$, for each $i=1,\ldots,n$, let
 $$
 \begin{align}
 \begin{split}
-m_i = \inf\{f(t): t\in [x_{i-1},x_i]\} \\
-M_i = \sup\{f(t):t\in [x_{i-1},x_i]\}
+m_i &= \inf\{f(t): t\in [x_{i-1},x_i]\} \\
+M_i &= \sup\{f(t):t\in [x_{i-1},x_i]\}
 \end{split}
 \end{align}
 $$
@@ -83,8 +83,8 @@ Let $f$ be a bounded real-valued function on the closed and bounded interval $[a
 $$
 \begin{align}
 \begin{split}
-\overline{\int_a^b}f =\inf\{\mathscr{U}(\mathscr{P},f): \mathscr{P}\text{ is a partition of } [a,b]\} \\
-\underline{\int_a^b}f =\sup\{\mathscr{L}(\mathscr{P},f):\mathscr{P}\text{ is a partition of } [a,b]\}
+\overline{\int_a^b}f &=\inf\{\mathscr{U}(\mathscr{P},f): \mathscr{P}\text{ is a partition of } [a,b]\} \\
+\underline{\int_a^b}f &=\sup\{\mathscr{L}(\mathscr{P},f):\mathscr{P}\text{ is a partition of } [a,b]\}
 \end{split}
 \end{align}
 $$
@@ -118,8 +118,8 @@ where $$x^*\neq x_j$$ for any $$j=0,1,\ldots,n$$. Then there exists an index $$k
 $$
 \begin{align}
 \begin{split}
-M^1_k = \sup\{f(t):t\in [x_{k-1}, x_k]\}\\
-M^2_k = \sup\{f(t): t\in [x_{k-1},x_k]\}
+M^1_k &= \sup\{f(t):t\in [x_{k-1}, x_k]\}\\
+M^2_k &= \sup\{f(t): t\in [x_{k-1},x_k]\}
 \end{split}
 \end{align}
 $$
