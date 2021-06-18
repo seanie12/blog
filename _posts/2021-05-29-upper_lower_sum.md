@@ -113,7 +113,7 @@ $$
 \end{align}
 $$ 
 
-where $x^*\neq x_j$ for any $j=0,1,\ldots,n$. Then there exists an index $k$ such that $x_{k-1} < x^* <x_{k}$. Let 
+where $$x^*\neq x_j$$ for any $$j=0,1,\ldots,n$$. Then there exists an index $$k$$ such that $$x_{k-1} < x^* <x_{k}$$. Let 
 
 $$
 \begin{align}
@@ -129,4 +129,4 @@ $$\tag*{$\square$}$$
 
 
 ## Reference
-- Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
+-  Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
