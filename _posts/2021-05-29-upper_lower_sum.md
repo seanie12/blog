@@ -108,7 +108,9 @@ $$
 Suppose 
 
 $$
+\begin{align}
 \mathscr{P}=\{x_0, x_1, \ldots, x_n\}, \mathscr{P}^* = \mathscr{P}\cup \{x^*\}
+\end{align}
 $$ 
 
 where $x^*\neq x_j$ for any $j=0,1,\ldots,n$. Then there exists an index $k$ such that $x_{k-1} < x^* <x_{k}$. Let 
@@ -128,4 +130,8 @@ $$\tag*{$\square$}$$
 
 ## Reference
 
-- Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
+[1] Oslen, Lars, A New Proof of darboux’s Theorem, The American Mathematical Society, Vol. 111, No. 8(Oct., 2004), pp. 713-715.
+
+[2] Bhandari, Mukta Bahadur. “Another Proof of Darboux's Theorem.” _arXiv: History and Overview_ (2016): n. pag.
+
+[3] Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
