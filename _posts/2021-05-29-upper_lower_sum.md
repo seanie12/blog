@@ -20,9 +20,9 @@ comments : true
 
 
 ## Definition (upper sum, lower sum)
-Let $[a,b]$ with $a<b$ be a closed and bounded interval in $\mathbb{R}$. By a partition of $\mathscr{P}$ of $[a,b]$ we mean a finite set of points $$\mathscr{P}=\{x_0, x_1,\ldots, x_n\}$$ such that 
+Let $[a,b]$ with $a<b$ be a closed and bounded interval in $\mathbb{R}$. By a partition of $\mathscr{P}$ of $[a,b]$ we mean a finite set of points 
 
-$$
+$$\mathscr{P}=\{x_0, x_1,\ldots, x_n\} \text{ such that }
 a = x_0 < x_1 < \cdots < x_n =b.
 $$
 
@@ -34,7 +34,11 @@ $$
 
 which is equal to the length of the interval $[x_{i-1}, x_i]$.
 
-Suppose that $f$ is bounded real valued function on $[a,b]$. Given a partition $$\mathscr{P}=\{x_0, x_1, \ldots x_n\}$$ of $[a,b]$, for each $i=1,\ldots,n$, let 
+Suppose that $f$ is bounded real valued function on $[a,b]$. Given a partition 
+
+$$\mathscr{P}=\{x_0, x_1, \ldots x_n\}$$ 
+
+of $[a,b]$, for each $i=1,\ldots,n$, let 
 
 $$
 m_i = \inf\{f(t): t\in [x_{i-1},x_i]\} \\
@@ -49,7 +53,7 @@ $$
 \mathscr{U}(\mathscr{P}, f) = \sum_{i=1}^n M_i \Delta x_i
 $$
 
-Similarly, the **lower sum $\mathscr{L}(\mathscr{P},f)$ is defined by
+Similarly, the **lower sum** $\mathscr{L}(\mathscr{P},f)$ is defined by
 
 $$
 \mathscr{L}(\mathscr{P}, f) = \sum_{i=1}^n m_i \Delta x_i
