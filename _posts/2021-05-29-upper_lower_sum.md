@@ -476,6 +476,41 @@ $$
 x_i := a+ih
 $$
 Then $$\mathscr{P}=\{a=x_0, x_1, \ldots, x_n=b\}$$ is a partition of $[a,b]$.
+Let
 
+$$
+\begin{align}
+\begin{split}
+m_i &:=\inf\{f(t): t\in [x_{i-1},x_i]\}\\
+M_i &:= \sup\{f(t): t\in [x_{i-1}, x_i]\}
+\end{split}
+\end{align}
+$$
+
+Since $f$ is monotone increasing, $m_i = f(x_{i-1}), M_i = f(x_i)$. Let $\epsilon >0$ be given. We want to show that $\mathscr{U}(\mathscr{P},f) - \mathscr{L}(\mathscr{P},f) < \epsilon.$
+
+$$
+\begin{align}
+\begin{split}
+\mathscr{U}(\mathscr{P},f) - \mathscr{L}(\mathscr{P},f) &=\sum_{i=1}^n (M_i - m_i)\Delta x_i \\
+&= \sum_{i=1}^n \left(f(x_i) - f(x_{i-1}) \right)h \\
+&=h(f(b)-f(a)) \\
+&= \frac{b-a}{n}(f(b)-f(a))
+\end{split}
+\end{align}
+$$
+
+Take $n\in \mathbb{N}$ such that 
+
+$$
+\frac{b-a}{n}(f(b)-f(a)) < \epsilon
+$$
+
+by Archimedean property.
+
+Then $\mathscr{U}(\mathscr{P},f) - \mathscr{L}(\mathscr{P},f) <\epsilon$.
+
+$\therefore f\in\mathscr{R}[a.b]$
+$$\tag*{$\square$}$$
 ## Reference
 -  Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
