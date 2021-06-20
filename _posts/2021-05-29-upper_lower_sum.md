@@ -348,7 +348,7 @@ $$
 $$\tag*{$\square$}$$
 
 
-## Theorem 6.1.4
+## Theorem 6.1.7
 $f$ is a bounded real-valued function on closed and bounded interval $[a,b]$. 
 
 $$
@@ -433,5 +433,49 @@ $$
 $$
 
 $$\tag*{$\square$}$$
+
+
+## Theorem 6.1.8
+(a) $f$ is continuous on $[a,b] \Rightarrow f\in\mathscr{R}[a,b]$.
+
+(b) $f$ is monotone on $[a,b] \Rightarrow f\in\mathscr{R}[a,b]$.
+
+<*proof*>
+
+(a) Let $\epsilon >0$ be given. Choose $\eta>0$ such that
+
+$$
+(b-a)\eta < \epsilon.
+$$
+
+Since $f$ is continuous on $[a,b]$, f is uniformly continuous on $[a,b]$. There exists a $\delta>0$ such that
+
+$$
+|x-t|<\delta \text{ with } x,t \in [a,b] \Rightarrow \left|f(x)-f(t) \right| < \eta.
+$$
+
+Take a partition $\mathscr{P}$ of $[a,b]$ such that $\Delta x_i < \delta$. Since $f$ is continuous on $[a,b]$, $M_i, m_i \in \text{Range }f$. Thus, $M_i - m_i <\eta$ for all $i.$ Therefore,
+
+$$
+\begin{align}
+\begin{split}
+\mathscr{U}(\mathscr{P},f) - \mathscr{L}(\mathscr{P},f) &= \sum_{i=1}^n(M_i - m_i)\Delta x_i \\
+&< \sum_{i=1}^n \eta\Delta x_i \\
+&=(b-a)\eta \\
+&< \epsilon
+\end{split}
+\end{align}
+$$
+
+$f\in \mathscr{R}[a,b]$.
+
+
+(b) Without loss of generality suppose that $f$ is monotone increasing on $[a,b]$. For $n\in\mathbb{N}$,  define $h:=(b-a)/n$. For each $i=1,\ldots,n$,
+
+$$
+x_i := a+ih
+$$
+Then $$\mathscr{P}=\{a=x_0, x_1, \ldots, x_n=b\}$$ is a partition of $[a,b]$.
+
 ## Reference
 -  Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
