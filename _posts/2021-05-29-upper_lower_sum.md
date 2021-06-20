@@ -410,7 +410,7 @@ $$
 \overline{\int_a^b}f = \underline{\int_a^b} f
 $$
 
-$\therefore f\in\int\mathscr{R}[a,b]$
+$\therefore f\in\mathscr{R}[a,b]$
 
 Now suppose that $\mathscr{U}(\mathscr{P},f) - \mathscr{L}(\mathscr{P},f) < \epsilon$ and let $\mathscr{P}^*$ be a refinement of $\mathscr{P}$.
 
