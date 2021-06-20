@@ -135,8 +135,37 @@ M^2_k &= \sup\{f(t): t\in [x_{k-1},x_k]\}
 \end{align}
 $$
 
+Since $f(t) \leq M_k$ for all $t\in [x_{k-1},x_k]$, we have that $f(t)\leq M_k$ for all $t\in[x_{k-1},x^*]$ and also for all $t\in [x^*, x_k]$. Thus both $M^1_k$ and $M^2_k$ are less than or equal to $M_k$. Now
+
+$$
+\begin{align}
+\mathscr{U}(\mathscr{P},f)=\sum_{j=1}^{k-1}M_j \Delta x_j + M^1_k(x^*-x_{k-1}) + M^2_k(x_k-x^*)  + \sum_{j=k+1}^n M_j \Delta x_j
+\end{align}
+$$
+
+But
+
+$$
+\begin{align}
+\begin{split}
+M^1_k(x^* - x_{k-1}) + M^2_k(x_k-x^*) &\leq M_k (x^* - x_{k-1}) + M_k(x_k-x^*) \\
+&=M_k \Delta x_k
+\end{split}
+\end{align}
+$$
+
+Therefore,
+$$\mathscr{U}(\mathscr{P}^*, f) \leq \mathscr{U}(\mathscr{P}, f)$$
+
+The proof for the lower sum is similar. If $\mathscr{P}^*$ contains $k$ more points than $\mathscr{P}$, we need only repeat the above argument $k$ times to obtain the result.
 $$\tag*{$\square$}$$
 
+## Theorem 6.1.4
+Let $f$ be a bounded real-valued function on $[a,b]$. Then
+
+$$
+\underline{\int_a^b}f \leq \overline{\int_a^b}f.
+$$
 
 
 ## Reference
