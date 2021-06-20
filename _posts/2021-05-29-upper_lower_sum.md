@@ -426,7 +426,7 @@ $$
 \begin{align}
 \begin{split}
 \mathscr{U}(\mathscr{P}^*,f) - \mathscr{L}(\mathscr{P}^*,f) &\leq \mathscr{U}(\mathscr{P},f) - \mathscr{L}(\mathscr{P}^*,f) \\
-&\leq \mathscr{U}(\mathscr{P},f) - \mathscr{U}(\mathscr{P},f) \\
+&\leq \mathscr{U}(\mathscr{P},f) - \mathscr{L}(\mathscr{P},f) \\
 &< \epsilon
 \end{split}
 \end{align}
