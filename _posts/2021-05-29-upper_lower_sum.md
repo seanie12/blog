@@ -22,6 +22,7 @@ comments : true
 ## Definition (upper sum, lower sum)
 Let $[a,b]$ with $a<b$ be a closed and bounded interval in $\mathbb{R}$. By a partition of $\mathscr{P}$ of $[a,b]$ we mean a finite set of points 
 
+
 $$
 \begin{align}
 \mathscr{P}=\{x_0, x_1,\ldots, x_n\} \text{ such that }
@@ -32,7 +33,9 @@ $$
 There is no requirement that the points $x_i$ be equally spaced. For each $i=1,2,\ldots,n$, set
 
 $$
+\begin{align}
 \Delta x_i = x_i - x_{i-1}
+\end{align}
 $$
 
 which is equal to the length of the interval $[x_{i-1}, x_i]$.
@@ -61,19 +64,25 @@ Since $f$ is bounded, by the least upper bound property, $m_i, M_i$ are real val
 The **upper sum** $\mathscr{U}(\mathscr{P},f)$ for the partition $\mathscr{P}$ and function $f$ is defined by
 
 $$
+\begin{align}
 \mathscr{U}(\mathscr{P}, f) = \sum_{i=1}^n M_i \Delta x_i
+\end{align}
 $$
 
 Similarly, the **lower sum** $\mathscr{L}(\mathscr{P},f)$ is defined by
 
 $$
+\begin{align}
 \mathscr{L}(\mathscr{P}, f) = \sum_{i=1}^n m_i \Delta x_i
+\end{align}
 $$
 
 Since $m_i \leq M_i$ for all $i=1,\ldots, n$, we always have
 
 $$
+\begin{align}
 \mathscr{L}(\mathscr{P},f) \leq \mathscr{U}(\mathscr{P},f)
+\end{align}
 $$
 
 
@@ -91,7 +100,7 @@ $$
 
 
 ## Definition 6.1.2
-A partition of $$\mathscr{P}^{*}$$ of $[a,b]$ is a **refinement** of $$\mathscr{P}$$ if $$\mathscr{P}\subset \mathscr{P}^*$$.
+A partition of $\mathscr{P}^{*}$ of $[a,b]$ is a **refinement** of $\mathscr{P}$ if $\mathscr{P}\subset \mathscr{P}^*$.
 
 
 ## Remark
@@ -101,7 +110,9 @@ A refinement of a given partition $\mathscr{P}$ is obtained by adding additional
 If $\mathscr{P}^*$ is a refinement of $\mathscr{P}$, then 
 
 $$
+\begin{align}
 \mathscr{L}(\mathscr{P}, f) \leq \mathscr{L}(\mathscr{P}^*, f) \leq \mathscr{U}(\mathscr{P}^*,f )\leq \mathscr{U}(\mathscr{P},f)
+\end{align}
 $$
 
 <*proof*>
@@ -113,7 +124,7 @@ $$
 \end{align}
 $$ 
 
-where $$x^*\neq x_j$$ for any $$j=0,1,\ldots,n$$. Then there exists an index $$k$$ such that $$x_{k-1} < x^* <x_{k}$$. Let 
+where $x^*\neq x_j$ for any $j=0,1,\ldots,n$. Then there exists an index $k$ such that $x_{k-1} < x^* <x_{k}$. Let 
 
 $$
 \begin{align}
