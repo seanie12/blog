@@ -7,7 +7,8 @@ categories:
 tags:
   - Integration
   - Riemann Integral
-
+  - upper sum
+  - lower sum
 
 
 toc: true
@@ -196,6 +197,42 @@ $$
 
 $\therefore \underline{\int_a^b}f \leq \overline{\int_a^b}f$
 
+
+## Definition 6.1.5
+Let $f$ be a bounded real-valued function on the closed and bounded interval $[a,b]$. If
+
+$$
+\begin{align}
+\underline{\int_a^b}f = \overline{\int_a^b}f
+\end{align}
+$$
+
+then $f$ is said to be **Riemann integrable** or **integrable** on $[a,b]$. The common value is denoted by
+
+$$
+\begin{align}
+\int_a^b f \quad \text{or } \int_a^b f(x) dx,
+\end{align}
+$$
+
+and is called the **Riemann Integrable** or **Integrable** of $f$ over $[a,b]$. We denote by $\mathscr{R}[a,b]$ the set of *Riemann integrable functions* on $[a,b]$. In addition if $f\in\mathscr{R}[a,b]$, we define
+
+$$
+\int_b^a f :=-\int_a^bf.
+$$
 $$\tag*{$\square$}$$
+
+If $f:[a,b]\to\mathbb{R}$ satisfies $m\leq f(t) \leq M$ for all $t\in [a,b]$, then 
+
+
+$$
+m(b-a) \leq \underline{\int_a^b} f \leq \overline{\int_a^b}f \leq M(b-a).
+$$
+
+If, in addition, $f\in \mathscr{R}[a,b]$, then
+
+$$
+m(b-a) \leq \int_a^b f \leq M(b-a)
+$$
 ## Reference
 -  Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
