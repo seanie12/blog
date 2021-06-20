@@ -173,18 +173,25 @@ Given any two partitions $\mathscr{P}, \mathcal{Q}$ of $[a,b]$.
 Since $\mathscr{P}\cup\mathcal{Q}$ is both refinement of $\mathscr{P}$ and $\mathcal{Q}$, respectively,
 
 $$
+\begin{align}
 \mathscr{L}(\mathscr{P},f) \leq \mathscr{L}(\mathscr{P}\cup\mathcal{Q},f) \leq \mathscr{U}(\mathscr{P}\cup\mathcal{Q},f) \leq \mathscr{U}(\mathcal{Q},f) 
+\end{align}
 $$ 
 
 by lemma 6.1.3. Thus $\mathscr{L}(\mathscr{P}, f) \leq \mathscr{U}(\mathcal{Q},f)$ for any partitions $\mathscr{P}, \mathcal{Q}$. Hence
 
 $$
+\begin{align}
 \underline{\int_a^b}f = \sup_{\mathscr{P}} \mathscr{L}(\mathscr{P},f) \leq \mathscr{U}(\mathcal{Q},f)
+\end{align}
 $$
+
 for any partition $\mathcal{Q}$. Now taking the infimum over $\mathcal{Q}$,
 
 $$
+\begin{align}
 \overline{\int_a^b}f= \inf_{\mathcal{Q}}\mathscr{L}(\mathcal{Q},f) \geq \underline{\int_a^b} f
+\end{align}
 $$
 
 $\therefore \underline{\int_a^b}f \leq \overline{\int_a^b}f$
