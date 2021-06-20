@@ -100,7 +100,7 @@ $$
 
 
 ## Definition 6.1.2
-A partition of $\mathscr{P}^{*}$ of $[a,b]$ is a **refinement** of $\mathscr{P}$ if $\mathscr{P}\subset \mathscr{P}^*$.
+A partition of $$\mathscr{P}^{*}$$ of $$[a,b]$$ is a **refinement** of $$\mathscr{P}$$ if $$\mathscr{P}\subset \mathscr{P}^*$$.
 
 
 ## Remark
@@ -124,7 +124,7 @@ $$
 \end{align}
 $$ 
 
-where $x^*\neq x_j$ for any $j=0,1,\ldots,n$. Then there exists an index $k$ such that $x_{k-1} < x^* <x_{k}$. Let 
+where $$x^*\neq x_j$$ for any $$j=0,1,\ldots,n$$. Then there exists an index $$k$$ such that $$x_{k-1} < x^* <x_{k}$$. Let 
 
 $$
 \begin{align}
