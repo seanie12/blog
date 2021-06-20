@@ -226,7 +226,16 @@ If $f:[a,b]\to\mathbb{R}$ satisfies $m\leq f(t) \leq M$ for all $t\in [a,b]$, th
 
 
 $$
-m(b-a) \leq \underline{\int_a^b} f \leq \overline{\int_a^b}f \leq M(b-a).
+\begin{align}
+\begin{split}
+m(b-a)&=\sum_{i=1}^nm(x_i-x_{i-1}) \\
+&\leq\sum_{i=1}^nm_i(x_i-x_{i-1})\\
+&\leq \underline{\int_a^b} f \\
+&\leq \sum_{i=1}^nM_i(x_i-x_{i-1})\\
+&\leq \overline{\int_a^b}f \\
+&\leq M(b-a).
+\end{split}
+\end{align}
 $$
 
 If, in addition, $f\in \mathscr{R}[a,b]$, then
@@ -234,5 +243,107 @@ If, in addition, $f\in \mathscr{R}[a,b]$, then
 $$
 m(b-a) \leq \int_a^b f \leq M(b-a)
 $$
+
+## Example 6.1.6
+(a) 
+$$
+f(x) = \begin{cases} 1 &\quad(x\in\mathbb{Q})\\
+0 &\quad(x\not\in \mathbb{Q})
+\end{cases}
+$$
+
+$$
+\begin{align}
+\begin{split}
+\overline{\int_a^b} f &= \inf_{\mathscr{P}}\mathscr{U}(\mathscr{P},f)=b-a\\
+\underline{\int_a^b}f &=\sup_{\mathscr{P}}\mathscr{L}(\mathscr{P},f) = 0
+\end{split}
+\end{align}
+$$
+
+$\therefore f\not\in \mathscr{R}[a,b]$.
+
+(b) Let $$\mathscr{P} = \{a=x_0, x_1 \ldots, x_n=b\}$$ with $x_0<x_1<\cdots <x_n$ be given. Take $$k \in \{1, \ldots,  n \}$$ satisfying $x_{k-1} < \frac{1}{2} \leq x_k$.
+
+$$
+\begin{align}
+\begin{split}
+M_i &= \begin{cases} 0 &\quad (i=1,\ldots, k-1) \\
+1 &\quad (i=k,\ldots,n)
+\end{cases} \\
+m_i &=\begin{cases} 0 &\quad (i=1,\ldots,k) \\
+1 &\quad (i=k+1,\ldots,n)
+\end{cases}
+\end{split}
+\end{align}
+$$
+
+Then the upper sum is
+
+$$
+\begin{align}
+\begin{split}
+\mathscr{U}(\mathscr{P},f) &= \sum_{i=1}^n M_i(x_i- x_{i-1}) \\
+&= (x_k - x_{k-1}) + \cdots + (x_n -x_{n-1}) \\
+&= 1 - x_{k-1} \\
+&\geq \frac{1}{2}
+\end{split}
+\end{align}
+$$
+
+For the lower sum,
+
+$$
+\begin{align}
+\begin{split}
+\mathscr{L}(\mathscr{P},f) &= \sum_{i=1}^n m_i (x_i - x_{i-1}) \\
+&=1-x_k \\
+&\leq \frac{1}{2}
+\end{split}
+\end{align}
+$$
+
+Thus 
+
+$$
+\mathscr{L}(\mathscr{P},f) \leq \underline{\int_0^1} f \leq \frac{1}{2} \leq \overline{\int_a^b}f\leq \mathscr{U}(\mathscr{P},f)
+$$
+
+Now we want to show that
+
+$$
+\overline{\int_a^b}f = \underline{\int_a^b} f
+$$
+
+Note that $\mathscr{U}(\mathscr{P},f) - \mathscr{L}(\mathscr{P},f) = x_k - x_{k-1}$. 
+
+Let $\epsilon >0$ be given. If $\delta x_i = x_i - x_{i-1} < \epsilon$ for all $i$,
+
+$$
+\begin{align}
+\begin{split}
+\overline{\int_0^1}f = \inf_{\mathcal{Q}}\mathscr{U}(\mathcal{Q},f) &\leq \mathscr{U}(\mathscr{P},f) \\
+&< \mathscr{L}(\mathscr{P},f) + \epsilon \\
+&\leq \sup_{\mathcal{Q}}\mathscr{L}(\mathcal{Q},f) + \epsilon \\
+&= \underline{\int_0^1}f + \epsilon
+\end{split}
+\end{align}
+$$
+
+Thus
+
+$$
+0\leq \overline{\int_a^b}f - \underline{\int_a^b}f < \epsilon
+$$
+
+for all $\epsilon >0$.
+
+$\therefore$
+
+$$
+\overline{\int_a^b}f = \underline{\int_a^b}f = \frac{1}{2}
+$$
+
+$$\tag*{$\square$}$$
 ## Reference
 -  Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
