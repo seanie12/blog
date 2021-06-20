@@ -263,7 +263,7 @@ $$
 
 $\therefore f\not\in \mathscr{R}[a,b]$.
 
-(b) Let $$\mathscr{P} = \{a=x_0, x_1 \ldots, x_n=b\}$$ with $x_0<x_1<\cdots <x_n$ be given. Take $$k \in \{1, \ldots,  n \}$$ satisfying $x_{k-1} < \frac{1}{2} \leq x_k$.
+(b) Let $$\mathscr{P} = \{a=x_0, x_1, \ldots, x_n=b\}$$ with $x_0<x_1<\cdots <x_n$ be given. Take $$k \in \{1, \ldots,  n \}$$ satisfying $x_{k-1} < \frac{1}{2} \leq x_k$.
 
 $$
 \begin{align}
