@@ -135,7 +135,7 @@ M^2_k &= \sup\{f(t): t\in [x_{k-1},x_k]\}
 \end{align}
 $$
 
-Since $f(t) \leq M_k$ for all $t\in [x_{k-1},x_k]$, we have that $f(t)\leq M_k$ for all $t\in[x_{k-1},x^*]$ and also for all $t\in [x^*, x_k]$. Thus both $M^1_k$ and $M^2_k$ are less than or equal to $M_k$. Now
+Since $f(t) \leq M_k$ for all $t\in [x_{k-1},x_k]$, we have that $f(t)\leq M_k$ for all $$t\in[x_{k-1},x^*]$$ and also for all $$t\in [x^*, x_k]$$. Thus both $$M^1_k$$ and $$M^2_k$$ are less than or equal to $$M_k$$. Now
 
 $$
 \begin{align}
