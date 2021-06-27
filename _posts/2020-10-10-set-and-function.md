@@ -244,7 +244,7 @@ Suppose that $p(n)$ is false for some $n\in\mathbb{N}$. If we set
 
 $$ 
 \begin{align} 
-A:={k\in \mathbb{N}: p(k) \text{ is false} } 
+A:=\{k\in \mathbb{N}: p(k) \text{ is false} \} 
 \end{align}
 $$ 
 
