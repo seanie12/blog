@@ -1,4 +1,3 @@
-
 ---
 title: "Set and Function"
 
