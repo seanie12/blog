@@ -209,15 +209,30 @@ $\therefore p(n)$ is true for all $n\in\mathbb{N}$. $$\tag*{$\square$}$$
 <*proof*>
 
 (a) For $n=1$, $p(1) = r = \frac{r(1-r)}{1-r}$. Assume that the statement holds true for $n=k-1$.
-$$ \begin{align} \begin{split} p(k) &= 1+ r^2 + \cdots + r^{k-1} + r^{k} \ &=p(k-1) + r^k \ &=\frac{r(1-r^{k-1})}{1-r} + r^k \ &=\frac{r(1-r^{k-1})+ r^k(1-r)}{1-r} \ &=\frac{r-r^k+r^k-r^{k+1}}{1-r} \ &=\frac{r-r^{k+1}}{1-r} \ &=\frac{r(1-r^{k})}{1-r} \end{split} \end{align} $$ Thus, $p(k)$ holds.
+$$ \begin{align} 
+\begin{split} p(k) &= 1+ r^2 + \cdots + r^{k-1} + r^{k} \\
+ &=p(k-1) + r^k \\ 
+ &=\frac{r(1-r^{k-1})}{1-r} + r^k \\ 
+ &=\frac{r(1-r^{k-1})+ r^k(1-r)}{1-r} \\ 
+ &=\frac{r-r^k+r^k-r^{k+1}}{1-r} \\ 
+ &=\frac{r-r^{k+1}}{1-r} \\
+  &=\frac{r(1-r^{k})}{1-r} \end{split} \end{align} $$ Thus, $p(k)$ holds.
 
 $\therefore$ By the mathematical induction $p(n)$ is always true.
 
 (b) For $n=1$, the left hand side is $(1+h)^1 = 1+h$ and the right hand side is $1+1\cdot h=1+h$.
 
-Assume that $p(k) = (1+h)^k \geq 1+k\cdot h$ is true. $$ \begin{align} \begin{split} (1+h)^{k+1} &= (1+h)(1+h)^k \ &\geq (1+kh)(1+h) \ &=1+h+kh+kh^2 \ &\geq 1+(k+1)h \end{split} \end{align} $$ Thus, $p(k+1)$ holds.
+Assume that $p(k) = (1+h)^k \geq 1+k\cdot h$ is true. 
+
+$$ \begin{align} \begin{split} (1+h)^{k+1} &= (1+h)(1+h)^k \\
+&\geq (1+kh)(1+h) \\
+&=1+h+kh+kh^2 \\
+&\geq 1+(k+1)h 
+\end{split} \end{align} $$ 
+
+Thus, $p(k+1)$ holds.
 
 $\therefore$ By the mathematical induction, $p(n)$ is always true.
 
 ## Reference
-Manfred Stoll, 『Introduction to Real Analysis』, Pearson
+- Manfred Stoll, 『Introduction to Real Analysis』, Pearson
