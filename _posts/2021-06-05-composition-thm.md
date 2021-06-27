@@ -1,3 +1,4 @@
+
 ---
 title: "Properties of the Riemann Integral"
 
@@ -306,5 +307,268 @@ $$
 $$\tag*{$\square$}$$
 
 
+
+## Lemma 1
+
+Let $A$ be a bounded subset of $\mathbb{R}$. For a constant $c\in\mathbb{R}$, define
+
+$$
+cA :=\{ca: a\in A\}.
+$$
+
+$(a)$ If $c>0, \sup(cA) = c\sup A$, and $\inf(cA) = c\inf A$
+
+$(b)$ If $c<0, \sup(cA) = c\inf A$, and $\inf(cA) = c\sup A$.
+
+  
+
+<*proof*>
+
+Suppose that $c>0$. Let $M:=\sup A$ and let $\epsilon >0$ be given. Then there exists a $a_\epsilon \in A$ such that
+
+$$
+M-\frac{\epsilon}{c} < a_\epsilon \leq M
+$$
+
+Since $c>0$,
+
+$$
+cM-\epsilon < ca_\epsilon \leq cM
+$$
+
+Moreover $cM$ is an upper bound of $cA$ since $ca \leq cM$ for all $a\in A$.
+
+$\therefore cM=\sup(cA)$ by theorem 1.4.4.
+
+Similarly, let $L :=\inf A$. Then there exists a $a_\epsilon \in A$ such that 
+
+$$
+\begin{align}
+\begin{split}
+L&\leq a_\epsilon < L+\frac{\epsilon}{c} \\
+cL &\leq ca_\epsilon < L + \epsilon
+\end{split}
+\end{align}
+$$
+
+Moreover, $cL$ is a lower bound of $cA$.
+
+$\therefore cL = \inf(cA)$.
+
+$(b)$ Suppose that $c<0$. Let $\epsilon >0$ be given.
+SInce $-\epsilon/c >0$, there is a $a_\epsilon \in A$ such that 
+
+$$
+\begin{align}
+\begin{split}
+M+\frac{\epsilon}{c} &< a_\epsilon \leq M\\
+cM &\leq ca_\epsilon < cM +\epsilon
+\end{split}
+\end{align}
+$$
+
+Since $c<0$ and $a \leq M$, $cM \leq a$ for all $a\in A$. 
+
+$\therefore cM=\inf(cA)$.
+
+Similarly, there is a $a^\prime_\epsilon \in A$ such that 
+
+$$
+\begin{align}
+\begin{split}
+L&\leq a^\prime_\epsilon < L -\frac{\epsilon}{c} \\
+cL-\epsilon&<a^\prime_\epsilon \leq cL
+\end{split}
+\end{align}
+$$
+
+$\therefore \sup(cA) = cL = c\inf A$.
+
+$$\tag*{$\square$}$$
+
+$(b)$
+
+<*proof*>
+
+$$
+\begin{align}
+M_i(cf) &:=\sup\{cf(t): t\in [x_{i-1}, x_i]\}\\
+m_i (cf) &:=\inf \{cf(t) :t\in [x_{i-1}, x_i\}
+\end{align}
+$$
+
+Suppose that $c>0$. Let 
+
+$$
+\mathscr{P}=\{x_0,\ldots, x_n\} 
+$$
+
+be a partition of $[a,b]$.
+
+By lemma1, 
+
+$$
+\begin{align}
+M_i(cf) &=cM_i(f) \\
+m_i(cf) &=cm_i(f)
+\end{align}
+$$
+
+Then 
+
+$$
+\begin{align}
+\begin{split}
+\mathscr{U}(\mathscr{P},cf) &=\sum_{i=1}^n M_i(cf)\Delta x_i\\
+&=c\sum_{i=1}^n M_i(f) \Delta x_i\\
+&=c\mathscr{U}(\mathscr{P},f) \\
+&= c \overline{\int_a^b}f \\
+&=c\int_a^b f \: (\because f \in\mathscr{R}[a,b])
+\end{split}
+\end{align}
+$$
+
+
+$$
+\begin{align}
+\begin{split}
+\overline{\int_a^b}cf &= \inf_{\mathcal{Q}}\mathscr{U}(\mathcal{Q},cf) \\
+&=\inf_{\mathcal{Q}}c \mathscr{U}(\mathcal{Q},f) \\
+&=c\inf_{\mathcal{Q}} \mathscr{U}(\mathcal{Q},f) \:(\because \text{ by lemma}1)\\
+&=c\overline{\int_a^b}f \\
+&=c\int_a^b f 
+\end{split}
+\end{align}
+$$
+
+
+
+
+Similarly, we get
+
+$$
+\begin{align}
+m_i(cf) &= cm_i(f) \\
+\mathscr{L}(\mathscr{P},cf) &= c \mathscr{L}(\mathscr{P},f).
+\end{align}
+$$
+
+So,
+
+$$
+\begin{align}
+\begin{split}
+\underline{\int_a^b}cf &= \sup_{\mathcal{Q}}\mathscr{L}(\mathcal{Q}, cf)\\
+&=c\sup_{\mathcal{Q}}\mathscr{L}(\mathcal{Q},f) \:(\because \text{ by lemma}1) \\
+&=c\underline{\int_a^b}f \\
+&=c{\int_a^b}f
+\end{split}
+\end{align}
+$$
+
+$\therefore$
+
+$$
+\underline{\int_a^b} cf = c\int_a^b f = \overline{\int_a^b}cf
+$$
+
+
+For $c=0$,
+
+$$
+\mathscr{U}(\mathscr{P},cf) = \mathscr{L}(\mathscr{P},cf)=0
+$$
+
+$\therefore cf \in\mathscr{R}[a,b]$ and 
+
+$$
+\int_a^b cf = 0 =c\int_a^b f
+$$
+
+Now, suppose that $c<0$.
+
+$$
+\begin{align}
+\begin{split}
+M_i(cf) &= \sup\{ cf(t): t\in [x_{i-1},x_i]\} \\
+&=c\inf\{f(t):t\in [x_{i-1},x_i]\} \:(\because \text{ by lemma}1)\\
+&=cm_i(f)
+\end{split}
+\end{align}
+$$
+Now, we get
+
+$$
+\begin{align}
+\begin{split}
+\mathscr{U}(\mathscr{P}, cf) &= \sum_{i=1}^n M_i(cf)\Delta x_i\\
+&=\sum_{i=1}^n cm_i(f)\Delta x_i\\
+&= c\mathscr{L}(\mathscr{P},f)
+\end{split}
+\end{align}
+$$
+
+$$
+\begin{align}
+\begin{split}
+\overline{\int_a^b}cf &=\inf_{\mathcal{Q}}\mathscr{U}(\mathcal{Q},f) \\
+&=\inf_{\mathcal{Q}}c\mathscr{L}(\mathcal{Q},f) \\
+&=c\sup_{\mathcal{Q}}\mathscr{L}(\mathcal{Q},f) \\
+&= \underline{\int_a^b}f \\
+&= c\int_a^b f
+\end{split}
+\end{align}
+$$
+
+Similarly, we can derive that 
+
+$$
+\begin{align}
+m_i(cf) &= cM_i(f) \\
+\mathscr{L}(\mathscr{P},cf) &= c\mathscr{U}(\mathscr{P},f)
+\end{align}
+$$
+
+So, 
+
+$$
+\begin{align}
+\begin{split}
+\underline{\int_a^b}cf &=\sup_{\mathcal{Q}}\mathscr{L}(\mathcal{Q}, cf) \\
+&= \sup_{\mathcal{Q}} c\mathscr{U}(\mathcal{Q},f) \\
+&=c\inf_{\mathcal{Q}}\mathscr{U}(\mathcal{Q},f) \\
+&=c \overline{\int_a^b}f \\
+&= c\int_a^b f
+\end{split}
+\end{align}
+$$
+
+
+Thus, we get
+
+$$
+\overline{\int_a^b}cf = c\int_a^b f = \underline{\int_a^b}cf.
+$$
+
+$\therefore cf \in \mathscr{R}[a,b]$ with
+
+$$
+\int_a^b cf = c\int_a^bf
+$$
+
+$(c)$
+
+<*proof*>
+
+$$
+fg = \frac{1}{4}\left[(f+g)^2 - (f-g)^2 \right]
+$$
+
+By $(a)$, $f+g\in\mathscr{R}[a,b]$  and $-1\cdot g\in\mathscr{R}[a,b]$ by $(c)$. Consequently, $f-g\in\mathscr{R}[a,b]$. Since $y=x^2$ is continuous function, $(f+g)^2, (f-g)^2\in\mathscr{R}[a,b]$ by theorem 6.1.9. 
+
+Similarly, $(f+g)^2 - (f-g)^2\in\mathscr{R}[a,b]$. Finally $\frac{1}{4}\left[(f+g)^2 - (f-g)^2 \right]\in\mathscr{R}[a,b]$.
+
+
+$$\tag*{$\square$}$$
 ## Reference
 -  Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
