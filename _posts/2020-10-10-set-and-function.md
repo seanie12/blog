@@ -1,3 +1,4 @@
+
 ---
 title: "Set and Function"
 
@@ -7,6 +8,8 @@ categories:
 tags:
   - set
   - De Morgan's law
+  - well-ordering principle
+  - mathematical induction
 
 
 toc: true
@@ -21,13 +24,28 @@ comments : true
 
 
 ## Lemma 1.1.0 (De Morgan's law)
-(1) $(\cup_{i\in I} A_i)^c = \cap_{i\in I}A^c_i$ (2) $(\cap_{i\in I}A_i)^c = \cup_{i\in I}A^c_i$
+(1) $(\cup_{i\in I} A_i)^c = \cap_{i\in I}A^c_i$ 
 
-<proof>
+(2) $(\cap_{i\in I}A_i)^c = \cup_{i\in I}A^c_i$
 
-(a) $$ \begin{align} \begin{split} w\in (\cup_{i\in I} A_i)^c &\iff w \not\in \cup_{i\in I} A_i \ &\iff w \not\in A_i \text{ for all } i \in I \ &\iff w\in A^c_i \text{ for all } i \in I \ &\iff w \in \cap_{i\in I}A^c_i \end{split} \end{align} $$
+<*proof*>
 
-(b) $$ \begin{align} \begin{split} w \in (\cap_{i\in I}A_i)^c &\iff w\not\in \cap_{i\in I} A_i \ &\iff w \in A^c_i \text{ for some }i \in I\ &\iff w \in \cup_{i\in I}A^c_i \end{split} \end{align} $$ $$\tag*{$\square$}$$
+(a) $$ 
+\begin{align} 
+\begin{split} w\in (\cup_{i\in I} A_i)^c &\iff w \not\in \cup_{i\in I} A_i \\
+ &\iff w \not\in A_i \text{ for all } i \in I \\ 
+ &\iff w\in A^c_i \text{ for all } i \in I \\ 
+ &\iff w \in \cap_{i\in I}A^c_i 
+\end{split} 
+\end{align} $$
+
+(b) $$ \begin{align} \begin{split} w \in (\cap_{i\in I}A_i)^c &\iff w\not\in \cap_{i\in I} A_i \\ 
+&\iff w \in A^c_i \text{ for some }i \in I\\ 
+&\iff w \in \cup_{i\in I}A^c_i 
+\end{split} 
+\end{align} $$ 
+
+$$\tag*{$\square$}$$
 
 ## Theorem 1.1.1
 (a) $A\cap (B\cup C) = (A\cap B) \cup (A\cap C)$
@@ -66,9 +84,22 @@ $\therefore x\in A\cup (B\cap C)$.
 
 $\therefore A\cup (B\cap C) = (A\cup B) \cap (A\cup C).$
 
-(c) $$ \begin{align} \begin{split} C\setminus (A\cup B) &= C\cap (A\cup B)^c \ &=C\cap (A^c\cap B^c) \ &=(C\cap A^c)\cap (C\cap B^c) \ &=(C\setminus A)\cap (C\setminus B) \end{split} \end{align} $$ The second equality holds by de Morgan's law and the third equality holds by (b).
+(c) $$ \begin{align} \begin{split} C\setminus (A\cup B) &= C\cap (A\cup B)^c \\ 
+&=C\cap (A^c\cap B^c) \\
+&=(C\cap A^c)\cap (C\cap B^c) \\ 
+&=(C\setminus A)\cap (C\setminus B)
+\end{split} 
+\end{align} $$ 
 
-(d) $$ \begin{align} \begin{split} C\setminus (A\cap B) &= C\cap (A\cap B)^c \ &=C \cap (A^c \cup B^c) \ &=(C\cap A^c)\cup (C\cap B^c) \ &=(C\setminus A)\cup (C\setminus B) \end{split} \end{align} $$ The second equality holds by de Morgan's law and the third equality holds by (a).
+The second equality holds by de Morgan's law and the third equality holds by (b).
+
+(d) $$ \begin{align} \begin{split} C\setminus (A\cap B) &= C\cap (A\cap B)^c \\ 
+&=C \cap (A^c \cup B^c) \\ 
+&=(C\cap A^c)\cup (C\cap B^c) \\ 
+&=(C\setminus A)\cup (C\setminus B) 
+\end{split} \end{align} $$ 
+
+The second equality holds by de Morgan's law and the third equality holds by (a).
 
 $$\tag*{$\square$}$$
 
@@ -76,10 +107,15 @@ $$\tag*{$\square$}$$
 Let $A,B$ be subsets of $\mathbb{R}$. $f:A\to B$ is a function if $$ \begin{align}\forall x\in A, \exists ! y\in B \text{ such that } y=f(x). \end{align}$$
 
 ## Definition 1.2.2
-$f: A\to B$ is a function. $$ \begin{align} \begin{split} f \text{ is injective } &\iff [f(x_1)=f(x_2) \Rightarrow x_1 = x_2 ]\ &\iff \forall y \in f(A), \exists ! x\in A \text{ s.t. } y= f(x) \end{split} \end{align} $$
+$f: A\to B$ is a function. 
+
+$$ \begin{align} \begin{split} f \text{ is injective } &\iff [f(x_1)=f(x_2) \Rightarrow x_1 = x_2 ]\\
+ &\iff \forall y \in f(A), \exists ! x\in A \text{ s.t. } y= f(x) \end{split} \end{align} $$
 
 ## Definition 1.2.3
-$f: A\to B$ is a function. $$ \begin{align} \begin{split} f \text{ is surjective } &\iff f(A) = B\ &\iff \forall y \in B, \exists x\in A \text{ s.t. } y= f(x) \end{split} \end{align} $$
+$f: A\to B$ is a function. 
+$$ \begin{align} \begin{split} f \text{ is surjective } &\iff f(A) = B\\
+ &\iff \forall y \in B, \exists x\in A \text{ s.t. } y= f(x) \end{split} \end{align} $$
 
 ## Definition 1.2.4
 $f: A\to B$ is a function. If $f$ is bijective if and only if the function is injective and surjective.
@@ -130,14 +166,22 @@ where $f^{-1}(B_1)$ is preimage defined as follows: $$ \begin{align} f^{-1}(B_1)
 
 <proof>
 
-(a) $$ \begin{align} \begin{split} f^{-1}(B_1\cup B_2) &= {x\in A: f(x) \in B_1\cup B_2 } \ &={x\in A: f(x)\in B_1 \text{ or } f(x)\in B_2 } \ &={x\in A: x\in f^{-1}(B_1) \text{ or } x\in f^{-1}(B_2)} \ &={x\in A: x\in f^{-1}(B_1) \cup f^{-1}(B_2) } \end{split} \end{align} $$
+(a) $$ \begin{align} \begin{split} f^{-1}(B_1\cup B_2) &= {x\in A: f(x) \in B_1\cup B_2 } \\ 
+&={x\in A: f(x)\in B_1 \text{ or } f(x)\in B_2 } \\ 
+&={x\in A: x\in f^{-1}(B_1) \text{ or } x\in f^{-1}(B_2)} \\
+ &={x\in A: x\in f^{-1}(B_1) \cup f^{-1}(B_2) } 
+ \end{split} \end{align} $$
 
-(b) $$ \begin{align} \begin{split} f^{-1}(B_1\cap B_2) &= {x\in A: f(x)\in B_1\cap B_2}\ &={x\in A: f(x)\in B_1 \text{ and } f(x)\in B_2 } \ &= {x\in A: x\in f^{-1}(B_1) \text{ and } x\in f^{-1}(B_2) } \ &={x\in A: x\in f^{-1}(B_1)\cap f^{-1}(B_2) } \end{split} \end{align} $$ $$\tag*{$\square$}$$
+(b) $$ \begin{align} \begin{split} f^{-1}(B_1\cap B_2) &= {x\in A: f(x)\in B_1\cap B_2}\\
+&={x\in A: f(x)\in B_1 \text{ and } f(x)\in B_2 } \\
+ &= {x\in A: x\in f^{-1}(B_1) \text{ and } x\in f^{-1}(B_2) } \\ 
+ &={x\in A: x\in f^{-1}(B_1)\cap f^{-1}(B_2) }
+  \end{split} \end{align} $$ $$\tag*{$\square$}$$
 
-Remark (Well-ordering principle)
+## Remark (Well-ordering principle)
 Every nonempty subset of $\mathbb{N}$ has a smallest element.
 
-Theorem 1.3.1
+## Theorem 1.3.1
 For each $n\in \mathbb{N}$, let $p(n)$ be a statement about $n$. If
 
 (a) $p(1)$ is true, and
@@ -150,12 +194,12 @@ then $p(n)$ is true for all $n\in \mathbb{N}$.
 
 $\therefore p(n)$ is true for all $n\in\mathbb{N}$. $$\tag*{$\square$}$$
 
-Examples 1.3.3
+## Examples 1.3.3
 (a) $p(n) = r+r^2+\cdots + r^{n-1} +r^n=\frac{r(1-r^n)}{1-r}$, where $r\neq 1$.
 
 (b) (Bernoulli's inequality): $p(n): h >-1, (1+h)^n \geq 1+ nh$.
 
-<proof>
+<*proof*>
 
 (a) For $n=1$, $p(1) = r = \frac{r(1-r)}{1-r}$. Assume that the statement holds true for $n=k-1$.
 $$ \begin{align} \begin{split} p(k) &= 1+ r^2 + \cdots + r^{k-1} + r^{k} \ &=p(k-1) + r^k \ &=\frac{r(1-r^{k-1})}{1-r} + r^k \ &=\frac{r(1-r^{k-1})+ r^k(1-r)}{1-r} \ &=\frac{r-r^k+r^k-r^{k+1}}{1-r} \ &=\frac{r-r^{k+1}}{1-r} \ &=\frac{r(1-r^{k})}{1-r} \end{split} \end{align} $$ Thus, $p(k)$ holds.
