@@ -196,7 +196,7 @@ $$\begin{align}
 f^{-1}(B_1) := { x\in A| f(x)\in B_2 } 
 \end{align}$$
 
-<proof>
+<*proof*>
 
 (a) 
 
