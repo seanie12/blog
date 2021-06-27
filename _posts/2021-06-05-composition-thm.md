@@ -1,4 +1,3 @@
-
 ---
 title: "Properties of the Riemann Integral"
 
