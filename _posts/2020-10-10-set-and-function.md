@@ -179,7 +179,7 @@ $\therefore f(A_1 \cap A_2) \subset f(A_1) \cap f(A_2).$
 
 $(c)$ Let $y\in f(A_1)\cap f(A_2)$ be given. Then for the same $y, y=f(x_1)$ for some $x_1 \in A_1$ or $y=f(x_2)$ for some $x_2 \in A_2$.
 
-Since $f$is bijective, $x_1=x_2=x\in A_1\cap A_2$, i.e. $y=f(x)$ for some $x\in A_1\cap A_2$. <br />
+Since $f$ is bijective, $x_1=x_2=x\in A_1\cap A_2$, i.e. $y=f(x)$ for some $x\in A_1\cap A_2$. <br />
 
 $\therefore y\in f(A_1 \cap A_2)$
 
@@ -192,9 +192,9 @@ $f:A\to B$ is a function, $B_1,B_2 \subset B$.
 
 where $f^{-1}(B_1)$ is preimage defined as follows: 
 
-$$ \begin{align} f^{-1}(B_1) := { x\in A| f(x)\in B_2 } 
-
-\end{align} $$
+$$\begin{align}
+f^{-1}(B_1) := { x\in A| f(x)\in B_2 } 
+\end{align}$$
 
 <proof>
 
@@ -232,13 +232,15 @@ Every nonempty subset of $\mathbb{N}$ has a smallest element.
 ## Theorem 1.3.1
 For each $n\in \mathbb{N}$, let $p(n)$ be a statement about $n$. If
 
-(a) $p(1)$ is true, and
+$(a)\:p(1)$ is true, and
 
-(b) $p(k)$ is true $\Rightarrow p(k+1)$ is true
+$(b)\:p(k)$ is true $\Rightarrow p(k+1)$ is true
 
 then $p(n)$ is true for all $n\in \mathbb{N}$.
 
-<proof> Suppose that $p(n)$ is false for some $n\in\mathbb{N}$. If we set 
+<*proof*> 
+
+Suppose that $p(n)$ is false for some $n\in\mathbb{N}$. If we set 
 
 $$ 
 \begin{align} 
