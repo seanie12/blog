@@ -190,7 +190,11 @@ $f:A\to B$ is a function, $B_1,B_2 \subset B$.
 
 (a) $f^{-1}(B_1\cup B_2) = f^{-1}(B_1)\cup f^{-1}(B_2)$ (b) $f^{-1}(B_1\cap B_2) = f^{-1}(B_1)\cap f^{-1}(B_2)$
 
-where $f^{-1}(B_1)$ is preimage defined as follows: $$ \begin{align} f^{-1}(B_1) := { x\in A| f(x)\in B_2 } \end{align} $$
+where $f^{-1}(B_1)$ is preimage defined as follows: 
+
+$$ \begin{align} f^{-1}(B_1) := { x\in A| f(x)\in B_2 } 
+
+\end{align} $$
 
 <proof>
 
