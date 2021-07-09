@@ -1,3 +1,4 @@
+
 ---
 title: "Monotone Functions and Discontinuities"
 
@@ -126,7 +127,7 @@ Then $$I_a (x) := I(x-a) = \begin{cases}
 \end{cases}
 $$
 ## Cauchy Criterion
-Suppose that $\sum_{k=1}^\infty a_k$ converges, where $a_k\in\mathbb{R}$ for all $k=1,2,\ldots$. Since $s_n= \sum_{k=1}^n a_k$ is convergent sequence in $\mathbb{R}$, it  is Cauchy sequence. So for all $\epsilon >0 \exists N\in\mathbb{N}$ such that,
+Suppose that $\sum_{k=1}^\infty a_k$ converges, where $a_k\in\mathbb{R}$ for all $k=1,2,\ldots$. Since $s_n= \sum_{k=1}^n a_k$ is convergent sequence in $\mathbb{R}$, it  is Cauchy sequence. So for all $\epsilon >0, \exists N\in\mathbb{N}$ such that,
 $$
 \begin{align}
 m>n\geq N \Rightarrow \left|\sum_{k=1}^m a_k -\sum_{k=1}^n a_k\right|=\left|\sum_{k=n+1}^m a_k \right| < \epsilon.
