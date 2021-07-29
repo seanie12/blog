@@ -115,7 +115,7 @@ $$
 E_m = \{\frac{n}{m}:n\in\mathbb{Z}\}
 \end{align}
 $$
-The $E_m$ is countable, and since $\mathbb{Q} = \cup_{n=1}^\infty E_m$, by Theorem 1.7.15 the set $\mathbb{Q}$ is countable.
+The $E_m$ is countable, and since $\mathbb{Q} = \cup_{m=1}^\infty E_m$, by Theorem 1.7.15 the set $\mathbb{Q}$ is countable.
 
 $$\tag*{$\square$}$$ 
 
