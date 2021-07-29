@@ -19,7 +19,7 @@ comments : true
 ---
 ## Definition 1.7.2
 For each positive integer $n\in \mathbb{N}$, let $$
-N_n:=\{1,2,\ldots,n \}
+\mathbb{N}_n:=\{1,2,\ldots,n \}
 $$. If $A$ is a set, we say <br /> (a) $A$ is **finite** if $A\sim \mathbb{N}_n$ for some $n$, or if $A=\emptyset$, where $\sim$ denotes equivalence relation if there exists a one-to-one function of $A$ onto $\mathbb{N}_n$. <br /> (b) If $A$ is **infinite** if $A$ is not finite. <br /> (c) $A$ is **countable** if $A\sim \mathbb{N}$. <br /> (d) $A$ is **uncountable** if $A$ is neither finite nor countable. <br /> (e) $A$ is **at most countable** if $A$ is finite or countable. 
 
 ## Theorem 1.7.4
@@ -54,7 +54,7 @@ $$
 x_{n_k}\in E\setminus \{x_{n_1},\ldots, x_{n_{k-1}} \}
 \end{align}
 $$
-Set $f(k) = x_{n_k}$. Since $E$ is infinite, $f$ is defined on $\mathbb{N}$. <br /> If $m >k$, then $n_m > n_k$ and thus $x_{n_m} \neq x_{n_k}$. Therefore $f$ is one-to-one. The function $f$ is onto $E$ since if $x\in E$, then $x=x_j$ for some $j$. By construction, $n_k = j$ for some $k$ and thus $f(k) = x.$
+Set $f(k) = x_{n_k}$. Since $E$ is infinite, $f$ is defined on $\mathbb{N}$. <br /> If $m >k$, then $n_m > n_k$ and thus $x_{n_m} \neq x_{n_k}$. Therefore $f$ is one-to-one. The function $f$ is onto $E$ since if $x\in E$, then $x=x_j$ for some $j$. By construction, $n_k = j$ for some $k$ and thus $f(k) = x_{n_k}=x_j.$
 
 $$\tag*{$\square$}$$
 
