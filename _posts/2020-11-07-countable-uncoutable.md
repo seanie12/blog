@@ -1,3 +1,4 @@
+
 ---
 title: "Countable and Uncountable sets"
 
@@ -68,7 +69,7 @@ $$
 f^{-1}(a):= \{ n\in\mathbb{N}:f(n)=a\}
 \end{align}
 $$
-has a smallest integer, which we denote by $n_a$.  Consider the mapping $a\mapsto n_a$. Since $f$ is a function, $f(a)\neq f(b) \Rightarrow a\neq b$. Thus, $n_a \neq n_b$, which implies that such mapping is one-to-one and clearly it is onto. Also, since $A$ is infinite, 
+has a smallest integer, which we denote by $n_a$.  Consider the mapping $a\mapsto n_a$. Since $f$ is a function,   $a\neq b \Rightarrow n_a \neq n_b$. It implies that such mapping is one-to-one. Since $f$ is onto, $f^{-1}(a) \neq \empty$ for all $a\in A$. Thus, the map is one-to-one and onto. Also, since $A$ is infinite, 
 $$
 \{n_a:a\in A\}
 $$
