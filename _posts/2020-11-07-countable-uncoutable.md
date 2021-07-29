@@ -134,7 +134,7 @@ where for each $$k\in \mathbb{N}, x_{n,k}\in \{0,1,\ldots, 9\}$$. We now define 
 $$
 y:= 0.y_1y_2y_3\cdots
 $$
-as follows: If $x_{n,n} \leq 5$, define $y_n :=6$; if $x_{n,n} \geq 6$, define $y_n=3$. Then $y\in [0,1]$, and since $y_n \neq 0$ or 9, $y \neq x_{n,n}$, we have $y\neq x_n$ for any $n$.
+as follows: If $x_{n,n} \leq 5$, define $y_n :=6$; if $x_{n,n} \geq 6$, define $y_n=3$. Then $y\in [0,1]$, and since $y_n \neq 0$ or 9, $y_n \neq x_{n,n}$, we have $y\neq x_n$ for any $n\in\mathbb{N}$.
 
 $\therefore y\not\in E$ <br /> $\therefore E$ is a proper subset of $[0,1]$. 
 $$\tag*{$\square$}$$
