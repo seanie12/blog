@@ -128,7 +128,7 @@ Let $S$ be a bounded infinite subset of $\mathbb{R}$. Since it is bounded, $S\su
 
 Consider two intervals $[a, (a+b)/2], [(a+b)/2, b]$. Since $S$ is infinite, at least one of them has finitely many points of $S$. We call it $I_2$. 
 
-Repeating this process, we get a sequence of intervals $$\{I_n\}$$ such that <br /> (a) $I_1 \supset I_2 \supset I_3 \supset \cdots$ <br /> (b) $($length of $I_n)=(b-a)/2^{n-1}$ <br /> (c) $I_n\cap S$ is finite. 
+Repeating this process, we get a sequence of intervals $$\{I_n\}$$ such that <br /> (a) $I_1 \supset I_2 \supset I_3 \supset \cdots$ <br /> (b) $($length of $I_n)=(b-a)/2^{n-1}$ <br /> (c) $I_n\cap S$ is infinite. 
 
 Let $x\in \cap_{i=1}^\infty I_n$. We want to  show that $x$ is a limit point of $S$.  Let $\epsilon >0$ be given. Then there is a $N\in\mathbb{N}$ such that 
 $$
