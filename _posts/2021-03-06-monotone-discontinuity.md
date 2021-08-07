@@ -1,5 +1,4 @@
-
----
+--- 
 title: "Monotone Functions and Discontinuities"
 
 categories:
