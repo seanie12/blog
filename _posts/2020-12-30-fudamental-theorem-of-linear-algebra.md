@@ -75,7 +75,7 @@ $$\tag*{$\square$}$$
 ## Fundamental theorem of linear algebra
 Let $U,V,W$ be vector spaces over $F$ and $$\mathfrak{A} = \{\mathbf{u}_1, \ldots, \mathbf{u}_k \},\mathfrak{B} =\{\mathbf{v}_1, \ldots, \mathbf{v}_n \}, \mathfrak{C} = \{\mathbf{w}_1, \ldots, \mathbf{w}_m \}$$ be bases for $U,V,W$, respectively. 
 Define  a function $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}: \mathfrak{M}_{m\times n}(F) \rightarrow \mathcal{L}(V,W)$$ by 
-$$\begin{align}[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)]_{\mathfrak{C}} := A[\mathbf{v}]_{\mathfrak{B}}\end{align}$$, where $A \in \mathfrak{M}_{m\times n}(F), \mathbf{v} \in V$. 
+$$\begin{align}[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \mathbf{v}]_{\mathfrak{C}} := A[\mathbf{v}]_{\mathfrak{B}}\end{align}$$, where $A \in \mathfrak{M}_{m\times n}(F), \mathbf{v} \in V$. 
 Similarly, define a function 
 $$\begin{align}\begin{split}\Psi^{\mathfrak{B}}_{\mathfrak{C}}: \mathcal{L}(V,W) &\rightarrow \mathfrak{M}_{m\times n}(F)\\
 \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L) &:= [L]^{\mathfrak{B}}_{\mathfrak{C}} \text{ for all } L \in \mathcal{L}(V,W)\end{split}\end{align}\\$$ 
