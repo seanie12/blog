@@ -19,10 +19,10 @@ comments : true
 
 ## Notation
 - Let  $$[\cdot]_{\mathfrak{B}}:V \rightarrow \mathbb{R}^n$$ be a function as follows.
-  $$[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n) \text{ where } \mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i, \mathfrak{B}=\\{\mathbf{v}_1, \ldots, \mathbf{v}_n \\} \text{ is a basis for } V.$$
+  $$[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n) \text{ where } \mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i, \mathfrak{B}=\{\mathbf{v}_1, \ldots, \mathbf{v}_n \} \text{ is a basis for } V.$$
   It is easy to show that $[\cdot]_{\mathfrak{B}}$ is an isomorphism (bijective and linear map).
 
-- Let $T: V \rightarrow W$ be a linear transformation where $V, W$ are vector spaces over $F$. $\mathfrak{B,C}$ are bases for vector space $V, W$, respectively. Then matrix representation of the linear transformation with respect to the bases $\mathfrak{B}=\\{\mathbf{v}_1, \ldots, \mathbf{v}_n\\}, \mathfrak{C}=\\{ \mathbf{w}_1, \ldots, \mathbf{w}_m \\}$ is defined as:
+- Let $T: V \rightarrow W$ be a linear transformation where $V, W$ are vector spaces over $F$. $\mathfrak{B,C}$ are bases for vector space $V, W$, respectively. Then matrix representation of the linear transformation with respect to the bases $$\mathfrak{B}=\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}, \mathfrak{C}=\{ \mathbf{w}_1, \ldots, \mathbf{w}_m \}$$ is defined as:
 $$ [L]^\mathfrak{B}_{\mathfrak{C}} := [ [L\mathbf{v}_1]_{\mathfrak{C}} \cdots[L\mathbf{v}_n]_{\mathfrak{C}}]$$
 - $\mathcal{L}(V,W)$ is a vector space of linear functions which map $V$ to $W$. In other words, for every $L\in \mathcal{L}(V,W)$, $L:V\rightarrow W$ is a linear transformation where $V,W$ are vector spaces over $F$.
 
@@ -51,7 +51,7 @@ Lastly, we want to show that the function is onto. Let $$(a_1, \ldots, a_n)$$ be
 $$\tag*{$\square$}$$
  
 ## Lemma2
-Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $\mathfrak{B}= \\{ \mathbf{v}_1, \ldots, \mathbf{v}_n\\}, \mathfrak{C}= \\{ \mathbf{w}_1, \ldots, \mathbf{w}_m\\}$ be  bases for $V,W$. 
+Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $$\mathfrak{B}= \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}, \mathfrak{C}= \{ \mathbf{w}_1, \ldots, \mathbf{w}_m\}$$ be  bases for $V,W$. 
 $$[L]^{\mathfrak{B}}_{\mathfrak{C}} [\mathbf{v}]_{\mathfrak{B}} = [L\mathbf{v}]_{\mathfrak{C}}$$ for all $\mathbf{v} \in V$.
 
 <*proof*>
@@ -73,9 +73,9 @@ $$\tag*{$\square$}$$
 
 
 ## Fundamental theorem of linear algebra
-Let $U,V,W$ be vector spaces over $F$ and $\mathfrak{A} = \\{\mathbf{u}_1, \ldots, \mathbf{u}_k \\},\mathfrak{B} =\\{\mathbf{v}_1, \ldots, \mathbf{v}_n \\}, \mathfrak{C} = \\{\mathbf{w}_1, \ldots, \mathbf{w}_m \\}$ be bases for $U,V,W$, respectively. 
+Let $U,V,W$ be vector spaces over $F$ and $$\mathfrak{A} = \{\mathbf{u}_1, \ldots, \mathbf{u}_k \},\mathfrak{B} =\{\mathbf{v}_1, \ldots, \mathbf{v}_n \}, \mathfrak{C} = \{\mathbf{w}_1, \ldots, \mathbf{w}_m \}$$ be bases for $U,V,W$, respectively. 
 Define  a function $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}: \mathfrak{M}_{m\times n}(F) \rightarrow \mathcal{L}(V,W)$$ by 
-$$\begin{align}[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \mathbf{v}]_{\mathfrak{C}} := A[\mathbf{v}]_{\mathfrak{B}}\end{align}$$, where $A \in \mathfrak{M}_{m\times n}(F), \mathbf{v} \in V$. 
+$$\begin{align}[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)]_{\mathfrak{C}} := A[\mathbf{v}]_{\mathfrak{B}}\end{align}$$, where $A \in \mathfrak{M}_{m\times n}(F), \mathbf{v} \in V$. 
 Similarly, define a function 
 $$\begin{align}\begin{split}\Psi^{\mathfrak{B}}_{\mathfrak{C}}: \mathcal{L}(V,W) &\rightarrow \mathfrak{M}_{m\times n}(F)\\
 \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L) &:= [L]^{\mathfrak{B}}_{\mathfrak{C}} \text{ for all } L \in \mathcal{L}(V,W)\end{split}\end{align}\\$$ 
@@ -173,5 +173,3 @@ $$\tag*{$\square$}$$
 
 ## Reference
 - 이인석, **『**선형대수와 군**』**,서울대학교출판문화원
-
- 
