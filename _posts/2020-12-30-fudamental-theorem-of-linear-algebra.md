@@ -1,4 +1,3 @@
-
 ---
 title: "Fundamental Theorem of Linear Algebra"
 
