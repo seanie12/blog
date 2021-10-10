@@ -1,3 +1,4 @@
+
 ---
 title: "Fundamental Theorem of Linear Algebra"
 
@@ -19,7 +20,7 @@ comments : true
 
 ## Notation
 - Let  $$[\cdot]_{\mathfrak{B}}:V \rightarrow \mathbb{R}^n$$ be a function as follows.
-  $$[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n) \text{ where } \mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i, \mathfrak{B}=\{\mathbf{v}_1, \ldots, \mathbf{v}_n \} \text{ is a basis for } V.$$
+  $[\mathbf{v}]_{\mathfrak{B}} := (a_1, \ldots, a_n) \text{ where } \mathbf{v} = \sum_{i=1}^n a_i\mathbf{v}_i, \mathfrak{B}=\\{\mathbf{v}_1, \ldots, \mathbf{v}_n \\} \text{ is a basis for } V.$
   It is easy to show that $[\cdot]_{\mathfrak{B}}$ is an isomorphism (bijective and linear map).
 
 - Let $T: V \rightarrow W$ be a linear transformation where $V, W$ are vector spaces over $F$. $\mathfrak{B,C}$ are bases for vector space $V, W$, respectively. Then matrix representation of the linear transformation with respect to the bases $\mathfrak{B}=\\{\mathbf{v}_1, \ldots, \mathbf{v}_n\\}, \mathfrak{C}=\\{ \mathbf{w}_1, \ldots, \mathbf{w}_m \\}$ is defined as:
@@ -51,7 +52,7 @@ Lastly, we want to show that the function is onto. Let $$(a_1, \ldots, a_n)$$ be
 $$\tag*{$\square$}$$
  
 ## Lemma2
-Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $$\mathfrak{B}= \{ \mathbf{v}_1, \ldots, \mathbf{v}_n\}, \mathfrak{C}= \{ \mathbf{w}_1, \ldots, \mathbf{w}_m\}$$ be  bases for $V,W$. 
+Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $\mathfrak{B}= \\{ \mathbf{v}_1, \ldots, \mathbf{v}_n\\}, \mathfrak{C}= \\{ \mathbf{w}_1, \ldots, \mathbf{w}_m\\}$ be  bases for $V,W$. 
 $$[L]^{\mathfrak{B}}_{\mathfrak{C}} [\mathbf{v}]_{\mathfrak{B}} = [L\mathbf{v}]_{\mathfrak{C}}$$ for all $\mathbf{v} \in V$.
 
 <*proof*>
@@ -73,7 +74,7 @@ $$\tag*{$\square$}$$
 
 
 ## Fundamental theorem of linear algebra
-Let $U,V,W$ be vector spaces over $F$ and $$\mathfrak{A} = \{\mathbf{u}_1, \ldots, \mathbf{u}_k \},\mathfrak{B} =\{\mathbf{v}_1, \ldots, \mathbf{v}_n \}, \mathfrak{C} = \{\mathbf{w}_1, \ldots, \mathbf{w}_m \}$$ be bases for $U,V,W$, respectively. 
+Let $U,V,W$ be vector spaces over $F$ and $\mathfrak{A} = \\{\mathbf{u}_1, \ldots, \mathbf{u}_k \\},\mathfrak{B} =\\{\mathbf{v}_1, \ldots, \mathbf{v}_n \\}, \mathfrak{C} = \\{\mathbf{w}_1, \ldots, \mathbf{w}_m \\}$ be bases for $U,V,W$, respectively. 
 Define  a function $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}: \mathfrak{M}_{m\times n}(F) \rightarrow \mathcal{L}(V,W)$$ by 
 $$\begin{align}[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \mathbf{v}]_{\mathfrak{C}} := A[\mathbf{v}]_{\mathfrak{B}}\end{align}$$, where $A \in \mathfrak{M}_{m\times n}(F), \mathbf{v} \in V$. 
 Similarly, define a function 
@@ -96,7 +97,7 @@ $$\begin{align}
 &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}}
 \end{split}
 \end{align}$$
-The second equality holds due to the linearity of $$[\cdot]_{\mathfrak{C}}$$. Since $$[\cdot]_{\mathfrak{C}}$$ is one-to-one correspondence, $$ [\{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\} \mathbf{v} ]_{\mathfrak{C}} = [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}} \Longrightarrow  (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) ) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v}$$. Therefore, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear map.
+The second equality holds due to the linearity of $$[\cdot]_{\mathfrak{C}}$$. Since $$[\cdot]_{\mathfrak{C}}$$ is one-to-one correspondence, $$ \left[\{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\} \mathbf{v} \right]_{\mathfrak{C}} = \left[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}\right]_{\mathfrak{C}} \Longrightarrow  (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) ) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v}$$. Therefore, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear map.
 
 On the other hand, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear transformation. In other words, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M + cL) = \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) + c \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L)$$ where $$M, L \in \mathcal{L}(V,W)$$ and $$c \in F$$. However, it suffices to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M + cL) \mathbf{e}_j= (\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) + c \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L))\mathbf{e}_j$$ for $$j=1, \ldots,n$$ where $$\mathbf{e}_j \in \mathbb{R}^n$$ is a standard basis for $$\mathbb{R}^n$$ and only the $$\text{j}^{\text{th}}$$ component is 1 and zero for the others.
  
