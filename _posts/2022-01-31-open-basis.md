@@ -81,8 +81,16 @@ U_1 \cap \cdots \cap U_n = (U_1\cap \cdots \cap U_{n-1})\cap U_n
 $$
 
 By the induction hypothesis, $U_1\cap\cdots \cap U_{n-1} \in \mathfrak{T}$. Since we have proved that intersection of two elements of $\mathfrak{T}$ is also in $\mathfrak{T}$. Thus, $U_1 \cap \cdots \cap U_n \in \mathfrak{T}$. 
+
 $$\tag*{$\square$}$$
  
+## Theorem
+Let $X$ be a set and let $\mathcal{B}$ be a basis for a topology $\mathfrak{T}$ on $X$. Then $\mathfrak{T}$ equals to the collection of all unions of elements of $\mathcal{B}$.
+
+<*proof*>
+Given a collection of elements of $\mathcal{B}$, they are also elements of $\mathfrak{T}$. Because $\mathcal{T}$ is a topology, their union is in $\mathfrak{T}$. Conversely, given $U\in\mathfrak{T}$, choose for each $x\in U$ an element $B_x\in\mathcal{B}$ such that $x\in B_x\subset \mathcal{B}$. Then $U=\cup_{x\in U} B_x$, so $U$ equals a union of elements of $\mathcal{B}$.
+
+$$\tag*{$\square$}$$
 
 
 ## Reference
