@@ -60,7 +60,7 @@ Let $\mathcal{B}$ be a basis for a topology on $X$. Then  the **collection $\mat
 
 <*proof*>
 
-If $U=\emptyset$, it satisfies the defining condition of openness vacuously. Similary, $X\in \mathfrak{T}$ since for each $x\in X$ there is $B_x\in\mathcal{B}$ such that $x\in B_x$. Now, let us take an indexed family $\{U_\alpha\}_{\alpha \in \Lambda} \subset \mathfrak{T}$
+If $U=\emptyset$, it satisfies the defining condition of openness vacuously. Similary, $X\in \mathfrak{T}$ since for each $x\in X$ there is $B_x\in\mathcal{B}$ such that $x\in B_x$. Now, let us take an indexed family $\\{U_\alpha\\}_{\alpha \in \Lambda} \subset \mathfrak{T}$
 $$\tag*{$\square$}$$
  
 
