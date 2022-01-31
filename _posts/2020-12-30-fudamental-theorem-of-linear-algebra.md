@@ -2,7 +2,7 @@
 title: "Fundamental Theorem of Linear Algebra"
 
 categories:
-  - Linear Algrbra
+  - Linear Algebra
 
 tags:
   - fundamental theorem
