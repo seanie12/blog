@@ -60,7 +60,27 @@ Let $\mathcal{B}$ be a basis for a topology on $X$. Then  the **collection $\mat
 
 <*proof*>
 
-If $U=\emptyset$, it satisfies the defining condition of openness vacuously. Similary, $X\in \mathfrak{T}$ since for each $x\in X$ there is $B_x\in\mathcal{B}$ such that $x\in B_x$. Now, let us take an indexed family $\\{U_\alpha\\}_{\alpha \in \Lambda} \subset \mathfrak{T}$
+If $U=\emptyset$, it satisfies the defining condition of openness vacuously. Similarly, $X\in \mathfrak{T}$ since for each $x\in X$ there is $B_x\in\mathcal{B}$ such that $x\in B_x$. Now, let us take an indexed family $\\{U_\alpha\\}_{\alpha \in \Lambda} \subset \mathfrak{T}$ and show that 
+
+$$
+\begin{equation*}
+U = \cup_{\alpha \in \Lambda}U_\alpha  \in \mathfrak{T}.
+\end{equation*}
+$$
+
+Given $x\in U$, there is an index $\alpha$ such that $x\in U_\alpha$. Since $U_\alpha$ is open, there is a basis element $B\in\mathcal{B}$ such that $x\in B \subset U_\alpha$. Then $x\in B$ and $B\subset U$. Thus, $U$ is open.
+
+Now let us take two elements $U_1, U_2 \in \mathfrak{T}$ and show that $U_1 \cap U_2 \in\mathfrak{T}$. Given $x\in U_1\cap U_2$, choose a basis element $B_1$ containing $x$ such that $B_1 \subset U$. Similarly, choose a basis element $B_2$ containing $x$ such that $B_2 \subset U_2$. The second condition for a basis enables us to choose a basis element $B_3$ containing $x$ such that $B_3 \subset B_1 \cap B_2$. Then $x \in B_3 \subset U_1 \cap U_2$, thus $U_1\cap U_2 \in \mathfrak{T}$.
+
+Finally, we show by induction that any finite intersections $U_1 \cap \cdots \cap U_n$ of elements in $\mathfrak{T}$ is in $\mathfrak{T}$. This fact is trivial for $n=1$. Suppose it holds true for $n-1$ and prove it for $n$.
+
+$$
+\begin{equation*}
+U_1 \cap \cdots \cap U_n = (U_1\cap \cdots \cap U_{n-1})\cap U_n
+\end{equation*}
+$$
+
+By the induction hypothesis, $U_1\cap\cdots \cap U_{n-1} \in \mathfrak{T}$. Since we have proved that intersection of two elements of $\mathfrak{T}$ is also in $\mathfrak{T}$. Thus, $U_1 \cap \cdots \cap U_n \in \mathfrak{T}$. 
 $$\tag*{$\square$}$$
  
 
