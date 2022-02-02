@@ -164,7 +164,7 @@ $$\tag*{$\square$}$$
 
 
 ## Lemma 16.3
-If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$ and $(B,\mathfrak{T}_Y)$ is a subspace of $(Y ,\mathfrak{T}_Y)$, 
+If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$ and $(B,\mathfrak{T}_Y)$ is a subspace of $(Y ,\mathfrak{T}_Y)$, then the product topology on $A\times B$ is the same as the topology $A\times B$ inherits as a subspace of $(X\times Y, \mathfrak{T}_{X\times Y})$.
 
 <*proof*>
 
@@ -180,5 +180,6 @@ $$
 Since $U\cap A$ is open set in $A$ and $V\cap B$ is open set in $B$,  $(U\cap A) \times (V\cap B)$ is a basis element on the product topology on $A\times B$. Thus we can conclude that the bases for the subspace topology on $A\times B$ and for the product topology on $A\times B$ are the same. Hence the two topologies are the same.
 
 $$\tag*{$\square$}$$
+
 ## Reference
 - James Munkres, **『**Topology**』**, Pearson
