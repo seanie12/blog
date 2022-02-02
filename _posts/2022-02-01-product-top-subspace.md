@@ -89,7 +89,7 @@ $$
 \end{align*}
 $$
 
-$X\times Y\subset \Big(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\Big)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right)$.
+$X\times Y\subset \Big(\bigcup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\Big)\cup \left(\bigcup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right)$.
 
 Conversely, $\pi_1^{-1}(U)\subset X\times Y$ for all open set $U$ of $X$. Similarly, $\pi_2^{-1}(V) \subset X\times Y$ for all open set $V$ in $Y$.
 
@@ -110,5 +110,22 @@ $$
 $$
 
 is a topology on $Y$, called the **subspace topology**. With this topology, $Y$ is called **subspace** of $X$.
+
+## Remark
+We want to show that $\mathfrak{T}_Y$ is a topology. It contains $\emptyset$ and $Y$ since 
+
+$$
+\begin{equation*}
+\emptyset = Y\cap \emptyset \quad \text{ and}\quad Y = Y\cap X.
+\end{equation*}
+$$
+
+For arbitrary union and finite intersections of open sets,
+
+$$
+\bigcup
+$$
+ 
+
 ## Reference
 - James Munkres, **『**Topology**』**, Pearson
