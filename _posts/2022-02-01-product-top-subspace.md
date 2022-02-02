@@ -40,5 +40,61 @@ We apply [Lemma 13.2](https://seanie12.github.io/blog/topology/open-basis/#lemma
 
 $$\tag*{$\square$}$$
 
+
+## Definition (Projection)
+Let $\pi_1: X\times Y \rightarrow X$ be defined by the equation
+
+$$
+\begin{equation*}
+\pi_1(x,y) = x.
+\end{equation*}
+$$
+
+Similarly, let $\pi_2:X\times Y \rightarrow Y$ be defined by the equation
+
+$$
+\begin{equation*}
+\pi_2(x,y) = y.
+\end{equation*}
+$$
+
+The maps $\pi_1,\pi_2$ are called the **projections** of $X\times Y$ onto its first and second factors, respectively.
+
+## Remark
+The projections $\pi_1,\pi_2$ are surjective. If $U$ is an open subset of $X$, then the preimage $\pi_1^{-1}(U) = U\times Y$, which is open in $X\times Y$. Similarly, if $V$ is an open subset of $Y$, then the preimage $\pi_2^{-1}(V) = X\times V$, which is also open in $X\times Y$.
+
+## Theorem 15.2
+The collection
+
+$$
+S = \{ \pi_1^{-1}(U)\mid U \text{ is open in } X\} \cup \{ \pi_2^{-1}(V)\mid V \text{ is open in } Y\}
+$$
+
+is a subbasis for the product topology on $X\times Y$.
+
+<*proof*>
+
+Let $\mathfrak{T}_X$ be the  topology on $X$ and let $\mathfrak{T}_Y$ be the topology on $Y$. We want to show that 
+
+$$
+\left(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right) = X\times Y.
+$$
+
+Since
+$$
+\begin{align*}
+\pi_1^{-1}(X) &= X\times Y \subset \cup_{U\in \mathfrak{T}_X}\pi_1^{-1}(U) \text{ and} \\
+\pi_2^{-1}(Y) &= X\times Y \subset \cup_{V\in \mathfrak{T}_Y}\pi_2^{-1}(V), 
+\end{align*}
+$$
+
+$X\times Y\subset \left(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right)$.
+
+Conversely, $\pi_1^{-1}(U)\subset X\times Y$ for all open set $U$ of $X$. Similarly, $\pi_2^{-1}(V) \subset X\times Y$ for all open set $V$ in $Y$.
+
+$\therefore \left(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right) = X\times Y.$
+
+$$\tag*{$\square$}$$
+
 ## Reference
 - James Munkres, **『**Topology**』**, Pearson
