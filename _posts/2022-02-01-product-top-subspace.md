@@ -161,6 +161,11 @@ Let $U$ be an open in $Y$. Then $U=Y\cap V$ for some open subset $V$ of $X$. Sin
 
 $$\tag*{$\square$}$$
 
+
+
+## Lemma 16.3
+If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$
+
 <*proof*>
 
 The set $U\times V$ is the general basis element for the topology on $X\times Y$, where $U\in\mathfrak{T}_X$ and $V\in\mathfrak{T}_Y$. Then $(U\times V)\cap (A\times B)$ is a basis element for the subspace topology on $A\times B$. 
