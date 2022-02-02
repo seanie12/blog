@@ -81,6 +81,7 @@ $$
 $$
 
 Since
+
 $$
 \begin{align*}
 \pi_1^{-1}(X) &= X\times Y \subset \cup_{U\in \mathfrak{T}_X}\pi_1^{-1}(U) \text{ and} \\
@@ -95,5 +96,15 @@ Conversely, $\pi_1^{-1}(U)\subset X\times Y$ for all open set $U$ of $X$. Simila
 $$\therefore \left(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right) = X\times Y.$$
 
 $$\tag*{$\square$}$$
+
+## Definition (Subspace Topology)
+
+Let $X$ be a topological space with topology $\mathfrak{T}$. If $Y$ is a subset of $X$, the collection
+
+$$
+\mathfrak{T}_Y = \{ Y\cap U \mid U \in \mathfrak{T}\}
+$$
+
+is a topology on $Y$, called the **subspace topology**. With this topology, $Y$ is called **subspace** of $X$.
 ## Reference
 - James Munkres, **『**Topology**』**, Pearson
