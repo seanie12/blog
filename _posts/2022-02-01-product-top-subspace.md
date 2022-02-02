@@ -89,7 +89,7 @@ $$
 \end{align*}
 $$
 
-$X\times Y\subset \left(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right)$.
+$X\times Y\subset \Big(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\Big)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right)$.
 
 Conversely, $\pi_1^{-1}(U)\subset X\times Y$ for all open set $U$ of $X$. Similarly, $\pi_2^{-1}(V) \subset X\times Y$ for all open set $V$ in $Y$.
 
