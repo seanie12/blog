@@ -156,6 +156,7 @@ $$\tag*{$\square$}$$
 Let $(Y,\mathfrak{T}_Y)$ is a subspace of $(X,\mathfrak{T}_X)$. If $U$ is open in $Y$ and $Y$ is open in $X$, then $U$ is open in $X$.
 
 <*proof*>
+
 Let $U$ be an open in $Y$. Then $U=Y\cap V$ for some open subset $V$ of $X$. Since $Y$ is open in $X$, finite intersection $Y\cap V$ is open in $X$. Thus, $U$ is open in $X$.
 
 $$\tag*{$\square$}$$
