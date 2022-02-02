@@ -133,7 +133,21 @@ $$
 \bigcap_{i=1}^n(U_i \cap Y) = \left(\bigcap_{i=1}^nU_i\right)\cap Y
 \end{equation*}
 $$
- 
 
+## Lemma 16.1
+If $\mathcal{B}$ is a basis for the topology of $X$, then the collection 
+
+$$
+\mathcal{B}_Y = \{B\cap Y\mid B\in\mathcal{B} \}
+$$
+ 
+ is a basis for the subspace topology on $Y$.
+
+<*proof*>
+
+Let $U$ be an open subset of $X$ and let $y\in U\cap Y$ be given. Then there is a basis element $B\in\mathcal{B}$ such that $y\in B \subset U$ since $\mathcal{B}$ is a basis for $X$. Thus, $y\in B\cap Y \subset U\cap Y$. By [Lemma 13.2](https://seanie12.github.io/blog/topology/open-basis/#lemma-132), the collection $\mathcal{B}_Y$ is a basis for the subspace topology on $Y$.
+
+
+$$\tag*{$\square$}$$
 ## Reference
 - James Munkres, **『**Topology**』**, Pearson
