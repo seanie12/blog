@@ -102,7 +102,6 @@ $$
 $$\tag*{$\square$}$$
 
 ## Definition (Subspace Topology)
-
 Let $X$ be a topological space with topology $\mathfrak{T}$. If $Y$ is a subset of $X$, the collection
 
 $$
@@ -147,6 +146,32 @@ $$
 
 Let $U$ be an open subset of $X$ and let $y\in U\cap Y$ be given. Then there is a basis element $B\in\mathcal{B}$ such that $y\in B \subset U$ since $\mathcal{B}$ is a basis for $X$. Thus, $y\in B\cap Y \subset U\cap Y$. By [Lemma 13.2](https://seanie12.github.io/blog/topology/open-basis/#lemma-132), the collection $\mathcal{B}_Y$ is a basis for the subspace topology on $Y$.
 
+
+$$\tag*{$\square$}$$
+
+
+## Lemma 16.2 
+Let $(Y,\mathfrak{T}_Y)$ is a subspace of $(X,\mathfrak{T}_X)$. If $U$ is open in $Y$ and $Y$ is open in $X$, then $U$ is open in $X$.
+
+<*proof*>
+Let $U$ be an open in $Y$. Then $U=Y\cap V$ for some open subset $V$ of $X$. Since $Y$ is open in $X$, finite intersection $Y\cap V$ is open in $X$. Thus, $U$ is open in $X$.
+
+$$\tag*{$\square$}$$
+
+## Lemma 16.3
+If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$ and $(B,\mathfrak{T}_Y)$ is a subspace of $(Y,\mathfrak{T}_Y)$, then the product topology on $A\times B$ is the same as the topology $A\times B$ inherits as a subspace of $(X\times Y, \mathfrak{T}_{X\times Y})$.
+
+<*proof*>
+The set $U\times V$ is the general basis element for the topology on $X\times Y$, where $U\in\mathfrak{T}_X$ and $V\in\mathfrak{T}_Y$. Then $(U\times V)\cap (A\times B)$ is a basis element for the subspace topology on $A\times B$. 
+We know that 
+
+$$
+\begin{equation*}
+(U\times V)\cap (A\times B) = (U\cap A) \times (V\cap B).
+\end{equation*}
+$$
+
+Since $U\cap A$ is open set in $A$ and $V\cap B$ is open set in $B$,  $(U\cap A) \times (V\cap B)$ is a basis element on the product topology on $A\times B$. Thus we can conclude that the bases for the subspace topology on $A\times B$ and for the product topology on $A\times B$ are the same. Hence the two topologies are the same.
 
 $$\tag*{$\square$}$$
 ## Reference
