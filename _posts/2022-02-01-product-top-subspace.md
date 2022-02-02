@@ -137,7 +137,9 @@ $$
 If $\mathcal{B}$ is a basis for the topology of $X$, then the collection 
 
 $$
+\begin{equation*}
 \mathcal{B}_Y = \{B\cap Y\mid B\in\mathcal{B} \}
+\end{equation*}
 $$
  
  is a basis for the subspace topology on $Y$.
@@ -162,6 +164,7 @@ $$\tag*{$\square$}$$
 If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$ and $(B,\mathfrak{T}_Y)$ is a subspace of $(Y,\mathfrak{T}_Y)$, then the product topology on $A\times B$ is the same as the topology $A\times B$ inherits as a subspace of $(X\times Y, \mathfrak{T}_{X\times Y})$.
 
 <*proof*>
+
 The set $U\times V$ is the general basis element for the topology on $X\times Y$, where $U\in\mathfrak{T}_X$ and $V\in\mathfrak{T}_Y$. Then $(U\times V)\cap (A\times B)$ is a basis element for the subspace topology on $A\times B$. 
 We know that 
 
