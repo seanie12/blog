@@ -77,25 +77,25 @@ is a subbasis for the product topology on $X\times Y$.
 Let $\mathfrak{T}_X$ be the  topology on $X$ and let $\mathfrak{T}_Y$ be the topology on $Y$. We want to show that 
 
 $$
-\left(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right) = X\times Y.
+\left({U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\bigcup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right) = X\times Y.
 $$
 
 Since
 
 $$
 \begin{align*}
-\pi_1^{-1}(X) &= X\times Y \subset \cup_{U\in \mathfrak{T}_X}\pi_1^{-1}(U) \text{ and} \\
-\pi_2^{-1}(Y) &= X\times Y \subset \cup_{V\in \mathfrak{T}_Y}\pi_2^{-1}(V), 
+\pi_1^{-1}(X) &= X\times Y \subset \bigcup_{U\in \mathfrak{T}_X}\pi_1^{-1}(U) \text{ and} \\
+\pi_2^{-1}(Y) &= X\times Y \subset \bigcup_{V\in \mathfrak{T}_Y}\pi_2^{-1}(V), 
 \end{align*}
 $$
 
-$X\times Y\subset \Big(\bigcup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\Big)\cup \left(\bigcup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right)$.
+$X\times Y\subset \Big(\bigcup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\Big)\cup \Big(\bigcup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \Big)$.
 
 Conversely, $\pi_1^{-1}(U)\subset X\times Y$ for all open set $U$ of $X$. Similarly, $\pi_2^{-1}(V) \subset X\times Y$ for all open set $V$ in $Y$.
 
 $$
 \begin{equation*}
-\therefore \left(\cup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\cup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right) = X\times Y.
+\therefore \left(\bigcup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\right)\cup \left(\bigcup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \right) = X\times Y.
 \end{equation*}
 $$
 
