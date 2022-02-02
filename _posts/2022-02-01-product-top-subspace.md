@@ -164,7 +164,7 @@ $$\tag*{$\square$}$$
 
 
 ## Lemma 16.3
-If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$ and $(B,\mathfrak{T}_Y)$ is a subspace of $(Y ,\mathfrak{T}_Y)$, then the product topology on $A\times B$ is the same as the topology $A\times B$ inherits as a subspace of $(X \times Y, \mathfrak{T}_{X \times Y})$.
+If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$ and $(B,\mathfrak{T}_Y)$ is a subspace of $(Y ,\mathfrak{T}_Y)$, then the product topology on $A\times B$ is the same as the topology $A\times B$ inherits as a subspace of $$(X \times Y, \mathfrak{T}_{X \times Y})$$.
 
 <*proof*>
 
