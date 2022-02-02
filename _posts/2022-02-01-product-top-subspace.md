@@ -164,7 +164,7 @@ $$\tag*{$\square$}$$
 
 
 ## Lemma 16.3
-If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$
+If $(A, \mathfrak{T}_A)$ is a subspace of  $(X,\mathfrak{T}_X)$ and $(B,\mathfrak{T}_Y)$ is a subspace of $(Y ,\mathfrak{T}_Y)$, 
 
 <*proof*>
 
