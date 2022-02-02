@@ -89,7 +89,7 @@ $$
 \end{align*}
 $$
 
-$X\times Y\subset \Big(\bigcup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\Big)\cup \Big(\bigcup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \Big)$.
+$$X\times Y\subset \Big(\bigcup_{U\in\mathfrak{T}_X}\pi_1^{-1}(U)\Big)\cup \Big(\bigcup_{V\in\mathfrak{T}_Y}\pi_2^{-1}(V) \Big)$$.
 
 Conversely, $\pi_1^{-1}(U)\subset X\times Y$ for all open set $U$ of $X$. Similarly, $\pi_2^{-1}(V) \subset X\times Y$ for all open set $V$ in $Y$.
 
@@ -123,7 +123,15 @@ $$
 For arbitrary union and finite intersections of open sets,
 
 $$
-\bigcup
+\begin{equation*}
+\bigcup_{\alpha \in \Lambda}(U_\alpha \cap Y) = \left(\bigcup_{\alpha\in\Lambda}U_\alpha\right)\cap Y
+\end{equation*}
+$$
+
+$$
+\begin{equation*}
+\bigcap_{i=1}^n(U_i \cap Y) = \left(\bigcap_{i=1}^nU_i\right)\cap Y
+\end{equation*}
 $$
  
 
