@@ -1,4 +1,3 @@
-
 ---
 title: "Topology and Basis"
 
