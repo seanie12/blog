@@ -23,7 +23,7 @@ A **topology** on a set $X$ is a collection $\mathfrak{T}$ having the following 
 
 $$
 \begin{equation*}
-\text{If } \{U_\alpha\}_{\Lambda} \subset \mathfrak{T}, \text{ then } \cup_{\alpha\in \Lambda}U_\alpha \in \mathfrak{T}.
+\text{If } \{U_\alpha\}_{\alpha\in\Lambda} \subset \mathfrak{T}, \text{ then } \cup_{\alpha\in \Lambda}U_\alpha \in \mathfrak{T}.
 \end{equation*}
 $$
 
