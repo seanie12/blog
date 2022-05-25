@@ -39,10 +39,9 @@ Let $(V,+,\cdot)$, $(W,+,\cdot)$ be  finite dimensional  vector spaces of $F$. L
 <*proof*>
 
 Suppose that $\dim V = n$. Let 
-$
-S=\\{\mathbf{v}_1, \ldots, \mathbf{v}_k \\}$
+$$S=\{\mathbf{v}_1, \ldots, \mathbf{v}_k \}$$
 be a basis for $\ker\varphi$. 
-By the basis extension theorem, we get a basis $\\{ \mathbf{v}_1, \ldots, \mathbf{v}_k, \mathbf{v}_{k+1}, \ldots, \mathbf{v}_n\\}$  for $V$ by extending the set S. It suffices to show that $\\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\\}$ is a basis for im$\varphi$.
+By the basis extension theorem, we get a basis $$\{ \mathbf{v}_1, \ldots, \mathbf{v}_k, \mathbf{v}_{k+1}, \ldots, \mathbf{v}_n\}$$  for $V$ by extending the set S. It suffices to show that $$\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$$ is a basis for im$\varphi$.
 
 Suppose that 
 $$
@@ -63,7 +62,7 @@ $$
 \sum_{i=k+1}^na_i\mathbf{v}_i = \sum_{j=1}^k b_j\mathbf{v}_j \Rightarrow \sum_{i=k+1}^na_i\mathbf{v}_i - \sum_{j=1}^k b_j\mathbf{v}_j = \mathbf{0}.
 \end{equation}
 $$
-Since $\\{\mathbf{v}_1, \ldots, \mathbf{v}_n\\}$ is a basis for $V$, $a_i=0, b_j=0$ for all  $i=1,\ldots, k$ and $j=k+1, \ldots, n$. Thus, $\\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\\}$ is linearly independent subset.
+Since $$\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$$ is a basis for $V$, $a_i=0, b_j=0$ for all  $i=1,\ldots, k$ and $j=k+1, \ldots, n$. Thus, $$\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$$ is linearly independent subset.
 
 Let $\mathbf{w}\in \text{im}\varphi$ be given. Then $\mathbf{w} = \varphi(\mathbf{v})$ for some $\mathbf{v}\in V$. Since $\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$ is a basis for $V$, we get a unique linear combination of $\mathbf{v}=\sum_{i=1}^n a_i \mathbf{v}_i$.
 
@@ -75,7 +74,7 @@ $$
 &\in \text{span}\{ \varphi(\mathbf{v}_{k+1}, \ldots, \varphi(\mathbf{v}_n)\}
 \end{align*}
 $$
-The last equality holds since $\mathbf{v}_j \in \ker\varphi$, i.e., $\varphi(\mathbf{v}_j)=\mathbf{0}$ for all $j=1,\ldots,k$.  Thus, $\\{\varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\\}$ generates im$\varphi$.
+The last equality holds since $\mathbf{v}_j \in \ker\varphi$, i.e., $\varphi(\mathbf{v}_j)=\mathbf{0}$ for all $j=1,\ldots,k$.  Thus, $$\{\varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$$ generates im$\varphi$.
 
 $$\tag*{$\square$}$$
 ## Rank Theorem
