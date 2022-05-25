@@ -47,6 +47,7 @@ n&=\dim \ker L_A + \dim \text{im}L_A \\
 \end{align}
 $$
 by dimension theorem,  it suffices to show that 
+
 $$
 \begin{equation}
 n= \dim \ker L_A + (\text{row rank of } A)
