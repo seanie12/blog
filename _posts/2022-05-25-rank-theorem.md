@@ -27,7 +27,7 @@ Note that column space $\langle [A]^1, \ldots, [A]^n\rangle$ and row space $\lan
 $$
 \begin{align*}
 \text{im} L_A &= \{A\mathbf{x} \mid \mathbf{x}\in\mathbb{R}^n \} \\
-&=\{x_1[A]^1 + \cdots x_n[A]^n \mid (x_1, \ldots, x_n)\in \mathbb{R}^n \} \\
+&=\{x_1[A]^1 + \cdots +x_n[A]^n \mid (x_1, \ldots, x_n)\in \mathbb{R}^n \} \\
 &=\langle [A]^1, \ldots, [A]^n \rangle
 \end{align*}
 $$
