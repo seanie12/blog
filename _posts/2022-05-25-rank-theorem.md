@@ -44,12 +44,15 @@ be a basis for $\ker\varphi$.
 By the basis extension theorem, we get a basis $$\{ \mathbf{v}_1, \ldots, \mathbf{v}_k, \mathbf{v}_{k+1}, \ldots, \mathbf{v}_n\}$$  for $V$ by extending the set S. It suffices to show that $$\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$$ is a basis for im$\varphi$.
 
 Suppose that 
+
 $$
 \begin{equation}
 a_{k+1}\varphi(\mathbf{v}_{k+1}) + \cdots + a_{n}\varphi(\mathbf{v}_n) =\mathbf{0}.
 \end{equation}
 $$
+
 By linearity of $\varphi$, 
+
 $$
 \begin{equation}
 a_{k+1}\varphi(\mathbf{v}_{k+1}) + \cdots + a_{n}\varphi(\mathbf{v}_n)=\varphi\left(\sum_{i=k+1}^na_i\mathbf{v}_i\right) = \mathbf{0}.
