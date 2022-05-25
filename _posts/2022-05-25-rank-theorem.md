@@ -36,6 +36,7 @@ $$
 For any $m\times n$ matrix $A$, the column rank of $A$ is equal to the row rank of $A$. 
 
 <*proof*>
+
 Since 
 $$
 \begin{align}
