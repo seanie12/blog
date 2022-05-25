@@ -64,7 +64,7 @@ $$
 $$
 Since $$\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$$ is a basis for $V$, $a_i=0, b_j=0$ for all  $i=1,\ldots, k$ and $j=k+1, \ldots, n$. Thus, $$\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$$ is linearly independent subset.
 
-Let $\mathbf{w}\in \text{im}\varphi$ be given. Then $\mathbf{w} = \varphi(\mathbf{v})$ for some $\mathbf{v}\in V$. Since $\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$ is a basis for $V$, we get a unique linear combination of $\mathbf{v}=\sum_{i=1}^n a_i \mathbf{v}_i$.
+Let $\mathbf{w}\in \text{im}\varphi$ be given. Then $\mathbf{w} = \varphi(\mathbf{v})$ for some $\mathbf{v}\in V$. Since $$\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$$ is a basis for $V$, we get a unique linear combination of $\mathbf{v}=\sum_{i=1}^n a_i \mathbf{v}_i$.
 
 $$
 \begin{align*}
