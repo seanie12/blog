@@ -39,8 +39,8 @@ Let $(V,+,\cdot)$, $(W,+,\cdot)$ be  finite dimensional  vector spaces of $F$. L
 <*proof*>
 
 Suppose that $\dim V = n$. Let 
-$$
-S=\\{\mathbf{v}_1, \ldots, \mathbf{v}_k \\}$$ 
+$
+S=\\{\mathbf{v}_1, \ldots, \mathbf{v}_k \\}$
 be a basis for $\ker\varphi$. 
 By the basis extension theorem, we get a basis $\\{ \mathbf{v}_1, \ldots, \mathbf{v}_k, \mathbf{v}_{k+1}, \ldots, \mathbf{v}_n\\}$  for $V$ by extending the set S. It suffices to show that $\\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\\}$ is a basis for im$\varphi$.
 
