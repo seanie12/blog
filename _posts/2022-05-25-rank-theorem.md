@@ -58,6 +58,7 @@ $$
 a_{k+1}\varphi(\mathbf{v}_{k+1}) + \cdots + a_{n}\varphi(\mathbf{v}_n)=\varphi\left(\sum_{i=k+1}^na_i\mathbf{v}_i\right) = \mathbf{0}.
 \end{equation}
 $$
+
 That is $\sum_{i=k+1}^na_i\mathbf{v}_i\in \ker\varphi$. Since $S$ is a basis for $\ker\varphi$,
 
 $$
@@ -65,6 +66,7 @@ $$
 \sum_{i=k+1}^na_i\mathbf{v}_i = \sum_{j=1}^k b_j\mathbf{v}_j \Rightarrow \sum_{i=k+1}^na_i\mathbf{v}_i - \sum_{j=1}^k b_j\mathbf{v}_j = \mathbf{0}.
 \end{equation}
 $$
+
 Since $$\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$$ is a basis for $V$, $a_i=0, b_j=0$ for all  $i=1,\ldots, k$ and $j=k+1, \ldots, n$. Thus, $$\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$$ is linearly independent subset.
 
 Let $\mathbf{w}\in \text{im}\varphi$ be given. Then $\mathbf{w} = \varphi(\mathbf{v})$ for some $\mathbf{v}\in V$. Since $$\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$$ is a basis for $V$, we get a unique linear combination of $\mathbf{v}=\sum_{i=1}^n a_i \mathbf{v}_i$.
@@ -77,6 +79,7 @@ $$
 &\in \text{span}\{ \varphi(\mathbf{v}_{k+1}, \ldots, \varphi(\mathbf{v}_n)\}
 \end{align*}
 $$
+
 The last equality holds since $\mathbf{v}_j \in \ker\varphi$, i.e., $\varphi(\mathbf{v}_j)=\mathbf{0}$ for all $j=1,\ldots,k$.  Thus, $$\{\varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$$ generates im$\varphi$.
 
 $$\tag*{$\square$}$$
