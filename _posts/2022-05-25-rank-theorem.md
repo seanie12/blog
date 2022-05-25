@@ -63,7 +63,7 @@ That is $\sum_{i=k+1}^na_i\mathbf{v}_i\in \ker\varphi$. Since $S$ is a basis for
 
 $$
 \begin{equation}
-\sum_{i=k+1}^na_i\mathbf{v}_i = \sum_{j=1}^k b_j\mathbf{v}_j \Rightarrow \sum_{i=k+1}^na_i\mathbf{v}_i - \sum_{j=1}^k b_j\mathbf{v}_j = \mathbf{0}.
+\sum_{i=k+1}^na_i\mathbf{v}_i = \sum_{j=1}^k b_j\mathbf{v}_j \iff \sum_{i=k+1}^na_i\mathbf{v}_i - \sum_{j=1}^k b_j\mathbf{v}_j = \mathbf{0}.
 \end{equation}
 $$
 
