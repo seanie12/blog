@@ -1,4 +1,3 @@
-
 ---
 title: "Rank Theorem"
 
@@ -17,6 +16,7 @@ use_math : true
 comments : true
 
 ---
+
 
 ## Definition 
 Let $A\in \mathfrak{M}_{m\times n}(\mathbb{R})$ be a matrix. We define the column rank of $A$ as dimension of $\langle [A]^1, \ldots, [A]^n \rangle$, i.e., span of column vectors, where $[A]^j\in \mathbb{R}^m$ denotes $j$-th column of the matrix $A$. Similarly, we define the row rank of $A$ as dimension of $\langle [A]_1, \ldots, [A]_m\rangle$, where $[A]_i\in\mathbb{R}^n$ denotes a $i$-th row of $A$.
