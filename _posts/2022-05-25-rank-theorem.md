@@ -1,10 +1,11 @@
 ---
-title: "Rank Theorem"
+title: "Dimension Theorem and Rank Theorem"
 
 categories:
   - Linear Algebra
 
 tags:
+  - dimension theorem
   - rank
   - rank theorem
  
@@ -32,11 +33,51 @@ $$
 \end{align*}
 $$
 
+## Dimension Theorem
+Let $(V,+,\cdot)$, $(W,+,\cdot)$ be  finite dimensional  vector spaces of $F$. Let $\varphi: V\rightarrow W$ be a linear map. Then $\dim V= \dim \ker \varphi + \dim \text{im}\varphi$.
+
+<*proof*>
+
+Suppose that $\dim V = n$. Let $S=\{\mathbf{v}_1, \ldots, \mathbf{v}_k \}$ be a basis for $\ker\varphi$. By the basis extension theorem, we get a basis $\{ \mathbf{v}_1, \ldots, \mathbf{v}_k, \mathbf{v}_{k+1}, \ldots, \mathbf{v}_n\}$  for $V$ by extending the set S. It suffices to show that $\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$ is a basis for im$\varphi$.
+
+Suppose that 
+$$
+\begin{equation}
+a_{k+1}\varphi(\mathbf{v}_{k+1}) + \cdots + a_{n}\varphi(\mathbf{v}_n) =\mathbf{0}.
+\end{equation}
+$$
+By linearity of $\varphi$, 
+$$
+\begin{equation}
+a_{k+1}\varphi(\mathbf{v}_{k+1}) + \cdots + a_{n}\varphi(\mathbf{v}_n)=\varphi\left(\sum_{i=k+1}^na_i\mathbf{v}_i\right) = \mathbf{0}.
+\end{equation}
+$$
+That is $\sum_{i=k+1}^na_i\mathbf{v}_i\in \ker\varphi$. Since $S$ is a basis for $\ker\varphi$,
+
+$$
+\begin{equation}
+\sum_{i=k+1}^na_i\mathbf{v}_i = \sum_{j=1}^k b_j\mathbf{v}_j \Rightarrow \sum_{i=k+1}^na_i\mathbf{v}_i - \sum_{j=1}^k b_j\mathbf{v}_j = \mathbf{0}.
+\end{equation}
+$$
+Since $\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$ is a basis for $V$, $a_i=0, b_j=0$ for all  $i=1,\ldots, k$ and $j=k+1, \ldots, n$. Thus, $\{ \varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$ is linearly independent subset.
+
+Let $\mathbf{w}\in \text{im}\varphi$ be given. Then $\mathbf{w} = \varphi(\mathbf{v})$ for some $\mathbf{v}\in V$. Since $\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}$ is a basis for $V$, we get a unique linear combination of $\mathbf{v}=\sum_{i=1}^n a_i \mathbf{v}_i$.
+
+$$
+\begin{align*}
+\varphi(\mathbf{v})&=\varphi\left(\sum_{i=1}^n a_i \mathbf{v}_i\right) \\
+&=\sum_{i=1}^na_i\varphi(\mathbf{v}_i) \\
+&=\sum_{i=k+1}^n a_i\varphi(\mathbf{v}_i) \\
+&\in \text{span}\{ \varphi(\mathbf{v}_{k+1}, \ldots, \varphi(\mathbf{v}_n)\}
+\end{align*}
+$$
+The last equality holds since $\mathbf{v}_j \in \ker\varphi$, i.e., $\varphi(\mathbf{v}_j)=\mathbf{0}$ for all $j=1,\ldots,k$.  Thus, $\{\varphi(\mathbf{v}_{k+1}), \ldots, \varphi(\mathbf{v}_n)\}$ generates im$\varphi$.
+
+$$\tag*{$\square$}$$
 ## Rank Theorem
 For any $m\times n$ matrix $A$, the column rank of $A$ is equal to the row rank of $A$. 
 
 <*proof*>
-
 Since 
 $$
 \begin{align}
@@ -48,7 +89,6 @@ n&=\dim \ker L_A + \dim \text{im}L_A \\
 \end{align}
 $$
 by dimension theorem,  it suffices to show that 
-
 $$
 \begin{equation}
 n= \dim \ker L_A + (\text{row rank of } A)
