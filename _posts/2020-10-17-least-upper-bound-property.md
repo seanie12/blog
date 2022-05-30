@@ -131,7 +131,7 @@ $$
 \inf B = \sup L.
 \end{equation*}
 $$
-Let $\gamma < \sup L$ be given. Since $\gamma$ is not an upper bound of $L$ anymore, $\gamma \notin B$. By contraposition,  if $x\in B$, then $\sup L \leq x$. Thus, $\sup L$ is a lower bound of $B$. By the definition of $\sup L$, $\sup L$ is the greatest among the lower bounds of $B.
+Let $\gamma < \sup L$ be given. Since $\gamma$ is not an upper bound of $L$ anymore, $\gamma \notin B$. By contraposition,  if $x\in B$, then $\sup L \leq x$. Thus, $\sup L$ is a lower bound of $B$. By the definition of $\sup L$, $\sup L$ is the greatest among the lower bounds of $B$.
 
 $$\tag*{$\square$}$$
 
