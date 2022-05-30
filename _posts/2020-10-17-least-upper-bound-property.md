@@ -22,10 +22,25 @@ comments : true
 
 ---
 
-## Definition 1.4.1
-$E\subset \mathbb{R}$ is bounded above if and only if $\exists \beta\in \mathbb{R}$ such that $x\leq \beta$ for all $x\in E$. We call $\beta$ as an upper bound of $E$.
+## Definition (Ordered Set)
+Let $S$ be a set.  An *order* on $S$ is a relation, denoted by $<$, with the following property
 
-Similarly, $E$ is bounded below if and only if $\exists \beta\in\mathbb{R}$ such that $x\geq \beta$ for all $x\in E$. We call $\beta$ as lower bound of $E$.
+(1) If $x\in S$ and $y\in S$,  then only one of the statements hold true
+
+$$
+\begin{equation*}
+x<y,\quad x=y, \quad y<x
+\end{equation*}
+$$
+
+(2) If $x,y,z\in S$, if $x<y$ and $y<z$, then $x<z$. 
+
+An ordered set is a set $S$ which is an order is defined.
+## Definition 1.4.1
+Let $S$ be an ordered set.
+$E\subset S$ is bounded above if and only if $\exists \beta\in S$ such that $x\leq \beta$ for all $x\in E$. We call $\beta$ as an upper bound of $E$.
+
+Similarly, $E$ is bounded below if and only if $\exists \beta\in S$ such that $x\geq \beta$ for all $x\in E$. We call $\beta$ as lower bound of $E$.
 
 $E$ is bounded if and only if $E$ is bounded below and above.
 
@@ -95,6 +110,31 @@ $\therefore \alpha = \sup E$
 $$\tag*{$\square$}$$
 ### Axiom 1.4.6 (Least upper upper bound property - completeness)
 Every non-empty bounded above subset of $\mathbb{R}$ has a supremum in $\mathbb{R}$.
+
+## Theorem 
+Let $S$ be an ordered set with the least upper bound property.  Then $S$ has the least upper bound property.
+
+<*proof*>
+
+Let $B \subset S$ be an non-empty bounded below set. Let 
+
+$$
+\begin{equation*}
+L=\{y\in S\mid y\leq x, \forall x \in B \}
+\end{equation*}
+$$ 
+be a set of lower bounds of the set $B$. Since every $x\in B$ is an upper bound of $L$, $L$ is bounded above. By the least upper bound property, there exists $\sup L \in S$. 
+
+Now, we want to show that 
+$$
+\begin{equation*}
+\inf B = \sup L.
+\end{equation*}
+$$
+Let $\gamma < \sup L$ be given. Since $\gamma$ is not an upper bound of $L$ anymore, $\gamma \notin B$. By contraposition,  if $x\in B$, then $\sup L \leq x$. Thus, $\sup L$ is a lower bound of $B$. By the definition of $\sup L$, $\sup L$ is the greatest among the lower bounds of $B.
+
+$$\tag*{$\square$}$$
+
 
 ## Definition 1.4.9
 If $E$ is not bounded above, define $\sup E:= \infty$.
