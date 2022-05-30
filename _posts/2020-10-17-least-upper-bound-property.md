@@ -56,7 +56,7 @@ $$
 $$\tag*{$\square$}$$
 
 ## Definition 1.4.3
-$\emptyset \neq E\subset \mathbb{R}$ is bounded above. $\alpha \mathbb{R}$ is called the **least upper bound** or **supremum** of $E$ if
+$\emptyset \neq E\subset \mathbb{R}$ is bounded above. $\alpha\in \mathbb{R}$ is called the **least upper bound** or **supremum** of $E$ if
 1. $\alpha$ is an upper bound of $E$
 2. $\beta$ is another upper bound of $E \Rightarrow \alpha \leq \beta$
 
@@ -64,7 +64,7 @@ We write $\alpha =\sup E$.
 
 
 ## Definition 1.4.3-1
-$\emptyset \neq E\subset \mathbb{R}$ is bounded below. $\alpha \mathbb{R}$ is called the **greatest lower bound** or **infimum** of $E$ if
+$\emptyset \neq E\subset \mathbb{R}$ is bounded below. $\alpha\in \mathbb{R}$ is called the **greatest lower bound** or **infimum** of $E$ if
 1. $\alpha$ is an lower bound of $E$
 2. $\beta$ is another lower bound of $E \Rightarrow \alpha \geq \beta$
 
