@@ -293,10 +293,14 @@ $$
 \end{equation*}
 $$
 
-By equation $\ref{eq:7}$ and $\ref{eq:8}$, 
+By Equation $\ref{eq:7}$ and $\ref{eq:8}$, 
+
 $$
+\begin{equation*}
 (y+h)^n - y^n < nh(y+h)^{n-1}< x-y^n.
+\end{equation*}
 $$
+
 That is $(y+h)^n < x$, i.e., $y+h\in A$ and $y+h >y=\sup A$. It is a contradiction to the assumption.
 
  
@@ -322,4 +326,4 @@ That is $(y-h)^n >x$ and $t<y-h$ for all $t\in A$. In other words, $y-h$ is an u
 $$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**.
-- Walter Rudin, **『**The Principles of Mathematical Analysis**』.
+- Walter Rudin, **『**The Principles of Mathematical Analysis**』**.
