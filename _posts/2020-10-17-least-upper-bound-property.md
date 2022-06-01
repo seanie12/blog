@@ -156,6 +156,7 @@ Note that $\emptyset$ and singleton set are also intervals.
 $x,y\in \mathbb{R}, x>0 \Rightarrow \exists n\in \mathbb{N}$ such that $nx >y$.
 
 <*proof*>
+
 If $y\leq 0$, take $n=1$.
 
 Assume that $y>0$. Define a set $A$ as follows:
@@ -164,9 +165,9 @@ $$
 A:=\{nx: n\in \mathbb{N}\} \neq \emptyset
 \end{align}
 $$
-If the result is false, then $y$ is an upper bound of $A$. By the least upper bound property, we can get $\alpha = \sup A$. Now, since $x>0, \alpha-x < \alpha.$ It implies that $\alpha-x$ is not an upper bound of $A$ anymore. 
+Suppose that $nx\leq y$ for all $n\in\mathbb{N}$. In other words, $y$ is an upper bound of $A$. By the least upper bound property, there is $\alpha = \sup A \in \mathbb{R}$. Now, since $x>0, \alpha-x < \alpha.$ It implies that $\alpha-x$ is not an upper bound of $A$ anymore. 
 
-So, there is $m\in\mathbb{N}$ such that $\alpha -x < mx \in A$, i.e. $\alpha <(m+1)x \in A$. Thus, $\alpha$ is not an upper bound of $A$, which contradicts to our assumption.
+So, there is $m\in\mathbb{N}$ such that $\alpha -x < mx \in A$, i.e., $\alpha <(m+1)x \in A$. Thus, $\alpha$ is not an upper bound of $A$, which contradicts to our assumption.
 
 $\therefore \exists n\in \mathbb{N}$ such that $nx > y$.
 
