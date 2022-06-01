@@ -181,23 +181,144 @@ Then for any $n\geq n_0, \frac{1}{n}\leq \frac{1}{n_0}< \epsilon$.
 ## Theorem 1.5.2 (Density of $\mathbb{Q}$ in $\mathbb{R}$)
 $\forall x,y \in \mathbb{R}, x<y \Rightarrow \exists r\in \mathbb{Q}$ such that $x<r<y$.
 
-<*proof*>
-Assume that $x\geq0$. Since $y-x>0$, there is $n\in\mathbb{N}$ s.t. $n(y-x) >1$ by Archimedean property. Define a set $A$ as follows:
+(1) <*proof*>
+
+Since $y-x>0$, there is $n\in\mathbb{N}$ s.t. $n(y-x) >1$ by Archimedean property. Define a set $A$ as follows:
 $$
 \begin{align}
 A :=\{k\in \mathbb{N}: k >nx\}
 \end{align}
 $$
-By Archimedean property, $A\neq \emptyset.$ By the well-ordering principle, we can take the smallest element $m \in \mathbb{N}$ such that $m-1 \leq nx <m$. 
+By Archimedean property, $A\neq \emptyset.$ By the well-ordering principle, we can take the smallest element $m =\min A\in \mathbb{N}$. Then $m-1 \leq nx <m$. 
 
 $\Rightarrow nx < m \leq 1+nx < ny$, i.e. $nx < m < ny$.
 
 $\therefore x<\frac{m}{n} < y$.
 
-If $x < 0$ and $y>0$, then the result is obvious. 
+(2) <*proof*>
 
-Finally if $x<y<0$, then by the preceding calculations there exists $r\in\mathbb{Q}$ such that $-y< r < -x$, i.e. $x<-r<y$.
+Since $y-x>0$, there exists $n\in\mathbb{N}$ such that $n(y-x) >1$ by Archimedean property. Similarly there exists $m_1, m_2\in\mathbb{N}$ such that
+
+$$
+\begin{align*}
+m_1 \cdot 1 &> nx\\
+m_2 \cdot 1 &> -nx
+\end{align*}
+$$
+So, $-m_2 < nx < m_1$. Let define a set 
+
+$$
+\begin{equation*}
+A = \{k\in\mathbb{Z}\mid nx < k \leq m_1\}.
+\end{equation*}
+$$
+
+Since the $A$ is finite, we can take a minimum of it, denoted as $m=\min A$. Then $m-1 \leq nx$ and $nx < m$. Combining all together,  we get
+
+$$
+\begin{equation*}
+nx < m \leq nx+1<ny.
+\end{equation*}
+$$ 
+
+Thus, 
+
+$$
+\begin{equation*}
+x < \frac{m}{n} < y.
+\end{equation*}
+$$
+
+$$\tag*{$\square$}$$
+
+
+## Lemma
+Let $0<a<b$ be given. Then $b^n - a^n<(b-a)nb^{n-1}$ for any $n\in \mathbb{N}$ with $n>1$.
+
+<*proof*>
+
+$$
+\begin{align*}
+b^n - a^n &= (b-a)(b^{n-1}+ab^{n-2}+\cdots + a^{n-2}b+a^{n-1})\\
+&<(b-a)(b^{n-1}+b^{n-1} + \cdots + b^{n-1} + b^{n-1}) \\
+&=(b-a)nb^{n-1}
+\end{align*}
+$$
+
+The first inequality holds since $0<a<b \Rightarrow 0<a^k <b^k$ for any $k\in\mathbb{N}$.
+$$\tag*{$\square$}$$
+
+## Theorem 
+Let $x\in\mathbb{R}$ with $x>0$ be given. Then there exists a unique $y\in\mathbb{R}$ such that $y^n = x$ and $y>0$.
+
+<*proof*>
+
+Define a set 
+$$
+\begin{equation*}
+A = \{a\in\mathbb{R} \mid a> 0, a^n < x \}.
+\end{equation*}
+$$
+
+If $t = \frac{x}{x+1}$, then $0<t<1$ and $t<x$. Since $0<t<1$, $0<t^n<t<x$. Thus $t\in A$, i.e., $A\neq \emptyset$. Suppose that $t>x+1$. Since $t>1$, $t^n>t>x$, i.e., $t\notin A$.  By contraposition, $t\in A \Rightarrow t\leq x+1$, i.e., $A$ is not bounded above. By the least upper bound property, there is $y=\sup A\in\mathbb{R}$. We want to show that $y^n = x$ by contradiction.
+
+(1) Suppose that $y^n < x$.  We want to find $h>0$ such that $(y+h)^n < x$. If there is such $h$, then $y+h\in A$, but $y<y+h$, which contradicts to the assumption that $y=\sup A$ which should be greater than or equal to $y+h$.
+
+We  want to find $h>0$ such that $(y+h)^n < x$. It is equivalent to $(y+h)^n - y^n < x -y^n$. By Lemma, we get
+
+$$
+\begin{equation}
+(y+h)^n - y^n < h^nn(y+h)^{n-1}.
+\end{equation}
+\label{eq:7}
+$$  
+
+Instead, we find $h>0$ such that $h^nn(y+h)^{n-1}<y-x^n$. Moreover, if $0<h<1$, we get the following inequality
+
+$$
+\begin{align}
+0<h < \frac{x-y^n}{n(y+1)^{n-1}} < \frac{x-y^n}{n(y+h)^{n-1}}.
+\end{align}
+\label{eq:8}
+$$
+
+By the density of $\mathbb{Q}$, we can find such $h$.
+
+Now, let $h\in (0,1)$ such that 
+
+$$
+\begin{equation*}
+0<h < \frac{x-y^n}{n(y+1)^{n-1}}. 
+\end{equation*}
+$$
+
+By equation $\ref{eq:7}$ and $\ref{eq:8}$, 
+$$
+(y+h)^n - y^n < nh(y+h)^{n-1}< x-y^n.
+$$
+That is $(y+h)^n < x$, i.e., $y+h\in A$ and $y+h >y=\sup A$. It is a contradiction to the assumption.
+
+ 
+(2) Let $y=\sup A$ and  suppose that $y^n >x$. Let $h\in (0,y)$ such that 
+
+$$
+\begin{equation}
+0<h<\frac{y^n-x}{ny^{n-1}}.
+\label{eq:9}
+\end{equation}
+$$
+
+By Lemma and Equation  $\ref{eq:9$,
+
+$$
+\begin{align*}
+y^n-(y-h)^n < hn(y-h)^{n-1} < y^n-x.
+\end{align*}
+$$
+
+That is $(y-h)^n >x$ and $t<y-h$ for all $t\in A$. In other words, $y-h$ is an upper bound of $A$ but less than $y=\sup A$, which is a contradiction.
 
 $$\tag*{$\square$}$$
 ## Reference
-- Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
+- Manfred Stoll,  **『**Introduction to Real Analysis**』**.
+- Walter Rudin, **『**The Principles of Mathematical Analysis**』.
