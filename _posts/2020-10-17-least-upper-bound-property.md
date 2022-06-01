@@ -324,6 +324,7 @@ $$
 
 That is $(y-h)^n >x$ and $t<y-h$ for all $t\in A$. In other words, $y-h$ is an upper bound of $A$ but less than $y=\sup A$, which is a contradiction.
 
+(3) Uniqueness. Let $y_1, y_2 >0$ such that $y^n_1 = y^n_2=x$. Suppose that $y_1 > y_2$. Then $y^n_1 > y^n_2$, which is a contradiction. Thus, $y_1= y_2$.
 $$\tag*{$\square$}$$
 
 ## Reference
