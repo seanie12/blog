@@ -11,6 +11,7 @@ tags:
   - completeness
   - Archimedean property
   - dense
+  - root
   
   
 
@@ -279,8 +280,8 @@ Instead, we find $h>0$ such that $h^nn(y+h)^{n-1}<y-x^n$. Moreover, if $0<h<1$, 
 $$
 \begin{align}
 0<h < \frac{x-y^n}{n(y+1)^{n-1}} < \frac{x-y^n}{n(y+h)^{n-1}}.
-\end{align}
 \label{eq:8}
+\end{align}
 $$
 
 By the density of $\mathbb{Q}$, we can find such $h$.
@@ -324,6 +325,7 @@ $$
 That is $(y-h)^n >x$ and $t<y-h$ for all $t\in A$. In other words, $y-h$ is an upper bound of $A$ but less than $y=\sup A$, which is a contradiction.
 
 $$\tag*{$\square$}$$
+
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**.
-- Walter Rudin, **『**The Principles of Mathematical Analysis**』.
+- Walter Rudin, **『**The Principles of Mathematical Analysis**』**.
