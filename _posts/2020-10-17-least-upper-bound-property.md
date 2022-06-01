@@ -254,6 +254,7 @@ Let $x\in\mathbb{R}$ with $x>0$ be given. Then there exists a unique $y\in\mathb
 <*proof*>
 
 Define a set 
+
 $$
 \begin{equation*}
 A = \{a\in\mathbb{R} \mid a> 0, a^n < x \}.
