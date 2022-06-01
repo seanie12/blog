@@ -313,7 +313,7 @@ $$
 \end{equation}
 $$
 
-By Lemma and Equation  $\ref{eq:9$,
+By Lemma and Equation  $\ref{eq:9}$,
 
 $$
 \begin{align*}
@@ -326,4 +326,4 @@ That is $(y-h)^n >x$ and $t<y-h$ for all $t\in A$. In other words, $y-h$ is an u
 $$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**.
-- Walter Rudin, **『**The Principles of Mathematical Analysis**』**.
+- Walter Rudin, **『**The Principles of Mathematical Analysis**』.
