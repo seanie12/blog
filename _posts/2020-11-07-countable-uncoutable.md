@@ -68,13 +68,12 @@ $$
 f^{-1}(a):= \{ n\in\mathbb{N}:f(n)=a\}
 \end{align}
 $$
-has a smallest integer, which we denote by $n_a$.  Consider the mapping $a\mapsto n_a$. Since $f$ is a function,   $a\neq b \Rightarrow n_a \neq n_b$. It implies that such mapping is one-to-one. Since $f$ is onto, $f^{-1}(a) \neq \empty$ for all $a\in A$. Thus, the map is one-to-one and onto. Also, since $A$ is infinite, 
+has a smallest integer, which we denote by $n_a$.  Consider the mapping $g:a\mapsto n_a$. Since $f$ is a function,   $a\neq b \Rightarrow n_a \neq n_b$. It implies that g is one-to-one.  By the construction of the function $g$, it is onto. Also, since $A$ is infinite, 
 $$
-\{n_a:a\in A\}
+S=\{n_a:a\in A\}
 $$
-is an infinite subset of $\mathbb{N}$, so it is countable by Theorem 1.7.6. 
+is an infinite subset of $\mathbb{N}$ by Theorem 1.7.6. Since $g: S \rightarrow A$ is bijective and the set $S$ is countable,  $A$ is countable. 
 
-$\therefore a\mapsto n_a$ is a one-to-one mapping of $A$ onto countable set.
 
 $\therefore A$ is at most countable.
 $$\tag*{$\square$}$$
@@ -83,7 +82,7 @@ $$\tag*{$\square$}$$
 If $$\{E_n\}_{n=1}^\infty$$ is a sequence of countable sets and 
 $$
 \begin{align}
-S = \cup_{n=1}^\infty E_n
+S = \bigcup_{n=1}^\infty E_n
 \end{align}
 $$
 then $S$ is countable.
