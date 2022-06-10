@@ -42,7 +42,20 @@ m\left(\bigcup_{j=1}^\infty A_j \right)=\lim_{j\to \infty}m(A_j).
 $$
 
 <*proof*>
-Define $A_0\coloneqq \emptyset$
+Define $A_0:= \emptyset$ and $B_i := A_i \setminus A_{i-1}$. Since $A_i$ is measurable, $A^c_i$ is also measurable. Thus, $A_i\setminus A_{i-1}=A_i\cap A^c_{i-1}$ is measurable.
+$$
+\biguplus_{i=1}^\infty B_i= \bigcup_{i=1}^{\infty}A_i.
+$$
+
+Since $B_i$'s are disjoint measurable sets,
+$$
+\begin{align*}
+m\left(\biguplus_{i=1}^\infty B_i\right)&=\sum_{i=1}^\infty m\left( B_i \right) \\
+&=\lim_{n\to\infty}\sum_{i=1}^nm(B_i) \\
+&=\lim_{n\to\infty}m(A_n)-m(A_0) \\
+&=\lim_{n\to\infty}m(A_n)
+\end{align*}
+$$
 ## Theorem 8.2.9
 Let $\Omega$ be a measurable subset of $\mathbb{R}^n$, and let $(f_n)_{n=1}^\infty$ be a sequence of non-negative measurable functions from $\Omega$ to $\mathbb{R}$ which are increasing in the sense that 
 
@@ -135,7 +148,7 @@ s(x) \leq \sup_nf_n(x)
 \end{align*}
 $$
 
-for every $x\in\Omega$. Since $0<\epsilon<1, (1-\epsilon)s(x)<s(x)$. For every $x\in\Omega$, then $(1-\epsilon)s(x)$ cannot be an upper bound of $$\{ f_n(x)\mid n\in\mathbb{N}\} $$. Hence, for every $x\in\Omega$, there exists $N\coloneqq N_x\in\mathbb{N}$ such that 
+for every $x\in\Omega$. Since $0<\epsilon<1, (1-\epsilon)s(x)<s(x)$. For every $x\in\Omega$, then $(1-\epsilon)s(x)$ cannot be an upper bound of $$\{ f_n(x)\mid n\in\mathbb{N}\} $$. Hence, for every $x\in\Omega$, there exists $N:= N_x\in\mathbb{N}$ such that 
 
 $$
 \begin{align*}
@@ -147,7 +160,7 @@ Since the $f_n$ increasing, it implies that $f_n(x)\geq (1-\epsilon)s(x)$ for al
 
 $$
 \begin{align*}
-E_n\coloneqq \{ x\in\Omega\mid f_n(x) \geq (1-\epsilon)s(x)\}
+E_n:= \{ x\in\Omega\mid f_n(x) \geq (1-\epsilon)s(x)\}
 \end{align*}
 $$
 
@@ -155,10 +168,11 @@ then we have $E_1\subset E_2\subset E_3\subset \cdots$ and $\bigcup_{n=1}^\infty
 
 By Proposition 8.2.6,
 $$
-\begin{align*}
+\begin{align}
 (1-\epsilon)\int_{E_n}s
 \stackrel{\text{(b)}}{=} \int_{E_n}(1-\epsilon)s \stackrel{\text{(c)}}{\leq}\int_{E_n}f_n\stackrel{(e)}{\leq} \int_\Omega f_n.
-\end{align*} 
+\label{ineq}
+\end{align} 
 $$
 
 Now it suffices to show that 
@@ -177,29 +191,47 @@ $$
 \int_\Omega s = \sum_{i=1}^kc_i m(F_i)
 \end{align*}
 $$
-
-and 
+and by Proposition 8.2.6(d),
 
 $$
 \begin{align*}
 \int_{E_n}s&=\int_\Omega \chi_{E_n}s \\
-&=\int_\Omega\chi_{E_n}\sum_{i=1}^kc_k\chi_{F_i}\\
-&=\int_\Omega \sum_{i=1}^kc_k\chi_{F_i}\chi_{E_n}\\
-&= \int_\Omega \sum_{i=1}^kc_k\chi_{F_i\cap E_n} \\
-&=\sum_{i=1}^kc_km(F_i\cap E_n)
+&=\int_\Omega\chi_{E_n}\sum_{i=1}^kc_i\chi_{F_i}\\
+&=\int_\Omega \sum_{i=1}^kc_i\chi_{F_i}\chi_{E_n}\\
+&= \int_\Omega \sum_{i=1}^kc_i\chi_{F_i\cap E_n} \\
+&=\sum_{i=1}^kc_im(F_i\cap E_n)
 \end{align*}
 $$
 
-it suffices to show that 
-
+Now, it suffices to show that 
 $$
 \begin{align*}
-\sup_nm(F_i\cap E_n)=m(F_i).
+\sup_n\sum_{i=1}^kc_im(F_i\cap E_n)=  \int_\Omega s.
 \end{align*}
 $$
+Since $m(F_i\cap E_n)$ is increasing sequence with respect to $n$ and $(F_i\cap E_1)\subset (F_i\cap E_2)\subset (F_i\cap E_3)\subset \cdots$ for each $i$,
 
-for each $i$. If follows from Lemma1.
+$$
+\begin{align}
+\begin{split}
+\sup_n\sum_{i=1}^kc_im(F_i\cap E_n)&=\lim_{n\to\infty}\sum_{i=1}^kc_im(F_i\cap E_n)\\
+&=\sum_{i=1}^kc_i\lim_{n\to\infty}m(F_i\cap E_n)\\
+&=\sum_{i=1}^kc_i m\left(\lim_{n\to\infty}F_i\cap E_n\right) \: (\text{By Lemma1})\\
+&=\sum_{i=1}^kc_im(F_i\cap \Omega) \\
+&=\sum_{i=1}^kc_im(F_i) \\
+&=\int_\Omega s
+\end{split}
+\label{eq:final}
+\end{align}
+$$
+
+The inequality $\ref{ineq}$, we get $\int_{E_n}s \leq \int_\Omega f_n$ as $\epsilon \to 0$. Combining it with Equation $\ref{eq:final}$,
+
+$$
+\int_\Omega s = \sup_n\int_{E_n}s\leq \sup_n \int_\Omega f_n
+$$
+
+for all $s\in S$.
 $$\tag*{$\square$}$$
-
 ## Reference
-- Terrance Tao  **『**Introduction to Real Analysis**』**, Pearson
+- Terrance Tao,  **『**Introduction to Real Analysis**』**, Pearson
