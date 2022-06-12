@@ -97,6 +97,7 @@ E_n =\{x_{n,k}: k=1,2,\ldots\}
 $$
 
 Now, we write the elements of $S$ in the form of a table:
+
 $$
 \begin{align*}
 \begin{pmatrix}
@@ -127,11 +128,13 @@ $\mathbb{Q}$ is countable.
 <*proof*>
 
 For each $m\in\mathbb{N}$, let 
+
 $$
 \begin{align}
 E_m = \left\{\frac{n}{m}:n\in\mathbb{Z}\right\}
 \end{align}
 $$
+
 The $E_m$ is countable, and since $\mathbb{Q} = \bigcup_{m=1}^\infty E_m$, by Theorem 1.7.15 the set $\mathbb{Q}$ is countable.
 
 $$\tag*{$\square$}$$ 
