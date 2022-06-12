@@ -117,7 +117,7 @@ x_{1,1}\to x_{1,2}\to x_{2,1}\to x_{3,1}\to x_{2,2}\to x_{1,3}\to \cdots
 \end{align*}
 $$
 
-Since there could be duplicates, there is a one-to-one correspondence between $S$ and a subset of $\mathbb{N}$, denoted as $J$.  In other words, $|S|=|J|$.
+Since there could be duplicates, there is a one-to-one correspondence between $S$ and a subset of $\mathbb{N}$, denoted as $J$.  In other words, $\lvert S \rvert =\lvert J\rvert$.
 
  Since $E_n$ is an infinite subset of $S$, the set $S$ is infinite. Thus $J$ is infinite subset of countable set $\mathbb{N}$. By Theorem 1.7.6, $J$ is countable, so $S$ is also countable. 
 $$\tag*{$\square$}$$
