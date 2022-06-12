@@ -88,34 +88,76 @@ $$
 then $S$ is countable.
 
 <*proof*>
+
 Since $E_n$ is countable for each $n\in \mathbb{N}$, we can write 
 $$
 \begin{align}
 E_n =\{x_{n,k}: k=1,2,\ldots\}
 \end{align}
 $$
-Since $E_n$ is an infinite subset of $S$, the set $S$ is itself is infinite.  Consider the function $h:\mathbb{N}\times\mathbb{N}\to S$ by
+
+Now, we write the elements of $S$ in the form of a table:
 $$
-\begin{align}
-h(n,k) = x_{n,k}
-\end{align}
+\begin{align*}
+\begin{pmatrix}
+x_{1,1}& x_{1,2}& x_{1,3}&\cdots\\
+x_{2,1}& x_{2,2}& x_{2,3}&\cdots\\
+x_{3,1}& x_{3,2}& x_{3,3}& \cdots\\
+\vdots&\vdots&\vdots&\ddots
+\end{pmatrix}
+\end{align*}
 $$
-The function $h$ is onto. Also, since $\mathbb{N}\times\mathbb{N}\sim \mathbb{N}$, there exists a mapping of $\mathbb{N}$ onto S. Hence by Theorem 1.7.7, the set $S$ is countable.
+
+Then we can enumerate the elements as follows:
+
+$$
+\begin{align*}
+x_{1,1}\to x_{1,2}\to x_{2,1}\to x_{3,1}\to x_{2,2}\to x_{1,3}\to \cdots
+\end{align*}
+$$
+
+Since there could be duplicates, there is a one-to-one correspondence between $S$ and a subset of $\mathbb{N}$, denoted as $J$.  In other words, $|S|=|J|$.
+
+ Since $E_n$ is an infinite subset of $S$, the set $S$ is infinite. Thus $J$ is infinite subset of countable set $\mathbb{N}$. By Theorem 1.7.6, $J$ is countable, so $S$ is also countable. 
 $$\tag*{$\square$}$$
 
 ## Corollary 1.7.16
 $\mathbb{Q}$ is countable.
 
 <*proof*>
+
 For each $m\in\mathbb{N}$, let 
 $$
 \begin{align}
-E_m = \{\frac{n}{m}:n\in\mathbb{Z}\}
+E_m = \left\{\frac{n}{m}:n\in\mathbb{Z}\right\}
 \end{align}
 $$
-The $E_m$ is countable, and since $\mathbb{Q} = \cup_{m=1}^\infty E_m$, by Theorem 1.7.15 the set $\mathbb{Q}$ is countable.
+The $E_m$ is countable, and since $\mathbb{Q} = \bigcup_{m=1}^\infty E_m$, by Theorem 1.7.15 the set $\mathbb{Q}$ is countable.
 
 $$\tag*{$\square$}$$ 
+
+## Theorem
+Let $A$ be a countable set. Then $B_n = \underbrace{A\times A\times \cdots \times A}_{n \text{ times}}$ is countable.
+
+<*proof*>
+We prove it with mathematical induction on $n$. For $n=1$, $B_1$ is clearly countable. Suppose that $B_{k}$ is countable for $k\geq 1$. For any $a\in A$,
+
+$$
+\begin{align*}
+\{a\}\cup B_k
+\end{align*}
+$$
+
+is countable. Then, by Theorem 1.7.6,
+
+$$
+\begin{align*}
+B_{k+1}=\bigcup_{a\in A} \left( \{a \}\cup B_k \right)
+\end{align*}
+$$
+
+is countable set since $A$ is countable.
+ $$\tag*{$\square$}$$
 
 ## Theorem 1.7.17
 The closed interval $[0,1]$ is uncountable.
