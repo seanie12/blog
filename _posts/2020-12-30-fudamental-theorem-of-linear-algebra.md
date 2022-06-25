@@ -75,7 +75,7 @@ $$\tag*{$\square$}$$
 ## Fundamental theorem of linear algebra
 Let $U,V,W$ be vector spaces over $F$ and $$\mathfrak{A} = \{\mathbf{u}_1, \ldots, \mathbf{u}_k \},\mathfrak{B} =\{\mathbf{v}_1, \ldots, \mathbf{v}_n \}, \mathfrak{C} = \{\mathbf{w}_1, \ldots, \mathbf{w}_m \}$$ be bases for $U,V,W$, respectively. 
 Define  a function $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}: \mathfrak{M}_{m\times n}(F) \rightarrow \mathcal{L}(V,W)$$ by 
-$$\begin{align}[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)]_{\mathfrak{C}} := A[\mathbf{v}]_{\mathfrak{B}}\end{align}$$, where $A \in \mathfrak{M}_{m\times n}(F), \mathbf{v} \in V$. 
+$$\begin{align}[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v}]_{\mathfrak{C}} := A[\mathbf{v}]_{\mathfrak{B}}\end{align}$$, where $A \in \mathfrak{M}_{m\times n}(F), \mathbf{v} \in V$. 
 Similarly, define a function 
 $$\begin{align}\begin{split}\Psi^{\mathfrak{B}}_{\mathfrak{C}}: \mathcal{L}(V,W) &\rightarrow \mathfrak{M}_{m\times n}(F)\\
 \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L) &:= [L]^{\mathfrak{B}}_{\mathfrak{C}} \text{ for all } L \in \mathcal{L}(V,W)\end{split}\end{align}\\$$ 
@@ -89,14 +89,14 @@ Let $$A, B \in \mathfrak{M}_{m\times n }(F), c \in F$$ be given. We want to show
 
 $$\begin{align}
 \begin{split}
-[\{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\} \mathbf{v} ]_{\mathfrak{C}} &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v} + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}} \\
+[\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\right) \mathbf{v} ]_{\mathfrak{C}} &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v} + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}} \\
 &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v}]_{\mathfrak{C}} + c\cdot[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}}  \\
 &= A[\mathbf{v}]_{\mathfrak{B}} + cB[\mathbf{v}]_{\mathfrak{B}} \\
 &= (A + cB)[\mathbf{v}]_{\mathfrak{B}} \\
 &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}}
 \end{split}
 \end{align}$$
-The second equality holds due to the linearity of $$[\cdot]_{\mathfrak{C}}$$. Since $$[\cdot]_{\mathfrak{C}}$$ is one-to-one correspondence, $$ [\{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\} \mathbf{v} ]_{\mathfrak{C}} = [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}} \Longrightarrow  (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) ) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v}$$. Therefore, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear map.
+The second equality holds due to the linearity of $$[\cdot]_{\mathfrak{C}}$$. Since $$[\cdot]_{\mathfrak{C}}$$ is one-to-one correspondence, $$ [\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\right) \mathbf{v} ]_{\mathfrak{C}} = [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}} \Longrightarrow  (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) ) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v}$$. Therefore, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear map.
 
 On the other hand, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear transformation. In other words, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M + cL) = \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) + c \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L)$$ where $$M, L \in \mathcal{L}(V,W)$$ and $$c \in F$$. However, it suffices to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M + cL) \mathbf{e}_j= (\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) + c \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L))\mathbf{e}_j$$ for $$j=1, \ldots,n$$ where $$\mathbf{e}_j \in \mathbb{R}^n$$ is a standard basis for $$\mathbb{R}^n$$ and only the $$\text{j}^{\text{th}}$$ component is 1 and zero for the others.
  
