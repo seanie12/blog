@@ -89,14 +89,14 @@ Let $$A, B \in \mathfrak{M}_{m\times n }(F), c \in F$$ be given. We want to show
 
 $$\begin{align}
 \begin{split}
-[\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\right) \mathbf{v} ]_{\mathfrak{C}} &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v} + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}} \\
+\left[\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\right) \mathbf{v} \right]_{\mathfrak{C}} &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v} + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}} \\
 &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v}]_{\mathfrak{C}} + c\cdot[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)\mathbf{v}]_{\mathfrak{C}}  \\
 &= A[\mathbf{v}]_{\mathfrak{B}} + cB[\mathbf{v}]_{\mathfrak{B}} \\
 &= (A + cB)[\mathbf{v}]_{\mathfrak{B}} \\
 &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}}
 \end{split}
 \end{align}$$
-The second equality holds due to the linearity of $$[\cdot]_{\mathfrak{C}}$$. Since $$[\cdot]_{\mathfrak{C}}$$ is one-to-one correspondence, $$ [\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\right) \mathbf{v} ]_{\mathfrak{C}} = [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}} \Longrightarrow  (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) ) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v}$$. Therefore, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear map.
+The second equality holds due to the linearity of $$[\cdot]_{\mathfrak{C}}$$. Since $$[\cdot]_{\mathfrak{C}}$$ is one-to-one correspondence, $$ \left[\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c\cdot\Phi^{\mathfrak{B}}_{\mathfrak{C}} (B)\right) \mathbf{v} \right]_{\mathfrak{C}} = [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB)\mathbf{v}]_{\mathfrak{C}} \Longrightarrow  (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) ) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v}$$. Therefore, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear map.
 
 On the other hand, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}$$ is a linear transformation. In other words, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M + cL) = \Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) + c \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L)$$ where $$M, L \in \mathcal{L}(V,W)$$ and $$c \in F$$. However, it suffices to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M + cL) \mathbf{e}_j= (\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) + c \Psi^{\mathfrak{B}}_{\mathfrak{C}}(L))\mathbf{e}_j$$ for $$j=1, \ldots,n$$ where $$\mathbf{e}_j \in \mathbb{R}^n$$ is a standard basis for $$\mathbb{R}^n$$ and only the $$\text{j}^{\text{th}}$$ component is 1 and zero for the others.
  
@@ -117,14 +117,14 @@ $$
 
 Now, we want to show that $$(\Phi^{\mathfrak{B}}_{\mathfrak{C}} \circ \Psi^{\mathfrak{B}}_{\mathfrak{C}})L = L$$ for every $$L \in \mathcal{L}(V,W)$$.
 $$(\Phi^{\mathfrak{B}}_{\mathfrak{C}} \circ \Psi^{\mathfrak{B}}_{\mathfrak{C}})L = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(\Psi^{\mathfrak{B}}_{\mathfrak{C}}(L)) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}([L]^{\mathfrak{B}}_{\mathfrak{C}})$$.
-By the linear extension theorem, it suffices to show that $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}([L]^{\mathfrak{B}}_{\mathfrak{C}})\mathbf{v}_j = L\mathbf{v}_j$$ for all $$j=1,\ldots, n$$.  Since $$[\Phi^{\mathfrak{B}}_{\mathfrak{C}}([L]^{\mathfrak{B}}_{\mathfrak{C}})\mathbf{v}_j ]_{\mathfrak{C}} = [L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} = [L\mathbf{v}_j]_{\mathfrak{C}}$$ and $$[\cdot]_{\mathfrak{C}}$$ is bijective, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}([L]^{\mathfrak{B}}_{\mathfrak{C}})\mathbf{v}_j = L\mathbf{v}_j$$.
+By the linear extension theorem, it suffices to show that $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}([L]^{\mathfrak{B}}_{\mathfrak{C}})\mathbf{v}_j = L\mathbf{v}_j$$ for all $$j=1,\ldots, n$$.  Since $$\left[\Phi^{\mathfrak{B}}_{\mathfrak{C}}([L]^{\mathfrak{B}}_{\mathfrak{C}})\mathbf{v}_j \right]_{\mathfrak{C}} = [L]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} = \left[L\mathbf{v}_j\right]_{\mathfrak{C}}$$ and $$[\cdot]_{\mathfrak{C}}$$ is bijective, $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}\left([L]^{\mathfrak{B}}_{\mathfrak{C}}\right)\mathbf{v}_j = L\mathbf{v}_j$$.
 
 
-Similarly, we want to show that $$(\Psi^{\mathfrak{B}}_{\mathfrak{C}} \circ \Phi ^{\mathfrak{B}}_{\mathfrak{C}})A= A$$ for all $$A \in \mathfrak{M}_{m\times n}(F)$$.
+Similarly, we want to show that $$\left(\Psi^{\mathfrak{B}}_{\mathfrak{C}} \circ \Phi ^{\mathfrak{B}}_{\mathfrak{C}}\right)A= A$$ for all $$A \in \mathfrak{M}_{m\times n}(F)$$.
 $$
 \begin{align}
     \begin{split}
-        \Psi^{\mathfrak{B}}_{\mathfrak{C}}(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A))\mathbf{e}_j  &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)]^{\mathfrak{B}}_{\mathfrak{C}} \mathbf{e}_j \\
+        \Psi^{\mathfrak{B}}_{\mathfrak{C}}\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\right)\mathbf{e}_j  &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)]^{\mathfrak{B}}_{\mathfrak{C}} \mathbf{e}_j \\
         &=[\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)]^{\mathfrak{B}}_{\mathfrak{C}}[\mathbf{v}_j]_{\mathfrak{B}} \\
         &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)\mathbf{v}_j]_{\mathfrak{C}} \\
         &= A[\mathbf{v}_j]_{\mathfrak{B}} \\
