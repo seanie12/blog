@@ -168,7 +168,9 @@ $$\begin{align}
 \end{align}
 $$
 
-Since $$[\cdot]_{\mathfrak{C}}$$ is bijective,  $$(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B)) \mathbf{u} = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)\mathbf{u}$$. Therefore $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)$$.
+Since $$[\cdot]_{\mathfrak{C}}$$ is bijective,  $$\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)\right) \mathbf{u} = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)\mathbf{u}$$. 
+
+$$\therefore\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB).$$
 
 
 $$\tag*{$\square$}$$
