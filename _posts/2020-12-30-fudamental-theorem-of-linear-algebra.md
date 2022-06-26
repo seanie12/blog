@@ -84,7 +84,9 @@ $$\begin{align}\begin{split}\Psi^{\mathfrak{B}}_{\mathfrak{C}}: \mathcal{L}(V,W)
 
 2. $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M \circ L) \text{ where } M \in \mathcal{L}(V,W) \text{ and } L \in \mathcal{L}(U,V)$$.
 
+3. $$\Phi^\mathfrak{B}_\mathfrak{C}(A)\circ\Phi^\mathfrak{A}_\mathfrak{B}(B)=\Phi^\mathfrak{A}_\mathfrak{C}(BA)$$ where $$A\in\mathfrak{M}_{m\times n}(F), B\in\mathfrak{M}_{n\times k}(F).$$
 <*proof*>
+
 Let $$A, B \in \mathfrak{M}_{m\times n }(F), c \in F$$ be given. We want to show that $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)$$.  i.e. $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v} = \{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) \}  \mathbf{v} \text{ for all } \mathbf{v} \in V$$.
 
 $$\begin{align}
@@ -133,7 +135,9 @@ $$
 \end{align}
 $$
 
-Lastly, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M \circ L)$$ and $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)$$ where $$M \in \mathcal{L}(V,W), L\in \mathcal{L}(U,V), A\in \mathfrak{M}_{m\times n}(F), B \in \mathfrak{M}_{n\times k}(F)$$.
+Lastly, we want to show that $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M \circ L)$$ and $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)$$ where $$M \in \mathcal{L}(V,W), L\in \mathcal{L}(U,V), A\in \mathfrak{M}_{m\times n}(F), B \in \mathfrak{M}_{n\times k}(F)$$.
+
+It is suffices to show that every $j$-th column of each matrix is the same. In other words,  $$\left[\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L)\right]^j = \left[\Psi^{\mathfrak{A}}_{\mathfrak{C}}(M\circ L)\right]^j.$$
 
 $$
 \begin{align}
@@ -152,10 +156,11 @@ $$
 
 Equation \ref{eq:1} holds for all $$j=1, \ldots, k$$. Therefore $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M\circ L)$$.
 
+Let $\mathbf{u}\in U$ be given.
 $$\begin{align}
     \begin{split}
-        (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B)) \mathbf{u} &= \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)(\Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)\mathbf{u} ) \\
-        [(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B)) \mathbf{u}]_{\mathfrak{C}} &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)(\Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)\mathbf{u} )]_{\mathfrak{C}} \\
+        (\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)) \mathbf{u} &= \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)(\Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)\mathbf{u} ) \\
+        [(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)) \mathbf{u}]_{\mathfrak{C}} &= [\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A)(\Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)\mathbf{u} )]_{\mathfrak{C}} \\
         &= A[\Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)\mathbf{u}]_{\mathfrak{B}} \\
         &=AB[\mathbf{u}]_{\mathfrak{A}} \\
         &= [\Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)\mathbf{u}]_{\mathfrak{C}}
@@ -163,7 +168,8 @@ $$\begin{align}
 \end{align}
 $$
 
-Since $$[\cdot]_{\mathfrak{C}}$$ is bijective,  $$(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B)) \mathbf{u} = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)\mathbf{u}$$ for all $$\mathbf{u} \in U$$. Therefore $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)$$.
+Since $$[\cdot]_{\mathfrak{C}}$$ is bijective,  $$(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{C}}(B)) \mathbf{u} = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)\mathbf{u}$$. Therefore $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)$$.
+
 
 $$\tag*{$\square$}$$
 
