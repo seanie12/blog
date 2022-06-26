@@ -170,7 +170,7 @@ $$
 
 Since $$[\cdot]_{\mathfrak{C}}$$ is bijective,  $$\left(\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B)\right) \mathbf{u} = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB)\mathbf{u}$$. 
 
-$$\therefore\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB).$$
+$\therefore\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) \circ \Phi^{\mathfrak{A}}_{\mathfrak{B}}(B) = \Phi^{\mathfrak{A}}_{\mathfrak{C}}(AB).$
 
 
 $$\tag*{$\square$}$$
