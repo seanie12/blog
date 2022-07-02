@@ -86,6 +86,7 @@ $$\begin{align}\begin{split}\Psi^{\mathfrak{B}}_{\mathfrak{C}}: \mathcal{L}(V,W)
 2. $$\Psi^{\mathfrak{B}}_{\mathfrak{C}}(M) \cdot \Psi^{\mathfrak{A}}_{\mathfrak{B}}(L) = \Psi^{\mathfrak{A}}_{\mathfrak{C}}(M \circ L) \text{ where } M \in \mathcal{L}(V,W) \text{ and } L \in \mathcal{L}(U,V)$$.
 
 3. $$\Phi^\mathfrak{B}_\mathfrak{C}(A)\circ\Phi^\mathfrak{A}_\mathfrak{B}(B)=\Phi^\mathfrak{A}_\mathfrak{C}(BA)$$ where $$A\in\mathfrak{M}_{m\times n}(F), B\in\mathfrak{M}_{n\times k}(F).$$
+
 <*proof*>
 
 Let $$A, B \in \mathfrak{M}_{m\times n }(F), c \in F$$ be given. We want to show that $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) = \Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B)$$.  i.e. $$\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A + cB) \mathbf{v} = \{\Phi^{\mathfrak{B}}_{\mathfrak{C}}(A) + c \cdot \Phi^{\mathfrak{B}}_{\mathfrak{C}}(B) \}  \mathbf{v} \text{ for all } \mathbf{v} \in V$$.
