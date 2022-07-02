@@ -45,8 +45,8 @@ $$
 \end{split}
 \end{align}
 $$
-Now, we want to show that the function is one-to-one. Let $$\mathbf{v}_1, \mathbf{v}_2 \in V$$ be given. Suppose $$[\mathbf{v}_1]_{\mathfrak{B}} = [\mathbf{v}_2]_{\mathfrak{B}}.$$ Put $$\mathbf{v}_1 = \sum_{i=1}^n a_i \mathbf{v}_i \text{ and } \mathbf{v}_2 = \sum_{i=1}^n b_i \mathbf{v}_i$$. Then $$(a_1, \ldots, a_n) = (b_1, \ldots, b_n)$$. Therefore, $$\mathbf{v}_1 = \mathbf{v}_2$$, i.e. the function is one-to-one.
-Lastly, we want to show that the function is onto. Let $$(a_1, \ldots, a_n)$$ be given.  Define $$\mathbf{v} := \sum_{i=1}^n a_i \mathbf{v}_i$$. Clearly, $$\mathbf{v} \in V$$. Therefore, the function is onto.
+Now, we want to show that the function is one-to-one. Let $$\mathbf{u}, \mathbf{v} \in V$$ be given. Suppose $$[\mathbf{u}]_{\mathfrak{B}} = [\mathbf{v}]_{\mathfrak{B}}.$$ Put $$\mathbf{u} = \sum_{i=1}^n a_i \mathbf{v}_i \text{ and } \mathbf{v} = \sum_{i=1}^n b_i \mathbf{v}_i$$. Then $$(a_1, \ldots, a_n) = (b_1, \ldots, b_n)$$. Therefore, $$\mathbf{u} = \mathbf{v}$$, i.e. the function is one-to-one.
+Lastly, we want to show that the function is onto. Let $$(a_1, \ldots, a_n)$$ be given.  Define $$\mathbf{v} := \sum_{i=1}^n a_i \mathbf{v}_i$$. Clearly, $$(a_1,\ldots, a_n) = [\mathbf{v}]_\mathfrak{B} \text{im}\left( [\cdot]_\mathfrak{B}\right)$$. Therefore, the function is onto.
 
 $$\tag*{$\square$}$$
  
@@ -55,6 +55,7 @@ Let $L:V\rightarrow W$ be a linear map between vector spaces $V,W$ and $$\mathfr
 $$[L]^{\mathfrak{B}}_{\mathfrak{C}} [\mathbf{v}]_{\mathfrak{B}} = [L\mathbf{v}]_{\mathfrak{C}}$$ for all $\mathbf{v} \in V$.
 
 <*proof*>
+
 Put $\mathbf{v} = \sum_{i=1}^n a_i \mathbf{v}_i$. Since $\mathfrak{B}$ is a basis for $V$, all $a_i$ are unique. 
 $$
 \begin{align}
