@@ -46,6 +46,7 @@ $$
 \end{align}
 $$
 Now, we want to show that the function is one-to-one. Let $$\mathbf{u}, \mathbf{v} \in V$$ be given. Suppose $$[\mathbf{u}]_{\mathfrak{B}} = [\mathbf{v}]_{\mathfrak{B}}.$$ There exist unique $$a_i, b_i$$ for $$i=1,\ldots, n$$ such that  $$\mathbf{u} = \sum_{i=1}^n a_i \mathbf{v}_i \text{ and } \mathbf{v} = \sum_{i=1}^n b_i \mathbf{v}_i$$. Then $$(a_1, \ldots, a_n) = (b_1, \ldots, b_n)$$. Therefore, $$\mathbf{u} = \mathbf{v}$$, i.e. the function is one-to-one.
+
 Lastly, we want to show that the function is onto. Let $$(a_1, \ldots, a_n)$$ be given.  Define $$\mathbf{v} := \sum_{i=1}^n a_i \mathbf{v}_i$$. Clearly, $$(a_1,\ldots, a_n) = [\mathbf{v}]_\mathfrak{B} \text{im}\left( [\cdot]_\mathfrak{B}\right)$$. Therefore, the function is onto.
 
 $$\tag*{$\square$}$$
