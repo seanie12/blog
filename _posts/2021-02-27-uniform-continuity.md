@@ -124,16 +124,29 @@ Let $K\subset\mathbb{R}$ be a compact set and let $f:K\to\mathbb{R}$ be a contin
 Let $\epsilon >0$ be given. Since $f$ is continuous on $K$, for every $p\in K$, there is a $\delta_p >0$ such that 
 $$
 \begin{align}
-|x-p|<2\delta_p \Rightarrow |f(x)-f(p)| <\frac{\epsilon}{2} 
+|x-p|<\delta_p \Rightarrow |f(x)-f(p)| <\frac{\epsilon}{2} 
 \end{align}
 $$
-Now, $$\{N_{\delta_p} (p): p\in K\}$$ is an open cover of $K$. Since $K$ is compact, there are $p_1,\ldots, p_n \in K$ such that 
+Now, $$\{N_{\delta_p/2} (p): p\in K\}$$ is an open cover of $K$. Since $K$ is compact, there are $p_1,\ldots, p_n \in K$ such that 
 $$
 \begin{align}
-K \subset \cup_{i=1}^n N_{\delta_{p_i}} (p_i)
+K \subset \bigcup_{i=1}^n N_{\delta_{p_i}/2} (p_i)
 \end{align}
 $$
-Take $$\delta :=\min\{\delta_{p_1},\ldots, \delta_{p_n}\} >0$$. Suppose that $x,y\in K$with $|x-y|<\delta$. Then $x\in N_{\delta_{p_i}} (p_i)$ for some $i=1,\ldots, n$. That is $|x-y|<\delta \leq \delta_{p_i}$. So, $x,y\in N_{2\delta_{p_i}}(p_i)$. Thus,
+Take $$\delta :=\min\{\delta_{p_1}/2,\ldots, \delta_{p_n}/2\} >0$$. Suppose that $x,y\in K$with $|x-y|<\delta$. Then $x\in N_{\delta_{p_k}/2} (p_k)$ for some $1 \leq k\leq n$. 
+
+$$
+\begin{align}
+\begin{split}
+|p_k -y| &< |p_k -x| + |x-y| \\
+&<\frac{\delta_{p_k}}{2} + \delta \\
+&<\frac{\delta_{p_k}}{2} + \frac{\delta_{p_k}}{2} \\
+&= \delta_{p_k}
+\end{split}
+\end{align}
+$$
+
+That is $|x-y|<\delta < \delta_{p_i}$. So, $x,y\in N_{\delta_{p_i}}(p_i)$. Thus,
 $$
 \begin{align}
 |f(x) - f(y)| \leq |f(x) - f(p_i)| + |f(y)-f(p_i)| < \frac{\epsilon}{2} +\frac{\epsilon}{2} =\epsilon
