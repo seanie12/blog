@@ -132,7 +132,7 @@ $$
 Since $f$ is continuous at $c$, there is $\delta >0$ such that 
 $$
 \begin{align}
-x_n \in N_\delta (c) \cap [a,b] \Rightarrow f(x) -\epsilon_0 < f(x) < f(c) + \epsilon_0
+x \in N_\delta (c) \cap [a,b] \Rightarrow f(c) -\epsilon_0 < f(x) < f(c) + \epsilon_0
 \end{align}
 $$
 Since $f(c) \lneq \gamma, c\neq b$. Then $(c,b]\cap N_\delta (c) \neq \emptyset$. If $x\in (c,b]$ with $c<x<c+\delta$, then 
