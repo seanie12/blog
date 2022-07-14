@@ -100,7 +100,51 @@ Since $f(K)$ is bounded, $M < +\infty$. Since $f(K)$ is closed, $M\in f(K)$. So,
 
 $$\tag*{$\square$}$$
 
+## Theorem 4.2.10
+Let $X,Y$ be metric spaces and let $f:X\to Y$ be a continuous function. If $E\subset X$ is connected, then $f(E)$ is connected.
 
+<*Proof*>
+Proof by contraposition. Suppose that $f(E)$ is disconnected, i.e., $f(E)=A\cup B$ where $\overline{A}\cup B =\emptyset$ and $A\cup \overline{B}=\emptyset$. Consider,
+
+$$
+\begin{align*}
+G&=f^{-1}(A)\cap E\\
+H&=f^{-1}(B)\cap E
+\end{align*}
+$$
+
+Since 
+
+$$
+\begin{align*}
+(f^{-1}(A)\cap E )\cup (f^{-1}(B)\cap E)&=E\cap (f^{-1}(A)\cup f^{-1}(B))\\
+&=E\cap (f^{-1}(A\cup B))\\
+&=f^{-1}(A)\cup f^{-1}(B), 
+\end{align*}
+$$ 
+
+$E=G\cup H.$ By definition of $G$,
+
+$$
+\begin{align*}
+G=f^{-1}(A)\cap E \subset f^{-1}(A) \subset f^{-1}(\overline{A}).
+\end{align*}
+$$
+
+Since $f$ is continuous, $f^{-1}(\overline{A}^c)$ is open in $X$. We know that $f^{-1}(S^c)=(f^{-1}(S))^{-1}$. Thus, $f^{-1}(\overline{A}^c)$ is closed, which implies that $\overline{G}\subset f^{-1}(\overline{A}) (\because S_1 \subset S_2 \Rightarrow \overline{S}_1\subset \overline{S}_2).$ Similarly, $H\subset f^{-1}(B)$.
+
+Then, we get the following equation
+$$
+\begin{align*}
+\overline{G}\cap H &= f^{-1}\left(\overline{A}\right)\cap f^{-1}(B) \\
+&=f^{-1}\left(\overline{A}\cap B\right) \\
+&=\emptyset
+\end{align*}
+$$
+
+Similarly, we get $G\cap \overline{H}=\emptyset$. Thus, $E$ is disconnected. By contraposition, we show that $f(E)$ is connected.
+
+$$\tag*{$\square$}$$
 ## Theorem 4.2.11 (Intermediate Value Theorem)
 Let $f: [a,b]\to\mathbb{R}$ be a continuous function with $f(a) < f(b)$. <br /> If $\gamma \in\mathbb{R}$ s.t. $f(a)<\gamma <f(b)$, then there is $c\in (a,b)$ s.t. $f(c) =\gamma$. 
 
@@ -148,6 +192,13 @@ $$
 Since $x >c =\sup A, x \not\in  A$ That is $f(x) > \gamma$. But it is a contradiction because $c$ is supremum of $A$.
 
 $\therefore f(c) = \gamma$
+
+$$\tag*{$\square$}$$
+
+Another proof as a corollary to Theorem 4.2.10.
+
+<*Proof*>
+Since $[a,b]$ is connected, $f([a,b])$ is connected. By [Theorem 3.1.18](https://seanie12.github.io/blog/analysis/open-close-2/), $(f(a), f(b))\subset f([a,b])=\text{im}f$. Thus, for any $c\in (f(a), f(b)),$ there is some $x\in [a,b]$ such that $c=f(x)$. Since $c\neq f(a)$ and $c\neq f(b)$, $x\in (a,b)$.
 
 $$\tag*{$\square$}$$
 
