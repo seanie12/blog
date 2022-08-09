@@ -125,6 +125,26 @@ Then $$I_a (x) := I(x-a) = \begin{cases}
 1\quad (x\geq a)
 \end{cases}
 $$
+
+## Theorem
+Let $f: (a,b)\to\mathbb{R}$ be a monotone function. Then the cardinality for the set of discontinuities is at most countable.
+
+<*Proof*>
+
+Say $f$ is discontinuous at some point $x\in (a,b)$. Then by Theorem 4.4.7, $f(x^-)<f(x^+)$. Otherwise, $f$ is continuous at $x$. By density of $\mathbb{Q}$, there exists $r(x)\in\mathbb{Q}$ such that 
+
+$$
+\begin{equation*}
+r(x)\in \left( f(x^-), f(x^+)\right).
+\end{equation*}
+$$
+
+Further, if $x_1 < x_2$, then $f(x^+_1)\leq f(x^-_2)$ by Theorem 4.4.7. So, $r(x_1)\neq r(x_2)$.
+
+$\therefore$ The number of discontinuity is less than the cardinality of $\mathbb{Q}$.
+
+$$\tag*{$\square$}$$
+
 ## Cauchy Criterion
 Suppose that $\sum_{k=1}^\infty a_k$ converges, where $a_k\in\mathbb{R}$ for all $k=1,2,\ldots$. Since $s_n= \sum_{k=1}^n a_k$ is convergent sequence in $\mathbb{R}$, it  is Cauchy sequence. So for all $\epsilon >0, \exists N\in\mathbb{N}$ such that,
 $$
