@@ -79,19 +79,19 @@ Furthermore, if $p,q\in I$ with $p<q$, then $f(p+) \leq f(q-)$.
 
 Let $p\in I$ be given. Define 
 $$
-E:=\{f(x): x<p\}.
+E:=\{f(x): x<p, x\in I\}.
 $$
-Since $f$ is monotone increasing, $E$ is bounded above by $f(p)$. Since $I$ is open, there exists a $\epsilon_0 >0$ such that $N_{\epsilon_0} (p) \subset I$, i.e., there is $x\in (p-\epsilon_0, p)$. Thus $E\neq \emptyset$. By the least upper bound property, $A=\sup E$.
+Since $f$ is monotone increasing, $E$ is bounded above by $f(p)$. Since $I$ is open, there exists a $\epsilon_0 >0$ such that $N_{\epsilon_0} (p) \subset I$, i.e., there is $x\in (p-\epsilon_0, p)$. Thus $E\neq \emptyset$. By the least upper bound property, $A=\sup E$ exists.
 
-Now we want to show that $A = f(p-)$. <br /> Let $\epsilon >0$ be given. Then there is $x_i \in I$ with $x_0 <p$ s.t. $A-\epsilon < f(x_0) \leq A$. For $x_0 < x< p,$
+Now we want to show that $A = f(p-)$. <br /> Let $\epsilon >0$ be given. Then there is $x_0 \in I$ with $x_0 <p$ s.t. $A-\epsilon < f(x_0) \leq A$ since $A$ is the least upper bound of $E$. For $x_0 < x< p,$
 $$
 \begin{align}
-A-\epsilon< f(x_0) \leq f(x) \leq A < A < A+\epsilon
+A-\epsilon< f(x_0) \leq f(x) \leq A < A+\epsilon
 \end{align}
 $$
 $\therefore |f(x)-A| < \epsilon$ for all $x_0<x<p$. <br /> $\therefore f(p-) = A$
 
-Similarly, $$S:=\{f(x): x<p \}$$. Since $f$ is monotone increasing, $S$ is bounded below by $f(p)$. Since $I$ is open, there is $\epsilon_0>0$ such that $N_{\epsilon_0} (p) \subset I$, i.e. there is $x\in (p, p+\epsilon_0)$. Thus, $S\neq \emptyset$. By the least upper bound property, $B=\inf S$.
+Similarly, $$S:=\{f(x): x>p, p\in I \}$$. Since $f$ is monotone increasing, $S$ is bounded below by $f(p)$. Since $I$ is open, there is $\epsilon_0>0$ such that $N_{\epsilon_0} (p) \subset I$, i.e. there is $x\in (p, p+\epsilon_0)$. Thus, $S\neq \emptyset$. By the least upper bound property, $B:=\inf S$ exists.
 
 Now we want to show that $B=f(p+)$. <br /> Let $\epsilon >0$ be given. There is $x_0 \in I$ with $x_0 >p$ such that $B\leq f(x_0) < B +\epsilon$. For $p<x<x_0$,
 $$
