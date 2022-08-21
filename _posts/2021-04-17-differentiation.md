@@ -224,7 +224,15 @@ $$
 \end{split}
 \end{align}
 $$
-Then $(f\cdot \frac{1}{g})^\prime =  \frac{f^\prime(x)g(x) - f(x)g^\prime(x)}{\{g(x)\}^2}$
+
+Then,
+
+$$
+\begin{align*}
+(f\cdot \frac{1}{g})^\prime =  \frac{f^\prime(x)g(x) - f(x)g^\prime(x)}{\{g(x)\}^2}
+\end{align*}
+$$
+
 $$\tag*{$\square$}$$
 
 ## Theorem 5.1.6 (Chain Rule)
