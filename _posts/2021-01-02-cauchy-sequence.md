@@ -55,7 +55,7 @@ $$
 M :=\max\{|p_1|, \ldots, |p_{N-1}|, |p_N|+1\}
 \end{align}$$
 
-$$\therefore |p_n| <= M \text{ for all } n\in\mathbb{N}.$$ 
+$$\therefore |p_n| \leq M \text{ for all } n\in\mathbb{N}.$$ 
 
 $$\tag*{$\square$}$$
 
@@ -89,11 +89,25 @@ $$\tag*{$\square$}$$
 We say that $\mathbb{R}$ is complete because theorem2 holds. In general, if $(X,d)$ is metric space, then we say that $$(X,d)$$ is complete if every Cauchy sequence in $X$ converges in $X$.
 
 ## Theorem 4
-If every Cauchy sequence in $\mathbb{R}$ converges, then every nonempty subsuet of $\mathbb{R}$ is bounded above has a supremum.
+If every Cauchy sequence in $\mathbb{R}$ converges, then every nonempty subsuet of $\mathbb{R}$ that is bounded above has a supremum.
 
 <*proof*>
-Let $A$ be a bounded nonempty subset of $\mathbb{R}$. If $|A|$ is finite, it is trivial case. Otherwise, suppose that $|A|$ is infinite. Let $b_1$ be an upper bound of $A$. Then, there is $a_1 \in A$ such that $a_1 < b_1$. Define $m_1 :=\frac{a_1+b_1}{2}.$ If $m_1$ is an upper bound of $A$, put $b_2 :=m1$ and $a_2 :=a_1$. Otherwise, $a_2 := m_1, b_2 :=b1.$ Repeat this process: If $m_n:=\frac{a_n+b_n}{2}$ is an upper bound of $A$, put $b_{n+1} := m_n, a_{n+1} := a_n.$ Otherwise, $b_{n+1} := b_n, a_{n+1} :=m_n$. Then $$\{a_n\}, \{b_n\}$$ are bounded and monotone increasing and decreasing sequence, respectively.
-Let $\epsilon>0$ be given. Since $$|b_n-a_n| \leq \frac{b_1 -a_1}{2^{n-1}}$$, $$|b_n -a_n| < \epsilon \text{ if } n \geq N \text{ with } N\in \mathbb{N} \text{ such that }\frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Therefore, $$\lim_{n\to\infty}(b_n-a_n) =0.$$ i.e. $$\{b_n -a_n\}$$ is a Cauchy sequence, by theorem 1. Suppose $m\geq n$. Then $$|a_m - a_n|\leq |b_n - a_n| < \epsilon \text{ for } n\geq N \text{ s.t. } \frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Similarly, $$|b_m-b_n|\leq |a_n-b_n| < \epsilon.$$ Thus, $$\{a_n\}, \{b_n\}$$ are Cauchy sequence. 
+
+Let $A$ be a bounded nonempty subset of $\mathbb{R}$. If $|A|$ is finite, it is trivial case. Otherwise, suppose that $|A|$ is infinite. Let $b_1$ be an upper bound of $A$. Then, there is $a_1 \in A$ such that $a_1 < b_1$. Define $m_1 :=\frac{a_1+b_1}{2}.$ If $m_1$ is an upper bound of $A$, put $b_2 :=m_1$ and $a_2 :=a_1$. Otherwise, $a_2 := m_1, b_2 :=b1.$ Repeat this process: If $m_n:=\frac{a_n+b_n}{2}$ is an upper bound of $A$, put $b_{n+1} := m_n, a_{n+1} := a_n.$ Otherwise, $b_{n+1} := b_n, a_{n+1} :=m_n$. 
+
+Then $$\{a_n\}, \{b_n\}$$ are bounded and monotone increasing and decreasing sequence, respectively. By monotone convergence theorem, 
+
+$$
+\begin{align*}
+\lim_{n\to\infty} a_n &= a \\
+\lim_{n\to\infty} b_n &= b
+\end{align*}
+$$
+
+
+Let $\epsilon>0$ be given. Since $$|b_n-a_n| = \frac{b_1 -a_1}{2^{n-1}}$$, $$|b_n -a_n| < \epsilon \text{ if } n \geq N \text{ with } N\in \mathbb{N} \text{ such that }\frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Therefore, $$\lim_{n\to\infty}(b_n-a_n) =0.$$ i.e. $$\{b_n -a_n\}$$ is a Cauchy sequence, by theorem 1. 
+
+Suppose $m\geq n$. Then $$|a_m - a_n|\leq |b_n - a_n| < \epsilon \text{ for } n\geq N \text{ s.t. } \frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Similarly, $$|b_m-b_n|\leq |a_n-b_n| < \epsilon.$$ Thus, $$\{a_n\}, \{b_n\}$$ are Cauchy sequence. 
 
 $$\therefore b=\lim_{n\to\infty}b_n = \lim_{n\to\infty}(b_n-a_n) + \lim_{n\to\infty}a_n = \lim_{n\to\infty}a_n=a.$$ 
 
