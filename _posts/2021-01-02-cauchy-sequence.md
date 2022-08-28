@@ -175,5 +175,12 @@ $$\tag*{$\square$}$$
 
 
 ## Theorem
-Let $(K_n)_{n=1}^\infty$ be a sequence of nested sets in metric space $X$. If $K_n$ is compact and $\displaystyle{\lim_{n\to\infty} \text{diam}(K_n)=0}$, then $\bigcap_{n=1}^\infty K_n$ consist of exactly one point.
+Let $$(K_n)_{n=1}^\infty$$ be a sequence of nested sets in metric space $$X$$. If $$K_n$$ is compact and $$\displaystyle{\lim_{n\to\infty} \text{diam}(K_n)=0}$$, then $$\bigcap_{n=1}^\infty K_n$$ consist of exactly one point.
 
+<*Proof*>
+
+Since $K_n$  are nested compact sets, every finite intersection of $K_n$ is not empty. By previous [Theorem](https://seanie12.github.io/blog/analysis/compact/),  we know that $K:=\bigcap_{n=1}^\infty K_n$ is not empty. Suppose that there are two distinct points $p_1, p_2 \in \bigcap_{n=1}^\infty K_n$.
+
+Since $d(p_1, p_2)>0, \text{diam} K >0$. But for each $n\in\mathbb{N}, K_n \supset K$, so that $\text{diam}K_n \geq \text{diam}K >0$. This contradicts the assumption that $\displaystyle{\lim_{n\to\infty} \text{diam}(K_n)=0}$.
+
+$$\tag*{$\square$}$$
