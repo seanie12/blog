@@ -105,7 +105,7 @@ $$
 $$
 
 
-Let $\epsilon>0$ be given. Since $$|b_n-a_n| = \frac{b_1 -a_1}{2^{n-1}}$$, $$|b_n -a_n| < \epsilon \text{ if } n \geq N \text{ with } N\in \mathbb{N} \text{ such that }\frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Therefore, $$\lim_{n\to\infty}(b_n-a_n) =0.$$ i.e. $$\{b_n -a_n\}$$ is a Cauchy sequence, by theorem 1. 
+Let $$\epsilon>0$$ be given. Since $$|b_n-a_n| = \frac{b_1 -a_1}{2^{n-1}}$$, $$|b_n -a_n| < \epsilon \text{ if } n \geq N \text{ with } N\in \mathbb{N} \text{ such that }\frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Therefore, $$\lim_{n\to\infty}(b_n-a_n) =0.$$ i.e. $$\{b_n -a_n\}$$ is a Cauchy sequence, by theorem 1. 
 
 Suppose $m\geq n$. Then $$|a_m - a_n|\leq |b_n - a_n| < \epsilon \text{ for } n\geq N \text{ s.t. } \frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Similarly, $$|b_m-b_n|\leq |a_n-b_n| < \epsilon.$$ Thus, $$\{a_n\}, \{b_n\}$$ are Cauchy sequence. 
 
