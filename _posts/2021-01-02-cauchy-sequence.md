@@ -131,7 +131,7 @@ $$
 $$
 
 ## Remark
-Suppose that $(p_n)^\infty_{n=1}$ is a sequence. Let $$E_N := \{ p_N, p_{N+1},\ldots \}$$. Then the sequence $(p_n)_{n=1}^\infty$ is a Cauchy sequence if and only if $\displaystyle{\lim_{N\to\infty}\text{diam}E_N}=0$
+Suppose that $(p_n)^\infty_{n=1}$ is a sequence. Let $$E_N := \{ p_N, p_{N+1},\ldots \}$$. Then the sequence $$(p_n)_{n=1}^\infty$$ is a Cauchy sequence if and only if $$\displaystyle{\lim_{N\to\infty}\text{diam}E_N}=0$$
 
 Given any $\epsilon >0$, there is $M\in\mathbb{N}$ such that $N\geq M \Rightarrow \text{diam}E_N=\sup_{n,m \geq M} d(p_n, p_m)<\epsilon$, which is equivalent to say that the sequence is Cauchy.
 
