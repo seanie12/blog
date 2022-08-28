@@ -135,3 +135,40 @@ Suppose that $(p_n)^\infty_{n=1}$ is a sequence. Let $$E_N := \{ p_N, p_{N+1},\l
 
 Given any $\epsilon >0$, there is $M\in\mathbb{N}$ such that $N\geq M \Rightarrow \text{diam}E_N=\sup_{n,m \geq M} d(p_n, p_m)<\epsilon$, which is equivalent to say that the sequence is Cauchy.
 
+## Theorem
+Let $E$ be a subset of metric space $X$. Then diam$\overline{E} = E$.
+
+<*Proof*>
+Pick any $p,q\in E$. For any $\epsilon >0$, there are $p^\prime, q^\prime\in E$ such that 
+
+$$
+\begin{align*}
+d(p,p^\prime) < \frac{\epsilon}{2}, \quad d(q,q^\prime) < \frac{\epsilon}{2} 
+\end{align*}
+$$
+
+If $p\in E^\prime$, there is $p^\prime \in N^\prime_{\frac{\epsilon}{2}}(p)\cap E\neq \empty$. Otherwise we can take $p^\prime :=p$.
+
+With triangular inequality,
+
+$$
+\begin{align*}
+d(p,q) &\leq  d(p, p^\prime) + d(p^\prime, q) \\
+&\leq d(p,p^\prime) + d(q^\prime, q) + d(p^\prime, q^\prime) \\
+&\leq d(p^\prime,q^\prime) + \epsilon
+\end{align*}
+$$
+
+By the definition of diameter of $E$, 
+
+$$
+\begin{align*}
+d(p,q) \leq d(p^\prime, q^\prime) + \epsilon \leq \text{diam}E + \epsilon
+\end{align*}
+$$
+
+Since $\text{diam}\overline{E}$ is the least upper bound of $$\{d(p,q)\mid p,q\in \overline{E}\}$$, $d(p,q) \leq \text{diam}\overline{E}\leq \text{diam}E + \epsilon$. Since the choice of $\epsilon$ is arbitrary, $\text{diam}\overline{E} \leq \text{diam} E$. It is trivial that $\text{diam}\overline{E} \geq \text{diam}E$.
+
+$\therefore \text{diam}\overline{E} = \text{diam}E$.
+
+$$\tag*{$\square$}$$
