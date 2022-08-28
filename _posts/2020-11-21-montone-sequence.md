@@ -58,7 +58,7 @@ a_n \leq a_{n+m} \leq b_{n+m} \leq b_m
 $$
 Thus, $a_n \leq b_m$ for all $m\in\mathbb{N}$. Since $$\{a_n\}$$ is monotone increasing, by the monotone convergence theorem, we know that $$\{a_n\}$$ converges to  $$a=\sup\{a_n: n\in\mathbb{N}\}$$. Now, note that $a\leq b_m$ for all $m\in\mathbb{N}$. So, we have $a\in I_m$ for all $m\in\mathbb{N}$.
 
-$\therefore a\in \cap_{n=1}^\infty I_m$
+$\therefore a\in \bigcap_{n=1}^\infty I_m$
 $$\tag*{$\square$}$$
 
 ## Examples 2.3.5
