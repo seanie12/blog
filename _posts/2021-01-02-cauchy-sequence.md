@@ -107,7 +107,7 @@ $$
 
 Let $$\epsilon>0$$ be given. Since $$\lvert b_n-a_n\rvert = \frac{b_1 -a_1}{2^{n-1}}$$, $$\vert b_n -a_n\rvert < \epsilon \text{ if } n \geq N \text{ with } N\in \mathbb{N} \text{ such that }\frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Therefore, $$\lim_{n\to\infty}(b_n-a_n) =0.$$ i.e. $$\{b_n -a_n\}$$ is a Cauchy sequence, by theorem 1. 
 
-Suppose $m\geq n$. Then $$|a_m - a_n|\leq |b_n - a_n| < \epsilon \text{ for } n\geq N \text{ s.t. } \frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Similarly, $$|b_m-b_n|\leq |a_n-b_n| < \epsilon.$$ Thus, $$\{a_n\}, \{b_n\}$$ are Cauchy sequence. 
+Suppose $$m\geq n$$. Then $$|a_m - a_n|\leq |b_n - a_n| < \epsilon \text{ for } n\geq N \text{ s.t. } \frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Similarly, $$|b_m-b_n|\leq |a_n-b_n| < \epsilon.$$ Thus, $$\{a_n\}, \{b_n\}$$ are Cauchy sequence. 
 
 $$\therefore b=\lim_{n\to\infty}b_n = \lim_{n\to\infty}(b_n-a_n) + \lim_{n\to\infty}a_n = \lim_{n\to\infty}a_n=a.$$ 
 
@@ -172,3 +172,8 @@ Since $\text{diam}\overline{E}$ is the least upper bound of $$\{d(p,q)\mid p,q\i
 $\therefore \text{diam}\overline{E} = \text{diam}E$.
 
 $$\tag*{$\square$}$$
+
+
+## Theorem
+Let $(K_n)_{n=1}^\infty$ be a sequence of nested sets in metric space $X$. If $K_n$ is compact and $\displaystyle{\lim_{n\to\infty} \text{diam}(K_n)=0}$, then $\bigcap_{n=1}^\infty K_n$ consist of exactly one point.
+
