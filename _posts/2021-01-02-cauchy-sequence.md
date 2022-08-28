@@ -135,7 +135,7 @@ Suppose that $(p_n)^\infty_{n=1}$ is a sequence. Let $$E_N := \{ p_N, p_{N+1},\l
 
 Given any $\epsilon >0$, there is $M\in\mathbb{N}$ such that $N\geq M \Rightarrow \text{diam}E_N=\sup_{n,m \geq M} d(p_n, p_m)<\epsilon$, which is equivalent to say that the sequence is Cauchy.
 
-## Theorem
+## Theorem 5
 Let $E$ be a subset of metric space $X$. Then diam$\overline{E} = E$.
 
 <*Proof*>
@@ -174,7 +174,7 @@ $\therefore \text{diam}\overline{E} = \text{diam}E$.
 $$\tag*{$\square$}$$
 
 
-## Theorem
+## Theorem 6
 Let $$(K_n)_{n=1}^\infty$$ be a sequence of nested sets in metric space $$X$$. If $$K_n$$ is compact and $$\displaystyle{\lim_{n\to\infty} \text{diam}(K_n)=0}$$, then $$\bigcap_{n=1}^\infty K_n$$ consist of exactly one point.
 
 <*Proof*>
@@ -184,3 +184,13 @@ Since $K_n$  are nested compact sets, every finite intersection of $K_n$ is not 
 Since $d(p_1, p_2)>0, \text{diam} K >0$. But for each $n\in\mathbb{N}, K_n \supset K$, so that $\text{diam}K_n \geq \text{diam}K >0$. This contradicts the assumption that $\displaystyle{\lim_{n\to\infty} \text{diam}(K_n)=0}$.
 
 $$\tag*{$\square$}$$
+
+
+## Definition
+Let $X$ be a metric space. If every Cauchy sequence converges in $X$, then $X$ is complete.
+
+## Theorem 7
+If $X$ is a compact metric space then $X$ is complete
+
+
+## Corollary
