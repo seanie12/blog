@@ -107,7 +107,7 @@ $$
 
 Let $$\epsilon>0$$ be given. Since $$\lvert b_n-a_n\rvert = \frac{b_1 -a_1}{2^{n-1}}$$, $$\vert b_n -a_n\rvert < \epsilon \text{ if } n \geq N \text{ with } N\in \mathbb{N} \text{ such that }\frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Therefore, $$\lim_{n\to\infty}(b_n-a_n) =0.$$ i.e. $$\{b_n -a_n\}$$ is a Cauchy sequence, by theorem 1. 
 
-Suppose $$m\geq n$$. Then $$\lvert a_m - a_n\rvert\leq \lvert b_n - a_n\rvert < \epsilon \text{ for } n\geq N$$ such that $$\frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Similarly, $$\lvert b_m-b_n\rvert\leq |a_n-b_n| < \epsilon.$$ Thus, $$(a_n)_{n=1}^\infty, (b_n)_{n=1}^\infty$$ are Cauchy sequence. 
+Suppose $$m\geq n$$. Then $$\lvert a_m - a_n\rvert\leq \lvert b_n - a_n\rvert < \epsilon \text{ for } n\geq N$$ such that $$\frac{b_1-a_1}{2^{N-1}} < \epsilon.$$ Similarly, $$\lvert b_m-b_n\rvert\leq \lvert a_n-b_n\rvert < \epsilon.$$ Thus, $$\{a_n\}_{n=1}^\infty, \{b_n\}_{n=1}^\infty$$ are Cauchy sequence. 
 
 $$\therefore b=\lim_{n\to\infty}b_n = \lim_{n\to\infty}(b_n-a_n) + \lim_{n\to\infty}a_n = \lim_{n\to\infty}a_n=a.$$ 
 
