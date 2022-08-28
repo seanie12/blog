@@ -154,21 +154,15 @@ $$\tag*{$\square$}$$
 
 
 ## Theorem
-Let $(p_n)_{n=1}^\infty$ be a sequence in metric space $X$. If $X$ is compact, then there is a convergence subsequence of $(p_n)_{n=1}^\infty$ in $X$.
+Let $$(p_n)_{n=1}^\infty$$ be a sequence in metric space $$X$$. If $$X$$ is compact, then there is a convergence subsequence of $$(p_n)_{n=1}^\infty$$ in $$X$$.
 
 <*Proof*>
 
-Consider the range of $(p_n)_{n=1}^\infty$. Suppose that the range is finite, 
-
-$$
-\begin{equation*}
-\{r_1, \ldots, r_k\}.
-\end{equation*}
-$$
+Consider the range of $(p_n)_{n=1}^\infty$. Suppose that the range is finite,  $$\{r_1, \ldots, r_k\}.$$
 
 Then one of these values must be obtained infinitely many times. Let the value be $r_1$ and let $\\{n_j \\}$ be indices in ascending order such that $p_{n_j}=r_1$. Then $p_{n_j}\to r_1$ as $j\to\infty$.
 
-Now, suppose that the range is infinite. By Heine Borel Theorem, there is a limit point of $(p_n)_{n=1}^\infty$ in $X$, denoted as $p$. Since $p$ is a limit point, for every $\epsilon>0, N^\prime_\epsilon(p)$ has infinitely many points of $(p_n)_{n=1}^\infty$. 
+Now, suppose that the range is infinite. By Heine Borel Theorem, there is a limit point of $$(p_n)_{n=1}^\infty$$ in $$X$$, denoted as $$p$$. Since $$p$$ is a limit point, for every $$\epsilon>0, N^\prime_\epsilon(p)$$ has infinitely many points of $$(p_n)_{n=1}^\infty$$. 
 
 For each $k\in\mathbb{N}$, take $\epsilon=1/k$. Then there is $p_{n_k}$ such that $0<d( p_{n_k} - p)< \epsilon$ such that $n_{k-1} < n_k$ for $k>1$.  Since there are infinitely many points of $(p_n)_{n=1}^\infty$ in $N^\prime_\epsilon (p)$, we can choose $n_k$ such that $n_k > n_{k-1}$. 
 
