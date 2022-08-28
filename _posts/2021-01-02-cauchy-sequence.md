@@ -147,7 +147,7 @@ d(p,p^\prime) < \frac{\epsilon}{2}, \quad d(q,q^\prime) < \frac{\epsilon}{2}
 \end{align*}
 $$
 
-If $p\in E^\prime$, there is $p^\prime \in N^\prime_{\frac{\epsilon}{2}}(p)\cap E\neq \empty$. Otherwise we can take $p^\prime :=p$.
+If $p\in E^\prime$, there is $p^\prime \in N^\prime_{\frac{\epsilon}{2}}(p)\cap E\neq \emptyset$. Otherwise we can take $p^\prime :=p$.
 
 With triangular inequality,
 
