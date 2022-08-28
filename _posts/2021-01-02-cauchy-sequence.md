@@ -93,7 +93,7 @@ If every Cauchy sequence in $\mathbb{R}$ converges, then every nonempty subsuet 
 
 <*proof*>
 
-Let $$A$$ be a bounded nonempty subset of $$\mathbb{R}$$. If $$|A|$$ is finite, it is trivial case. Otherwise, suppose that $$|A|$$ is infinite. Let $$b_1$$ be an upper bound of $$A$$. Then, there is $$a_1 \in A$$ such that $$a_1 < b_1$$. Define $$m_1 :=\frac{a_1+b_1}{2}.$$ If $$m_1$$ is an upper bound of $$A$$, put $$b_2 :=m_1$$ and $$a_2 :=a_1$$. Otherwise, $$a_2 := m_1, b_2 :=b1.$$ Repeat this process: If $$m_n:=\frac{a_n+b_n}{2}$$ is an upper bound of $$A$$, put $$b_{n+1} := m_n, a_{n+1} := a_n.$$ Otherwise, $$b_{n+1} := b_n, a_{n+1} :=m_n$$. 
+Let $$A$$ be a bounded nonempty subset of $$\mathbb{R}$$. If $$\lvert A\rvert$$ is finite, it is trivial case. Otherwise, suppose that $$\lvert A\rvert$$ is infinite. Let $$b_1$$ be an upper bound of $$A$$. Then, there is $$a_1 \in A$$ such that $$a_1 < b_1$$. Define $$m_1 :=\frac{a_1+b_1}{2}.$$ If $$m_1$$ is an upper bound of $$A$$, put $$b_2 :=m_1$$ and $$a_2 :=a_1$$. Otherwise, $$a_2 := m_1, b_2 :=b1.$$ Repeat this process: If $$m_n:=\frac{a_n+b_n}{2}$$ is an upper bound of $$A$$, put $$b_{n+1} := m_n, a_{n+1} := a_n.$$ Otherwise, $$b_{n+1} := b_n, a_{n+1} :=m_n$$. 
 
 Then $$\{a_n\}, \{b_n\}$$ are bounded and monotone increasing and decreasing sequence, respectively. By monotone convergence theorem, 
 
@@ -118,3 +118,20 @@ Lastly, we want to show that $b$ is the least upper bound of $A$. Suppose that t
 $$\therefore b=\sup A.$$
 
 $$\tag*{$\square$}$$
+
+
+## Definition
+
+Let $E$ be a subset of metric space $X$. We define diameter of the set $E$ as 
+
+$$
+\begin{align*}
+\text{diam}E= \sup \{d(p,q)\mid p,q\in E \} 
+\end{align*}
+$$
+
+## Remark
+Suppose that $(p_n)^\infty_{n=1}$ is a sequence. Let $$E_N := \{ p_N, p_{N+1},\ldots \}$$. Then the sequence $(p_n)_{n=1}^\infty$ is a Cauchy sequence if and only if $\displaystyle{\lim_{N\to\infty}\text{diam}E_N}=0$
+
+Given any $\epsilon >0$, there is $M\in\mathbb{N}$ such that $N\geq M \Rightarrow \text{diam}E_N=\sup_{n,m \geq M} d(p_n, p_m)<\epsilon$, which is equivalent to say that the sequence is Cauchy.
+
