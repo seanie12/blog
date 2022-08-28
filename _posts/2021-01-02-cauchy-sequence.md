@@ -196,7 +196,7 @@ If $X$ is a compact metric space then $X$ is complete
 
 Let $$(p_n)_{n=1}^\infty$$ be a Cauchy sequence and let $$E_N=\{p_N, p_{N+1}, \ldots \}$$. Consider $$(\overline{E}_N)_{N=1}^\infty$$. We know that $$\text{diam}\overline{E} = \text{diam}E$$, so $$\lim_{N\to\infty}\text{diam}\overline{E}_N=0$$.
 
-Since $\overline{E}_N$ is closed and subset of compact $X$, $\overline{E}_N$ is compact by previous [Theorem 3.2.5](https://seanie12.github.io/blog/analysis/compact/#theorem-325). Moreover $(\overline{E}_N)_{N=1}^\infty$ is nested. By previous theorem, there is a unique point $p\in \bigcap_{N=1}^\infty \overline{E}_N$.
+Since $$\overline{E}_N$$ is closed and subset of compact $$X$$, $$\overline{E}_N$$ is compact by previous [Theorem 3.2.5](https://seanie12.github.io/blog/analysis/compact/#theorem-325). Moreover $$(\overline{E}_N)_{N=1}^\infty$$ is nested. By previous theorem, there is a unique point $$p\in \bigcap_{N=1}^\infty \overline{E}_N$$.
 
 We want to show that $\lim_{n\to\infty}p_n = p$.
 
