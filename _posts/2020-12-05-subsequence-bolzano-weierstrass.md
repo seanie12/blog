@@ -111,7 +111,7 @@ Then, $N^\prime_\epsilon (p) \cap E = \emptyset$, which contradicts to the assum
 $\therefore$ There are infinitely many points in the deleted neighborhoods of $p$.
 $$\tag*{$\square$}$$
 
-(b) For $n\in\mathbb{N}$, we can pick a sequence $$\{p_n\}\subset E$$ such that $|p_n-p|<\frac{1}{n}$ with $p_n\neq p$ because $p$ is a limit point of $E$. Let $\epsilon>0$ be given. Then there is a $N\in\mathbb{N}$ such that $\frac{1}{N}>\epsilon$ by Archimedean property. Thus, for $n\geq N$,
+(b) For $n\in\mathbb{N}$, we can pick a sequence $$\{p_n\}\subset E$$ such that $|p_n-p|<\frac{1}{n}$ with $p_n\neq p$ because $p$ is a limit point of $E$. Let $\epsilon>0$ be given. Then there is a $N\in\mathbb{N}$ such that $\frac{1}{N}<\epsilon$ by Archimedean property. Thus, for $n\geq N$,
 $$
 \begin{align}
 |p_n-p| <\frac{1}{n}\leq\frac{1}{N}<\epsilon
@@ -130,7 +130,7 @@ Consider two intervals $[a, (a+b)/2], [(a+b)/2, b]$. Since $S$ is infinite, at l
 
 Repeating this process, we get a sequence of intervals $$\{I_n\}$$ such that <br /> (a) $I_1 \supset I_2 \supset I_3 \supset \cdots$ <br /> (b) $($length of $I_n)=(b-a)/2^{n-1}$ <br /> (c) $I_n\cap S$ is infinite. 
 
-Let $x\in \cap_{i=1}^\infty I_n$. We want to  show that $x$ is a limit point of $S$.  Let $\epsilon >0$ be given. Then there is a $N\in\mathbb{N}$ such that 
+Let $x\in \bigcap_{i=1}^\infty I_n$. We want to  show that $x$ is a limit point of $S$.  Let $\epsilon >0$ be given. Then there is a $N\in\mathbb{N}$ such that 
 $$
 \begin{align}
 \frac{b-a}{2^{N-1}} < \epsilon
@@ -149,5 +149,10 @@ $\therefore \displaystyle{\lim_{k\to\infty}}p_{n_k}=p$
 
 If $S$ is infinite, by Bolzano-Weierstrass theorem, there is a limit point $p$ of $S$. By Theorem 2.4.7, there exists $$\{p_n\}_{n=1}^\infty \subset S$$ with $p_n\neq p$ for all $n\in\mathbb{N}$ such that $\displaystyle{\lim_{n\to\infty}p_n = p}.$
 $$\tag*{$\square$}$$
+
+
+
+
+
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
