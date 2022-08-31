@@ -211,7 +211,7 @@ $\mathbb{R}^k$ is complete
 
 <*Proof*>
 
-Let $$(p_n)_{n=1}^\infty$$ be a Cauchy sequence in $$\mathbb{R}^k$$. Since $$\lim_{N\to\infty}\text{diam}E_N=0$$,  we can choose $$M\in\mathbb{N}$$ such that $$\text{diam}E_M < 1$$. Then $$d(p_n, p_m) <1$$ for all $$n,m \geq M$$. Thus $$E_M$$ is bounded. Furthermore, $$\{p_1, \ldots, p_{M-1}\}$$ is bounded and thus $$(p_n)_{n=1}^\infty$ $is bounded. 
+Let $$(p_n)_{n=1}^\infty$$ be a Cauchy sequence in $$\mathbb{R}^k$$. Since $$\lim_{N\to\infty}\text{diam}E_N=0$$,  we can choose $$M\in\mathbb{N}$$ such that $$\text{diam}E_M < 1$$. Then $$d(p_n, p_m) <1$$ for all $$n,m \geq M$$. Thus $$E_M$$ is bounded. Furthermore, $$\{p_1, \ldots, p_{M-1}\}$$ is bounded and thus $$(p_n)_{n=1}^\infty$$is bounded. 
 
 Thus,  $$S = \{p_n\}_{n=1}^\infty \cup \overline{ \{p_n\}}_{n=1}^\infty $$ bounded and closed., which is compact. In other words, $$(p_n)_{n=1}^\infty$$ is a Cauchy sequence in compact set $$S$$. Therefore, $$(p_n)_{n=1}^\infty$$ converges in $$S$$.
 
