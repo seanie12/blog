@@ -50,9 +50,9 @@ $$
 If any interval $I$ with Int$(I)\neq \emptyset$ and $f:I\to\mathbb{R}$, then $f$ has a limit point at $p\in\text{Int}(I)$,
 
 $$
-\begin{align*}
+\begin{align}
 \lim_{x\to p} f(x) = L \iff f(p+), f(p-) \text{ exist and } f(p+) = f(p-) = L
-\end{align*}
+\end{align}
 $$
 
 Since $p\in E^\prime$ does not imply $p$ is a limit point of $E\cap (p, \infty)$ or $E\cap (-\infty, p)$, we need the set $E$ to be interval $I$ with $\text{Int}(I)\neq\emptyset$ and $p\in\text{Int}(I)$.
