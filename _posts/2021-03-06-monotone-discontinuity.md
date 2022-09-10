@@ -194,6 +194,7 @@ n_1> n_2> N_0 \Rightarrow \left\lvert \sum_{k=n_2+1}^{n_1} a_k \right\rvert < \e
 $$
 
 Now take 
+
 $$
 \begin{align*}
 M:=\max \{N_0, N\}.
