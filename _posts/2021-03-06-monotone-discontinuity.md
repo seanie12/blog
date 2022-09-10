@@ -34,7 +34,7 @@ We write
 
 $$
 \begin{align*}
-f(p+) = \displaystyle{\lim_{x\to p+}f(x) = \lim_{x\to p, x> p}f(x)}.
+f(p+) = \lim_{x\to p+}f(x) = \lim_{x\to p, x> p}f(x).
 \end{align*}
 $$ 
 
