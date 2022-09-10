@@ -325,6 +325,7 @@ Since $x_k <b$ for all $k\in\mathbb{N}$, $I(b-a_k)=1$.
 $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
 
 (b) $E:=\\{x_n:n\in\mathbb{N}\\}$. Let $p\in [a,b]\setminus E$.
+
 1) $p\not\in E^\prime$.
   There is a $\delta>0$ such that $N_\delta (p) \cap E =\emptyset$. For $x\in N_\delta (p), I(x-x_k)=I(p-x_k)$ for all $k\in\mathbb{N}$. So,
 
@@ -391,6 +392,7 @@ $\therefore f$ is right continuous at $p$.
 (c) We want to show that $f(x_n+)=f(x_n)$
 
  Fix an $x_n\in E$. 
+
 1) $x_n\not\in E^\prime$.
   There is a $\delta >0$ such that $N^\prime_\delta (x_n) \cap E = \emptyset$, i.e. $(x_n, x_n+\delta) \cap E = \emptyset$. 
 
