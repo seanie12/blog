@@ -193,7 +193,14 @@ n_1> n_2> N_0 \Rightarrow \left\lvert \sum_{k=n_2+1}^{n_1} a_k \right\rvert < \e
 \end{align*}
 $$
 
-Now take $M:=\max \\{N_0, N\\}$. Then for all $m_1 > m_2 >M$,
+Now take 
+$$
+\begin{align*}
+M:=\max \{N_0, N\}.
+\end{align*}
+$$ 
+
+Then for all $m_1 > m_2 >M$,
 
 $$
 \begin{align*}
@@ -209,7 +216,7 @@ Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ is bounded by $\epsilon$ and  thus 
 
 $$
 \begin{align}
-\left|\sum_{k=N+1}^\infty a_k \right| < \epsilon.
+\left|\sum_{k=N+1}^\infty a_k \right| < \epsilon
 \end{align}
 $$
 
