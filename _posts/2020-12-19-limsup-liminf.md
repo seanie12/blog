@@ -18,7 +18,7 @@ comments : true
 
 ---
 ## Definition 2.5.1
-Let $(s_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$. The **limit superior** of $(s_n)_{n=1}^\infty$, denoted as $\limsup_{n\to\infty}s_n$,  is defined as
+Let $\\{s_n\\}$ be a sequence in $\mathbb{R}$. The **limit superior** of $(s_n)_{n=1}^\infty$, denoted as $\limsup_{n\to\infty}s_n$,  is defined as
 
 $$
 \begin{align*}
@@ -26,7 +26,7 @@ $$
 \end{align*}
 $$
 
-The **limit inferior** of $(s_n)_{n=1}^\infty$, denoted as $\liminf_{n\to\infty}s_n$, defined as 
+The **limit inferior** of $\\{s_n\\}$, denoted as $\liminf_{n\to\infty}s_n$, defined as 
 
 $$
 \begin{align*}
@@ -34,7 +34,19 @@ $$
 \end{align*}
 $$
 
+## Theorem 2.5.3 
+Let t $\\{s_n\\}$  be a sequence in $\mathbb{R}$.
 
+(a) $\beta=\limsup_{n\to\infty}s_n$  is a real number if and only if
+
+$$
+\begin{align}
+\forall \epsilon >0, \exists n_0\in\mathbb{N} \text{ such that } n\geq n_0 \Rightarrow s_n < \beta +\epsilon \\
+\forall \epsilon >0, \forall n\in\mathbb{N}, \exists k\in\mathbb{N} \text{ with } k\geq n \text{ such that } s_k > \beta-\epsilon
+\end{align}
+$$
+
+(b) 
 $$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
