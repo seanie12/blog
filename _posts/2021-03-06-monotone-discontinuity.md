@@ -483,7 +483,7 @@ For all $y\in(y_0-\delta, y_0]$,
   \end{align}
   $$
   
-  $\therefore \left|f^{-1}(y)  -x_0 \right| <\epsilon$ for all $y\in (y_0-\delta, y_0]$. 
+  $\therefore \left\lvert f^{-1}(y)  -x_0 \right\rvert <\epsilon$ for all $y\in (y_0-\delta, y_0]$. 
 
 $\therefore f$ is left continuous at $y_0$. 
 
