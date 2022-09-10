@@ -137,7 +137,13 @@ $\therefore \lvert f(x) - B\rvert  < \epsilon$ for all $x\in I$ with $p<x<x_0$.
 
  $\therefore f(p+) = B$
 
-$\therefore \displaystyle{\sup_{x<p} f(x) = f(p+) \leq f(p) \leq f(p-) = \inf_{x>p} f(x)}$
+ Therefore
+
+$$
+\begin{align*}
+\sup_{x<p} f(x) = f(p+) \leq f(p) \leq f(p-) = \inf_{x>p} f(x)
+ \end{align*}
+ $$
 
 Furthermore, for $p,q\in I$ with $p<q$,
 
