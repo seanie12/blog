@@ -279,7 +279,7 @@ $$
 
 
 
-Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ is bounded by $\epsilon$ and  thus its limit 
+Then the sequence  is bounded by $\epsilon$ and  thus its limit 
 
 $$
 \begin{align}
@@ -290,7 +290,7 @@ $$
 is also bounded.
 
 ## Theorem 4.4.10
-Let $a,b\in \mathbb{R}$ and let $\\{x_n\\}$ be a countable subset of $(a,b)$ and let $\\{c_n\\}_{n=1}^\infty$ be s sequence such that $\sum_{n=1}^\infty c_n < +\infty$. 
+Let $a,b\in \mathbb{R}$ and let $\\{x_n\\}$ be a countable subset of $(a,b)$ and let $$\\{c_n\\}_{n=1}^\infty$$ be s sequence such that $$\sum_{n=1}^\infty c_n < +\infty$$. 
 
  Then there is a monotone increasing function on $[a,b]$ such that 
 
