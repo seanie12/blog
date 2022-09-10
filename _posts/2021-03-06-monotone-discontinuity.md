@@ -228,7 +228,15 @@ $$
 
 $\\{b_m\\}_{m=N+2}^\infty$  is a convergent sequence. 
 
-Alternatively,  we can show its convergence using the sequence $\\{s_n\\}_{n=1}^\infty$ is Cauchy.  Since $$\mathbb{R}$$ is complete, it suffices to show that the sequence $\\{b_m\\}_{m=N+2}^\infty$ is Cauchy. Let $\epsilon >0$ be given. Since $\\{s_n\\}_{n=1}^\infty$ is Cauchy sequence, there is $N_0\in\mathbb{N}$ such that 
+Alternatively,  we can show its convergence using the sequence 
+
+$$
+\begin{align*}
+\{s_n\}_{n=1}^\infty
+\end{align*}
+$$ 
+
+is Cauchy.  Since $\mathbb{R}$ is complete, it suffices to show that the sequence $\\{b_m\\}_{m=N+2}^\infty$ is Cauchy. Let $\epsilon >0$ be given. Since $\\{s_n\\}_{n=1}^\infty$ is Cauchy sequence, there is $N_0\in\mathbb{N}$ such that 
 
 $$
 \begin{align*}
