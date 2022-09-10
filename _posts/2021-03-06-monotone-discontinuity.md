@@ -79,7 +79,8 @@ if $\forall \epsilon >0, \exists \delta>0$ such that
 $$
 \begin{align}
 p\leq x <p+\delta \:(p-\delta < x \leq p) \Rightarrow \lvert f(x)-f(p) \rvert< \epsilon.
-\end{align}$$
+\end{align}
+$$
 
 ## Definition 4.4.4 
 $f$ has a **jump discontinuity** at $p$ if $f(p+), f(p-)$ exist but $f(p+) \neq f(p-)$.
@@ -152,6 +153,7 @@ $$\tag*{$\square$}$$
 
 ## Definition 4.4.9
 The **unit jump function** $I:\mathbb{R}\to\mathbb{R}$ defined by 
+
 $$
 \begin{align*}
 I(x) = \begin{cases}0 \quad (x<0)\\
@@ -160,7 +162,8 @@ I(x) = \begin{cases}0 \quad (x<0)\\
 \end{align*}
 $$
 
-Then $$
+Then 
+$$
 \begin{align*}
 I_a (x) := I(x-a) = \begin{cases}
 0 \quad (x<a)\\
@@ -190,17 +193,21 @@ $$\tag*{$\square$}$$
 
 ## Cauchy Criterion
 Suppose that $\sum_{k=1}^\infty a_k$ converges, where $a_k\in\mathbb{R}$ for all $k=1,2,\ldots$. Since $s_n= \sum_{k=1}^n a_k$ is convergent sequence in $\mathbb{R}$, it  is Cauchy sequence. So for all $\epsilon >0, \exists N\in\mathbb{N}$ such that,
+
 $$
 \begin{align}
 m>n\geq N \Rightarrow \left\lvert\sum_{k=1}^m a_k -\sum_{k=1}^n a_k\right\rvert =\left\lvert\sum_{k=n+1}^m a_k \right\rvert < \epsilon.
 \end{align}
 $$
+
 So, for all $\epsilon >0, \exists N\in\mathbb{N}$ such that,
+
 $$
 \begin{align}
 m\geq N \Rightarrow \left\lvert\sum_{k=N+1}^m a_k \right\rvert < \epsilon.
 \end{align}
 $$
+
 Since $b_m=s_m-\sum_{k=1}^Na_k$,
 
 $$
@@ -302,6 +309,7 @@ $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
 
 2. $p\in E^\prime$
   Let $\epsilon >0$ be given. Since $\sum_{k=1}^\infty c_k$ converges, there exists a $N\in\mathbb{N}$ such that 
+  
   $$
   \begin{align}
   \sum_{k=N+1}^\infty c_k <\epsilon
@@ -320,6 +328,7 @@ $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
 
 Suppose that $p<x<p+\delta$. Then $I(x-x_k) = I(p-x_k)$ for $k=1,\ldots, N$.  Furthermore, for any $p<x, 0\leq I(x-x_k) - I(p-x_k)\leq 1$ for all $k\in\mathbb{N}$.
   Therefore, if $p<x<p+\delta$
+  
   $$
   \begin{align}
   \begin{split}
@@ -494,5 +503,6 @@ $\therefore f$ is continuous at $y_0 \in J$.
 $\therefore f$ is continuous at $y_0\in J$.
 
 $$\tag*{$\square$}$$
+
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
