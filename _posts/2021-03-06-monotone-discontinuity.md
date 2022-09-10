@@ -96,27 +96,31 @@ Furthermore, if $p,q\in I$ with $p<q$, then $f(p+) \leq f(q-)$.
 <*proof*>
 
 Let $p\in I$ be given. Define 
-$$
-E:=\{f(x): x<p, x\in I\}.
-$$
+$
+E:=\\{f(x): x<p, x\in I\\}.
+$
 Since $f$ is monotone increasing, $E$ is bounded above by $f(p)$. Since $I$ is open, there exists a $\epsilon_0 >0$ such that $N_{\epsilon_0} (p) \subset I$, i.e., there is $x\in (p-\epsilon_0, p)$. Thus $E\neq \emptyset$. By the least upper bound property, $A=\sup E$ exists.
 
 Now we want to show that $A = f(p-)$. <br /> Let $\epsilon >0$ be given. Then there is $x_0 \in I$ with $x_0 <p$ s.t. $A-\epsilon < f(x_0) \leq A$ since $A$ is the least upper bound of $E$. For $x_0 < x< p,$
+
 $$
 \begin{align}
 A-\epsilon< f(x_0) \leq f(x) \leq A < A+\epsilon
 \end{align}
 $$
+
 $\therefore |f(x)-A| < \epsilon$ for all $x_0<x<p$. <br /> $\therefore f(p-) = A$
 
-Similarly, $$S:=\{f(x): x>p, p\in I \}$$. Since $f$ is monotone increasing, $S$ is bounded below by $f(p)$. Since $I$ is open, there is $\epsilon_0>0$ such that $N_{\epsilon_0} (p) \subset I$, i.e. there is $x\in (p, p+\epsilon_0)$. Thus, $S\neq \emptyset$. By the least upper bound property, $B:=\inf S$ exists.
+Similarly, $S:=\\{f(x): x>p, p\in I \\}$. Since $f$ is monotone increasing, $S$ is bounded below by $f(p)$. Since $I$ is open, there is $\epsilon_0>0$ such that $N_{\epsilon_0} (p) \subset I$, i.e. there is $x\in (p, p+\epsilon_0)$. Thus, $S\neq \emptyset$. By the least upper bound property, $B:=\inf S$ exists.
 
 Now we want to show that $B=f(p+)$. <br /> Let $\epsilon >0$ be given. There is $x_0 \in I$ with $x_0 >p$ such that $B\leq f(x_0) < B +\epsilon$. For $p<x<x_0$,
+
 $$
 \begin{align}
 B-\epsilon < B \leq f(x) \leq f(x_0) < B+\epsilon
 \end{align}
 $$
+
 $\therefore |f(x) - B| < \epsilon$ for all $x\in I$ with $p<x<x_0$. <br /> $\therefore f(p+) = B$
 
 $\therefore \displaystyle{\sup_{x<p} f(x) = f(p+) \leq f(p) \leq f(p-) = \inf_{x>p} f(x)}$
@@ -228,11 +232,11 @@ $$
 is also bounded.
 
 ## Theorem 4.4.10
-Let $a,b\in \mathbb{R}$ and let $$\{x_n\}$$ be a countable subset of $(a,b)$ and let $$\{c_n\}_{n=1}^\infty$$ be s sequence such that $\sum_{n=1}^\infty c_n < +\infty$. <br /> Then there is a monotone increasing function on $[a,b]$ such that 
+Let $a,b\in \mathbb{R}$ and let $\\{x_n\\}$ be a countable subset of $(a,b)$ and let $\\{c_n\\}_{n=1}^\infty$$ be s sequence such that $\sum_{n=1}^\infty c_n < +\infty$. <br /> Then there is a monotone increasing function on $[a,b]$ such that 
 
 (a) $f(a)=0, f(b) = \sum_{n=1}^\infty c_n$
 
-(b) $f$ is continuous on $[a,b] \setminus \{x_n:n\in\mathbb{N}\}$
+(b) $f$ is continuous on $[a,b] \setminus \\{x_n:n\in\mathbb{N}\\}$
 
 (c) $f(x_n+) = f(x_n)$, i.e. $f$ is right continuous at each $x_n$.
 
@@ -240,7 +244,7 @@ Let $a,b\in \mathbb{R}$ and let $$\{x_n\}$$ be a countable subset of $(a,b)$ and
 
 <*Proof*>
 
-Define $f(x):=\sum_{k=1}^\infty c_k I(x-x_k)$. <br /> Since $0\leq c_k I(x-x_k)\leq c_k$, $s_n (x) :=\sum_{k=1}^n c_k I (x-x_k) \leq \sum_{k=1}^n c_k$. <br /> Since $\sum_{k=1}^\infty c_k < +\infty$, $$\{s_n (x)\}$$ is bounded above. Since $s_n (x)$ is monotone increasing sequence, $s_n (x)$ converges.
+Define $f(x):=\sum_{k=1}^\infty c_k I(x-x_k)$. <br /> Since $0\leq c_k I(x-x_k)\leq c_k$, $s_n (x) :=\sum_{k=1}^n c_k I (x-x_k) \leq \sum_{k=1}^n c_k$. <br /> Since $\sum_{k=1}^\infty c_k < +\infty$, $\\{s_n (x)\\}$$ is bounded above. Since $s_n (x)$ is monotone increasing sequence, $s_n (x)$ converges.
 
 For $x<y, I(x-x_k) \leq I(y-x_k)$ for all $k=1,2,\ldots$. <br />So, 
 $$
@@ -250,7 +254,7 @@ Thus, $f(x)$ is a monotone increasing function.
 
 (a) Since $x_k > a$ for all $k\in\mathbb{N}$, $I(a-x_k)=0$. <br />$\therefore f(a) = \sum_{k=1}^\infty c_k f(a-x_k)=0$. <br /> Since $x_k <b$ for all $k\in\mathbb{N}$, $I(b-a_k)=1$. <br /> $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
 
-(b) $$E:=\{x_n:n\in\mathbb{N}\}$$. Let $p\in [a,b]\setminus E$.
+(b) $E:=\\{x_n:n\in\mathbb{N}\\}$. Let $p\in [a,b]\setminus E$.
 1. $p\not\in E^\prime$.
   There is a $\delta>0$ such that $N_\delta (p) \cap E =\emptyset$. For $x\in N_\delta (p), I(x-x_k)=I(p-x_k)$ for all $k\in\mathbb{N}$. So,
   $$
@@ -309,16 +313,16 @@ Thus, $f(x)$ is a monotone increasing function.
   \end{align}
   $$
   by Cauchy criterion. Choose a $\delta >0$ such that 
+  
   $$
   \begin{align}
    0<\delta <\min\{|x_n-x_k|:k=1,\ldots,N, k\neq n\}
      \end{align}
   $$
-  Then, $x_k \not\in (x_n, x_n+\delta)$ for $k=1,\ldots,N$. Thus, for $y\in (x_n, x_n+\delta), I(y-x_k)=I(x_n-x_k)$ for all $k=1,\ldots,N$. <br/> For $y>x_n$, 
-  $$
-  0\leq I(y-x_k) - I(x_n-x_k)\leq 1 \text{ for all } k\in\mathbb{N}
-  $$
+  
+  Then, $x_k \not\in (x_n, x_n+\delta)$ for $k=1,\ldots,N$. Thus, for $y\in (x_n, x_n+\delta), I(y-x_k)=I(x_n-x_k)$ for all $k=1,\ldots,N$. <br/> For $y>x_n, 0\leq I(y-x_k) - I(x_n-x_k)\leq 1 \text{ for all } k\in\mathbb{N}$
   Thus,  For all $y\in(x_n, x_n+\delta)$
+
   $$
   \begin{align}
   \begin{split}
@@ -329,14 +333,17 @@ Thus, $f(x)$ is a monotone increasing function.
   \end{split}
   \end{align}
   $$
+
   $\therefore f$ is right continuous at $x_n$ for all $n\in \mathbb{N}$.
    
  (d) Fix a $x_n\in E$, Suppose $y<x_n$. <br /> If $x_n \not\in E^\prime,$ there is a $\delta >0$ such that $(x_n-\delta, x_n) \cap E = \emptyset$. Thus, $I(y-x_k) = I(x_n-x_k)$ for all $k\in \mathbb{N}$ with $k\neq n$. For $k=n$,
+
  $$
  \begin{align}
  0=I(y-x_n) \leq I(x_n-x_n) = I(0) = 1
  \end{align}
  $$
+
  $\therefore f(x_n)-f(y) = c_n$ for all $y\in(x_n-\delta, x_n)$
 
 Now, suppose that $x_n \in E^\prime$. <br /> Let $\epsilon >0$ be given. Choose a $N \in \mathbb{N}$ such that $\sum_{k=N+1}^\infty c_k <\epsilon$. Choose a $\delta >0$ such that 
