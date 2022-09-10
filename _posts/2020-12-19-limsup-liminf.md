@@ -55,7 +55,7 @@ $$
 $$
 
 (c) $\limsup_{n\to\infty}s_n = -\infty$ if and only if $\lim_{n\to\infty}s_n =-\infty$
-$$\tag*{$\square$}$$
+
 
 <*Proof*>
 
@@ -132,11 +132,36 @@ $$
 
 by Equation $\ref{eq:1}$, which contradicts to Equation $\ref{eq:2}$.
 
+$\therefore \beta=\beta^\prime$.
+
+
+
+(b) $\Rightarrow$ Suppose that $\limsup_{n\to\infty}s_n = \infty$. Let $a_k = \sup_{n\geq k}s_n$. Since $\\{a_n \\}$ is decreasing sequence, $a_n=\infty$ for all $n\in\mathbb{N}$. Since $a_n = \sup \\{s_k : k\geq n \\}$, the set $\\{s_k : k\geq n \\}$ is not bounded above. 
+
+$\therefore$ For all $M\in\mathbb{R},$ there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k > M$.
+
+$\Leftarrow$ Suppose that for all $M\in\mathbb{R}$ and for all $n\in\mathbb{N}$, there is a $k\in\mathbb{N}$ with $k\geq n$ such that $s_k \geq M$. Assume that $a_n=\sup \\{ s_k: k\geq n\\}=\alpha$ is a real number. Then 
+
+$$
+\begin{align}
+s_k\geq \alpha \text{ for all } k\geq n
+\label{eq:3}
+\end{align}
+$$.
+
+Now take $M:=\alpha+1$. Then by the assumption, there is $k\in\mathbb{N}$ with $k\geq n$ such that 
+
+$$
+\begin{align*}
+s_k \geq \alpha +1 > \alpha.
+\end{align*}
+$$
+
+But it  contradicts to the inequality $\ref{eq:3}$.
+
+$\therefore \limsup_{n\to\infty}s_n=\infty$.
+
 
 $$\tag*{$\square$}$$
-
-
-
-
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
