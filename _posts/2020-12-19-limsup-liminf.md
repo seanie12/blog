@@ -144,7 +144,7 @@ $\Leftarrow$ Suppose that for all $M\in\mathbb{R}$ and for all $n\in\mathbb{N}$,
 
 $$
 \begin{align}
-s_k\geq \alpha \text{ for all } k\geq n
+s_k\leq \alpha \text{ for all } k\geq n
 \label{eq:3}
 \end{align}
 $$.
