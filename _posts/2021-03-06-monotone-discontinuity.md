@@ -158,12 +158,14 @@ $$
 m\geq N \Rightarrow \left|\sum_{k=N+1}^m a_k \right| < \epsilon.
 \end{align}
 $$
-Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ converges. So, for all $\epsilon >0 \exists N\in\mathbb{N}$ such that,
+Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ is bounded by $\epsilon$.  Thus, its limit 
+
 $$
-\begin{align}
+\begin{align*}
 \left|\sum_{k=N+1}^\infty a_k \right| < \epsilon.
-\end{align}
+\end{align*}
 $$
+is also bounded.
 
 ## Theorem 4.4.10
 Let $a,b\in \mathbb{R}$ and let $$\{x_n\}$$ be a countable subset of $(a,b)$ and let $$\{c_n\}_{n=1}^\infty$$ be s sequence such that $\sum_{n=1}^\infty c_n < +\infty$. <br /> Then there is a monotone increasing function on $[a,b]$ such that 
@@ -176,7 +178,8 @@ Let $a,b\in \mathbb{R}$ and let $$\{x_n\}$$ be a countable subset of $(a,b)$ and
 
 (d) $f$ is discontinuous at $x_n$ for all $n\in\mathbb{N}$ and $f(x_n+) -f(x_n-)=c_n$
 
-<*proof*>
+<*Proof*>
+
 Define $f(x):=\sum_{k=1}^\infty c_k I(x-x_k)$. <br /> Since $0\leq c_k I(x-x_k)\leq c_k$, $s_n (x) :=\sum_{k=1}^n c_k I (x-x_k) \leq \sum_{k=1}^n c_k$. <br /> Since $\sum_{k=1}^\infty c_k < +\infty$, $$\{s_n (x)\}$$ is bounded above. Since $s_n (x)$ is monotone increasing sequence, $s_n (x)$ converges.
 
 For $x<y, I(x-x_k) \leq I(y-x_k)$ for all $k=1,2,\ldots$. <br />So, 
@@ -277,12 +280,15 @@ Thus, $f(x)$ is a monotone increasing function.
  $\therefore f(x_n)-f(y) = c_n$ for all $y\in(x_n-\delta, x_n)$
 
 Now, suppose that $x_n \in E^\prime$. <br /> Let $\epsilon >0$ be given. Choose a $N \in \mathbb{N}$ such that $\sum_{k=N+1}^\infty c_k <\epsilon$. Choose a $\delta >0$ such that 
+
 $$
 \begin{align}
 0<\delta <\min\{|x_k-x_n|:k=1,\ldots,N, k\neq n\}
 \end{align}
 $$
+
 So, $x_k \not\in (x_n-\delta, x_n)$ for $k=1,\ldots, N$. Then $I(y-x_k) = I(x_n-x_k)$ for all $k=1,\ldots, N$ with $k\neq n$. For all $y\in (x_n-\delta, x_n)$,
+
 $$
 \begin{align}
 \begin{split}
@@ -293,10 +299,18 @@ c_n \leq f(x_n) - f(y) &= \sum_{k=1}^\infty c_k (I(x_n-x_k) - I(y-x_k)) \\
 \end{split}
 \end{align}
 $$
+
 So, 
-$$c_n = \epsilon < f(x_n) - f(y) < c_n +\epsilon \iff -c_n-\epsilon < f(y) - f(x_n) < -c_n + \epsilon \\
-\iff -\epsilon < f(y) - f(x_n) + c_n <\epsilon \\
-\iff |f(y) = (f(x_n)-c_n)| < \epsilon$$
+$$
+\begin{align}
+\begin{split}
+c_n - \epsilon < f(x_n) - f(y) < c_n +\epsilon &\iff -c_n-\epsilon < f(y) - f(x_n) < -c_n + \epsilon \\
+&\iff -\epsilon < f(y) - f(x_n) + c_n <\epsilon \\
+&\iff |f(y) - (f(x_n)-c_n)| < \epsilon
+\end{split}
+\end{align}
+$$
+
 $\therefore f(x_n-) = f(x_n) = c_n$ <br /> $\therefore f(x_n) = f(x_n-) = c_n$
 
 $$\tag*{$\square$}$$
