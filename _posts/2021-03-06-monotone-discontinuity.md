@@ -226,7 +226,7 @@ $$
 \end{align}
 $$
 
-$\\{b_m\\}_{m=N+2}^\infty$  is a convergent sequence. 
+$b_m\to L$ as $m\to L$ for some $L\in\mathbb{R}$.
 
 Alternatively,  we can show its convergence using the sequence 
 
