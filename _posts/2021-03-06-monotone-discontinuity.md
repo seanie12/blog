@@ -26,7 +26,7 @@ $E\subset \mathbb{R}, f:E\to\mathbb{R}, p$ is a limit point of $E\cap (p,\infty)
 
 $$
 \begin{align*}
-p<x<p+\delta, x\in E \Rightarrow |f(x)-L| <\epsilon
+p<x<p+\delta, x\in E \Rightarrow \left\lvert f(x)-L\right\rvert <\epsilon
 \end{align*}
 $$
 
