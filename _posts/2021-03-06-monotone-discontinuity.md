@@ -175,9 +175,9 @@ $$
 Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ is bounded by $\epsilon$.  Thus, its limit 
 
 $$
-\begin{align*}
+\begin{align}
 \left|\sum_{k=N+1}^\infty a_k \right| < \epsilon.
-\end{align*}
+\end{align}
 $$
 
 is also bounded.
