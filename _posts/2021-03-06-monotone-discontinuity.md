@@ -290,7 +290,7 @@ $$
 is also bounded.
 
 ## Theorem 4.4.10
-Let $a,b\in \mathbb{R}$ and let $\\{x_n\\}$ be a countable subset of $(a,b)$ and let $$\{c_n\}_{n=1}^\infty$$ be s sequence such that $$\sum_{n=1}^\infty c_n < +\infty$$. 
+Let $a,b\in \mathbb{R}$ and let $\\{x_n\mid n\in\mathbb{N}\\}$ be a countable subset of $(a,b)$ and let $$\{c_n\}_{n=1}^\infty$$ be any sequence of positive numbers such that $$\sum_{n=1}^\infty c_n < +\infty$$. 
 
  Then there is a monotone increasing function on $[a,b]$ such that 
 
@@ -325,7 +325,7 @@ Since $x_k <b$ for all $k\in\mathbb{N}$, $I(b-a_k)=1$.
 $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
 
 (b) $E:=\\{x_n:n\in\mathbb{N}\\}$. Let $p\in [a,b]\setminus E$.
-1. $p\not\in E^\prime$.
+1) $p\not\in E^\prime$.
   There is a $\delta>0$ such that $N_\delta (p) \cap E =\emptyset$. For $x\in N_\delta (p), I(x-x_k)=I(p-x_k)$ for all $k\in\mathbb{N}$. So,
 
   $$
@@ -337,7 +337,7 @@ $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
   \end{align}
   $$
 
-2. $p\in E^\prime$
+2) $p\in E^\prime$
   Let $\epsilon >0$ be given. Since $\sum_{k=1}^\infty c_k$ converges, there exists a $N\in\mathbb{N}$ such that 
   
   $$
@@ -356,7 +356,7 @@ $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
   
   Then $x_k\not\in (p-\delta, p+\delta)$ for $k=1,\ldots, N$. If $x_k\in N_\delta (p) \cap E$, then $k>N$. 
 
-Suppose that $p<x<p+\delta$. Then $I(x-x_k) = I(p-x_k)$ for $k=1,\ldots, N$.  Furthermore, for any $p<x, 0\leq I(x-x_k) - I(p-x_k)\leq 1$ for all $k\in\mathbb{N}$.
+Suppose that $p<x<p+\delta$. Then $I(x-x_k) = I(p-x_k)$ for $k=1,\ldots, N$.  Furthermore, for any $x>p, 0\leq I(x-x_k) - I(p-x_k)\leq 1$ for all $k\in\mathbb{N}$.
   Therefore, if $p<x<p+\delta$
   
   $$
@@ -391,7 +391,7 @@ $\therefore f$ is right continuous at $p$.
 (c) We want to show that $f(x_n+)=f(x_n)$
 
  Fix an $x_n\in E$. 
-1. $x_n\not\in E^\prime$.
+1) $x_n\not\in E^\prime$.
   There is a $\delta >0$ such that $N^\prime_\delta (x_n) \cap E = \emptyset$, i.e. $(x_n, x_n+\delta) \cap E = \emptyset$. 
 
  For $y\in (x_n, x_n+\delta), I(y-x_k) = I(x_n-x_k)$ for all $k\in\mathbb{N}$. 
@@ -399,7 +399,8 @@ $\therefore f$ is right continuous at $p$.
 $\therefore f(y) = f(x_n)$ for all $y\in (x_n, x_n+\delta)$ 
 
 $\therefore f$ is right continuous at $x_n$.
-2. $x_n \in E^\prime$.   
+
+2) $x_n \in E^\prime$.   
   Let $\epsilon >0$ be given. Choose a $N\in\mathbb{N}$ such that 
 
   $$
@@ -477,9 +478,9 @@ c_n - \epsilon < f(x_n) - f(y) < c_n +\epsilon &\iff -c_n-\epsilon < f(y) - f(x_
 \end{align}
 $$
 
-$\therefore f(x_n-) = f(x_n) = c_n$ 
+$\therefore f(x_n-) = f(x_n) + c_n$ 
 
- $\therefore f(x_n) = f(x_n-) = c_n$
+ $\therefore f(x_n) = f(x_n-) - c_n$
 
 $$\tag*{$\square$}$$
 
