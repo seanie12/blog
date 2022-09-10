@@ -23,17 +23,21 @@ comments : true
 
 ## Definition 4.4.1
 $E\subset \mathbb{R}, f:E\to\mathbb{R}, p$ is a limit point of $E\cap (p,\infty)$. $f$ has a **right limit at $p$** if there exists a $L\in\mathbb{R}$ such that $\forall \epsilon >0, \exists \delta >0$ such that 
+
 $$
 \begin{align*}
 p<x<p+\delta, x\in E \Rightarrow |f(x)-L| <\epsilon
 \end{align*}
 $$
+
 We write 
+
 $$
 \begin{align*}
 f(p+) = \displaystyle{\lim_{x\to p+}f(x) = \lim_{x\to p, x> p}f(x)}.
 \end{align*}$$ 
 Similarly, if $p$ is a  limit point of $E\cap (-\infty, p)$, the **left limit** of $f$ at $p$, if it exists, is denoted by $f(p-)$, and we write 
+
 $$
 \begin{align*}
 f(p-) = \lim_{x\to p}f(x) = \lim_{x\to p, x<p} f(x).
