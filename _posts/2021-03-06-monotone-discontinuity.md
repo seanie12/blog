@@ -172,7 +172,40 @@ $$
 m\geq N \Rightarrow \left|\sum_{k=N+1}^m a_k \right| < \epsilon.
 \end{align}
 $$
-Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ is bounded by $\epsilon$.  Thus, its limit 
+Since $b_m=s_m-\sum_{k=1}^Na_k$,
+
+$$
+\begin{align}
+\begin{split}
+\lim_{m\to\infty}b_m&= \lim_{m\to\infty}\left( s_m -\sum_{k=1}^Na_k\right) \\
+&=\lim_{m\to\infty}s_m-\sum_{k=1}^Na_k
+\end{split}
+\end{align}
+$$
+
+$(b_m)_{m=N+2}^\infty$  is a convergent sequence. 
+
+Alternatively,  we can show its convergence using the sequence $(s_n)_{n=1}^\infty$ is Cauchy.  Since $\mathbb{R}$ is complete, it suffices to show that the sequence $(b_m)_{m=N+2}^\infty$ is Cauchy. Let $\epsilon >0$ be given. Since $(s_n)_{n=1}^\infty$ is Cauchy sequence, there is $N_0\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n_1> n_2> N_0 \Rightarrow \left\lvert \sum_{k=n_2+1}^{n_1} a_k \right\rvert < \epsilon.
+\end{align*}
+$$
+
+Now take $M:=\max \\{N_0, N\\}$. Then for all $m_1 > m_2 >M$,
+
+$$
+\begin{align*}
+\lvert b_{m_1}-b_{m_2}\rvert &= \left\lvert \sum_{k=N+1}^{m_1}a_k - \sum_{k=N+1}^{m_2}a_k\right\rvert \\
+&=\left\lvert  \sum_{k=m_2+1}^{m_1}a_k\right\rvert \\
+&<\epsilon
+\end{align*}
+$$
+
+
+
+Then the sequence $b_m:= \sum_{k=N+1}^m a_k$ is bounded by $\epsilon$ and  thus its limit 
 
 $$
 \begin{align}
