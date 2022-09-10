@@ -59,7 +59,7 @@ Since $p\in E^\prime$ does not imply $p$ is a limit point of $E\cap (p, \infty)$
 
 <*Proof*>
 
-$\Rightarrow$ Suppose that $f$ has a limit at $p\in\text{Int}(I)$. Since $p\in\text{Int}(I)$, there exists $\epsilon>0$ such that $(p-\epsilon, p+\epsilon)\subset I$. Moreover, for every $\delta >0, N^\prime(p)_\delta \cap \text{I}\neq\emptyset$ since $p$ is a limit point of $I$. Then, $N^\prime_\delta (p) \cap (p, p+\epsilon)\neq\emptyset$, which implies that $N^\prime_\delta(p)\cap (p, \infty)\neq \emptyset$.
+$\Rightarrow$ Suppose that $f$ has a limit at $p\in\text{Int}(I)$. Since $p\in\text{Int}(I)$, there exists $\epsilon>0$ such that $(p-\epsilon, p+\epsilon)\subset I$. Moreover, for every $$\delta >0, N^\prime(p)_\delta \cap \text{I}\neq\emptyset$$ since $p$ is a limit point of $I$. Then, $N^\prime_\delta (p) \cap (p, p+\epsilon)\neq\emptyset$, which implies that $N^\prime_\delta(p)\cap (p, \infty)\neq \emptyset$.
 
 $\therefore p$ is a limit point of $I\cap (p,\infty)$.
 
