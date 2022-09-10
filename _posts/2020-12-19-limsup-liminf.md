@@ -35,14 +35,14 @@ $$
 $$
 
 ## Theorem 2.5.3 
-Let t $\\{s_n\\}$  be a sequence in $\mathbb{R}$.
+Let $\\{s_n\\}$  be a sequence in $\mathbb{R}$.
 
 (a) $\beta=\limsup_{n\to\infty}s_n$  is a real number if and only if
 
 $$
 \begin{align}
-\forall \epsilon >0, \exists n_0\in\mathbb{N} \text{ such that } n\geq n_0 \Rightarrow s_n < \beta +\epsilon \\
-\forall \epsilon >0, \forall n\in\mathbb{N}, \exists k\in\mathbb{N} \text{ with } k\geq n \text{ such that } s_k > \beta-\epsilon
+\forall \epsilon >0, \exists n_0\in\mathbb{N} \text{ such that } n\geq n_0 \Rightarrow s_n < \beta +\epsilon \label{eq:1} \\
+\forall \epsilon >0, \forall n\in\mathbb{N}, \exists k\in\mathbb{N} \text{ with } k\geq n \text{ such that } s_k > \beta-\epsilon \label{eq:2}
 \end{align}
 $$
 
@@ -56,6 +56,86 @@ $$
 
 (c) $\limsup_{n\to\infty}s_n = -\infty$ if and only if $\lim_{n\to\infty}s_n =-\infty$
 $$\tag*{$\square$}$$
+
+<*Proof*>
+
+$\Rightarrow$ Let $\beta= \limsup_{n\to\infty}s_n \in \mathbb{R}$ and let $a_k = \sup_{n\geq k} s_n$. Since $\lim_{k\to\infty}a_k=\beta$, there exists a $n_0\in\mathbb{N}$ such that
+
+$$
+\begin{align*}
+n\geq n_0 \Rightarrow a_n < \beta + \epsilon.
+\end{align*}
+$$
+
+Since $a_{n_0}=\sup\\{s_k: k\geq n_0 \\}$, 
+
+$$
+\begin{align*}
+n\geq n_0 \Rightarrow s_n \leq a_{n_0}<\beta + \epsilon.
+\end{align*}
+$$
+
+On the other hand, since the sequence $\\{a_k \\}$ is decreasing, $a_n \geq \beta$ for all $n\in\mathbb{N}$. That is 
+
+
+$$
+\begin{align*}
+\sup\{s_k: k\geq n\}=a_n\geq \beta > \beta-\epsilon.
+\end{align*}
+$$
+
+Therefore for each $n\in\mathbb{N}$, there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k > \beta-\epsilon$.
+
+$\Leftarrow$ Conversely, suppose that Equation $\ref{eq:1}$ and $\ref{eq:2}$ hold.
+
+Let $\epsilon >0$ be given. By Equation $\ref{eq:1}$, there exists a $n_0\in\mathbb{N}$ such that $n\geq n_0 \Rightarrow s_n < \beta + \epsilon$. Since $\beta+\epsilon$ is an upper bound of $\\{s_n: n\geq n_0 \\}$,  
+
+$$
+\begin{align*}
+a_{n_0}=\sup\{s_n: n\geq n_0 \} \leq \beta+\epsilon.
+\end{align*}
+$$
+
+Since the sequence $\\{ a_n \\}$ is decreasing, 
+
+$$
+\begin{align*}
+a_n \leq a_{n_0} \leq \beta +\epsilon \text{ if } n\geq n_0.
+\end{align*}
+$$
+
+Thus,
+
+$$
+\begin{align*}
+\limsup_{n\to\infty}s_n=\lim_{n\to\infty}a_n \leq \beta+\epsilon.
+\end{align*}
+$$
+
+Let $\beta^\prime := \limsup_{n\to\infty}s_n$. Since the choice of $\epsilon$ is an arbitrary, $\beta^\prime \leq \beta$. Now we want to show that $\beta^\prime = \beta$.
+
+Suppose that $\beta^\prime \lneq \beta$. Then we take $\epsilon_0 > 0$ such that 
+
+$$
+\begin{align*}
+\beta^\prime + \epsilon < \beta -\epsilon_0
+\end{align*}
+$$
+
+For an instance, $\epsilon_0 := (\beta-\beta^\prime) / 3$. Since $\limsup_{n\to\infty}s_n=\beta^\prime\in\mathbb{R}$, there exits $n_0\in\mathbb{N}$ such that
+
+$$
+\begin{align*}
+n\geq n_0 \Rightarrow s_n<\beta^\prime +\epsilon < \beta-\epsilon_0
+\end{align*}
+$$
+
+by Equation $\ref{eq:1}$, which contradicts to Equation $\ref{eq:2}$.
+
+
+$$\tag*{$\square$}$$
+
+
 
 
 ## Reference
