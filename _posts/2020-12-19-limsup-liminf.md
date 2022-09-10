@@ -6,8 +6,8 @@ categories:
 
 
 tags:
-  - limsup
-  - liminf
+  - limit superior
+  - limit inferior
  
 
 toc: true
@@ -161,6 +161,25 @@ But it  contradicts to the inequality $\ref{eq:3}$.
 
 $\therefore \limsup_{n\to\infty}s_n=\infty$.
 
+(c) $\Rightarrow$ Suppose that $\limsup_{n\to\infty}s_n = -\infty$. Let $a_n=\sup\\{ s_k: k\geq n\\}$. 
+
+Let $M<0$ be given. Since $a_n\to -\infty$ as $n\to\infty$, there exists $n_0\in\mathbb{N}$ such that  $n\geq n_0 \Rightarrow a_n \leq M.$ Since $s_n\leq a_n, s_n \leq a_n <M$ for all $n\geq n_0$.
+
+$\therefore \limsup_{n\to\infty}s_n = -\infty$.
+
+$\Leftarrow$ Suppose that $\lim_{n\to\infty}s_n = -\infty$. Let $M<0$ be given. Then there is $n_0\in\mathbb{N}$ such that $n\geq n_0\Rightarrow s_n \leq M$.
+
+Since $a_{n_0}$ is the least upper bound of $\\{ s_n: n\geq n_0\\}, a_{n_0}\leq M$ and $s_n \leq M$ for all $n\geq n_0$,
+
+$$
+\begin{align*}
+s_n \leq a_{n_0} \leq M \text{ for all } n\geq n_0.
+\end{align*}
+$$
+
+Since $\\{ a_n \\}$ is monotone decreasing, $n\geq n_0 \Rightarrow a_n \leq a_{n_0}\leq M$.
+
+$\therefore \limsup_{n\to\infty}s_n = \lim_{n\to\infty}a_n = -\infty$.
 
 $$\tag*{$\square$}$$
 ## Reference
