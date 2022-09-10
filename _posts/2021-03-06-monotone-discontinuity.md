@@ -236,7 +236,22 @@ $$
 \end{align*}
 $$ 
 
-is Cauchy.  Since $\mathbb{R}$ is complete, it suffices to show that the sequence $\\{b_m\\}_{m=N+2}^\infty$ is Cauchy. Let $\epsilon >0$ be given. Since $\\{s_n\\}_{n=1}^\infty$ is Cauchy sequence, there is $N_0\in\mathbb{N}$ such that 
+is Cauchy.  Since $\mathbb{R}$ is complete, it suffices to show that the sequence 
+$$
+\begin{align*}
+\{b_m\}_{m=N+2}^\infty
+\end{align*}
+$$
+
+is Cauchy. Let $\epsilon >0$ be given. Since 
+
+$$
+\begin{align*}
+\{s_n\}_{n=1}^\infty
+\end{align*}
+$$ 
+
+is Cauchy sequence, there is $N_0\in\mathbb{N}$ such that 
 
 $$
 \begin{align*}
