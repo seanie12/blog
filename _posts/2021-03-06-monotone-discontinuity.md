@@ -71,6 +71,7 @@ If $p$ is the left end point of $I$, then the right limit of $f$ at $p$ coincide
 
 ## Definition 4.4.2
 $E\subset \mathbb{R}, f:E\to\mathbb{R}, p\in E$. The function $f$ is **right continuous  (left continuous) at $p$** <br />if $\forall \epsilon >0, \exists \delta>0$ such that 
+
 $$
 \begin{align}
 p\leq x <p+\delta \:(p-\delta < x \leq p) \Rightarrow |f(x)-f(p) |< \epsilon.
@@ -138,14 +139,20 @@ $$\tag*{$\square$}$$
 ## Definition 4.4.9
 The **unit jump function** $I:\mathbb{R}\to\mathbb{R}$ defined by 
 $$
+\begin{align*}
 I(x) = \begin{cases}0 \quad (x<0)\\
 1\quad (x\geq 0)
 \end{cases}
+\end{align*}
 $$
-Then $$I_a (x) := I(x-a) = \begin{cases}
+
+Then $$
+\begin{align*}
+I_a (x) := I(x-a) = \begin{cases}
 0 \quad (x<a)\\
 1\quad (x\geq a)
 \end{cases}
+\end{align*}
 $$
 
 ## Theorem
@@ -232,7 +239,7 @@ $$
 is also bounded.
 
 ## Theorem 4.4.10
-Let $a,b\in \mathbb{R}$ and let $\\{x_n\\}$ be a countable subset of $(a,b)$ and let $\\{c_n\\}_{n=1}^\infty$$ be s sequence such that $\sum_{n=1}^\infty c_n < +\infty$. <br /> Then there is a monotone increasing function on $[a,b]$ such that 
+Let $a,b\in \mathbb{R}$ and let $\\{x_n\\}$ be a countable subset of $(a,b)$ and let $\\{c_n\\}_{n=1}^\infty$ be s sequence such that $\sum_{n=1}^\infty c_n < +\infty$. <br /> Then there is a monotone increasing function on $[a,b]$ such that 
 
 (a) $f(a)=0, f(b) = \sum_{n=1}^\infty c_n$
 
@@ -244,13 +251,11 @@ Let $a,b\in \mathbb{R}$ and let $\\{x_n\\}$ be a countable subset of $(a,b)$ and
 
 <*Proof*>
 
-Define $f(x):=\sum_{k=1}^\infty c_k I(x-x_k)$. <br /> Since $0\leq c_k I(x-x_k)\leq c_k$, $s_n (x) :=\sum_{k=1}^n c_k I (x-x_k) \leq \sum_{k=1}^n c_k$. <br /> Since $\sum_{k=1}^\infty c_k < +\infty$, $\\{s_n (x)\\}$$ is bounded above. Since $s_n (x)$ is monotone increasing sequence, $s_n (x)$ converges.
+Define $f(x):=\sum_{k=1}^\infty c_k I(x-x_k)$. <br /> Since $0\leq c_k I(x-x_k)\leq c_k$, $s_n (x) :=\sum_{k=1}^n c_k I (x-x_k) \leq \sum_{k=1}^n c_k$. <br /> Since $\sum_{k=1}^\infty c_k < +\infty$, $\\{s_n (x)\\}$ is bounded above. Since $s_n (x)$ is monotone increasing sequence, $s_n (x)$ converges.
 
-For $x<y, I(x-x_k) \leq I(y-x_k)$ for all $k=1,2,\ldots$. <br />So, 
-$$
-f(x) = \sum_{k=1}^\infty c_k I (x-x_k) \leq \sum_{k=1}^\infty I(y-x_k) = f(y).
-$$
-Thus, $f(x)$ is a monotone increasing function.
+For $x<y, I(x-x_k) \leq I(y-x_k)$ for all $k=1,2,\ldots$. <br />So,  $f(x) = \sum_{k=1}^\infty c_k I (x-x_k) \leq \sum_{k=1}^\infty I(y-x_k) = f(y).$
+
+$\therefore f(x)$ is a monotone increasing function.
 
 (a) Since $x_k > a$ for all $k\in\mathbb{N}$, $I(a-x_k)=0$. <br />$\therefore f(a) = \sum_{k=1}^\infty c_k f(a-x_k)=0$. <br /> Since $x_k <b$ for all $k\in\mathbb{N}$, $I(b-a_k)=1$. <br /> $\therefore f(b) = \sum_{k=1}^\infty c_k f(b-x_k) = \sum_{k=1}^\infty c_k$.
 
@@ -265,6 +270,7 @@ Thus, $f(x)$ is a monotone increasing function.
   \end{split}
   \end{align}
   $$
+
 2. $p\in E^\prime$
   Let $\epsilon >0$ be given. Since $\sum_{k=1}^\infty c_k$ converges, there exists a $N\in\mathbb{N}$ such that 
   $$
@@ -272,12 +278,15 @@ Thus, $f(x)$ is a monotone increasing function.
   \sum_{k=N+1}^\infty c_k <\epsilon
   \end{align}
   $$
+  
   by Cauchy criterion. Choose a $\delta \in\mathbb{R}$ such that 
+  
   $$
   \begin{align}
   0<\delta < \min\{|p-x_k|: k=1,2,\ldots, N\} 
   \end{align}
   $$
+  
   Then $x_k\not\in (p-\delta, p+\delta)$ for $k=1,\ldots, N$. If $x_k\in N_\delta (p) \cap E$, then $k>N$. <br /> Suppose that $p<x<p+\delta$. Then $I(x-x_k) = I(p-x_k)$ for $k=1,\ldots, N$. <br /> Furthermore, for any $p<x, 0\leq I(x-x_k) - I(p-x_k)\leq 1$ for all $k\in\mathbb{N}$.
   Therefore, if $p<x<p+\delta$
   $$
@@ -289,8 +298,10 @@ Thus, $f(x)$ is a monotone increasing function.
   \end{split}
   \end{align}
   $$
+  
   $\therefore \left|f(x)-f(p)\right|<\epsilon$ for all $p<x<p+\delta$. <br /> $\therefore f$ is right continuous at $p$.
   Similarly, suppose that $p-\delta < x < p$. <br />Then $I(x-x_k) = I(p-x_k)$ for $k=1,\ldots, N$. Furthermore, for any $x<p, 0\leq I(p-x_k)-I(x-x_k) \leq 1$
+  
   $$
   \begin{align}
   \begin{split}
@@ -300,6 +311,7 @@ Thus, $f(x)$ is a monotone increasing function.
    \end{split}
   \end{align}
   $$
+  
   $\therefore f$ is left continuous at $p$. <br /> $\therefore f$ is continuous at $p$.
 
 (c) We want to show that $f(x_n+)=f(x_n)$ <br /> Fix an $x_n\in E$. 
@@ -307,6 +319,7 @@ Thus, $f(x)$ is a monotone increasing function.
   There is a $\delta >0$ such that $N^\prime_\delta (x_n) \cap E = \emptyset$, i.e. $(x_n, x_n+\delta) \cap E = \emptyset$. <br /> For $y\in (x_n, x_n+\delta), I(y-x_k) = I(x_n-x_k)$ for all $k\in\mathbb{N}$. <br /> $\therefore f(y) = f(x_n)$ for all $y\in (x_n, x_n+\delta)$ <br /> $\therefore f$ is right continuous at $x_n$.
 2. $x_n \in E^\prime$.   
   Let $\epsilon >0$ be given. Choose a $N\in\mathbb{N}$ such that 
+
   $$
   \begin{align}
   \sum_{k=N+1}^\infty c_k <\epsilon
@@ -389,10 +402,8 @@ $\Rightarrow f^{-1}$ is strictly monotone continuous on $J=f(I)$.
 <*proof*>
 Without loss of generality, assume that $f$ is strictly increasing function. Let $x,y\in I$ with $x<y$ be given. Since $f$ is continuous, by corollary 4.2.12, $f(I) = J$ is an interval.  <br /> Furthermore, since $f$ is strictly increasing, $f(x) < f(y)$. Thus, $f$ is one-to-one function from $I$ onto $J:=f(I)$. <br />Thus, $f^{-1}$ is also one-to-one function from $J$ onto $I$.
 
-Let $y_1,y_2 \in J$ with $y_1 < y_2$ be given. Then there are unique $x_1, x_2 \in I$ such that $y_1= f(x_1), y_2 = f(x_2)$. Since $f$ is strictly increasing, 
-$$
-f^{-1}(y_1) = x_1 < x_2 = f^{-1}(y_2)
-$$
+Let $y_1,y_2 \in J$ with $y_1 < y_2$ be given. Then there are unique $x_1, x_2 \in I$ such that $y_1= f(x_1), y_2 = f(x_2)$. Since $f$ is strictly increasing,  $f^{-1}(y_1) = x_1 < x_2 = f^{-1}(y_2)$
+
 $\therefore f^{-1}$ is strictly increasing function.
 
 Now, we want to show that $f^{-1}$ is continuous on $J$. First, we prove that $f^{-1}$ is left continuous. <br /> Let $y_0\in J$ such that $(-\infty, y_0)\cap J \neq \emptyset$ be given, i.e. $y_0$ is not the left end point of $J$.
@@ -400,22 +411,21 @@ Now, we want to show that $f^{-1}$ is continuous on $J$. First, we prove that $f
 Let $x_o \in I$ such that $y_0 = f(x_0)$. Since $f^{-1}$ is strictly increasing and $(-\infty, y_0) \cap J \neq\emptyset$, $(-\infty, x_0) \cap I \neq \emptyset.$ <br />Let $\epsilon  >0$ be given.
 1. $x_0-\epsilon \not\in I$
   For all $y\in (-\infty, y_0] \cap J$,$x_0-\epsilon < f^{-1}(y) \leq f^{-1}(y_0)$. So,
-  $$
-  \left|f^{-1}(y) -f^{-1}(y_0)\right| < \left|f^{-1}(y_0)-x_0+\epsilon \right| = \epsilon
-  $$
+  $\left\lvert f^{-1}(y) -f^{-1}(y_0)\right\rvert < \left\lvert f^{-1}(y_0)-x_0+\epsilon \right\rvert = \epsilon$
 2. $x_0-\epsilon \in I$
   Choose a $\delta = y_0 - f(x_0-\epsilon)=f(x_0) = f(x_0-\epsilon)>0$. <br /> For all $y\in(y_0-\delta, y_0]$,
+ 
   $$
   \begin{align}
   \begin{split}
-  x_0-\epsilon &= f^{-1}(y_0-\delta)
-  &<f^{-1}(y)
+  x_0-\epsilon = f^{-1}(y_0-\delta) &<f^{-1}(y) \\
   &\leq f^{-1}(y) \\
   &\leq f^{-1}(y_0) =x_0\\
   &<x_0 +\epsilon
   \end{split}
   \end{align}
   $$
+  
   $\therefore \left|f^{-1}(y)  -x_0 \right| <\epsilon$ for all $y\in (y_0-\delta, y_0]$. <br /> $\therefore f$ is left continuous at $y_0$. 
 
 Similar argument proves that $f$ is right continuous at $y_0\in J$ such that $(y_0, +\infty) \cap J\neq\emptyset$. <br /> $\therefore f$ is continuous at $y_0 \in J$. 
