@@ -369,13 +369,34 @@ Finally, we want to show that $\liminf_{n\to\infty} s_n=\inf E.$
 Let $s:=\liminf_{n\to\infty}s_n\in\mathbb{R}$ (If $s=-\infty$, it is trivial to show that $s=\inf E$.) and let $\beta=\inf E$. Then $s\geq \beta$. 
 
 
-Suppose that $s \gneq\beta$. We can take $\epsilon>0$ such that $\alpha+\epsilon < \beta -\epsilon$. By $\ref{eq:4}$, there is $n_0\in\mathbb{N}$ such that $n\geq n_0 \Rightarrow \alpha + \epsilon < \beta-\epsilon < s_n$. It means that there are only **finitely many** $s_n$ such that $s_n < \alpha +\epsilon$, which implies that there is no subsequence $\\{s_{n_k}\\}$ such that $s_{n_k}\to\alpha$ as $k\to\infty$. But it is a contradiction to the assumption that $\alpha\in E$ is a subsequential limit.
+Suppose that $s \gneq\beta$. We can take $\epsilon>0$ such that $\alpha+\epsilon < \beta -\epsilon$. By $\ref{eq:4}$, there is $n_0\in\mathbb{N}$ such that $n\geq n_0 \Rightarrow \alpha + \epsilon < \beta-\epsilon < s_n$. It means that there are only **finitely many** $s_n$ such that $s_n < \alpha +\epsilon$, which implies that there is no subsequence $\\{s_{n_k}\\}$ such that $s_{n_k}\to\alpha$ as $k\to\infty$. But it is a contradiction to the assumption that $\alpha\in E$ is a subsequential limit of $\\{s_n\\}$.
 
 $\therefore \liminf_{n\to\infty}s_n =\inf E$.
 
+$$\tag*{$\square$}$$
+
+
+
 ## Theorem 
+Let $X$ be a metric space and let $\\{p_n\\}$ be a sequence in $X$. Then the set of all the subsequential limits of $\\{p_n\\}$ is closed.
 
+<*Proof*>
 
+Let $E$ be the set of subsequential limits of $\\{p_n\\}$ and let $p\in E^\prime$. It suffices to show that $p\in E$.
+
+Since $p$ is a limit point of $E$, for every $\varepsilon_n=1/2^{n+1}$, there is a subsequential limit $l_n\in N^\prime_{\varepsilon_n}(p)\cap E$. Since $l_n$ is a subsequential limit of $\\{p_n\\}$, there is $N\in\mathbb{N}$ such that $k\geq N \Rightarrow p_{n_k} \in (l_n-\varepsilon_n, l_n +\varepsilon_n)$. In other words there are **infinitely many** $p_{n}$ in $N_{\varepsilon_n}(l_n)$.
+
+So, we can find a **strictly increasing** sequence $\\{n_k\\}$ such that $p_{n_k}\in N_{\varepsilon_k}(l_k)$ for all $k\in\mathbb{N}$. Then with the triangular inequality,
+
+$$
+\begin{align*}
+d(p_{n_k}, p) &\leq d(p_{n_k}, l_k) + d(l_k, p) \\
+&=2\varepsilon_k \\
+&= \frac{1}{2^k}
+\end{align*}
+$$
+
+$\therefore p_{n_k}\to p$ as $k\to\infty$.
 
 $$\tag*{$\square$}$$
 ## Reference
