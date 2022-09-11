@@ -140,15 +140,11 @@ $\therefore \beta=\beta^\prime$.
 
 $\therefore$ For all $M\in\mathbb{R},$ there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k > M$.
 
-$\Leftarrow$ Suppose that for all $M\in\mathbb{R}$ and for all $n\in\mathbb{N}$, there is a $k\in\mathbb{N}$ with $k\geq n$ such that $s_k \geq M$. Then the set $E_n :=\\{s_k : k\geq n \\}$ is not bounded above and thus $a_n=\sup E_n=\infty$ for all $n\in\mathbb$.
+$\Leftarrow$ Suppose that for all $M\in\mathbb{R}$ and for all $n\in\mathbb{N}$, there is a $k\in\mathbb{N}$ with $k\geq n$ such that $s_k \geq M$. Then the set $E_n :=\\{s_k : k\geq n \\}$ is not bounded above and thus $a_n=\sup E_n=\infty$ for all $n\in\mathbb{N}$.
 
 $\therefore \limsup_{n\to\infty}s_n = \inf_{n\in\mathbb{N}}a_n=\infty$
 
 
-
-But it  contradicts to the inequality $\ref{eq:3}$.
-
-$\therefore \limsup_{n\to\infty}s_n=\infty$.
 
 (c) $\Rightarrow$ Suppose that $\limsup_{n\to\infty}s_n = -\infty$. Let $a_n=\sup\\{ s_k: k\geq n\\}$. 
 
