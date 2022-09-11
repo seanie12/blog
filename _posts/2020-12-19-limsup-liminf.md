@@ -366,6 +366,16 @@ $\therefore s=\sup E$.
 
 Finally, we want to show that $\liminf_{n\to\infty} s_n=\inf E.$
 
+Let $s:=\liminf_{n\to\infty}s_n\in\mathbb{R}$ (If $s=-\infty$, it is trivial to show that $s=\inf E$.) and let $\beta=\inf E$. Then $s\geq \beta$. 
+
+
+Suppose that $s \gneq\beta$. We can take $\epsilon>0$ such that $\alpha+\epsilon < \beta -\epsilon$. By $\ref{eq:4}$, there is $n_0\in\mathbb{N}$ such that $n\geq n_0 \Rightarrow \alpha + \epsilon < \beta-\epsilon < s_n$. It means that there are only **finitely many** $s_n$ such that $s_n < \alpha +\epsilon$, which implies that there is no subsequence $\\{s_{n_k}\\}$ such that $s_{n_k}\to\alpha$ as $k\to\infty$. But it is a contradiction to the assumption that $\alpha\in E$ is a subsequential limit.
+
+$\therefore \liminf_{n\to\infty}s_n =\inf E$.
+
+## Theorem 
+
+
 
 $$\tag*{$\square$}$$
 ## Reference
