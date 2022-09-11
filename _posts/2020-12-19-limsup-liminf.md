@@ -182,5 +182,55 @@ Since $\\{ a_n \\}$ is monotone decreasing, $n\geq n_0 \Rightarrow a_n \leq a_{n
 $\therefore \limsup_{n\to\infty}s_n = \lim_{n\to\infty}a_n = -\infty$.
 
 $$\tag*{$\square$}$$
+
+## Theorem 2.5.4
+Let $\\{s_n\\}$ be a sequence in $\mathbb{R}$.
+
+(a) $\liminf_{n\to\infty}s_n=\alpha\in\mathbb{R}$ if and only if 
+
+
+$$
+\begin{align}
+\forall\epsilon >0, \exists n_0\in\mathbb{N} \text{ s.t. } n\geq n_0\Rightarrow s_n>\alpha-\epsilon \labe{eq:4} \\
+\forall\epsilon>0, \forall n\in\mathbb{N}, \exists k\in\mathbb{N} \text{ with } k\geq n \text{ s.t. } s_k < \alpha + \epsilon \label{eq:5}
+\end{align}
+$$
+
+<*Proof*>
+
+Let $\epsilon >0$ be given. Define $b_k :=\inf\\{s_n: n\geq k \\}$. Since $\liminf_{n\to\infty}=\lim_{k\to\infty}b_k=\alpha \in\mathbb{R}$, there exists $n_0\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+k\geq n_0 \Rightarrow b_k > \alpha-\epsilon
+\end{align*}
+$$
+
+Since $b_k$ is infimum of $\\{ s_n: n\geq k\\}$, 
+
+$$
+\begin{align*}
+s_n\geq b_k > \alpha-\epsilon \text{ for all } n \geq k \geq n_0.
+\end{align*}
+$$
+
+$\therefore s_n > \alpha- \epsilon$ for $n\geq n_0$.
+
+On the other hand, $\\{b_k \\}$ is increasing sequence, 
+
+$$
+\begin{align*}
+\inf\{s_k: k\geq n\}=b_n \leq \alpha < \alpha + \epsilon.
+\end{align*}
+$$
+
+Since $\alpha$ is the greatest lower bound of $\\{b_n: n=1,2,\ldots \\}, \alpha+\epsilon$ is not a lower bound anymore.
+
+$\therefore s_k < \alpha +\epsilon$ for some $k\geq n$.
+
+$$\tag*{$\square$}$$
+
+
+
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
