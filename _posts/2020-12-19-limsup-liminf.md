@@ -140,22 +140,11 @@ $\therefore \beta=\beta^\prime$.
 
 $\therefore$ For all $M\in\mathbb{R},$ there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k > M$.
 
-$\Leftarrow$ Suppose that for all $M\in\mathbb{R}$ and for all $n\in\mathbb{N}$, there is a $k\in\mathbb{N}$ with $k\geq n$ such that $s_k \geq M$. Assume that $a_n=\sup \\{ s_k: k\geq n\\}=\alpha$ is a real number. Then 
+$\Leftarrow$ Suppose that for all $M\in\mathbb{R}$ and for all $n\in\mathbb{N}$, there is a $k\in\mathbb{N}$ with $k\geq n$ such that $s_k \geq M$. Then the set $E_n :=\\{s_k : k\geq n \\}$ is not bounded above and thus $a_n=\sup E_n=\infty$ for all $n\in\mathbb$.
 
-$$
-\begin{align}
-s_k\leq \alpha \text{ for all } k\geq n.
-\label{eq:3}
-\end{align}
-$$
+$\therefore \limsup_{n\to\infty}s_n = \inf_{n\in\mathbb{N}}a_n=\infty$
 
-Now take $M:=\alpha+1$. Then by the assumption, there is $k\in\mathbb{N}$ with $k\geq n$ such that 
 
-$$
-\begin{align*}
-s_k \geq \alpha +1 > \alpha.
-\end{align*}
-$$
 
 But it  contradicts to the inequality $\ref{eq:3}$.
 
@@ -268,7 +257,29 @@ $\therefore \alpha=\liminf_{n\to\infty}s_n$.
 $$\tag*{$\square$}$$
 
 
+(b) $\liminf_{n\to\infty}s_n=-\infty$ if and only if 
 
+$$
+\begin{align}
+\forall M\in\mathbb{R}, \forall n\in\mathbb{N}, \exists k\in\mathbb{N} \text{ with } k\geq n \text{ such that } s_k \leq M
+\label{eq:6}
+\end{align}
+$$
 
+<*Proof*>
+
+$\Rightarrow$ Suppose that $\liminf_{n\to\infty}s_n=-\infty$. Let $b_k :=\inf \\{s_n: n\geq k\\}$. Since $\lim\inf_{n\to\infty}s_n = \sup_{k\in\mathbb{N}}b_k=-\infty$ $b_n=-\infty$ for all $n\in\mathbb{N}$. 
+
+Since $\inf\\{s_k: k\geq n \\}=b_n$,  the set $\\{s_k: k\geq n \\}$ is not bounded below. Thus,  for any $M\in\mathbb{R}$, there is $k\in\mathbb{N]$ with $k\geq n$ such that $s_k > M$.
+
+$\therefore$ for all $M\in\mathbb{R}$ for all $n\in\mathbb{N}$, there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k > M$.
+
+$\Leftarrow$  Let $b_n =\inf\\{s_k: k\geq n \\}$. For all $M\in\mathbb{R},$ and for all $n\in\mathbb{N}$, 
+there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k \leq M$ by the assumption $\ref{eq:6}$. It implies that the set $E_n:=\\{s_k: k\geq n \\}$  is not bounded below for all $n\in\mathbb{N}$ and thus $b_n = -\infty$ for all $n\in\mathbb{N}$.
+
+$\therefore \liminf_{n\to\infty}=\sup_{n\in\mathbb{N}}b_n=-\infty$
+ 
+
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll,  **『**Introduction to Real Analysis**』**, Pearson
