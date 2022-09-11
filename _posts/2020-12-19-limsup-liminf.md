@@ -191,14 +191,14 @@ Let $\\{s_n\\}$ be a sequence in $\mathbb{R}$.
 
 $$
 \begin{align}
-\forall\epsilon >0, \exists n_0\in\mathbb{N} \text{ s.t. } n\geq n_0\Rightarrow s_n>\alpha-\epsilon \labe{eq:4} \\
+\forall\epsilon >0, \exists n_0\in\mathbb{N} \text{ s.t. } n\geq n_0\Rightarrow s_n>\alpha-\epsilon \label{eq:4} \\
 \forall\epsilon>0, \forall n\in\mathbb{N}, \exists k\in\mathbb{N} \text{ with } k\geq n \text{ s.t. } s_k < \alpha + \epsilon \label{eq:5}
 \end{align}
 $$
 
 <*Proof*>
 
-Let $\epsilon >0$ be given. Define $b_k :=\inf\\{s_n: n\geq k \\}$. Since $\liminf_{n\to\infty}=\lim_{k\to\infty}b_k=\alpha \in\mathbb{R}$, there exists $n_0\in\mathbb{N}$ such that 
+$\Rightarrow$ Let $\epsilon >0$ be given. Define $b_k :=\inf\\{s_n: n\geq k \\}$. Since $\liminf_{n\to\infty}=\lim_{k\to\infty}b_k=\alpha \in\mathbb{R}$, there exists $n_0\in\mathbb{N}$ such that 
 
 $$
 \begin{align*}
@@ -228,7 +228,45 @@ Since $\alpha$ is the greatest lower bound of $\\{b_n: n=1,2,\ldots \\}, \alpha+
 
 $\therefore s_k < \alpha +\epsilon$ for some $k\geq n$.
 
+$\Leftarrow$ Conversely, suppose that Equation $\ref{eq:4}$ and $\ref{eq:5}$ hold.
+
+Let $\epsilon >0$ be given. By Equation $\ref{eq:4}$, there is a $n_0\in\mathbb{N}$ such that 
+
+
+
+$$
+\begin{align*}
+n\geq n_0 \Rightarrow s_n > \alpha-\epsilon.
+\end{align*}
+$$
+
+In other words, $\alpha-\epsilon$ is a lower bound of $\\{s_n: n\geq n_0\\}$ and thus 
+
+$$
+\begin{align*}
+b_{n_0}=\inf\{s_n: n\geq n_0\}\geq \alpha-\epsilon
+\end{align*}
+$$
+
+Since $\\{b_k\\}$ is monotone increasing,  $b_n\geq b_{n_0}$ for all $n\geq n_0$, i.e., $b_n \geq \alpha -\epsilon$ for $n\geq n_0$. 
+
+Thus, $\liminf_{n\to\infty}s_n = \lim_{n\to\infty}b_n \geq \alpha-\epsilon$. Since the choice of $\epsilon >0$ is an arbitrary, $\alpha^\prime :=\liminf_{n\to\infty}s_n \geq \alpha$.
+
+Now we want to show that $\alpha^\prime = \alpha$. Suppose that $\alpha^\prime \gneq\alpha$. Then we can take $\epsilon_0>0$ such that $\alpha^\prime -\epsilon_0 > \alpha +\epsilon_0$.
+
+Since $\alpha^\prime = \liminf_{n\to\infty}s_n$, there exits a $n_0\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq n_0 \Rightarrow s_n > \alpha^\prime-\epsilon > \alpha+\epsilon_0,
+\end{align*}
+$$
+which contradicts to the inequality $\ref{eq:5}$.
+
+$\therefore \alpha=\liminf_{n\to\infty}s_n$.
+
 $$\tag*{$\square$}$$
+
 
 
 
