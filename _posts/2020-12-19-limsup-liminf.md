@@ -6,8 +6,8 @@ categories:
 
 
 tags:
-  - limit superior
-  - limit inferior
+  - limsup
+  - liminf
  
 
 toc: true
@@ -293,6 +293,78 @@ $\Leftarrow$ Conversely, suppose that $\lim_{n\to\infty}s_n=\infty$. Let $M>0$ b
 Since $\\{b_n\\}$ is monotone increasing, $b_n \geq M$ for all $n\geq n_0$.
 
 $\therefore \lim\inf_{n\to\infty}=\lim_{n\to\infty}b_n = \infty$.
+
+$$\tag*{$\square$}$$
+
+## Theorem 2.5.6
+
+Let $\\{a_n\\}, \\{b_n\\}$ be bounded sequences in $\mathbb{R}$. Then
+
+$$
+\begin{align}
+\lim\inf_{n\to\infty}a_n + \liminf_{n\to\infty}b_n &\leq \lim\inf_{n\to\infty}(a_n+b_b) \\
+&\leq\liminf_{n\to\infty}a_n + \limsup_{n\to\infty}b_n \\
+&\leq \limsup_{n\to\infty}(a_n+b_n) \\
+&\leq \limsup_{n\to\infty}a_n +  \limsup_{n\to\infty}b_n
+\end{align}
+$$
+
+## Theorem 2.5.7
+Let $\\{s_n \\}$ be a sequence in $\mathbb{R}$ and let $E$ be the set of subsequential limits of $\\{s_n\\}$ in $\mathbb{R}$ with $\pm\infty$. 
+
+Then $\limsup_{n\to\infty}, \liminf_{n\to\infty}\in E$ and 
+
+$$
+\begin{align*}
+\limsup_{n\to\infty}s_n = \sup E, \quad \liminf_{n\to\infty}s_n = \inf E.
+\end{align*}
+$$
+
+<*Proof*>
+
+1) Suppose that $s=\limsup_{n\to\infty}\in\mathbb{R}$. 
+
+We want to show that there is a subsequence $\\{s_{n_k}\\}$ such that $\lim_{k\to\infty}s_{n_k}=s$.
+
+Take $\epsilon =1$. Then there is $N_1\in\mathbb{N}$ such that $n\geq N_1 \Rightarrow s_n < s+1$ by $\ref{eq:1}$. Moreover there is $k\in\mathbb{N}$ with $k \geq N_1$ such that $s_{k} > s+1$ by $\ref{eq:2}$. Then take $n_1$ with the smallest integer such that $s-1<s_{n_1} < s+1$. 
+
+For the next step, take $\epsilon=1/2$. Then there is $M_2 \in\mathbb{N}$ such that $n\geq M_2 \Rightarrow s_n < s+1$ by $\ref{eq:1}$.  Take $N_2:=\max\\{n_1, M_2 \\}+1$. Moreover there is $k\in\mathbb{N}$ with $k \geq N_2$ such that $s_{k} > s+1$ by $\ref{eq:2}$. Then take $n_2$ with the smallest integer such that $s-\frac{1}{2}<s_{n_2} < s+\frac{1}{2}$. 
+
+Repeat this process and we get strictly increasing sequence $\\{n_k\\}$ and $s-\frac{1}{k} < s_{n_k} < s+\frac{1}{k}$.
+
+$\therefore s_{n_k}\to s$ as $k\to\infty$
+
+$\therefore \limsup_{n\to\infty}=s\in E$.
+
+2) Suppose that $\limsup_{n\to\infty}s_n=\infty$. By Theorem 2.5.3, for all $M\in\mathbb{R}$, for all $k\in\mathbb{N}$, there is a $n\in\mathbb{N}$ with $n\geq k$ such that $s_n \geq M$.
+
+Take $M=1$ and $k=1$. Then there is $n_1 \geq 1$ such that $s_{n_1} \geq 1$.
+
+For the next step, take $M:=s_{n_1}+1$ and $k=n_1 +1$. Then there is $n_2 \geq n_1 +1$ such that $s_{n_2} \geq s_{n_1}+1$.
+
+Repeat this process. Then we get the subsequence $\\{s_{n_k}\\}$ which is monotone increasing and not bounded above, i.e., $\lim_{k\to\infty}s_{n_k}=\infty$.
+
+$\therefore \limsup_{n\to\infty}=\infty \in E$.
+
+Similarly we can prove that $\liminf_{n\to\infty}s_n \in E$.
+
+Next, we want to show that $s=\sup E$.
+
+Since $s\in E, s\leq \sup E =:\beta$. If $s=\infty, s= \sup E$. Otherwise, suppose that $s \lneq \beta$.
+
+Since $\beta$ is the least upper bound, there is $\alpha \in E$ such that $s<\alpha \leq \beta$. Take $\epsilon>0$ such that $s+\epsilon < \alpha -\epsilon$. By $\ref{eq:1}$, there is $n_0\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq n_0 \Rightarrow s_n < s_n+\epsilon < \alpha -\epsilon.
+\end{align*}
+$$
+
+It means that there are **finitely many** $s_n$ such that $s_n > \alpha -\epsilon$. It implies that there is no subsequence $\\{ s_{n_k}\\}$ such that $s_{n_k}\to\alpha$ as $k\to\infty$. But $\alpha \in E$ is a subsequential limit of of $\\{s_n\\}$, which leads to a contradiction.
+
+$\therefore s=\sup E$.
+
+Finally, we want to show that $\liminf_{n\to\infty} s_n=\inf E.$
 
 
 $$\tag*{$\square$}$$
