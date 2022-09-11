@@ -287,7 +287,7 @@ $\Rightarrow$ Suppose that $\liminf_{n\to\infty}s_n = \infty$. Let $b_n :=\inf \
 
 Let $M>0$ be given. Since $\liminf_{n\to\infty}s_n=\lim_{n\to\infty}b_n=\infty$, there exits a $n_0\in\mathbb{N}$ such that $n\geq n_0 \Rightarrow b_n >M$. 
 
-Since $s_n \geq b_n, s_n > M$ for all $n\geq n_0$.
+Since $s_n \geq b_n, s_n > M$ for all $n\geq n_0$. 
 
 $\therefore \lim_{n\to\infty}s_n = \infty$.
 
