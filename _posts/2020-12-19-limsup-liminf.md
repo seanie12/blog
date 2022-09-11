@@ -270,7 +270,7 @@ $$
 
 $\Rightarrow$ Suppose that $\liminf_{n\to\infty}s_n=-\infty$. Let $b_k :=\inf \\{s_n: n\geq k\\}$. Since $\lim\inf_{n\to\infty}s_n = \sup_{k\in\mathbb{N}}b_k=-\infty$ $b_n=-\infty$ for all $n\in\mathbb{N}$. 
 
-Since $\inf\\{s_k: k\geq n \\}=b_n$,  the set $\\{s_k: k\geq n \\}$ is not bounded below. Thus,  for any $M\in\mathbb{R}$, there is $k\in\mathbb{N]$ with $k\geq n$ such that $s_k > M$.
+Since $\inf\\{s_k: k\geq n \\}=b_n$,  the set $\\{s_k: k\geq n \\}$ is not bounded below. Thus,  for any $M\in\mathbb{R}$, there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k > M$.
 
 $\therefore$ for all $M\in\mathbb{R}$ for all $n\in\mathbb{N}$, there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k > M$.
 
@@ -279,6 +279,25 @@ there is $k\in\mathbb{N}$ with $k\geq n$ such that $s_k \leq M$ by the assumptio
 
 $\therefore \liminf_{n\to\infty}=\sup_{n\in\mathbb{N}}b_n=-\infty$
  
+ (c) $\liminf_{n\to\infty}s_n =\infty$ if and only if $s_n\to\infty$ as $n\to\infty$.
+
+<*Proof*>
+
+$\Rightarrow$ Suppose that $\liminf_{n\to\infty}s_n = \infty$. Let $b_n :=\inf \\{s_k : k\geq n\\}$. Then $s_n \geq b_n$.
+
+Let $M>0$ be given. Since $\liminf_{n\to\infty}s_n=\lim_{n\to\infty}b_n=\infty$, there exits a $n_0\in\mathbb{N}$ such that $n\geq n_0 \Rightarrow b_n >M$. 
+
+Since $s_n \geq b_n, s_n > M$ for all $n\geq n_0$.
+
+$\therefore \lim_{n\to\infty}s_n = \infty$.
+
+
+$\Leftarrow$ Conversely, suppose that $\lim_{n\to\infty}s_n=\infty$. Let $M>0$ be given. Then there exists $n_0\in\mathbb{N}$ such that $n\geq n_0 \Rightarrow s_n > M$. Then $M$ is a lower bound of the set $\\{s_n : n\geq n_0\\}$. Then $b_{n_0} = \inf \\{s_n: n\geq n_0\\}\geq M$.
+
+Since $\\{b_n\\}$ is monotone increasing, $b_n \geq M$ for all $n\geq n_0$.
+
+$\therefore \lim\inf_{n\to\infty}=\lim_{n\to\infty}b_n = \infty$.
+
 
 $$\tag*{$\square$}$$
 ## Reference
