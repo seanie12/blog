@@ -55,7 +55,15 @@ is a basis for $\ker T$.  On the other hand, since $\mathbf{v}_i \perp \mathbf{v
 
 Since  $V= \ker T \bigoplus \ker T^\perp$, $\dim \ker T^\perp = \dim V - \dim \ker T^\perp=n - (n-r) =r$. Thus $\\{\mathbf{v}_1\ldots, \mathbf{v}_r\\}$ is a basis for $\ker T^\perp$.
 
-Similarly, we can show that  $\\{\mathbf{u}_{1}, \ldots, \mathbf{u}_r \\}$ is a basis for $\text{im} T$ and $\\{\mathbf{u}_{r+1}, \ldots, \mathbf{u}_m \\}$ is a basis for $\text{im}T^\perp$.
+Similarly, we can show that  
+
+$$
+\begin{align*}
+\{\mathbf{u}_{1}, \ldots, \mathbf{u}_r \}
+\end{align*}
+$$ 
+
+is a basis for $\text{im} T$ and $\\{\mathbf{u}_{r+1}, \ldots, \mathbf{u}_m \\}$ is a basis for $\text{im}T^\perp$.
 
 
 Then $\\{\mathbf{v}_1, \ldots, \mathbf{v}_r \\}$ is a basis for $\ker T^\perp$ and $\\{\mathbf{v}_{r+1},\ldots, \mathbf{v}_n \\}$ is a basis for $\ker T$.  Since 
@@ -116,5 +124,20 @@ Let $V$ and $W$ be finite-dimensional inner product spaces and let $T:V\to W$ be
 
 (b) $T T^\dagger$ is the orthogonal projection of $W$ onto $\text{im} T$.
 
+
+<*Proof*>
+
+We define $L: \ker T^\perp \to \text{im} T$ by $L(\mathbf{x}) = T(\mathbf{x})$  for all $\mathbf{x}\in\ker T^\perp$.
+
+(a)  If $\mathbf{x}\in\ker T^\perp$, then $T^\dagger T (\mathbf{x})=L^{-1} (L(\mathbf{x}))= \mathbf{x}$. If $\mathbf{x}\in \ker T$,  then $T^\dagger T(\mathbf{x})=T^\dagger(\mathbf{0})=\mathbf{0}$. 
+
+$\therefore T^\dagger T$ is orthogonal projection of $V$ onto $\ker T^\perp$.
+
+(b) If $\mathbf{y} \in \text{im}T$, then $TT^\dagger(\mathbf{y})=T(L^{-1}(y))= L(L^{-1}(\mathbf{y}))=\mathbf{y}$. On the other hand, if $\mathbf{y} \in \text{im}T^\perp$, then $TT^\dagger(\mathbf{y})=T(\mathbf{0})=\mathbf{0}$.
+
+$\therefore TT^\dagger $ is orthogonal projection of $W$ onto $\text{im} T$.
+
+
+$$\tag*{$\square$}$$
 ## Reference
 - Stephen Friedberg, Arnold Insel, and Lawrence Spence **『**Linear Algebra**』**
