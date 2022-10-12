@@ -211,7 +211,7 @@ Finally, suppose that $\mathbf{y}\in F^n$ is any vector such that $A\mathbf{z}=A
 With singular value decomposition of $A$, we can write $A=U\Sigma V^*$ and $A^\dagger = V\Sigma U^*$. Thus
 
 $$
-\begin{align*}
+\begin{align}
 \begin{split}
 A^\dagger A A^\dagger &=  (V\Sigma^\dagger U^*)( U\Sigma V^*)(V\Sigma^\dagger U^*) \\
 &=V\Sigma^\dagger \Sigma \Sigma^\dagger U^* \\
@@ -223,7 +223,7 @@ I_r & 0 \\
 &=A^\dagger
 \end{split}
 \label{eq:1}
-\end{align*}
+\end{align}
 $$
 
 Then by Equation$\ref{eq:1}$,
