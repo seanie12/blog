@@ -154,5 +154,90 @@ $\therefore TT^\dagger$ is orthogonal projection of $W$ onto $\text{im} T$.
 
 
 $$\tag*{$\square$}$$
+
+## Theorem
+
+Consider the system of linear equations $A\mathbf{x}=\mathbf{b}$, where $A$ is an $m \times n$ matrix and $\mathbf{b}\in F^m$. If $\mathbf{z} = A^\dagger \mathbf{b}$, then $\mathbf{z}$ has the following properties.
+
+(a) If $A\mathbf{x}=\mathbf{b}$ is consistent, then $\mathbf{z}$ is the unique solution to the system having minimum norm. That is $\mathbf{z}$ is a solution to the system and if $\mathbf{y}$ is any solution to the system, then $\lVert \mathbf{z}  \rVert \leq \lVert \mathbf{y} \rVert$  with equality if and only if $\mathbf{y}=\mathbf{z}$.
+
+(b) If $A\mathbf{x}=\mathbf{b}$ is inconsistent, then $\mathbf{z}$ is the unique best approximation to  a solution having minimum norm. That is $\lVert A\mathbf{z}-\mathbf{b} \rVert \leq \lVert A\mathbf{y}-\mathbf{b}\rVert$ for any $\mathbf{y}\in F^m$ with equality if and only if $A\mathbf{z}=A\mathbf{y}$. Furthermore, if $A\mathbf{z}=A\mathbf{y}$, then $\lVert \mathbf{z} \rVert \leq \lVert \mathbf{y} \rVert$ with equality if and only if $\mathbf{y}=\mathbf{z}$.
+
+<*Proof*>
+
+(a) Let $T = L_A$. Suppose that $A\mathbf{x}= \mathbf{b}$ is consistent and let $\mathbf{z}=A^\dagger\mathbf{b}$. Since $\mathbf{b} \in \text{im} T$, 
+
+$$
+\begin{align*}
+A\mathbf{z}=AA^\dagger\mathbf{b}=TT^\dagger(\mathbf{b})=\mathbf{b}
+\end{align*}
+$$
+
+by the previous lemma. Thus $\mathbf{z}$ is a solution to the system. Now suppose that $\mathbf{y}$ is a solution to the system. Then
+
+$$
+\begin{align*}
+T^\dagger T(\mathbf{y}) = A^\dagger A\mathbf{y}=A^\dagger \mathbf{b}=\mathbf{z},
+\end{align*}
+$$
+
+that is $\mathbf{z}$ is orthogonal projection of $\mathbf{y}$ onto $\ker T^\perp$. Since $F^n=\ker T \bigoplus\ker T^\perp, \mathbf{y}=\mathbf{x}+\mathbf{z}$ for some $\mathbf{x}\in\ker T$.  
+
+ Since $\langle \mathbf{x}, \mathbf{z}\rangle = 0$,
+
+$$
+\begin{align*}
+\lVert \mathbf{y} \rVert^2 &= \lVert \mathbf{x+z} \rVert^2 \\
+&= \langle \mathbf{x}, \mathbf{x} \rangle+ \langle \mathbf{z}, \mathbf{z}\rangle + \langle \mathbf{x}, \mathbf{z} \rangle + \langle \mathbf{z}, \mathbf{x} \rangle \\
+&=  \langle \mathbf{x}, \mathbf{x} \rangle+ \langle \mathbf{z}, \mathbf{z}\rangle \\
+& = \lVert \mathbf{x} \rVert^2 + \lVert \mathbf{z} \rVert^2 \\
+&\geq  \lVert \mathbf{z} \rVert^2
+\end{align*}
+$$
+$\therefore \lVert \mathbf{z} \rVert\leq \lVert \mathbf{y}\rVert$ for all solution $\mathbf{y}\in F^n$.
+
+(b) Suppose that $A\mathbf{x}=\mathbf{b}$ is inconsistent.  By the previous lemma, 
+
+$$
+\begin{align*}
+A\mathbf{z}= AA^\dagger \mathbf{b} = TT^\dagger(\mathbf{b}).
+\end{align*}
+$$
+
+Thus $A\mathbf{z}$ is the orthogonal projection of $\mathbf{b}$ onto $\text{im} T$, which is $A\mathbf{z}$ is the best approximation to $\mathbf{b}$. Thus, $\lVert A\mathbf{z}-\mathbf{b}\rVert \leq \lVert A\mathbf{y} -\mathbf{b}\rVert$ for all $\mathbf{y}\in F^m$.
+
+Finally, suppose that $\mathbf{y}\in F^n$ is any vector such that $A\mathbf{z}=A\mathbf{y} = \mathbf{c}$. 
+
+With singular value decomposition of $A$, we can write $A=U\Sigma V^*$ and $A^\dagger = V\Sigma U^*$. Thus
+
+$$
+\begin{align*}
+\begin{split}
+A^\dagger A A^\dagger &=  (V\Sigma^\dagger U^*)( U\Sigma V^*)(V\Sigma^\dagger U^*) \\
+&=V\Sigma^\dagger \Sigma \Sigma^\dagger U^* \\
+&=V\begin{pmatrix}
+I_r & 0 \\
+0 & 0
+\end{pmatrix} \Sigma^\dagger U^* \\
+&=V\Sigma^\dagger U^* \\
+&=A^\dagger
+\end{split}
+\label{eq:1}
+\end{align*}
+$$
+
+Then by Equation$\ref{eq:1}$,
+
+$$
+\begin{align*}
+A^\dagger \mathbf{c}=A^\dagger A\mathbf{z}=A^\dagger AA^\dagger \mathbf{b} = A^\dagger\mathbf{b}=\mathbf{z}.
+\end{align*}
+$$
+
+Since $\mathbf{z}=A^\dagger\mathbf{c}$, we can apply the part (a) to the linear system $A\mathbf{x}=\mathbf{c}$, which is consistent. Thus $\lVert \mathbf{z} \rVert \leq \lVert \mathbf{y}\rVert$  with equality if and only if $\mathbf{y}=\mathbf{z}$.
+
+$$\tag*{$\square$}$$
+
+
 ## Reference
 - Stephen Friedberg, Arnold Insel, and Lawrence Spence **『**Linear Algebra**』**
