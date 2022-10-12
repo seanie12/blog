@@ -207,9 +207,7 @@ $$
 
 Thus $A\mathbf{z}$ is the orthogonal projection of $\mathbf{b}$ onto $\text{im} T$, which is $A\mathbf{z}$ is the best approximation to $\mathbf{b}$. Thus, $\lVert A\mathbf{z}-\mathbf{b}\rVert \leq \lVert A\mathbf{y} -\mathbf{b}\rVert$ for all $\mathbf{y}\in F^m$.
 
-Finally, suppose that $\mathbf{y}\in F^n$ is any vector such that $A\mathbf{z}=A\mathbf{y} = \mathbf{c}$. 
-
-With singular value decomposition of $A$, we can write $A=U\Sigma V^*$ and $A^\dagger = V\Sigma U^*$. Thus
+Finally, suppose that $\mathbf{y}\in F^n$ is any vector such that $A\mathbf{z}=A\mathbf{y} = \mathbf{c}$.  With singular value decomposition of $A$, we can write $A=U\Sigma V^*$ and $A^\dagger = V\Sigma U^*$. Thus
 
 $$
 \begin{align}
