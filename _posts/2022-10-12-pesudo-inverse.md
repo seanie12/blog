@@ -119,14 +119,14 @@ Let $\beta =\\{\mathbf{v}_1, \ldots, \mathbf{v}_n \\}$ be an orthonormal basis f
 Then by the fundamental theorem of linear algebra, the following equations hold.
 
 $$
-\begin{align}
+\begin{align*}
 A^\dagger  &= [L^\dagger_A]^\mathcal{F}_\mathcal{E} \\
 &= [Id_V\circ L^\dagger_A\circ Id_W]^\mathcal{F}_\mathcal{E} \\
 &=[Id_V]_\mathcal{E}^\beta [L_A^\dagger]^\gamma_\beta[Id_W]_\gamma^\mathcal{F} \\
 &=[Id_V]_\mathcal{E}^\beta [L_A^\dagger]^\gamma_\beta([Id_W]^\gamma_\mathcal{F})^{-1} \\
 &=V\Sigma^\dagger U^{-1} \\
 &=V\Sigma^\dagger U^{*} 
-\end{align}
+\end{align*}
 $$
 
 $$\tag*{$\square$}$$
