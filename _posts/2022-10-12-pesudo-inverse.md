@@ -43,7 +43,15 @@ T(\mathbf{v}_i)=\begin{cases}
 \end{align*}
 $$
 
-Since $\dim\ker T^\perp  = \dim V - \text{rank} T = n-r$ and $T (\mathbf{v}_i)=\mathbf{0}$ for $i>r$,  $\\{\mathbf{v}_{r+1}, \ldots, \mathbf{v}_n\\}$ is a basis for $\ker T$.  On the other hand, since $\mathbf{v}_i \perp \mathbf{v}_j$ for all $1\leq i \leq r$ and $r<j \leq n$, $\\{\mathbf{v}_1, \ldots, \mathbf{v}_r\\}$ is linearly independent subset of $\ker T^\perp$. 
+Since $\dim\ker T^\perp  = \dim V - \text{rank} T = n-r$ and $T (\mathbf{v}_i)=\mathbf{0}$ for $i>r$,  
+
+$$
+\begin{align*}
+\{\mathbf{v}_{r+1}, \ldots, \mathbf{v}_n\}
+\end{align*}
+$$ 
+
+is a basis for $\ker T$.  On the other hand, since $\mathbf{v}_i \perp \mathbf{v}_j$ for all $1\leq i \leq r$ and $r<j \leq n$, $\\{\mathbf{v}_1, \ldots, \mathbf{v}_r\\}$ is linearly independent subset of $\ker T^\perp$. 
 
 Since  $V= \ker T \bigoplus \ker T^\perp$, $\dim \ker T^\perp = \dim V - \dim \ker T^\perp=n - (n-r) =r$. Thus $\\{\mathbf{v}_1\ldots, \mathbf{v}_r\\}$ is a basis for $\ker T^\perp$.
 
