@@ -51,7 +51,7 @@ Similarly, we can show that  $\\{\mathbf{u}_{1}, \ldots, \mathbf{u}_r \\}$ is a 
 
 
 Then $\\{\mathbf{v}_1, \ldots, \mathbf{v}_r \\}$ is a basis for $\ker T^\perp$ and $\\{\mathbf{v}_{r+1},\ldots, \mathbf{v}_n \\}$ is a basis for $\ker T$.  Since 
-$$\tag*{$\square$}$$
+
 
 Let $L$ be the restriction of $T$ to $\ker T^\perp$ as in the definition of the pseudo-inverse. Then $L^{-1}(\mathbf{u}_i)=\frac{1}{\sigma_i}\mathbf{v}_i$ for $1 \leq i \leq r$. Therefore, 
 
@@ -96,6 +96,8 @@ A^\dagger  &= [L^\dagger_A]^\mathcal{F}_\mathcal{E} \\
 &=V\Sigma^\dagger U^{*} 
 \end{align}
 $$
+
+$$\tag*{$\square$}$$
 
 
 ## Reference
