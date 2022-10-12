@@ -86,6 +86,7 @@ Then $A^\dagger = V \Sigma^\dagger U^*$.
 Let $\beta =\\{\mathbf{v}_1, \ldots, \mathbf{v}_n \\}$ be an orthonormal basis for $F^n$ with $V = [\mathbf{v_1}\cdots \mathbf{v}_n]\in \mathbb{R}^{n\times n}$ and let $\gamma =\\{ \mathbf{u}_1, \ldots, \mathbf{u}_m\\}$ be an orthonormal basis for $F^m$ with $U=[\mathbf{u}\cdots \mathbf{u}]\in\mathbb{R}^{m\times m}$. Let $\mathcal{E}$ and $\mathcal{F}$ be standard bases for $F^n$ and $F^m$, respectively.
 
 Then by the fundamental theorem of linear algebra, the following equations hold.
+
 $$
 \begin{align}
 A^\dagger  &= [L^\dagger_A]^\mathcal{F}_\mathcal{E} \\
