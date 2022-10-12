@@ -227,7 +227,7 @@ I_r & 0 \\
 \end{align}
 $$
 
-Then by Equation$\ref{eq:1}$,
+Then by equation$~\ref{eq:1}$,
 
 $$
 \begin{align*}
