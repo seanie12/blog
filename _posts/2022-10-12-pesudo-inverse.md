@@ -194,6 +194,7 @@ $$
 &\geq  \lVert \mathbf{z} \rVert^2
 \end{align*}
 $$
+
 $\therefore \lVert \mathbf{z} \rVert\leq \lVert \mathbf{y}\rVert$ for all solution $\mathbf{y}\in F^n$.
 
 (b) Suppose that $A\mathbf{x}=\mathbf{b}$ is inconsistent.  By the previous lemma, 
