@@ -282,7 +282,7 @@ A^*A &= (V\Sigma^\top U^*)( U\Sigma V^*) \\
 \end{align*}
 $$
 
-we get $(A^*A)^{-1}= V\text{diag}(1/\sigma^2_1, \ldots, 1/\sigma^2_n )V^*$. Thus,
+we get $(A^{*}A)^{-1}= V\text{diag}(1/\sigma^2_1, \ldots, 1/\sigma^2_n )V^{*}$. Thus,
 
 $$
 \begin{align*}
