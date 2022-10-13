@@ -211,12 +211,11 @@ Finally, suppose that $\mathbf{y}\in F^n$ is any vector such that $A\mathbf{z}=A
 
 $$
 \begin{align*}
-A=U\Sigma V^{*}, A^\dagger= V\Sigma U^{*}.
+A=U\Sigma V^*, A^\dagger = V\Sigma U^*.
 \end{align*}
 $$ 
 
-Thus,
-
+Thus
 $$
 \begin{align}
 \begin{split}
@@ -245,6 +244,58 @@ Since $\mathbf{z}=A^\dagger\mathbf{c}$, we can apply the part (a) to the linear 
 
 $$\tag*{$\square$}$$
 
+## Remark
+Let $A$ be an $m\times n$ matrix of rank $n$ with $m>n$. For linear regression problem, we want to find $\mathbf{x}\in F^n$ such that 
 
+$$
+\begin{align*}
+\underset{\mathbf{x} \in F^n}{\text{minimize}} \lVert A\mathbf{x} -\mathbf{y} \rVert
+\end{align*}
+$$
+
+for given labels $\mathbf{y}\in F^m$. With the normal equation, we know that  $(A^*A)^{-1}A^*\mathbf{y}$ is the best approximation to the linear system.
+
+Then the previous theorem says that we have the unique approximation $A^\dagger \mathbf{y}$, that is $A^\dagger = (A^*A)^{-1}A^*$.
+
+<*Proof*>
+With a singular value decomposition of $A$, we write $A=U\Sigma V^*$ where $U,V$ are orthogonal matrices and 
+
+$$
+\Sigma_{ii}=\begin{cases}
+\sigma_i &\text{if } 1\leq i \leq n \\
+0 & \text{if } n < i \leq m
+\end{cases}
+$$
+with non-zero singular values $\sigma_1 \geq \sigma_2 \geq \cdots \geq \sigma_n>0$.
+
+Since 
+
+$$
+\begin{align*}
+A^*A &= (V\Sigma^\top U^*)( U\Sigma V^*) \\
+&=V\Sigma^\top \Sigma V^* \\
+&= V \begin{pmatrix}\sigma^2_1 & & &\\
+& \sigma^2_2 & & \\
+& & \ddots &\\
+& & & \sigma^2_n
+ \end{pmatrix} V^*,
+\end{align*}
+$$
+
+we get $(A^*A)^{-1}= V\text{diag}(1/\sigma^2_1, \ldots, 1/\sigma^2_n )V^*$. Thus,
+
+$$
+\begin{align*}
+(A^*A)^{-1}A^{*}&=V\begin{pmatrix}\frac{1}{\sigma^2_1} & & &\\
+& \frac{1}{\sigma^2_2} & & \\
+& & \ddots &\\
+& & & \frac{1}{\sigma^2_n}
+ \end{pmatrix}V^* V\Sigma^\top U^* \\
+ &=V\Sigma^\dagger U^* \\
+ &=A^\dagger.
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
 ## Reference
 - Stephen Friedberg, Arnold Insel, and Lawrence Spence **『**Linear Algebra**』**
