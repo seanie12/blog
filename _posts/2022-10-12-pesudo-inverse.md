@@ -99,7 +99,7 @@ $$
 Let $A$ be an $m\times n$ matrix of rank $r$. Then there exists a unique $n\times m$ matrix $B$ such that $L^\dagger_A: F^m\to F^n$ is equal to $L_B$. We call $B$ the pseudo-inverse of $A$ and denote it by $B=A^\dagger$.
 
 ## Theorem
-Let $A$ be an $m\times n$ matrix of rank $r$ with a singular value decomposition $A =U\Sigma V^*$ and non-zero singular values $\sigma_1\geq \sigma_2\geq \cdots \geq\sigma_r$.  Let $\Sigma^\dagger$ be the $m\times n$ matrix defined by
+Let $A$ be an $m\times n$ matrix of rank $r$ with a singular value decomposition $A =U\Sigma V^\ast$ and non-zero singular values $\sigma_1\geq \sigma_2\geq \cdots \geq\sigma_r$.  Let $\Sigma^\dagger$ be the $m\times n$ matrix defined by
 
 $$
 \begin{align*}
@@ -110,7 +110,7 @@ $$
 \end{align*}
 $$ 
 
-Then $A^\dagger = V \Sigma^\dagger U^*$.
+Then $A^\dagger = V \Sigma^\dagger U^\ast$.
 
 <*Proof*>
 
@@ -211,7 +211,7 @@ Finally, suppose that $\mathbf{y}\in F^n$ is any vector such that $A\mathbf{z}=A
 
 $$
 \begin{align*}
-A=U\Sigma V^*, A^\dagger = V\Sigma U^*.
+A=U\Sigma V^\ast , A^\dagger = V\Sigma U^\ast .
 \end{align*}
 $$ 
 
@@ -219,13 +219,13 @@ Thus
 $$
 \begin{align}
 \begin{split}
-A^\dagger A A^\dagger &=  (V\Sigma^\dagger U^*)( U\Sigma V^*)(V\Sigma^\dagger U^*) \\
-&=V\Sigma^\dagger \Sigma \Sigma^\dagger U^* \\
+A^\dagger A A^\dagger &=  (V\Sigma^\dagger U^\ast )( U\Sigma V^\ast)(V\Sigma^\dagger U^\ast) \\
+&=V\Sigma^\dagger \Sigma \Sigma^\dagger U^\ast \\
 &=V\begin{pmatrix}
 I_r & 0 \\
 0 & 0
-\end{pmatrix} \Sigma^\dagger U^* \\
-&=V\Sigma^\dagger U^* \\
+\end{pmatrix} \Sigma^\dagger U^\ast \\
+&=V\Sigma^\dagger U^\ast \\
 &=A^\dagger
 \end{split}
 \label{eq:1}
@@ -255,10 +255,10 @@ $$
 
 for given labels $\mathbf{y}\in F^m$. With the normal equation, we know that  $(A^\ast A)^{-1}A^\ast\mathbf{y}$ is the best approximation to the linear system.
 
-Then the previous theorem says that we have the unique approximation $A^\dagger \mathbf{y}$, that is $A^\dagger = (A^*A)^{-1}A^*$.
+Then the previous theorem says that we have the unique approximation $A^\dagger \mathbf{y}$, that is $A^\dagger = (A^\ast A)^{-1}A^\ast$.
 
 <*Proof*>
-With a singular value decomposition of $A$, we write $A=U\Sigma V^*$ where $U,V$ are orthogonal matrices and 
+With a singular value decomposition of $A$, we write $A=U\Sigma V^\ast$ where $U,V$ are orthogonal matrices and 
 
 $$
 \Sigma_{ii}=\begin{cases}
@@ -272,13 +272,13 @@ Since
 
 $$
 \begin{align*}
-A^*A &= (V\Sigma^\top U^*)( U\Sigma V^*) \\
-&=V\Sigma^\top \Sigma V^* \\
+A^\ast A &= (V\Sigma^\top U^\ast )( U\Sigma V^\ast) \\
+&=V\Sigma^\top \Sigma V^\ast \\
 &= V \begin{pmatrix}\sigma^2_1 & & &\\
 & \sigma^2_2 & & \\
 & & \ddots &\\
 & & & \sigma^2_n
- \end{pmatrix} V^*,
+ \end{pmatrix} V^\ast,
 \end{align*}
 $$
 
@@ -286,12 +286,12 @@ we get $(A^\ast A)^{-1}= V\text{diag}(1/\sigma^2_1, \ldots, 1/\sigma^2_n )V^\ast
 
 $$
 \begin{align*}
-(A^*A)^{-1}A^{*}&=V\begin{pmatrix}\frac{1}{\sigma^2_1} & & &\\
+(A^\ast A)^{-1}A^{*}&=V\begin{pmatrix}\frac{1}{\sigma^2_1} & & &\\
 & \frac{1}{\sigma^2_2} & & \\
 & & \ddots &\\
 & & & \frac{1}{\sigma^2_n}
- \end{pmatrix}V^* V\Sigma^\top U^* \\
- &=V\Sigma^\dagger U^* \\
+ \end{pmatrix}V^\ast V\Sigma^\top U^\ast \\
+ &=V\Sigma^\dagger U^\ast \\
  &=A^\dagger.
 \end{align*}
 $$
