@@ -125,7 +125,7 @@ A^\dagger  &= [L^\dagger_A]^\mathcal{F}_\mathcal{E} \\
 &=[Id_V]_\mathcal{E}^\beta [L_A^\dagger]^\gamma_\beta[Id_W]_\gamma^\mathcal{F} \\
 &=[Id_V]_\mathcal{E}^\beta [L_A^\dagger]^\gamma_\beta([Id_W]^\gamma_\mathcal{F})^{-1} \\
 &=V\Sigma^\dagger U^{-1} \\
-&=V\Sigma^\dagger U^{*} 
+&=V\Sigma^\dagger U^{\ast} 
 \end{align*}
 $$
 
