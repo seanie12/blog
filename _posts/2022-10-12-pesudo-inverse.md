@@ -253,7 +253,7 @@ $$
 \end{align*}
 $$
 
-for given labels $\mathbf{y}\in F^m$. With the normal equation, we know that  $(A^*A)^{-1}A^*\mathbf{y}$ is the best approximation to the linear system.
+for given labels $\mathbf{y}\in F^m$. With the normal equation, we know that  $(A^\ast A)^{-1}A^\ast\mathbf{y}$ is the best approximation to the linear system.
 
 Then the previous theorem says that we have the unique approximation $A^\dagger \mathbf{y}$, that is $A^\dagger = (A^*A)^{-1}A^*$.
 
