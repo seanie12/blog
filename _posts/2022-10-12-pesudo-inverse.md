@@ -286,7 +286,7 @@ we get $(A^\ast A)^{-1}= V\text{diag}(1/\sigma^2_1, \ldots, 1/\sigma^2_n )V^\ast
 
 $$
 \begin{align*}
-(A^\ast A)^{-1}A^{*}&=V\begin{pmatrix}\frac{1}{\sigma^2_1} & & &\\
+(A^\ast A)^{-1}A^{\ast}&=V\begin{pmatrix}\frac{1}{\sigma^2_1} & & &\\
 & \frac{1}{\sigma^2_2} & & \\
 & & \ddots &\\
 & & & \frac{1}{\sigma^2_n}
