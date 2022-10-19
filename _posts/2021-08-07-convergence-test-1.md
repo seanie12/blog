@@ -173,7 +173,55 @@ $$
 \end{align*}
 $$
 
+## Theorem (Ratio Test)
+The $\sum_{n=1}^\infty a_n$
+
+(a) converges if $\limsup_{n\to\infty}\left\lvert \frac{a_{n+1}}{a_n}\right\rvert <1$,
+
+(b) diverges if $\left\lvert \frac{a_{n+1}}{a_n}\right\rvert \geq 1$ for all $n\geq n_0$, where $n_0$ is some fixed number.
+
+<*Proof*>
+
+(a) What if $\left\lvert \frac{a_{n+1}}{a_n}=\alpha <1\right\rvert$?
+
+$$
+\begin{align*}
+\lvert a_2\rvert &= \alpha \lvert a_1 \rvert \\
+\lvert a_3\rvert &= \alpha^2 \lvert a_1 \rvert \\
+&\:\:\:\vdots \\
+\lvert a_n\rvert &= \alpha^{n-1} \lvert a_1 \rvert
+\end{align*}
+$$
+
+Again, we have a geometric series.
+
+Instead, we have $\limsup_{n\to\infty}\left\lvert\frac{a_{n+1}}{a_n}\right\rvert=\alpha <1$. Choose $\beta$ such that $\alpha <\beta <1$. By property of limsup, there is $N_0\in\mathbb{N}$ such that
+
+$$
+\begin{equation*}
+n\geq N_0 \Rightarrow \left\lvert \frac{a_{n+1}}{a_n}\right\rvert < \beta < 1
+\end{equation*}
+$$
+
+Thus, $\lvert a_{n+1} \rvert< \beta\lvert a_n \rvert$ for all $n\geq N_0$. It implies that
+
+$$
+\begin{align*}
+\lvert a_{N_0+1}\rvert &< \beta \lvert a_{N_0}\rvert \\
+\lvert a_{N_0+2}\rvert &< \beta^2 \lvert a_{N_0}\rvert \\
+&\:\:\:\vdots \\
+\lvert a_{N_0+k}\rvert &< \beta^{k-1} \lvert a_{N_0}\rvert
+\end{align*}
+$$
+
+for all $k\in\mathbb{N}$. By comparison test, $\sum_{n=1}^\infty a_n$  converges.
+
+
+(b) Suppose taht $\lvert a_{n+1} \rvert \geq\lvert a_n \rvert$ for all $n\geq N_0\in\mathbb{N}$. Then $\lim_{n\to\infty}a_n \neq 0$. 
+
+$\therefore \sum_{n=1}^\infty a_n$ diverges by $n-$th term test.
 $$\tag*{$\square$}$$
+
 
 ## Reference
 - Manfred Stoll**『**Introduction to Real Analysis**』**
