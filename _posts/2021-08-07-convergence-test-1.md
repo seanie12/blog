@@ -173,6 +173,7 @@ $$
 \end{align*}
 $$
 
+$$\tag*{$\square$}$$
 ## Theorem (Ratio Test)
 The $\sum_{n=1}^\infty a_n$
 
