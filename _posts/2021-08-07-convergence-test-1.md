@@ -231,7 +231,7 @@ Given $\sum_{n=1}^\infty a_n$, put $\alpha = \limsup_{n\to\infty}\sqrt[n]{\lvert
 
 (b) if $\alpha >1, \sum_{n=1}^\infty a_n$ diverges;
 
-(c) $if \alpha=1$, the test gives no information. E.g., $\lim_{n\to\infty} \sqrt[n]{\frac{1}{n}}=1$ but $\sum_{n=1}^\infty \frac{1}{n}=\infty$.
+(c) if $\alpha=1$, the test gives no information. E.g., $\lim_{n\to\infty} \sqrt[n]{\frac{1}{n}}=1$ but $\sum_{n=1}^\infty \frac{1}{n}=\infty$.
 
 <*Proof*>
 
