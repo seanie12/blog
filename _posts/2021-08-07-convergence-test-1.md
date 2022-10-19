@@ -136,10 +136,44 @@ a_k < \frac{3}{2}Lb_k
 \end{align*}
 $$
 
-for all $k\geq k_0$.
+for all $k\geq k_0$. Since $\sum_{n=1}^\infty  b_n <\infty$, $\sum_{n=1}^\infty <\infty$ by comparison test.
 
-Since $\sum_{n=1}^\infty  b_n <\infty$, $\sum_{n=1}^\infty <\infty$ by comparison test.
+(b) Suppose that $\lim_{n\to\infty}\frac{a_n}{b_n}=0$ and $\sum_{n=1}^\infty b_n <\infty$. For given $\epsilon >0$, there is $k_0\in\mathbb{N}$ such that $k\geq k_0 \Rightarrow 0<\frac{a_k}{b_k}<\epsilon$. In other words, $a_k < \epsilon b_k$ for all $k\geq k_0$. 
 
-(b) 
+Since $\sum_{n=1}^\infty b_n<\infty, \sum_{n=1}^\infty a_n <\infty$ by comparison test. 
+
+$$\tag*{$\square$}$$
+
+
+## Theorem 7.1.5 (Integral Test)
+Let $\\{a_n\\}$ be  decreasing sequence of nonnegative real numbers, and let $f$ be a nonnegative monotone decreasing function on $[1,\infty)$ satisfying $f(k)=a_k$ for all $k\in\mathbb{N}$. Then
+
+$$
+\begin{align*}
+\sum_{k=1}^\infty a_k < \infty \iff \int_1^\infty f(x) dx < \infty.
+\end{align*}
+$$
+
+<*Proof*>
+
+Since $f$ is decreasing function on $[1,\infty)$, by Theorem 6.1.8 it is Riemann integrable on $[1,c]$ for every $c>1$. Let $n\in\mathbb{N}, n\geq 2$, and consider the partition $\mathscr{P}=\\{1,\ldots, n\\}$ of $[1,n]$. Then
+
+$$
+\begin{align*}
+&\sup\{f(t): t\in [i-1,i] \} =f(i-1)=a_{i-1}\\
+&\inf\{f(t): t\in [i-1,i] \} = f(i) = a_i.
+\end{align*}
+$$
+
+So,
+
+$$
+\begin{align*}
+\sum_{i=2}^n a_i = \mathscr{L}(\mathscr{P,f})\leq \int_1^\infty f(x) dx \leq \mathscr{U(P,f)} =\sum_{i=1}^{n-1}a_i
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
+
 ## Reference
-- Stephen Friedberg, Arnold Insel, and Lawrence Spence **『**Linear Algebra**』**
+- Manfred Stoll**『**Introduction to Real Analysis**』**
