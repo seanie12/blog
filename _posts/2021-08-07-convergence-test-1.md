@@ -19,7 +19,7 @@ comments : true
 ---
 
 ## Definition
-Let $\\{a_n\\}$ be a sequence. Define a new sequence of $s_n := \sum_{k=1}^na_k$ for $n\geq 1$. We call the $s_n$ is the $n$-th partial sum of $\\{a_n\\}$. If the sequence of partial sums converges (say $s_n\to s$), we write $\sum_{n=1}^\inftya_n=s$ and say **the infinite series** $\sum_{n=1}^na_n$ sums to $s$.
+Let $\\{a_n\\}$ be a sequence. Define a new sequence of $s_n := \sum_{k=1}^na_k$ for $n\geq 1$. We call the $s_n$ is the $n$-th partial sum of $\\{a_n\\}$. If the sequence of partial sums converges (say $s_n\to s$), we write $\sum_{n=1}^\infty a_n=s$ and say **the infinite series** $\sum_{n=1}^na_n$ sums to $s$.
 
 
 ## Theorem 7.1.1
@@ -57,6 +57,15 @@ $$
 $$\tag*{$\square$}$$
 
 ## Remark
+If $\sum_{n=1}^\infty  a_n$ converges, then $\lim_{n\to\infty}a_n=0$.
+
+<*Proof*>
+Let $S_n = \sum_{k=1}^n a_k$ and let $L=\sum_{n=1}^\infty a_n$.
+For given $\epsilon >0$, there exists $N\in\mathbb{N}$ such that $n\geq N \Rightarrow \lvert S_n - L \rvert$. Since $S_n$ converges, $S_n$ is Cauchy. Thus there exists $N_2\in \mathbb{N}$ such that $n+1>n\geq N_2 \Rightarrow \lvert S_{n+1}-S_n\rvert =\lvert a_{n+1}\rvert < 0$.
+
+$\therefore \lim_{n\to\infty} a_n=0$ 
+
+$$\tag*{$\square$}$$
 
 
 ## Reference
