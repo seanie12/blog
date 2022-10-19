@@ -68,5 +68,78 @@ $\therefore \lim_{n\to\infty} a_n=0$
 $$\tag*{$\square$}$$
 
 
+## Theorem 7.1.2 (Comparison Test)
+Let $\\{a_n\\}, \\{b_n\\},\text{and } \\{c_n\\}$ be sequences in $\mathbb{R}$. 
+
+(1) Suppose that $\lvert a_n\rvert \leq b_n$ for all $n\geq N_0$ for some $N_0\in\mathbb{N}$. If $\sum_{n=1}^\infty b_n$ converges, then $\sum_{n=1}^\infty a_n$ converges.
+
+(2) Suppose that $a_n \geq c_n$ for all $n\geq N_0$ for some $N_0\in\mathbb{N}$. If $\sum_{n=1}^\infty c_n$, then $\sum_{n=1}^\infty a_n$ diverges.
+
+
+<*Proof*>
+
+(1)
+Let $\epsilon >0$ be given. Since $\sum_{n=1}^\infty b_n$ converges, there is $N\in\mathbb{N}$ such that $m>n\geq N_1 \Rightarrow \lvert \sum_{k=n}^m b_k\rvert < \epsilon$ .
+
+For all $m,n$ with $m>n\geq N$, 
+
+$$
+\begin{align*}
+\left\lvert \sum_{k=n}^m a_k \right\rvert &\leq \left\lvert \sum_{k=n}^m a_k\right\rvert \\
+&\leq \sum_{k=n}^m \lvert a_k \rvert \\
+&\leq \sum_{k=n}^m b_k \\
+&< \epsilon
+\end{align*}
+$$
+
+By Cauchy Criterion, $\sum_{n=1}^\infty a_n$ converges.
+
+(2) By (1), if $\sum_{n=1}^\infty a_n$ converges, then $\sum_{n=1}^\infty c_n$ converges. Thus, if $\sum_{n=1}^\infty c_n$ diverges, $\sum_{n=1}^\infty a_n$ diverges.
+
+## Corollary 7.1.3 (Limit Comparison Test)
+Let $\\{a_n\\}$ and $\\{b_n \\}$ be positive sequences in $\mathbb{R}$.
+
+(a) 
+
+$$
+\begin{align*}
+\lim_{n\to\infty}\frac{a_n}{b_n}=L \text{ with } 0<L<\infty \Rightarrow \sum_{n=1}^\infty a_n \text{ converges if and only if } \sum_{n=1}^\infty b_n \text{ converges}.
+\end{align*}
+$$
+
+(b) 
+
+$$
+\begin{align*}
+\lim_{n\to\infty}\frac{a_n}{b_n}=0, \sum_{n=1}^\infty b_n \text{ converges} \Rightarrow  \sum_{n=1}^\infty a_n \text{ converges}.
+\end{align*}
+$$
+
+<*Proof*>
+
+Take $\epsilon_0:=\frac{L}{2}>0$. Then there is $k_0\in\mathbb{N}$ such that $k\geq k_0 \Rightarrow \left\lvert \frac{a_k}{b_k}-L \right\rvert <\frac{L}{2}$. In other words,
+
+$$
+\begin{equation}
+0<\frac{L}{2} < \frac{a_k}{b_k} < \frac{3}{2}L
+\label{eq:1}
+\end{equation}
+$$
+
+$\Rightarrow$ Suppose that $\sum_{n=1}^\infty a_n <\infty$. By equation$~\ref{eq:1}$, $b_k < \frac{2}{L}a_k$ for all $k\geq k_0$. Since $\sum_{n=1}^\infty a_n < \infty$, $\sum_{n=1}^\infty b_n <\infty$ by comparison test.
+
+$\Leftarrow$ Conversely, suppose that $\sum_{n=1}^\infty b_n < \infty$. By equation $\ref{eq:1}$, 
+
+$$
+\begin{align*}
+a_k < \frac{3}{2}Lb_k
+\end{align*}
+$$
+
+for all $k\geq k_0$.
+
+Since $\sum_{n=1}^\infty  b_n <\infty$, $\sum_{n=1}^\infty <\infty$ by comparison test.
+
+(b) 
 ## Reference
 - Stephen Friedberg, Arnold Insel, and Lawrence Spence **『**Linear Algebra**』**
