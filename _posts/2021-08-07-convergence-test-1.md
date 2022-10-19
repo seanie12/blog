@@ -210,7 +210,7 @@ $$
 \lvert a_{N_0+1}\rvert &< \beta \lvert a_{N_0}\rvert \\
 \lvert a_{N_0+2}\rvert &< \beta^2 \lvert a_{N_0}\rvert \\
 &\:\:\:\vdots \\
-\lvert a_{N_0+k}\rvert &< \beta^{k-1} \lvert a_{N_0}\rvert
+\lvert a_{N_0+k}\rvert &< \beta^{k} \lvert a_{N_0}\rvert
 \end{align*}
 $$
 
@@ -220,8 +220,78 @@ for all $k\in\mathbb{N}$. By comparison test, $\sum_{n=1}^\infty a_n$  converges
 (b) Suppose taht $\lvert a_{n+1} \rvert \geq\lvert a_n \rvert$ for all $n\geq N_0\in\mathbb{N}$. Then $\lim_{n\to\infty}a_n \neq 0$. 
 
 $\therefore \sum_{n=1}^\infty a_n$ diverges by $n-$th term test.
+
 $$\tag*{$\square$}$$
 
 
+## Theorem 7.1.8 (Root Test)
+Given $\sum_{n=1}^\infty a_n$, put $\alpha = \limsup_{n\to\infty}\sqrt[n]{\lvert a_n \rvert}$. Then
+
+(a) if $\alpha <1, \sum_{n=1}^\infty a_n$ converges;
+
+(b) if $\alpha >1, \sum_{n=1}^\infty a_n$ diverges;
+
+(c) $if \alpha=1$, the test gives no information. E.g., $\lim_{n\to\infty} \sqrt[n]{\frac{1}{n}}=1$ but $\sum_{n=1}^\infty \frac{1}{n}=\infty$.
+
+<*Proof*>
+
+Ideas: What if we had $\sqrt[n]{\lvert a_n \rvert}=\alpha$? We don't have that, but we have something close. $\limsup_{n\to\infty}\sqrt[n]{\lvert a_n \rvert}=\alpha$ which is **close enough**.
+
+(a) Choose $\beta$ such that $\alpha < \beta <1$. By property of $\limsup$, there is $N_0\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq N_0 \Rightarrow \sqrt[n]{\lvert a_n \rvert} < \beta \Rightarrow \lvert a_n \rvert < \beta^n
+\end{align*}
+$$
+
+Since $\beta <1$, $\sum_{n=1}^\infty \beta^n$ converges. Thus, by comparison test $\sum_{n=1}^\infty a_n$ converges.
+
+(b) Say $\alpha >1$. Since limsup is one of subsequential limits of $\\{\sqrt[n]{\lvert a_n\rvert}\\}$, there is some subsequence 
+
+
+$$
+\begin{align*}
+\sqrt[n_k]{\lvert a_{n_k}} \to \alpha >1 \text{ as } n\to\infty.
+\end{align*}
+$$
+
+Take $\epsilon >0$ such that $\alpha -\epsilon >1$. Then there is $K\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+k\geq K \Rightarrow 1<\alpha -\epsilon < \sqrt[n_k]{\lvert a_{n_k}\rvert} < \alpha + \epsilon,
+\end{align*}
+$$
+
+which implies that $\lvert a_{n_k}\rvert >1$ for all $k\in \mathbb{K}$. So, $\lim_{n\to\infty}a_n\neq 0$.
+
+$\therefore \sum_{n=1}^\infty a_n$ diverges by $n$-th term test.
+
+$$\tag*{$\square$} $$
+
+
+## Theorem 7.1.10
+Let $\\{a_n\\}$ be a sequence of positive numbers. Then
+
+$$
+\begin{align*}
+\liminf_{n\to\infty}\frac{a_{n+1}}{a_n} \leq \liminf_{n\to\infty}\sqrt[n]{a_n} \leq \limsup_{n\to\infty}\sqrt[n]{a_n}\leq \limsup_{n\to\infty}\frac{a_{n+1}}{a_n}.
+\end{align*}
+$$
+
+<*Proof*>
+
+Let $R=\limsup_{n\to\infty}\frac{a_{n+1}}{a_n}$. If $R=\infty$, we are done. Suppose that $R\in\mathbb{R}$. Let $\epsilon >0$ be given and let $\beta = \epsilon+R$. By the property of $\limsup$, there exist $n_0\in \mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq n_0 \Rightarrow \frac{a_{n+1}}{a_n}\leq \beta.
+\end{align*}
+$$
+
+Then $a_{n_0+k} < \beta^k a_{n_0}$ for all $k\in\mathbb{N}$, i.e., $\sqrt[k]{a_{n_0+k} }\leq \beta \sqrt[k]{ a_{n_0}}.$ Since $\limsup_{n\to\infty}\beta\sqrt[n]{a_{n_0}}=\lim_{n\to\infty}\beta\sqrt[n]{a_{n_0}}=1$, $\limsup_{n\to\infty}\sqrt[n]{a_n}\leq \beta.$ Since $\epsilon >0$ is arbitrary, we have $\limsup_{n\to\infty}\sqrt[n]{a_n} \leq R$.
+
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll**『**Introduction to Real Analysis**』**
