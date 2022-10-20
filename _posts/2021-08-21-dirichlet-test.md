@@ -153,6 +153,103 @@ for all $n\in\mathbb{N}$.
 
 $$\tag*{$\square$}$$
 
+## Definition 7.3.1
+A series $\sum_{k=1}^\infty a_k$ of real numbers is said to be **absolutely convergence** if $\sum_{k=1}^n \lvert a_k\rvert$ converges. The series is said to be **conditionally convergent** if it is convergent but not absolutely convergent.
+
+## Theorem 7.3.3
+if $\sum_{k=1}^\infty a_k$ converges absolutely, then $\sum_{k=1}^\infty a_k$ converges and 
+
+$$
+\begin{align*}
+\left\lvert \sum_{k=1}^\infty a_k \right\rvert \leq \sum_{k=1}^\infty \lvert a_k \rvert.
+\end{align*}
+$$
+
+Let $\epsilon >0$ be given. Since $\sum_{k=1}^\infty \lvert a_k\rvert$ converges, by Cauchy criterion there is $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+m > n \geq N \Rightarrow \sum_{k=n}^m \lvert a_k \rvert < \epsilon.
+\end{align*}
+$$
+
+By triangle inequality, 
+
+$$
+\left\lvert \sum_{k=n}^m a_k \right\rvert \leq \sum_{k=n}^m \lvert a_k \rvert < \epsilon
+$$ 
+
+for all $m>n\geq N$. Thus $\sum_{k=1}^\infty a_k$ converges.
+
+Finally,
+
+$$
+\begin{align*}
+\left\lvert \sum_{k=1}^\infty a_k\right\rvert  &= \left\lvert \lim_{n\to\infty} \sum_{k=1}^n a_k\right\rvert \\
+&=\lim_{n\to\infty}  \left\lvert \sum_{k=1}^n a_k\right\rvert \quad (\because x\mapsto \lvert x\rvert \text{ is continous}) \\
+&=\lim_{n\to\infty}\sum_{k=1}^n \lvert a_k \rvert \\
+&=\sum_{k=1}^\infty \lvert a_k \rvert
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
+
+
+## Definition 7.3.6
+A series $\sum a^\prime_k$ is a **rearrangement** of the series $\sum a_k$ if there exists a one-to-one function $j$ from $\mathbb{N}$ onto $\mathbb{N}$ such that $a^\prime_k = a_{j(k)}$ for all $k\in\mathbb{N}$.
+
+
+## Theorem 7.3.8
+If the series $\sum a_k$ converges absolutely, then every rearrangement of $\sum a_k$ converges to the same sum.
+
+<*Proof*>
+
+Let $\sum a_k^\prime$ be a rearrangement of $\sum a_k$. Let $\epsilon >0$ be given. Then there exists $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align}
+m>n\geq N \Rightarrow \sum_{k=n}^m \lvert a_k \rvert < \epsilon.
+\label{eq:1}
+\end{align}
+$$
+
+Suppose that $a^\prime_k = a_{j(k)}$, where $j$ is a one-to-one function of $\mathbb{N}$ onto $\mathbb{N}$. Choose an integer $p (p\geq N)$ such that 
+
+$$
+\begin{align*}
+\{1,2,\ldots, N\} \subset \{j(1), j(2), \ldots, j(p)\}.
+\end{align*}
+$$
+
+Such a $p$ exists since $j$ is bijective. For example, we can set $p=\max\\{j^{-1}(1), j^{-1}(2), \ldots, j^{-1}(N) \\}$. Let 
+
+$$
+\begin{align*}
+s_n = \sum_{k=1}^n a_k \quad \text{and}\quad s^\prime_n = \sum_{k=1}^n a^\prime_k.
+\end{align*}
+$$
+
+If $n\geq p$, 
+
+$$
+\begin{align*}
+s_n - s^\prime_n = \sum_{k=1}^n a_k - \sum_{k=1}^n a_{j(k)}.
+\end{align*}
+$$
+
+By the choice of $p$, the numbers $a_1, \ldots, a_N$ appear in both sums and consequently cancel. Thus, the only terms remaining will have index $k$ or $j(k)$ greater than $N$. Let $\Lambda$ be the set of indices of the remaining terms. Then
+
+$$
+\begin{align*}
+\lvert s_n - s^\prime_n \rvert &\leq \sum_{\lambda \in \Lambda} \lvert a_\lambda \rvert\\
+& \leq \sum_{k=\min\Lambda}^{\max\Lambda} \lvert a_k \rvert \\
+&< \epsilon \quad (\because \max\Lambda \geq \min\Lambda >N and by equation $\ref{eq:1}$)
+\end{align*}
+$$
+
+$\therefore \lim_{n\to\infty} s^\prime_n = \lim_{n\to\infty}s_n$.
+
+$$\tag*{$\square$}$$
 
 ## Reference
 - Manfred Stoll, **『**Introduction to Real Analysis**』**
