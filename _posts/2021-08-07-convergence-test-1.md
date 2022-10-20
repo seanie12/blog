@@ -295,4 +295,4 @@ Then $a_{n_0+k} < \beta^k a_{n_0}$ for all $k\in\mathbb{N}$, i.e., $\sqrt[k]{a_{
 
 $$\tag*{$\square$}$$
 ## Reference
-- Manfred Stoll**『**Introduction to Real Analysis**』**
+- Manfred Stoll, **『**Introduction to Real Analysis**』**
