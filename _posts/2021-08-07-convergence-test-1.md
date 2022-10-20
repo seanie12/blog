@@ -1,5 +1,5 @@
 ---
-title: "Convergence Test - (1)"
+title: "Convergence Test"
 
 categories:
   - Analysis
