@@ -243,7 +243,7 @@ $$
 \begin{align*}
 \lvert s_n - s^\prime_n \rvert &\leq \sum_{\lambda \in \Lambda} \lvert a_\lambda \rvert\\
 & \leq \sum_{k=\min\Lambda}^{\max\Lambda+1} \lvert a_k \rvert \\
-&< \epsilon \quad (\because \max\Lambda \geq \min\Lambda >N and by equation $\ref{eq:1}$)
+&< \epsilon \quad (\because \max\Lambda \geq \min\Lambda >N \text{ and by equation }$\ref{eq:1}$)
 \end{align*}
 $$
 
