@@ -9,7 +9,8 @@ tags:
   - Series of functions
   - Pointwise convergence
   - Uniform convergence
- 
+  - Cauchy criterion
+  - Weierstrass M-Test
 
 toc: true
 toc_sticky: true
@@ -260,6 +261,157 @@ $\therefore f_n \rightrightarrows f$ on $[0,a)$.
 
 $$\tag*{$\square$}$$
 
+## Theorem 8.2.3 (Cauchy Criterion)
+A sequence $\\{f_n\\}$ of real-valued functions defined on a set $E$ converges uniformly on $E$ if and only if for every $\epsilon>0$, there exists $n_0\in\mathbb{N}$ such that 
 
+$$
+\begin{align*}
+\lvert f_n(x) - f_m(x) \rvert <\epsilon
+\end{align*}
+$$
+for all $x\in E$ and all $n,m \geq n_0$.
+
+<*Proof*>
+
+$\Rightarrow$ Let $\epsilon >0$ be given. There is $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+m,n\geq N, x\in E \Rightarrow \lvert f_n(x) - f_m(x) \rvert <\frac{\epsilon}{2}.
+\end{align*}
+$$
+
+For $n,m\in\mathbb{N}$ with $m,n \geq N$,
+
+$$
+\begin{align*}
+\lvert f_m(x) - f_n(x) \rvert &= \lvert f_m(x) - f(x) + f(x) - f_n(x) \rvert \\
+&\leq \lvert f_m(x) - f(x) \rvert + \lvert f(x) - f_n(x)\rvert \\
+&\leq \frac{\epsilon}{2} + \frac{\epsilon}{2} \\
+&=\epsilon.
+\end{align*}
+$$
+
+$\Leftarrow$ Let $\epsilon >0$ be given. By the given hypothesis, there is $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+m,n \geq N, x\in E \Rightarrow \lvert f_m(x) - f_n(x)\rvert  <\frac{\epsilon}{2}.
+\end{align*}
+$$
+
+For each $x\in E, \\{f_n(x)\\}_{n=1}^\infty$ is Cauchy sequence and hence it converges. Let $f(x) = \lim_{n\to\infty}f_n(x)$ for every $x\in E$.
+
+Fix $m\geq N$ and $x\in E$. Then,
+
+$$
+\begin{align*}
+\lvert f(x) - f_m (x)\rvert &=\lvert \lim_{n\to\infty}f_n(x)-f_m(x)\rvert \\
+ &= \lim_{n\to\infty}\lvert f_n(x) - f_m(x) \rvert \quad (\because y\mapsto \lvert y-f_m(x)\rvert \text{ is continuous})\\
+&\leq \frac{\epsilon}{2}  \\
+&< \epsilon
+\end{align*}
+$$
+
+$\therefore f_n\rightrightarrows f$.
+
+$$\tag*{$\square$}$$
+
+## Corollary 8.2.4
+The series $\sum_{k=1}^\infty f_k$ of real-valued functions on $E$ converges uniformly on $E$ if and only if given $\epsilon >0$, there exists a positive integer $n_0\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+\left\lvert \sum_{k=n+1}^m f_k \right\rvert  < \epsilon
+\end{align*}
+$$
+
+for all $x\in E$ and for all integers $m>n\geq n_0$.
+
+## Theorem 8.2.5
+Suppose the sequence $\\{f_n\\}$ of real-valued functions on the set $E$ converges pointwise to $f$ on $E$. For each $n\in\mathbb{N}$, set 
+
+$$
+\begin{align*}
+M_n = \sup_{x\in E}\lvert f_n(x) - f(x)\rvert.
+\end{align*}
+$$
+
+Then $\\{f_n\\}$ converges uniformly to $f$ on $E$ if and only if $\lim_{n\to\infty} M_n =0$.
+
+$\Rightarrow$ Let $\epsilon >0$ be given. Since $f_n \rightrightarrows f$, there exists a $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq N, x\in E \Rightarrow \lvert f_n(x) - f(x) \rvert < \frac{\epsilon}{2}.
+\end{align*}
+$$
+
+For $n\geq N, \frac{\epsilon}{2}$ is an upper bound of $\\{\lvert f_n (x) -f(x) \rvert : x\in E\\}$. Thus, 
+
+$$
+\begin{align*}
+M_n=\sup_{x\in E} \lvert f_n(x) - f(x) \rvert \leq \frac{\epsilon}{2} < \epsilon
+\end{align*}
+$$
+
+for all $n\geq N$.
+
+$\therefore \lim_{n\to\infty}M_n = 0.$
+
+$\Leftarrow$ Let $\epsilon >0$ be given. Since $M_n\to 0$ as $n\to\infty$, there is $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq N\Rightarrow \lvert M_n \rvert <\epsilon.
+\end{align*}
+$$
+
+Thus, for $n\geq N$ and for all $x\in E$,
+
+$$
+\begin{align*}
+\lvert f_n(x) -f(x) \rvert \leq \sup_{x\in E} \lvert f_n(x) -f(x)\rvert <\epsilon.
+\end{align*}
+$$
+
+$\therefore f_n \rightrightarrows f$.
+
+$$\tag*{$\square$}$$
+
+## Theorem 8.2.7 (Weierstrass M-Test)
+Suppose $\\{f_k\\}$ is a sequence of real-valued functions defined on a set $E$, and $\\{M_k\\}$ is a sequence of real numbers satisfying 
+
+$$
+\begin{align*}
+\lvert f_k(x) \rvert \leq M_k \quad \text{for all } x\in E \text{ and } k\in\mathbb{N}.
+\end{align*}
+$$
+
+If $\sum_{k=1}^\infty M_k$ converges, then $\sum_{k=1}^\infty f_k(x)$ converges uniformly and absolutely on $E$.
+<*Proof*>
+
+Let $\epsilon >0$ be given and let $T_n = \sum_{k=1}^n M_k$. Since $T_n$ converges, $T_n$ is Cauchy sequence. Thus, for given $\epsilon >0$, there is $N\in\mathbb{N}$ such that
+
+$$
+\begin{align*}
+n>m\geq N \Rightarrow \lvert T_n - T_m \rvert = \left\lvert \sum_{k=m+1}^n M_k \right\rvert < \epsilon.
+\end{align*}
+$$
+
+Define $S_n(x) = \sum_{k=1}^n f_k(x)$. If $n>m\geq N$,  
+
+$$
+\begin{align*}
+\left \lvert S_n (x) - S_m(x)\right \rvert &= \left\lvert \sum_{k=m+1}^n f_k(x) \right\rvert \\
+&\leq \sum_{k=m+1}^n\lvert f_k(x) \rvert \\
+&\leq \sum_{k=m+1}^n M_k \\
+&<\epsilon.
+\end{align*}
+$$
+
+By Cauchy criterion, $\sum_{k=1}^\infty f_k$ converges uniformly on $E$.
+
+$$\tag*{$\square$}$$
 ## Reference
 - Manfred Stoll, **『**Introduction to Real Analysis**』**
