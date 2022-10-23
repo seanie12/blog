@@ -183,7 +183,7 @@ The $\sum_{n=1}^\infty a_n$
 
 <*Proof*>
 
-(a) What if $\left\lvert \frac{a_{n+1}}{a_n}=\alpha <1\right\rvert$?
+(a) What if $\left\lvert \frac{a_{n+1}}{a_n}\right\rvert=\alpha <1$?
 
 $$
 \begin{align*}
