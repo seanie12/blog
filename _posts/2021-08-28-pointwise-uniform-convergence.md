@@ -72,7 +72,7 @@ $\therefore f$ is not continuous at $x=1$.
 
 $$
 \begin{align*}
-\sum_{k=0}^\infty = \sum_{k=0}^\infty x^2\left( \frac{1}{1+x^2}\right)^k=\begin{cases}
+\sum_{k=0}^\infty f_k(x) = \sum_{k=0}^\infty x^2\left( \frac{1}{1+x^2}\right)^k=\begin{cases}
 0 & \text{if } x=0 \\
 1+x^2 & \text{if } x\neq 0
 \end{cases}
@@ -133,6 +133,7 @@ $$
 converges pointwise to $f(x)=0$.
 
 (b) 
+
 $$
 \begin{align*}
 f_m (x) =
