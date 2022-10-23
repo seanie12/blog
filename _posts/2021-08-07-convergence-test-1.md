@@ -218,7 +218,7 @@ $$
 for all $k\in\mathbb{N}$. By comparison test, $\sum_{n=1}^\infty a_n$  converges.
 
 
-(b) Suppose taht $\lvert a_{n+1} \rvert \geq\lvert a_n \rvert$ for all $n\geq N_0\in\mathbb{N}$. Then $\lim_{n\to\infty}a_n \neq 0$. 
+(b) Suppose that $\lvert a_{n+1} \rvert \geq\lvert a_n \rvert$ for all $n\geq N_0\in\mathbb{N}$. Then $\lim_{n\to\infty}a_n \neq 0$. 
 
 $\therefore \sum_{n=1}^\infty a_n$ diverges by $n-$th term test.
 
