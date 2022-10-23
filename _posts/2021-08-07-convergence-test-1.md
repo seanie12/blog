@@ -291,7 +291,7 @@ n\geq n_0 \Rightarrow \frac{a_{n+1}}{a_n}\leq \beta.
 \end{align*}
 $$
 
-Then $a_{n_0+k} < \beta^k a_{n_0}$ for all $k\in\mathbb{N}$, i.e., $\sqrt[k]{a_{n_0+k} }\leq \beta \sqrt[k]{ a_{n_0}}.$ Since $\limsup_{n\to\infty}\beta\sqrt[n]{a_{n_0}}=\lim_{n\to\infty}\beta\sqrt[n]{a_{n_0}}=1$, $\limsup_{n\to\infty}\sqrt[n]{a_n}\leq \beta.$ Since $\epsilon >0$ is arbitrary, we have $\limsup_{n\to\infty}\sqrt[n]{a_n} \leq R$.
+Then $a_{n_0+k} < \beta^k a_{n_0}$ for all $k\in\mathbb{N}$, i.e., $\sqrt[k]{a_{n_0+k} }\leq \beta \sqrt[k]{ a_{n_0}}.$ Since $\limsup_{n\to\infty}\beta\sqrt[n]{a_{n_0}}=\lim_{n\to\infty}\beta\sqrt[n]{a_{n_0}}=\beta$, $\limsup_{n\to\infty}\sqrt[n]{a_n}\leq \beta.$ Since $\epsilon >0$ is arbitrary, we have $\limsup_{n\to\infty}\sqrt[n]{a_n} \leq R$.
 
 $$\tag*{$\square$}$$
 ## Reference
