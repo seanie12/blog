@@ -201,5 +201,65 @@ Since $\epsilon >0$ is arbitrary, $f(x)=g(x)$ for all $x\in E$.
 $\therefore f=g$.
 $$\tag*{$\square$}$$
 
+
+## Examples 8.2.2
+(a) $f_n(x) = x^n$ on $E=[0,1]$. Then $f_n \to f$ as $n\to\infty$ where
+
+$$
+\begin{align*}
+f(x) = \begin{cases}
+0 & \text{if } x \in [0, 1) \\
+1 & \text{if } x = 1.
+\end{cases}
+\end{align*}
+$$
+
+We want to show that $f_n$ does not converge uniformly to $f$. Suppose that $f_n\rightrightarrows f$ . Given $\epsilon>0$, there is $n_0\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+\lvert f_n(x) -f(x)\rvert <\epsilon
+\end{align*}
+$$
+
+for all $x\in E$ and for all $n \geq n_0$. If $x\in [0,1)$, then $x^{n_0}<\epsilon$. Take $0<\epsilon_0 <1-\epsilon$.
+
+Since $f_{n_0}$ is continuous on $E$, there is a $\delta>0$ such that 
+
+$$
+\begin{align*}
+\lvert x-1 \rvert <\delta \text{ with } x\in E \Rightarrow \lvert x^{n_0}-1\rvert < \epsilon_0.
+\end{align*}
+$$
+
+In other words,
+
+$$
+\begin{align*}
+x\in (1-\delta, 1+\delta) \cap E \Rightarrow 1-\epsilon_0 < x^{n_0} < 1+\epsilon_0.
+\end{align*}
+$$
+
+But it implies that $x^{n_0} < \epsilon < 1-\epsilon_0< x^{n_0}$, which is a contradiction.
+
+$\therefore f_n$ does not converge uniformly.
+
+On the other hand, if we set the domain $E=[0,a)$ with $0<a<1$, then $f_n\rightrightarrows f$ on $[0,a)$. 
+
+Let $\epsilon >0$ be given. Since $0<x<a,  \lvert x^n\rvert <a^n$. Since $0<a<1$, there is $n_0\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq n_0 \Rightarrow a^n <\epsilon.
+\end{align*}
+$$
+
+Thus, for $n\geq n_0, x\in [0,a)$, $\lvert x^n\rvert <\epsilon$.
+
+$\therefore f_n \rightrightarrows f$ on $[0,a)$.
+
+$$\tag*{$\square$}$$
+
+
 ## Reference
 - Manfred Stoll, **『**Introduction to Real Analysis**』**
