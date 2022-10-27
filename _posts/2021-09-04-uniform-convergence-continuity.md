@@ -178,7 +178,96 @@ Suppose $K$ is a compact subset of $\mathbb{R}$ and $\\{f_n\\}$ is a a sequence 
 Then $\\{f_n\\}$ converges uniformly to $f$ on $K$.
 
 
+<*Proof*>
+We want to show that for every $\epsilon>0$, there exists $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq N, x\in K \Rightarrow \lvert f_n(x) - f(x)\rvert < \epsilon.
+\end{align*}
+$$
+
+Observe that it suffices to show that there exists $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+f_N(x) - f(x) < \epsilon
+\end{align*}
+$$
+
+for all $x\in K$ since $\\{f_n(x)\\}$ is monotone decreasing for all $x\in K$. Let $g = f_n - f$ and let $K_n=\\{x\in K: g(x) \geq \epsilon\\}$ for each $n\in \mathbb{N}$. We want to show that $K_N=\emptyset$ for some $N\in\mathbb{N}$.
+
+First, $K_n$ is closed set for all $n\in\mathbb{N}$. Let $p\in K^\prime_n$ be given. Then there is a sequence $\\{x_k\\}_{k=1}^\infty$ such that $x_k\to p$ with $x_k\neq p$ for all $k\in\mathbb{N}$.
+
+Since $g_n$ is continuous and $g_n(x_k)\geq \epsilon$ for all $k\in\mathbb{N}$,
+
+$$
+\begin{align*}
+g_n(p) = g_n\left(\lim_{k\to\infty}(x_k)\right) = \lim_{k\to\infty}\left(g_n(x_k)\right) \geq \epsilon.
+\end{align*}
+$$
+
+$\because$ Suppose that $g_n(p) < \epsilon$. Let $\epsilon_0= \epsilon-g_n(p)$. Since $g_n(x_k)\to g(p)$ as $p\to\infty$, there exists $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+k\geq N \Rightarrow \lvert g_n(x_k) -g(p) \rvert < \epsilon_0.
+\end{align*}
+$$
+
+However,
+
+$$
+\begin{align*}
+\lvert g_n(x_k) - g_n(p) \rvert &= g_n(x_k) - g_n(p) \\
+&\geq \epsilon-g_n(p) \\
+&=\epsilon_0,
+\end{align*}
+$$
+
+which is a contradiction. Thus, $g_n(p) \geq \epsilon$, i.e., $p\in K_n$.
+
+$\therefore K_n$ is closed.
+
+Alternatively, we can show $K_n$ is closed by using the topological characterization of continuous function.  Since $[\epsilon, \infty)^c = (-\infty, \epsilon)$ is open, $[\epsilon, \infty)$ is closed. Since $K_n=g^{-1}\left([\epsilon, \infty)\right)$ and $g$ is continuous, $K_n$ is closed.
+
+
+Since $K_n$ is closed and $K_n \subset K$, $K_n$ is compact and $K_n\supset K_{n+1} (\because g_n(x) \geq g_{n+1}(x)).$
+
+Now we want to show that $\bigcap_{n=1}^\infty K_n=\emptyset$. Suppose that $\bigcap_{n=1}^\infty K_n\neq \emptyset$ and let $x_0 \in \bigcap_{n=1}^\infty K_n$ be given.  In other words, 
+
+$$
+\begin{align*}
+g_n(x_0) \geq \epsilon \text{ for all } n \in \mathbb{N}.
+\end{align*}
+$$
+
+Since $g_n(x_0) \to 0$ as $n\to\infty$, for the given $\epsilon$, there is $N\in\mathbb{N}$ such that 
+
+
+$$
+\begin{align*}
+n\geq N\Rightarrow \lvert g_n(x_0)\rvert <\epsilon,
+\end{align*}
+$$
+
+which is a contradiction to the assumption that $\lvert g_n(x_0)\rvert$ for all $n\in\mathbb{N}$. 
+
+$\therefore \bigcap_{n=1}^\infty K_n\neq \emptyset$.
+
+By [Theorem 3.2.7](https://seanie12.github.io/blog/analysis/compact/#theorem-327), there is a $K_{n_0}=\emptyset$ for some $n_0\in\mathbb{N}$. That is if $n\geq n_0$, then 
+
+$$
+\begin{align*}
+g_n(x) < \epsilon
+\end{align*}
+$$
+
+for all $x\in K$.
+
+$\therefore g_n \rightrightarrows 0$ on $K$, i.e., $f_n\rightrightarrows f$ on $K$.
 
 $$\tag*{$\square$}$$
+
 ## Reference
 - Manfred Stoll, **『**Introduction to Real Analysis**』**
