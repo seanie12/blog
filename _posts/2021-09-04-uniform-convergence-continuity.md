@@ -269,5 +269,74 @@ $\therefore g_n \rightrightarrows 0$ on $K$, i.e., $f_n\rightrightarrows f$ on $
 
 $$\tag*{$\square$}$$
 
+
+## The Space $\mathscr{C}[a,b]$
+$\mathscr{C}[a,b]$ is the set of all continuous real-valued functions on $[a,b]$. For $f,g\in \mathscr{C}[a,b]$ and $c\in\mathbb{R}$,  we can define binary operation and scalar multiplication as follows:
+
+(a) $(f+g)(x) := f(x) + g(x)$
+
+(b) $(cf)(x) :=c\cdot f(x)$
+
+Then $(\mathscr{C}[a,b], +, \cdot)$ is $\mathbb{R}$-vector space.
+
+## Definition 8.3.7
+For each $f\in \mathscr{C}[a,b]$, set 
+
+$$
+\begin{align*}
+\lVert f\rVert_u=\sup\{\lvert f(x)\rvert: x\in [a,b] \}.
+\end{align*}
+$$
+
+The quantity $\lVert f\rVert_u$ is called the **uniform norm** of $f$ on $[a,b]$.
+
+
+## Theorem 8.3.8
+A sequence $\\{f_n\\}$ in $\mathscr{C}[a,b]$ converges uniformly to $f\in\mathscr{C}[a,b]$ if and only if given $\epsilon>0$, there exists $n_0\in\mathbb{N}$ such that $\lVert f-f_n\rVert_u < \epsilon$ for all $n\geq n_0$. 
+
+<*Proof*>
+
+Since 
+
+$$
+\begin{align*}
+\lVert f_n - f\rVert_u = \sup\{\lvert f_n(x) - f(x)\rvert: x\in [a,b]\},
+\end{align*}
+$$
+
+by [Theorem 8.2.5](https://seanie12.github.io/blog/analysis/pointwise-uniform-convergence/#theorem-825),  we are done.
+
+$$\tag*{$\square $}$$
+
+## Theorem 8.3.11
+The metric space $(\mathscr{C}[a,b], \lVert \cdot \rVert_u)$ is complete.
+
+<*Proof*>
+
+Let $\\{f_n\\}$ be a Cauchy sequence in $\mathscr{C}[a,b]$. Given $\epsilon>0$ there is $N\in\mathbb{N}$ such that 
+
+$$\begin{align*}
+m,n \geq N \Rightarrow \lVert f_n - f_m \rVert_u < \epsilon. 
+\end{align*}
+$$
+
+By the definition of uniform norm,
+
+$$\begin{align*}
+\lvert f_n(x) - f_m(x) \rvert \leq \sup_{x\in [a,b]}\{\lvert f_n(x) - f_m(x)\rvert\}=\lVert f_n -f_m\rVert_u
+\end{align*}
+$$
+
+for all $x\in [a,b]$.
+
+By Cauchy criterion, $\\{f_n\\}$ converges uniformly to $f$. Since $f_n$ is continuous for all $n\in\mathbb{N}$, by [Corollary 8.3.2](https://seanie12.github.io/blog/analysis/uniform-convergence-continuity/#corollary-832) $f$ is continuous on $[a,b]$, i.e., $f\in\mathscr{C}[a,b]$.
+
+Since $f_n \rightrightarrows f$, $f\stackrel{\lVert \cdot \rVert_u}{\to}f$ by [Theorem 8.3.8](https://seanie12.github.io/blog/analysis/uniform-convergence-continuity/#corollary-838).
+
+$\therefore (\mathscr{C}[a,b], \lVert \cdot \rVert_u)$ is complete.
+
+
+$$\tag*{$\square$}$$
+
 ## Reference
 - Manfred Stoll, **『**Introduction to Real Analysis**』**
