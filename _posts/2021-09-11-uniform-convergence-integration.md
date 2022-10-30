@@ -163,7 +163,7 @@ By mean value theorem for $m, n \geq n_0$,
 
 $$
 \begin{align}
-\lvert (f_n(x) - f_m(x)) - (f_n(y) - f_m(y))\rvert &= \lvert (f^\prime_n(t) - f^\prime_m(t))(x-y)\rvert \\ 
+\lvert (f_n(x) - f_m(x)) - (f_n(y) - f_m(y))\rvert &= \lvert (f^\prime_n(t) - f^\prime_m(t))(x-y)\rvert
 \label{eq:1}
 \end{align}
 $$
