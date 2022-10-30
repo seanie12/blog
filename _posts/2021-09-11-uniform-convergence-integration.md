@@ -261,30 +261,91 @@ S^\prime(x) = \lim_{n\to\infty}S^\prime_n(x) = \sum_{k=1}^\infty \frac{k \cos kx
 \end{align*}
 $$
 
+## Continuous but nowhere differentiable function
+Let $\varphi(x) = \lvert x \rvert, -1\leq x \leq 1$. Extend it to a periodic function $\varphi(x+2) = \varphi(x)$. Observe that 
 
 
+$$
+\begin{align*}
+\lvert \varphi(s) - \varphi(t) \rvert &= \lvert \lvert s \rvert - \lvert t\rvert \rvert \\
+&\leq \lvert s- t\rvert
+\end{align*}
+$$
 
 
+for all $s,t \in [-1,1]$, i.e., $\varphi$ is Lipschitz continuous function.
+
+Define 
+
+$$
+\begin{align*}
+f(x) = \sum_{n=0}^\infty \left( \frac{3}{4}\right)^n \varphi(4^nx).
+\end{align*}
+$$
+
+By [Weierstrass M-test](https://seanie12.github.io/blog/analysis/pointwise-uniform-convergence/#theorem-827-weierstrass-m-test), the series converges uniformly. Since $f_k(x) = \sum_{n=0}^k\left(\frac{3}{4}\right)^n\varphi(4^nx)$ is continuous, $f$ is continuous.
+
+We want to show that $f$ is non-differentiable.
+
+<*Proof*>
+
+Pick any $x\in\mathbb{R}$. For each $m\in\mathbb{N}$, define 
+
+$$\begin{align*}
+\delta_m = \delta_m(x) := \pm\frac{1}{2}4^{-m},
+\end{align*}
+$$
+
+the sign is chosen such that no integer lies between $4^mx$ and $4^m(x+\delta_m)$. Note that $\lvert 4^m\delta_m\rvert = 1/2$. Consider 
 
 
+$$\begin{align*}
+\left\lvert \frac{f(x+\delta_m) -f(x)}{\delta_m} \right\rvert &=\sum_{n=0}^\infty \frac{\left(\frac{3}{4}\right)^n[\varphi(4^n(x+\delta_m))-\varphi(4^nx)]}{\delta_m}.
+\end{align*}
+$$
+
+Define 
 
 
+$$\begin{align*}
+\gamma_n = \frac{\varphi(4^n(x+\delta_m))-\varphi(4^nx))}{\delta_m}.
+\end{align*}
+$$
+
+(1) If $n>m$, then $4^n\delta_m$ is an even integer. Since $\varphi(x+2)=\varphi(x), \gamma_n=0$.
+
+(2) If $n<m$,
+
+$$\begin{align*}
+\lvert \varphi(4^n(x+\delta_m))-\varphi(4^n\delta_m)\rvert \leq \lvert 4^n\delta_m\rvert
+\end{align*}
+$$
+
+by Lipschitz continuity of $\varphi$.
+
+(3) If $n=m$, 
+
+$$\begin{align*}
+\frac{\left\lvert \varphi(4^mx\pm \frac{1}{2})-\varphi(4^mx)\right\rvert}{\left\lvert\pm\frac{1}{2}\right\rvert} =1.
+\end{align*}
+$$
+
+In other words, $\lvert \varphi(4^mx\pm \frac{1}{2})-\varphi(4^mx)\rvert = \frac{1}{2}$. Thus, $\lvert \gamma_n\rvert = 4^n$.
 
 
+$$\begin{align*}
+\left\lvert \frac{f(x+\delta_m) -f(x)}{\delta_m}\right\rvert &=\left\lvert \sum_{n=0}^m \left(\frac{3}{4} \right)^n \gamma_n\right\rvert \quad (\because  \gamma_n=0, \forall n >m) \\
+&=\left\lvert \left(\frac{3}{4}\right)^m4^m + \sum_{n=0}^{m-1}\left(\frac{3}{4}\right)^n \gamma_n\right\rvert \\
+&\geq 3^m -\sum_{n=0}^{m-1}\left(\frac{3}{4}\right)^n \lvert \gamma_n\rvert \\
+&\geq 3^m - \sum_{n=0}^{m-1}\left(\frac{3}{4}\right)^n 4^n \quad (\because \vert\gamma \rvert \leq 4^n, \forall n <m) \\
+&=3^m -\frac{3^m-1}{2} \\
+&=\frac{1}{2}(3^m+1)
+\end{align*}
+$$
 
+$\therefore f$ is nowhere differentiable.
 
-
-
-
-
-
-
-
-
-
-
-
-
+$$\tag*{$\square$}$$
 
 
 
