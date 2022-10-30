@@ -80,13 +80,34 @@ $$\tag*{$\square$}$$
 If $\\{f_n\\}$ is a pointwise bounded sequence of complex functions on a countable set $E$, then $\\{f_n\\}$ has a subsequence $\\{f_{n_k}\\}$ such that $\\{f_{n_k}(x)\\}$ converges for every $x\in E$.
 
 
-Note that if $E=\\{x_1, x_2\\}$, by [Bolzano-Weierstrass Theorem](https://seanie12.github.io/blog/analysis/subsequence-bolzano-weierstrass/#theorem-2410-bolzano-weierstrass-theorem) we can get a convergent subsequence $\\{f_{n_k}(x_1)\\}$ on $x_1$. Then consider the sequence $\\{f_{n_k}(x_2)\\}_{k=1}^\infty$. Again by [Bolzano-Weierstrass Theorem](https://seanie12.github.io/blog/analysis/subsequence-bolzano-weierstrass/#theorem-2410-bolzano-weierstrass-theorem), we can choose a convergent subsequence $\\{f_{n_{k_l}}(x_2)\\}$ on $x_2$.  
+Note that if $E=\\{x_1, x_2\\}$, by [Bolzano-Weierstrass Theorem](https://seanie12.github.io/blog/analysis/subsequence-bolzano-weierstrass/#theorem-2410-bolzano-weierstrass-theorem) we can get a convergent subsequence $\\{f_{n_k}(x_1)\\}$ on $x_1$. Then consider the sequence 
+
+$$
+\begin{align*}
+\{f_{n_k}(x_2)\}_{k=1}^\infty.
+\end{align*}
+$$
+
+Again by [Bolzano-Weierstrass Theorem](https://seanie12.github.io/blog/analysis/subsequence-bolzano-weierstrass/#theorem-2410-bolzano-weierstrass-theorem), we can choose a convergent subsequence $\\{f_{n_{k_l}}(x_2)\\}$ on $x_2$.  
 
 $\therefore $\\{f_{n_{k_l}}\\}$ converges on $E=\\{x_1, x_2\\}$.
 
 <*Proof*>
 
-Let $E=\\{x_i\\}_{i=1}^\infty$. Since $\\{f_n(x_1)\\}_{n=1}^\infty$ is bounded, there is a convergent subsequence $\\{f_{n_k}(x_1)\\}_{k=1}^\infty$.
+Let $E=\\{x_i\\}$. Since 
+$$
+\begin{align*}
+\{f_n(x_1)\}_{n=1}^\infty
+\end{align*}
+$$ 
+
+is bounded, there is a convergent subsequence 
+
+$$
+\begin{align*}
+\{f_{n_k}(x_1)\}_{k=1}^\infty.
+\end{align*}
+$$
 
 We denote $\\{f_{n_k}\\}$, which converges to $\lim_{k\to\infty}f_{n_k}(x_1)$ by $\\{f_{1,k}\\}$.
 
@@ -109,9 +130,17 @@ and which have the following properties:
 
 (3) $k$-th element of the $n$-th row occurs in the greater or than equal to $k$-th place in the previous row.
 
-The sequence $S=\\{f_{n,n}\\}_{n=1}^\infty$ (except possibly its first $n-1$ terms) is a subsequence of $S_n$ for all $n\in\mathbb{N}$. Hence (2) implies that $\\{f_{n,n}(x_i)\\}$ converges as $n\to\infty$, for every $x_i\in E$.
+The sequence $S=\\{f_{n,n}\\}$ (except possibly its first $n-1$ terms) is a subsequence of $S_n$ for all $n\in\mathbb{N}$. Hence (2) implies that $\\{f_{n,n}(x_i)\\}$ converges as $n\to\infty$, for every $x_i\in E$.
 
-Specifically, let $x_i$ be given and let $\epsilon >0$ be given. Then $\\{f_{n,n}\\}_{n=i}^\infty$ is a subsequence of $S_i=\\{f_{i,n}\\}_{n=1}^\infty$. Since $S_i$ converges pointwise on $\\{x_1, \ldots, x_i\\}$, there is $N_1\in\mathbb{N}$ such that 
+Specifically, let $x_i$ be given and let $\epsilon >0$ be given. Then 
+
+$$
+\begin{align*}
+\{f_{n,n}\}_{n=i}^\infty
+\end{align*}
+$$
+
+ is a subsequence of $S_i=\\{f_{i,n}\\}$. Since $S_i$ converges pointwise on $\\{x_1, \ldots, x_i\\}$, there is $N_1\in\mathbb{N}$ such that 
 
 $$
 \begin{align*}
@@ -119,7 +148,7 @@ n\geq N_1 \Rightarrow \lvert f_{i,n}(x_i) - \lim_{k\to\infty}f_{i,k}(x_i)\rvert 
 \end{align*}
 $$
 
- Since $\\{f_{n,n}(x_i)\\}_{n=i}^\infty$ is a subsequence of $\\{f_{i,n}(x_i)\\}_{n=1}^\infty$,  
+ Since $\\{f_{n,n}(x_i)\\}$ is a subsequence of $\\{f_{i,n}(x_i)\\}_{n=1}^\infty$,  
 
 $$
 \begin{align*}
@@ -131,8 +160,29 @@ $\therefore \\{f_{n,n}(x_i)\\}$ converges on $x_i$.
 
 $$\tag*{$\square$}$$
 
+## Definition 7.22
+A family $\mathscr{F}$ of complex functions $f$ defined on a set $E$ in a metric space $X$ to be **equicontinuous** on $E$ if for every $\epsilon>0$ there exists a $\delta>0$ such that 
 
+$$
+\begin{align*}
+d(x,y) <\delta , x,y\in E\Rightarrow \lvert f(x) - f(y) \rvert <\epsilon \text{ for all }f\in\mathscr{F}.
+\end{align*}
+$$
 
+## Remark
+IS every finite collection of uniformly continuous functions are equicontinuous? Yes.
+
+Let $\\{f_n\\}_{n=1}^k$ is a collection of uniformly continuous functions. Let $\epsilon > 0$ be given. Then for each $f_n\in\mathscr{F}$, there is a $\delta_n>0$ such that 
+
+$$
+\begin{align*}
+d(x,y) < \delta_n \Rightarrow \lvert f_n(x) - f_n(y)\rvert <\epsilon.
+\end{align*}
+$$
+
+Take $\delta =\min\\{\delta_1, \ldots, \delta_k\\}$. Then $\mathscr{F}$ is equicontinuous.
+
+## Theorem 7.24
 
 ## Reference
 - Walter Rudin, **『**Principles of Mathematical Analysis**』**
