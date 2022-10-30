@@ -1,0 +1,94 @@
+---
+title: "Equicontinuous Families of Functions"
+
+categories:
+  - Analysis
+
+tags:
+  - boundedness
+  - equicontinuous 
+
+ 
+toc: true
+toc_sticky: true
+
+use_math : true
+comments : true
+
+---
+
+## Definition 7.19
+Let $\\{f_n\\}$ be a sequence of functions defined on a set $E$. We say that $\\{f_n\\}$ is **pointwise bounded** on $E$ if the sequence $\\{f_n(x)\\}$ is bounded for every $x\in E$, that is, if there exists a finite valued function $\phi: E\to\mathbb{R}$ such that
+
+$$
+\begin{align*}
+\lvert f_n(x) \rvert < \phi(x) \quad (x\in E, n\in\mathbb{N}).
+\end{align*}
+$$
+
+We say that $\\{f_n\\}$ is **uniformly bounded** on $E$ if there exists a number $M$ such that
+
+$$
+\begin{align*}
+\lvert f_n(x) \rvert < M \quad (x\in E, n\in\mathbb{N}).
+\end{align*}
+$$
+
+## Remark
+Even if $\\{f_n\\}$ is a uniformly bounded sequence of continuous functions on a compact set $E$, there need not exist a subsequence which converges pointwise on $E$.
+
+Let $f_n(x) = \sin (nx), x\in [0,2\pi], n\in\mathbb{N}$. Suppose that there exists a sequence $\\{n_k\\}$ such that $\\{\sin(n_kx)\\}$ converges for every $x\in [0,2\pi]$. In that case we must have
+
+$$
+\begin{align*}
+\lim_{k\to\infty}(\sin(n_kx)-\sin(n_{k+1}x))=0 \quad (0\leq x \leq 2\pi),
+\end{align*}
+$$
+
+which implies that 
+
+
+$$
+\begin{align*}
+\lim_{k\to\infty}(\sin (n_kx)-\sin(n_{k+1}x)^2=0 \quad (0\leq x \leq 2\pi).
+\end{align*}
+$$
+
+By Lebesque dominated convergence theorem,
+
+
+$$
+\begin{align*}
+\lim_{k\to\infty}\int_0^{2\pi}\left( \sin(n_kx)-\sin(n_{k+1}x)\right)^2 = \int_0^{2\pi}\lim_{k\to\infty} \left(\sin(n_kx)-\sin(n_{k+1}x) \right)^2 =0.
+\end{align*}
+$$
+
+However
+
+$$
+\begin{align*}
+\int_0^{2\pi}(\sin (n_kx)-\sin(n_{k+1}x))^2=2\pi,
+\end{align*}
+$$
+
+which is a contradiction.
+
+$$\tag*{$\square$}$$
+
+
+## Theorem 7.23
+If $\\{f_n\\}$ is a pointwise bounded sequence of complex functions on a countable set $E$, then $\\{f_n\\}$ has a subsequence $\\{f_{n_k}\\}$ such that $\\{f_{n_k}(x)\\}$ converges for every $x\in E$.
+
+
+Note that if $E=\\{x_1, x_2\\}$, by [Bolzano-Weierstrass Theorem](https://seanie12.github.io/blog/analysis/subsequence-bolzano-weierstrass/#theorem-2410-bolzano-weierstrass-theorem) we can get a convergent subsequence $\\{f_{n_k}(x_1)\\}$ on $x_1$. Then consider the sequence $\\{f_{n_k}(x_2)\\}_{k=1}^\infty$. Again by [Bolzano-Weierstrass Theorem](https://seanie12.github.io/blog/analysis/subsequence-bolzano-weierstrass/#theorem-2410-bolzano-weierstrass-theorem), we can choose a convergent subsequence $\\{f_{n_{k_l}}(x_2)\\}$ on $x_2$.  
+
+$\therefore $\\{f_{n_{k_l}}\\}$ converges on $E=\\{x_1, x_2\\}$.
+
+<*Proof*>
+
+
+
+
+
+## Reference
+- Walter Rudin, **『**Principles of Mathematical Analysis**』**
