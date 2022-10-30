@@ -183,6 +183,39 @@ $$
 Take $\delta =\min\\{\delta_1, \ldots, \delta_k\\}$. Then $\mathscr{F}$ is equicontinuous.
 
 ## Theorem 7.24
+If $K$ is a compact metric space, if $\\{f_n\\}$ is a sequence of continuous functions on $K$, and if $\\{f_n\\}$ converges uniformly on $K$, then  $$\\{f_n\\}$ is equicontinuous.
+
+<*Proof*> 
+
+Let $\epsilon >0$ be given. By uniform convergence, there is $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n > N \Rightarrow \lvert f_n(x) - f_N(x) \rvert < \frac{\epsilon}{3}
+\end{align*}
+$$
+
+for all $x\in K$. Since $f_n$ is continuous on the compact set $K$, all $f_n$ are uniformly continuous  on $K$ by [Theorem 4.3.4](https://seanie12.github.io/blog/analysis/uniform-continuity/#theorem-434). By previous remark $\\{f_1, \ldots, f_N\\}$ is equicontinuous. Thus, there exists $\delta>0$ such that 
+
+$$
+\begin{align*}
+d(x,y) <\delta \Rightarrow \lvert f_i(x) - f(y) \rvert <\frac{\epsilon}{3}
+\end{align*}
+$$
+
+for all $i=1,\ldots, N$.
+
+For $n> N$, if $d(x,y)<\delta$, then
+
+$$
+\begin{align*}
+\lvert f_n(x) -f_n(y)\rvert &\leq \lvert f_n(x) - f_N(x) \rvert + \lvert f_N(x) - f_N(y) \rvert + \lvert f_N(y) - f_n(y)\rvert  \\
+&< \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3}\\
+&=\epsilon.
+\end{align*}
+$$
+ 
+$$\tag*{$\square$}$$
 
 ## Reference
 - Walter Rudin, **『**Principles of Mathematical Analysis**』**
