@@ -86,6 +86,50 @@ $\therefore $\\{f_{n_{k_l}}\\}$ converges on $E=\\{x_1, x_2\\}$.
 
 <*Proof*>
 
+Let $E=\\{x_i\\}_{i=1}^\infty$. Since $\\{f_n(x_1)\\}_{n=1}^\infty$ is bounded, there is a convergent subsequence $\\{f_{n_k}(x_1)\\}_{k=1}^\infty$.
+
+We denote $\\{f_{n_k}\\}$, which converges to $\lim_{k\to\infty}f_{n_k}(x_1)$ by $\\{f_{1,k}\\}$.
+
+Iterate the following procedure. Since $\\{f_{1,n}(x_2)\\}$ is bounded, there is a convergent subsequence $\\{f_{1, {n_k}}(x_2)\\}_{k=1}^\infty$. Notate $f_{2,k}=f_{1,n_k}$. Now we consider sequences $S_1, S_2, S_3,\ldots$, which represent by the array
+
+
+$$
+\begin{align*}
+&S_1: \: f_{1,1} \quad f_{1,2} \quad f_{1,3} \quad f_{1,4} \quad \cdots \\
+&S_2: \: f_{2,1} \quad f_{2,2} \quad f_{2,3} \quad f_{2,4} \quad \cdots \\
+&S_3: \:f_{3,1} \quad f_{3,2} \quad f_{3,3} \quad f_{3,4} \quad \cdots \\
+\end{align*}
+$$
+
+and which have the following properties:
+
+(1) Each row is a subsequence of the earlier row
+
+(2)  $n$-th row converges on $\\{x_1, \ldots, x_n\\}$.
+
+(3) $k$-th element of the $n$-th row occurs in the greater or than equal to $k$-th place in the previous row.
+
+The sequence $S=\\{f_{n,n}\\}_{n=1}^\infty$ (except possibly its first $n-1$ terms) is a subsequence of $S_n$ for all $n\in\mathbb{N}$. Hence (2) implies that $\\{f_{n,n}(x_i)\\}$ converges as $n\to\infty$, for every $x_i\in E$.
+
+Specifically, let $x_i$ be given and let $\epsilon >0$ be given. Then $\\{f_{n,n}\\}_{n=i}^\infty$ is a subsequence of $S_i=\\{f_{i,n}\\}_{n=1}^\infty$. Since $S_i$ converges pointwise on $\\{x_1, \ldots, x_i\\}$, there is $N_1\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq N_1 \Rightarrow \lvert f_{i,n}(x_i) - \lim_{k\to\infty}f_{i,k}(x_i)\rvert < \epsilon.
+\end{align*}
+$$
+
+ Since $\\{f_{n,n}(x_i)\\}_{n=i}^\infty$ is a subsequence of $\\{f_{i,n}(x_i)\\}_{n=1}^\infty$,  
+
+$$
+\begin{align*}
+n\geq N:=\max\{i, N_1\}\Rightarrow \lvert f_{n,n}(x_i) - \lim_{k\to\infty} f_{i,k}(x_i) \rvert <\epsilon.
+\end{align*}
+$$
+
+$\therefore \\{f_{n,n}(x_i)\\}$ converges on $x_i$.
+
+$$\tag*{$\square$}$$
 
 
 
