@@ -90,7 +90,123 @@ $\therefore \\{f_{n_k}\\}$ converges uniformly on $K$ by Cauchy criterion.
 $$\tag*{$\square$}$$
 
 
+## Theorem (Stone-Weierstrass)
+Given any function $f\in\mathscr{C}[a,b]$, there exists a sequence $\\{P_n\\}$ of polynomials that converges uniformly to $f$ on $[a,b]$. In other words, the space polynomial of $[a,b]$ is dense in $\mathscr{C}[a,b]$ with respect to supnorm metric.
 
+<*Proof*>
+
+Without loss of generality, assume $[a,b]$ is $[0,1]$ , $f(0)=f(1)=0$, and think $f(x)=0$ for all $x\in \mathbb{R}\setminus [a,b]$. Since $[a,b]$ is closed and bounded, $[a,b]$ is compact. Thus $f$ is uniformly continuous on $[a,b]$ and also  on $\mathbb{R}$.
+
+We will create an **approximation of the identity**. Let 
+
+$$
+\begin{align*}
+Q_n(x) = c_n(1-x^2)^n
+\end{align*}
+$$
+on $[-1,1]$, where
+
+$$
+\begin{align*}
+c_n = \frac{1}{\int_{-1}^1 Q_n(x)dx}.
+\end{align*}
+$$
+
+Observe that $\int_{-1}^1 Q_n(x)dx=1$ and for any $\delta\in (0,1)$ $Q_n$ converges uniformly to $0$ on $\delta \leq \lvert x \rvert \leq 1$. 
+
+$f(x)= (1-x^2)^n, g(x) = 1-nx^2$ on $[0,1]$. $f(0)=g(0)=1,\text{and } f(1)=g(1)=0$. Since
+
+$$
+\begin{align*}
+f^\prime(x) = n(1-x^2)^n(-2x) \geq -2nx = g^\prime(x), \forall x \in [0,1]
+\end{align*}
+$$
+
+$f(x) \geq g(x)$ for all $x\in [0,1]$.
+
+Since 
+
+$$
+\begin{align*}
+\int_{-1}^1 (1-x^2)^n dx &= 2\int_0^1(1-x^2)^n dx\\
+&\geq 2\int_0^{1/\sqrt{n}}(1-x^2)^ndx \\
+&\geq 2\int_0^{1/\sqrt{n}}(1-nx^2)dx \quad (\because (1-x^2)^n \geq 1-nx^2 \text{ on } [0,1]) \\
+&=\frac{4}{3\sqrt{n}} \\
+&> \frac{1}{\sqrt{n}}
+\end{align*}
+$$
+
+
+
+
+Thus $c_n <\sqrt{n}$. Then 
+
+$$
+\begin{align*}
+Q_n(x) < \sqrt{n}(1-x^2)^n \leq \sqrt{n}(1-\delta^2)^n
+\end{align*}
+$$
+
+Since $\sqrt{n}(1-\delta^2)^n \to 0$ as $n\to\infty$, $Q_n$ converges uniformly to $0$ on $\delta \leq \lvert x \rvert \leq 1$. Define 
+
+$$
+\begin{align*}
+P_n(x) = \int_{-1}^1 f(x+t)Q_n(t) dt.
+\end{align*}
+$$
+
+Intuitively, if $n\to\infty$ $Q_n(t)$ becomes dirac-delta, i.e., $\int_{-1}^1Q_n(t) dt =1$ but $Q_n(t)=\mathbf{1}\\{t=0\\}$. Since
+
+$$
+\begin{align*}
+P_n(x) &= \int_{-1}^1 f(x+t)Q_n(t)dt \\
+&= \int_{-x}^{1-x}f(x+t)Q_n(t) dt \quad (\because 0\leq x+t \leq 1 \Rightarrow -x \leq t \leq 1-x) \\
+&=\int_0^1 f(t) Q_n(t-x)dt \quad (\because \text{change of variable})\\
+&=\int_0^1 f(t) c_n(1-(t-x)^2)^n dt
+\end{align*}
+$$
+
+
+Now we want to show that $P_n \to f$ uniformly. Let $\epsilon >0$ be given.  Since $f \in \mathscr{C}[0,1]$, it is bounded, i.e., there is $M>0$ such that $\lvert f(x) \rvert < 0$ for all $x\in [0,1]$. Moreover, since $f$ is uniformly continuous on $[0,1]$, we can choose $\delta >0$ such that 
+
+$$
+\begin{align*}
+\lvert t \rvert <\delta \Rightarrow \lvert f(x+t) -f(x) \rvert <\frac{\epsilon}{2}.
+\end{align*}
+$$
+
+Lastly, $Q_n\to 0$ uniformly on $\delta \leq \lvert x \rvert \leq 1$, 
+
+$$
+\begin{align*}
+\lim_{n\to\infty}\int_{\delta \leq \lvert t\rvert \leq 1}Q_n(t) &= \int_{\delta \leq \lvert t \rvert \leq 1}\lim_{n\to\infty}Q_n(t)dt \\
+&=\int_{\delta \leq \lvert t \rvert \leq 1} 0dt =0.
+\end{align*}
+$$
+
+Then, we can choose $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+n\geq N\Rightarrow \int_{\delta \leq \lvert t \rvert \leq 1} Q_n(t) dt < \frac{\epsilon}{4M}.
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\lvert P_n(x) - f(x) \rvert &=\left\lvert \int_{-1}^1f(x+t)Q_n(t) dt - f(x) \right\rvert \\
+&=\left\lvert \int_{-1}^1f(x+t)Q_n(t) dt - f(x)\int_{-1}^1Q_n(t)dt \right\rvert \\
+&=\left\lvert \int_{-1}^1(f(x+t)-f(x)Q_n(t) dt \right\rvert \\ 
+&\leq \int_{-1}^1\left\lvert f(x+t)-f(x)\right\rvert Q_n(t)dt \\
+&\leq \int_{\lvert t\rvert \leq \delta}\left\lvert f(x+t)-f(x)\right\rvert Q_n(t)dt + \int_{\delta \leq \lvert t\rvert \leq 1}\left\lvert f(x+t)-f(x)\right\rvert Q_n(t)dt \\
+&\leq \frac{\epsilon}{2}\int_{\lvert t\rvert \leq \delta}Q_n(t)dt + 2M\int_{\delta \lvert t \rvert \leq 1}Q_n(t) dt \\
+&\leq \frac{\epsilon}{2}\int_{-1 \leq t \leq 1}Q_n(t)dt + 2M\int_{\delta \leq \lvert t \rvert \leq 1}Q_n(t) dt \\
+&< \frac{\epsilon}{2} + 2M\frac{\epsilon}{4M}\\
+&=\epsilon
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
 
 ## Reference
 - Walter Rudin, **『**Principles of Mathematical Analysis**』**
