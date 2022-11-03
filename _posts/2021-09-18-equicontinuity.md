@@ -197,7 +197,7 @@ $$
 Take $\delta =\min\\{\delta_1, \ldots, \delta_k\\}$. Then $\mathscr{F}$ is equicontinuous.
 
 ## Theorem 7.24
-If $K$ is a compact metric space, if $\\{f_n\\}$ is a sequence of continuous functions on $K$, and if $\\{f_n\\}$ converges uniformly on $K$, then  $$\\{f_n\\}$ is equicontinuous.
+If $K$ is a compact metric space, if $\\{f_n\\}$ is a sequence of continuous functions on $K$, and if $\\{f_n\\}$ converges uniformly on $K$, then  $\\{f_n\\}$ is equicontinuous.
 
 <*Proof*> 
 
