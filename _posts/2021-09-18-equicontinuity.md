@@ -59,7 +59,7 @@ By Lebesque dominated convergence theorem,
 
 $$
 \begin{align*}
-\lim_{k\to\infty}\int_0^{2\pi}\left( \sin(n_kx)-\sin(n_{k+1}x)\right)^2 = \int_0^{2\pi}\lim_{k\to\infty} \left(\sin(n_kx)-\sin(n_{k+1}x) \right)^2 =0.
+\lim_{k\to\infty}\int_0^{2\pi}\left( \sin(n_kx)-\sin(n_{k+1}x)\right)^2 = \int_0^{2\pi}\lim_{k\to\infty} \left(\sin(n_kx)-\sin(n_{k+1}x) \right)^2) =0.
 \end{align*}
 $$
 
