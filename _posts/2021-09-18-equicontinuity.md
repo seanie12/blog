@@ -148,7 +148,13 @@ n\geq N_1 \Rightarrow \lvert f_{i,n}(x_i) - \lim_{k\to\infty}f_{i,k}(x_i)\rvert 
 \end{align*}
 $$
 
- Since $\\{f_{n,n}(x_i)\\}$ is a subsequence of $\\{f_{i,n}(x_i)\\}_{n=1}^\infty$,  
+ Since $\\{f_{n,n}(x_i)\\}$ is a subsequence of 
+ 
+$$
+\begin{align*}
+\{f_{i,n}(x_i)\}_{n=1}^\infty
+\end{align*}
+$$,  
 
 $$
 \begin{align*}
