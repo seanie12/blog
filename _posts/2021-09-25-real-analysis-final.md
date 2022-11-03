@@ -1,5 +1,5 @@
 ---
-title: "Equicontinuous Families of Functions"
+title: "Ascoli-Azrela and Stone-Weirstrass Theorem"
 
 categories:
   - Analysis
