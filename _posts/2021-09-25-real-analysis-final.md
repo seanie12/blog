@@ -68,7 +68,7 @@ d(x,y) < \delta \Rightarrow d(f_{n_k}(x) - f_{n_k}(x)) < \epsilon
 \end{align*}
 $$
 
-for all $k\in\mathbb{N}$. Cover $E$ with $\\{N_\delta (e): e\in E\\}$. Since $E$ is dense, it also covers $K$. By compactness of $K$, there exists a finite sub-cover $\\{N_\delta (e_1), \ldots, N_\delta (e_p)\\}$ of $K$. Since $\\{f_{n_k\\}$ converges pointwise on $E$, for each $e_i$, there exists $N\in\mathbb{N}$ such that 
+for all $k\in\mathbb{N}$. Cover $E$ with $\\{N_\delta (e): e\in E\\}$. Since $E$ is dense, it also covers $K$. By compactness of $K$, there exists a finite sub-cover $\\{N_\delta (e_1), \ldots, N_\delta (e_p)\\}$ of $K$. Since $\\{f_{n_k}\\}$ converges pointwise on $E$, for each $e_i$, there exists $N\in\mathbb{N}$ such that 
 
 $$
 \begin{align*}
