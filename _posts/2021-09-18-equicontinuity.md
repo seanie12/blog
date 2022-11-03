@@ -115,7 +115,7 @@ Iterate the following procedure. Since $\\{f_{1,n}(x_2)\\}$ is bounded, there is
 
 $$
 \begin{align*}
-\\{f_{1, {n_k}}(x_2)\\}_{k=1}^\infty.
+\\{f_{1, n_k}(x_2)\\}_{k=1}^\infty.
 \end{align*}
 $$ 
 
