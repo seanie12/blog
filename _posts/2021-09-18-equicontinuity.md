@@ -90,7 +90,7 @@ $$
 
 Again by [Bolzano-Weierstrass Theorem](https://seanie12.github.io/blog/analysis/subsequence-bolzano-weierstrass/#theorem-2410-bolzano-weierstrass-theorem), we can choose a convergent subsequence $\\{f_{n_{k_l}}(x_2)\\}$ on $x_2$.  
 
-$\therefore $\\{f_{n_{k_l}}\\}$ converges on $E=\\{x_1, x_2\\}$.
+$\therefore \\{f_{n_{k_l}}\\}$ converges on $E=\\{x_1, x_2\\}$.
 
 <*Proof*>
 
