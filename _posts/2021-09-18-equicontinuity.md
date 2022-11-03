@@ -111,7 +111,15 @@ $$
 
 We denote $\\{f_{n_k}\\}$, which converges to $\lim_{k\to\infty}f_{n_k}(x_1)$ by $\\{f_{1,k}\\}$.
 
-Iterate the following procedure. Since $\\{f_{1,n}(x_2)\\}$ is bounded, there is a convergent subsequence $\\{f_{1, {n_k}}(x_2)\\}_{k=1}^\infty$. Notate $f_{2,k}=f_{1,n_k}$. Now we consider sequences $S_1, S_2, S_3,\ldots$, which represent by the array
+Iterate the following procedure. Since $\\{f_{1,n}(x_2)\\}$ is bounded, there is a convergent subsequence 
+
+$$
+\begin{align*}
+\\{f_{1, {n_k}}(x_2)\\}_{k=1}^\infty.
+\end{align*}
+$$ 
+
+Notate $f_{2,k}=f_{1,n_k}$. Now we consider sequences $S_1, S_2, S_3,\ldots$, which represent by the array
 
 
 $$
