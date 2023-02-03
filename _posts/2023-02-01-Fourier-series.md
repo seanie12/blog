@@ -357,11 +357,11 @@ Since
 
 $$
 \begin{align*}
-\sum_{n=-N}^N \lvert \hat{f}(\theta)\rvert \left\lvert e^{in\theta}\right\rvert = \sum_{n=-N}^N\lvert \hat{f}(\theta)\rvert
+\sum_{n=-N}^N \lvert \hat{f}(n)\rvert \left\lvert e^{in\theta}\right\rvert = \sum_{n=-N}^N\lvert \hat{f}(n)\rvert
 \end{align*}
 $$
 
-and it absolutely converges, $S_N(f)$ converges uniformly on the circle by [Weierstrass M-test](https://seanie12.github.io/blog/analysis/pointwise-uniform-convergence/#theorem-827-weierstrass-m-test). Since $S_N(f)$ is continuous and uniform convergent, $S_N(f)$ uniformly converges to some continuous function.
+and it absolutely converges and is independent of $\theta$, $S_N(f)$ converges uniformly on the circle by [Weierstrass M-test](https://seanie12.github.io/blog/analysis/pointwise-uniform-convergence/#theorem-827-weierstrass-m-test). Since $S_N(f)$ is continuous and uniform convergent, $S_N(f)$ uniformly converges to some continuous function.
 
 Fourier coefficient of $\lim_{N\to\infty}\sum_{n=-N}^N \hat{f}(n)e^{in\theta}$ is 
 
