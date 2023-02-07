@@ -225,7 +225,7 @@ $$\tag*{$\square$}$$
 
 
 ## Definition 3.1
-Let $\\{K_n: \mathbb{T}\to \mathbb{R} \}}$ be a sequence of functions on the circle. If
+Let $\\{K_n: \mathbb{T}\to \mathbb{R} \\}$ be a sequence of functions on the circle. If
 
 (1) (**Sliding in** condition) $\frac{1}{2\pi}\int_{-\pi}^\pi K_n(x)dx=1$ for all $n\in\mathbb{N}$
 
