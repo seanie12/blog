@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Fourier Series"
+title: "Convolution and Good Kernels"
 
 categories:
   - Fourier Analysis
@@ -25,7 +25,7 @@ Let $f,g:\mathbb{R}\to\mathbb{C}$ be $2\pi$-periodic functions. The *convolution
   
 $$
 \begin{align*}
-(f*g)(x) :=\frac{1}{2\pi}\int_{-\pi}^\pi f(y) g(x-y)dy
+(f*g)(x) =\frac{1}{2\pi}\int_{-\pi}^\pi f(y) g(x-y)dy
 \end{align*}
 $$
 
