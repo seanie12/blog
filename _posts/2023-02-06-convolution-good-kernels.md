@@ -49,7 +49,7 @@ is $N$-th partial sum of the Fourier series. However, $\lim_{N\to\infty}(f\*D_N)
 ## Theorem 2.1 (Basic properties)
 Let $f,g,h$ be $2\pi$-periodic **integrable** functions, and $c\in\mathbb{C}$. Then
 
-(1) (Linearity 1) $f\*(g+h) = f*g + f*h$ 
+(1) (Linearity 1) $f\*(g+h) = f\*g + f\*h$ 
 
 (2) (Linearity 2)$(cf)\*g= c(f\*g)=f\*(cg)$
 
