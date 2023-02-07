@@ -25,18 +25,18 @@ Let $f,g:\mathbb{R}\to\mathbb{C}$ be $2\pi$-periodic functions. The *convolution
   
 $$
 \begin{align*}
-(f\*g)(x) =\frac{1}{2\pi}\int_{-\pi}^\pi f(y) g(x-y)dy
+(f*g)(x) =\frac{1}{2\pi}\int_{-\pi}^\pi f(y) g(x-y)dy
 \end{align*}
 $$
 
 ## Remark
 (1) Convolution as weighted average.
 
-(2) Turns out that many important construction can be expressed in terms of convolution. For example, consider $f\* D_N$, the Dirichlet kernel
+(2) Turns out that many important construction can be expressed in terms of convolution. For example, consider $f* D_N$, the Dirichlet kernel
 
 $$
 \begin{align*}
-(f\*D_N)(x) &= \frac{1}{2\pi} \int_{-\pi}^\pi f(y) \sum_{n=-N}^N e^{in(x-y)}dy \\
+(f*D_N)(x) &= \frac{1}{2\pi} \int_{-\pi}^\pi f(y) \sum_{n=-N}^N e^{in(x-y)}dy \\
 &=\sum_{n=-N}^N e^{inx}\frac{1}{2\pi} \int_{-\pi}^\pi f(y) e^{-iny}dy  \\
 &=\sum_{n=-N}^N \hat{f}(n)e^{inx} \\
 &= S_N(f)(x)
@@ -70,9 +70,9 @@ Note that $L^1(\pi)=\\{f: \text{integrable}\mid \int_{-\pi}^\pi \lvert f(x)\rver
 
 $$
 \begin{align*}
-(f\*(g\*h))(x) &= \frac{1}{2\pi} \int_{-\pi}^{\pi} f(y) \left[g(x-y)+h(x-y) \right]dy \\
+(f*(g*h))(x) &= \frac{1}{2\pi} \int_{-\pi}^{\pi} f(y) \left[g(x-y)+h(x-y) \right]dy \\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi f(y) g(x-y) dy + \frac{1}{2\pi}\int_{-\pi}^\pi f(y)h(x-y)dy \\
-&=(f\*g)(x) + (f\*h)(x)
+&=(f*g)(x) + (f*h)(x)
 \end{align*}
 $$
 
@@ -84,20 +84,20 @@ $\therefore f\*(g+h) = f\*g + f\*h$
 
 $$
 \begin{align*}
-((cf)\*g )(x) &= \frac{1}{2\pi} \int_{-\pi}^\pi (cf)(y) g(x-y)dy \\
+((cf)*g )(x) &= \frac{1}{2\pi} \int_{-\pi}^\pi (cf)(y) g(x-y)dy \\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi cf(y) g(x-y)dy \\
 &=\frac{c}{2\pi}\int_{-\pi}^\pi f(y) g(x-y) dy \\
-&= c(f\*g)(x)
+&= c(f*g)(x)
 \end{align*}
 $$
 
 Similarly, 
 $$
 \begin{align*}
-((cf)\*g)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi cf(y)g(x-y)dy \\
+((cf)*g)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi cf(y)g(x-y)dy \\
 &= \frac{1}{2\pi}\int_{-\pi}^\pi f(y) cg(x-y)dy \\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi f(y) (cg)(x-y) dy \\
-&= (f\*(cg))(x)
+&= (f*(cg))(x)
 \end{align*}
 $$
 
@@ -108,7 +108,7 @@ $\therefore (cf)\* g= c(f\*g)=f\*(cg)$
 
 $$
 \begin{align*}
-((f\*g)\*h)(x) &= \frac{1}{2\pi} \int_{-\pi}^\pi (f\*g)(y) h(x-y)dy \\
+((f*g)*h)(x) &= \frac{1}{2\pi} \int_{-\pi}^\pi (f*g)(y) h(x-y)dy \\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi  \left( \frac{1}{2\pi}\int_{-\pi}^\pi f(z)g(y-z)dz\right) h(x-y)dy \\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi f(z)\left(\frac{1}{2\pi}\int_{-\pi}^\pi  g(y-z)h(x-y)dy \right)dz
 \end{align*}
@@ -118,10 +118,10 @@ Let $w:= y-z$. With the change of variable,
 
 $$
 \begin{align*}
-((f\*g)\*h)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi f(z)\left( \frac{1}{2\pi}\int_{-\pi-z}^{\pi-z}g(w)h(x-z-w)dw \right)dz\\
+((f*g)\*h)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi f(z)\left( \frac{1}{2\pi}\int_{-\pi-z}^{\pi-z}g(w)h(x-z-w)dw \right)dz\\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi f(z)\left(\frac{1}{2\pi}\int_{-\pi}^\pi g(w)h(x-z-w)dw \right)dz\\
-&=\frac{1}{2\pi}\int_{-\pi}^\pi  f(z) (g\*h)(x-z)dz \\
-&=(f\*(g\*h))(x)
+&=\frac{1}{2\pi}\int_{-\pi}^\pi  f(z) (g*h)(x-z)dz \\
+&=(f*(g*h))(x)
 \end{align*}
 $$
 
@@ -132,11 +132,11 @@ $\therefore f\*(g\*h)=(f\*g)\*h$.
 
 $$
 \begin{align*}
-(g\*f)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi f(x-y)g(y)dy \\
+(g*f)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi f(x-y)g(y)dy \\
 &=\frac{1}{2\pi}\int_{x+\pi}^{x-\pi } -f(w) g(x-w) dw \quad ( w:= x-y) \\
 &= \frac{1}{2\pi}\int_{x-\pi}^{x+\pi} f(w) g(x-w)dw \\
 &= \frac{1}{2\pi}\int_{-\pi}^\pi f(w)g(x-w) dw \\
-&=(f\*g)(x)
+&=(f*g)(x)
 \end{align*}
 $$
 
@@ -146,7 +146,7 @@ $\therefore f\*g = g\* f$.
 
 $$
 \begin{align*}
-\widehat{f\*g}(n) & = \frac{1}{2\pi}\int_{-\pi}^\pi (f\*g)(x) e^{-inx}dx \\
+\widehat{f*g}(n) & = \frac{1}{2\pi}\int_{-\pi}^\pi (f*g)(x) e^{-inx}dx \\
 &= \frac{1}{2\pi}\int_{-\pi}^\pi \left(\frac{1}{2\pi}\int_{-\pi}^\pi  f(y) g(x-y)dy \right)e^{-inx}dx \\
 &= \frac{1}{2\pi}\int_{-\pi}^\pi f(y)\left(\frac{1}{2\pi}\int_{-\pi}^\pi g(x-y)e^{-inx}dx \right) dy \\
 &= \frac{1}{2\pi}\int_{-\pi}^\pi f(y) e^{-iny} \left(g(x-y)e^{-in(x-y)} dx \right)dy \\
@@ -161,14 +161,14 @@ $$
 
 $$
 \begin{align*}
-\lvert x_1 -x_2 \rvert < \delta \Rightarrow \lvert (f\*g)(x_1) - (f\*g)(x_2)\rvert < \epsilon.
+\lvert x_1 -x_2 \rvert < \delta \Rightarrow \lvert (f*g)(x_1) - (f*g)(x_2)\rvert < \epsilon.
 \end{align*}
 $$
 
 Note that $g$ is continuous on the compact set $[-\pi, \pi]$, $g$ is uniformly continuous on $[-\pi, \pi]$. Thus, there exists  $\delta>0$ such that  $\lvert p -q \rvert <\delta \Rightarrow\lvert g(p) - g(q)\rvert <\epsilon/ B$, where $B$ is a bound on $g$, i.e., $\lvert g(x)\rvert \leq B$ for all $x\in[-\pi, \pi]$. Now consider,
 $$
 \begin{align*}
-\lvert (f\*g)(x_1) - (f\*g)(x_2) \rvert  &= \left\lvert \frac{1}{2\pi}\int_{-\pi}^\pi f(y)[g(x_1-y)-g(x_2)]dy \right\rvert \\
+\lvert (f*g)(x_1) - (f*g)(x_2) \rvert  &= \left\lvert \frac{1}{2\pi}\int_{-\pi}^\pi f(y)[g(x_1-y)-g(x_2)]dy \right\rvert \\
 &\leq \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(y) \rvert \lvert g(x_1-y) - g(x_2-y)\rvert dy \\
 &\leq \frac{1}{2\pi}\int_{-\pi}^\pi B \frac{\epsilon}{B}dy \\
 &<\epsilon.
@@ -199,7 +199,7 @@ $$
 
 $$
 \begin{align*}
-\left\lvert f\*g - f_k\*g_k\right\rvert &= \left\lvert (f-f_k)\*g + f_k \* (g-g_k)\right\rvert \\
+\left\lvert f*g - f_k*g_k\right\rvert &= \left\lvert (f-f_k)*g + f_k * (g-g_k)\right\rvert \\
 &=\left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[f(x-y)-f_k(x-y)]g(y)dy\right\rvert \\
 &\leq \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(x-y)-f_k(x-y)\rvert \lvert g(y) \rvert dy \\
 &\leq \frac{B}{2\pi}\int_{-\pi}^\pi \lvert f(x-y)-f_k(x-y) \rvert dy \\
@@ -213,7 +213,7 @@ Similarly, we get
 
 $$
 \begin{align*}
-\lvert f_k \*(g-g_k) \rvert < \frac{\epsilon}{2}.
+\lvert f_k *(g-g_k) \rvert < \frac{\epsilon}{2}.
 \end{align*}
 $$
 
@@ -252,7 +252,7 @@ Let $f$ be an integrable function on the circle $\\{K_n\\}$ a family of good ker
 
 $$
 \begin{align*}
-\lim_{n\to\infty} (f\*K_n)(x_0) = f(x_0)
+\lim_{n\to\infty} (f*K_n)(x_0) = f(x_0)
 \end{align*}
 $$
 
@@ -266,7 +266,7 @@ Consider,
 
 $$
 \begin{align*}
-\lvert (f\*K_n)(x_0) - f(x_0) \rvert &= \left\lvert \frac{1}{2\pi}\int_{-\pi}^\pi K_n(y) f(x_o-y) dy- f(x_0)\right\rvert \\
+\lvert (f*K_n)(x_0) - f(x_0) \rvert &= \left\lvert \frac{1}{2\pi}\int_{-\pi}^\pi K_n(y) f(x_o-y) dy- f(x_0)\right\rvert \\
 &= \left\lvert \frac{1}{2\pi}\int_{-\pi}^\pi K_n(y)[ f(x_0-y)-f(x_0)]dy\right\rvert
 \end{align*}
 $$
