@@ -61,5 +61,5 @@ Let $f,g,h$ be $2\pi$-periodic **integrable** functions, and $c\in\mathbb{C}$. T
 
 (6) Multiplication $\widehat{f*g}(n) =\hat{f}(n)\hat{g}(n)$
 
-Note that $L^1(\pi)=\\{f: \text{integrable}\mid \int_{-\pi}^\pi \lvert f(x)\rvert dx <\infty\\}$ with convolution operation is called *Banach algebra*.
+Note that $(L^1(\pi),*)$ is called *Banach algebra*.
 
