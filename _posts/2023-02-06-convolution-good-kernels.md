@@ -165,7 +165,7 @@ $$
 \end{align*}
 $$
 
-Note that $g$ is continuous on the compact set $\[-\pi, \pi]$, $g$ is uniformly continuous on $[-\pi, \pi]$. Thus, there exists  $\delta>0$ such that  $\lvert p -q \rvert <\delta \Rightarrow $\lvert g(p) - g(q)\rvert <\epsilon/ B,$ where $B$ is a bound on $g$, i.e., $\lvert g(x)\rvert \leq B$ for all $x\in[-\pi, \pi]$. Now consider,
+Note that $g$ is continuous on the compact set $[-\pi, \pi]$, $g$ is uniformly continuous on $[-\pi, \pi]$. Thus, there exists  $\delta>0$ such that  $\lvert p -q \rvert <\delta \Rightarrow\lvert g(p) - g(q)\rvert <\epsilon/ B$, where $B$ is a bound on $g$, i.e., $\lvert g(x)\rvert \leq B$ for all $x\in[-\pi, \pi]$. Now consider,
 $$
 \begin{align*}
 \lvert (f*g)(x_1) - (f*g)(x_2) \rvert  &= \left\lvert \frac{1}{2\pi}\int_{-\pi}^\pi f(y)[g(x_1-y)-g(x_2)]dy \right\rvert \\
