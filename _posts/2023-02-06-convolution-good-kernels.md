@@ -187,6 +187,7 @@ $$
 $$
 
 Now, suppose that $f,g$ are integrable functions. By the lemma, there are sequences $\\{f_k\\}$ and $\\{g_k\\}$ such that
+
 $$
 \begin{align*}
 \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(x)-f_k(x) \rvert dx &\to 0 \\
