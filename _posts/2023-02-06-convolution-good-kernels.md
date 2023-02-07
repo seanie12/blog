@@ -118,7 +118,7 @@ Let $w:= y-z$. With the change of variable,
 
 $$
 \begin{align*}
-((f*g)\*h)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi f(z)\left( \frac{1}{2\pi}\int_{-\pi-z}^{\pi-z}g(w)h(x-z-w)dw \right)dz\\
+((f*g)*h)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi f(z)\left( \frac{1}{2\pi}\int_{-\pi-z}^{\pi-z}g(w)h(x-z-w)dw \right)dz\\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi f(z)\left(\frac{1}{2\pi}\int_{-\pi}^\pi g(w)h(x-z-w)dw \right)dz\\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi  f(z) (g*h)(x-z)dz \\
 &=(f*(g*h))(x)
