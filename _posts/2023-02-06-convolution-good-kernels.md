@@ -62,4 +62,4 @@ Let $f,g,h$ be $2\pi$-periodic **integrable** functions, and $c\in\mathbb{C}$. T
 (6) Multiplication $\widehat{f*g}(n) =\hat{f}(n)\hat{g}(n)$
 
 Note that $(L^1(\pi),*)$ is called *Banach algebra*.
-
+ 
