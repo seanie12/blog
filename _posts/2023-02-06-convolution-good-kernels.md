@@ -279,7 +279,7 @@ $$
 \end{align*}
 $$
 
-Since $f$ is integrable function, $f$ is bounded. Let $ where $B=\sup_{x\in[-\pi, \pi]}\lvert f(x) \rvert \in \mathbb{R}$. Then we get, 
+Since $f$ is integrable function, $f$ is bounded. Let where $B=\sup_{x\in[-\pi, \pi]}\lvert f(x) \rvert \in \mathbb{R}$. Then we get, 
 
 $$
 \begin{align*}
