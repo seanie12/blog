@@ -55,6 +55,7 @@ $$
 \lvert \sigma_n - s\rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2} =\epsilon.
 \end{align*}
 $$
+
 $\therefore \sigma_n \to s$ as $n\to\infty$.
 
 
