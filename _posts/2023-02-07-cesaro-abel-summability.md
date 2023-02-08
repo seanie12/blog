@@ -192,6 +192,20 @@ $$
 
 $$\tag*{$\square$}$$
 
+## Corollary 2.5
+Any continuous function on the circle can be uniformly approximated by trigometric polynomials. Note that it is the periodic analogue of [Stone-Weierstrass approximation Theorem](https://seanie12.github.io/blog/analysis/real-analysis-final/#theorem-stone-weierstrass)
+
+<*Proof*>
+
+It is obvious since
+
+$$
+f*F_N(x) = \frac{1}{N}\sum_{k=0}^{N-1} \sum_{n=-k}^k \hat{f}(n) e^{inx}
+$$
+
+for all $x\in [-\pi, \pi]$ and $f*F_N\rightrightarrows f$.
+
+$$\tag*{$\square$}$$
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
