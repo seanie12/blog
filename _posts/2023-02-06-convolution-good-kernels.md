@@ -242,7 +242,7 @@ $$
 \end{align*}
 $$
 
-as $k\to \infty$, then we $\\{K_n\\}$ is a family of *good kernels* or more commonly an *approximation to the identity*.
+as $n\to \infty$, then we $\\{K_n\\}$ is a family of *good kernels* or more commonly an *approximation to the identity*.
 
 where $\theta\in [-\pi, \pi]$ and $r\in [0,1)$.
 
