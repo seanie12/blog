@@ -206,6 +206,151 @@ $$
 for all $x\in [-\pi, \pi]$ and $f*F_N\rightrightarrows f$.
 
 $$\tag*{$\square$}$$
+
+## Definition 3.1 (Abel Means and Abel summable)
+Let $\sum_{k=0}^\infty c_k$ be a series of complex numbers.
+
+i. We define the *Abel Means* $A(r)$ of the series $\sum c_k$ by 
+
+$$
+A(r) := \sum_{k=0}^\infty c_k r^k
+$$ 
+
+ii. If for every $0\leq r <1$, the abel means $A(r)$ converges, and
+
+$$
+\lim_{r\to 1} A(r) =s
+$$
+
+then we say the series $\sum_{k=0}^\infty c_k$ is *Abel summable* to $s$.
+
+## Example
+1. Consider $\sum_{k=0}^\infty(-1)^k$. It diverges, but is Abel summable to $s=\frac{1}{2}$.
+
+$$
+\begin{align*}
+A(r) &= \sum_{k=0}^\infty (-1)^k r^k \\
+&= \frac{1}{1+r}.
+\end{align*}
+$$
+
+2. Consider $\sum_{k=0}^\infty(-1)^k (k+1)$. It diverges, but is Abel summable to $s=\frac{1}{4}$.
+ 
+$$
+\begin{align*}
+A(r) = \sum_{k=0}^\infty (-1)^k (k+1)r^k = \frac{k+1}{(1+r)^2}.
+\end{align*}
+$$
+
+## Definition 4.1
+Suppose we know the Fourier series of a function $f$:
+
+$$
+\begin{align*}
+f(\theta)\sim \sum_{n=-\infty}^\infty a_n e^{in\theta}.
+\end{align*}
+$$
+
+We define the *Abel means* of $A_r(f)(\theta)$ *of the Fourier Series* of the function $f$ by
+
+$$
+\begin{align*}
+A_r(f)(\theta) = \sum_{n=-\infty}^\infty r^{\lvert n \rvert}a_n e^{in\theta}
+\end{align*}
+$$
+
+## Remarks
+1. If we let $c_0=a_0$ and $c_n = a_n e^{in\theta} + a_{-n}e^{-in\theta}$, then the Abel means of the Fourier series above equals the Abel means of the series $\sum_{k=0}^\infty c_k$.
+
+2.  For integrable $f, \lvert a_n \rvert$   is uniformly bounded in $n\in\mathbb{N}$. So $A_r(f)(\theta)$ converges absolutely. By Weierstrass M-test, it also uniformly converges for each fixed $0\leq r <1$.
+
+$$
+\lvert a_n  \rvert= \left\lvert\frac{1}{2\pi}\int_{-\pi}^\pi f(\theta) e^{-in\theta}d\theta \right\rvert \leq \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(\theta)\rvert d\theta \leq B
+$$
+
+## Lemma 4.2 (Abel means as a convolution)
+
+$$
+\begin{align*}
+A_r(f)(\theta) = (f*P_r)(\theta)
+\end{align*}
+$$
+
+where $P_r(\theta) = \sum_{n=-\infty}^\infty r^{\lvert n \rvert} e^{in\theta}$ is the Poisson Kernel.
+
+<*Proof*>
+
+$$
+\begin{align*}
+A_r(f)(\theta) &= \sum_{n=-\infty}^\infty r^{\lvert n \rvert} a_ne^{in\theta} \\
+&= \sum_{n=-\infty}^\infty r^{\lvert n \rvert}\left( \frac{1}{2\pi}\int_{-\pi}^\pi f(\phi) e^{-in\phi}d\phi\right)e^{in\theta} \\
+&= \frac{1}{2\pi}\int_{-\pi}^\pi f(\phi)\sum_{n=-\infty}^\infty r^{\lvert n\rvert} e^{in(\theta-\phi)}d\phi \\
+&=\frac{1}{2\pi}\int_{-\pi}^\pi f(\phi) P_r(\theta-\phi)d\phi \\
+&= (f*P_r)(\theta).
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
+ 
+ ## Lemma 4.3
+The Poisson Kernel is an approximation of the identity as ($r\uparrow 1$).
+
+<*Proof*>
+
+We know that $P_r(\theta)=\sum_{n=-\infty}^\infty r^{\lvert n \rvert}e^{in\theta}$ converges absolutely and uniformly and already showed that 
+
+$$
+\begin{align*}
+P_r(\theta) = \frac{1-r^2}{1-2r\cos\theta + r^2} = \frac{1-\lvert \omega \rvert}{\lvert 1 -\omega\rvert^2} > 0
+\end{align*}
+$$
+
+for $0<r<1$, where $\omega = re^{i\theta}$.
+
+1. 
+$$
+\begin{align*}
+\frac{1}{2\pi}\int_{-\pi}^\pi P_r(\theta)d\theta &= \frac{1}{2\pi}\int_{-\pi}^\pi\sum_{n=-\infty}^\infty r^{\lvert n\rvert} e^{in\theta}d\theta \\
+&=\sum_{n=-\infty}^\infty \frac{1}{2\pi}\int_{-\pi}^\pi r^{\lvert n\rvert} e^{in\theta}d\theta \quad (\because \text{ uniform convergence}) \\
+&= \sum_{n=-\infty}^\infty \frac{1}{2\pi}\int_{-\pi}^\pi\mathbf{1}\{n=0\}d\theta \\
+&=1
+\end{align*}
+$$
+
+2.  Since $P_r(\theta)>0$ for all $\theta \in [-\pi, \pi]$,
+
+$$
+\begin{align*}
+\frac{1}{2\pi}\int_{-\pi}^\pi\lvert P_r(\theta) \rvert d\theta= \frac{1}{2\pi}\int_{-\pi}^\pi P_r(\theta)d\theta=1.
+\end{align*}
+$$
+
+3. Note that $1-2r\cos\theta + r^2=(1-r)^2 + 2r(1-\cos\theta)$. For $\frac{1}{2} \leq r <1$ and $\delta \leq \lvert \theta \rvert \leq \pi$, 
+
+$$
+\begin{align*}
+1-2r\cos\theta+r^2 &= (1-r)^2 + 2r(1-\cos\theta) \\
+&\geq \left(\frac{1}{2}\right)^2 + (1-\cos\theta) \\
+&\geq \frac{1}{4} + (1-\cos\delta) =:c_\delta
+\end{align*}
+$$
+
+which implies that $P_r(\theta) \leq (1-r^2)/ c_\delta$.
+
+Thus,
+
+$$
+\lim_{r\to 1^{-}} \frac{1}{2\pi}\int_{\delta \leq \lvert \theta \rvert \leq \pi} P_r(\theta)d\theta =0.
+$$
+
+
+## Corollary 4.4
+Let $f$ be integrable function on the circle. Then the Abel means of the Fourier series of $f$ pointwise to $f$ at every point of continuity. If, further, $f$ is continuous on the circle, then the convergence is uniform.
+
+$$
+A_r(f) = f * P_r \rightrightarrows f.
+$$
+
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
