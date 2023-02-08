@@ -7,6 +7,7 @@ categories:
 tags:
   - Fejer's Theorem
   - Fejer Kernel
+  - Approximation of the identity
 
 
 
@@ -42,8 +43,8 @@ $$
 \lvert \sigma_n - s\vert &= \left \lvert \sum_{k=0}^{n-1} \frac{s_k}{n} - s \right\rvert \\
 &\leq \frac{1}{n}\sum_{k=0}^{n-1}\lvert s_k - s\rvert \\
 &= \frac{1}{n}(\lvert s_0-s\rvert + \cdots +\lvert s_{N_1-1}-s\rvert) + \frac{1}{n}(\lvert s_{N_1}-s\rvert + \cdots + \lvert s_{n-1}-s\rvert) \\
-&< \frac{N_1}{n}\max_{i\in \\{0,1, \ldots, N_1-1\\}} \lvert s_i-s\rvert + \frac{n-N_1}{n}\frac{\epsilon}{2} \\
-&< \frac{N_1}{n}\max_{i\in \\{0,1, \ldots, N_1-1\\}} \lvert s_i-s\rvert + \frac{\epsilon}{2} \\
+&< \frac{N_1}{n}\max_{i\in \{0,1, \ldots, N_1-1\}} \lvert s_i-s\rvert + \frac{n-N_1}{n}\frac{\epsilon}{2} \\
+&< \frac{N_1}{n}\max_{i\in \{0,1, \ldots, N_1-1\}} \lvert s_i-s\rvert + \frac{\epsilon}{2} \\
 \end{align*}
 $$
 
