@@ -300,7 +300,7 @@ m,n \geq N, x\in E \Rightarrow \lvert f_m(x) - f_n(x)\rvert  <\frac{\epsilon}{2}
 \end{align*}
 $$
 
-For each $x\in E, \\{f_n(x)\\}_{n=1}^\infty$ is Cauchy sequence and hence it converges. Let $f(x) = \lim_{n\to\infty}f_n(x)$ for every $x\in E$.
+For each $x\in E, (f_n(x))_{n=1}^\infty$ is Cauchy sequence and hence it converges. Let $f(x) = \lim_{n\to\infty}f_n(x)$ for every $x\in E$.
 
 Fix $m\geq N$ and $x\in E$. Then,
 
@@ -389,6 +389,7 @@ $$
 $$
 
 If $\sum_{k=1}^\infty M_k$ converges, then $\sum_{k=1}^\infty f_k(x)$ converges uniformly and absolutely on $E$.
+
 <*Proof*>
 
 Let $\epsilon >0$ be given and let $T_n = \sum_{k=1}^n M_k$. Since $T_n$ converges, $T_n$ is Cauchy sequence. Thus, for given $\epsilon >0$, there is $N\in\mathbb{N}$ such that
