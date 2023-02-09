@@ -292,7 +292,7 @@ $$
 
 $$\tag*{$\square$}$$
  
- ## Lemma 4.3
+## Lemma 4.3
 The Poisson Kernel is an approximation of the identity as ($r\uparrow 1$).
 
 <*Proof*>
@@ -308,6 +308,7 @@ $$
 for $0<r<1$, where $\omega = re^{i\theta}$.
 
 1. 
+
 $$
 \begin{align*}
 \frac{1}{2\pi}\int_{-\pi}^\pi P_r(\theta)d\theta &= \frac{1}{2\pi}\int_{-\pi}^\pi\sum_{n=-\infty}^\infty r^{\lvert n\rvert} e^{in\theta}d\theta \\
