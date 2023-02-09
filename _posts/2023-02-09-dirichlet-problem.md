@@ -261,7 +261,7 @@ $$
 $$\tag*{$\square$}$$
 
 ## Theorem (Cauchy Schwarz Inequality)
-Let $V$ be vector space. 
+Let $V$ be vector space over $\mathbb{C}$. 
 
 $$
 \begin{align*}
@@ -273,7 +273,7 @@ for all $\mathbf{x,y}\in V$.
 
 <*Proof*>
 
-First, suppose that $\lVert \mathbf{y} \rVert=0$. Since $\langle \mathbf{y,y}\rangle \geq 0$, $\lVert \mathbf{y} \rVert=0$ does not imply $\mathbf{y}=\mathbf{0}$. For all $t\in\mathbb{R}$,
+First, suppose that $\lVert \mathbf{y} \rVert=0$. Since $\langle \mathbf{y},\mathbf{y}\rangle \geq 0$, $\lVert \mathbf{y} \rVert=0$ does not imply $\mathbf{y}=\mathbf{0}$. For all $t\in\mathbb{R}$,
 
 $$
 \begin{align*}
