@@ -7,7 +7,7 @@ categories:
 tags:
   - Dirichlet Problem
   - Polar Coordinates
-  - Cauchy-Schwarchz inequality
+  - Approximation of the identity
 
 
 
@@ -285,7 +285,7 @@ $$
 \end{align*}
 $$
 
-If $\lvert \langle \mathbf{x},\mathbf{y} \rangle \rvert \neq 0$, then taking $t<<0$ gives a contradiction. Thus, $\lvert \langle \mathbf{x},\mathbf{y} \rangle \rvert=0$.
+If $\lvert \langle \mathbf{x},\mathbf{y} \rangle \rvert \neq 0$, then taking $t\ll0$ gives a contradiction. Thus, $\lvert \langle \mathbf{x},\mathbf{y} \rangle \rvert=0$.
 
 Second, suppose that $\lVert \mathbf{y} \rVert\neq0$. Let
 
