@@ -62,7 +62,7 @@ $\therefore \sigma_n \to s$ as $n\to\infty$.
 $$\tag*{$\square$}$$
 
 ## Definition 2.1 (Fejer Kernel)
-We define the *Fejer Kernel*, $F_N$, by letting $F_N(x)$ be the $N$-th Cesaro means of $\\{D_K(x)\\}$; i.e.,
+We define the *Fejer Kernel*, $F_N$, by letting $F_N(x)$ be the $N$-th Cesaro means of $\\{D_k(x)\\}$; i.e.,
 
 $$
 \begin{align*}
