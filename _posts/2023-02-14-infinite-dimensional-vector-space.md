@@ -33,7 +33,7 @@ $$
 and let $\ell^2(\mathbb{Z})$ denote the vector space of all sequences whose $\ell_2$ norm is finite.
 
 ## Definition 1.2
-For $A=\{a_n\}$ and $B=\{b_n\}$ in $\ell^2(\mathbb{Z})$, we define the *inner product*
+For $A=\\{a_n\\}$ and $B=\\{b_n\\}$ in $\ell^2(\mathbb{Z})$, we define the *inner product*
 
   
 $$
@@ -42,7 +42,7 @@ $$
 \end{align*}
 $$
 
-and $\lVert A \rVert \coloneqq \sqrt{\langle A, A \rangle}$ denote the induced norm.
+and $\lVert A \rVert := \sqrt{\langle A, A \rangle}$ denote the induced norm.
 
 
 ## Remark
@@ -74,12 +74,16 @@ $$
 \end{align*}
 $$
 
+
+$$\tag*{$\square$}$$
+## Definition 1.3 
+An inner product space with strictly positive definite inner product, which is complete with respect to the induced metric, is called a *Hilbert space*.
+
 Since all the sequences are monotone increasing and bounded, $\lVert A +B \rVert \in \mathbb{R}$. Thus, $\ell_2(\mathbb{Z})$ is closed under the addition.
 
 
 
 
-$$\tag*{$\square$}$$
 
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
