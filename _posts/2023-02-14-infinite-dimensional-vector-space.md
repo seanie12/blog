@@ -76,13 +76,44 @@ $$
 
 
 $$\tag*{$\square$}$$
-## Definition 1.3 
-An inner product space with strictly positive definite inner product, which is complete with respect to the induced metric, is called a *Hilbert space*.
+
+
 
 Since all the sequences are monotone increasing and bounded, $\lVert A +B \rVert \in \mathbb{R}$. Thus, $\ell_2(\mathbb{Z})$ is closed under the addition.
 
 
+## Definition 1.3 
+An inner product space with strictly positive definite inner product, which is complete with respect to the induced metric, is called a *Hilbert space*.
 
+## Remark
+$\mathcal{R}=\\{ f:\text{ Riemann integrable function on } 2\pi\mid \sqrt{\frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(x)\rvert^2 dx} < \infty \\}$ fails to be a Hilbert space. Since $\lVert f \rVert=0$ only implies $f=0$ almost everywhere.
+
+## Theorem (Cauchy Schwarz Inequality)
+
+<*Proof*>
+
+Using the fact $2AB \leq (A^2 + B^2)$, we see that for any $\lambda >0$,
+
+$$
+\begin{align*}
+\lvert f(x) \overline{g(x)}\rvert \leq \frac{1}{2}( \lambda \lvert f(x)\rvert^2 + \lambda^{-1}\lvert g(x)\rvert^2).
+\end{align*}
+$$
+
+Then
+
+$$
+\begin{align*}
+\lvert \langle f, g \rangle \rvert &\leq \frac{1}{2}\int_0^{2\pi} \lvert f(x) \overline{g(x)}\rvert dx \\
+&\leq \frac{1}{2}( \lambda \lVert f\rVert^2 + \lambda^{-1}\lVert g\rVert^2).
+\end{align*}
+$$
+
+Taking  $\lambda=\lVert g\rVert / \lVert f\rVert$ yields the Cauchy-Schwarz inequality. 
+
+
+
+$$\tag*{$\square$}$$
 
 
 ## Reference
