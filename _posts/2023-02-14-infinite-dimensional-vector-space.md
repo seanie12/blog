@@ -115,7 +115,89 @@ Taking  $\lambda=\lVert g\rVert / \lVert f\rVert$ yields the Cauchy-Schwarz ineq
 
 $$\tag*{$\square$}$$
 
+## Remark
+Let $\mathcal{R}$ be integrable functions on the circle and we define an inner product
 
+$$
+\begin{align*}
+\langle f, g\rangle := \frac{1}{2\pi}\int_0^{2\pi}f(\theta)\overline{g(\theta)}d\theta
+\end{align*}
+$$
+
+with induced norm $\lVert f\rVert^2_2 =\langle f, f\rangle$. Let $e_n(\theta) = e^{in\theta}$. Since $e^{in\theta}e^{im\theta}=\mathbf{1}\\{m=n \\}$, $\\{e_n: n\in\mathbb{Z}\\}$ is an orthonormal set.
+
+Remark that the Fourier coefficients are precisely the coefficient of $f$ in terms of $\\{e_n: n\in\mathbb{Z}\\}$:
+
+$$
+\begin{align*}
+\hat{f}(n) = \langle f, e_n \rangle.
+\end{align*}
+$$
+
+For example, we can express the partial sum of Fourier series as 
+
+$$
+\begin{align*}
+S_N(f) = \sum_{n=-N}^N\langle f, e_n\rangle e_n.
+\end{align*}
+$$
+
+## Observation
+1. $f -\sum_{\lvert n \rvert \leq N}\langle f , e_n\rangle e_n$ is orthonormal to  $e_k$ for all $\lvert k \rvert \leq N$.
+
+2. Using the above, we can show the Pythagorean theorem.
+
+Since, $f-S_N(f)$ is orthogonal to $S_N(f)$,
+$$
+\begin{align*}
+\langle f- S_N(f), S_N(f) \rangle &= \langle f, S_N(f)\rangle - \langle S_N(f) ,S_N(f)\rangle\\
+&= \sum_{\lvert n \rvert \leq N}\langle  f, e_n \rangle \overline{\langle f, e_n \rangle} - \sum_{\lvert n \rvert \leq N} \sum_{\lvert m \rvert \leq N} \langle f, e_n\rangle \overline{\langle f, e_m \rangle} \langle e_m, e_n\rangle\\ 
+&= \sum_{\lvert n \rvert \leq N}\langle  f, e_n \rangle \overline{\langle f, e_n \rangle}.  \\
+\end{align*}
+$$
+
+Thus, we get the Pythagorean theorem as
+$$
+\begin{align*}
+\lVert f \rVert^2  & = \lVert f - S_N(f) \rVert^2 + \lVert S_N(f)\rVert^2 \\
+&=\lVert f - S_N(f) \rVert^2 +  \sum_{\lvert n \rvert \leq N}\ \langle f, e_n\rangle \overline{\langle f, e_n \rangle} \\
+&=\lVert f - S_N(f) \rVert^2 +  \sum_{\lvert n \rvert \leq N}\ \lvert\langle f, e_n\rangle \rvert^2.
+\end{align*}
+$$
+
+## Best Approximation Lemma
+For any $\sum_{\lvert n \rvert \leq N}c_ne_n$, we have
+
+$$
+\begin{align*}
+\lVert f-S_N(f) \rVert \leq \lVert f - \sum_{\lvert n \rvert \leq N} c_n e_n \rVert.
+\end{align*}
+$$
+
+<*Proof*>
+
+Since 
+
+$$
+\begin{align*}
+\left\langle f-S_N(f), S_N(f) - \sum_{\lvert n \rvert \leq N} c_n e_n\right\rangle &= \left\langle f-S_N(f), -\sum_{\lvert n \rvert \leq N} c_ne_n\right\rangle \\
+&=-\left \langle f, \sum_{\lvert n \rvert \leq N}c_ne_n \right\rangle + \left\langle S_N(f), \sum_{\lvert n \rvert \leq N}c_n e_n \right\rangle \\
+&=-\sum_{\lvert n\rvert \leq N} \overline{c_n}\langle f, e_n\rangle+ \sum_{\lvert n \rvert \leq N}\overline{c_n}\left\langle \sum_{\lvert m \rvert \leq N} \langle f,e_m\rangle e_m, e_n \right\rangle \\
+&=-\sum_{\lvert n\rvert \leq N} \overline{c_n}\langle f, e_n\rangle+ \sum_{\lvert n \rvert \leq N}\overline{c_n}\left\langle f, e_n \right\rangle \\
+&= 0,
+\end{align*}
+$$
+
+we can conclude that
+$$
+\begin{align*}
+\lVert f- \sum_{\lvert n\rvert \leq N}c_ne_n\rVert^2 &=\lVert f - S_N(f) + S_N(f) - \sum_{\lvert n\rvert \leq N}c_ne_n\rVert^2 \\
+&= \lVert f -S_N(f) \rVert^2 + \lVert S_N(f) - \sum_{\lvert n\rvert \leq N}c_ne_n\rVert^2 \\
+&\geq \lVert f-S_N(f) \rVert^2.
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
