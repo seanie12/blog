@@ -191,6 +191,7 @@ $$
 $$
 
 we can conclude that
+
 $$
 \begin{align*}
 \lVert f- \sum_{\lvert n\rvert \leq N}c_ne_n\rVert^2 &=\lVert f - S_N(f) + S_N(f) - \sum_{\lvert n\rvert \leq N}c_ne_n\rVert^2 \\
