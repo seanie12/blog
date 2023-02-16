@@ -148,6 +148,7 @@ $$
 2. Using the above, we can show the Pythagorean theorem.
 
 Since, $f-S_N(f)$ is orthogonal to $S_N(f)$,
+
 $$
 \begin{align*}
 \langle f- S_N(f), S_N(f) \rangle &= \langle f, S_N(f)\rangle - \langle S_N(f) ,S_N(f)\rangle\\
@@ -157,6 +158,7 @@ $$
 $$
 
 Thus, we get the Pythagorean theorem as
+
 $$
 \begin{align*}
 \lVert f \rVert^2  & = \lVert f - S_N(f) \rVert^2 + \lVert S_N(f)\rVert^2 \\
