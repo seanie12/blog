@@ -201,6 +201,88 @@ $$
 $$
 
 $$\tag*{$\square$}$$
+
+## Theorem 3.1
+Let $f$ be an integrable function on the circle. Then
+
+$$
+\begin{align*}
+\left(\frac{1}{2\pi}\int_0^{2\pi} \lvert f(\theta) - S_N(f)\vert d\theta\right)^{1/2} \to 0 \text{ as } N\to\infty,
+\end{align*}
+$$
+
+i.e., the Fourier series converges to $f$ in the $L^2$ sense.
+
+<*Proof*>
+
+Suppose $f$ is continuous. Using [Weierstrass approximation theorem](https://seanie12.github.io/blog/fourier%20analysis/cesaro-abel-summability/#corollary-25), we can choose a trigometric polynomial $p_M$ of degree $M$ such that $p_M \rightrightarrows f$. In other words, for all $\epsilon>0$ there is $N_1\in\mathbb{N}$ such that if  $M \geq N_1$,
+
+$$
+\begin{align*}
+\lvert f(x) - p_M(x) \rvert < \epsilon.
+\end{align*}
+$$
+
+It implies that 
+
+$$
+\begin{align*}
+\lVert f - P_M\rVert_{2} = \left( \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(x) - p_M(x)\rvert^2\right)^{1/2} < \epsilon.
+\end{align*}
+$$
+
+By the best approximation lemma, 
+
+$$
+\begin{align*}
+\lVert f - S_N(f)\rVert <\epsilon
+\end{align*}
+$$
+
+for all $N\geq M$.
+
+Now, suppose that $f$ is integrable. Applying the [approximation lemma](https://seanie12.github.io/blog/fourier%20analysis/convolution-good-kernels/), choose a continuous function $g$ on the circle such that 
+
+$$
+\begin{align*}
+\int_{-\pi}^\pi \lvert f(\theta) -g(\theta)\rvert d\theta < \epsilon^2.
+\end{align*}
+$$
+
+Since we $f-g$ in integrable, $\sup_{\theta \in [0,2\pi]} \lvert f(\theta) -g(\theta)\rvert < B$.
+
+Then we get 
+
+$$
+\begin{align*}
+\lVert f - g\rVert^2_2 &= \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(\theta) - g(\theta)\rvert^2 d\theta \\
+&= \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(\theta) - g(\theta)\rvert \cdot \lvert f(\theta) - g(\theta)\rvert d\theta \\
+&\leq \frac{B}{\pi} \int_{-\pi}^\pi \lvert f(\theta) - g(\theta)\rvert d\theta \\
+&\leq C\epsilon^2,
+\end{align*}
+$$
+
+where $C >0$ is some constant. Now we approximate the continuous function $g$ by a trigometric polynomial $p_M$ so that 
+
+$$
+\lvert p_M(x) - g(x) \rvert < \epsilon
+$$
+
+for all $x\in[0,2\pi]$. As shown previously, $\lVert g(x)- p_M(x)\rVert_2 < \epsilon$. By the triangular ineqaulity, $\lVert f - p_M\rVert_2 < C^\prime \epsilon$. Using the best approximation lemma, 
+
+
+$$
+\begin{align*}
+\lVert f - S_N(f) \rVert_2 < C^\prime \epsilon 
+\end{align*}
+$$
+
+for all $N\geq M$.
+
+$\therefore \lim_{N\to\infty}S_N(f) = f$.
+
+$$\tag*{$\square$}$$
+
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
