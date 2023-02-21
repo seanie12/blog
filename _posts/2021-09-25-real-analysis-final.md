@@ -1,3 +1,4 @@
+
 ---
 title: "Ascoli-Azrela and Stone-Weirstrass Theorem"
 
@@ -7,6 +8,7 @@ categories:
 tags:
   - Ascoli-Azrela Theorem
   - Stone-Weirstrass Theorem
+  - Analytic function
 
  
 toc: true
@@ -143,11 +145,23 @@ Thus $c_n <\sqrt{n}$. Then
 
 $$
 \begin{align*}
-Q_n(x) < \sqrt{n}(1-x^2)^n \leq \sqrt{n}(1-\delta^2)^n
+Q_n(x) < \sqrt{n}(1-x^2)^n \leq \sqrt{n}(1-\delta^2)^n.
 \end{align*}
 $$
 
-Since $\sqrt{n}(1-\delta^2)^n \to 0$ as $n\to\infty$, $Q_n$ converges uniformly to $0$ on $\delta \leq \lvert x \rvert \leq 1$. Define 
+By L'Hôpital's rule
+
+$$
+\begin{align*}
+\lim_{n\to\infty}\sqrt{n}(1-\delta^2)^n = \lim_{n\to\infty} \frac{\sqrt{n}}{r^n} = \lim_{n\to\infty}\frac{1}{2\sqrt{n}r^{n-1}}=0,
+\end{align*}
+$$ 
+
+where $r=(1-\delta^2)^{-n}>1$.
+
+
+
+Thus, $Q_n$ converges uniformly to $0$ on $\delta \leq \lvert x \rvert \leq 1$. Define 
 
 $$
 \begin{align*}
@@ -203,6 +217,94 @@ $$
 &\leq \frac{\epsilon}{2}\int_{-1 \leq t \leq 1}Q_n(t)dt + 2M\int_{\delta \leq \lvert t \rvert \leq 1}Q_n(t) dt \\
 &< \frac{\epsilon}{2} + 2M\frac{\epsilon}{4M}\\
 &=\epsilon
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
+
+
+## Definition (Analytic Function)
+Any function $f$ that has a **power series expansion**, i.e., can be expressed in the form of 
+
+$$
+\begin{align*}
+f(x) = \sum_{n=0}^\infty c_n x^n
+\end{align*}
+$$
+
+or
+
+$$
+\begin{align*}
+f(x) = \sum_{n=0}^\infty c_n(x-a)^n, \quad a \in \mathbb{R}
+\end{align*}
+$$
+
+
+is called analytic function.
+
+
+## Remark
+Any such power series has a radius of convergence $R$, obtained via [root test](https://seanie12.github.io/blog/analysis/convergence-test-1/#theorem-718-root-test),
+
+$$
+\begin{align*}
+\limsup_{n\to\infty}\sqrt[n]{\lvert c_n x^n \rvert} <1 \Rightarrow \sum_{n=0}^\infty c_n x^n \text{ converges.}
+\end{align*}
+$$
+
+In other words,  convergence radius $R=1/\sqrt[n]{c_n}$.
+
+## Lemma
+$\lim_{n\to\infty}\sqrt[n]{n}=1$
+
+<*Proof*>
+
+Let $\sqrt[n]{n}:=1+\delta$. By binomial theorem,
+
+$$
+\begin{align*}
+n&=(1+\delta_n)^n\\
+&=1 + n\delta_n + {n \choose 2 } \delta^2_n + \cdots +  \delta^n_n.\\
+\end{align*}
+$$
+
+Thus $n > n(n-1)/2 \delta^2_n$, i.e., 
+
+$$
+\begin{align*}
+0 < \delta_n < \sqrt{\frac{2}{n-1}}.
+\end{align*}
+$$
+
+$\therefore \lim_{n\to\infty}\sqrt[n]{n}=1$.
+
+
+$$\tag*{$\square$}$$
+## Theorem
+Suppose $f(x) = \sum c_n x^n$ converges in $(-R, R)$. Then 
+
+i) $\sum c_n x^n$ converges uniformly in $[-R+\epsilon, R-\epsilon]$ for any $\epsilon >0$.
+
+ii) $f$ is continuous and differentiable on $(-R,R)$ and $f^\prime(x) = \sum_{n=1}^\infty n c_n x^{n-1}$.
+
+<*Proof*>
+
+Use [Weierstrass M-test](https://seanie12.github.io/blog/analysis/pointwise-uniform-convergence/#theorem-827-weierstrass-m-test). If $x\in [-R+\epsilon, R-\epsilon]$, then $\lvert x\rvert \leq R-\epsilon$, which implies that $\lvert c_n x^n \rvert \leq \lvert c_n (R-\epsilon)^n\rvert$. Since every power series converges absolutely in the interior of convergence by the root test, $\sum c_n x^n$ converges uniformly by Weierstrass M-test.
+
+Now consider $\sum_{n=1}^\infty n c_n x^{n-1}$. By Lemma,
+
+$$
+\begin{align*}
+\limsup_{n\to\infty}\sqrt[n]{\lvert n c_n x^{n-1}\rvert}= \limsup_{n\to\infty}\sqrt[n]{\lvert c_n\rvert}\lvert x_n\rvert <1.
+\end{align*}
+$$
+
+Thus, $\sum_{n=1}^\infty n c_n x^{n-1}$ has the same radius of convergence, which implies that $\sigma_N=\sum_{n=1}^N n c_n x^{n-1}$ converges uniformly on $[-R+\epsilon, R-\epsilon]$. So by the [previous theorem](https://seanie12.github.io/blog/analysis/uniform-convergence-integration/#theorem-851),  
+
+$$
+\begin{align*}
+\frac{d}{dx}\lim_{N\to\infty}\sum_{n=0}^N c_n x^n=\lim_{N\to\infty}\frac{d}{dx}\left(\sum_{n=0}^Nc_nx^n\right)=\lim_{N\to\infty}\sigma_N.
 \end{align*}
 $$
 
