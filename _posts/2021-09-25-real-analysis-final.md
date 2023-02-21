@@ -1,4 +1,3 @@
-
 ---
 title: "Ascoli-Azrela and Stone-Weirstrass Theorem"
 
