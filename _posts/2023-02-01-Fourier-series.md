@@ -57,7 +57,7 @@ $$
 $$
 
 ## Example
-The Fourier series of the $2\pi$-periodic odd function defined on $[0,\pi]$ by $f(\theta) = \theta(\pi-\theta)$. For $\theta>0$ the given function is $f(\theta)=\theta(\pi+\theta)$ with its derivative $f^\prime(\theta)=\pi-2\theta$. On the other hand, $f(\theta)= \theta(\pi+\theta)$ with its derivative $f^\prime(\theta)=\pi+2\theta$ for $\theta<0$.  Then using the integration by parts,
+The Fourier series of the $2\pi$-periodic odd function defined on $[0,\pi]$ by $f(\theta) = \theta(\pi-\theta)$. For $\theta>0$ the given function is $f(\theta)=\theta(\pi-\theta)$ with its derivative $f^\prime(\theta)=\pi-2\theta$. On the other hand, $f(\theta)= \theta(\pi+\theta)$ with its derivative $f^\prime(\theta)=\pi+2\theta$ for $\theta<0$.  Then using the integration by parts,
 
 $$
 \begin{align*}
