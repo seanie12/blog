@@ -70,6 +70,7 @@ $$
 $$
 
 By Euler formula $e^{i\theta}=\cos\theta+i\sin\theta$, for all non-zero integer $k\in\mathbb{Z}\setminus \{0\}$
+
 $$
 \begin{align*}
 \int_{-\pi}^\pi e^{ikx} dx &= \left[\frac{1}{ik} e^{ikx} \right]_{-\pi}^\pi  \\
@@ -82,6 +83,7 @@ $$
 $$
 
 Then 
+
 $$
 \begin{align*}
 \int_{-\pi}^\pi \pi \frac{e^{-in\theta}}{in}d\theta &= \frac{1}{in\pi}\int_{-\pi}^\pi e^{-in\theta}d\theta \\
