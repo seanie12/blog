@@ -41,7 +41,7 @@ where
 
 $$
 \begin{align*}
-\hat{f}(n) = \frac{1}{b-a}\int_a^b f(x) e^{\frac{2\pi inx }{b-a}}
+\hat{f}(n) = \frac{1}{b-a}\int_a^b f(x) \exp\left(-\frac{2\pi inx }{b-a}\right)dx
 \end{align*}
 $$
 
