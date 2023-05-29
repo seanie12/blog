@@ -112,6 +112,7 @@ $$
 $$
 
 we get the following equation with the integration by parts:
+
 $$
 \begin{align*}
 \hat{f}(n) &= -\frac{2}{in\pi}\left(\left[\frac{\theta}{n}\sin(n\theta) \right]_0^\pi - \int_0^\pi \frac{1}{n}\sin(n\theta)d\theta\right) \\
@@ -122,9 +123,11 @@ $$
 &= \frac{4}{in^3\pi}
 \end{align*}
 $$
+
 for odd $n$, and $0$ otherwise.
 
 Thus,
+
 $$
 \begin{align*}
 f(\theta) \sim \sum_{k \text{ odd}}\frac{4}{ik^3\pi}e^{ikx}
