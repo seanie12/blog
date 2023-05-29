@@ -84,7 +84,7 @@ $$
 Then 
 $$
 \begin{align*}
-\frac{1}{in\pi}\int_{-\pi}^\pi \pi \frac{e^{-in\theta}}{in}d\theta &= \frac{1}{in\pi}\int_{-\pi}^\pi e^{-in\theta}d\theta \\
+\int_{-\pi}^\pi \pi \frac{e^{-in\theta}}{in}d\theta &= \frac{1}{in\pi}\int_{-\pi}^\pi e^{-in\theta}d\theta \\
 &=0.
 \end{align*}
 $$
