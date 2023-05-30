@@ -412,11 +412,12 @@ So
 
 $$
 \begin{align*}
-\lvert \hat{f}(\theta) \rvert n^2 &\leq \frac{1}{2\pi}\int_0^{2\pi} \lvert f^{\prime\prime}(\theta) e^{-in\theta}\rvert d\theta \\
+\lvert \hat{f}(n) \rvert n^2 &\leq \frac{1}{2\pi}\int_0^{2\pi} \lvert f^{\prime\prime}(\theta) e^{-in\theta}\rvert d\theta \\
 &=\frac{1}{2\pi}\int_0^{2\pi}\lvert f^{\prime\prime}(\theta)\rvert d\theta \\
 &\leq C
 \end{align*}
 $$
+
 $$\tag*{$\square$}$$
 
 ## Definition 2.5
