@@ -279,7 +279,7 @@ $$
 \end{align*}
 $$
 
-Let $P_k(\theta) = [p(\theta)]^k$. We know that $\hat{f}(n) = \langle f, e^{inx}\rangle = 0$ for all $n\in\mathbb{Z}$ Thus, $\langle f, \sum_{n=1}^N c_ne^{inx}\rangle=0$ for all $N\in\mathbb{N}$. Since $\cos\theta = \frac{e^{i\theta}+ e^{-i\theta}}{2}$, 
+Let $p_k(\theta) = [p(\theta)]^k$. We know that $\hat{f}(n) = \langle f, e^{inx}\rangle = 0$ for all $n\in\mathbb{Z}$ Thus, $\langle f, \sum_{n=1}^N c_ne^{inx}\rangle=0$ for all $N\in\mathbb{N}$. Since $\cos\theta = \frac{e^{i\theta}+ e^{-i\theta}}{2}$, 
 
 $$
 \begin{align*}
@@ -289,7 +289,7 @@ $$
 \end{align*}
 $$
 
-Thus, $\langle f, P_k\rangle$ should be zero. But we will show that $\lim_{k\to\infty}\langle f, p_k\rangle =\infty$ which is a contradiction.
+Thus, $\langle f, p_k\rangle$ should be zero. But we will show that $\lim_{k\to\infty}\langle f, p_k\rangle =\infty$ which is a contradiction.
 
 Now consider 
 
