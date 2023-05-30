@@ -289,7 +289,7 @@ $$
 \end{align*}
 $$
 
-Thus, $\langle f, p_k\rangle$ should be zero. But we will show that $\lim_{k\to\infty}\langle f, p_k\rangle =\infty$ which is a contradiction.
+Thus, $\langle f, P_k\rangle$ should be zero. But we will show that $\lim_{k\to\infty}\langle f, p_k\rangle =\infty$ which is a contradiction.
 
 Now consider 
 
