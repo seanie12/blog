@@ -283,7 +283,7 @@ Let $P_k(\theta) = [p(\theta)]^k$. We know that $\hat{f}(n) = \langle f, e^{inx}
 
 $$
 \begin{align*}
-(\cos\theta + \epsilon)^n &= \sum_{k=0}^n{n\choose k}\epsilon^{n-k}\cos^n\theta \\
+(\cos\theta + \epsilon)^n &= \sum_{k=0}^n{n\choose k}\epsilon^{n-k}\cos^k\theta \\
 &=\sum_{k=0}^n{n \choose k}\epsilon^{n-k} \sum_{l=0}^k \frac{e^{il\theta}+ e^{-i(k-l)\theta}}{2^k} \\
 &\in \text{span}\{e^{inx}: n\in\mathbb{Z} \}.
 \end{align*}
