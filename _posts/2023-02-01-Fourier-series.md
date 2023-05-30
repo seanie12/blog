@@ -86,12 +86,13 @@ Then
 
 $$
 \begin{align*}
-\int_{-\pi}^\pi \pi \frac{e^{-in\theta}}{in}d\theta &= \frac{1}{in\pi}\int_{-\pi}^\pi e^{-in\theta}d\theta \\
+\int_{-\pi}^\pi \pi \frac{e^{-in\theta}}{in}d\theta &= \frac{\pi}{in}\int_{-\pi}^\pi e^{-in\theta}d\theta \\
 &=0.
 \end{align*}
 $$
 
 With the change of variable $\gamma=-\theta$,
+
 $$
 \begin{align*}
 \hat{f}(n) &= \frac{1}{in}\left(\int_{-\pi}^0 \theta e^{-in\theta} d\theta - \int_0^\pi \theta e^{-in\theta}d\theta \right)  \\
