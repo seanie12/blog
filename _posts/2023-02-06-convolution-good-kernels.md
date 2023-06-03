@@ -248,7 +248,7 @@ where $\theta\in [-\pi, \pi]$ and $r\in [0,1)$.
 
 
 ## Theorem 3.2
-Let $f$ be an integrable function on the circle $\\{K_n\\}$ a family of good kernels. Then
+Let $f$ be an integrable function on the circle and let $\\{K_n\\}$ be a family of good kernels. Then
 
 $$
 \begin{align*}
