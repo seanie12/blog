@@ -225,7 +225,7 @@ $$
 then we say the series $\sum_{k=0}^\infty c_k$ is *Abel summable* to $s$.
 
 ## Example
-1. Consider $\sum_{k=0}^\infty(-1)^k$. It diverges, but is Abel summable to $s=\frac{1}{2}$.
+1.Consider $\sum_{k=0}^\infty(-1)^k$. It diverges, but is Abel summable to $s=\frac{1}{2}$.
 
 $$
 \begin{align*}
@@ -234,11 +234,11 @@ A(r) &= \sum_{k=0}^\infty (-1)^k r^k \\
 \end{align*}
 $$
 
-2. Consider $\sum_{k=0}^\infty(-1)^k (k+1)$. It diverges, but is Abel summable to $s=\frac{1}{4}$.
+2.Consider $\sum_{k=0}^\infty(-1)^k (k+1)$. It diverges, but is Abel summable to $s=\frac{1}{4}$.
  
 $$
 \begin{align*}
-A(r) = \sum_{k=0}^\infty (-1)^k (k+1)r^k = \frac{k+1}{(1+r)^2}.
+A(r) = \sum_{k=0}^\infty (-1)^k (k+1)r^k = \frac{1}{(1+r)^2}.
 \end{align*}
 $$
 
