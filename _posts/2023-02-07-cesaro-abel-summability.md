@@ -313,7 +313,7 @@ $$
 \begin{align*}
 \frac{1}{2\pi}\int_{-\pi}^\pi P_r(\theta)d\theta &= \frac{1}{2\pi}\int_{-\pi}^\pi\sum_{n=-\infty}^\infty r^{\lvert n\rvert} e^{in\theta}d\theta \\
 &=\sum_{n=-\infty}^\infty \frac{1}{2\pi}\int_{-\pi}^\pi r^{\lvert n\rvert} e^{in\theta}d\theta \quad (\because \text{ uniform convergence}) \\
-&= \sum_{n=-\infty}^\infty \frac{1}{2\pi}\int_{-\pi}^\pi\mathbf{1}\{n=0\}d\theta \\
+&= \sum_{n=-\infty}^\infty \frac{1}{2\pi} 2\pi\mathbf{1}\{n=0\}r^{\lvert n\rvert} \\
 &=1
 \end{align*}
 $$
