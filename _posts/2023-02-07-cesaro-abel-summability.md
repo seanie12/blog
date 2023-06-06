@@ -225,7 +225,7 @@ $$
 then we say the series $\sum_{k=0}^\infty c_k$ is *Abel summable* to $s$.
 
 ## Example
-1.Consider $\sum_{k=0}^\infty(-1)^k$. It diverges, but is Abel summable to $s=\frac{1}{2}$.
+1) Consider $\sum_{k=0}^\infty(-1)^k$. It diverges, but is Abel summable to $s=\frac{1}{2}$.
 
 $$
 \begin{align*}
@@ -234,7 +234,7 @@ A(r) &= \sum_{k=0}^\infty (-1)^k r^k \\
 \end{align*}
 $$
 
-2.Consider $\sum_{k=0}^\infty(-1)^k (k+1)$. It diverges, but is Abel summable to $s=\frac{1}{4}$.
+2) Consider $\sum_{k=0}^\infty(-1)^k (k+1)$. It diverges, but is Abel summable to $s=\frac{1}{4}$.
  
 $$
 \begin{align*}
@@ -307,7 +307,7 @@ $$
 
 for $0<r<1$, where $\omega = re^{i\theta}$.
 
-1. 
+1). 
 
 $$
 \begin{align*}
@@ -318,7 +318,7 @@ $$
 \end{align*}
 $$
 
-2.  Since $P_r(\theta)>0$ for all $\theta \in [-\pi, \pi]$,
+2).  Since $P_r(\theta)>0$ for all $\theta \in [-\pi, \pi]$,
 
 $$
 \begin{align*}
@@ -326,15 +326,7 @@ $$
 \end{align*}
 $$
 
-3. Note that $1-2r\cos\theta + r^2=(1-r)^2 + 2r(1-\cos\theta)$. For $\frac{1}{2} \leq r <1$ and $\delta \leq \lvert \theta \rvert \leq \pi$, 
-
-$$
-\begin{align*}
-1-2r\cos\theta+r^2 &= (1-r)^2 + 2r(1-\cos\theta) \\
-&\geq \left(\frac{1}{2}\right)^2 + (1-\cos\theta) \\
-&\geq \frac{1}{4} + (1-\cos\delta) =:c_\delta
-\end{align*}
-$$
+3). Note that $1-2r\cos\theta + r^2\geq 1-2r\cos\theta +r^2 =(1-r)^2 \geq 1/4 =: c_\delta$. For $\frac{1}{2} \leq r <1$ and $\delta \leq \lvert \theta \rvert \leq \pi$, 
 
 which implies that $P_r(\theta) \leq (1-r^2)/ c_\delta$.
 
