@@ -164,10 +164,9 @@ It implies that $u(r,\theta)=\sum_{m=-\infty}^\infty \hat{f}(m)r^{\lvert m\rvert
 
 $$
 \begin{align*}
-\Delta u = \frac{\partial^2 u}{\partial r^2} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2}
+\Delta u = \frac{\partial^2 u}{\partial r^2} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2}.
 \end{align*}
-$$.
-
+$$
 
 
 $$
