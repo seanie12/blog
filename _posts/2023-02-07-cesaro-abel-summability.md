@@ -326,7 +326,7 @@ $$
 \end{align*}
 $$
 
-3). Note that $1-2r\cos\theta + r^2\geq 1-2r\cos\theta +r^2 =(1-r)^2 \geq 1/4 =: c_\delta$. For $\frac{1}{2} \leq r <1$ and $\delta \leq \lvert \theta \rvert \leq \pi$, 
+3). Note that $1-2r\cos\theta + r^2\geq 1-2r +r^2 =(1-r)^2 \geq 1/4 =: c_\delta$. For $\frac{1}{2} \leq r <1$ and $\delta \leq \lvert \theta \rvert \leq \pi$, 
 
 which implies that $P_r(\theta) \leq (1-r^2)/ c_\delta$.
 
