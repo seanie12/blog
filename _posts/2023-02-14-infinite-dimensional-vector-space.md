@@ -1,3 +1,4 @@
+
 ---
 title: "Fourier Series in the Language of Infinite Dimensional Vector Space"
 
@@ -153,7 +154,8 @@ $$
 \begin{align*}
 \langle f- S_N(f), S_N(f) \rangle &= \langle f, S_N(f)\rangle - \langle S_N(f) ,S_N(f)\rangle\\
 &= \sum_{\lvert n \rvert \leq N}\langle  f, e_n \rangle \overline{\langle f, e_n \rangle} - \sum_{\lvert n \rvert \leq N} \sum_{\lvert m \rvert \leq N} \langle f, e_n\rangle \overline{\langle f, e_m \rangle} \langle e_m, e_n\rangle\\ 
-&= \sum_{\lvert n \rvert \leq N}\langle  f, e_n \rangle \overline{\langle f, e_n \rangle}.  \\
+&= \sum_{\lvert n \rvert \leq N}\langle  f, e_n \rangle \overline{\langle f, e_n \rangle}- \sum_{\lvert n \rvert \leq N}\langle  f, e_n \rangle \overline{\langle f, e_n \rangle}  \\
+&=0
 \end{align*}
 $$
 
