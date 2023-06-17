@@ -1,4 +1,3 @@
-
 ---
 title: "Fourier Series in the Language of Infinite Dimensional Vector Space"
 
