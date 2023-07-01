@@ -216,7 +216,88 @@ Clearly $c_n = e^{in\theta}/n + e^{-in\theta}/n$ is $O(1/n)$.
 
 $\therefore S_N(f)(\theta)$ is uniformly bounded in $N$ and $\theta$.
 
+$$\tag*{$\square$}$$
 
+## Lemma 1.2
+Recall that
+
+$$
+\begin{align*}
+f_N(\theta) = \sum_{1\leq \lvert n \rvert \leq N} \frac{e^{in\theta}}{n} \text{ and } \tilde{f}_N(\theta) = \sum_{-N\leq n \leq -1} \frac{e^{in\theta}}{n}.
+\end{align*}
+$$
+
+are trigonometric polynomials of degree $N$. We define frequency-shifted version of $f_N$ and $\tilde{f}_N$, 
+
+$$
+\begin{align*}
+P_N(\theta) = e^{i2N\theta}f_N(\theta) \text{ and } \tilde{P}_N(\theta)=e^{i2N\theta}\tilde{f}_N(\theta),
+\end{align*}
+$$
+
+which are trigonometric polynomials of degree $3N$ and $2N-1$, respectively.  Then if we consider the partial sums of $P_N$, we see 
+
+$$
+\begin{align*}
+S_M(P_N) &= \begin{cases} P_N & \quad \text{if } M \geq 3N \\
+\tilde{P}_N & \text{if } M = 2N \\
+0 & \text{if } M <N
+\end{cases}
+\end{align*}
+$$
+
+Moreover, choose any convergent positive series $\sum a_k$ and sequence of integers $\\{N_k\\}$ such that 
+
+(i) $N_{k+1} > 3N_k$
+
+(ii) $\lim_{k\to\infty} \alpha_k \log N_k=\infty$.
+
+For example. $\alpha_k=1/k^2$ and $N_k=3^{2^k}$. Define a function
+
+
+$$
+\begin{align*}
+f(\theta) = \sum_{k=1}^\infty \alpha_k P_{N_k}(\theta).
+\end{align*}
+$$
+
+Since $\lvert P_N(\theta)\rvert = \lvert f_N(\theta)\rvert$, which is uniformly bounded by lemma1, the above series converges uniformly to a continuous periodic function. Moreover, 
+
+
+$$
+\begin{align*}
+\lvert S_{2N_m}(f)(0)\rvert \geq c\alpha_m \log N_m + O(1)
+\end{align*}
+$$
+
+<*Proof*>
+
+$$
+\begin{align*}
+S_{2N_m}(f)(0) &= S_{2N_m}(\sum_k \alpha_k P_{N_k})(0) \\
+&=\sum_{n=-2N_m}^{2N_m} \left(\frac{1}{2\pi}\int_{-\pi}^\pi \left(\sum_{k=1}^\infty a_kP_{N_k}(\theta)\right)e^{-in\theta}d\theta \right) e^0 \\
+&=\sum_{n=-2N_m}^{2N_m} \left( \sum_{k=1}^\infty \alpha_k \left( \frac{1}{2\pi}\int_{-\pi}^\pi P_{N_k}(\theta)e^{-in\theta}d\theta\right)\right) e^0 \\
+&=\sum_{k=1}^\infty \alpha_k\left( \sum_{n=-2N_m}^{2N_m}\left(\frac{1}{2\pi}\int_{-\pi}^\pi P_{N_k}(\theta)e^{-in\theta}d\theta \right)e^0 \right) \\
+&=\sum_{k=1}^\infty \alpha_k S_{2N_m}(P_{N_k})(0) \\
+&= \alpha_m S_{2N_m}(P_{N_m})(0) + \sum_{m<k} \alpha_k S_{2N_m}(P_{N_k})(0) + \sum_{m>k} \alpha_k S_{2N_m}(P_{N_k})(0) \\
+&=\alpha_m \tilde{P}_{N_m}(0) + 0+ \sum_{m>k} \alpha_k P_{N_k}(0) \\
+&=\alpha_m\tilde{f}_{N_m}(0) + \sum_{m>k} \alpha_k P_{N_k}(0)
+\end{align*} 
+$$
+
+by lemma 1.2. 
+
+Since $f_{N_k}(\theta)$ is uniformly bounded and $\lvert f_{N_k}(\theta)\rvert = \lvert P_{N_k}(\theta)\rvert$, 
+
+$$
+\begin{align*}
+\left\lvert \sum_{m>k} \alpha_k P_{N_k}(0) \right\rvert \leq B \left\lvert \sum_{m>k} \alpha_k \right\rvert \leq BA.
+\end{align*}
+$$
+
+But $\lvert \tilde{f}_{N_m}(0)\rvert \geq c \log N$. 
+
+$\therefore \lvert S_{2N_m}(f)(0) \rvert \geq c \alpha_m \log N_m + O(1)$, i.e., the partial sums of the Fourier series diverges at $0$ despite the function being continuous everywhere.
 
 $$\tag*{$\square$}$$
 ## Reference
