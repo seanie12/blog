@@ -147,6 +147,25 @@ Let $\sum_{n=1}^\infty c_n$ be an infinite series. If
 
 then the partial sum sequences $S_N=\sum_{n=1}^Nc_n$ is bounded.
 
+<*Proof*>
+
+For 
+
+$$
+\begin{align*}
+S_N - A_r = \sum_{n=1}^N(c_r - r^nc_n) - \sum_{n=N+1}^\infty r^n c_n,
+\end{align*}
+$$
+
+we want to bound 
+
+$$
+\begin{align*}
+\lvert S_N - A_r\rvert \leq \sum_{n=1}^N \lvert c_n \rvert \lvert 1-r^n\rvert + \sum_{n=N+1}^\infty \lvert r^n \rvert \lvert c_n\rvert.
+\end{align*}
+$$
+
+
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
