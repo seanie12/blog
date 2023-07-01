@@ -74,10 +74,78 @@ $$
 \end{align*}
 $$
 
-Thus, $\left\lvert \sum_{k=1}^n \sin(kx)\right\rvert \leq 1$ for all $n\in\mathbb{N}$.
+Thus, $\left\lvert \sum_{k=1}^n \sin(kx)\right\rvert \leq 1$ for all $n\in\mathbb{N}$. By Dirichlet-test, the Fourier series converges at every $x$.
+
 $$\tag*{$\square$}$$
 
+## Example 1
 
+Consider the series 
+
+$$
+\begin{align*}
+\sum_{n=-\infty}^{-1}\frac{e^{in\theta}}{n}.
+\end{align*}
+$$
+
+Suppose the above is the Fourier series of some Riemann integrable function $f$. In that case, if we consider the Abel means at $0$, we get
+
+$$
+\begin{align*}
+\lvert A_r(f)(0) \rvert = \left\lvert \sum_{n=-\infty}^{-1} \frac{r^{\lvert n \rvert}e^{0}}{n} \right\rvert  = \sum_{n=1}^\infty \frac{r^n}{n}
+\end{align*}
+$$
+
+For $r\in(0,1]$, define a function $g(r) :=\sum_{n=1}^\infty r^n/n$.  The function is monotone increasing function but not bounded above since $g(1)=\infty$. Thus $\lim_{r\to1^-}g(r)=\infty$, i.e., $\lvert A_r(f)(0)\rvert \to \infty$ as $r\to1^-$.
+
+However, note that $A_r(f)(\theta)=f*P_r(\theta)$. It implies that $A_r(f)(\theta)$ should be bounded since 
+
+$$
+\begin{align*}
+\lvert A_r(f)(0) \lvert &= \left\lvert \frac{1}{2\pi}\int_{-\pi}^{\pi}f(0)P_r(-\theta) d\theta\right\rvert \\
+&= \left\lvert \frac{1}{2\pi}\int_{-\pi}^{\pi}f(0)P_r(\theta) d\theta\right\rvert \quad( \because P_r(\theta) = 	\frac{1-r^2}{1-2r\cos\theta+r^2} ) \\
+&\leq \frac{1}{2\pi} \int_{-\pi}^\pi \lvert f(0)\rvert P_r(\theta)d\theta \\
+&\leq \sup_\theta \lvert f(\theta)\rvert .
+\end{align*}
+$$
+
+It is a contradiction. Thus the above is not the Fourier series of aRiemann integrable function.
+
+## Example 2 (A continuous function whose Fourier series diverges at a point)
+
+Let 
+
+$$
+\begin{align*}
+f_N(\theta) = \sum_{1\leq \lvert n \rvert \leq N} \frac{e^{in\theta}}{n} \text{ and } \tilde{f}_N(\theta) = \sum_{-N\leq n \leq -1} \frac{e^{in\theta}}{n}.
+\end{align*}
+$$
+
+We want to show that 
+
+(1) $\lvert \tilde{f}_N(0)\rvert \geq c\log N$
+
+(2) $f_N(\theta)$ is uniformly bounded in $N$ and $\theta$.
+
+Since 
+
+$$
+\begin{align*}
+\sum_{n=1}^N \frac{1}{n} \geq \sum_{n=1}^{N-1} \int_{n}^{n+1} \frac{dx}{x}dx=\int_{1}^N \frac{dx}{x} = \log N,
+\end{align*}
+$$
+
+$\lvert \tilde{f}_N(0) \rvert= \sum_{n=1}^N 1/n \geq \log N$. To prove (2), we need following lemmas.
+
+## Lemma 1.1 
+
+Let $\sum_{n=1}^\infty c_n$ be an infinite series. If 
+
+(1) the Abel means $A_r = \sum_{n=1}^\infty r^n c_n$ are bounded as $r\to 1^-$, and
+
+(2) $c_n=O(1/n)$
+
+then the partial sum sequences $S_N=\sum_{n=1}^Nc_n$ is bounded.
 
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
