@@ -165,7 +165,60 @@ $$
 \end{align*}
 $$
 
+Given following observations
 
+(i) $(1-r^n) = (1-r)(1+r+\cdots + r^{n-1}) n\leq (1-r)$ for $r\in (0,1]$.
+
+(ii) Since $c_n=O(1/n)$, there is $M_1 >0$ and $N\in\mathbb{N}$ such that $\lvert c_n \rvert \leq M_1/n$ for all $n>N$.  So $\lvert c_n\rvert \leq M_1 /n \leq M_1/N$ for all $n\geq N+1$.
+
+(iii) That is $n\lvert c_n \rvert$ is bounded, so there is $M_2>0$ such that $n\lvert c_n \rvert <M_2$ for all $n\in\mathbb{N}$.
+
+Using those observations, we can continue to bound 
+
+$$
+\begin{align*}
+\lvert S_N - A_r\rvert &\leq \sum_{n=1}^N \lvert c_n \rvert \lvert 1-r^n\rvert + \sum_{n=N+1}^\infty \lvert r^n \rvert \lvert c_n\rvert \\
+&\leq M_2\sum_{n=1}^N(1-r) + \frac{M_1}{N} \sum_{n=N+1}^\infty r^n \\
+&\leq M_2N(1-r) + \frac{M_1}{N} \frac{1}{1-r} \\
+&\leq MN(1-r) + \frac{M}{N}\frac{1}{1-r} \quad (M:=\max\{M_1, M_2\}) .
+\end{align*}
+$$
+
+If w take $r=1-1/N$, then we get 
+
+$$
+\begin{align*}
+\lvert S_n - A_r\rvert \leq 2M.
+\end{align*}
+$$
+
+Since the $A_r$ are bounded for large enough $N$, we see that $S_N$ are also bounded.
+
+$$\tag*{$\square$}$$
+
+## Corollary
+$f_N(\theta)=\sum_{1\leq \lvert n \rvert \leq N} \frac{e^{in\theta}}{n}$ is uniformly bounded in $N$ and $\theta$.
+
+<*Proof*>
+
+$f_N(\theta)$ is the partial sum of the Fourier series $\sum_{n\neq 0}\frac{e^{in\theta}}{n}$, the Fourier series of the sawtooth function $f$. Since $A_r(f) = f*P_r$ and $f$ is bounded,
+
+$$
+\begin{align*}
+\lvert A_r(f)(\theta)\rvert &= \left\lvert\frac{1}{2\pi}\int_{-\pi}^\pi f(\theta-\phi)P_r(\theta )d\phi \right\rvert \\
+&\leq \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(\theta-\phi) \rvert P_r(\theta)d\phi \\
+&\leq \sup_\theta \lvert f(\theta)\rvert 
+\end{align*}
+$$
+the Abel means are bounded.
+
+Clearly $c_n = e^{in\theta}/n + e^{-in\theta}/n$ is $O(1/n)$. 
+
+$\therefore S_N(f)(\theta)$ is uniformly bounded in $N$ and $\theta$.
+
+
+
+$$\tag*{$\square$}$$
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
