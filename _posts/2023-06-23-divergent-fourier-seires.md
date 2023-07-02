@@ -135,7 +135,7 @@ $$
 \end{align*}
 $$
 
-$\lvert \tilde{f}_N(0) \rvert= \sum_{n=1}^N 1/n \geq \log N$. To prove (2), we need following lemmas.
+we show that $\lvert \tilde{f}_N(0) \rvert= \sum_{n=1}^N 1/n \geq \log N$. To prove (2), we need following lemmas.
 
 ## Lemma 1.1 
 
