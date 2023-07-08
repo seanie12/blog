@@ -126,7 +126,7 @@ $$
 \end{align*}
 $$
 
-i.e., $\lVert x^\prime \rVert^2_{L^2}  + \lVert y^\prime \rVert^2_{L^2} =1$. $x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients $\\{a_n\\}$ and $\\{b_n\\}$, respectively. Their derivatives have coefficients $\\{inan\\}$ and $\\{inb_n\\}$, respectively. Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#corollary-12-parsevals-identity) on the above, we get 
+i.e., $\lVert x^\prime \rVert^2_{L^2}  + \lVert y^\prime \rVert^2_{L^2} =1$. $x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients $\\{a_n\\}$ and $\\{b_n\\}$, respectively. Their derivatives have coefficients $\\{ina_n\\}$ and $\\{inb_n\\}$, respectively. Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#corollary-12-parsevals-identity) on the above, we get 
 
 $$
 \begin{align*}
