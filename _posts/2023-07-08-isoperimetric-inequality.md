@@ -133,7 +133,7 @@ Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L
 
 $$
 \begin{align*}
-1 &=\lVert \\{ina_n\\}\rVert^2_{\ell^2} + \lVert \\{inb_n\\}\rVert^2_{\ell_2} \\
+1 &=\lVert \{ina_n\}\rVert^2_{\ell^2} + \lVert \{inb_n\}\rVert^2_{\ell_2} \\
 &=\sum_{n=-\infty}^\infty  ina_n (-in\overline{a}_n) +\sum_{n=-\infty}^\infty inb_n(-in\overline{b}_n) \\ &= \sum_{n=-\infty}^\infty \lvert n\rvert^2(\lvert a_n\rvert^2 + \lvert b_n \rvert^2) 
 \end{align*}
 $$ 
