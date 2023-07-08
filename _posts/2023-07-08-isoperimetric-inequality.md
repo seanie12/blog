@@ -127,11 +127,13 @@ $$
 \end{align*}
 $$
 
-$x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients $\\{a_n\\}$ and $\\{b_n\\}$, respectively. Their derivatives have coefficients $\\{ina_n\\}$ and $\\{inb_n\\}$, respectively. Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#corollary-12-parsevals-identity) on the above, we get 
+$x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients $\\{a_n\\}$ and $\\{b_n\\}$, respectively. Their derivatives have coefficients $\\{ina_n\\}$ and $\\{inb_n\\}$, respectively. 
+
+Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#corollary-12-parsevals-identity) on the above, we get 
 
 $$
 \begin{align*}
-1 &=\lVert \{ina_n\}\rVert^2_{\ell^2} + \lVert \{inb_n\}\rVert^2_{\ell_2} \\
+1 &=\lVert \\{ina_n\\}\rVert^2_{\ell^2} + \lVert \\{inb_n\\}\rVert^2_{\ell_2} \\
 &=\sum_{n=-\infty}^\infty  ina_n (-in\overline{a}_n) +\sum_{n=-\infty}^\infty inb_n(-in\overline{b}_n) \\ &= \sum_{n=-\infty}^\infty \lvert n\rvert^2(\lvert a_n\rvert^2 + \lvert b_n \rvert^2) 
 \end{align*}
 $$ 
