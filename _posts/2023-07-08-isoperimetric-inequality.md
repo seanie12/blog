@@ -122,11 +122,12 @@ By taking $\delta = 2\pi / \ell$, if suffices to prove that if $\ell=2\pi$ then 
 
 $$
 \begin{align*}
-\frac{1}{2\pi} \int_0^{2\pi} x^\prime(s)^2 + y^\prime(s)^2 ds =1,
+\frac{1}{2\pi} \int_0^{2\pi} x^\prime(s)^2 + y^\prime(s)^2 ds &=1 \\
+\lVert x^\prime \rVert^2_{L^2}  + \lVert y^\prime \rVert^2_{L^2} &=1
 \end{align*}
 $$
 
-i.e., $\lVert x^\prime \rVert^2_{L^2}  + \lVert y^\prime \rVert^2_{L^2} =1$. $x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients $\\{a_n\\}$ and $\\{b_n\\}$, respectively. Their derivatives have coefficients $\\{ina_n\\}$ and $\\{inb_n\\}$, respectively. Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#corollary-12-parsevals-identity) on the above, we get 
+$x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients $\\{a_n\\}$ and $\\{b_n\\}$, respectively. Their derivatives have coefficients $\\{ina_n\\}$ and $\\{inb_n\\}$, respectively. Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#corollary-12-parsevals-identity) on the above, we get 
 
 $$
 \begin{align*}
