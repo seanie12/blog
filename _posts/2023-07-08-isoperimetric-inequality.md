@@ -159,9 +159,10 @@ $$
 Since 
 
 $$
-\begin{align*}
+\begin{align}
 \lvert a_n \overline{b}_n - \overline{a}_n b_n \rvert  \leq \lvert a_n\overline{b}_n\rvert + \lvert \overline{a}_n b_n\rvert = 2\lvert a_n b_n\rvert \leq \lvert a_n \rvert^2 + \lvert b_n \rvert^2,
-\end{align*}
+\label{eq:5}
+\end{align}
 $$
 
 we bound the area 
@@ -173,8 +174,72 @@ A &\leq \pi \sum_{n\in\mathbb{Z}} \lvert n \rvert \lvert a_n\overline{b}_n-\over
 \end{align}
 $$
 
+Equality in $\eqref{eq:6}$ and $\eqref{eq:7}$ could only occur if we have no terms $\lvert n \rvert\geq 2$. Moreover $x(s)$ and $y(s)$ are differentiable and real-valued functions and thus 
+
+
+
+
+$$
+\begin{align*}
+x(s) &= a_{-1}e^{-is} + a_0 + a_1 e^{is} \\
+y(s) &= b_{-1}e^{-is} + b_0 + b_1e^{is}.
+\end{align*}
+$$
+
+by [Theorem](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#theorem-21).
+
+Since $x(s)$ and $y(s)$ are real-valued functions, 
+
+$$
+\begin{align*}
+\overline{a}_{-n} &= \overline{\frac{1}{2\pi}\int_0^{2\pi} x(s) e^{-ins}ds} 
+= \frac{1}{2\pi}\int_0^{2\pi} x(s) e^{ins}ds = a_n \\
+\overline{b}_{-n} &= \overline{\frac{1}{2\pi}\int_0^{2\pi} y(s) e^{-ins}ds} 
+= \frac{1}{2\pi}\int_0^{2\pi} y(s) e^{ins}ds = b_n.
+\end{align*}
+$$
+
+Equation $/ref{eq:7}$ implies that $2(\lvert a_1 \rvert^2 + \lvert b_1 \rvert^2)=1$.
+
+Now by $\ref{eq:5}$, equality hold only if 
+
+$$
+\begin{align*}
+\lvert a_1 \overline{b}_1 - \overline{a}_1 b_1 \rvert =  2\lvert a_1 b_1\rvert =\lvert a_1 \rvert^2 + \lvert b_1 \rvert^2 = \frac{1}{2}
+\end{align*}
+$$
+
+and thus, since. $(\lvert a_n \rvert - \lvert b_n \rvert)^2=0$ implies $\lvert a_n \rvert = \lvert b_n \rvert$, $\lvert a_1 \rvert = \lvert b_1 \rvert = 1/2$. So we get
+
+$$
+\begin{align*}
+a_1= \frac{1}{2}e^{i\alpha} \quad \text{and } b_1 = \frac{1}{2}e^{i\beta}
+\end{align*}
+$$ 
+
+for some $\alpha, \beta \in \mathbb{R}$. Since $1 = 2\lvert a_1 \overline{b}_1 - \overline{a}_1 b_1\rvert$, 
+
+$$
+\begin{align*}
+\left\lvert \frac{1}{2} \left(e^{i(\alpha-\beta)} - e^{-i(\alpha-\beta)} \right)\right\rvert = 1,
+\end{align*}
+$$
+
+i.e., $\lvert \sin(\alpha-\beta)\rvert=1$. So, $\alpha-\beta = k\pi/2$ for some $k\in\mathbb{Z}$. Putting all the pieces together, 
+
+$$
+\begin{align*}
+x(s) &= \frac{1}{2}e^{-i\alpha}e^{-is} + a_0 + \frac{1}{2}e^{i\alpha}e^{is} = a_0 + \cos(\alpha+s) \\
+y(s)&= \frac{1}{2}e^{-i\beta}e^{-is} + a_0 + \frac{1}{2}e^{i\beta}e^{is} = b_0 + \cos(\beta+s)  \\
+&=b_0+ \cos(\alpha - \frac{k\pi}{2} +s) \\
+&=b_0 \: \pm \sin(\alpha+s).
+\end{align*}
+$$
+
+$\therefore \Gamma$ is a circle.
 
 $$\tag*{$\square$}$$
+
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
