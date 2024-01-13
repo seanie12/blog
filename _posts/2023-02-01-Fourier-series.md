@@ -61,7 +61,7 @@ The Fourier series of the $2\pi$-periodic odd function defined on $[0,\pi]$ by $
 
 $$
 \begin{align*}
-\hat{f}(n) &= \frac{1}{2\pi} \int_{-\pi}^\pi f(\theta) \exp\left( \frac{-2\pi in\theta}{2\pi} d\theta \right) \\
+\hat{f}(n) &= \frac{1}{2\pi} \int_{-\pi}^\pi f(\theta) \exp\left( \frac{-2\pi in\theta}{2\pi} \right) d\theta \\
 &=\frac{1}{2\pi}\left(\left[\frac{-f(\theta)\exp(-in\theta)}{in} \right]_{-\pi}^\pi  + \int_{-\pi}^\pi f^\prime(\theta) \frac{e^{-in\theta}}{in} d\theta \right) \\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi f^\prime(\theta) \frac{e^{-in\theta}}{in} d\theta \quad (\because f(\pi)=f(-\pi)=0) \\
 &=\frac{1}{2\pi}\left(\int_{-\pi}^0 (\pi+2\theta)\frac{e^{-in\theta}}{in}d\theta + \int_{0}^\pi (\pi-2\theta)\frac{e^{-in\theta}}{in}d\theta \right) \\
