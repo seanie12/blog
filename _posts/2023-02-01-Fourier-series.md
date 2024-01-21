@@ -216,7 +216,7 @@ and $\sum_{n=-\infty}^\infty r^{\lvert n \rvert}$ converges. By [Weierstrass M-T
 
 $$
 \begin{align*}
-\hat{P}_r(m) & = \frac{1}{2\pi}\int_{-\pi}^\pi \sum_{m=-\infty}^\infty r^{\lvert m \rvert} e^{im\theta} \overline{e^{in\theta}}d\theta \\
+\hat{P}_r(n) & = \frac{1}{2\pi}\int_{-\pi}^\pi \sum_{m=-\infty}^\infty r^{\lvert m \rvert} e^{im\theta} \overline{e^{in\theta}}d\theta \\
 &=\sum_{m=-\infty}^\infty \frac{1}{2\pi}r^{\lvert m\rvert} \int_{-\pi}^\pi e^{im\theta}e^{-in\theta}d\theta \quad (\because \text{ uniform convergent}) \\
 &=r^{\lvert m\rvert}.
 \end{align*}
