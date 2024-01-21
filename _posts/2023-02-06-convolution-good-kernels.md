@@ -70,7 +70,7 @@ Note that $L^1(\pi)=\\{f: \text{integrable}\mid \int_{-\pi}^\pi \lvert f(x)\rver
 
 $$
 \begin{align*}
-(f*(g*h))(x) &= \frac{1}{2\pi} \int_{-\pi}^{\pi} f(y) \left[g(x-y)+h(x-y) \right]dy \\
+(f*(g+h))(x) &= \frac{1}{2\pi} \int_{-\pi}^{\pi} f(y) \left[g(x-y)+h(x-y) \right]dy \\
 &=\frac{1}{2\pi}\int_{-\pi}^\pi f(y) g(x-y) dy + \frac{1}{2\pi}\int_{-\pi}^\pi f(y)h(x-y)dy \\
 &=(f*g)(x) + (f*h)(x)
 \end{align*}
