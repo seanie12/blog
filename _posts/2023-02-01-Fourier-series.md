@@ -275,7 +275,7 @@ Since $\cos\theta$ is continuous,  we can choose a small $\eta>0$ such that
 $$
 \begin{align*}
 \theta \in (-\eta, \eta) &\Rightarrow \lvert p(\theta) - p(0)\rvert < \frac{\epsilon}{2} \\
-&\Rightarrow p(\theta) > p(0) + \frac{\epsilon}{2}
+&\Rightarrow p(\theta) > 1 + \frac{\epsilon}{2}
 \end{align*}
 $$
 
