@@ -92,6 +92,7 @@ $$
 $$
 
 Similarly, 
+
 $$
 \begin{align*}
 ((cf)*g)(x) &= \frac{1}{2\pi}\int_{-\pi}^\pi cf(y)g(x-y)dy \\
