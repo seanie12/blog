@@ -150,9 +150,9 @@ $$
 \widehat{f*g}(n) & = \frac{1}{2\pi}\int_{-\pi}^\pi (f*g)(x) e^{-inx}dx \\
 &= \frac{1}{2\pi}\int_{-\pi}^\pi \left(\frac{1}{2\pi}\int_{-\pi}^\pi  f(y) g(x-y)dy \right)e^{-inx}dx \\
 &= \frac{1}{2\pi}\int_{-\pi}^\pi f(y)\left(\frac{1}{2\pi}\int_{-\pi}^\pi g(x-y)e^{-inx}dx \right) dy \\
-&= \frac{1}{2\pi}\int_{-\pi}^\pi f(y) e^{-iny} \left(g(x-y)e^{-in(x-y)} dx \right)dy \\
+&= \frac{1}{2\pi}\int_{-\pi}^\pi f(y) e^{-iny} \left(\int_{-\pi}^\pi g(x-y)e^{-in(x-y)} dx \right)dy \\
 &= \frac{1}{2\pi}\int_{-\pi}^\pi f(y) e^{-iny}\left(\frac{1}{2\pi}\int_{-\pi}^\pi g(w) e^{-inw}dw \right)dy \\
-&=\frac{1}{2\pi}\int_{-\pi}^\pi f(y)- e^{-iny} \hat{g}(n) dy \\
+&=\frac{1}{2\pi}\int_{-\pi}^\pi f(y) e^{-iny} \hat{g}(n) dy \\
 &= \hat{f}(n) \hat{g}(n)
 \end{align*}
 $$
