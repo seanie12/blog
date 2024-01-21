@@ -201,7 +201,7 @@ $$
 $$
 \begin{align*}
 \left\lvert f*g - f_k*g_k\right\rvert &= \left\lvert (f-f_k)*g + f_k * (g-g_k)\right\rvert \\
-&=\left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[f(x-y)-f_k(x-y)]g(y)dy\right\rvert \\
+&leq \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[f(x-y)-f_k(x-y)]g(y)dy\right\rvert + \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[g(x-y)-g_k(x-y)]f_k(y)dy\right\rvert \\
 &\leq \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(x-y)-f_k(x-y)\rvert \lvert g(y) \rvert dy \\
 &\leq \frac{B}{2\pi}\int_{-\pi}^\pi \lvert f(x-y)-f_k(x-y) \rvert dy \\
 &= \frac{B}{2\pi}\int_{x+\pi}^{x-\pi} - \lvert f(w) - f_k(w) \rvert dw \\
