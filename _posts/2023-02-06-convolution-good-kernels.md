@@ -299,7 +299,7 @@ $$
 \end{align*}
 $$
 
-as $k\to\infty$. If $f$ is continuous on the circle, then $f$ is uniformly continuous on the circle, i.e., $\delta$ does not depend on $x_0$. Thus, $f\*K_n \rightrightarrows f$. 
+as $n\to\infty$. If $f$ is continuous on the circle, then $f$ is uniformly continuous on the circle, i.e., $\delta$ does not depend on $x_0$. Thus, $f\*K_n \rightrightarrows f$. 
 
 $$\tag*{$\square$}$$
 
