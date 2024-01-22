@@ -183,6 +183,14 @@ $\therefore f\*g$ is continuous on $[-\pi, \pi]$.
 
 $$
 \begin{align*}
+\sup_{x\in [-\pi, \pi]} \lvert f_k(x)\rvert \leq \quad \text{for all } k=1,2,\ldots,
+\end{align*}
+$$
+
+and
+
+$$
+\begin{align*}
 \lim_{k\to\infty} \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f -f_k\rvert dx = 0.
 \end{align*}
 $$
@@ -202,21 +210,14 @@ $$
 \begin{align*}
 \left\lvert f*g - f_k*g_k\right\rvert &= \left\lvert (f-f_k)*g + f_k * (g-g_k)\right\rvert \\
 &\leq \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[f(x-y)-f_k(x-y)]g(y)dy\right\rvert + \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[g(x-y)-g_k(x-y)]f_k(y)dy\right\rvert \\
-&\leq \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(x-y)-f_k(x-y)\rvert \lvert g(y) \rvert dy + \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[g(x-y)-g_k(x-y)]f_k(y)dy\right\rvert \\
-&\leq \frac{B}{2\pi}\int_{-\pi}^\pi \lvert f(x-y)-f_k(x-y) \rvert dy + \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[g(x-y)-g_k(x-y)]f_k(y)dy\right\rvert \\
-&= \frac{B}{2\pi}\int_{x+\pi}^{x-\pi} - \lvert f(w) - f_k(w) \rvert dw  + \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[g(x-y)-g_k(x-y)]f_k(y)dy\right\rvert\\
-&=\frac{B}{2\pi}\int_{-\pi}^\pi \lvert f(w) - f_k(w) \rvert dw + \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[g(x-y)-g_k(x-y)]f_k(y)dy\right\rvert \\
-&< \frac{\epsilon}{2} + \left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi[g(x-y)-g_k(x-y)]f_k(y)dy\right\rvert.
+&\leq \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(x-y)-f_k(x-y)\rvert \lvert g(y) \rvert dy +   \frac{1}{2\pi}\int_{-\pi}^\pi \lvert g(x-y)-g_k(x-y) \rvert \lvert f_k(y)\rvert dy \\
+&\leq \frac{B_1}{2\pi}\int_{-\pi}^\pi \lvert f(x-y)-f_k(x-y) \rvert dy + \frac{B_2}{2\pi}\int_{-\pi}^\pi \lvert g(x-y)-g_k(x-y) \rvert  dy  \\
+&= \frac{B_1}{2\pi}\int_{x+\pi}^{x-\pi} - \lvert f(w) - f_k(w) \rvert dw  +   \frac{B_2}{2\pi}\int_{x+\pi}^{x-\pi}-\lvert g(w)-g_k(w)\rvert dw\\
+&=\frac{B_1}{2\pi}\int_{-\pi}^\pi \lvert f(w) - f_k(w) \rvert dw +  \frac{B_2}{2\pi}\int_{-\pi}^\pi\lvert g(w)-g_k(w)\rvert dw \\
+&< \frac{\epsilon}{2} + \frac{\epsilon}{2}.
 \end{align*}
 $$
 
-Similarly, we get 
-
-$$
-\begin{align*}
-\lvert f_k *(g-g_k) \rvert < \frac{\epsilon}{2}.
-\end{align*}
-$$
 
 $\therefore f_k\*g_k \rightrightarrows f\*g$ and $f\*g$ is continuous.
 
