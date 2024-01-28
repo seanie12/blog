@@ -113,7 +113,7 @@ $$
 \frac{1}{2N\sin^2(x/2)}\sum_{k=0}^{N-1}2\sin(x(k+1/2))\sin(x/2) &=\frac{1}{2N\sin^2(x/2)} \sum_{k=0}^{N-1} (\cos(kx)-\cos ((k+1)x) \\
 &= \frac{1- \cos (Nx)}{2N\sin^2(x/2)} \\
 &= \frac{1- 1+2\sin^2(Nx/2)}{2N\sin^2(x/2)} \quad ( \because \cos(2\theta) = 1-2\sin^2(\theta)) \\
-&=\frac{\sin^2(Nx/2)}{\sin^2(x/2)}.
+&=\frac{1}{N}\frac{\sin^2(Nx/2)}{\sin^2(x/2)}.
 \end{align*}
 $$
 
