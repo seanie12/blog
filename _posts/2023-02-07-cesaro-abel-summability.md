@@ -148,7 +148,7 @@ for all $x\in[-\pi, \pi]$.
 
 $$
 \begin{align*}
-\frac{1}{2\pi}\int_{\delta \leq \lvert x \rvert \leq \pi}\frac{1}{N} \frac{\sin^2(Nx/2)}{\sin^2 (x/2)}dx &\leq \frac{1}{2\pi}\int_{\delta \leq \lvert x \rvert \leq \pi} \frac{1}{N\sin^2(\delta/2)} \\
+\frac{1}{2\pi}\int_{\delta \leq \lvert x \rvert \leq \pi}\frac{1}{N} \frac{\sin^2(Nx/2)}{\sin^2 (x/2)}dx &\leq \frac{1}{2\pi}\int_{\delta \leq \lvert x \rvert \leq \pi} \frac{1}{N\sin^2(\delta/2)}dx \\
 &=\frac{\pi-\delta}{2\pi} \frac{1}{N\sin^2(\delta/2)} \\
 &\to 0 \text{ as } N\to\infty.
 \end{align*}
