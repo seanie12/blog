@@ -124,7 +124,7 @@ $$
 \end{align*}
 $$
 
-with induced norm $\lVert f\rVert^2_2 =\langle f, f\rangle$. Let $e_n(\theta) = e^{in\theta}$. Since $e^{in\theta}e^{im\theta}=\mathbf{1}\\{m=n \\}$, $\\{e_n: n\in\mathbb{Z}\\}$ is an orthonormal set.
+with induced norm $\lVert f\rVert^2_2 =\langle f, f\rangle$. Let $e_n(\theta) = e^{in\theta}$. Since $\langle e^{in\theta},e^{im\theta}\rangle=\mathbf{1}\\{m=n \\}$, $\\{e_n: n\in\mathbb{Z}\\}$ is an orthonormal set.
 
 Remark that the Fourier coefficients are precisely the coefficient of $f$ in terms of $\\{e_n: n\in\mathbb{Z}\\}$:
 
