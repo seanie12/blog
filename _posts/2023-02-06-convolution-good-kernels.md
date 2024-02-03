@@ -1,3 +1,4 @@
+
 ---
 title: "Convolution and Good Kernels"
 
@@ -179,11 +180,13 @@ $$
 $\therefore f\*g$ is continuous on $[-\pi, \pi]$.
 
 
-**Lemma $(L^1$ approximation$)$**. Given any integrable function $f$ on the circle, there exists a sequence of continuous function $\\{f_k\\}$ such that 
+## Lemma $(L^1$ approximation$)$
+
+ Given any integrable function $f$ on the circle, there exists a sequence of continuous function $\\{f_k\\}$ such that 
 
 $$
 \begin{align*}
-\sup_{x\in [-\pi, \pi]} \lvert f_k(x)\rvert \leq \quad \text{for all } k=1,2,\ldots,
+\sup_{x\in [-\pi, \pi]} \lvert f_k(x)\rvert \leq B\quad \text{for all } k=1,2,\ldots,
 \end{align*}
 $$
 
