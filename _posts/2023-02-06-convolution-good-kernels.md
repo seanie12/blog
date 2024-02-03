@@ -1,4 +1,3 @@
-
 ---
 title: "Convolution and Good Kernels"
 
