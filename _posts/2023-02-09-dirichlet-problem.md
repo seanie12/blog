@@ -151,10 +151,10 @@ i) Since $f$ is integrable,  there is a $B>0$ such that $\lvert f(\theta)\rvert 
 
 $$
 \begin{align*}
-\lvert \hat{f}(m) r^{\lvert m\rvert} e^{im\theta}\rvert &= \lvert \hat{f}(\theta) r^{\lvert m\rvert}\rvert \\
-&=\left \lvert \frac{1}{2\pi}\int_{-\pi}^\pi f(\theta)e^{-im\theta}d\theta\right\rvert \\
-&\leq \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(\theta) \rvert d\theta  \\
-&\leq B.
+\lvert \hat{f}(m) r^{\lvert m\rvert} e^{im\theta}\rvert &= r^{\lvert m\rvert}\lvert \hat{f}(\theta) r^{\lvert m\rvert}\rvert \\
+&=\left r^{\lvert m\rvert}\lvert \frac{1}{2\pi}\int_{-\pi}^\pi f(\theta)e^{-im\theta}d\theta\right\rvert \\
+&\leq r^{\lvert m\rvert} \cdot \frac{1}{2\pi}\int_{-\pi}^\pi \lvert f(\theta) \rvert d\theta  \\
+&\leq r^{\lvert m\rvert} \cdot B .
 \end{align*}
 $$
 
