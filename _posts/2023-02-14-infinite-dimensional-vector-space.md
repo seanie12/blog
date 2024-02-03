@@ -242,7 +242,7 @@ $$
 
 for all $N\geq M$.
 
-Now, suppose that $f$ is integrable. Applying the [approximation lemma](https://seanie12.github.io/blog/fourier%20analysis/convolution-good-kernels/), choose a continuous function $g$ on the circle such that 
+Now, suppose that $f$ is integrable. Applying the [approximation lemma](https://seanie12.github.io/blog/fourier%20analysis/convolution-good-kernels/#lemma-l1-approximation), choose a continuous function $g$ on the circle such that 
 
 $$
 \begin{align*}
