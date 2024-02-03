@@ -269,7 +269,7 @@ $$
 \lvert p_M(x) - g(x) \rvert < \epsilon
 $$
 
-for all $x\in[0,2\pi]$. As shown previously, $\lVert g(x)- p_M(x)\rVert_2 < \epsilon$. By the triangular ineqaulity, $\lVert f - p_M\rVert_2 < C^\prime \epsilon$. Using the best approximation lemma, 
+for all $x\in[0,2\pi]$. As shown previously, $\lVert g- p_M\rVert_2 < \epsilon$. By the triangular ineqaulity, $\lVert f - p_M\rVert_2 < C^\prime \epsilon$. Using the best approximation lemma, 
 
 
 $$
