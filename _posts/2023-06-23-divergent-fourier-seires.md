@@ -1,4 +1,3 @@
-
 ---
 title: "Fourier series need not converge at points of continuity"
 
