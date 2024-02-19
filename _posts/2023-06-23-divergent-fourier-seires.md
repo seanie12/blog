@@ -1,3 +1,4 @@
+
 ---
 title: "Fourier series need not converge at points of continuity"
 
@@ -68,8 +69,8 @@ $$
 \sum_{k=1}^n\sin(kx) &= \Im\left({\sum_{k=1}^n e^{ikx}}\right) \\
 &=\Im\left(e^{ix}\frac{e^{inx}-1}{e^{ix}-1} \right) \\
 &=\Im\left(e^{ix}\frac{e^{inx/2}(e^{inx/2}-e^{-inx/2})}{e^{ix/2}(e^{ix/2}-e^{-ix/2})} \right) \\
-&=\Im\left(e^{i(n+1)x/2}\frac{2\sin(inx/2)}{2\sin(ix/2)} \right) \\
-&=\Im\left((\cos((n+1)x/2) + i\sin((n+1)x/2))\frac{\sin(inx/2)}{\sin(ix/2)} \right)  \\
+&=\Im\left(e^{i(n+1)x/2}\frac{2i\sin(nx/2)}{2i\sin(x/2)} \right) \\
+&=\Im\left((\cos((n+1)x/2) + i\sin((n+1)x/2))\frac{\sin(nx/2)}{\sin(x/2)} \right)  \\
 &= \sin((n+1)x/2)\frac{\sin(inx/2)}{\sin(ix/2)}.
 \end{align*}
 $$
@@ -175,7 +176,7 @@ $$
 
 Given following observations
 
-(i) $(1-r^n) = (1-r)(1+r+\cdots + r^{n-1}) n\leq (1-r)$ for $r\in (0,1]$.
+(i) $(1-r^n) = (1-r)(1+r+\cdots + r^{n-1}) \leq n(1-r)$ for $r\in (0,1]$.
 
 (ii) Since $c_n=O(1/n)$, there is $M_1 >0$ and $N\in\mathbb{N}$ such that $\lvert c_n \rvert \leq M_1/n$ for all $n>N$.  So $\lvert c_n\rvert \leq M_1 /n \leq M_1/N$ for all $n\geq N+1$.
 
@@ -209,7 +210,7 @@ $f_N(\theta)=\sum_{1\leq \lvert n \rvert \leq N} \frac{e^{in\theta}}{n}$ is unif
 
 <*Proof*>
 
-$f_N(\theta)$ is the partial sum of the Fourier series $\sum_{n\neq 0}\frac{e^{in\theta}}{n}$, the Fourier series of the sawtooth function $f$. Since $A_r(f) = f*P_r$ and $f$ is bounded,
+$f_N(\theta)$ is the partial sum of the Fourier series $\sum_{n\neq 0}\frac{e^{in\theta}}{n}$, the Fourier series of the sawtooth function which is odd in $\theta$ and equals to$f(\theta)=i(\pi-\theta)$ for $\theta \in (0,\pi)$. Since $A_r(f) = f*P_r$ and $f$ is bounded,
 
 $$
 \begin{align*}
@@ -218,9 +219,10 @@ $$
 &\leq \sup_\theta \lvert f(\theta)\rvert 
 \end{align*}
 $$
+
 the Abel means are bounded.
 
-Clearly $c_n = e^{in\theta}/n + e^{-in\theta}/n$ is $O(1/n)$. 
+Clearly $n\lvert c_n \rvert = \lvert e^{in\theta} + e^{-in\theta}\rvert =2\lvert \cos(n\theta)\rvert \leq 2$. Thus $c_n$ is $O(1/n)$. 
 
 $\therefore S_N(f)(\theta)$ is uniformly bounded in $N$ and $\theta$.
 
