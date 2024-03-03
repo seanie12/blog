@@ -97,7 +97,7 @@ $$
 \end{align*}
 $$ 
 
-Thus, $t(s)$ is 1-1.  Now suppose that $y\in [0,\ell]$ be given and define $F(x)$ to be anti-derivative of $\lVert \gamma^{\prime}(x)\rVert$. Since $t(s)$ is continuous function, we can apply the [Intermediate Value Theorem](https://seanie12.github.io/blog/analysis/continous-function-2/#theorem-4211-intermediate-value-theorem), where $g$ is continuous on $[a,b]$, then for any $c between $g(a)$ and $g(b)$$, there exists at least one $t \in [a,b]$ such that $g(t)=c$.  Thus, $ t(s)$ is onto. 
+Thus, $t(s)$ is 1-1.  Now suppose that $y\in [0,\ell]$ be given and define $F(x)$ to be anti-derivative of $\lVert \gamma^{\prime}(x)\rVert$. Since $t(s)$ is continuous function, we can apply the [Intermediate Value Theorem](https://seanie12.github.io/blog/analysis/continous-function-2/#theorem-4211-intermediate-value-theorem), where $g$ is continuous on $[a,b]$, then for any $c$ between $g(a)$ and $g(b)$$, there exists at least one $t \in [a,b]$ such that $g(t)=c$.  Thus, $ t(s)$ is onto. 
 
 For the length of re-parmeterized curve $\eta(t)$,
 
