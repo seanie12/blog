@@ -29,8 +29,7 @@ $$
 \end{align*}
 $$
 
-such that $\gamma^\prime(s)\neq 0$, is called a **parameterized curve**. We call the image of $\gamma$ a **curve** (denoted by $\Gamma$). If $\gamma$ is 1-1, we call $\Gamma$ simple' if $\gamma(a) = \gamma(b)$ we call $\Gamma$ closed.
-
+such that $\gamma^\prime(s)\neq 0$, is called a **parameterized curve**. We call the image of $\gamma$ a **curve** (denoted by $\Gamma$). If $\gamma$ is 1-1, we call $\Gamma$ simple if $\gamma(a) = \gamma(b)$ we call $\Gamma$ closed.
 
 
 
@@ -78,25 +77,40 @@ $$
 
 
 ## Lemma 1
-Let $\gamma: [a,b] \to \mathbb{R}^2$ be a $\mathscr{C}^1$ parametric curve. Now define a function $s: [a,b] \to [0,\ell]$ by 
+Let $\gamma: [a,b] \to \mathbb{R}^2$ be a $\mathscr{C}^1$ parametric curve. Now define a function $t: [a,b] \to [0,\ell]$ by 
 
 $$
 \begin{align*}
-t(s)= \int_a^s \lVert \gamma^\prime (x)\lVert dx.
+t(s)= \int_a^s \lVert \gamma^\prime (x)\lVert dx,
 \end{align*}
 $$
 
-Then it is bijective function. Now consider a reparameterization $\eta(t) := \gamma \circ s (t)$, where $s(t)$ is the inverse of $t(s)$. Since 
+where $\ell = \int_a^b \lVert \gamma^\prime (x)\lVert dx$. Then $t(s)$ is a bijective function and $\eta(t) := (\gamma \circ s) (t)$ is an arclength parameterization, where $s(t)$ is the inverse of $t(s)$.
+
+<*Proof*>
+
+First, we want to show that $t(s)$ is bijective function. Suppose that $s_1, s_2 \in [a,b]$ are given , where $s_1 < s_2$. Then
 
 $$
 \begin{align*}
-\lVert \eta^\prime(t) \rVert = \lvert s^\prime(t) \rvert \lVert \gamma^\prime (s(t)) \rVert &=\frac{1}{\lvert t^\prime(s(t))\rvert} \lVert \gamma^\prime (s(t))\rVert = \lVert \gamma^\prime (s(t))\rVert^{-1} \lVert \gamma^\prime(s(t))\rVert =1,
+\int_a^{s_2} \lVert \gamma^{\prime}(x)\rVert dx - \int_a^{s_1} \lVert \gamma^{\prime}(x)\rVert dx = \int_{s_1}^{s_2} \lVert \gamma^{\prime}(x)\rVert dx \neq 0.
+\end{align*}
+$$ 
+
+Thus, $t(s)$ is 1-1.  Now suppose that $y\in [0,\ell]$ be given and define $F(x)$ to be anti-derivative of $\lVert \gamma^{\prime}(x)\rVert$. Since $t(s)$ is continuous function, we can apply the [Intermediate Value Theorem](https://seanie12.github.io/blog/analysis/continous-function-2/#theorem-4211-intermediate-value-theorem), where $g$ is continuous on $[a,b]$, then for any $c between $g(a)$ and $g(b)$$, there exists at least one $t \in [a,b]$ such that $g(t)=c$.  Thus, $ t(s)$ is onto. 
+
+For the length of re-parmeterized curve $\eta(t)$,
+
+$$
+\begin{align*}
+\lVert \eta^\prime(t) \rVert = \lvert s^\prime(t) \rvert \cdot \lVert \gamma^\prime (s(t)) \rVert &=\frac{1}{\lvert t^\prime(s(t))\rvert} \lVert \gamma^\prime (s(t))\rVert = \lVert \gamma^\prime (s(t))\rVert^{-1} \lVert \gamma^\prime(s(t))\rVert =1,
 \end{align*}
 $$
 
-$\eta(t)$ is an arclength parameterization.
+$\therefore \eta(t)$ is an arclength parameterization.
 
 $$\tag*{$\square$}$$
+
 ## Theorem 2.1
 Let $\Gamma \subset \mathbb{R}^2$ be a simple closed curve. Let $\ell$ denote the length of $\Gamma, A$ the area of its enclosed region. Then
 
@@ -199,7 +213,7 @@ $$
 \end{align*}
 $$
 
-Equation $/ref{eq:7}$ implies that $2(\lvert a_1 \rvert^2 + \lvert b_1 \rvert^2)=1$.
+Equation $\ref{eq:7}$ implies that $2(\lvert a_1 \rvert^2 + \lvert b_1 \rvert^2)=1$.
 
 Now by $\ref{eq:5}$, equality hold only if 
 
