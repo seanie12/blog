@@ -119,18 +119,27 @@ Let $\Gamma \subset \mathbb{R}^2$ be a simple closed curve. Let $\ell$ denote th
 
 $$
 \begin{align*}
-A \leq \frac{\ell^2}{2\pi},
+A \leq \frac{\ell^2}{4\pi},
 \end{align*}
 $$
 
 with equality if and only if $\Gamma$ is a circle. 
 
 <*Proof*>
-Observe that we can rescale the problem by a factor of $\delta>0$. Consider the mappling of the plane $\mathbb{R}^2$ to $\mathbb{R}^2$ where $(x,y)\mapsto (\delta x, \delta y).$ Then the length $\ell$ is scaled to $\delta \ell$ and its area $A$ is rescaled to $\delta^2 A$. But the inequality does not change
+Observe that we can rescale the problem by a factor of $\delta>0$. Consider the mappling of the plane $\mathbb{R}^2$ to $\mathbb{R}^2$ where $(x,y)\mapsto (\delta x, \delta y).$ Then the length $\ell$ is scaled to $\delta \ell$ and its area $A$ is rescaled to $\delta^2 A$ since 
 
 $$
 \begin{align*}
-\delta^2 A \leq \frac{\delta ^2\ell^2}{2\pi} \iff A \leq \frac{\ell^2}{2\pi}.
+\int_a^b \sqrt{\delta^2 x^\prime(s)^2 + \delta y^\prime(s)^2} ds &= \delta \ell \\
+\frac{1}{2}\int_a^b \lvert \delta x(s)\delta y^\prime(s) - \delta y(s)\delta x^\prime(s)\rvert&= \delta^2 A.
+\end{align*}
+$$
+
+ But the inequality does not change
+
+$$
+\begin{align*}
+\delta^2 A \leq \frac{\delta ^2\ell^2}{4\pi} \iff A \leq \frac{\ell^2}{4\pi}.
 \end{align*}
 $$
 
@@ -143,7 +152,17 @@ $$
 \end{align*}
 $$
 
-$x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients $\\{a_n\\}$ and $\\{b_n\\}$, respectively. Their derivatives have coefficients $\\{ina_n\\}$ and $\\{inb_n\\}$, respectively. 
+$x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients $\\{a_n\\}$ and $\\{b_n\\}$, respectively. Their derivatives have coefficients $\\{ina_n\\}$ and $\\{inb_n\\}$, respectively. Since
+
+$$
+\begin{align*}
+ \hat{f}(n) &= \int_0^{2\pi} f(\theta) e^{-in\theta}d\theta \\
+&=\frac{1}{2\pi}\left(\left[ f(\theta) \frac{-e^{-in\theta}}{in}\right]_0^{2\pi} + \frac{1}{in}\int_0^{2\pi} f^\prime(\theta) e^{-in\theta}d\theta \right)\\
+&=\frac{1}{2\pi in}\int_0^{2\pi}f^\prime (\theta)e^{-in\theta}d\theta ,
+\end{align*}
+$$
+
+Fourier coefficent of $f^\prime$ is $in\hat{f}(n)$.
 
 Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#corollary-12-parsevals-identity) on the above, we get 
 
@@ -225,7 +244,7 @@ $$
 \end{align*}
 $$
 
-and thus, since. $(\lvert a_n \rvert - \lvert b_n \rvert)^2=0$ implies $\lvert a_n \rvert = \lvert b_n \rvert$, $\lvert a_1 \rvert = \lvert b_1 \rvert = 1/2$. So we get
+and $(\lvert a_n \rvert - \lvert b_n \rvert)^2=0$ implies $\lvert a_n \rvert = \lvert b_n \rvert$, $\lvert a_1 \rvert = \lvert b_1 \rvert = 1/2$. So we get
 
 $$
 \begin{align*}
