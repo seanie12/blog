@@ -66,6 +66,42 @@ $$
 which goes to $0$ as $N\to\infty$.
 $$\tag*{$\square$}$$
 
+## Proposition (Properties of the improper integral)
+Let $f,g\in\mathcal{M}(\mathbb{R})$, and $\alpha,\beta\in\mathbb{C}$. Then
+
+1. linearity
+
+$$\begin{align*}
+\int_{-\infty}^\infty (\alpha f+\beta g)= \alpha \int_{-\infty}^\infty f +\beta\int_{-\infty}^\infty g.
+\end{align*}
+$$
+
+2. translation invariance
+
+$$\begin{align*}
+\int_{-\infty}^\infty f(x-\alpha)dx = \int_{-\infty}^\infty f(x)dx.
+\end{align*}
+$$
+
+
+3. scaling under dilations
+
+Given any $\delta>0$,
+
+$$
+\begin{align*}
+\delta\int_{-\infty}^\infty f(\delta x) dx = \int_{-\infty}^\infty f(x)dx.
+\end{align*}
+$$
+
+
+4. Continuity
+
+$$
+\begin{align*}
+\lim_{h\to 0}\int_{-\infty}^\infty \lvert f(x-h)-f(x)\rvert dx=0.
+\end{align*}
+$$
 
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
