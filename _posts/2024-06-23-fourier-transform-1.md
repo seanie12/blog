@@ -69,14 +69,14 @@ $$\tag*{$\square$}$$
 ## Proposition (Properties of the improper integral)
 Let $f,g\in\mathcal{M}(\mathbb{R})$, and $\alpha,\beta\in\mathbb{C}$. Then
 
-1. linearity
+(1) linearity
 
 $$\begin{align*}
 \int_{-\infty}^\infty (\alpha f+\beta g)= \alpha \int_{-\infty}^\infty f +\beta\int_{-\infty}^\infty g.
 \end{align*}
 $$
 
-2. translation invariance
+(2) translation invariance
 
 $$\begin{align*}
 \int_{-\infty}^\infty f(x-\alpha)dx = \int_{-\infty}^\infty f(x)dx.
@@ -84,7 +84,7 @@ $$\begin{align*}
 $$
 
 
-3. scaling under dilations
+(3) scaling under dilations
 
 Given any $\delta>0$,
 
@@ -95,13 +95,84 @@ $$
 $$
 
 
-4. Continuity
+(4) Continuity
 
 $$
 \begin{align*}
 \lim_{h\to 0}\int_{-\infty}^\infty \lvert f(x-h)-f(x)\rvert dx=0.
 \end{align*}
 $$
+
+<*Proof*>
+
+(1) 
+
+Since $f,g\in\mathcal{M}(\mathbb{R})$ and 
+$$
+\begin{align*}
+\int_{-N}^N \alpha f +\beta g = \alpha \int_{-N}^Nf + \beta \int_{-N}^Ng ,
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\lim_{N\to\infty}\left(\alpha\int_{-N}^Nf + \beta\int_{-N}^Ng \right) &=\lim_{N\to\infty}\alpha \int_{-N}^Nf+\lim_{N\to\infty}\beta\int_{-N}^Ng \\
+&=\alpha\lim_{N\to\infty}\int_{-N}^Nf + \beta\lim_{N\to\infty}\int_{-N}^Ng \\
+&=\alpha \int_{-\infty}^\infty f+\beta\int_{-\infty}^\infty g.
+\end{align*}
+$$
+
+(2) It suffices to show that 
+
+$$
+\lim_{N\to\infty}\left(\int_{-N}^N f(x-\alpha) dx -\int_{-N}^Nf(x) dx \right) =0.
+$$
+
+With change of variables,
+
+$$
+\begin{align*}
+\int_{-N}^N f(x-\alpha)-f(x)dx &= \int_{-N-\alpha}^{N-\alpha} f(x) dx - \int_{-N}^N f(x)dx \\
+&= \int_{-N-\alpha}^{-N} f(x) dx + \int_{N-\alpha}^N f(x)dx. 
+\end{align*}
+$$
+
+Take $N>2\alpha$. Then
+
+$$
+\begin{align*}
+\left\lvert\int_{-N-\alpha}^{-N} f(x) dx + \int_{N-\alpha}^N f(x)dx\right\rvert &\leq \int_{-2N}^{-N} \lvert f(x)\rvert dx + \int_{\frac{N}{2}}^N \lvert f(x)\rvert dx \\
+&\leq \int_{\frac{N}{2}\leq \lvert x\rvert \leq 2N} \lvert f(x)\rvert dx \\
+&\leq  \int_{\frac{N}{2}\leq \lvert x\rvert \leq 2N} \frac{A}{x^2}dx \\
+&=2A\left(-\frac{1}{2N} + \frac{2}{N}\right) \\
+&=\frac{3A}{N} \to 0 \text{ as } N\to\infty.
+\end{align*}
+$$
+
+(3)  With change of variables,
+
+$$
+\begin{align*}
+\delta \int_{-N}^N f(\delta x) dx = \int_{-\delta N}^{\delta N} f(x)dx.
+\end{align*}
+$$
+
+Thus, 
+
+$$
+\begin{align*}
+\lim_{N\to\infty} \delta\int_{-N}^N f(\delta x) dx = \int_{-\infty}^\infty f(x)dx
+\end{align*}
+$$
+
+(4) Given $\epsilon>0$, we want to show that there exists $H>0$ such that  if $\lvert h \rvert < H$, then,
+
+$$
+\begin{align*}
+lim_{N\to\infty} \int_{-N}^N \lvert f(x-h)-f(x)\rvert dx <\epsilon.
+\end{align*}
+$$
+
 
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
