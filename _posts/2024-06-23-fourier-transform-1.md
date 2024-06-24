@@ -95,7 +95,7 @@ $$
 $$
 
 
-(4) Continuity
+(4) continuity
 
 $$
 \begin{align*}
@@ -165,14 +165,75 @@ $$
 \end{align*}
 $$
 
-(4) Given $\epsilon>0$, we want to show that there exists $H>0$ such that  if $\lvert h \rvert < H$, then,
+(4) Given $\epsilon>0$, we want to show that there exists $H>0$ such that  if $\lvert h \rvert < H$, then
 
 $$
 \begin{align*}
-lim_{N\to\infty} \int_{-N}^N \lvert f(x-h)-f(x)\rvert dx <\epsilon.
+\lim_{N\to\infty} \int_{-N}^N \lvert f(x-h)-f(x)\rvert dx <\epsilon.
 \end{align*}
 $$
 
+Without loss of generality, we take $\lvert h \rvert\leq1$. 
+
+Note that 
+
+$$
+\begin{align*}
+\int_{\lvert x \rvert \geq N_0} \lvert f\rvert &\leq 2\int_{x  \geq N_0} \frac{A}{1+x^2}dx \\
+&\leq2A\int_{x\geq N_0}\frac{dx}{x^2} \\
+&=2A \lim_{M\to\infty} \int_{N_0}^M \frac{dx}{x^2} \\
+&=2A \lim_{M\to\infty}\left(\frac{1}{N_0}-\frac{1}{M}\right) \\
+&=\frac{2A}{N_0}.
+\end{align*}
+$$
+
+
+Similarly, 
+
+$$
+\begin{align*}
+\int_{N_0}^M \lvert f(x-h)\rvert dx &\leq \int_{ N_0}^M \frac{A}{1+(x-h)^2}dx \\
+&=A\int_{N_0-h}^{M-h}\frac{dx}{1+x^2} \\
+&\leq A \int_{N_0-h}^{M-h} \frac{dx}{x^2} \\
+&=A\left(\frac{1}{N_0-h} -\frac{1}{M-h}\right)
+\end{align*}
+$$
+
+We take $N_0$ large enough that 
+
+$$
+\begin{align*}
+\int_{\lvert x \rvert \geq N_0} \lvert f\rvert \leq \frac{\epsilon}{4} \text{ and } \int_{\lvert x \rvert \geq N_0} \lvert f(x-h)\rvert dx \leq \frac{\epsilon}{4}.
+\end{align*}
+$$
+
+Since $f$ is continuous, it is uniformly continuous on $[-N_0-1, N_0+1]$. Thus, we can choose $H$ such that if $h<H$,
+
+$$
+\begin{align*}
+\lvert f(x-h) - f(x) \rvert < \frac{\epsilon}{4N_0} \text{ for all } \lvert x\rvert \leq N_0.
+\end{align*}
+$$
+
+This implies that 
+
+$$
+\begin{align*}
+\sup_{\lvert x \rvert \leq N_0}\lvert f(x-h) - f(x) \rvert < \frac{\epsilon}{4N_0}.
+\end{align*}
+$$
+
+Then for any $N>N_0$, we get 
+
+$$
+\begin{align*}
+\int_{-N}^N \lvert f(x-h)-f(x)\rvert dx & = \int_{-N_0}^{N_0} \lvert f(x-h)-f(x)\rvert dx + \int_{N_0 \leq \lvert x \rvert \leq N} \lvert f(x-h)-f(x)\rvert dx \\
+&\leq \int_{-N_0}^{N_0} \lvert f(x-h)-f(x)\rvert dx + \int_{\lvert x \rvert \geq N_0} \lvert f \rvert +\int_{\lvert x \rvert \geq N_0} \lvert f(x-h)\rvert dx \\
+&\leq \frac{\epsilon}{2} +\frac{\epsilon}{4} + \frac{\epsilon}{4} = \epsilon.
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
 
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
