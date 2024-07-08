@@ -390,6 +390,64 @@ $$
 $$
 
 $$\tag*{$\square$}$$
+
+## Definition
+We call $f(x)=e^{-x^2}$ the **Gaussian**.
+
+## Remark
+The Gaussian is a Schwartz class function. In fact $e^{-ax^2}$ is in $\mathcal{S}(\mathbb{R})$ for all $a>0$. The choice $a=\pi$ is particular because
+
+$$
+\begin{align*}
+\left(\int_{-\infty}^\infty e^{-\pi x^2} dx \right)^2 &= \left(\int_{-\infty}^\infty e^{-\pi y^2}dy \right)\cdot \left(\int_{-\infty}^\infty e^{-\pi x^2}dx \right) \\
+&= \int_{-\infty}^\infty \int_{-\infty}^\infty e^{-\pi(x^2 + y^2)} dxdy \\
+&=\int_{0}^{2\pi} \int_0^\infty e^{-\pi r^2}r dr d\theta \\
+&=\int_0^\infty 2\pi r e^{-\pi r^2} dr \\
+&=\int_0^{\infty} e^{-x} dx =1
+\end{align*}
+$$
+
+## Theorem 
+Let $f(x)=e^{-\pi x^2}$. Then $\hat{f}=f$.
+
+<*Proof*>
+
+Let 
+
+$$
+\begin{align*}
+F(\xi) :=\hat{f}(\xi)=\int_{-\infty}^\infty e^{-\pi x^2} e^{-2\pi ix\xi}dx.
+\end{align*}
+$$
+
+Then by property (5) in [Proposition](https://seanie12.github.io/blog/fourier%20analysis/fourier-transform-1/#proposition), we have
+
+$$
+\begin{align*}
+F^\prime(\xi) &= \int_{-\infty}^\infty (-2\pi i x)e^{-\pi x^2} e^{-2\pi i x \xi} dx \\
+&=i \int_{-\infty}^\infty f^\prime(x) e^{-2\pi i x \xi} dx \\
+&=i 2\pi i\xi\hat{f}(\xi) =-2\pi\xi F(\xi).
+\end{align*}
+$$
+
+If we define $G(\xi)=F(\xi)e^{\pi\xi^2}$, its derivative is
+
+$$
+\begin{align*}
+G^\prime(\xi)=F^\prime(\xi)e^{\pi\xi^2} + F(\xi)2\xi\pi e^{\pi\xi^2} =-2\pi\xi F(\xi)e^{\pi\xi^2} + 2\pi\xi F(\xi)e^{\pi\xi^2}=0.
+\end{align*}
+$$
+
+That is $G(\xi)$ is constant function. Note that $G(0)=F(0)=1$, which implies that 
+
+$$
+\begin{align*}
+F(\xi)=e^{-\pi\xi^2}=f(\xi).
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
+
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
