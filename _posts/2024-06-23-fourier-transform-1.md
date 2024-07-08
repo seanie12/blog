@@ -235,6 +235,27 @@ $$
 
 $$\tag*{$\square$}$$
 
+## Definition
+Given $f\in\mathcal{M}(\mathbb{R})$, we define the **Fourier transform** $\hat{f}$ of $f$ by
+
+$$
+\begin{align*}
+\hat{f}(\xi) = \int_{-\infty}^\infty f(x) e^{-2\pi ix\xi}dx
+\end{align*}
+$$
+
+
+## Definition
+We call a function **rapidly decreasing* if for every $k\geq0$, we have
+
+$$
+\begin{align*}
+\sup_{x\in\mathbb{R}} \lvert x \rvert^k \lvert f(x) \rvert <\infty,
+\end{align*}
+$$
+
+the function *shrinks faster* than the reciprocal of any polynomial function.
+
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
