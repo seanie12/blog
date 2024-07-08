@@ -6,7 +6,8 @@ categories:
 
 tags:
   - moderate decrease
-  - fourier transform
+  - Fourier transform 
+  - rapidly decreasing
 
 
 
@@ -318,6 +319,77 @@ $$
 &= \left\lvert \int_{\mathbb{R}} f(x) e^{-2\pi i x \xi} \left( \frac{2^{-2\pi ixh}-1}{h} + 2\pi ix \right) dx\right\rvert
 \end{align*}
 $$
+
+Now, $f(x)$ and $xf(x)$ are both rapidly decreasing, so there exists $N\in\mathbb{N}$ such that 
+
+$$
+\begin{align*}
+\int_{\lvert x \rvert \geq N} \lvert f \rvert < \epsilon \text{ and } \int_{\lvert x \rvert \geq N} \lvert x \rvert \lvert f(x)\rvert dx < \epsilon.
+\end{align*}
+$$
+
+By L'Hôpital's Rule, for each $x_0 \in [-N, N]$, there exists $H>$ such that for $h <\lvert H \rvert$,
+
+$$
+\left \lvert \frac{e^{-2\pi i xh -1}}{h} + 2\pi i x \right\rvert < \frac{\epsilon}{N}.
+$$
+
+For each $x_0\in [-N, N]$, take such small $h_0>0$. Define $g(x) = \frac{e^{-2\pi i xh_0 -1}}{h_0} + 2\pi i x$.  Take 
+
+$$
+\begin{align*}
+\epsilon_0=\min\{\lvert  \epsilon /N - g(x_0) \rvert,\lvert g(x_0) + \epsilon / N \rvert \}. 
+\end{align*}
+$$
+
+ Then by continuity of $g$, there exists $\delta_0>0$ such that 
+
+$$
+\begin{align*}
+x\in N_{\delta_0}(x_0) \Rightarrow  \lvert g(x) \rvert < \frac{\epsilon}{N}.
+\end{align*}
+$$
+
+Now cover the compact set $[-N, N]$ with the open set $\bigcup_{x_0\in [-N, N]}N_{\delta_0}(x_0)$. By the compactness, we can choose finite open sets to cover $[-N, N]$.  Then take the minimum $h_0$. Then for $0< h < h_0$, which is independent of $x$,  we get the following inequality
+
+$$
+\left \lvert \frac{e^{-2\pi i xh -1}}{h} + 2\pi i x \right\rvert < \frac{\epsilon}{N}.
+$$
+
+for $x\in [-N, N]$.
+
+Note that 
+
+$$
+\begin{align*}
+\lvert e^{ix} -1 \rvert &= \lvert \cos x -1 + i \sin x \rvert \\
+&= \lvert  -1 + 1- 2\sin^2(x/2) + i 2\sin(x/2)\cos(x/2) \rvert  \\
+&=\lvert 2\sin(x/2) (i\cos(x/2) -\sin(x/2)) \rvert \\
+&=2\lvert \sin(x/2) \rvert.
+\end{align*}
+$$
+
+With the equality, outside of $\lvert x \rvert \leq N$,  we have the bound
+
+$$
+\begin{align*}
+\left\lvert \frac{e^{-2\pi i x h}-1}{h} + 2\pi i x \right\rvert & \leq \left \lvert \frac{e^{-2\pi i x h}-1}{h} \right \rvert + \lvert 2\pi x \rvert \\
+&= \left\lvert \frac{2\sin(-\pi i xh)}{h} \right\rvert +  2\pi \lvert x \rvert  \\
+&\leq A + 2\pi \lvert x \rvert 
+\end{align*} 
+$$
+
+since $\frac{\sin h}{h}$ is bounded. Thus we have 
+
+
+$$
+\begin{align*}
+\left\lvert\frac{\hat{f}(\xi +h) -\hat{f}(\xi)}{h} - \widehat{-2\pi i x f}(\xi)\right\rvert &\leq \int_{-N}^N \left\lvert f(x) e^{-2\pi ix \xi}\left(\frac{e^{-2\pi ix h}-1}{h} + 2\pi i x\right) \right\rvert dx + C\epsilon \\
+&\leq C^\prime \epsilon
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
