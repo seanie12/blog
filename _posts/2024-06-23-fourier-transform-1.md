@@ -573,13 +573,7 @@ $$
 \end{align*}
 $$
 
-Therefore, 
-
-$$
-\begin{align*}
-\lim_{\delta\to0^+}f*K_\delta(x) = f(x)
-\end{align*}
-$$
+Therefore,  $f*K_\delta \rightrightarrows f \text{ as } \delta \to0^+$.
 
 $$\tag*{$\square$}$$
 ## Reference
