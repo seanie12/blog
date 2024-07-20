@@ -448,6 +448,47 @@ $$
 
 $$\tag*{$\square$}$$
 
+## Corollary
+For $\delta>0$, let $K_\delta$ denote a dilated (by $\sqrt{\delta}$) Gaussian:
+
+$$
+\begin{align*}
+K_\delta(x) &= \delta^{-1/2}f(\delta^{-1/2}x)\\
+&=\delta^{-1/2}e^{-\pi x^2/\delta}.
+\end{align*}
+$$
+
+Then, by the interaction of dilation and Fourier transform, 
+
+$$
+\begin{align*}
+\widehat{K_\delta}(\xi) = \hat{f}(\delta^{1/2}\xi)=e^{-\pi\delta\xi^2}.
+\end{align*}
+$$
+
+<*Proof*>
+
+$$
+\begin{align*}
+\widehat{K_\delta(\xi)} &= \widehat{\delta^{-1/2}f(\delta^{-1/2}\xi)} \\
+&=\delta^{-1/2} \delta^{1/2}\hat{f}(\delta^{1/2}\xi) \\
+&=\hat{f}(\delta^{1/2}\xi)
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
+
+## Theorem 
+$\\{K_\delta\\}_{\delta>0}$ is an approximation of the identity as $\delta \to 0$.
+
+$$
+\begin{align}
+\int_{-\infty}^\infty K_\delta(x) dx =1 \\
+\int_{-\infty}^\infty \lvert K_\delta(x) \rvert dx  < M \\
+\int_{\lvert x \rvert > \eta} \lvert K_\delta (x)\rvert dx \to 0 \text{ as } \delta \to 0
+\end{align}
+$$
+
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
