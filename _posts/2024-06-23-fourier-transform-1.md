@@ -489,6 +489,56 @@ $$
 \end{align}
 $$
 
+<*Proof*>
+
+(1)  By setting $x/\sqrt{\delta}=t$, we get
+$$
+\begin{align*}
+\int_{-\infty}^\infty \frac{1}{\delta} \exp\left(\frac{-\pi x^2}{\delta}\right) dx 
+&= \int_{-\infty}^\infty \exp(-\pi t^2) dt =1
+\end{align*}
+$$
+
+(2) Since $K_\delta(x) >0$ for all $x\in\mathbb{R}$, 
+
+$$
+\begin{align*}
+\int_{-\infty}^\infty \left\lvert K_\delta(x)\right\rvert dx=\int_{-\infty}^\infty K_\delta(x) dx=1.
+\end{align*}
+$$
+
+(3)  Since $e^{-\pi x^2}$ is decreasing rapidly,
+
+
+$$
+\begin{align*}
+\int_{\lvert x \rvert > \eta} \frac{1}{\sqrt{\delta}} \exp\left(-\frac{-\pi x^2}{\delta}\right) = \int_{\lvert y \rvert > \frac{\eta}{\sqrt{\delta}}} e^{-\pi y^2}dy \to 0 \text{ as } \to 0.
+\end{align*}
+$$
+
+## Definition
+Given $f,g\in\mathcal{S}(\mathbb{R})$, we deinfe the **convolution** $f*g$ by
+
+$$
+\begin{align*}
+(f*g)(x) = \int_{-\infty}^\infty f(x-t) g(t) dt
+\end{align*}
+$$
+
+## Corollary 
+Given any $f\in\mathcal{S}(\mathbb{R})$, 
+
+$$
+\begin{align*}
+\lim_{\delta\to0^+} f * K_\delta(x) = f(x)
+\end{align*}
+$$
+
+uniformly.
+
+<*Proof*>
+
+
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
