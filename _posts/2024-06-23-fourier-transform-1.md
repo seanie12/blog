@@ -538,7 +538,50 @@ uniformly.
 
 <*Proof*>
 
+**Step 1**. we show that $f$ is uniformly continuous on  all of $\mathbb{R}$. Given $\epsilon >0$, there exists $N\in\mathbb{N}$ such that 
 
+$$
+\begin{align*}
+\lvert x \rvert >N \Rightarrow \lvert f(x) \rvert < \frac{\epsilon}{2}.
+\end{align*}
+$$
+
+since $f\in\mathcal{S}(\mathbb{R})$.  Thus, for any $x,y$ with $\lvert x \rvert, \lvert y \rvert >N$, 
+
+$$
+\begin{align*}
+\lvert f(x) - f(y) \rvert < \epsilon.
+\end{align*}
+$$
+For $x\in [-N, N]$ (compact set), $f$ is continuous, $f$ is uniformly continuous. Combining these, $f$ is uniformly continuous on all of $\mathbb{R}$.
+
+**Step2**.  Choose $\eta >0$ such that 
+
+$$
+\begin{align*}
+\lvert t \rvert \leq \eta \Rightarrow \lvert f(x-t) - f(x) \rvert < \epsilon.
+\end{align*}
+$$
+
+With the given $\eta>0$,
+
+$$
+\begin{align*}
+\left \lvert (f*K_\delta)(x) - f(x)\right\rvert &=\left \lvert \int_{-\infty}^\infty K_\delta(t) \left( f(x-t) - f(x) \right) dt \right\rvert \\
+&\leq \int_{\lvert t \rvert < \eta} \underbrace{K_\delta(t)}_\text{bounded} \underbrace{\left\lvert f(x-t) - f(x)\right\rvert}_\text{uniform continuity} dt + \int_{\lvert t \rvert \geq \eta } \underbrace{K_\delta(t)}_\text{good kernel} \underbrace{\left\lvert f(x-t) -f(x)\right\rvert}_\text{bounded} dt \\
+&\to 0 \text{ as } \eta \to 0 \text{ and } \delta \to 0^+.
+\end{align*}
+$$
+
+Therefore, 
+
+$$
+\begin{align*}
+\lim_{\delta\to0^+}f*K_\delta(x) = f(x)
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
