@@ -7,7 +7,7 @@ categories:
 tags:
   - Fourier inversion 
   - Inverse Fourier transform
-  - 
+  - Plancherel's theorem
 
 
 
@@ -142,6 +142,64 @@ $$
 ## Theorem 
 Let $\mathcal{F}: \mathcal{S}(\mathbb{R}) \to\mathcal{S}(\mathbb{R})$ be Fourier transform and let $\mathcal{F}^*: \mathcal{S}(\mathbb{R}) \to\mathcal{S}(\mathbb{R})$ be inverse Fourier transform. Then Fourier transform is a bijective mapping on the Schwartz spzce.
 
+<*Proof*>
+
+By Fourier inversion,  
+
+$$
+\begin{align*}
+(\mathcal{F}^* \circ \mathcal{F})(g)(y)&=\int_{-\infty}^\infty \left( \int^\infty_{-\infty}g(y)e^{-2\pi iy\xi}dy\right)e^{2\pi i y\xi}d\xi  \\
+&=\int_{-\infty}^\infty \hat{g}(\xi) e^{2\pi iy\xi}d\xi \\
+&=g(y)
+\end{align*}
+$$
+
+for all $y\in\mathbb{R}$. Thus $\mathcal{F}^* \circ \mathcal{F}=I$.
+
+Since $\mathcal{F}(g)(y) = \mathcal{F}^*(g)(-y)$,  by setting  $\zeta=-\xi$,
+
+$$
+\begin{align*}
+(\mathcal{F}\circ \mathcal{F}^*)(g)(y)&=\int_{-\infty}^\infty\left(\int_{-\infty}^\infty g(y)e^{2\pi i y \xi}dy \right)e^{-2\pi i y \xi}d\xi  \\
+&=\int_{-\infty}^\infty \left(\int_{-\infty}^\infty g(y)e^{-2\pi i y \zeta}dx\right)e^{2\pi i y\zeta} d\xi \\
+&=\int_{-\infty}^\infty \hat{g}(\zeta) e^{2\pi i y\zeta} d\zeta \\
+&=(\mathcal{F}^* \circ \mathcal{F}) (g)(y).
+\end{align*}
+$$
+
+Thusm $F^*$ ins the inverse of the Fourier transform on $\mathcal{S}(\mathbb{R})$.
+
+$$\tag*{$\square$}$$
+
+## Plancherel's theorem
+For any $f,g\in\mathcal{S}(\mathbb{R})$, we have
+
+$$
+\begin{align*}
+\lVert \hat{f}\rVert_{L^2(\mathbb{R})} = \lVert f\rVert_{L^2(\mathbb{R})}
+\end{align*}
+$$
+
+<*Proof*>
+
+By the multiplication theorem, we get
+
+$$
+\begin{align*}
+\int_{-\infty}^\infty f(x)\hat{g}(x) dx = \int_{-\infty}^\infty \hat{f}(y)g(y).
+\end{align*}
+$$
+
+Define $g$ such that $\hat{g}=\bar{f}$, i.e., $g=\check{\bar{f}}$.
+
+$$
+\begin{align*}
+\int_{-\infty}^\infty f(x)\bar{f}(x) dx &= \int_{-\infty}^\infty \hat{f}(y) \check{\bar{f}}(y) dy \\
+&=\int_{-\infty}^\infty \hat{f}(y) \bar{\hat{f}}(y) dy 
+\end{align*}
+$$
+
+$$\tag*{$\square$}$$
 ## Reference
 - Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
 - **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
