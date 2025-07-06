@@ -1,3 +1,4 @@
+
 ---
 title: "Dirichlet Problem on the Unit Disc"
 
@@ -183,7 +184,7 @@ So the Poisson integral is indeed harmonic.
 
 ii) Restatement of the previous [theorem](https://seanie12.github.io/blog/fourier%20analysis/convolution-good-kernels/#theorem-32).
 
-iii) Suppose that $v(r,\theta)$ is another solution. Since $v$ is twice continuously differentiable, we know that $v(r,\cdot)$ has a uniform convergent Fourier series by [Theorem](https://seanie12.github.io/blog/fourier%20analysis/Fourier-series/#corollary-24) 
+iii) Suppose that $v(r,\theta)$ is another solution. Since $v$ is twice continuously differentiable, we know that  Fourier series of $v(r,\cdot)$ converges to the original function by [Theorem](https://seanie12.github.io/blog/fourier%20analysis/Fourier-series/#corollary-24) 
 
 $$
 \begin{align*}
@@ -191,21 +192,54 @@ $$
 \end{align*}
 $$
 
-Since
+Since  $\v(r,\theta)$ is a solution, 
 
 $$
 \begin{align*}
-\Delta v(r,\theta) = \sum_{n=-\infty}^\infty \left( a^{\prime\prime}_n(r) + \frac{1}{r}a^\prime_n(r) - \frac{n^2}{r^2}a_n(r)\right) e^{in\theta} =0,
+\Delta v(r,\theta) = \frac{\partial^2 v}{\partial r^2} + \frac{1}{r}\frac{\partial v}{\partial r} +\frac{1}{r^2}\frac{\partial^2 v}{\partial \theta} =0.
 \end{align*}
 $$
+
+Thus, its Fourier coefficient
 
 $$
 \begin{align*}
-a^{\prime\prime}_n(r) + \frac{1}{r}a^\prime_n(r) - \frac{n^2}{r^2}a_n(r)=0
+\left\langle \Delta v(r,\theta), e^{in\theta}\right\rangle = \frac{1}{2\pi}\int_{-\pi}^\pi \left( \frac{\partial^2 v}{\partial r^2} + \frac{1}{r}\frac{\partial v}{\partial r} +\frac{1}{r^2}\frac{\partial^2 v}{\partial \theta} \right) e^{-in\theta}d\theta = 0.
 \end{align*}
 $$
 
-for all $n\in\mathbb{Z}$. By the Exercise 11 from chapter 1, 
+By  Leibniz integral rule,
+
+
+
+$$
+\begin{align*}
+\frac{1}{2\pi}\int_{-\pi}^\pi \left( \frac{\partial^2 v}{\partial r^2} + \frac{1}{r}\frac{\partial v}{\partial r} +\frac{1}{r^2}\frac{\partial^2 v}{\partial \theta} \right) e^{-in\theta}d\theta &= \left(\frac{\partial}{\partial r}\right)^2 \frac{1}{2\pi} \int_{-\pi}^\pi v(r,\theta) e^{-in\theta} \\
+&+ \frac{1}{r}\frac{\partial}{\partial r} \frac{1}{2\pi}\int_{-\pi}^\pi v(r,\theta) e^{-in\theta} d\theta\\
+&+\frac{1}{r^2} \frac{1}{2\pi} \int_{-\pi}^\pi \frac{\partial^2 v}{\partial\theta^2} e^{-in\theta}d\theta \\
+&=a^{\prime\prime}_n(r) + \frac{1}{r}a^\prime_n(r) -\frac{n^2}{r^2}a_n(r)\\
+&=0
+\end{align*}
+$$
+
+for all $n\in\mathbb{Z}$.
+
+Note that by integration by parts,
+
+$$
+\begin{align*}
+\frac{1}{2\pi}\int_{-\pi}^\pi \frac{\partial^2 v}{\partial \theta^2} e^{-in\theta} d\theta &= \frac{1}{2\pi}\left(\left[\frac{\partial v}{\partial \theta} e^{-in\theta}\right]_{-\pi}^\pi - \int_{-\pi}^\pi \frac{\partial v}{\partial \theta}(-in)e^{-in\theta}d\theta \right)\\
+&=\frac{in}{2\pi}\int_{-\pi}^\pi \frac{\partial v}{\partial \theta}e^{-in\theta}d\theta \\
+&=\frac{in}{2\pi}\left( [v(r,\theta) e^{-in\theta}]_{-\pi}^\pi - \int_{-\pi}^\pi v(r,\theta)(-in)e^{-in\theta} \right) \\
+&=-n^2 \frac{1}{2\pi}\int_{-\pi}^\pi v(r,\theta)e^{-in\theta}d\theta \\
+&=-n^2 a_n(r).
+\end{align*}
+$$
+
+
+
+
+By the Exercise 11 from chapter 1, 
 
 $$
 \begin{align*}
