@@ -1,4 +1,3 @@
-
 ---
 title: "Dirichlet Problem on the Unit Disc"
 
