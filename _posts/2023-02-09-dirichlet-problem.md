@@ -224,17 +224,7 @@ $$
 
 for all $n\in\mathbb{Z}$.
 
-Note that by integration by parts,
 
-$$
-\begin{align*}
-\frac{1}{2\pi}\int_{-\pi}^\pi \frac{\partial^2 v}{\partial \theta^2} e^{-in\theta} d\theta &= \frac{1}{2\pi}\left(\left[\frac{\partial v}{\partial \theta} e^{-in\theta}\right]_{-\pi}^\pi - \int_{-\pi}^\pi \frac{\partial v}{\partial \theta}(-in)e^{-in\theta}d\theta \right)\\
-&=\frac{in}{2\pi}\int_{-\pi}^\pi \frac{\partial v}{\partial \theta}e^{-in\theta}d\theta \\
-&=\frac{in}{2\pi}\left( [v(r,\theta) e^{-in\theta}]_{-\pi}^\pi - \int_{-\pi}^\pi v(r,\theta)(-in)e^{-in\theta} \right) \\
-&=-n^2 \frac{1}{2\pi}\int_{-\pi}^\pi v(r,\theta)e^{-in\theta}d\theta \\
-&=-n^2 a_n(r).
-\end{align*}
-$$
 
 
 
