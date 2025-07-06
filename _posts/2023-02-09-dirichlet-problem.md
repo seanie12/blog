@@ -191,7 +191,7 @@ $$
 \end{align*}
 $$
 
-Since  $\v(r,\theta)$ is a solution, 
+Since  $v(r,\theta)$ is a solution, 
 
 $$
 \begin{align*}
