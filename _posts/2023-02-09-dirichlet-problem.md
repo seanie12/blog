@@ -284,7 +284,8 @@ a_n(r) = \begin{cases}
 \end{cases}
 $$
 
-Thus, we conclude that 
+Thus, $v(r,\cdot)$ and $u(r,\cdot)$ have the same Fourier coefficients for every fixed $r\in(0,1)$. By the uniqueness theorem for Fourier coefficients, they are equal almost everywhere in $\theta$. Since both functions are continuous in $\theta$, they are equal everywhere. Therefore,
+
 
 $$
 \begin{align*}
