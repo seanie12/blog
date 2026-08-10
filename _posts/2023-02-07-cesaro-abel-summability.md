@@ -1,3 +1,4 @@
+
 ---
 title: "Cesaro and Abel Summability"
 
@@ -326,9 +327,22 @@ $$
 \end{align*}
 $$
 
-3). Note that $1-2r\cos\theta + r^2\geq 1-2r +r^2 =(1-r)^2 \geq 1/4 =: c_\delta$. For $\frac{1}{2} \leq r <1$ and $\delta \leq \lvert \theta \rvert \leq \pi$, 
+3). Let $\delta >0$ be given and  assume that $\frac{1}{2} < r <1$ and $\lvert \theta \rvert > \delta$.  Since
 
-which implies that $P_r(\theta) \leq (1-r^2)/ c_\delta$.
+$$
+\begin{align*}
+1-2r\cos\theta + r^2&= (1-r)^2 + 2r(1-\cos\theta) \\
+&\geq (1-\cos\theta)\\
+& \geq (1-\cos\delta),
+\end{align*}
+$$
+
+we can bound
+$$
+\begin{align*}
+P_r(\theta)=\frac{1-r^2}{1-2r\cos\theta + r^2} \leq \frac{1-r^2}{1-\cos\delta}.
+\end{align*}
+$$
 
 Thus,
 
