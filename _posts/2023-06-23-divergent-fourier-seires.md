@@ -345,9 +345,10 @@ which are trigonometric polynomials of degree $3N$ and $2N-1$, respectively. Ind
 
 $$
 \begin{align*}
-\\{N,\ldots,2N-1\\}\cup\\{2N+1,\ldots,3N\\},
+\{N,\ldots,2N-1\}\cup\{2N+1,\ldots,3N\},
 \end{align*}
 $$
+
 
 and the frequencies of $\tilde{P}_N$ are
 
