@@ -162,7 +162,7 @@ Since
 
 $$
 \begin{align*}
-\sum_{n=1}^N \frac{1}{n} \geq \sum_{n=1}^{N-1} \int_{n}^{n+1} \frac{dx}{x}dx=\int_{1}^N \frac{dx}{x} = \log N,
+\sum_{n=1}^N \frac{1}{n} \geq \sum_{n=1}^{N-1} \int_{n}^{n+1} \frac{1}{x}dx=\int_{1}^N \frac{dx}{x} = \log N,
 \end{align*}
 $$
 
