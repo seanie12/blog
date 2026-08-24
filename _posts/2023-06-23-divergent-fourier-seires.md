@@ -354,7 +354,7 @@ and the frequencies of $\tilde{P}_N$ are
 
 $$
 \begin{align*}
-\\{N,\ldots,2N-1\\}.
+\{N,\ldots,2N-1\}.
 \end{align*}
 $$
 
