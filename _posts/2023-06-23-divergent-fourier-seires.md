@@ -349,7 +349,6 @@ $$
 \end{align*}
 $$
 
-
 and the frequencies of $\tilde{P}_N$ are
 
 $$
@@ -358,7 +357,106 @@ $$
 \end{align*}
 $$
 
-Then, if we consider the partial sums of $P_N$, we see
+
+To understand the partial sums of $P_N$, first expand
+
+$$
+\begin{align*}
+P_N(\theta)
+&=e^{i2N\theta}f_N(\theta)\\
+&=e^{i2N\theta}\sum_{1\leq\lvert n\rvert\leq N}\frac{e^{in\theta}}{n}\\
+&=\sum_{1\leq\lvert n\rvert\leq N}\frac{e^{i(2N+n)\theta}}{n}.
+\end{align*}
+$$
+
+Thus, the term indexed by $n$ has frequency $2N+n$. By definition, the $M$-th symmetric Fourier partial sum keeps only the terms whose frequencies have absolute value at most $M$. Therefore,
+
+$$
+\begin{align*}
+S_M(P_N)(\theta)
+&=\sum_{\substack{1\leq\lvert n\rvert\leq N\\
+\lvert 2N+n\rvert\leq M}}
+\frac{e^{i(2N+n)\theta}}{n}.
+\end{align*}
+$$
+
+Since $-N\leq n\leq N$, we have
+
+$$
+\begin{align*}
+2N+n\geq N>0.
+\end{align*}
+$$
+
+Hence every frequency appearing in $P_N$ is positive, so
+
+$$
+\lvert 2N+n\rvert=2N+n.
+$$
+
+Thus,
+
+$$
+\begin{align*}
+S_M(P_N)(\theta)
+&=\sum_{\substack{1\leq\lvert n\rvert\leq N\\
+2N+n\leq M}}
+\frac{e^{i(2N+n)\theta}}{n}\\
+&=e^{i2N\theta}
+\sum_{\substack{1\leq\lvert n\rvert\leq N\\
+2N+n\leq M}}
+\frac{e^{in\theta}}{n}.
+\end{align*}
+$$
+
+From this expression, we obtain the following special cases.
+
+If $M<N$, then $2N+n\geq N>M$ for every $n$ appearing in $P_N$. Hence
+
+$$
+\begin{align*}
+S_M(P_N)=0.
+\end{align*}
+$$
+
+If $M=2N$, then
+
+$$
+\begin{align*}
+2N+n\leq 2N
+\quad\Longleftrightarrow\quad
+n\leq 0.
+\end{align*}
+$$
+
+Since $n\neq0$, only $n=-N,\ldots,-1$ remain. Therefore,
+
+$$
+\begin{align*}
+S_{2N}(P_N)(\theta)
+&=e^{i2N\theta}\sum_{n=-N}^{-1}\frac{e^{in\theta}}{n}\\
+&=e^{i2N\theta}\tilde{f}_N(\theta)\\
+&=\tilde{P}_N(\theta).
+\end{align*}
+$$
+
+Finally, if $M\geq3N$, then for every $n$ with $1\leq\lvert n\rvert\leq N$,
+
+$$
+\begin{align*}
+2N+n\leq3N\leq M.
+\end{align*}
+$$
+
+Thus every frequency of $P_N$ is included, and hence
+
+$$
+\begin{align*}
+S_M(P_N)=P_N.
+\end{align*}
+$$
+
+Therefore, in particular,
 
 $$
 \begin{align*}
@@ -369,6 +467,7 @@ P_N & \quad \text{if } M \geq 3N \\
 \end{cases}
 \end{align*}
 $$
+
 
 Moreover, choose a convergent positive series $\sum_k \alpha_k$ and a sequence of integers $\\{N_k\\}$ such that 
 
