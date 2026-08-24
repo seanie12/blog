@@ -213,15 +213,38 @@ We use the following observations.
 
 (ii) Since $c_n=O(1/n)$, there exist $M_1>0$ and $N_0\in\mathbb{N}$ such that $\lvert c_n\rvert \leq M_1/n$ for all $n>N_0$.
 
-(iii) By increasing the constant if necessary to include the finitely many terms $n\leq N_0$, there exists $M_2>0$ such that $n\lvert c_n\rvert\leq M_2$ for every $n\in\mathbb{N}$.
+(iii) For the finitely many indices $1\leq n\leq N_0$, define
 
+$$
+\begin{align*}
+M_0:=\max_{1\leq n\leq N_0} n\lvert c_n\rvert.
+\end{align*}
+$$
+
+Then, if we set
+
+$$
+\begin{align*}
+M_2:=\max\{M_0,M_1\},
+\end{align*}
+$$
+
+we have
+
+$$
+\begin{align*}
+n\lvert c_n\rvert\leq M_2
+\end{align*}
+$$
+
+for every $n\in\mathbb{N}$. Thus the sequence $\\{n\lvert c_n\rvert\\}_{n=1}^\infty$ is bounded.
 Using these observations, we can continue to bound
 
 $$
 \begin{align*}
 \lvert S_N - A_r\rvert &\leq \sum_{n=1}^N \lvert c_n \rvert \lvert 1-r^n\rvert + \sum_{n=N+1}^\infty \lvert r^n \rvert \lvert c_n\rvert \\
-&\leq M_2\sum_{n=1}^N(1-r) + \frac{M_2}{N+1} \sum_{n=N+1}^\infty r^n \\
-&\leq M_2N(1-r) + \frac{M_2}{N+1}\frac{1}{1-r}.
+&\leq M_2\sum_{n=1}^N(1-r) + \frac{M_2}{N} \sum_{n=N+1}^\infty r^n \\
+&\leq M_2N(1-r) + \frac{M_2}{N}\frac{1}{1-r}.
 \end{align*}
 $$
 
@@ -230,7 +253,7 @@ If we take $r=1-1/N$ for $N\geq2$, then
 $$
 \begin{align*}
 \lvert S_N-A_r\rvert
-&\leq M_2 + M_2\frac{N}{N+1}\\
+&\leq M_2 + M_2\\
 &\leq 2M_2.
 \end{align*}
 $$
