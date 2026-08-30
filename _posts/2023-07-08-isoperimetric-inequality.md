@@ -67,13 +67,99 @@ we call $\eta$ the **arclength parameterization** of $\Gamma$.
 ## Remark
 The length of the curve $\gamma: [a,b]\to \mathbb{R}^2$ is independent of parameterization.
 
-By the change of variable, 
+First, since $s:[c,d]\to[a,b]$ is $\mathscr{C}^1$, it is continuous. Moreover, since $s$ is bijective, it is injective. A continuous injective function on an interval is strictly monotone.
+
+To see this, suppose that $t_1<t_2<t_3$. We claim that $s(t_2)$ must lie strictly between $s(t_1)$ and $s(t_3)$. Suppose, for example, that
+
 $$
 \begin{align*}
-\int_a^b \lVert \gamma^\prime(s) \rVert ds = \int^d_c \lvert s^\prime(t) \rvert \rVert  \gamma^\prime(s(t))\lVert  dt =
-\int^d_c\lVert \eta^\prime(t)\rVert dt
+s(t_2)>\max\{s(t_1),s(t_3)\}.
 \end{align*}
 $$
+
+Choose $y$ such that
+
+$$
+\begin{align*}
+\max\{s(t_1),s(t_3)\}<y<s(t_2).
+\end{align*}
+$$
+
+By the [Intermediate Value Theorem](https://seanie12.github.io/blog/analysis/continous-function-2/#theorem-4211-intermediate-value-theorem) applied to $[t_1,t_2]$, there exists $u\in(t_1,t_2)$ such that $s(u)=y$. Applying the Intermediate Value Theorem again to $[t_2,t_3]$, there exists $v\in(t_2,t_3)$ such that $s(v)=y$. Thus,
+
+$$
+\begin{align*}
+u\neq v \quad\text{but}\quad s(u)=s(v),
+\end{align*}
+$$
+
+which contradicts the injectivity of $s$. The case
+
+$$
+\begin{align*}
+s(t_2)<\min\{s(t_1),s(t_3)\}
+\end{align*}
+$$
+
+is ruled out in the same way. Hence $s(t_2)$ always lies strictly between $s(t_1)$ and $s(t_3)$. Since $s(c)\neq s(d)$, either $s(c)<s(d)$ or $s(c)>s(d)$. In the first case, the above property implies that $s$ is strictly increasing, while in the second case it implies that $s$ is strictly decreasing. Therefore, $s$ is a monotone function.
+
+Now, by the chain rule,
+
+$$
+\begin{align*}
+\eta^\prime(t)=\gamma^\prime(s(t))s^\prime(t),
+\end{align*}
+$$
+
+and therefore
+
+$$
+\begin{align*}
+\lVert \eta^\prime(t)\rVert =
+\lvert s^\prime(t)\rvert
+\lVert \gamma^\prime(s(t))\rVert.
+\end{align*}
+$$
+
+If $s$ is increasing, then $s(c)=a$, $s(d)=b$, and $s^\prime(t)\geq 0$. Thus, by the change of variable $u=s(t)$,
+
+$$
+\begin{align*}
+\int_c^d \lVert \eta^\prime(t)\rVert dt
+&=
+\int_c^d s^\prime(t)\lVert \gamma^\prime(s(t))\rVert dt \\
+&=
+\int_{s(c)}^{s(d)}\lVert \gamma^\prime(u)\rVert du \\
+&=
+\int_a^b\lVert \gamma^\prime(u)\rVert du.
+\end{align*}
+$$
+
+If $s$ is decreasing, then $s(c)=b$, $s(d)=a$, and $s^\prime(t)\leq 0$. Hence $\lvert s^\prime(t)\rvert=-s^\prime(t)$, and
+
+$$
+\begin{align*}
+\int_c^d \lVert \eta^\prime(t)\rVert dt
+&=
+-\int_c^d s^\prime(t)\lVert \gamma^\prime(s(t))\rVert dt \\
+&=
+-\int_{s(c)}^{s(d)}\lVert \gamma^\prime(u)\rVert du \\
+&=
+-\int_b^a\lVert \gamma^\prime(u)\rVert du \\
+&=
+\int_a^b\lVert \gamma^\prime(u)\rVert du.
+\end{align*}
+$$
+
+Thus, in either case,
+
+$$
+\begin{align*}
+\int_a^b \lVert \gamma^\prime(s) \rVert ds = \int_c^d \lVert \eta^\prime(t)\rVert dt,
+\end{align*}
+$$
+
+so the length of the curve is independent of parameterization.
 
 
 ## Lemma 1
@@ -93,19 +179,31 @@ First, we want to show that $t(s)$ is bijective function. Suppose that $s_1, s_2
 
 $$
 \begin{align*}
-\int_a^{s_2} \lVert \gamma^{\prime}(x)\rVert dx - \int_a^{s_1} \lVert \gamma^{\prime}(x)\rVert dx = \int_{s_1}^{s_2} \lVert \gamma^{\prime}(x)\rVert dx \neq 0
+\int_a^{s_2} \lVert \gamma^{\prime}(x)\rVert dx - \int_a^{s_1} \lVert \gamma^{\prime}(x)\rVert dx = \int_{s_1}^{s_2} \lVert \gamma^{\prime}(x)\rVert dx > 0
 \end{align*}
 $$ 
 
-since $t(s)$ is monotonic increasing function. Thus, $t(s)$ is 1-1.  
+since $\lVert\gamma^\prime(x)\rVert>0$. Thus, $t(s)$ is strictly monotonic increasing and hence 1-1.  
 
-Now suppose that $y\in [0,\ell]$ be given. Since $t(s)$ is continuous function, we can apply the [Intermediate Value Theorem](https://seanie12.github.io/blog/analysis/continous-function-2/#theorem-4211-intermediate-value-theorem), where if $g$ is continuous on $[a,b]$, then for any $c$ between $g(a)$ and $g(b)$, there exists at least one $t \in [a,b]$ such that $g(t)=c$.  Thus, $t(s)$ is onto. 
+Now suppose that $y\in [0,\ell]$ be given. Since $t(s)$ is continuous function, we can apply the [Intermediate Value Theorem](https://seanie12.github.io/blog/analysis/continous-function-2/#theorem-4211-intermediate-value-theorem) to the continuous $t$ on $[a,b]$.  Thus, $t(s)$ is onto. 
 
 For the length of re-parmeterized curve $\eta(t)$,
 
 $$
 \begin{align*}
-\lVert \eta^\prime(t) \rVert = \lvert s^\prime(t) \rvert \cdot \lVert \gamma^\prime (s(t)) \rVert &=\frac{1}{\lvert t^\prime(s(t))\rvert} \lVert \gamma^\prime (s(t))\rVert = \lVert \gamma^\prime (s(t))\rVert^{-1} \lVert \gamma^\prime(s(t))\rVert =1,
+\lVert \eta^\prime(t) \rVert
+&= \lvert s^\prime(t) \rvert \cdot \lVert \gamma^\prime (s(t)) \rVert \\
+&=\frac{1}{\lvert t^\prime(s(t))\rvert} \lVert \gamma^\prime (s(t))\rVert \\
+&= \lVert \gamma^\prime (s(t))\rVert^{-1} \lVert \gamma^\prime(s(t))\rVert \\
+&=1,
+\end{align*}
+$$
+
+where we used the Fundamental Theorem of Calculus,
+
+$$
+\begin{align*}
+t^\prime(s)=\lVert\gamma^\prime(s)\rVert.
 \end{align*}
 $$
 
@@ -130,8 +228,8 @@ Observe that we can rescale the problem by a factor of $\delta>0$. Consider the 
 
 $$
 \begin{align*}
-\int_a^b \sqrt{\delta^2 x^\prime(s)^2 + \delta y^\prime(s)^2} ds &= \delta \ell \\
-\frac{1}{2}\int_a^b \lvert \delta x(s)\delta y^\prime(s) - \delta y(s)\delta x^\prime(s)\rvert&= \delta^2 A.
+\int_a^b \sqrt{\delta^2 x^\prime(s)^2 + \delta^2 y^\prime(s)^2} ds &= \delta \ell \\
+\frac{1}{2}\left\lvert\int_a^b \delta x(s)\delta y^\prime(s) - \delta y(s)\delta x^\prime(s)ds\right\rvert&= \delta^2 A.
 \end{align*}
 $$
 
@@ -143,7 +241,7 @@ $$
 \end{align*}
 $$
 
-By taking $\delta = 2\pi / \ell$, if suffices to prove that if $\ell=2\pi$ then $A \leq \pi$, with equality only if $\Gamma$ is a circle. Note that any curve admits a parameterization by arc	length by Lemma 1. Then, after a possible additional translation,  we can consider a parameterization $\gamma(s)=(x(s), y(s))$ of $\Gamma$ by arc-length defined on $[0,\ell]=[0,2\pi]$. Then 
+By taking $\delta = 2\pi / \ell$, it suffices to prove that if $\ell=2\pi$ then $A \leq \pi$, with equality only if $\Gamma$ is a circle. Note that any curve admits a parameterization by arclength by Lemma 1. Then, after a possible additional translation,  we can consider a parameterization $\gamma(s)=(x(s), y(s))$ of $\Gamma$ by arc-length defined on $[0,\ell]=[0,2\pi]$. Then 
 
 $$
 \begin{align*}
@@ -156,7 +254,7 @@ $x(s)$ and $y(s)$ are $2\pi$ periodic  functions, and have Fourier coefficients 
 
 $$
 \begin{align*}
- \hat{f}(n) &= \int_0^{2\pi} f(\theta) e^{-in\theta}d\theta \\
+ \hat{f}(n) &= \frac{1}{2\pi}\int_0^{2\pi} f(\theta) e^{-in\theta}d\theta \\
 &=\frac{1}{2\pi}\left(\left[ f(\theta) \frac{-e^{-in\theta}}{in}\right]_0^{2\pi} + \frac{1}{in}\int_0^{2\pi} f^\prime(\theta) e^{-in\theta}d\theta \right)\\
 &=\frac{1}{2\pi in}\int_0^{2\pi}f^\prime (\theta)e^{-in\theta}d\theta ,
 \end{align*}
@@ -169,7 +267,8 @@ Using [Parseval's identity](https://seanie12.github.io/blog/fourier%20analysis/L
 $$
 \begin{align*}
 1 &=\lVert \{ina_n\}\rVert^2_{\ell^2} + \lVert \{inb_n\}\rVert^2_{\ell_2} \\
-&=\sum_{n=-\infty}^\infty  ina_n (-in\overline{a}_n) +\sum_{n=-\infty}^\infty inb_n(-in\overline{b}_n) \\ &= \sum_{n=-\infty}^\infty \lvert n\rvert^2(\lvert a_n\rvert^2 + \lvert b_n \rvert^2) 
+&=\sum_{n=-\infty}^\infty  ina_n (-in\overline{a}_n) +\sum_{n=-\infty}^\infty inb_n(-in\overline{b}_n) \\
+&= \sum_{n=-\infty}^\infty \lvert n\rvert^2(\lvert a_n\rvert^2 + \lvert b_n \rvert^2). 
 \end{align*}
 $$ 
 
@@ -178,16 +277,53 @@ Now, the area is by definition
 
 $$
 \begin{align*}
-A = \frac{1}{2} 2\pi \left\lvert \frac{1}{2\pi}\int_a^b x(s) y^\prime(s) - y(s)x^\prime(s) ds\right\rvert
+A = \frac{1}{2} 2\pi \left\lvert \frac{1}{2\pi}\int_0^{2\pi} x(s) y^\prime(s) - y(s)x^\prime(s) ds\right\rvert.
 \end{align*}
 $$
 
-Using Parseval Again,  we get
+To apply Parseval to the area term, we use the [polarized Parseval identity](https://seanie12.github.io/blog/fourier%20analysis/L2-recovery/#theorem-polarized-parsevals-identity). If $f$ and $g$ have Fourier coefficients $\hat{f}(n)$ and $\hat{g}(n)$, respectively, then
+
+$$
+\begin{align*}
+\frac{1}{2\pi}\int_0^{2\pi}f(s)\overline{g(s)}ds
+=\sum_{n\in\mathbb{Z}}\hat{f}(n)\overline{\hat{g}(n)}.
+\end{align*}
+$$
+
+This follows from Parseval's identity by polarization. Since $x(s),y(s),x^\prime(s)$ and $y^\prime(s)$ are real-valued,
+
+$$
+\begin{align*}
+\frac{1}{2\pi}\int_0^{2\pi}x(s)y^\prime(s)ds
+&=
+\frac{1}{2\pi}\int_0^{2\pi}x(s)\overline{y^\prime(s)}ds \\
+&=
+\sum_{n\in\mathbb{Z}}a_n\overline{inb_n} \\
+&=
+\sum_{n\in\mathbb{Z}}a_n(-in\overline{b}_n),
+\end{align*}
+$$
+
+and similarly,
+
+$$
+\begin{align*}
+\frac{1}{2\pi}\int_0^{2\pi}y(s)x^\prime(s)ds
+&=
+\frac{1}{2\pi}\int_0^{2\pi}y(s)\overline{x^\prime(s)}ds \\
+&=
+\sum_{n\in\mathbb{Z}}b_n\overline{ina_n} \\
+&=
+\sum_{n\in\mathbb{Z}}b_n(-in\overline{a}_n).
+\end{align*}
+$$
+
+Using polarized Parseval on the area formula, we therefore get
 
 $$
 \begin{align*}
 A &= \pi \left\lvert \sum_{n\in\mathbb{Z}} a_n(-in\overline{b}_n) - b_n(-in\overline{a}_n) \right\rvert \\
-&\leq \pi \sum_{n\in\mathbb{Z}} \lvert n \rvert \lvert a_n\overline{b}_n-\overline{a}_nb_n \rvert 
+&\leq \pi \sum_{n\in\mathbb{Z}} \lvert n \rvert \lvert a_n\overline{b}_n-\overline{a}_nb_n \rvert.
 \end{align*}
 $$
 
@@ -205,7 +341,7 @@ we bound the area
 $$
 \begin{align}
 A &\leq \pi \sum_{n\in\mathbb{Z}} \lvert n \rvert \lvert a_n\overline{b}_n-\overline{a}_nb_n \rvert  \label{eq:6}\\
-&\leq \pi\sum_{n\in\mathbb{Z}} \lvert n \rvert^2 (\lvert a_n \rvert^2+ \lvert b_n \rvert^2) =\pi \label{eq:7}.
+&\leq \pi\sum_{n\in\mathbb{Z}} \lvert n \rvert^2 (\lvert a_n \rvert^2+ \lvert b_n \rvert^2) =\pi. \label{eq:7}
 \end{align}
 $$
 
@@ -227,10 +363,14 @@ Since $x(s)$ and $y(s)$ are real-valued functions,
 
 $$
 \begin{align*}
-\overline{a}_{-n} &= \overline{\frac{1}{2\pi}\int_0^{2\pi} x(s) e^{-ins}ds} 
-= \frac{1}{2\pi}\int_0^{2\pi} x(s) e^{ins}ds = a_n \\
-\overline{b}_{-n} &= \overline{\frac{1}{2\pi}\int_0^{2\pi} y(s) e^{-ins}ds} 
-= \frac{1}{2\pi}\int_0^{2\pi} y(s) e^{ins}ds = b_n.
+\overline{a_n}
+&= \overline{\frac{1}{2\pi}\int_0^{2\pi} x(s) e^{-ins}ds} \\
+&= \frac{1}{2\pi}\int_0^{2\pi} x(s) e^{ins}ds \\
+&= a_{-n}, \\
+\overline{b_n}
+&= \overline{\frac{1}{2\pi}\int_0^{2\pi} y(s) e^{-ins}ds} \\
+&= \frac{1}{2\pi}\int_0^{2\pi} y(s) e^{ins}ds \\
+&= b_{-n}.
 \end{align*}
 $$
 
@@ -260,13 +400,21 @@ $$
 \end{align*}
 $$
 
-i.e., $\lvert \sin(\alpha-\beta)\rvert=1$. So, $\alpha-\beta = k\pi/2$ for some $k\in\mathbb{Z}$. Putting all the pieces together, 
+i.e., $\lvert \sin(\alpha-\beta)\rvert=1$. So,
+
+$$
+\begin{align*}
+\alpha-\beta=\frac{\pi}{2}+k\pi
+\end{align*}
+$$
+
+for some $k\in\mathbb{Z}$. Putting all the pieces together, 
 
 $$
 \begin{align*}
 x(s) &= \frac{1}{2}e^{-i\alpha}e^{-is} + a_0 + \frac{1}{2}e^{i\alpha}e^{is} = a_0 + \cos(\alpha+s) \\
-y(s)&= \frac{1}{2}e^{-i\beta}e^{-is} + a_0 + \frac{1}{2}e^{i\beta}e^{is} = b_0 + \cos(\beta+s)  \\
-&=b_0+ \cos(\alpha - \frac{k\pi}{2} +s) \\
+y(s)&= \frac{1}{2}e^{-i\beta}e^{-is} + b_0 + \frac{1}{2}e^{i\beta}e^{is} = b_0 + \cos(\beta+s)  \\
+&=b_0+ \cos\left(\alpha-\frac{\pi}{2}-k\pi+s\right) \\
 &=b_0 \: \pm \sin(\alpha+s).
 \end{align*}
 $$
