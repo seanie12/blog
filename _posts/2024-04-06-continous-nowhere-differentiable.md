@@ -270,21 +270,76 @@ $$
 \quad(0<\vert  t\vert \leq\pi).
 $$
 
-The first bound follows from the finite Fourier expansion of $F_N$. For the second, when $\vert  t\vert \geq 1/N$, differentiate
+**Proof of the first bound.** The finite Fourier expansion of the Fejér kernel is
 
 $$
-F_N(t)=\frac{1}{N}\left(\frac{\sin(Nt/2)}{\sin(t/2)}\right)^2
+F_N(t)=\sum_{m=-N}^{N}a_m e^{imt},
+\qquad
+a_m:=1-\frac{\vert m\vert }{N}.
 $$
 
-and use $\vert  \sin(t/2)\vert \geq \vert  t\vert /\pi$ to obtain
+For $-N\leq m\leq N$, these coefficients satisfy $0\leq a_m\leq 1$. Differentiating the finite sum gives
 
 $$
-\vert  F_N'(t)\vert 
-\leq C\left(\frac{1}{\vert  t\vert ^2}+\frac{1}{N\vert  t\vert ^3}\right)
-\leq\frac{A}{\vert  t\vert ^2}.
+F_N'(t)=\sum_{m=-N}^{N}im a_m e^{imt}.
 $$
 
-For $0<\vert  t\vert <1/N$, the first bound implies the second after increasing $A$ if necessary.
+Since $\vert e^{imt}\vert =1$, the triangle inequality yields
+
+$$
+\begin{aligned}
+\left\vert F_N'(t)\right\vert
+&\leq\sum_{m=-N}^{N}\vert m\vert a_m\\
+&\leq\sum_{m=-N}^{N}\vert m\vert\\
+&=N(N+1)\\
+&\leq 2N^2.
+\end{aligned}
+$$
+
+**Proof of the second bound.** For $0<\vert t\vert\leq\pi$, use the explicit formula
+
+$$
+F_N(t)=\frac{1}{N}\frac{\sin^2(Nt/2)}{\sin^2(t/2)}.
+$$
+
+Differentiating with the product and chain rules gives
+
+$$
+\begin{aligned}
+F_N'(t)
+&=\frac{\sin(Nt/2)\cos(Nt/2)}{\sin^2(t/2)}\\
+&\quad-\frac{\sin^2(Nt/2)\cos(t/2)}{N\sin^3(t/2)}.
+\end{aligned}
+$$
+
+We use $\vert\cos u\vert\leq 1$ and the estimates
+
+$$
+\sin^2(Nt/2)
+\leq\vert\sin(Nt/2)\vert
+\leq\frac{N\vert t\vert}{2},
+$$
+
+and
+
+$$
+\vert\sin(t/2)\vert\geq c\vert t\vert,
+\qquad c:=\frac{1}{\pi}.
+$$
+
+The first estimate uses $\vert\sin u\vert\leq\min\{1,\vert u\vert\}$, and the second holds for $\vert t\vert\leq\pi$. Thus,
+
+$$
+\begin{aligned}
+\left\vert F_N'(t)\right\vert
+&\leq\frac{1}{c^2\vert t\vert^2}
++\frac{1}{N}\frac{N\vert t\vert/2}{c^3\vert t\vert^3}\\
+&=\left(\frac{1}{c^2}+\frac{1}{2c^3}\right)
+\frac{1}{\vert t\vert^2}.
+\end{aligned}
+$$
+
+The factor $1/N$ in the second term cancels the $N$ from the sine estimate. Choosing $A$ large enough proves both bounds with the same constant, independent of $N$ and $t$.
 
 Splitting the integral at $\vert  t\vert =1/N$, we obtain, for $N\geq 2$,
 
