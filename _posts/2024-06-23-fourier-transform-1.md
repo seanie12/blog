@@ -1,581 +1,1356 @@
 ---
-title: "Fourier Transform"
-
+title:  "Fourier Transform"
 categories:
-  - Fourier Analysis
-
+-  Fourier Analysis
 tags:
-  - moderate decrease
-  - Fourier transform 
-  - rapidly decreasing
-
-
-
-toc: true
-toc_sticky: true
-
-use_math : true
-comments : true
-
+-  moderate decrease
+-  Fourier transform
+-  rapidly decreasing
+toc:  true
+toc_sticky:  true
+use_math  :  true
+comments  :  true
 ---
 
-## Definition
-We define (if the limit exists)
+  
 
-$$
-\begin{align*}
-\int_{-\infty}^\infty f(x)dx = \lim_{N\to\infty} \int_{-N}^N f(x)dx
-\end{align*}
-$$
+##  Definition
 
-## Defintion
-Let $f:\mathbb{R}\to\mathbb{C}$ be continuous. If there exists $A>0$ such that 
+For a continuous function $f:\mathbb{R}\to\mathbb{C}$, define
 
-$$
-\begin{align*}
-\lvert f(x)\rvert \leq \frac{A}{1+x^2}
-\end{align*}
-$$
+  
 
-for all $x\in\mathbb{R}$, then we say $f$ is of **moderate decrease** and denote by $\mathcal{M}(\mathbb{R})$ the vector space of such functions.
+$$\begin{align*}\int_{\mathbb{R}}f(x)dx:=\lim_{a\to\infty}\int_{-a}^{0}f(x)dx+\lim_{b\to\infty}\int_{0}^{b}f(x)dx,\end{align*}$$
 
-## Exercise
-Whenever $f\in\mathcal{M}(\mathbb{R})$, its limit 
+  
 
-$$
-\begin{align*}
-\int_{-\infty}^\infty f(x)dx = \lim_{N\to\infty}\int_{-N}^Nf(x)dx
-\end{align*}
-$$
+provided both limits exist. Here, $a$ and $b$ tend to infinity independently.
 
-always exists. 
+  
 
-<*Proof*>
+When this integral exists, it also equals the symmetric limit
 
-For each $N\in\mathbb{N}$, define the integral $I_N=\int_{-N}^Nf(x)dx$. It is well-defined since $f$ is continuous. It suffices to show that $\\{I_N\\}$ is a Cauchy sequence. Let $M,N\in\mathbb{N}$ with $M>N$ be given. Then
+  
 
-$$
-\begin{align*}
-\lvert I_M - I_N\rvert &\leq \left\lvert \int_{N\leq \lvert x \rvert \leq M} f(x) dx\right\rvert \\
-&\leq A \int_{N\leq \lvert x \rvert \leq M} \frac{dx}{1+x^2} \\
-&\leq A \int_{N\leq \lvert x \rvert \leq M} \frac{dx}{x^2} \\
-&=2A\left(\frac{1}{N}-\frac{1}{M}\right) \\
-&\leq \frac{2A}{N}
-\end{align*}
-$$
+$$\begin{align*}\int_{\mathbb{R}}f(x)dx=\lim_{R\to\infty}\int_{-R}^{R}f(x)dx.\end{align*}$$
 
-which goes to $0$ as $N\to\infty$.
-$$\tag*{$\square$}$$
+  
 
-## Proposition (Properties of the improper integral)
-Let $f,g\in\mathcal{M}(\mathbb{R})$, and $\alpha,\beta\in\mathbb{C}$. Then
+The converse requires care. A symmetric limit alone is called a **Cauchy principal value** and need not give an improper integral. For example,
 
-(1) linearity
+  
 
-$$\begin{align*}
-\int_{-\infty}^\infty (\alpha f+\beta g)= \alpha \int_{-\infty}^\infty f +\beta\int_{-\infty}^\infty g.
-\end{align*}
-$$
+$$\begin{align*}\int_{-R}^{R}xdx=0,\end{align*}$$
 
-(2) translation invariance
+  
 
-$$\begin{align*}
-\int_{-\infty}^\infty f(x-\alpha)dx = \int_{-\infty}^\infty f(x)dx.
-\end{align*}
-$$
+but the integrals over the positive and negative half-lines do not converge separately. The decay assumptions below will guarantee absolute convergence, so this distinction will cause no difficulty for the functions we study.
 
+  
 
-(3) scaling under dilations
+##  Definition
 
-Given any $\delta>0$,
+  
 
-$$
-\begin{align*}
-\delta\int_{-\infty}^\infty f(\delta x) dx = \int_{-\infty}^\infty f(x)dx.
-\end{align*}
-$$
+A continuous function $f:\mathbb{R}\to\mathbb{C}$ is of **moderate decrease** if there is a constant $A>0$ such that
 
+  
 
-(4) continuity
+$$\begin{align*}\lvert f(x)\rvert\leq\frac{A}{1+x^2}\end{align*}$$
 
-$$
-\begin{align*}
-\lim_{h\to 0}\int_{-\infty}^\infty \lvert f(x-h)-f(x)\rvert dx=0.
-\end{align*}
-$$
+  
+
+for every $x\in\mathbb{R}$. Write $\mathcal{M}(\mathbb{R})$ for the vector space of these functions. The denominator controls both regions: it stays positive near the origin and behaves like $x^2$ far away.
+
+  
+
+##  Exercise
+
+Every $f\in\mathcal{M}(\mathbb{R})$ is absolutely integrable. In particular, its improper integral exists.
+
+  
 
 <*Proof*>
 
-(1) 
+  
 
-Since $f,g\in\mathcal{M}(\mathbb{R})$ and 
-$$
-\begin{align*}
-\int_{-N}^N \alpha f +\beta g = \alpha \int_{-N}^Nf + \beta \int_{-N}^Ng ,
-\end{align*}
-$$
+Suppose $f\in\mathcal{M}(\mathbb{R})$. Since
 
-$$
-\begin{align*}
-\lim_{N\to\infty}\left(\alpha\int_{-N}^Nf + \beta\int_{-N}^Ng \right) &=\lim_{N\to\infty}\alpha \int_{-N}^Nf+\lim_{N\to\infty}\beta\int_{-N}^Ng \\
-&=\alpha\lim_{N\to\infty}\int_{-N}^Nf + \beta\lim_{N\to\infty}\int_{-N}^Ng \\
-&=\alpha \int_{-\infty}^\infty f+\beta\int_{-\infty}^\infty g.
-\end{align*}
-$$
+  
 
-(2) It suffices to show that 
+$$\begin{align*}\int_{-R}^{R}\lvert f(x)\rvert dx\leq A\int_{-R}^{R}\frac{dx}{1+x^2}=2A\arctan R\leq A\pi,\end{align*}$$
 
-$$
-\lim_{N\to\infty}\left(\int_{-N}^N f(x-\alpha) dx -\int_{-N}^Nf(x) dx \right) =0.
-$$
+  
 
-With change of variables,
+the integrals of $\lvert f\rvert$ on each half-line are increasing and bounded. Thus
 
-$$
-\begin{align*}
-\int_{-N}^N f(x-\alpha)-f(x)dx &= \int_{-N-\alpha}^{N-\alpha} f(x) dx - \int_{-N}^N f(x)dx \\
-&= \int_{-N-\alpha}^{-N} f(x) dx + \int_{N-\alpha}^N f(x)dx. 
-\end{align*}
-$$
+  
 
-Take $N>2\alpha$. Then
+$$\begin{align*}\lVert f\rVert_1:=\int_{\mathbb{R}}\lvert f(x)\rvert dx\leq A\pi.\end{align*}$$
 
-$$
-\begin{align*}
-\left\lvert\int_{-N-\alpha}^{-N} f(x) dx + \int_{N-\alpha}^N f(x)dx\right\rvert &\leq \int_{-2N}^{-N} \lvert f(x)\rvert dx + \int_{\frac{N}{2}}^N \lvert f(x)\rvert dx \\
-&\leq \int_{\frac{N}{2}\leq \lvert x\rvert \leq 2N} \lvert f(x)\rvert dx \\
-&\leq  \int_{\frac{N}{2}\leq \lvert x\rvert \leq 2N} \frac{A}{x^2}dx \\
-&=2A\left(-\frac{1}{2N} + \frac{2}{N}\right) \\
-&=\frac{3A}{N} \to 0 \text{ as } N\to\infty.
-\end{align*}
-$$
+  
 
-(3)  With change of variables,
+This is **absolute integrability**. It also guarantees convergence of the integral of $f$: differences of truncated integrals are bounded by integrals of $\lvert f\rvert$ over their tails, which tend to zero.
 
-$$
-\begin{align*}
-\delta \int_{-N}^N f(\delta x) dx = \int_{-\delta N}^{\delta N} f(x)dx.
-\end{align*}
-$$
+  
 
-Thus, 
+More explicitly, for every $R>0$,
 
-$$
-\begin{align*}
-\lim_{N\to\infty} \delta\int_{-N}^N f(\delta x) dx = \int_{-\infty}^\infty f(x)dx
-\end{align*}
-$$
+  
 
-(4) Given $\epsilon>0$, we want to show that there exists $H>0$ such that  if $\lvert h \rvert < H$, then
+$$\begin{align*}\int_{\lvert x\rvert>R}\lvert f(x)\rvert dx&\leq A\int_{\lvert x\rvert>R}\frac{dx}{x^2}\\&=2A\int_R^\infty\frac{dx}{x^2}=\frac{2A}{R}.\end{align*}$$
 
-$$
-\begin{align*}
-\lim_{N\to\infty} \int_{-N}^N \lvert f(x-h)-f(x)\rvert dx <\epsilon.
-\end{align*}
-$$
+  
 
-Without loss of generality, we take $\lvert h \rvert\leq1$. 
+Here and below, an integral over $\lvert x\rvert>R$ means the sum of the two tail integrals. This estimate tells us exactly how a large interval captures almost all of the integral. For example,
 
-Note that 
+  
 
-$$
-\begin{align*}
-\int_{\lvert x \rvert \geq N_0} \lvert f\rvert &\leq 2\int_{x  \geq N_0} \frac{A}{1+x^2}dx \\
-&\leq2A\int_{x\geq N_0}\frac{dx}{x^2} \\
-&=2A \lim_{M\to\infty} \int_{N_0}^M \frac{dx}{x^2} \\
-&=2A \lim_{M\to\infty}\left(\frac{1}{N_0}-\frac{1}{M}\right) \\
-&=\frac{2A}{N_0}.
-\end{align*}
-$$
+$$\begin{align*}\left\lvert\int_{\mathbb{R}}f(x)dx-\int_{-R}^{R}f(x)dx\right\rvert\leq\frac{2A}{R}.\end{align*}$$
 
+  
 
-Similarly, 
+$$\begin{align*}\square\end{align*}$$
 
-$$
-\begin{align*}
-\int_{N_0}^M \lvert f(x-h)\rvert dx &\leq \int_{ N_0}^M \frac{A}{1+(x-h)^2}dx \\
-&=A\int_{N_0-h}^{M-h}\frac{dx}{1+x^2} \\
-&\leq A \int_{N_0-h}^{M-h} \frac{dx}{x^2} \\
-&=A\left(\frac{1}{N_0-h} -\frac{1}{M-h}\right)
-\end{align*}
-$$
+  
 
-We take $N_0$ large enough that 
+##  Proposition (Properties of the improper integral)
 
-$$
-\begin{align*}
-\int_{\lvert x \rvert \geq N_0} \lvert f\rvert \leq \frac{\epsilon}{4} \text{ and } \int_{\lvert x \rvert \geq N_0} \lvert f(x-h)\rvert dx \leq \frac{\epsilon}{4}.
-\end{align*}
-$$
+  
 
-Since $f$ is continuous, it is uniformly continuous on $[-N_0-1, N_0+1]$. Thus, we can choose $H$ such that if $h<H$,
+Let $f,g\in\mathcal{M}(\mathbb{R})$, $\alpha,\beta\in\mathbb{C}$, $a\in\mathbb{R}$, and $\delta>0$. Then
 
-$$
-\begin{align*}
-\lvert f(x-h) - f(x) \rvert < \frac{\epsilon}{4N_0} \text{ for all } \lvert x\rvert \leq N_0.
-\end{align*}
-$$
+  
 
-This implies that 
+(1) Linearity:
 
-$$
-\begin{align*}
-\sup_{\lvert x \rvert \leq N_0}\lvert f(x-h) - f(x) \rvert < \frac{\epsilon}{4N_0}.
-\end{align*}
-$$
+  
 
-Then for any $N>N_0$, we get 
+$$\begin{align*}\int_{\mathbb{R}}(\alpha f+\beta g)=\alpha\int_{\mathbb{R}}f+\beta\int_{\mathbb{R}}g.\end{align*}$$
 
-$$
-\begin{align*}
-\int_{-N}^N \lvert f(x-h)-f(x)\rvert dx & = \int_{-N_0}^{N_0} \lvert f(x-h)-f(x)\rvert dx + \int_{N_0 \leq \lvert x \rvert \leq N} \lvert f(x-h)-f(x)\rvert dx \\
-&\leq \int_{-N_0}^{N_0} \lvert f(x-h)-f(x)\rvert dx + \int_{\lvert x \rvert \geq N_0} \lvert f \rvert +\int_{\lvert x \rvert \geq N_0} \lvert f(x-h)\rvert dx \\
-&\leq \frac{\epsilon}{2} +\frac{\epsilon}{4} + \frac{\epsilon}{4} = \epsilon.
-\end{align*}
-$$
+  
 
-$$\tag*{$\square$}$$
+(2) Translation invariance:
 
-## Definition
-Given $f\in\mathcal{M}(\mathbb{R})$, we define the **Fourier transform** $\hat{f}$ of $f$ by
+  
 
-$$
-\begin{align*}
-\hat{f}(\xi) = \int_{-\infty}^\infty f(x) e^{-2\pi ix\xi}dx
-\end{align*}
-$$
+$$\begin{align*}\int_{\mathbb{R}}f(x-a)dx=\int_{\mathbb{R}}f(x)dx.\end{align*}$$
 
+  
 
-## Definition
-We call a function **rapidly decreasing* if for every $k\geq0$, we have
+(3) Scaling under dilations:
 
-$$
-\begin{align*}
-\sup_{x\in\mathbb{R}} \lvert x \rvert^k \lvert f(x) \rvert <\infty,
-\end{align*}
-$$
+  
 
-the function *shrinks faster* than the reciprocal of any polynomial function.
+$$\begin{align*}\delta\int_{\mathbb{R}}f(\delta x)dx=\int_{\mathbb{R}}f(x)dx.\end{align*}$$
 
+  
 
-## Definition 
-Let $f$ be an infinitely differentiable $(\mathscr{C}^\infty)$ function. If $f$ and all of its derivatives are rapidly decreasing, we call $f$ a **Schwartz class** function and write $f\in\mathcal{S}(\mathbb{R})$.
+(4) Continuity under translation:
 
-## Proposition
-Let $f\in\mathcal{S}(\mathbb{R}), h\in\mathbb{R}$, and $\delta >0$. Then 
+  
 
-(1) $f(x+h)\longrightarrow\hat{f}(\xi)e^{2\pi i h \xi}$ (translation becomes modulation
+$$\begin{align*}\lim_{h\to0}\int_{\mathbb{R}}\lvert f(x-h)-f(x)\rvert dx=0.\end{align*}$$
 
-(2) $f(x)e^{-2\pi i xh}\longrightarrow \hat{f}(\xi+h)$
-
-(3) $f(\delta x) \longrightarrow \delta^{-1} \hat{f}(\delta^{-1}\xi)$ (dilation)
-
-(4) $f^\prime(x) \longrightarrow 2\pi i\xi \hat{f}(\xi)$ (differentiation becomes polynomial multiplication)
-
-(5) $-2\pi i x f(x) \longrightarrow \frac{d}{d\xi} \hat{f}(\xi)$
+  
 
 <*Proof*>
 
-(1) 
+  
 
-$$
-\begin{align*}
-\int_{-\infty}^\infty f(x+h)e^{-2\pi i x \xi} dx &= \int_{-\infty}^\infty f(x) e^{2\pi ih\xi} e^{-2\pi i x \xi} dx \text{ (by change of the variable)} \\
-&=e^{2\pi i h \xi} \hat{f}(\xi)
-\end{align*}
-$$
+(1) Linearity.
 
-(2) 
+  
 
-$$
-\begin{align*}
-\int_{-\infty}^\infty f(x) e^{-2\pi ixh} e^{-2\pi ix \xi}dx &= \int_{-\infty}^\infty  f(x) e^{-2\pi ix (h+\xi)}dx = \hat{f}(\xi+h)
-\end{align*}
-$$
+For $\alpha,\beta\in\mathbb{C}$,
 
-(3) 
+  
 
-$$
-\begin{align*}
-\int_{-\infty}^\infty f(\delta x) e^{-2\pi i x \xi}dx = \int_{-\infty}^\infty \delta^{-1}f(x) e^{-2\pi i \delta^{-1} x \xi}dx = \delta^{-1} \hat{f}(\delta^{-1} \xi)
-\end{align*}
-$$
+$$\begin{align*}\int_{\mathbb{R}}\bigl(\alpha f(x)+\beta g(x)\bigr)dx=\alpha\int_{\mathbb{R}}f(x)dx+\beta\int_{\mathbb{R}}g(x)dx.\end{align*}$$
 
+  
 
-(4) 
+Indeed, if $f$ and $g$ have decay constants $A_f$ and $A_g$, then
 
-$$
-\begin{align*}
-\int_{-N}^N f^\prime(x) e^{-2\pi ix\xi} dx &= [f(x) e^{-2\pi i x\xi}]_{-N}^N + 2\pi i \xi \int_{-N}^N f(x) e^{-2\pi i x \xi}dx \\
-&\to 2\pi i \xi \hat{f}(\xi) \text{ as } N\to\infty.
-\end{align*}
-$$
+  
 
-(5) We must show that $\hat{f}$ is differentiable and find its derivative. Let $\epsilon$ be given and consider
+$$\begin{align*}\lvert\alpha f(x)+\beta g(x)\rvert\leq\frac{\lvert\alpha\rvert A_f+\lvert\beta\rvert A_g}{1+x^2}.\end{align*}$$
 
-$$
-\begin{align*}
-\left\lvert\frac{\hat{f}(\xi +h) -\hat{f}(\xi)}{h} - \widehat{-2\pi i x f}(\xi)\right\rvert &= \left\lvert \int_\mathbb{R} f(x) \frac{1}{h}\left( e^{-2\pi  ix(\xi +h)}-e^{-2\pi i x \xi}\right) dx+ \int_{\mathbb{R}} 2\pi ixf(x)e^{-2\pi i x \xi} dx\right\rvert \\
-&= \left\lvert \int_{\mathbb{R}} f(x) e^{-2\pi i x \xi} \left( \frac{2^{-2\pi ixh}-1}{h} + 2\pi ix \right) dx\right\rvert
-\end{align*}
-$$
+  
 
-Now, $f(x)$ and $xf(x)$ are both rapidly decreasing, so there exists $N\in\mathbb{N}$ such that 
+Thus the sum is also of moderate decrease. Apply linearity on $[-R,R]$ and take $R\to\infty$; every integral involved converges absolutely.
 
-$$
-\begin{align*}
-\int_{\lvert x \rvert \geq N} \lvert f \rvert < \epsilon \text{ and } \int_{\lvert x \rvert \geq N} \lvert x \rvert \lvert f(x)\rvert dx < \epsilon.
-\end{align*}
-$$
-
-By L'Hôpital's Rule, for each $x_0 \in [-N, N]$, there exists $H>$ such that for $h <\lvert H \rvert$,
-
-$$
-\left \lvert \frac{e^{-2\pi i xh -1}}{h} + 2\pi i x \right\rvert < \frac{\epsilon}{N}.
-$$
-
-For each $x_0\in [-N, N]$, take such small $h_0>0$. Define $g(x) = \frac{e^{-2\pi i xh_0 -1}}{h_0} + 2\pi i x$.  Take 
-
-$$
-\begin{align*}
-\epsilon_0=\min\{\lvert  \epsilon /N - g(x_0) \rvert,\lvert g(x_0) + \epsilon / N \rvert \}. 
-\end{align*}
-$$
-
- Then by continuity of $g$, there exists $\delta_0>0$ such that 
-
-$$
-\begin{align*}
-x\in N_{\delta_0}(x_0) \Rightarrow  \lvert g(x) \rvert < \frac{\epsilon}{N}.
-\end{align*}
-$$
-
-Now cover the compact set $[-N, N]$ with the open set $\bigcup_{x_0\in [-N, N]}N_{\delta_0}(x_0)$. By the compactness, we can choose finite open sets to cover $[-N, N]$.  Then take the minimum $h_0$. Then for $0< h < h_0$, which is independent of $x$,  we get the following inequality
-
-$$
-\left \lvert \frac{e^{-2\pi i xh -1}}{h} + 2\pi i x \right\rvert < \frac{\epsilon}{N}.
-$$
-
-for $x\in [-N, N]$.
-
-Note that 
-
-$$
-\begin{align*}
-\lvert e^{ix} -1 \rvert &= \lvert \cos x -1 + i \sin x \rvert \\
-&= \lvert  -1 + 1- 2\sin^2(x/2) + i 2\sin(x/2)\cos(x/2) \rvert  \\
-&=\lvert 2\sin(x/2) (i\cos(x/2) -\sin(x/2)) \rvert \\
-&=2\lvert \sin(x/2) \rvert.
-\end{align*}
-$$
-
-With the equality, outside of $\lvert x \rvert \leq N$,  we have the bound
-
-$$
-\begin{align*}
-\left\lvert \frac{e^{-2\pi i x h}-1}{h} + 2\pi i x \right\rvert & \leq \left \lvert \frac{e^{-2\pi i x h}-1}{h} \right \rvert + \lvert 2\pi x \rvert \\
-&= \left\lvert \frac{2\sin(-\pi i xh)}{h} \right\rvert +  2\pi \lvert x \rvert  \\
-&\leq A + 2\pi \lvert x \rvert 
-\end{align*} 
-$$
-
-since $\frac{\sin h}{h}$ is bounded. Thus we have 
+  
 
 
-$$
-\begin{align*}
-\left\lvert\frac{\hat{f}(\xi +h) -\hat{f}(\xi)}{h} - \widehat{-2\pi i x f}(\xi)\right\rvert &\leq \int_{-N}^N \left\lvert f(x) e^{-2\pi ix \xi}\left(\frac{e^{-2\pi ix h}-1}{h} + 2\pi i x\right) \right\rvert dx + C\epsilon \\
-&\leq C^\prime \epsilon
-\end{align*}
-$$
+(2) Translation invariance.
 
-$$\tag*{$\square$}$$
+  
 
-## Definition
-We call $f(x)=e^{-x^2}$ the **Gaussian**.
+Let $f:\mathbb{R}\to\mathbb{C}$ be continuous and suppose that
 
-## Remark
-The Gaussian is a Schwartz class function. In fact $e^{-ax^2}$ is in $\mathcal{S}(\mathbb{R})$ for all $a>0$. The choice $a=\pi$ is particular because
+  
 
-$$
-\begin{align*}
-\left(\int_{-\infty}^\infty e^{-\pi x^2} dx \right)^2 &= \left(\int_{-\infty}^\infty e^{-\pi y^2}dy \right)\cdot \left(\int_{-\infty}^\infty e^{-\pi x^2}dx \right) \\
-&= \int_{-\infty}^\infty \int_{-\infty}^\infty e^{-\pi(x^2 + y^2)} dxdy \\
-&=\int_{0}^{2\pi} \int_0^\infty e^{-\pi r^2}r dr d\theta \\
-&=\int_0^\infty 2\pi r e^{-\pi r^2} dr \\
-&=\int_0^{\infty} e^{-x} dx =1
-\end{align*}
-$$
+$$\lvert f(x)\rvert\leq\frac{A}{1+x^2}$$
 
-## Theorem 
-Let $f(x)=e^{-\pi x^2}$. Then $\hat{f}=f$.
+  
+
+for some $A>0$ and every $x\in\mathbb{R}$. We prove that, for every real shift $a$,
+
+  
+
+$$\int_{\mathbb{R}}f(x-a)dx=\int_{\mathbb{R}}f(x)dx.$$
+
+  
 
 <*Proof*>
 
-Let 
+  
 
-$$
-\begin{align*}
-F(\xi) :=\hat{f}(\xi)=\int_{-\infty}^\infty e^{-\pi x^2} e^{-2\pi ix\xi}dx.
-\end{align*}
-$$
+First, $f$ is absolutely integrable because
 
-Then by property (5) in [Proposition](https://seanie12.github.io/blog/fourier%20analysis/fourier-transform-1/#proposition), we have
+  
 
-$$
-\begin{align*}
-F^\prime(\xi) &= \int_{-\infty}^\infty (-2\pi i x)e^{-\pi x^2} e^{-2\pi i x \xi} dx \\
-&=i \int_{-\infty}^\infty f^\prime(x) e^{-2\pi i x \xi} dx \\
-&=i 2\pi i\xi\hat{f}(\xi) =-2\pi\xi F(\xi).
-\end{align*}
-$$
+$$\int_{\mathbb{R}}\lvert f(u)\rvert du\leq A\int_{\mathbb{R}}\frac{du}{1+u^2}=A\pi<\infty.$$
 
-If we define $G(\xi)=F(\xi)e^{\pi\xi^2}$, its derivative is
+  
 
-$$
-\begin{align*}
-G^\prime(\xi)=F^\prime(\xi)e^{\pi\xi^2} + F(\xi)2\xi\pi e^{\pi\xi^2} =-2\pi\xi F(\xi)e^{\pi\xi^2} + 2\pi\xi F(\xi)e^{\pi\xi^2}=0.
-\end{align*}
-$$
+Write $I=\int_{\mathbb{R}}f(u)du$.
 
-That is $G(\xi)$ is constant function. Note that $G(0)=F(0)=1$, which implies that 
+  
 
-$$
-\begin{align*}
-F(\xi)=e^{-\pi\xi^2}=f(\xi).
-\end{align*}
-$$
+For a finite $R$, the substitution $u=x-a$ gives
 
-$$\tag*{$\square$}$$
+  
 
-## Corollary
-For $\delta>0$, let $K_\delta$ denote a dilated (by $\sqrt{\delta}$) Gaussian:
+$$\int_{-R}^{R}f(x-a)dx=\int_{-R-a}^{R-a}f(u)du.$$
 
-$$
-\begin{align*}
-K_\delta(x) &= \delta^{-1/2}f(\delta^{-1/2}x)\\
-&=\delta^{-1/2}e^{-\pi x^2/\delta}.
-\end{align*}
-$$
+  
 
-Then, by the interaction of dilation and Fourier transform, 
+We are now integrating the same function over a shifted interval. As $R$ increases, its left endpoint tends to $-\infty$ and its right endpoint tends to $+\infty$. Thus the interval still captures more and more of the whole integral.
 
-$$
-\begin{align*}
-\widehat{K_\delta}(\xi) = \hat{f}(\delta^{1/2}\xi)=e^{-\pi\delta\xi^2}.
-\end{align*}
-$$
+  
+
+To make this precise, the difference from $I$ consists of the two missing tails:
+
+  
+
+$$I-\int_{-R-a}^{R-a}f(u)du=\int_{-\infty}^{-R-a}f(u)du+\int_{R-a}^{\infty}f(u)du.$$
+
+  
+
+If $R>\lvert a\rvert$, then
+
+  
+
+$$-R-a\leq-(R-\lvert a\rvert),R-a\geq R-\lvert a\rvert.$$
+
+  
+
+In other words, the shifted interval contains $[-(R-\lvert a\rvert),R-\lvert a\rvert]$. Every missing point therefore satisfies $\lvert u\rvert>R-\lvert a\rvert$. By the triangle inequality and the decay assumption,
+
+  
+
+$$\begin{aligned}\left\lvert I-\int_{-R}^{R}f(x-a)dx\right\rvert&\leq\int_{\lvert u\rvert>R-\lvert a\rvert}\lvert f(u)\rvert du\\&\leq A\int_{\lvert u\rvert>R-\lvert a\rvert}\frac{du}{u^2}\\&=2A\int_{R-\lvert a\rvert}^{\infty}\frac{du}{u^2}\\&=\frac{2A}{R-\lvert a\rvert}\longrightarrow0.\end{aligned}$$
+
+  
+
+Here $a$ is fixed, so $R-\lvert a\rvert\to\infty$. This shows that the symmetric integrals of the shifted function approach $I$.
+
+  
+
+Finally, its ordinary improper integral also exists. Applying the same substitution to the absolute value gives
+
+  
+
+$$\int_{-R}^{R}\lvert f(x-a)\rvert dx=\int_{-R-a}^{R-a}\lvert f(u)\rvert du\leq A\pi.$$
+
+  
+
+The integrals of $\lvert f(x-a)\rvert$ on each half-line are increasing and bounded above by $A\pi$, so both converge. Thus $f(x-a)$ is absolutely integrable, and its improper integral equals its symmetric limit. Therefore,
+
+  
+
+$$\int_{\mathbb{R}}f(x-a)dx=\lim_{R\to\infty}\int_{-R}^{R}f(x-a)dx=I=\int_{\mathbb{R}}f(x)dx.$$
+
+  
+
+$$\square$$
+
+  
+
+(3) Scaling under dilations.
+
+  
+
+For $\delta>0$,
+
+  
+
+$$\begin{align*}\int_{\mathbb{R}}f(\delta x)dx=\frac{1}{\delta}\int_{\mathbb{R}}f(u)du.\end{align*}$$
+
+  
+
+The scaled function is of moderate decrease because
+
+  
+
+$$\begin{align*}\lvert f(\delta x)\rvert\leq\frac{A}{1+\delta^2x^2}\leq\frac{A\max\{1,\delta^{-2}\}}{1+x^2}.\end{align*}$$
+
+  
+
+On a finite interval, the substitution $u=\delta x$ gives
+
+  
+
+$$\begin{align*}\int_{-R}^{R}f(\delta x)dx=\frac{1}{\delta}\int_{-\delta R}^{\delta R}f(u)du.\end{align*}$$
+
+  
+
+Let $R\to\infty$. The factor $1/\delta$ compensates for compressing the graph horizontally by a factor of $\delta$.
+
+  
+
+(4) Continuity under translation in the integral.
+
+  
+
+We claim that
+
+  
+
+$$\begin{align*}\lim_{h\to0}\int_{\mathbb{R}}\lvert f(x-h)-f(x)\rvert dx=0.\end{align*}$$
+
+  
+
+Pointwise continuity says that the integrand tends to zero for each fixed $x$. To control its integral over an infinite interval, we split the real line into a bounded interval and two tails.
+
+  
+
+**Step 1: control both tails uniformly for small translations.**
+
+  
+
+Restrict to $\lvert h\rvert\leq1$ and choose $R>1$. If $\lvert x\rvert>R$, then the reverse triangle inequality gives
+
+  
+
+$$\begin{align*}\lvert x-h\rvert\geq\lvert x\rvert-\lvert h\rvert>R-1.\end{align*}$$
+
+  
+
+Thus, after substituting $u=x-h$,
+
+  
+
+$$\begin{align*}\int_{\lvert x\rvert>R}\lvert f(x-h)\rvert dx&\leq\int_{\lvert u\rvert>R-1}\lvert f(u)\rvert du\\&\leq\frac{2A}{R-1}.\end{align*}$$
+
+  
+
+Together with the unshifted tail estimate, this gives
+
+  
+
+$$\begin{align*}\int_{\lvert x\rvert>R}\lvert f(x-h)-f(x)\rvert dx&\leq\frac{2A}{R-1}+\frac{2A}{R}\\&\leq\frac{4A}{R-1}.\end{align*}$$
+
+  
+
+The bound does not depend on the particular $h$ as long as $\lvert h\rvert\leq1$. The condition $R>1$ simply ensures that $R-1$ is positive: a shift of at most $1$ can bring a point at most $1$ unit closer to the origin.
+
+  
+
+Given $\varepsilon>0$, choose
+
+  
+
+$$\begin{align*}R>1+\frac{8A}{\varepsilon}.\end{align*}$$
+
+  
+
+The tail contribution is then less than $\varepsilon/2$.
+
+  
+
+**Step 2: control the bounded interval by uniform continuity.**
+
+  
+
+For $\lvert x\rvert\leq R$ and $\lvert h\rvert\leq1$, both $x$ and $x-h$ belong to $[-R-1,R+1]$. Since $f$ is continuous on this closed bounded interval, it is uniformly continuous there. Therefore, there is an $\eta>0$ such that
+
+  
+
+$$\begin{align*}u,v\in[-R-1,R+1],\lvert u-v\rvert<\eta\Longrightarrow\lvert f(u)-f(v)\rvert<\frac{\varepsilon}{4R}.\end{align*}$$
+
+  
+
+If $\lvert h\rvert<\min\{1,\eta\}$, then
+
+  
+
+$$\begin{align*}\int_{-R}^{R}\lvert f(x-h)-f(x)\rvert dx&\leq2R\sup_{\lvert x\rvert\leq R}\lvert f(x-h)-f(x)\rvert\\&\leq\frac{\varepsilon}{2}.\end{align*}$$
+
+  
+
+Combining the two regions gives a total smaller than $\varepsilon$. The order matters: **first choose $R$ to control the tails, then choose $h$ to control the fixed bounded interval.**
+
+  
+
+$$\begin{align*}\square\end{align*}$$
+
+  
+
+##  Definition
+
+  
+
+For $f\in\mathcal{M}(\mathbb{R})$, define its **Fourier transform** by
+
+  
+
+$$\begin{align*}\widehat f(\xi)=\int_{\mathbb{R}}f(x)e^{-2\pi ix\xi}dx,\xi\in\mathbb{R}.\end{align*}$$
+
+  
+
+Euler's formula gives
+
+  
+
+$$\begin{align*}e^{-2\pi ix\xi}=\cos(2\pi x\xi)-i\sin(2\pi x\xi).\end{align*}$$
+
+  
+
+For fixed $\xi$, this factor oscillates as $x$ varies. Its absolute value is always $1$, so multiplying by it does not affect absolute integrability:
+
+  
+
+$$\begin{align*}\int_{\mathbb{R}}\lvert f(x)e^{-2\pi ix\xi}\rvert dx=\lVert f\rVert_1<\infty.\end{align*}$$
+
+  
+
+In particular, the Fourier transform is well-defined and bounded:
+
+  
+
+$$\begin{align*}\lvert\widehat f(\xi)\rvert\leq\lVert f\rVert_1\text{for every }\xi\in\mathbb{R}.\end{align*}$$
+
+  
+
+##  Remark
+
+  
+
+We will repeatedly use
+
+  
+
+$$\begin{align*}\lvert e^{iu}-1\rvert\leq\lvert u\rvert(u\in\mathbb{R}).\end{align*}$$
+
+  
+
+Geometrically, $1$ and $e^{iu}$ lie on the unit circle. Their straight-line distance is no greater than the length $\lvert u\rvert$ of the circular path joining them, including any full turns.
+
+  
+
+Here is an algebraic derivation. By the fundamental theorem of calculus,
+
+  
+
+$$\begin{align*}e^{iu}-1=\int_0^1\frac{d}{dt}e^{itu}dt=iu\int_0^1e^{itu}dt.\end{align*}$$
+
+  
+
+Taking absolute values and using $\lvert e^{itu}\rvert=1$ gives
+
+  
+
+$$\begin{align*}\lvert e^{iu}-1\rvert\leq\lvert u\rvert\int_0^11dt=\lvert u\rvert.\end{align*}$$
+
+  
+
+The same bound can be recognized from
+
+  
+
+$$\begin{align*}\lvert e^{iu}-1\rvert=2\lvert\sin(u/2)\rvert\leq\lvert u\rvert.\end{align*}$$
+
+  
+
+The useful general idea is that **a difference can be bounded by integrating the derivative**.
+
+  
+
+##  Proposition
+
+The Fourier transform of a function in $\mathcal{M}(\mathbb{R})$ is uniformly continuous.
+
+  
 
 <*Proof*>
 
-$$
-\begin{align*}
-\widehat{K_\delta(\xi)} &= \widehat{\delta^{-1/2}f(\delta^{-1/2}\xi)} \\
-&=\delta^{-1/2} \delta^{1/2}\hat{f}(\delta^{1/2}\xi) \\
-&=\hat{f}(\delta^{1/2}\xi)
-\end{align*}
-$$
+  
 
-$$\tag*{$\square$}$$
+For any $\xi,h\in\mathbb{R}$,
 
-## Theorem 
-$\\{K_\delta\\}_{\delta>0}$ is an approximation of the identity as $\delta \to 0$.
+  
 
-$$
-\begin{align}
-\int_{-\infty}^\infty K_\delta(x) dx =1 \\
-\int_{-\infty}^\infty \lvert K_\delta(x) \rvert dx  < M \\
-\int_{\lvert x \rvert > \eta} \lvert K_\delta (x)\rvert dx \to 0 \text{ as } \delta \to 0
-\end{align}
-$$
+$$\begin{align*}\widehat f(\xi+h)-\widehat f(\xi)=\int_{\mathbb{R}}f(x)e^{-2\pi ix\xi}\bigl(e^{-2\pi ixh}-1\bigr)dx.\end{align*}$$
+
+  
+
+On $\lvert x\rvert\leq R$, use the exponential bound:
+
+  
+
+$$\begin{align*}\lvert e^{-2\pi ixh}-1\rvert\leq2\pi\lvert x\rvert\lvert h\rvert\leq2\pi R\lvert h\rvert.\end{align*}$$
+
+  
+
+On $\lvert x\rvert>R$, use the triangle inequality:
+
+  
+
+$$\begin{align*}\lvert e^{-2\pi ixh}-1\rvert\leq2.\end{align*}$$
+
+  
+
+Consequently,
+
+  
+
+$$\begin{align*}\lvert\widehat f(\xi+h)-\widehat f(\xi)\rvert\leq2\pi R\lvert h\rvert\lVert f\rVert_1+2\int_{\lvert x\rvert>R}\lvert f(x)\rvert dx.\end{align*}$$
+
+  
+
+Given $\varepsilon>0$, first choose $R\geq1$ so that the tail integral is less than $\varepsilon/4$. Then choose
+
+  
+
+$$\begin{align*}\lvert h\rvert<\frac{\varepsilon}{4\pi R(1+\lVert f\rVert_1)}.\end{align*}$$
+
+  
+
+Both terms together are less than $\varepsilon$. Since the bound is independent of $\xi$, this proves that $\widehat f$ is **uniformly continuous** on $\mathbb{R}$.
+
+  
+
+$$\begin{align*}\square\end{align*}$$
+
+  
+
+##  Definition
+
+  
+
+A continuous function $f:\mathbb{R}\to\mathbb{C}$ is **rapidly decreasing** if, for every integer $k\geq0$,
+
+  
+
+$$\begin{align*}\sup_{x\in\mathbb{R}}\lvert x\rvert^k\lvert f(x)\rvert<\infty.\end{align*}$$
+
+  
+
+For $k=0$, the weight is understood to be $1$. This condition says that we can multiply $f$ by any fixed power of $\lvert x\rvert$ and still obtain a bounded function.
+
+  
+
+It also implies that $\lvert x\rvert^k\lvert f(x)\rvert\to0$ as $\lvert x\rvert\to\infty$. Indeed, the condition for $k+1$ gives a constant $C_{k+1}$ such that
+
+  
+
+$$\begin{align*}\lvert x\rvert^k\lvert f(x)\rvert\leq\frac{C_{k+1}}{\lvert x\rvert}(\lvert x\rvert\geq1).\end{align*}$$
+
+  
+
+Rapid decrease implies moderate decrease. If
+
+  
+
+$$\begin{align*}B_0=\sup_x\lvert f(x)\rvert,B_2=\sup_x\lvert x\rvert^2\lvert f(x)\rvert,\end{align*}$$
+
+  
+
+then
+
+  
+
+$$\begin{align*}(1+x^2)\lvert f(x)\rvert\leq B_0+B_2.\end{align*}$$
+
+  
+
+More generally, every polynomially weighted function $x^mf(x)$ is rapidly decreasing, since its $k$th weighted bound is one of the bounds for $f$. In particular,
+
+  
+
+$$\begin{align*}\int_{\mathbb{R}}\lvert x\rvert^m\lvert f(x)\rvert dx<\infty(m=0,1,2,\ldots).\end{align*}$$
+
+  
+
+##  Definition
+
+  
+
+An infinitely differentiable function $f$ belongs to the **Schwartz class**  $\mathcal{S}(\mathbb{R})$ if every derivative is rapidly decreasing. Equivalently,
+
+  
+
+$$\begin{align*}\sup_{x\in\mathbb{R}}\lvert x\rvert^k\lvert f^{(m)}(x)\rvert<\infty\text{for all integers }k,m\geq0.\end{align*}$$
+
+  
+
+Thus $f$, its derivatives, and their polynomially weighted versions are absolutely integrable. These bounds justify the operations used below.
+
+  
+
+##  Proposition
+
+  
+
+Let $f\in\mathcal{S}(\mathbb{R})$, $h\in\mathbb{R}$, and $\delta>0$. With the Fourier convention above, we have
+
+  
+
+$$\begin{align*}\mathcal{F}[f(\cdot+h)](\xi)&=e^{2\pi ih\xi}\widehat f(\xi),\\\mathcal{F}[f(\cdot)e^{-2\pi ih(\cdot)}](\xi)&=\widehat f(\xi+h),\\\mathcal{F}[f(\delta\cdot)](\xi)&=\delta^{-1}\widehat f(\xi/\delta),\\\widehat{f'}(\xi)&=2\pi i\xi\widehat f(\xi),\\\widehat{-2\pi i(\cdot)f}(\xi)&=\frac{d}{d\xi}\widehat f(\xi).\end{align*}$$
+
+  
+
+Here, $\mathcal{F}[g]=\widehat g$, and the dot denotes the input variable. For example, $\widehat{xf}(\xi)$ below means the Fourier transform of the function $x\mapsto xf(x)$, evaluated at $\xi$.
+
+  
+
+The first three identities follow from changes of variables or combining exponentials. The last two explain the relationship between differentiation and multiplication.
+
+  
 
 <*Proof*>
 
-(1)  By setting $x/\sqrt{\delta}=t$, we get
-$$
-\begin{align*}
-\int_{-\infty}^\infty \frac{1}{\delta} \exp\left(\frac{-\pi x^2}{\delta}\right) dx 
-&= \int_{-\infty}^\infty \exp(-\pi t^2) dt =1
-\end{align*}
-$$
+  
 
-(2) Since $K_\delta(x) >0$ for all $x\in\mathbb{R}$, 
+(1) Translation becomes modulation.
 
-$$
-\begin{align*}
-\int_{-\infty}^\infty \left\lvert K_\delta(x)\right\rvert dx=\int_{-\infty}^\infty K_\delta(x) dx=1.
-\end{align*}
-$$
+  
 
-(3)  Since $e^{-\pi x^2}$ is decreasing rapidly,
+Set $u=x+h$, so $x=u-h$. Then
 
+  
 
-$$
-\begin{align*}
-\int_{\lvert x \rvert > \eta} \frac{1}{\sqrt{\delta}} \exp\left(-\frac{-\pi x^2}{\delta}\right) = \int_{\lvert y \rvert > \frac{\eta}{\sqrt{\delta}}} e^{-\pi y^2}dy \to 0 \text{ as } \to 0.
-\end{align*}
-$$
+$$\begin{align*}\mathcal{F}[f(\cdot+h)](\xi)&=\int_{\mathbb{R}}f(x+h)e^{-2\pi ix\xi}dx\\&=\int_{\mathbb{R}}f(u)e^{-2\pi i(u-h)\xi}du\\&=e^{2\pi ih\xi}\int_{\mathbb{R}}f(u)e^{-2\pi iu\xi}du\\&=e^{2\pi ih\xi}\widehat f(\xi).\end{align*}$$
 
-## Definition
-Given $f,g\in\mathcal{S}(\mathbb{R})$, we deinfe the **convolution** $f*g$ by
+  
 
-$$
-\begin{align*}
-(f*g)(x) = \int_{-\infty}^\infty f(x-t) g(t) dt
-\end{align*}
-$$
+A shift in the original function introduces a phase factor in its Fourier transform. Absolute convergence justifies the substitution on the whole real line.
 
-## Corollary 
-Given any $f\in\mathcal{S}(\mathbb{R})$, 
+  
 
-$$
-\begin{align*}
-\lim_{\delta\to0^+} f * K_\delta(x) = f(x)
-\end{align*}
-$$
+(2) Modulation becomes translation.
 
-uniformly.
+  
+
+Multiplying two exponentials adds their exponents:
+
+  
+
+$$\begin{align*}\mathcal{F}[f(\cdot)e^{-2\pi ih(\cdot)}](\xi)&=\int_{\mathbb{R}}f(x)e^{-2\pi ixh}e^{-2\pi ix\xi}dx\\&=\int_{\mathbb{R}}f(x)e^{-2\pi ix(\xi+h)}dx\\&=\widehat f(\xi+h).\end{align*}$$
+
+  
+
+Thus multiplying $f$ by an oscillation shifts the frequency argument of its transform.
+
+  
+
+(3) Dilation reverses the frequency scale.
+
+  
+
+Set $u=\delta x$, so $dx=du/\delta$. Then
+
+  
+
+$$\begin{align*}\mathcal{F}[f(\delta\cdot)](\xi)&=\int_{\mathbb{R}}f(\delta x)e^{-2\pi ix\xi}dx\\&=\frac{1}{\delta}\int_{\mathbb{R}}f(u)e^{-2\pi iu(\xi/\delta)}du\\&=\frac{1}{\delta}\widehat f(\xi/\delta).\end{align*}$$
+
+  
+
+If $\delta>1$, the original function is compressed horizontally. Its transform is stretched horizontally, with a compensating factor $1/\delta$.
+
+  
+
+(4) Differentiation becomes multiplication.
+
+  
+
+For a finite $R$, integration by parts gives
+
+  
+
+$$\begin{align*}\int_{-R}^{R}f'(x)e^{-2\pi ix\xi}dx&=\left[f(x)e^{-2\pi ix\xi}\right]_{-R}^{R}\\&+2\pi i\xi\int_{-R}^{R}f(x)e^{-2\pi ix\xi}dx.\end{align*}$$
+
+  
+
+Since $f$ is rapidly decreasing, $f(R)$ and $f(-R)$ tend to zero. More precisely,
+
+  
+
+$$\begin{align*}\left\lvert\left[f(x)e^{-2\pi ix\xi}\right]_{-R}^{R}\right\rvert\leq\lvert f(R)\rvert+\lvert f(-R)\rvert\longrightarrow0.\end{align*}$$
+
+  
+
+Both $f$ and $f'$ are absolutely integrable, so taking $R\to\infty$ yields
+
+  
+
+$$\begin{align*}\widehat{f'}(\xi)=2\pi i\xi\widehat f(\xi).\end{align*}$$
+
+  
+
+The factor $2\pi i\xi$ comes from differentiating the exponential during integration by parts.
+
+  
+
+(5) Multiplication becomes differentiation.
+
+  
+
+We now prove
+
+  
+
+$$\begin{align*}\widehat f'(\xi)=-2\pi i\widehat{xf}(\xi)=\int_{\mathbb{R}}(-2\pi ix)f(x)e^{-2\pi ix\xi}dx.\end{align*}$$
+
+  
+
+Formally, this is what we get by differentiating $e^{-2\pi ix\xi}$ with respect to $\xi$. To justify differentiating the improper integral, we must show that its difference quotient approaches the claimed derivative.
+
+  
+
+**Step 1: isolate the error.**
+
+  
+
+For $h\neq0$, define
+
+  
+
+$$\begin{align*}R_h(x):=\frac{e^{-2\pi ixh}-1}{h}+2\pi ix.\end{align*}$$
+
+  
+
+Linearity of absolutely convergent integrals gives
+
+  
+
+$$\begin{align*}\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\widehat{xf}(\xi)&=\int_{\mathbb{R}}f(x)e^{-2\pi ix\xi}R_h(x)dx.\end{align*}$$
+
+  
+
+Therefore,
+
+  
+
+$$\begin{align*}\left\lvert\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\widehat{xf}(\xi)\right\rvert\leq\int_{\mathbb{R}}\lvert f(x)\rvert\lvert R_h(x)\rvert dx.\end{align*}$$
+
+  
+
+Our task is to make the integral on the right small.
+
+  
+
+**Step 2: predict the useful bound from cancellation.**
+
+  
+
+Taylor expansion suggests why the error is small. In
+
+  
+
+$$\begin{align*}e^{-2\pi ixh}=1-2\pi ixh+\frac{(-2\pi ixh)^2}{2}+\cdots,\end{align*}$$
+
+  
+
+subtracting $1$ and adding $2\pi ixh$ cancels the constant and linear terms. The numerator of $R_h(x)$ should therefore have size $x^2h^2$, and division by $h$ suggests a bound proportional to $x^2\lvert h\rvert$.
+
+  
+
+This is a way to discover the estimate. We next prove it exactly, without assuming that an omitted Taylor remainder is small uniformly in $x$.
+
+  
+
+**Step 3: derive the explicit bound.**
+
+  
+
+Apply the fundamental theorem of calculus in the parameter $t$:
+
+  
+
+$$\begin{align*}e^{-2\pi ixh}-1=-2\pi ixh\int_0^1e^{-2\pi ixht}dt.\end{align*}$$
+
+  
+
+After dividing by $h$ and adding $2\pi ix$,
+
+  
+
+$$\begin{align*}R_h(x)=2\pi ix\int_0^1\bigl(1-e^{-2\pi ixht}\bigr)dt.\end{align*}$$
+
+  
+
+Use $\lvert1-e^{iu}\rvert\leq\lvert u\rvert$, already proved above:
+
+  
+
+$$\begin{align*}\lvert R_h(x)\rvert&\leq2\pi\lvert x\rvert\int_0^1\lvert1-e^{-2\pi ixht}\rvert dt\\&\leq2\pi\lvert x\rvert\int_0^12\pi\lvert x\rvert\lvert h\rvert tdt\\&=2\pi^2x^2\lvert h\rvert.\end{align*}$$
+
+  
+
+In particular, on a fixed interval $[-R,R]$,
+
+  
+
+$$\begin{align*}\sup_{\lvert x\rvert\leq R}\lvert R_h(x)\rvert\leq2\pi^2R^2\lvert h\rvert.\end{align*}$$
+
+  
+
+The same choice of $h$ works for every $x$ in the interval. This explicitly proves the uniform convergence that a pointwise limit alone would not establish.
+
+  
+
+**Step 4: obtain a bound for the tails that is independent of $h$.**
+
+  
+
+For any real $x$ and any $h\neq0$,
+
+  
+
+$$\begin{align*}\lvert R_h(x)\rvert&\leq\frac{\lvert e^{-2\pi ixh}-1\rvert}{\lvert h\rvert}+2\pi\lvert x\rvert\\&\leq2\pi\lvert x\rvert+2\pi\lvert x\rvert\\&=4\pi\lvert x\rvert.\end{align*}$$
+
+  
+
+This estimate holds for every nonzero $h$, so the outside part does not require a small-$h$ approximation. Its advantage is that it uses only the integrable weight $\lvert x\rvert\lvert f(x)\rvert$.
+
+  
+
+**Step 5: combine the bounds and choose the parameters.**
+
+  
+
+Splitting at $R\geq1$ gives
+
+  
+
+$$\begin{align*}\int_{\mathbb{R}}\lvert f(x)\rvert\lvert R_h(x)\rvert dx&=\int_{-R}^{R}\lvert f(x)\rvert\lvert R_h(x)\rvert dx+\int_{\lvert x\rvert>R}\lvert f(x)\rvert\lvert R_h(x)\rvert dx\\&\leq2\pi^2R^2\lvert h\rvert\int_{-R}^{R}\lvert f(x)\rvert dx+4\pi\int_{\lvert x\rvert>R}\lvert x\rvert\lvert f(x)\rvert dx\\&\leq2\pi^2R^2\lvert h\rvert\lVert f\rVert_1+4\pi\int_{\lvert x\rvert>R}\lvert x\rvert\lvert f(x)\rvert dx.\end{align*}$$
+
+  
+
+Given $\varepsilon>0$, choose $R\geq1$ large enough that
+
+  
+
+$$\begin{align*}\int_{\lvert x\rvert>R}\lvert x\rvert\lvert f(x)\rvert dx<\frac{\varepsilon}{8\pi}.\end{align*}$$
+
+  
+
+Such an $R$ exists because $xf(x)$ is absolutely integrable. The outside term is then less than $\varepsilon/2$, independently of $h$.
+
+  
+
+With this $R$ fixed, choose
+
+  
+
+$$\begin{align*}0<\lvert h\rvert<\frac{\varepsilon}{4\pi^2R^2(1+\lVert f\rVert_1)}.\end{align*}$$
+
+  
+
+Then the inside term is less than $\varepsilon/2$. Therefore the difference quotient approaches the claimed derivative. Every estimate is also independent of $\xi$.
+
+  
+
+**A useful shortcut for Schwartz functions.** Since $x^2f(x)$ is absolutely integrable, the stronger estimate from Step 3 can also be integrated over the whole line:
+
+  
+
+$$\begin{align*}\left\lvert\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\widehat{xf}(\xi)\right\rvert\leq2\pi^2\lvert h\rvert\int_{\mathbb{R}}x^2\lvert f(x)\rvert dx\longrightarrow0.\end{align*}$$
+
+  
+
+Thus, in the Schwartz setting, we can even finish without splitting the integral. The longer proof shows how to proceed with only $f$ and $xf$ absolutely integrable, and explains the inside-versus-outside argument used elsewhere in this post.
+
+  
+
+$$\begin{align*}\square\end{align*}$$
+
+  
+
+##  Definition
+
+  
+
+A **Gaussian** is a function of the form
+
+  
+
+$$\begin{align*}g_a(x)=e^{-ax^2},a>0.\end{align*}$$
+
+  
+
+##  Remark
+
+**Schwartz class.**
+
+  
+
+Repeated differentiation gives a polynomial times the same Gaussian:
+
+  
+
+$$\begin{align*}g_a^{(m)}(x)=P_m(x)e^{-ax^2}.\end{align*}$$
+
+  
+
+To see this, start with $P_0(x)=1$. If the formula holds for $m$, the product rule gives
+
+  
+
+$$\begin{align*}P_{m+1}(x)=P_m'(x)-2axP_m(x),\end{align*}$$
+
+  
+
+which is again a polynomial.
+
+  
+
+It remains to explain why the exponential dominates any polynomial. For any nonnegative integer $q$, choose an integer $n$ with $2n>q$. The exponential series, whose terms are nonnegative for $ax^2\geq0$, gives
+
+  
+
+$$\begin{align*}e^{ax^2}\geq\frac{(ax^2)^n}{n!}.\end{align*}$$
+
+  
+
+Hence, for $\lvert x\rvert\geq1$,
+
+  
+
+$$\begin{align*}\lvert x\rvert^qe^{-ax^2}\leq\frac{n!}{a^n}\lvert x\rvert^{q-2n}\longrightarrow0.\end{align*}$$
+
+  
+
+This expression is also bounded on $[-1,1]$ by continuity. Applying the bound to each term of $x^kP_m(x)$ shows that every derivative is rapidly decreasing. Therefore,
+
+  
+
+$$\begin{align*}g_a\in\mathcal{S}(\mathbb{R}).\end{align*}$$
+
+  
+
+**Normalization.**
+
+  
+
+Let
+
+  
+
+$$\begin{align*}I=\int_{\mathbb{R}}e^{-\pi x^2}dx.\end{align*}$$
+
+  
+
+The integral exists because the Gaussian is rapidly decreasing. We will show that $I=1$.
+
+  
+
+The familiar idea is to square the one-dimensional integral and switch to polar coordinates. To justify the unbounded regions carefully, first work with bounded squares and disks. Let
+
+  
+
+$$\begin{align*}Q_R=[-R,R]^2,D_R=\{(x,y):x^2+y^2\leq R^2\}.\end{align*}$$
+
+  
+
+On the square, ordinary iterated integration of a continuous function gives
+
+  
+
+$$\begin{align*}\iint_{Q_R}e^{-\pi(x^2+y^2)}dxdy=\left(\int_{-R}^{R}e^{-\pi x^2}dx\right)^2.\end{align*}$$
+
+  
+
+On the disk, polar coordinates give
+
+  
+
+$$\begin{align*}\iint_{D_R}e^{-\pi(x^2+y^2)}dxdy&=\int_0^{2\pi}\int_0^Re^{-\pi r^2}rdrd\theta\\&=2\pi\int_0^Re^{-\pi r^2}rdr\\&=1-e^{-\pi R^2}.\end{align*}$$
+
+  
+
+The factor $r$ is the polar-coordinate area factor. Since
+
+  
+
+$$\begin{align*}D_R\subseteq Q_R\subseteq D_{\sqrt{2}R},\end{align*}$$
+
+  
+
+and the integrand is nonnegative,
+
+  
+
+$$\begin{align*}1-e^{-\pi R^2}\leq\left(\int_{-R}^{R}e^{-\pi x^2}dx\right)^2\leq1-e^{-2\pi R^2}.\end{align*}$$
+
+  
+
+Both outer expressions tend to $1$. Thus $I^2=1$, and $I>0$ gives
+
+  
+
+$$\begin{align*}\int_{\mathbb{R}}e^{-\pi x^2}dx=1.\end{align*}$$
+
+  
+
+$$\begin{align*}\square\end{align*}$$
+
+  
+
+##  Theorem
+
+Let $g(x)=e^{-\pi x^2}$. Then $\widehat{g}=g$.
+
+  
 
 <*Proof*>
 
-**Step 1**. we show that $f$ is uniformly continuous on  all of $\mathbb{R}$. Given $\epsilon >0$, there exists $N\in\mathbb{N}$ such that 
+  
 
-$$
-\begin{align*}
-\lvert x \rvert >N \Rightarrow \lvert f(x) \rvert < \frac{\epsilon}{2}.
-\end{align*}
-$$
+Set
 
-since $f\in\mathcal{S}(\mathbb{R})$.  Thus, for any $x,y$ with $\lvert x \rvert, \lvert y \rvert >N$, 
+  
 
-$$
-\begin{align*}
-\lvert f(x) - f(y) \rvert < \epsilon.
-\end{align*}
-$$
-For $x\in [-N, N]$ (compact set), $f$ is continuous, $f$ is uniformly continuous. Combining these, $f$ is uniformly continuous on all of $\mathbb{R}$.
+$$\begin{align*}g(x)=e^{-\pi x^2},F(\xi)=\widehat g(\xi).\end{align*}$$
 
-**Step2**.  Choose $\eta >0$ such that 
+  
 
-$$
-\begin{align*}
-\lvert t \rvert \leq \eta \Rightarrow \lvert f(x-t) - f(x) \rvert < \epsilon.
-\end{align*}
-$$
+The key observation is that differentiating a Gaussian gives a multiple of $x$ times the same Gaussian:
 
-With the given $\eta>0$,
+  
 
-$$
-\begin{align*}
-\left \lvert (f*K_\delta)(x) - f(x)\right\rvert &=\left \lvert \int_{-\infty}^\infty K_\delta(t) \left( f(x-t) - f(x) \right) dt \right\rvert \\
-&\leq \int_{\lvert t \rvert < \eta} \underbrace{K_\delta(t)}_\text{bounded} \underbrace{\left\lvert f(x-t) - f(x)\right\rvert}_\text{uniform continuity} dt + \int_{\lvert t \rvert \geq \eta } \underbrace{K_\delta(t)}_\text{good kernel} \underbrace{\left\lvert f(x-t) -f(x)\right\rvert}_\text{bounded} dt \\
-&\to 0 \text{ as } \eta \to 0 \text{ and } \delta \to 0^+.
-\end{align*}
-$$
+$$\begin{align*}g'(x)=-2\pi xg(x).\end{align*}$$
 
-Therefore,  $f*K_\delta \rightrightarrows f \text{ as } \delta \to0^+$.
+  
 
-$$\tag*{$\square$}$$
-## Reference
-- Elias M. Stein and  Rami Shakarchi **『**Fourier Analysis: An Introduction**』**
-- **[Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing)**
+Our two differentiation identities translate this into an equation for $F$:
+
+  
+
+$$\begin{align*}F'(\xi)&=\widehat{-2\pi i(\cdot)g}(\xi)\\&=i\widehat{g'}(\xi)\\&=i(2\pi i\xi)\widehat g(\xi)\\&=-2\pi\xi F(\xi).\end{align*}$$
+
+  
+
+To solve this equation, multiply by $e^{\pi\xi^2}$, whose derivative cancels the term on the right:
+
+  
+
+$$\begin{align*}\frac{d}{d\xi}\bigl(e^{\pi\xi^2}F(\xi)\bigr)&=e^{\pi\xi^2}\bigl(2\pi\xi F(\xi)+F'(\xi)\bigr)\\&=0.\end{align*}$$
+
+  
+
+Thus $e^{\pi\xi^2}F(\xi)$ is constant. At $\xi=0$,
+
+  
+
+$$\begin{align*}F(0)=\int_{\mathbb{R}}e^{-\pi x^2}dx=1.\end{align*}$$
+
+  
+
+Therefore,
+
+  
+
+$$\begin{align*}\widehat g(\xi)=e^{-\pi\xi^2}=g(\xi).\end{align*}$$
+
+  
+
+The calculation avoids directly integrating an oscillating Gaussian. Instead, it shows that the Fourier transform satisfies the same differential equation and initial value as the Gaussian itself.
+
+  
+
+$$\begin{align*}\square\end{align*}$$
+
+  
+
+##  Corollary
+
+  
+
+For $\delta>0$, define
+
+  
+
+$$\begin{align*}K_\delta(x)=\delta^{-1/2}g(x/\sqrt{\delta})=\frac{1}{\sqrt{\delta}}e^{-\pi x^2/\delta}.\end{align*}$$
+
+  
+
+As $\delta$ decreases, the kernel becomes narrower and taller. Its horizontal scale is $\sqrt{\delta}$, and the factor $1/\sqrt{\delta}$ keeps its total integral equal to $1$.
+
+  
+
+<*Proof*>
+
+  
+
+The dilation identity gives
+
+  
+
+$$\begin{align*}\widehat{K_\delta}(\xi)&=\delta^{-1/2}\frac{1}{\delta^{-1/2}}\widehat g\bigl(\xi/\delta^{-1/2}\bigr)\\&=\widehat g(\sqrt{\delta}\xi)\\&=e^{-\pi\delta\xi^2}.\end{align*}$$
+
+  
+
+$$\begin{align*}\square\end{align*}$$
+
+  
+
+##  Theorem
+
+The Gaussian kernels $\{K_\delta\}_{\delta>0}$ form an approximate identity as $\delta\to0^+$.
+
+  
+
+A family of absolutely integrable kernels $\{K_\delta\}_{\delta>0}$ is an **approximate identity** as $\delta\to0^+$ if:
+
+  
+
+1. Each kernel has total integral $1$.
+
+2. There is a constant $C$, independent of $\delta$, such that $\int_{\mathbb{R}}\lvert K_\delta(x)\rvert dx\leq C$.
+
+3. For every fixed $\eta>0$, the absolute mass outside $[-\eta,\eta]$ tends to zero.
+
+  
+
+The first property preserves constants when averaging. The second controls the total size of the averaging weights. The third says that those weights become concentrated near the origin.
+
+  
+
+<*Proof*>
+
+  
+
+We verify all three properties for the Gaussian kernels.
+
+  
+
+**Total integral.** Substitute $u=x/\sqrt{\delta}$, so $dx=\sqrt{\delta}du$:
+
+  
+
+$$\begin{align*}\int_{\mathbb{R}}K_\delta(x)dx&=\int_{\mathbb{R}}\frac{1}{\sqrt{\delta}}e^{-\pi x^2/\delta}dx\\&=\int_{\mathbb{R}}e^{-\pi u^2}du=1.\end{align*}$$
+
+  
+
+**Uniform bound on the absolute integral.** Since $K_\delta(x)>0$,
+
+  
+
+$$\begin{align*}\int_{\mathbb{R}}\lvert K_\delta(x)\rvert dx=\int_{\mathbb{R}}K_\delta(x)dx=1.\end{align*}$$
+
+  
+
+Thus we may take $C=1$ for every $\delta>0$.
+
+  
+
+**Concentration near the origin.** For any fixed $\eta>0$, the same substitution gives
+
+  
+
+$$\begin{align*}\int_{\lvert x\rvert>\eta}K_\delta(x)dx=\int_{\lvert u\rvert>\eta/\sqrt{\delta}}e^{-\pi u^2}du.\end{align*}$$
+
+  
+
+The threshold $\eta/\sqrt{\delta}$ tends to infinity as $\delta\to0^+$. We are therefore integrating over tails farther and farther from the origin, so the integral tends to zero.
+
+  
+
+There is also an explicit bound. For $L>0$, symmetry and $u/L\geq1$ when $u\geq L$ give
+
+  
+
+$$\begin{align*}\int_{\lvert u\rvert>L}e^{-\pi u^2}du&=2\int_L^\infty e^{-\pi u^2}du\\&\leq\frac{2}{L}\int_L^\infty ue^{-\pi u^2}du\\&=\frac{e^{-\pi L^2}}{\pi L}.\end{align*}$$
+
+  
+
+Setting $L=\eta/\sqrt{\delta}$ yields
+
+  
+
+$$\begin{align*}\int_{\lvert x\rvert>\eta}K_\delta(x)dx\leq\frac{\sqrt{\delta}}{\pi\eta}e^{-\pi\eta^2/\delta}\longrightarrow0.\end{align*}$$
+
+  
+
+This proves that the Gaussian kernels form an approximate identity.
+
+  
+
+$$\begin{align*}\square\end{align*}$$
+
+  
+
+##  Definition
+
+  
+
+For $f,g\in\mathcal{S}(\mathbb{R})$, define their **convolution** by
+
+  
+
+$$\begin{align*}(f*g)(x)=\int_{\mathbb{R}}f(x-t)g(t)dt.\end{align*}$$
+
+  
+
+For each fixed $x$, this integral converges absolutely, because $f$ is bounded and $g$ is absolutely integrable:
+
+  
+
+$$\begin{align*}\int_{\mathbb{R}}\lvert f(x-t)g(t)\rvert dt\leq\lVert f\rVert_\infty\lVert g\rVert_1<\infty,\end{align*}$$
+
+  
+
+where $\lVert f\rVert_\infty=\sup_{x\in\mathbb{R}}\lvert f(x)\rvert$.
+
+  
+
+In particular, $(f*K_\delta)(x)$ is a weighted average of values of $f$ near $x$. As $K_\delta$ concentrates near $t=0$, the values being averaged should approach $f(x)$.
+
+  
+
+##  Corollary
+
+  
+
+For every $f\in\mathcal{S}(\mathbb{R})$,
+
+  
+
+$$\begin{align*}\lim_{\delta\to0^+}\sup_{x\in\mathbb{R}}\lvert(f*K_\delta)(x)-f(x)\rvert=0.\end{align*}$$
+
+  
+
+<*Proof*>
+
+  
+
+We give both an averaging argument and a quantitative estimate.
+
+  
+
+**Step 1: obtain a uniform continuity bound.**
+
+  
+
+Since $f'$ is rapidly decreasing, it is bounded. Set
+
+  
+
+$$\begin{align*}L=\lVert f'\rVert_\infty<\infty.\end{align*}$$
+
+  
+
+For any $x,t\in\mathbb{R}$, the fundamental theorem of calculus gives
+
+  
+
+$$\begin{align*}f(x-t)-f(x)=-t\int_0^1f'(x-st)ds.\end{align*}$$
+
+  
+
+Hence
+
+  
+
+$$\begin{align*}\lvert f(x-t)-f(x)\rvert\leq L\lvert t\rvert.\end{align*}$$
+
+  
+
+This proves uniform continuity on the whole real line, with the same bound for every $x$. Also, with $B=\lVert f\rVert_\infty$,
+
+  
+
+$$\begin{align*}\lvert f(x-t)-f(x)\rvert\leq2B.\end{align*}$$
+
+  
+
+**Step 2: split the average into nearby and distant values.**
+
+  
+
+Because $\int_{\mathbb{R}}K_\delta(t)dt=1$,
+
+  
+
+$$\begin{align*}(f*K_\delta)(x)-f(x)=\int_{\mathbb{R}}K_\delta(t)\bigl(f(x-t)-f(x)\bigr)dt.\end{align*}$$
+
+  
+
+For any $\eta>0$, positivity of $K_\delta$ and the two bounds above imply
+
+  
+
+$$\begin{align*}\lvert(f*K_\delta)(x)-f(x)\rvert&\leq\int_{\lvert t\rvert\leq\eta}K_\delta(t)L\lvert t\rvert dt+\int_{\lvert t\rvert>\eta}K_\delta(t)2Bdt\\&\leq L\eta+2B\int_{\lvert t\rvert>\eta}K_\delta(t)dt.\end{align*}$$
+
+  
+
+Neither term depends on $x$. Given $\varepsilon>0$, first choose
+
+  
+
+$$\begin{align*}\eta=\frac{\varepsilon}{2(1+L)}.\end{align*}$$
+
+  
+
+Then $L\eta<\varepsilon/2$. With this $\eta$ fixed, concentration of the kernels gives a $\delta_0>0$ such that, whenever $0<\delta<\delta_0$,
+
+  
+
+$$\begin{align*}\int_{\lvert t\rvert>\eta}K_\delta(t)dt<\frac{\varepsilon}{4(1+B)}.\end{align*}$$
+
+  
+
+The distant contribution is then less than $\varepsilon/2$ as well. This proves uniform convergence. Here the order is **first choose the neighborhood size $\eta$, then choose $\delta$ so that almost all the kernel mass lies in that neighborhood**.
+
+  
+
+Notice that the height of $K_\delta$ is not bounded independently of $\delta$: $K_\delta(0)=\delta^{-1/2}$. What controls the nearby contribution is its total integral, which is $1$.
+
+  
+
+**An explicit convergence rate.** For these Gaussian kernels, we can integrate the bound $L\lvert t\rvert$ directly:
+
+  
+
+$$\begin{align*}\lvert(f*K_\delta)(x)-f(x)\rvert&\leq L\int_{\mathbb{R}}\lvert t\rvert K_\delta(t)dt\\&=L\sqrt{\delta}\int_{\mathbb{R}}\lvert u\rvert e^{-\pi u^2}du\\&=2L\sqrt{\delta}\int_0^\infty ue^{-\pi u^2}du\\&=\frac{L\sqrt{\delta}}{\pi}.\end{align*}$$
+
+  
+
+Therefore,
+
+  
+
+$$\begin{align*}\sup_{x\in\mathbb{R}}\lvert(f*K_\delta)(x)-f(x)\rvert\leq\frac{\lVert f'\rVert_\infty}{\pi}\sqrt{\delta}.\end{align*}$$
+
+  
+
+The bound has a direct interpretation: $\lVert f'\rVert_\infty$ controls how quickly $f$ can change, while $\sqrt{\delta}/\pi$ is the average distance from the origin under the Gaussian kernel. Their product controls the averaging error.
+
+  
+
+$$\begin{align*}\square\end{align*}$$
+
+  
+
+##  Reference
+
+  
+
+- Elias M. Stein and Rami Shakarchi, *Fourier Analysis: An Introduction*.
+
+-  [Math 139 Fourier Analysis Notes](https://drive.google.com/file/d/1f1pp1QkF0BqqLELBrKyk69X0ofd3SjdR/view?usp=sharing).
