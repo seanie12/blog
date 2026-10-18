@@ -213,7 +213,7 @@ $$
 The scaled function is of moderate decrease because
 
 $$
-\lvert f(\delta x)\rvert\leq\frac{A}{1+\delta^2x^2}\leq\frac{A\max\{1,\delta^{-2}\}}{1+x^2}.
+\lvert f(\delta x)\rvert\leq\frac{A}{1+\delta^2x^2}\leq\frac{A\max\lbrace 1,\delta^{-2}\rbrace}{1+x^2}.
 $$
 
 On a finite interval, the substitution $u=\delta x$ gives
@@ -234,6 +234,18 @@ $$
 
 Pointwise continuity says that the integrand tends to zero for each fixed $x$. To control its integral over an infinite interval, we split the real line into a bounded interval and two tails.
 
+The split is at $R$ in the original variable $x$:
+
+$$
+\begin{aligned}
+\int_{\mathbb{R}}\lvert f(x-h)-f(x)\rvert dx
+&=\int_{-R}^{R}\lvert f(x-h)-f(x)\rvert dx\\
+&\quad+\int_{\lvert x\rvert>R}\lvert f(x-h)-f(x)\rvert dx.
+\end{aligned}
+$$
+
+In particular, the region $R-1\leq\lvert x\rvert\leq R$ belongs to the first integral and is controlled by Step 2. No region is omitted.
+
 **Step 1: control both tails uniformly for small translations.**
 
 Restrict to $\lvert h\rvert\leq1$ and choose $R>1$. If $\lvert x\rvert>R$, then the reverse triangle inequality gives
@@ -251,6 +263,8 @@ $$
 &\leq\frac{2A}{R-1}.
 \end{aligned}
 $$
+
+Here $R-1$ is a cutoff for the new variable $u=x-h$. The substitution sends the original tail $\lvert x\rvert>R$ to the region $\lvert u+h\rvert>R$, which is contained in $\lvert u\rvert>R-1$. We enlarge the region of integration to obtain an upper bound for the nonnegative integrand. This does not change the original split at $\lvert x\rvert=R$.
 
 Together with the unshifted tail estimate, this gives
 
@@ -281,7 +295,7 @@ u,v\in[-R-1,R+1],\quad\lvert u-v\rvert<\eta
 \Longrightarrow\lvert f(u)-f(v)\rvert<\frac{\varepsilon}{4R}.
 $$
 
-If $\lvert h\rvert<\min\{1,\eta\}$, then
+If $\lvert h\rvert<\min\lbrace 1,\eta\rbrace$, then
 
 $$
 \begin{aligned}
@@ -729,7 +743,7 @@ The integral exists because the Gaussian is rapidly decreasing. We will show tha
 The familiar idea is to square the one-dimensional integral and switch to polar coordinates. To justify the unbounded regions carefully, first work with bounded squares and disks. Let
 
 $$
-Q_R=[-R,R]^2,\qquad D_R=\{(x,y):x^2+y^2\leq R^2\}.
+Q_R=[-R,R]^2,\qquad D_R=\lbrace (x,y):x^2+y^2\leq R^2\rbrace.
 $$
 
 On the square, ordinary iterated integration of a continuous function gives
@@ -852,9 +866,9 @@ $$
 
 ## Theorem
 
-The Gaussian kernels $\{K_\delta\}_{\delta>0}$ form an approximate identity as $\delta\to0^+$.
+The Gaussian kernels $\lbrace K_\delta\rbrace_{\delta>0}$ form an approximate identity as $\delta\to0^+$.
 
-A family of absolutely integrable kernels $\{K_\delta\}_{\delta>0}$ is an **approximate identity** as $\delta\to0^+$ if:
+A family of absolutely integrable kernels $\lbrace K_\delta\rbrace_{\delta>0}$ is an **approximate identity** as $\delta\to0^+$ if:
 
 1. Each kernel has total integral $1$.
 2. There is a constant $C$, independent of $\delta$, such that $\int_{\mathbb{R}}\lvert K_\delta(x)\rvert dx\leq C$.
