@@ -345,7 +345,172 @@ $$
 \qquad(u\in\mathbb{R}).
 $$
 
-Geometrically, $1$ and $e^{iu}$ lie on the unit circle. Their straight-line distance is no greater than the length $\lvert u\rvert$ of the circular path joining them, including any full turns.
+Geometrically, $1=(1,0)$ and $e^{iu}=(\cos u,\sin u)$ lie on the unit circle. For a complex number $a+ib$, its absolute value is $\sqrt{a^2+b^2}$. Therefore, subtracting the two endpoints and taking the absolute value gives their straight-line distance:
+
+$$
+\lvert e^{iu}-1\rvert
+=\lvert(\cos u-1)+i\sin u\rvert
+=\sqrt{(\cos u-1)^2+\sin^2u}.
+$$
+
+Traveling along the unit circle through an angle $u$ radians covers a distance $\lvert u\rvert$, since arc length equals radius times the absolute angle and the radius is $1$. The straight segment between the endpoints cannot be longer than this circular path, so $\lvert e^{iu}-1\rvert\leq\lvert u\rvert$.
+
+Move the slider below to compare the two lengths. Positive angles travel counterclockwise, and negative angles travel clockwise. Try $u=2\pi$: the circular path makes one full turn of length $2\pi$, but its endpoint returns to $1$, so the straight-line distance is zero. For angles larger in magnitude than $2\pi$, the circular path length counts every full turn.
+
+<div id="unit-circle-distance">
+  <style>
+    #unit-circle-distance {
+      --uc-fg: currentColor;
+      --uc-muted: color-mix(in srgb, currentColor 9%, transparent);
+      --uc-line: color-mix(in srgb, currentColor 25%, transparent);
+      --uc-secondary: color-mix(in srgb, currentColor 65%, transparent);
+      --uc-chord: #1875d1;
+      --uc-path: #c46c09;
+      margin: 1.5em 0; font-family: inherit; font-size: 1rem;
+    }
+    #unit-circle-distance *, #unit-circle-distance *::before,
+    #unit-circle-distance *::after { box-sizing: border-box; }
+    #unit-circle-distance h3 { margin: 0 0 1em; font-size: 1.1em; }
+    #unit-circle-distance output { display: inline; color: inherit; }
+    #unit-circle-distance .form-range { display: block; width: 100%; margin: 0; min-height: 32px; accent-color: var(--uc-chord); }
+    #unit-circle-distance .btn { display: inline-block; margin: 0; padding: .45em .7em; min-height: 44px; border: 1px solid var(--uc-line); border-radius: 5px; background: var(--uc-muted); color: inherit; font: inherit; font-size: .9em; cursor: pointer; }
+    #unit-circle-distance .btn:hover { background: color-mix(in srgb, currentColor 16%, transparent); }
+    #unit-circle-distance .btn:focus-visible, #unit-circle-distance input:focus-visible { outline: 2px solid var(--uc-chord); outline-offset: 3px; }
+    #unit-circle-distance .tabular-nums { font-variant-numeric: tabular-nums; }
+    #unit-circle-distance .text-small { font-size: .875em; }
+    #unit-circle-distance .geometry { margin: 0; overflow: visible; }
+    #unit-circle-distance .measure-heading { flex-wrap: wrap; }
+    #unit-circle-distance .measure-name { min-width: 0; }
+    @media (prefers-color-scheme: dark) {
+      #unit-circle-distance { --uc-chord: #60a5fa; --uc-path: #fbbf24; }
+    }
+
+    #unit-circle-distance { color: var(--uc-fg); }
+    #unit-circle-distance .angle-control { display: grid; gap: 8px; }
+    #unit-circle-distance .angle-heading { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    #unit-circle-distance .presets { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    #unit-circle-distance .geometry { width: 100%; display: block; }
+    #unit-circle-distance .geometry text { fill: var(--uc-fg); }
+    #unit-circle-distance .measure { margin-top: 16px; }
+    #unit-circle-distance .measure-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    #unit-circle-distance .measure-name { display: flex; align-items: center; gap: 8px; }
+    #unit-circle-distance .swatch { display: inline-block; width: 22px; height: 3px; flex-shrink: 0; }
+    #unit-circle-distance .track { height: 10px; background: var(--uc-muted); margin-top: 7px; overflow: hidden; }
+    #unit-circle-distance .bar { height: 100%; }
+    #unit-circle-distance .turn-status { margin-top: 14px; }
+  </style>
+  <h3>Chord and circular path</h3>
+  <div class="angle-control">
+    <div class="angle-heading">
+      <label for="uc-angle">Angle u</label>
+      <output id="uc-angle-value" for="uc-angle" class="tabular-nums">2.094 rad</output>
+    </div>
+    <input id="uc-angle" class="form-range" type="range" min="-12.566370614359172" max="12.566370614359172" step="any" value="2.0943951023931953" aria-label="Angle u in radians">
+  </div>
+  <div class="presets" aria-label="Example angles">
+    <button type="button" class="btn" data-angle="1.5707963267948966">u = π/2</button>
+    <button type="button" class="btn" data-angle="3.141592653589793">u = π</button>
+    <button type="button" class="btn" data-angle="6.283185307179586">u = 2π</button>
+    <button type="button" class="btn" data-angle="7.853981633974483">u = 5π/2</button>
+  </div>
+  <noscript><p>The straight segment joins 1 to eⁱᵘ. Its length is |eⁱᵘ − 1|; the circular path has length |u|. Enable JavaScript to move the endpoint.</p></noscript>
+  <svg class="geometry" role="img" aria-label="Unit circle with a straight chord and a circular path joining 1 to e to the power i u"></svg>
+  <div class="measure">
+    <div class="measure-heading">
+      <span class="measure-name"><span class="swatch" style="background: var(--uc-chord);"></span>Straight distance |eⁱᵘ − 1|</span>
+      <output class="tabular-nums" id="uc-chord-value">1.732</output>
+    </div>
+    <div class="track" aria-hidden="true"><div id="uc-chord-bar" class="bar" style="background: var(--uc-chord); width: 13.78%;"></div></div>
+  </div>
+  <div class="measure">
+    <div class="measure-heading">
+      <span class="measure-name"><span class="swatch" style="background: var(--uc-path);"></span>Circular path length |u|</span>
+      <output class="tabular-nums" id="uc-arc-value">2.094</output>
+    </div>
+    <div class="track" aria-hidden="true"><div id="uc-arc-bar" class="bar" style="background: var(--uc-path); width: 16.67%;"></div></div>
+  </div>
+  <div id="uc-turns" class="turn-status text-small" aria-live="polite">0 full turns · 2.094 rad counterclockwise</div>
+  <script>
+    (function () {
+      const root = document.getElementById('unit-circle-distance');
+      const input = root.querySelector('#uc-angle');
+      const svg = root.querySelector('.geometry');
+      const tau = 2 * Math.PI;
+      const ns = 'http://www.w3.org/2000/svg';
+      function el(tag, attrs, text) {
+        const node = document.createElementNS(ns, tag);
+        for (const key in attrs) node.setAttribute(key, attrs[key]);
+        if (text !== undefined) node.textContent = text;
+        svg.appendChild(node);
+        return node;
+      }
+      function draw() {
+        const u = Number(input.value);
+        const a = Math.abs(u);
+        const chord = 2 * Math.abs(Math.sin(u / 2));
+        const width = Math.max(280, root.getBoundingClientRect().width);
+        const height = Math.min(365, width + 35);
+        const cx = width / 2, cy = height / 2;
+        const r = Math.min((width - 112) / 2, (height - 80) / 2);
+        const px = t => cx + r * Math.cos(t);
+        const py = t => cy - r * Math.sin(t);
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
+        svg.replaceChildren();
+        el('title', {}, 'Straight distance versus distance traveled on the unit circle');
+        el('desc', {}, 'Angle ' + u.toFixed(3) + ' radians. Straight distance ' + chord.toFixed(3) + '. Circular path length ' + a.toFixed(3) + '.');
+        el('line', {x1: cx-r-24, y1: cy, x2: cx+r+24, y2: cy, stroke: 'var(--uc-line)', 'stroke-width': 1});
+        el('line', {x1: cx, y1: cy-r-24, x2: cx, y2: cy+r+24, stroke: 'var(--uc-line)', 'stroke-width': 1});
+        el('circle', {cx, cy, r, fill: 'none', stroke: 'var(--uc-line)', 'stroke-width': 1.5});
+        el('line', {x1: cx, y1: cy, x2: px(u), y2: py(u), stroke: 'var(--uc-secondary)', 'stroke-width': 1, 'stroke-dasharray': '4 5'});
+        el('text', {x: cx+9, y: cy+19, 'font-size': 12}, '0');
+        el('text', {x: cx+r+26, y: cy-10, 'text-anchor': 'end', 'font-size': 12}, 'Re');
+        el('text', {x: cx+9, y: cy-r-19, 'font-size': 12}, 'Im');
+        // Multiple complete turns follow the same geometric circle.
+        const count = Math.max(1, Math.ceil(a / 0.035));
+        let path = '';
+        for (let k=0; k<=count; k++) {
+          const t = u*k/count;
+          path += (k ? ' L ' : 'M ') + px(t).toFixed(3) + ' ' + py(t).toFixed(3);
+        }
+        el('path', {d: path, fill: 'none', stroke: 'var(--uc-path)', 'stroke-width': 4, 'stroke-linecap': 'round'});
+        if (a > 0.12) {
+          const t = u - Math.sign(u)*Math.min(0.25, a*0.15);
+          const x = px(t), y = py(t);
+          const dx = -Math.sin(t)*Math.sign(u), dy = -Math.cos(t)*Math.sign(u);
+          el('path', {d: 'M '+(x-9*dx-5*dy)+' '+(y-9*dy+5*dx)+' L '+x+' '+y+' L '+(x-9*dx+5*dy)+' '+(y-9*dy-5*dx), fill: 'none', stroke: 'var(--uc-path)', 'stroke-width': 2.5});
+        }
+        el('line', {x1: px(0), y1: py(0), x2: px(u), y2: py(u), stroke: 'var(--uc-chord)', 'stroke-width': 3});
+        el('circle', {cx: px(0), cy: py(0), r: 5, fill: 'var(--uc-fg)'});
+        el('circle', {cx: px(u), cy: py(u), r: 5, fill: 'var(--uc-chord)'});
+        const overlap = chord < 0.14;
+        el('text', {x: px(0)+12, y: py(0)+22, 'font-size': 14}, '1');
+        const cos = Math.cos(u), sin = Math.sin(u);
+        el('text', {
+          x: overlap ? px(u)-14 : px(u)+(cos>0.25 ? 13 : cos<-.25 ? -13 : 0),
+          y: overlap ? py(u)-16 : py(u)+(sin>=0 ? -15 : 24),
+          'text-anchor': overlap ? 'end' : cos>.25 ? 'start' : cos<-.25 ? 'end' : 'middle',
+          'font-size': 14
+        }, 'eⁱᵘ');
+        root.querySelector('#uc-angle-value').textContent = u.toFixed(3) + ' rad (' + (u/Math.PI).toFixed(2) + 'π)';
+        root.querySelector('#uc-chord-value').textContent = chord.toFixed(3);
+        root.querySelector('#uc-arc-value').textContent = a.toFixed(3);
+        root.querySelector('#uc-chord-bar').style.width = (100*chord/(4*Math.PI))+'%';
+        root.querySelector('#uc-arc-bar').style.width = (100*a/(4*Math.PI))+'%';
+        const turns = Math.floor((a+1e-10)/tau);
+        const remainder = Math.max(0, a-turns*tau);
+        root.querySelector('#uc-turns').textContent = turns + ' full ' + (turns===1 ? 'turn' : 'turns') + ' · ' + remainder.toFixed(3) + ' rad' + (a<1e-10 ? '' : u>0 ? ' counterclockwise' : ' clockwise');
+      }
+      input.addEventListener('input', draw);
+      root.querySelectorAll('[data-angle]').forEach(button => button.addEventListener('click', () => {
+        input.value = button.getAttribute('data-angle');
+        draw();
+      }));
+      new ResizeObserver(draw).observe(root);
+      draw();
+    })();
+  </script>
+</div>
+
 
 Here is an algebraic derivation. By the fundamental theorem of calculus,
 
