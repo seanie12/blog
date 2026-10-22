@@ -1201,6 +1201,40 @@ This proves uniform convergence. The order of the choices is: first choose $\eta
 
 <div style="text-align: right;">\(\square\)</div>
 
+## Remark
+
+**Explicit convergence rate.**
+
+The preceding proof explains convergence using uniform continuity and concentration of the kernel. For a Schwartz function, boundedness of the derivative also gives an explicit estimate for how quickly the error decreases.
+
+Set $L=\lVert f'\rVert_\infty<\infty$. By the fundamental theorem of calculus,
+
+$$f(x-t)-f(x)=-t\int_0^1f'(x-st)ds.$$
+
+Taking absolute values gives
+
+$$\lvert f(x-t)-f(x)\rvert\leq\lvert t\rvert\int_0^1\lvert f'(x-st)\rvert ds\leq L\lvert t\rvert.$$
+
+Thus the change in $f$ is at most its maximum derivative magnitude multiplied by the distance $\lvert t\rvert$. Using the convolution error identity and positivity of $K_\delta$,
+
+$$\begin{aligned}\lvert(f*K_\delta)(x)-f(x)\rvert&\leq\int_{\mathbb{R}}K_\delta(t)\lvert f(x-t)-f(x)\rvert dt\\&\leq L\int_{\mathbb{R}}\lvert t\rvert K_\delta(t)dt.\end{aligned}$$
+
+The remaining integral measures the average distance from zero under the Gaussian weights. Substitute $u=t/\sqrt{\delta}$, so that $t=\sqrt{\delta}u$ and $dt=\sqrt{\delta}du$:
+
+$$\begin{aligned}\int_{\mathbb{R}}\lvert t\rvert K_\delta(t)dt&=\int_{\mathbb{R}}\frac{\lvert t\rvert}{\sqrt{\delta}}e^{-\pi t^2/\delta}dt\\&=\sqrt{\delta}\int_{\mathbb{R}}\lvert u\rvert e^{-\pi u^2}du\\&=2\sqrt{\delta}\int_0^\infty ue^{-\pi u^2}du\\&=\frac{\sqrt{\delta}}{\pi}.\end{aligned}$$
+
+For the last equality, use $v=\pi u^2$, which gives
+
+$$\int_0^\infty ue^{-\pi u^2}du=\frac{1}{2\pi}\int_0^\infty e^{-v}dv=\frac{1}{2\pi}.$$
+
+Since the bound is independent of $x$, we conclude that
+
+$$\sup_{x\in\mathbb{R}}\lvert(f*K_\delta)(x)-f(x)\rvert\leq\frac{\lVert f'\rVert_\infty}{\pi}\sqrt{\delta}.$$
+
+This gives a uniform error bound proportional to $\sqrt{\delta}$. Its two factors have a direct interpretation: $\lVert f'\rVert_\infty$ controls how quickly $f$ can change, and $\sqrt{\delta}/\pi$ is the average distance over which the Gaussian kernel averages its values.
+
+<div style="text-align: right;">\(\square\)</div>
+
 ## Reference
 
 - Elias M. Stein and Rami Shakarchi, *Fourier Analysis: An Introduction*.
