@@ -1115,95 +1115,89 @@ In particular, $(f*K_\delta)(x)$ is a weighted average of values of $f$ near $x$
 
 For every $f\in\mathcal{S}(\mathbb{R})$,
 
-$$
-\lim_{\delta\to0^+}\sup_{x\in\mathbb{R}}\lvert(f*K_\delta)(x)-f(x)\rvert=0.
-$$
+$$\lim_{\delta\to0^+}\sup_{x\in\mathbb{R}}\lvert(f*K_\delta)(x)-f(x)\rvert=0.$$
 
 *Proof.*
 
-We give both an averaging argument and a quantitative estimate.
+We first show that $f$ is uniformly continuous on the whole real line. We then split the convolution error into nearby and distant contributions: nearby function values are close to $f(x)$, and the Gaussian kernel assigns little total weight to distant values.
 
-**Step 1: obtain a uniform continuity bound.**
+**Step 1: prove uniform continuity using decay and compactness.**
 
-Since $f'$ is rapidly decreasing, it is bounded. Set
+Since $f$ is a Schwartz function, the definition of rapid decrease with $k=1$ gives a finite constant
 
-$$
-L=\lVert f'\rVert_\infty<\infty.
-$$
+$$C:=\sup_{x\in\mathbb{R}}\lvert x\rvert\lvert f(x)\rvert<\infty.$$
 
-For any $x,t\in\mathbb{R}$, the fundamental theorem of calculus gives
+Thus, for $x\neq0$,
 
-$$
-f(x-t)-f(x)=-t\int_0^1f'(x-st)ds.
-$$
+$$\lvert f(x)\rvert\leq\frac{C}{\lvert x\rvert}.$$
 
-Hence
+The constant $C$ depends only on $f$, not on $x$. The bound tends to zero as $\lvert x\rvert\to\infty$, so it gives an explicit way to make $f(x)$ small. Given $\varepsilon>0$, choose
 
-$$
-\lvert f(x-t)-f(x)\rvert\leq L\lvert t\rvert.
-$$
+$$N=1+\frac{4C}{\varepsilon}.$$
 
-This proves uniform continuity on the whole real line, with the same bound for every $x$. Also, with $B=\lVert f\rVert_\infty$,
+Then, whenever $\lvert x\rvert>N$,
 
-$$
-\lvert f(x-t)-f(x)\rvert\leq2B.
-$$
+$$\lvert f(x)\rvert\leq\frac{C}{\lvert x\rvert}\leq\frac{C}{N}<\frac{\varepsilon}{4}.$$
 
-**Step 2: split the average into nearby and distant values.**
+We use $\varepsilon/4$ because we will add two such bounds. Making each function value smaller than $\varepsilon/4$ makes their sum smaller than $\varepsilon/2$.
 
-Because $\int_{\mathbb{R}}K_\delta(t)dt=1$,
+If both $x$ and $y$ lie outside $[-N,N]$, the triangle inequality gives
 
-$$
-(f*K_\delta)(x)-f(x)=\int_{\mathbb{R}}K_\delta(t)\bigl(f(x-t)-f(x)\bigr)dt.
-$$
+$$\lvert f(x)-f(y)\rvert\leq\lvert f(x)\rvert+\lvert f(y)\rvert<\frac{\varepsilon}{4}+\frac{\varepsilon}{4}=\frac{\varepsilon}{2}.$$
 
-For any $\eta>0$, positivity of $K_\delta$ and the two bounds above imply
+Inside a bounded interval, we use continuity instead. Consider the slightly larger interval $[-N-1,N+1]$. Since it is closed and bounded, $f$ is uniformly continuous there. Thus there is a $\rho_0>0$ such that
 
-$$
-\begin{aligned}
-\lvert(f*K_\delta)(x)-f(x)\rvert
-&\leq\int_{\lvert t\rvert\leq\eta}K_\delta(t)L\lvert t\rvert dt
-+\int_{\lvert t\rvert>\eta}K_\delta(t)2B\,dt\\
-&\leq L\eta+2B\int_{\lvert t\rvert>\eta}K_\delta(t)dt.
-\end{aligned}
-$$
+$$x,y\in[-N-1,N+1],\lvert x-y\rvert<\rho_0\Longrightarrow\lvert f(x)-f(y)\rvert<\frac{\varepsilon}{2}.$$
 
-Neither term depends on $x$. Given $\varepsilon>0$, first choose
+Choose $\rho>0$ with $\rho\leq1$ and $\rho\leq\rho_0$, and suppose that $\lvert x-y\rvert<\rho$. If both points lie outside $[-N,N]$, the first bound applies. Otherwise, at least one point lies in $[-N,N]$. Suppose it is $x$. Then
 
-$$
-\eta=\frac{\varepsilon}{2(1+L)}.
-$$
+$$\lvert y\rvert\leq\lvert x\rvert+\lvert y-x\rvert<N+1,$$
 
-Then $L\eta<\varepsilon/2$. With this $\eta$ fixed, concentration of the kernels gives a $\delta_0>0$ such that, whenever $0<\delta<\delta_0$,
+so both points lie in $[-N-1,N+1]$, and the uniform continuity bound applies. The case where $y$ lies in $[-N,N]$ is the same with the roles reversed.
 
-$$
-\int_{\lvert t\rvert>\eta}K_\delta(t)dt<\frac{\varepsilon}{4(1+B)}.
-$$
+Consequently, every pair with $\lvert x-y\rvert<\rho$ satisfies $\lvert f(x)-f(y)\rvert<\varepsilon/2$. This proves uniform continuity on all of $\mathbb{R}$. The enlarged interval is important: it covers pairs with one point just inside $[-N,N]$ and the other just outside.
 
-The distant contribution is then less than $\varepsilon/2$ as well. This proves uniform convergence. Here the order is **first choose the neighborhood size $\eta$, then choose $\delta$ so that almost all the kernel mass lies in that neighborhood**.
+Also, $f$ is bounded because it is continuous on bounded closed intervals and tends to zero at infinity. Set $B=\lVert f\rVert_\infty<\infty$.
 
-Notice that the height of $K_\delta$ is not bounded independently of $\delta$: $K_\delta(0)=\delta^{-1/2}$. What controls the nearby contribution is its total integral, which is $1$.
+**Step 2: split the convolution error into nearby and distant contributions.**
 
-**An explicit convergence rate.** For these Gaussian kernels, we can integrate the bound $L\lvert t\rvert$ directly:
+The Gaussian kernels are nonnegative and have total integral $1$. Therefore,
 
-$$
-\begin{aligned}
-\lvert(f*K_\delta)(x)-f(x)\rvert
-&\leq L\int_{\mathbb{R}}\lvert t\rvert K_\delta(t)dt\\
-&=L\sqrt{\delta}\int_{\mathbb{R}}\lvert u\rvert e^{-\pi u^2}du\\
-&=2L\sqrt{\delta}\int_0^\infty ue^{-\pi u^2}du\\
-&=\frac{L\sqrt{\delta}}{\pi}.
-\end{aligned}
-$$
+$$\begin{aligned}(f*K_\delta)(x)-f(x)&=\int_{\mathbb{R}}K_\delta(t)f(x-t)dt-f(x)\int_{\mathbb{R}}K_\delta(t)dt\\&=\int_{\mathbb{R}}K_\delta(t)\bigl(f(x-t)-f(x)\bigr)dt.\end{aligned}$$
 
-Therefore,
+These integrals converge absolutely because $f$ is bounded and $K_\delta$ is integrable.
 
-$$
-\sup_{x\in\mathbb{R}}\lvert(f*K_\delta)(x)-f(x)\rvert
-\leq\frac{\lVert f'\rVert_\infty}{\pi}\sqrt{\delta}.
-$$
+Fix $\varepsilon>0$. By Step 1, choose $\eta>0$, independent of $x$, such that
 
-The bound has a direct interpretation: $\lVert f'\rVert_\infty$ controls how quickly $f$ can change, while $\sqrt{\delta}/\pi$ is the average distance from the origin under the Gaussian kernel. Their product controls the averaging error.
+$$\lvert t\rvert<\eta\Longrightarrow\lvert f(x-t)-f(x)\rvert<\frac{\varepsilon}{2}\text{ for every }x\in\mathbb{R}.$$
+
+For $\lvert t\rvert<\eta$, the function values are close, so
+
+$$\int_{\lvert t\rvert<\eta}K_\delta(t)\lvert f(x-t)-f(x)\rvert dt\leq\frac{\varepsilon}{2}\int_{\lvert t\rvert<\eta}K_\delta(t)dt\leq\frac{\varepsilon}{2}.$$
+
+For $\lvert t\rvert\geq\eta$, use boundedness:
+
+$$\lvert f(x-t)-f(x)\rvert\leq\lvert f(x-t)\rvert+\lvert f(x)\rvert\leq2B.$$
+
+Combining the two regions gives
+
+$$\begin{aligned}\lvert(f*K_\delta)(x)-f(x)\rvert&\leq\int_{\lvert t\rvert<\eta}K_\delta(t)\lvert f(x-t)-f(x)\rvert dt\\&+\int_{\lvert t\rvert\geq\eta}K_\delta(t)\lvert f(x-t)-f(x)\rvert dt\\&\leq\frac{\varepsilon}{2}+2B\int_{\lvert t\rvert\geq\eta}K_\delta(t)dt.\end{aligned}$$
+
+The remaining integral is the total weight assigned to distant values. To see why it tends to zero, substitute $u=t/\sqrt{\delta}$:
+
+$$\int_{\lvert t\rvert\geq\eta}K_\delta(t)dt=\int_{\lvert u\rvert\geq\eta/\sqrt{\delta}}e^{-\pi u^2}du\longrightarrow0.$$
+
+Here $\eta$ is fixed, so $\eta/\sqrt{\delta}\to\infty$ as $\delta\to0^+$. The integral therefore runs over tails farther and farther from the origin, and those tails have vanishing integrals because the Gaussian is absolutely integrable.
+
+Choose $\delta_0>0$ such that, whenever $0<\delta<\delta_0$,
+
+$$\int_{\lvert t\rvert\geq\eta}K_\delta(t)dt<\frac{\varepsilon}{4(1+B)}.$$
+
+The error bound is independent of $x$. Taking the supremum gives
+
+$$\begin{aligned}\sup_{x\in\mathbb{R}}\lvert(f*K_\delta)(x)-f(x)\rvert&\leq\frac{\varepsilon}{2}+2B\int_{\lvert t\rvert\geq\eta}K_\delta(t)dt\\&\leq\frac{\varepsilon}{2}+\frac{B\varepsilon}{2(1+B)}\\&=\varepsilon-\frac{\varepsilon}{2(1+B)}<\varepsilon.\end{aligned}$$
+
+This proves uniform convergence. The order of the choices is: first choose $\eta$ so that nearby function values are close, then choose $\delta$ so that the kernel assigns little total weight to distant values.
 
 <div style="text-align: right;">\(\square\)</div>
 
