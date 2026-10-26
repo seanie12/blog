@@ -623,233 +623,158 @@ Thus $f$, its derivatives, and their polynomially weighted versions are absolute
 
 ## Proposition
 
-Let $f\in\mathcal{S}(\mathbb{R})$, $h\in\mathbb{R}$, and $\delta>0$. With the Fourier convention above, we have
+Let $f\in\mathcal{S}(\mathbb{R})$, $h\in\mathbb{R}$, and $\delta>0$. With the Fourier convention above, the following identities hold for every $\xi\in\mathbb{R}$:
 
-$$
-\begin{aligned}
-\mathcal{F}[f(\cdot+h)](\xi)&=e^{2\pi ih\xi}\widehat f(\xi),\\
-\mathcal{F}[f(\cdot)e^{-2\pi ih(\cdot)}](\xi)&=\widehat f(\xi+h),\\
-\mathcal{F}[f(\delta\cdot)](\xi)&=\delta^{-1}\widehat f(\xi/\delta),\\
-\widehat{f'}(\xi)&=2\pi i\xi\widehat f(\xi),\\
-\widehat{-2\pi i(\cdot)f}(\xi)&=\frac{d}{d\xi}\widehat f(\xi).
-\end{aligned}
-$$
+$$\begin{aligned}\mathcal{F}[f(\cdot+h)](\xi)&=e^{2\pi ih\xi}\widehat f(\xi),\\\mathcal{F}[f(\cdot)e^{-2\pi ih(\cdot)}](\xi)&=\widehat f(\xi+h),\\\mathcal{F}[f(\delta\cdot)](\xi)&=\delta^{-1}\widehat f(\xi/\delta),\\\mathcal{F}[f'](\xi)&=2\pi i\xi\widehat f(\xi),\\\mathcal{F}[-2\pi i(\cdot)f(\cdot)](\xi)&=\frac{d}{d\xi}\widehat f(\xi).\end{aligned}$$
 
-Here, $\mathcal{F}[g]=\widehat g$, and the dot denotes the input variable. For example, $\widehat{xf}(\xi)$ below means the Fourier transform of the function $x\mapsto xf(x)$, evaluated at $\xi$.
+Here, $\mathcal{F}[g]=\widehat g$, and the dot denotes the input variable. For example,
+$$\mathcal{F}[(\cdot)f(\cdot)](\xi)=\int_{\mathbb{R}}xf(x)e^{-2\pi ix\xi}dx.$$
+Thus $\mathcal{F}[-2\pi i(\cdot)f(\cdot)](\xi)$ means the Fourier transform of the function $x\mapsto-2\pi ix f(x)$, evaluated at $\xi$.
 
-The first three identities follow from changes of variables or combining exponentials. The last two explain the relationship between differentiation and multiplication.
+The first three identities follow from changes of variables or combining exponentials. The last two describe how the Fourier transform relates differentiation and multiplication. In particular, $\mathcal{F}[f']$ is the Fourier transform of the derivative of $f$, whereas $\frac{d}{d\xi}\widehat f$ is the derivative of the Fourier transform of $f$.
 
 *Proof.*
 
-(1) Translation becomes modulation.
+**(1) Translation becomes modulation.**
 
 Set $u=x+h$, so $x=u-h$. Then
 
-$$
-\begin{aligned}
-\mathcal{F}[f(\cdot+h)](\xi)
-&=\int_{\mathbb{R}}f(x+h)e^{-2\pi ix\xi}dx\\
-&=\int_{\mathbb{R}}f(u)e^{-2\pi i(u-h)\xi}du\\
-&=e^{2\pi ih\xi}\int_{\mathbb{R}}f(u)e^{-2\pi iu\xi}du\\
-&=e^{2\pi ih\xi}\widehat f(\xi).
-\end{aligned}
-$$
+$$\begin{aligned}\mathcal{F}[f(\cdot+h)](\xi)&=\int_{\mathbb{R}}f(x+h)e^{-2\pi ix\xi}dx\\&=\int_{\mathbb{R}}f(u)e^{-2\pi i(u-h)\xi}du\\&=e^{2\pi ih\xi}\int_{\mathbb{R}}f(u)e^{-2\pi iu\xi}du\\&=e^{2\pi ih\xi}\widehat f(\xi).
+\end{aligned}$$
 
 A shift in the original function introduces a phase factor in its Fourier transform. Absolute convergence justifies the substitution on the whole real line.
 
-(2) Modulation becomes translation.
+**(2) Modulation becomes translation.**
 
 Multiplying two exponentials adds their exponents:
 
-$$
-\begin{aligned}
-\mathcal{F}[f(\cdot)e^{-2\pi ih(\cdot)}](\xi)
-&=\int_{\mathbb{R}}f(x)e^{-2\pi ixh}e^{-2\pi ix\xi}dx\\
-&=\int_{\mathbb{R}}f(x)e^{-2\pi ix(\xi+h)}dx\\
-&=\widehat f(\xi+h).
-\end{aligned}
-$$
+$$\begin{aligned}\mathcal{F}[f(\cdot)e^{-2\pi ih(\cdot)}](\xi)&=\int_{\mathbb{R}}f(x)e^{-2\pi ixh}e^{-2\pi ix\xi}dx\\&=\int_{\mathbb{R}}f(x)e^{-2\pi ix(\xi+h)}dx\\&=\widehat f(\xi+h).
+\end{aligned}$$
 
 Thus multiplying $f$ by an oscillation shifts the frequency argument of its transform.
 
-(3) Dilation reverses the frequency scale.
+**(3) Dilation reverses the frequency scale.**
 
 Set $u=\delta x$, so $dx=du/\delta$. Then
 
-$$
-\begin{aligned}
-\mathcal{F}[f(\delta\cdot)](\xi)
-&=\int_{\mathbb{R}}f(\delta x)e^{-2\pi ix\xi}dx\\
-&=\frac{1}{\delta}\int_{\mathbb{R}}f(u)e^{-2\pi iu(\xi/\delta)}du\\
-&=\frac{1}{\delta}\widehat f(\xi/\delta).
-\end{aligned}
-$$
+$$\begin{aligned}\mathcal{F}[f(\delta\cdot)](\xi)&=\int_{\mathbb{R}}f(\delta x)e^{-2\pi ix\xi}dx\\&=\frac{1}{\delta}\int_{\mathbb{R}}f(u)e^{-2\pi iu(\xi/\delta)}du\\&=\frac{1}{\delta}\widehat f(\xi/\delta).
+\end{aligned}$$
 
 If $\delta>1$, the original function is compressed horizontally. Its transform is stretched horizontally, with a compensating factor $1/\delta$.
 
-(4) Differentiation becomes multiplication.
+**(4) Differentiation becomes multiplication.**
 
-For a finite $R$, integration by parts gives
+For a finite $R>0$, integration by parts gives
 
-$$
-\begin{aligned}
-\int_{-R}^{R}f'(x)e^{-2\pi ix\xi}dx
-&=\left[f(x)e^{-2\pi ix\xi}\right]_{-R}^{R}\\
-&\quad+2\pi i\xi\int_{-R}^{R}f(x)e^{-2\pi ix\xi}dx.
-\end{aligned}
-$$
+$$\begin{aligned}\int_{-R}^{R}f'(x)e^{-2\pi ix\xi}dx&=\left[f(x)e^{-2\pi ix\xi}\right]_{-R}^{R}\\&\quad+2\pi i\xi\int_{-R}^{R}f(x)e^{-2\pi ix\xi}dx.
+\end{aligned}$$
 
 Since $f$ is rapidly decreasing, $f(R)$ and $f(-R)$ tend to zero. More precisely,
-
-$$
-\left\lvert\left[f(x)e^{-2\pi ix\xi}\right]_{-R}^{R}\right\rvert
-\leq\lvert f(R)\rvert+\lvert f(-R)\rvert\longrightarrow0.
-$$
-
+$$\left|\left[f(x)e^{-2\pi ix\xi}\right]_{-R}^{R}\right|\leq|f(R)|+|f(-R)|\longrightarrow0.$$
 Both $f$ and $f'$ are absolutely integrable, so taking $R\to\infty$ yields
-
-$$
-\widehat{f'}(\xi)=2\pi i\xi\widehat f(\xi).
-$$
-
+$$\mathcal{F}[f'](\xi)=2\pi i\xi\widehat f(\xi).$$
 The factor $2\pi i\xi$ comes from differentiating the exponential during integration by parts.
 
-(5) Multiplication becomes differentiation.
+**(5) Multiplication becomes differentiation.**
 
 We now prove
 
-$$
-\widehat f'(\xi)=-2\pi i\widehat{xf}(\xi)=\int_{\mathbb{R}}(-2\pi ix)f(x)e^{-2\pi ix\xi}dx.
-$$
+$$\begin{aligned}\frac{d}{d\xi}\widehat f(\xi)&=\mathcal{F}[-2\pi i(\cdot)f(\cdot)](\xi)\\&=-2\pi i\mathcal{F}[(\cdot)f(\cdot)](\xi)\\&=\int_{\mathbb{R}}(-2\pi ix)f(x)e^{-2\pi ix\xi}dx.
+\end{aligned}$$
 
-Formally, this is what we get by differentiating $e^{-2\pi ix\xi}$ with respect to $\xi$. To justify differentiating the improper integral, we must show that its difference quotient approaches the claimed derivative.
+Formally, this is what we obtain by differentiating $e^{-2\pi ix\xi}$ with respect to $\xi$ inside the integral. We justify this interchange directly by showing that the difference quotient approaches the claimed derivative.
 
 **Step 1: isolate the error.**
 
-For $h\neq0$, define
+For a nonzero increment $h$, define
 
-$$
-R_h(x):=\frac{e^{-2\pi ixh}-1}{h}+2\pi ix.
-$$
+$$R_h(x):=\frac{e^{-2\pi ixh}-1+2\pi ixh}{h}=\frac{e^{-2\pi ixh}-1}{h}+2\pi ix.$$
 
 Linearity of absolutely convergent integrals gives
 
-$$
-\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\widehat{xf}(\xi)
-=\int_{\mathbb{R}}f(x)e^{-2\pi ix\xi}R_h(x)dx.
-$$
+$$\begin{aligned}&\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\mathcal{F}[(\cdot)f(\cdot)](\xi)\\&\qquad=\int_{\mathbb{R}}f(x)e^{-2\pi ix\xi}R_h(x)dx.
+\end{aligned}$$
 
 Therefore,
-
-$$
-\left\lvert\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\widehat{xf}(\xi)\right\rvert
-\leq\int_{\mathbb{R}}\lvert f(x)\rvert\lvert R_h(x)\rvert dx.
-$$
-
-Our task is to make the integral on the right small.
+$$\begin{aligned}&\left|\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\mathcal{F}[(\cdot)f(\cdot)](\xi)\right|\\&\qquad\leq\int_{\mathbb{R}}|f(x)||R_h(x)|dx.\end{aligned}$$
+Our task is to show that the integral on the right tends to zero as $h\to0$.
 
 **Step 2: predict the useful bound from cancellation.**
 
-Taylor expansion suggests why the error is small. In
+For fixed $x$, Taylor expansion suggests why the error is small:
+$$e^{-2\pi ixh}=1-2\pi ixh+\frac{(-2\pi ixh)^2}{2}+\cdots.$$
+Subtracting $1$ and adding $2\pi ixh$ cancels the constant and linear terms. The numerator of $R_h(x)$ therefore begins with a term proportional to $x^2h^2$. Dividing by $h$ suggests a bound proportional to $x^2|h|$.
 
-$$
-e^{-2\pi ixh}=1-2\pi ixh+\frac{(-2\pi ixh)^2}{2}+\cdots,
-$$
-
-subtracting $1$ and adding $2\pi ixh$ cancels the constant and linear terms. The numerator of $R_h(x)$ should therefore have size $x^2h^2$, and division by $h$ suggests a bound proportional to $x^2\lvert h\rvert$.
-
-This is a way to discover the estimate. We next prove it exactly, without assuming that an omitted Taylor remainder is small uniformly in $x$.
+This calculation helps us discover the estimate. We next prove an explicit inequality valid for every real $x$ and every nonzero $h$.
 
 **Step 3: derive the explicit bound.**
 
 Apply the fundamental theorem of calculus in the parameter $t$:
 
-$$
-e^{-2\pi ixh}-1=-2\pi ixh\int_0^1e^{-2\pi ixht}dt.
-$$
+$$e^{-2\pi ixh}-1=-2\pi ixh\int_0^1e^{-2\pi ixht}dt.$$
 
-After dividing by $h$ and adding $2\pi ix$,
+After dividing by $h$ and adding $2\pi ix$, we obtain
 
-$$
-R_h(x)=2\pi ix\int_0^1\bigl(1-e^{-2\pi ixht}\bigr)dt.
-$$
+$$R_h(x)=2\pi ix\int_0^1\bigl(1-e^{-2\pi ixht}\bigr)dt.$$
 
-Use $\lvert1-e^{iu}\rvert\leq\lvert u\rvert$, already proved above:
+Using the previously established inequality $|1-e^{iu}|\leq|u|$, we get
 
-$$
-\begin{aligned}
-\lvert R_h(x)\rvert
-&\leq2\pi\lvert x\rvert\int_0^1\lvert1-e^{-2\pi ixht}\rvert dt\\
-&\leq2\pi\lvert x\rvert\int_0^1 2\pi\lvert x\rvert\lvert h\rvert t\,dt\\
-&=2\pi^2x^2\lvert h\rvert.
-\end{aligned}
-$$
-
+$$\begin{aligned}|R_h(x)|&\leq2\pi|x|\int_0^1|1-e^{-2\pi ixht}|dt\\&\leq2\pi|x|\int_0^1 2\pi|x||h|t\,dt\\&=2\pi^2x^2|h|.
+\end{aligned}$$
 In particular, on a fixed interval $[-R,R]$,
 
-$$
-\sup_{\lvert x\rvert\leq R}\lvert R_h(x)\rvert\leq2\pi^2R^2\lvert h\rvert.
-$$
+$$\sup_{|x|\leq R}|R_h(x)|\leq2\pi^2R^2|h|\longrightarrow0\qquad(h\to0).$$
 
-The same choice of $h$ works for every $x$ in the interval. This explicitly proves the uniform convergence that a pointwise limit alone would not establish.
+The bound controls every $x$ in the interval with the same choice of $h$, so the convergence is uniform on that interval.
 
 **Step 4: obtain a bound for the tails that is independent of $h$.**
 
-For any real $x$ and any $h\neq0$,
+For every real $x$ and every nonzero $h$,
 
-$$
-\begin{aligned}
-\lvert R_h(x)\rvert
-&\leq\frac{\lvert e^{-2\pi ixh}-1\rvert}{\lvert h\rvert}+2\pi\lvert x\rvert\\
-&\leq2\pi\lvert x\rvert+2\pi\lvert x\rvert\\
-&=4\pi\lvert x\rvert.
-\end{aligned}
-$$
+$$\begin{aligned}|R_h(x)|&\leq\frac{|e^{-2\pi ixh}-1|}{|h|}+2\pi|x|\\&\leq2\pi|x|+2\pi|x|\\&=4\pi|x|.
+\end{aligned}$$
 
-This estimate holds for every nonzero $h$, so the outside part does not require a small-$h$ approximation. Its advantage is that it uses only the integrable weight $\lvert x\rvert\lvert f(x)\rvert$.
+This bound is independent of $h$. After multiplication by $|f(x)|$, it involves only the integrable function $|x||f(x)|$, which lets us control the tails uniformly in $h$.
 
 **Step 5: combine the bounds and choose the parameters.**
 
 Splitting at $R\geq1$ gives
 
-$$
-\begin{aligned}
-\int_{\mathbb{R}}\lvert f(x)\rvert\lvert R_h(x)\rvert dx
-&=\int_{-R}^{R}\lvert f(x)\rvert\lvert R_h(x)\rvert dx
-+\int_{\lvert x\rvert>R}\lvert f(x)\rvert\lvert R_h(x)\rvert dx\\
-&\leq2\pi^2R^2\lvert h\rvert\int_{-R}^{R}\lvert f(x)\rvert dx
-+4\pi\int_{\lvert x\rvert>R}\lvert x\rvert\lvert f(x)\rvert dx\\
-&\leq2\pi^2R^2\lvert h\rvert\lVert f\rVert_1
-+4\pi\int_{\lvert x\rvert>R}\lvert x\rvert\lvert f(x)\rvert dx.
-\end{aligned}
-$$
+$$\begin{aligned}\int_{\mathbb{R}}|f(x)||R_h(x)|dx&=\int_{-R}^{R}|f(x)||R_h(x)|dx\\&\quad+\int_{|x|>R}|f(x)||R_h(x)|dx\\&\leq2\pi^2R^2|h|\int_{-R}^{R}|f(x)|dx\\&\quad+4\pi\int_{|x|>R}|x||f(x)|dx\\&\leq2\pi^2R^2|h|\|f\|_1\\&\quad+4\pi\int_{|x|>R}|x||f(x)|dx.
+\end{aligned}$$
 
-Given $\varepsilon>0$, choose $R\geq1$ large enough that
+Given $\varepsilon>0$, first choose $R\geq1$ large enough that
 
-$$
-\int_{\lvert x\rvert>R}\lvert x\rvert\lvert f(x)\rvert dx<\frac{\varepsilon}{8\pi}.
-$$
+$$\int_{|x|>R}|x||f(x)|dx<\frac{\varepsilon}{8\pi}.$$
 
-Such an $R$ exists because $xf(x)$ is absolutely integrable. The outside term is then less than $\varepsilon/2$, independently of $h$.
+Such an $R$ exists because $xf(x)$ is absolutely integrable. The tail contribution is then less than $\varepsilon/2$, independently of $h$.
 
 With this $R$ fixed, choose
 
-$$
-0<\lvert h\rvert<\frac{\varepsilon}{4\pi^2R^2(1+\lVert f\rVert_1)}.
-$$
+$$0<|h|<\frac{\varepsilon}{4\pi^2R^2(1+\|f\|_1)}.$$
 
-Then the inside term is less than $\varepsilon/2$. Therefore the difference quotient approaches the claimed derivative. Every estimate is also independent of $\xi$.
+The contribution from $[-R,R]$ is then less than $\varepsilon/2$. Hence
 
-**A useful shortcut for Schwartz functions.** Since $x^2f(x)$ is absolutely integrable, the stronger estimate from Step 3 can also be integrated over the whole line:
+$$\int_{\mathbb{R}}|f(x)||R_h(x)|dx<\varepsilon.$$
 
-$$
-\left\lvert\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\widehat{xf}(\xi)\right\rvert
-\leq2\pi^2\lvert h\rvert\int_{\mathbb{R}}x^2\lvert f(x)\rvert dx\longrightarrow0.
-$$
+Combining this with Step 1 shows that
 
-Thus, in the Schwartz setting, we can even finish without splitting the integral. The longer proof shows how to proceed with only $f$ and $xf$ absolutely integrable, and explains the inside-versus-outside argument used elsewhere in this post.
+$$\lim_{h\to0}\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}=-2\pi i\mathcal{F}[(\cdot)f(\cdot)](\xi)=\mathcal{F}[-2\pi i(\cdot)f(\cdot)](\xi).$$
+
+This proves the fifth identity. Since every estimate is independent of $\xi$, the difference quotients in fact converge uniformly in $\xi$.
+
+**A useful shortcut for Schwartz functions.**
+
+Since $x^2f(x)$ is absolutely integrable, we can also integrate the estimate from Step 3 over the whole line:
+
+$$\begin{aligned}&\left|\frac{\widehat f(\xi+h)-\widehat f(\xi)}{h}+2\pi i\mathcal{F}[(\cdot)f(\cdot)](\xi)\right|\\&\qquad\leq2\pi^2|h|\int_{\mathbb{R}}x^2|f(x)|dx\longrightarrow0\qquad(h\to0).
+\end{aligned}$$
+
+Thus, for Schwartz functions, this single estimate also completes the proof. The longer argument above requires only continuity and absolute integrability of $f$ and $xf$, and explains the same division into a bounded interval and tails used elsewhere in this post.
 
 <div style="text-align: right;">\(\square\)</div>
+
+
 
 ## Definition
 
