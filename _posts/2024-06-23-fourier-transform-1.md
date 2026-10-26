@@ -782,7 +782,7 @@ Thus, for Schwartz functions, this single estimate also completes the proof. The
 For $\delta>0$, define
 
 $$
-K_\delta(x)=\delta^{-1/2}g(x/\sqrt{\delta})=\frac{1}{\sqrt{\delta}}e^{-\pi x^2/\delta}.
+K_\delta(x)=\delta^{-1/2}g(x/\sqrt{\delta})=\frac{1}{\sqrt{\delta}}e^{-\pi x^2/\delta}, \quad g(x)=e^{-\pi x^2}.
 $$
 
 As $\delta$ decreases, the kernel becomes narrower and taller. Its horizontal scale is $\sqrt{\delta}$, and the factor $1/\sqrt{\delta}$ keeps its total integral equal to $1$.
