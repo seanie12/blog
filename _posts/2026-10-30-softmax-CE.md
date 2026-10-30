@@ -662,6 +662,53 @@ $$
 
 If all logits change by the same scalar, the probabilities do not change. Centering removes this irrelevant common component and leaves changes relative to the teacher-weighted average.
 
+### Derive the log-ratio from the centered differences
+
+We now derive the expression for $s_k$ explicitly. From the student-as-reweighted-teacher identity,
+
+$$
+\frac{q_k}{p_k}
+=\frac{e^{\delta_k}}{\sum_i p_i e^{\delta_i}}.
+$$
+
+Taking the logarithm of the numerator and denominator separately gives
+
+$$
+\begin{aligned}
+s_k
+&:=\log\frac{q_k}{p_k}\\
+&=\log e^{\delta_k}-\log\sum_i p_i e^{\delta_i}\\
+&=\delta_k-\log\sum_i p_i e^{\delta_i}.
+\end{aligned}
+$$
+
+Since $d_i=\delta_i-\mu$, we have $\delta_i=d_i+\mu$ for every class, including class $k$. Substitute this into **both** occurrences of $\delta$:
+
+$$
+\begin{aligned}
+s_k
+&=(d_k+\mu)-\log\sum_i p_i e^{d_i+\mu}\\
+&=d_k+\mu-\log\left(e^{\mu}\sum_i p_i e^{d_i}\right)\\
+&=d_k+\mu-\left[\mu+\log\sum_i p_i e^{d_i}\right]\\
+&=\boxed{d_k-\log\sum_i p_i e^{d_i}}.
+\end{aligned}
+$$
+
+The factor $e^{\mu}$ can be pulled outside the sum because $\mu$ is the same scalar for every class. Its logarithm is $\mu$, which cancels the $+\mu$ outside the logarithm. This cancellation is exact algebra; no Taylor approximation is involved.
+
+Equivalently, using the already-centered probability expression,
+
+$$
+\begin{aligned}
+s_k
+&=\log\left(\frac{p_k e^{d_k}}{\sum_i p_i e^{d_i}}\right)-\log p_k\\
+&=\log p_k+d_k-\log\sum_i p_i e^{d_i}-\log p_k\\
+&=d_k-\log\sum_i p_i e^{d_i}.
+\end{aligned}
+$$
+
+Here, the two $\log p_k$ terms cancel. Both derivations lead to the same expression. Numerically, we calculate it from $d$ and its shared log-normalizer; the displayed derivation does not instruct us to form the probability ratio $q_k/p_k$ first.
+
 ### Rewrite the log-normalization using `expm1` and `log1p`
 
 Define the exact log-ratio
@@ -802,7 +849,7 @@ $$
 
 Near $s_k=0$, the exponential-difference expression protects the small gradient. Away from zero, the probabilities are sufficiently separated for direct subtraction.
 
-Specifically, $|s_k|\geq1$ means $q_k\geq e\,p_k$ or $p_k\geq e\,q_k$. Thus,
+Specifically, $\lvert s_k\rvert\geq1$ means $q_k\geq e\thinspace p_k$ or $p_k\geq e\thinspace q_k$. Thus,
 
 $$
 |q_k-p_k|\geq(1-e^{-1})\max(q_k,p_k)\approx0.632\max(q_k,p_k).
@@ -874,11 +921,11 @@ A single residual can correct every coordinate in this special case because all 
 
 ### Zero sum is not exact coordinatewise recovery
 
-Let $g^*$ be the exact gradient and write $u_k=g_k^*+\epsilon_k$. Since $\sum_k g_k^*=0$,
+Let $g^{\ast}$ be the exact gradient and write $u_k=g_k^{\ast}+\epsilon_k$. Since $\sum_k g_k^{\ast}=0$,
 
 $$
 r=\sum_i\epsilon_i,\qquad
-g_k-g_k^*=\epsilon_k-q_k\sum_i\epsilon_i.
+g_k-g_k^{\ast}=\epsilon_k-q_k\sum_i\epsilon_i.
 $$
 
 The remaining error need not vanish in every coordinate. For example, if $q=(0.9,0.1)$ and the original error is $(0,\eta)$, the corrected error is $(-0.9\eta,0.9\eta)$. The first coordinate was initially accurate and is changed by the correction.
@@ -887,7 +934,7 @@ There is nevertheless an algebraic weighted-error guarantee. For normalized posi
 
 $$
 \begin{aligned}
-\sum_k\frac{(g_k-g_k^*)^2}{q_k}
+\sum_k\frac{(g_k-g_k^{\ast})^2}{q_k}
 &=\sum_k\frac{(\epsilon_k-q_k r)^2}{q_k}\\
 &=\sum_k\frac{\epsilon_k^2}{q_k}-2r\sum_k\epsilon_k+r^2\sum_k q_k\\
 &=\sum_k\frac{\epsilon_k^2}{q_k}-r^2.
@@ -1249,7 +1296,7 @@ $$
 \frac{G_i}{|G_i|+\epsilon}+\lambda\theta_i=0.
 $$
 
-Here, $\epsilon$ is Adam's stabilizing constant and $\lambda$ is the weight-decay coefficient. When $|G_i|\ll\epsilon$,
+Here, $\epsilon$ is Adam's stabilizing constant and $\lambda$ is the weight-decay coefficient. When $\lvert G_i\rvert\ll\epsilon$,
 
 $$
 \frac{G_i}{|G_i|+\epsilon}\approx\frac{G_i}{\epsilon}.
