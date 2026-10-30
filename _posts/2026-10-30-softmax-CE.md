@@ -707,8 +707,19 @@ s_k
 \end{aligned}
 $$
 
-Here, the two $\log p_k$ terms cancel. Both derivations lead to the same expression. Numerically, we calculate it from $d$ and its shared log-normalizer; the displayed derivation does not instruct us to form the probability ratio $q_k/p_k$ first.
+Here, the two $\log p_k$ terms cancel. To evaluate $s_k$ accurately, we compute it directly from the centered logit differences:
 
+$$
+\begin{aligned}
+A &= \sum_i p_i\operatorname{expm1}(d_i),\\
+C &= \operatorname{log1p}(A),\\
+s_k &= d_k-C.
+\end{aligned}
+$$
+
+The scalar $C=\log\sum_i p_i e^{d_i}$ is the same for every class, so each coordinate subtracts the same normalization term.
+
+Although $s_k=\log(q_k/p_k)$ mathematically, explicitly computing this ratio can lose precision. When $q_k$ and $p_k$ are close, they may round to the same floating-point value, making their computed log-ratio zero. The expression above preserves small differences by working with $d_k$ and the specialized functions `expm1` and `log1p`.
 ### Rewrite the log-normalization using `expm1` and `log1p`
 
 Define the exact log-ratio
