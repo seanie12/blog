@@ -112,6 +112,34 @@ $$
 
 Every shifted logit is nonpositive, so these exponentials are at most one. This handles exponential overflow. It does not ensure that the denominator retains every small contribution, or that subtracting two probabilities retains their small difference.
 
+### Does log-sum-exp include zero when choosing its shift?
+
+For a general vector $x$, the usual stable log-sum-exp chooses the largest **actual input**:
+
+$$
+c=\max_j x_j,\qquad
+\operatorname{LSE}(x)=c+\log\sum_j e^{x_j-c}.
+$$
+
+The shift $c$ can be negative. There is no extra zero input in this expression. Any common shift gives the same identity in exact arithmetic, but using $c=\max_j x_j$ makes every exponential at most one and ensures that at least one equals one. This also prevents the entire exponential sum from underflowing.
+
+For example, if $x=(-1000,-1001)$, then $c=-1000$ and
+
+$$
+\operatorname{LSE}(x)=-1000+\log(1+e^{-1}).
+$$
+
+Choosing $c=\max(0,\max_j x_j)=0$ instead would unnecessarily exponentiate $-1000$ and $-1001$, both of which underflow in fp32.
+
+Zero enters the maximum when zero is itself one of the inputs. In particular,
+
+$$
+\log\left(1+\sum_{j\ne t}e^{a_j}\right)
+=\operatorname{LSE}\bigl(0,(a_j)_{j\ne t}\bigr).
+$$
+
+Here the explicit $1=e^0$ is the target contribution, so the largest input is $\max(0,\max_{j\ne t}a_j)$. This is the second shift used below.
+
 ## A floating-point fact behind both bugs
 
 A floating-point format has limited **relative** precision. A tiny number may be representable by itself, even when its contribution disappears after adding it to one.
@@ -353,16 +381,35 @@ b=\max\left(0,\max_{j\ne t}a_j\right),\qquad
 V=\sum_{j\ne t}e^{a_j-b}.
 $$
 
-All exponentials in $V$ have nonpositive arguments. Then
+The zero in this maximum is the target's shifted logit, $a_t=0$. Equivalently,
+
+$$
+b=\max_j(z_j-z_t)=z_{\max}-z_t\geq0.
+$$
+
+If $z_t$ is maximal, every $a_j=z_j-z_t$ is nonpositive, so taking the maximum with zero gives $b=0$. Otherwise, $b>0$ is the gap from the target to the largest logit. All exponentials in $V$ have nonpositive arguments.
+
+To derive the loss, factor out $e^b$ from the entire sum, including the target's contribution:
 
 $$
 \begin{aligned}
 \mathcal{L}
 &=\log\left(1+\sum_{j\ne t}e^{a_j}\right)\\
+&=\log\left(1+e^bV\right)\\
+&=\log\left[e^b(e^{-b}+V)\right]\\
 &=b+\log(e^{-b}+V)\\
 &=b+\operatorname{log1p}\left(V+\operatorname{expm1}(-b)\right).
 \end{aligned}
 $$
+
+The last equality follows because
+
+$$
+e^{-b}+V=1+\left[V+(e^{-b}-1)\right]
+=1+\left[V+\operatorname{expm1}(-b)\right].
+$$
+
+The implementation never computes $e^b$. Factoring it out algebraically turns its logarithm into the safe additive term $b$.
 
 When the target is maximal, $b=0$ and this reduces to $\operatorname{log1p}(S)$. When another logit is much larger, the second shift prevents overflow. This is the form used by the corrected hard-target implementation below.
 
@@ -377,6 +424,122 @@ $$
 holds for $S>0$. However, if every non-target exponential underflows to zero, the right-hand computation introduces $\log0$. Its backward pass can encounter an undefined intermediate derivative and produce NaNs, despite the limiting loss being well behaved.
 
 Version 3 of the paper explicitly notes this issue in earlier code. Using `log1p(S)` directly avoids differentiating through that unnecessary logarithm. This is another example of why simplifying a real-valued expression is not sufficient to validate its floating-point backward pass.
+
+### Which formula does the paper actually implement?
+
+The version-3 code in Section 2 implements the second-shift formula above. Its function is named `cross_entropy(z, t)`. The JAX function `stable_hard_cross_entropy` and the PyTorch function `stable_hard_cross_entropy_torch` below follow that same computation, with renamed variables and batch handling.
+
+The implementation has five steps:
+
+1. Gather the target logit $z_t$.
+2. Form $a_j=z_j-z_t$ for non-target classes and put a constant zero in the target slot.
+3. Take $b=\max_j a_j$ over this full vector, including the target slot. This is exactly $\max(0,\max_{j\ne t}a_j)$; the code does not need a separate maximum with zero.
+4. Sum $V=\sum_{j\ne t}e^{a_j-b}$, excluding the target exponential.
+5. Return $b+\operatorname{log1p}(V+\operatorname{expm1}(-b))$ and use ordinary autodiff.
+
+In the complete [JAX implementation](#a-jax-implementation) and [PyTorch implementation](#pytorch-implementations-and-examples) below, `relative`, `shift`, and `other_mass` correspond to $a$, $b$, and $V$, respectively.
+
+The `softplus` expression in Equation (6) explains the mathematical loss; the published version-3 implementation evaluates it using `log1p` and `expm1` directly. It does not form $m$ or differentiate through a non-target `logsumexp`.
+
+The paper also provides `soft_target_cross_entropy(z_S, z_T)` in Section 3. That function handles teacher distributions and installs the corrected gradient derived later in this post. The hard-target function above already obtains its gradient through ordinary autodiff; it does not use the soft-target custom backward rule.
+
+## How the corrected log-softmax implementation works
+
+Log-softmax returns all values $\log q_k$ and has no designated target. We select one maximal class as the anchor:
+
+$$
+w=\arg\max_j z_j,\qquad
+r_k=
+\begin{cases}
+0,&k=w,\\
+z_k-z_w,&k\ne w.
+\end{cases}
+$$
+
+Every $r_k$ is nonpositive. The selected class contributes exactly one to the shifted exponential sum. Keep this contribution separate and define
+
+$$
+S_w=\sum_{j\ne w}e^{r_j}.
+$$
+
+Then the full log-softmax vector is
+
+$$
+\begin{aligned}
+\log q_k
+&=\log\frac{e^{r_k}}{\sum_j e^{r_j}}\\
+&=r_k-\log(1+S_w)\\
+&=\boxed{r_k-\operatorname{log1p}(S_w)}.
+\end{aligned}
+$$
+
+For the selected class specifically,
+
+$$
+\boxed{\log q_w=-\operatorname{log1p}(S_w).}
+$$
+
+This explains the implementation's main steps:
+
+| Code variable or operation | Mathematical role |
+| --- | --- |
+| `winner = argmax(logits)` | Select the index $w$. |
+| `anchor = gather(logits, winner)` | Retrieve $z_w$, retaining its autograd connection. |
+| `relative = where(is_winner, 0, logits - anchor)` | Construct $r$, with a constant zero at the selected slot. |
+| Mask the selected exponential and sum the others | Compute $S_w$, excluding the contribution $e^0=1$. |
+| `relative - log1p(other_mass)` | Return all $\log q_k$. |
+
+The selected exponential is excluded from the sum because `log1p` already accounts for its contribution of one. If several logits tie for the maximum, select one of them; all the other maximal logits remain in $S_w$ and each contributes one.
+
+### Why the anchor must remain connected to autodiff
+
+For a locally fixed selected index $w$, each non-selected difference $z_j-z_w$ depends on $z_w$. Therefore,
+
+$$
+\frac{\partial S_w}{\partial z_w}
+=-\sum_{j\ne w}e^{z_j-z_w}
+=-S_w.
+$$
+
+The selected output consequently has derivative
+
+$$
+\frac{\partial\log q_w}{\partial z_w}
+=-\frac{1}{1+S_w}(-S_w)
+=\boxed{\frac{S_w}{1+S_w}}.
+$$
+
+For a non-selected input $z_j$,
+
+$$
+\frac{\partial\log q_w}{\partial z_j}
+=-\frac{e^{z_j-z_w}}{1+S_w}.
+$$
+
+These are the usual log-softmax derivatives, evaluated through expressions that preserve the small mass. In particular,
+
+$$
+\frac{S_w}{1+S_w}=1-q_w,
+$$
+
+but the implementation obtains this quantity without subtracting a rounded probability from one. If the anchor were detached in this computation graph, these paths through $-z_w$ would disappear and the selected output would have an incorrect zero derivative with respect to $z_w$. Autodiff does not differentiate the integer index returned by `argmax`; it does differentiate the gathered logit at that index.
+
+The explicit constant zero at the selected slot also makes clear that its derivative is zero: $z_w-z_w$ represents the same variable twice. The relevant dependence on $z_w$ comes from all the other slots.
+
+For example, with $z=(9,-9,-9)$ and $w=1$,
+
+$$
+S_w=2e^{-18}\approx3.046\times10^{-8}.
+$$
+
+An ordinary fp32 evaluation can round $1+S_w$ to one, returning $\log q_w=0$. The corrected evaluation instead retains
+
+$$
+\log q_w\approx-3.046\times10^{-8},\qquad
+\frac{\partial\log q_w}{\partial z_w}\approx3.046\times10^{-8}.
+$$
+
+No second shift is needed here: the anchor is already a maximal logit. The hard-target loss needs the additional shift only because its anchor is the target, which may be smaller than the maximum.
 
 ## The related issue in standalone softmax
 
@@ -876,6 +1039,196 @@ print(gradient)    # Zero for identical finite logits.
 
 The examples were checked on CPU with JAX 0.12.0.1 using fp32. Additional checks covered a non-maximal target, non-target exponentials underflowing to zero, a single finite logit with negative-infinity masks, the small student–teacher perturbation in the paper, the large-log-ratio fallback, and leading batch dimensions.
 
+## PyTorch implementations and examples
+
+In PyTorch, `tensor.detach()` supplies the same forward value while removing its connection to the autograd graph. In particular, `z - z.detach()` evaluates to zero but has derivative one with respect to `z`.
+
+The following functions mirror the JAX implementation. They use the final axis for classes, zero-based target indices, and return one loss per example. Targets for a batch have the same shape as the logits' leading dimensions. Floating-point dtype and device follow the input logits.
+
+The hard-target loss and log-softmax use ordinary autograd. For the soft-target loss, we calculate the forward value and corrected gradient inside `torch.no_grad()`, since their derivative graph is unnecessary. The final zero-valued term then installs the calculated gradient. This also freezes the teacher.
+
+```python
+import torch
+import torch.nn.functional as F
+
+
+def stable_log_softmax_torch(logits):
+    winner = logits.argmax(dim=-1, keepdim=True)
+    anchor = logits.gather(-1, winner)
+    classes = torch.arange(logits.shape[-1], device=logits.device)
+    is_winner = classes == winner
+
+    relative = torch.where(
+        is_winner, torch.zeros_like(logits), logits - anchor
+    )
+    other_mass = torch.where(
+        is_winner, torch.zeros_like(logits), relative.exp()
+    ).sum(dim=-1, keepdim=True)
+    return relative - torch.log1p(other_mass)
+
+
+def stable_hard_cross_entropy_torch(logits, target):
+    # Steps 1-2: gather the target and form target-relative logits.
+    target = torch.as_tensor(
+        target, dtype=torch.long, device=logits.device
+    )
+    target_logit = logits.gather(-1, target.unsqueeze(-1))
+    classes = torch.arange(logits.shape[-1], device=logits.device)
+    is_target = classes == target.unsqueeze(-1)
+    relative = torch.where(
+        is_target, torch.zeros_like(logits), logits - target_logit
+    )
+
+    # Step 3: the target slot is zero, so this maximum is >= 0.
+    shift = relative.amax(dim=-1, keepdim=True)
+    # Step 4: sum non-target exponentials after the second shift.
+    other_mass = torch.where(
+        is_target, torch.zeros_like(logits), (relative - shift).exp()
+    ).sum(dim=-1)
+    shift = shift.squeeze(-1)
+    # Step 5: evaluate the loss; ordinary autograd gives its gradient.
+    return shift + torch.log1p(other_mass + torch.expm1(-shift))
+
+
+def stable_soft_cross_entropy_torch(student_logits, teacher_logits):
+    with torch.no_grad():
+        log_q = stable_log_softmax_torch(student_logits)
+        q = log_q.exp()
+        p = stable_log_softmax_torch(teacher_logits).exp()
+
+        delta = student_logits - teacher_logits
+        mean_delta = (p * delta).sum(dim=-1, keepdim=True)
+        centered = delta - mean_delta
+        normalizer_increment = (p * torch.expm1(centered)).sum(
+            dim=-1, keepdim=True
+        )
+        log_ratio = centered - torch.log1p(normalizer_increment)
+        u = torch.where(
+            log_ratio.abs() < 1,
+            p * torch.expm1(log_ratio),
+            q - p,
+        )
+        residual = u.sum(dim=-1, keepdim=True)
+        gradient = u - q * residual
+        forward_loss = -(p * log_q).sum(dim=-1)
+
+    # Only this term records a graph linking the loss to the student.
+    zero_with_gradient = (
+        gradient * (student_logits - student_logits.detach())
+    ).sum(dim=-1)
+    return forward_loss + zero_with_gradient
+```
+
+Inside the soft-target function, `gradient` and `forward_loss` are already constants for autograd because they were calculated under `no_grad()`. The last expression is therefore exactly the construction derived earlier: it contributes zero to the forward value and `gradient` to the student-logit backward pass.
+
+### Inspecting the maximal log-softmax output
+
+This example isolates the log-softmax fix before using it in a loss:
+
+```python
+z = torch.tensor(
+    [9.0, -9.0, -9.0], dtype=torch.float32, requires_grad=True
+)
+
+usual_output = F.log_softmax(z, dim=-1)[0]
+stable_output = stable_log_softmax_torch(z)[0]
+stable_gradient = torch.autograd.grad(stable_output, z)[0]
+
+print("usual maximal log-probability:", usual_output.item())
+print("stable maximal log-probability:", stable_output.item())
+print("stable gradient:", stable_gradient)
+```
+
+The corrected output should be approximately $-3.046\times10^{-8}$, with gradient $(3.046,-1.523,-1.523)\times10^{-8}$. Negating this output gives the high-confidence hard-target loss, so negating its gradient gives the hard-target gradient derived above.
+
+### High-confidence hard targets
+
+We can compare the usual cross-entropy with the rewritten version on the same logits. Each function call below builds a separate graph, so the first call to `autograd.grad` does not require retaining a graph for the second calculation.
+
+```python
+z = torch.tensor([9.0, -9.0, -9.0], dtype=torch.float32)
+z.requires_grad_()
+
+usual_loss = F.cross_entropy(z.unsqueeze(0), torch.tensor([0]))
+usual_gradient = torch.autograd.grad(usual_loss, z)[0]
+
+stable_loss = stable_hard_cross_entropy_torch(z, 0)
+stable_gradient = torch.autograd.grad(stable_loss, z)[0]
+
+print("usual loss:", usual_loss.item())
+print("usual gradient:", usual_gradient)
+print("stable loss:", stable_loss.item())
+print("stable gradient:", stable_gradient)
+```
+
+The stable loss should be approximately $3.046\times10^{-8}$, and the stable gradient should be approximately $(-3.046,1.523,1.523)\times10^{-8}$. The usual implementation can lose the target contribution; its exact behavior depends on the PyTorch version, backend, and dtype.
+
+### Nearly identical student and teacher logits
+
+The two-class example provides a direct test of Softmax Cancellation:
+
+```python
+teacher = torch.tensor([0.0, 0.0], dtype=torch.float32)
+student = torch.tensor(
+    [1e-8, 0.0], dtype=torch.float32, requires_grad=True
+)
+
+p = teacher.softmax(dim=-1)
+usual_loss = -(p * student.log_softmax(dim=-1)).sum()
+usual_gradient = torch.autograd.grad(usual_loss, student)[0]
+
+stable_loss = stable_soft_cross_entropy_torch(student, teacher)
+stable_gradient = torch.autograd.grad(stable_loss, student)[0]
+
+print("usual gradient:", usual_gradient)
+print("stable gradient:", stable_gradient)
+```
+
+The desired gradient is approximately $(2.5\times10^{-9},-2.5\times10^{-9})$. The stable computation should retain this difference even when the separately computed probabilities round to the same values.
+
+For an exact match, the gradient should instead be zero:
+
+```python
+teacher = torch.tensor([2.0, 1.0, 0.0], dtype=torch.float32)
+student = teacher.clone().requires_grad_()
+
+loss = stable_soft_cross_entropy_torch(student, teacher)
+gradient = torch.autograd.grad(loss, student)[0]
+
+print(loss.item())   # The teacher's entropy, generally positive.
+print(gradient)      # Zero for identical finite logits.
+```
+
+### Batch reduction and ordinary backpropagation
+
+The returned per-example losses can be averaged before calling `backward()`:
+
+```python
+teacher_batch = torch.tensor(
+    [[2.0, 1.0, 0.0], [0.0, 0.0, 0.0]], dtype=torch.float32
+)
+student_batch = torch.tensor(
+    [[2.0, 1.0, 0.0], [1e-8, 0.0, 0.0]],
+    dtype=torch.float32,
+    requires_grad=True,
+)
+
+per_example_loss = stable_soft_cross_entropy_torch(
+    student_batch, teacher_batch
+)
+loss = per_example_loss.mean()
+loss.backward()
+
+print(per_example_loss.shape)  # torch.Size([2])
+print(student_batch.grad)
+```
+
+The first row receives a zero gradient because its distributions match. The second row receives the calculated logit gradient divided by two, because the batch loss is a mean. When `student_batch` is a model's output rather than a leaf tensor, the same backward signal continues through the model to its parameters.
+
+These examples explicitly use fp32. In mixed-precision training, the precision of these loss calculations must be chosen deliberately; `no_grad()` controls graph recording, not arithmetic precision. The same finite-logit and first-order-gradient assumptions described above apply to the soft-target PyTorch function.
+
+The PyTorch examples were checked on CPU with PyTorch 2.15.0+cpu. Seventeen checks covered the examples above, extreme and masked hard-target logits, the large-log-ratio fallback, teacher freezing, batch scaling, float64 agreement with the analytical gradient, and propagation of the custom gradient to model parameters.
+
 ## Why these small errors can affect optimization
 
 The paper connects Softmax Collapse with the **slingshot** behavior observed in small grokking experiments: long periods of tiny training loss interrupted by abrupt loss spikes.
@@ -940,3 +1293,4 @@ The practical question is therefore broader than whether the forward loss avoids
 2. Pierre Blanchard, Desmond J. Higham, and Nicholas J. Higham. [Accurately Computing the Log-Sum-Exp and Softmax Functions](https://eprints.maths.manchester.ac.uk/2765/). IMA Journal of Numerical Analysis, 2021.
 3. JAX documentation. [`jax.lax.stop_gradient`](https://docs.jax.dev/en/latest/_autosummary/jax.lax.stop_gradient.html).
 4. NumPy documentation. [`numpy.log1p`](https://numpy.org/doc/stable/reference/generated/numpy.log1p.html) and [`numpy.expm1`](https://numpy.org/doc/stable/reference/generated/numpy.expm1.html).
+5. PyTorch documentation. [`Tensor.detach`](https://docs.pytorch.org/docs/stable/generated/torch.Tensor.detach.html), [`torch.no_grad`](https://docs.pytorch.org/docs/stable/generated/torch.no_grad.html), and [`torch.autograd.grad`](https://docs.pytorch.org/docs/stable/generated/torch.autograd.grad.html).
