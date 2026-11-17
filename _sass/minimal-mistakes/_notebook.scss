@@ -1,0 +1,103 @@
+/* Seanie's notebook. Layout refinements are kept separate from the theme. */
+body { background: $background-color; -webkit-font-smoothing: antialiased; }
+a { text-underline-offset: 0.18em; }
+a:focus-visible, button:focus-visible { outline: 2px solid $primary-color; outline-offset: 5px; }
+
+.masthead { border-bottom: 1px solid $border-color; }
+.masthead__inner-wrap { max-width: 1240px; padding: 22px 32px; }
+.greedy-nav { background: transparent; }
+.greedy-nav .site-title { align-items: center; color: #202735; font-size: 20px; font-weight: 700; letter-spacing: -0.6px; }
+.site-title::before { content: ''; display: inline-block; width: 9px; height: 9px; margin: 0 12px 2px 0; background: $primary-color; border-radius: 50%; }
+.greedy-nav .visible-links a { margin: 0 0 0 32px; font-size: 14px; font-weight: 500; }
+.greedy-nav .visible-links a::before { height: 2px; }
+
+/* Homepage */
+.layout--home #main { max-width: 1080px; padding: 0 40px; }
+.layout--home .archive { float: none; width: 100%; padding: 0; margin: 0; }
+.notebook-intro { padding: 68px 0 54px; }
+.notebook-eyebrow { margin: 0 0 24px; color: $primary-color; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.notebook-intro h1 { margin: 0; color: #202735; font-family: $sans-serif; font-size: 46px; font-weight: 400; line-height: 1.2; letter-spacing: -1px; }
+.notebook-description { margin: 24px 0 0; color: $muted-text-color; font-size: 16px; line-height: 1.7; }
+.notebook-section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 0 0 15px; border-bottom: 1px solid #bfc7d2; }
+.notebook-section-heading h2 { margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; }
+.notebook-section-heading a { color: $muted-text-color; font-size: 12px; text-decoration: none; }
+.notebook-section-heading a:hover { color: $primary-color; }
+.notebook-post { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: start; padding: 29px 0 31px; border-bottom: 1px solid $border-color; }
+.notebook-post__date { padding-top: 6px; color: $muted-text-color; font-size: 12px; line-height: 1.6; }
+.notebook-post__topic { display: block; margin-top: 9px; color: $primary-color; font-size: 10px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; }
+.notebook-post h3 { margin: 0; font-family: $sans-serif; font-size: 21px; font-weight: 400; line-height: 1.45; letter-spacing: -0.25px; }
+.notebook-post h3 a, .notebook-post h3 a:visited { color: #202735; text-decoration: none; }
+.notebook-post h3 a:hover { color: $primary-color; text-decoration: underline; text-decoration-thickness: 1px; }
+.notebook-post__excerpt { margin: 10px 0 0; color: $muted-text-color; font-size: 14px; line-height: 1.7; }
+.notebook-post .page__meta { margin: 13px 0 0; color: $muted-text-color; font-size: 11px; }
+.layout--home .pagination { margin: 30px 0 0; }
+.pagination li a { border-color: $border-color; border-radius: 4px; font-size: 12px; }
+.pagination li a.current { background: $primary-color; color: white; border-color: $primary-color; }
+
+/* Articles and archive pages */
+body:not(.layout--home) #main { padding-top: 36px; }
+.sidebar { opacity: 1; }
+.author__name { font-size: 16px; letter-spacing: -0.2px; }
+.author__bio { color: $muted-text-color; }
+.page__title { color: #202735; font-family: $sans-serif; font-size: 2em; font-weight: 400; letter-spacing: -0.8px; line-height: 1.18; }
+.page__title + .page__meta { margin-top: 18px; }
+.page__inner-wrap > header { margin-bottom: 32px; padding-bottom: 28px; border-bottom: 1px solid $border-color; }
+.page__content { font-size: 17px; line-height: 1.85; overflow-wrap: break-word; }
+.page__content h2 { margin-top: 2.2em; padding-bottom: 0.45em; color: #202735; font-size: 1.4em; letter-spacing: -0.35px; }
+.page__content h3 { font-size: 1.14em; }
+.page__content p, .page__content li { line-height: 1.85; }
+.page__content blockquote { padding: 16px 22px; border-left: 3px solid $primary-color; background: #f6f8fb; font-style: normal; }
+.page__content blockquote p:last-child { margin-bottom: 0; }
+.page__content :not(pre) > code { padding: 0.15em 0.35em; border-radius: 4px; font-size: 0.86em; }
+.page__content div.highlighter-rouge, .page__content figure.highlight { border-radius: 7px; }
+.page__content pre { line-height: 1.65; }
+.page__content table { font-size: 0.88em; }
+.page__content th { background: #f3f5f8; }
+.page__content .MathJax_Display,
+.page__content .MathJax_SVG_Display,
+.page__content mjx-container[display='true'] { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 6px 0; }
+// Occasionally a post puts a full equation in inline delimiters.
+.page__content p:has(> .MathJax_SVG),
+.page__content p:has(> mjx-container) { overflow-x: auto; }
+.toc { border: 1px solid $border-color; border-radius: 6px; box-shadow: none; }
+.toc .nav__title { background: #f3f5f8; color: $text-color; }
+.archive__item-title { font-family: $sans-serif; font-weight: 400; line-height: 1.3; }
+.archive__item-title a, .archive__item-title a:visited { color: #202735; }
+.archive__item-title a:hover { color: $primary-color; }
+.archive__item-excerpt { color: $muted-text-color; line-height: 1.7; }
+
+.page__footer { margin-top: 64px; border-top: 1px solid $border-color; color: $muted-text-color; background: $footer-background-color; }
+.page__footer footer { max-width: 1240px; margin-top: 0; padding: 28px 32px; }
+.page__footer-copyright { font-size: 11px; }
+
+@media (max-width: 767px) {
+  .masthead__inner-wrap { padding: 17px 22px; }
+  .greedy-nav .site-title { font-size: 18px; }
+  .greedy-nav .visible-links a { margin-left: 20px; font-size: 12px; }
+  .layout--home #main { padding: 0 24px; }
+  .notebook-intro { padding: 43px 0 37px; }
+  .notebook-eyebrow { margin-bottom: 20px; font-size: 10px; }
+  .notebook-intro h1 { font-size: 30px; letter-spacing: -0.6px; }
+  .notebook-description { margin-top: 20px; font-size: 14px; }
+  .notebook-section-heading { gap: 10px; }
+  .notebook-section-heading h2 { font-size: 10px; letter-spacing: 1px; }
+  .notebook-section-heading a { font-size: 11px; }
+  .notebook-post { grid-template-columns: minmax(0, 1fr); gap: 10px 15px; padding: 24px 0; }
+  .notebook-post__date { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; padding-top: 0; font-size: 11px; }
+  .notebook-post__topic { margin-top: 0; font-size: 9px; }
+  .notebook-post h3 { font-size: 20px; }
+  .notebook-post__excerpt { font-size: 13px; }
+  body:not(.layout--home) #main { padding: 20px 22px 0; }
+  .page__title { font-size: 1.8em; }
+  .page__content { font-size: 16px; }
+  .page__footer { margin-top: 44px; }
+  .page__footer footer { padding: 24px; }
+}
+
+@media print {
+  .notebook-intro { padding: 20px 0; }
+  .notebook-post { break-inside: avoid; }
+  .page__content .MathJax_Display, .page__content .MathJax_SVG_Display,
+  .page__content mjx-container[display='true'],
+  .page__content p:has(> .MathJax_SVG), .page__content p:has(> mjx-container) { overflow: visible; }
+}

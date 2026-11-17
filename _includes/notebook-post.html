@@ -1,0 +1,13 @@
+<article class="notebook-post" itemscope itemtype="https://schema.org/CreativeWork">
+  <div class="notebook-post__date">
+    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+    {% if post.categories.size > 0 %}
+      <span class="notebook-post__topic">{{ post.categories | first | replace: '-', ' ' | escape }}</span>
+    {% endif %}
+  </div>
+  <div class="notebook-post__body">
+    <h3 itemprop="headline"><a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a></h3>
+    {% if post.excerpt %}<p class="notebook-post__excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 180 }}</p>{% endif %}
+    {% include page__meta.html %}
+  </div>
+</article>

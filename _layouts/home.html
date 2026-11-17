@@ -4,7 +4,16 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<header class="notebook-intro">
+  <p class="notebook-eyebrow">A research notebook</p>
+  <h1 id="page-title">Mathematics, statistics<br> &amp; machine learning.</h1>
+  <p class="notebook-description">Derivations, intuition, and things I’m learning along the way.</p>
+</header>
+
+<div class="notebook-section-heading">
+  <h2>{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h2>
+  <a href="{{ '/categories/' | relative_url }}">Explore by topic</a>
+</div>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
@@ -12,10 +21,9 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
+<div class="notebook-posts">
   {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
+    {% include notebook-post.html %}
   {% endfor %}
 </div>
 

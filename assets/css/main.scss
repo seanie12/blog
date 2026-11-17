@@ -4,5 +4,27 @@
 
 @charset "utf-8";
 
+// Use Verdana for site text; the theme retains its monospace code font.
+$sans-serif: Verdana, Geneva, sans-serif;
+$sans-serif-narrow: $sans-serif;
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+$caption-font-family: $sans-serif;
+
+// The notebook palette is defined before the theme's !default variables.
+$background-color: #ffffff;
+$text-color: #252b35;
+$muted-text-color: #647080;
+$primary-color: #315b91;
+$link-color: #315b91;
+$link-color-hover: #203e65;
+$link-color-visited: #4c527f;
+$masthead-link-color: #202735;
+$masthead-link-color-hover: #315b91;
+$border-color: #e4e7ec;
+$footer-background-color: #f6f7f9;
+$code-background-color: #f3f5f8;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "minimal-mistakes/notebook";
