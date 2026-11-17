@@ -4,8 +4,7 @@
 
 @charset "utf-8";
 
-// Use Verdana for site text; the theme retains its monospace code font.
-$sans-serif: Verdana, Geneva, sans-serif;
+$sans-serif: "Montserrat", system-ui, sans-serif;
 $sans-serif-narrow: $sans-serif;
 $global-font-family: $sans-serif;
 $header-font-family: $sans-serif;
