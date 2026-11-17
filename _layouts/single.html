@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{% assign is_post = false %}
+{% if page.collection == 'posts' %}{% assign is_post = true %}{% endif %}
+{% assign has_overlay = false %}
+{% if page.header.overlay_color or page.header.overlay_image %}{% assign has_overlay = true %}{% endif %}
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
@@ -14,8 +19,12 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
+<div id="main" role="main"{% if is_post %} class="article-detail"{% endif %}>
+  {% if is_post %}
+    {% include sidebar.html hide_author=true %}
+  {% else %}
+    {% include sidebar.html %}
+  {% endif %}
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -24,32 +33,67 @@ layout: default
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
 
     <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 id="page-title" class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% include page__meta.html %}
+      {% if is_post or has_overlay == false %}
+        <header{% if is_post %} class="article-detail__header"{% endif %}>
+          {% if is_post and site.breadcrumbs != true %}
+            <a class="article-detail__back" href="{{ '/' | relative_url }}">Blog</a>
+          {% endif %}
+          {% if page.title and has_overlay == false %}
+            <h1 id="page-title" class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+          {% endif %}
+          {% if is_post %}
+            <div class="article-detail__meta">
+              {% include page__meta.html show_date=true %}
+              {% if page.author_profile or layout.author_profile %}
+                {% assign article_author = page.author | default: page.authors[0] | default: site.author %}
+                {% assign article_author = site.data.authors[article_author] | default: article_author %}
+                {% assign article_author_name = article_author.name | default: article_author %}
+                {% if article_author_name %}
+                  <p class="article-detail__byline" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span itemprop="name">{{ article_author_name | escape }}</span>
+                  </p>
+                {% endif %}
+              {% endif %}
+            </div>
+          {% else %}
+            {% include page__meta.html %}
+          {% endif %}
         </header>
-      {% endunless %}
+      {% endif %}
 
-      <section class="page__content" itemprop="text">
-        {% if page.toc %}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
-              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-            </nav>
-          </aside>
+      {% assign article_navigation = '' %}
+      {% if page.toc %}
+        {% capture article_toc %}{% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}{% endcapture %}
+        {% assign article_toc = article_toc | strip %}
+        {% if article_toc != empty %}
+          {% capture article_navigation %}
+            <aside class="{% if is_post %}article-detail__outline{% else %}sidebar__right{% endif %}{% if page.toc_sticky %} sticky{% endif %}">
+              <nav class="toc" aria-labelledby="article-toc-title">
+                <header><h2 class="nav__title" id="article-toc-title">{% unless is_post %}<i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}" aria-hidden="true"></i> {% endunless %}{{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h2></header>
+                {{ article_toc }}
+              </nav>
+            </aside>
+          {% endcapture %}
         {% endif %}
+      {% endif %}
+
+      {% if is_post %}
+        <div class="article-detail__reading{% if article_navigation != empty %} article-detail__reading--with-outline{% endif %}">
+          {{ article_navigation }}
+      {% endif %}
+      <section class="page__content" itemprop="text">
+        {% unless is_post %}{{ article_navigation }}{% endunless %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
+      {% if is_post %}</div>{% endif %}
 
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
-        {% include page__date.html %}
+        {% if page.last_modified_at or is_post == false %}{% include page__date.html %}{% endif %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
